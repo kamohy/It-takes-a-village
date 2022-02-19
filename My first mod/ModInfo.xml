@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<ModInfo>
+		<Name value="My first Mod"/>
+		<Description value="A Very fun mod"/>
+		<Author value="Cozy Co. Coop"/>
+		<Version value="1.0"/>
+	</ModInfo>
+</xml>
