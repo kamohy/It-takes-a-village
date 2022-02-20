@@ -1,0 +1,8 @@
+<configs>
+
+	<!-- Reskin player vending machine to a cash register -->
+	<append xpath="//block[@name='cntVendingMachine']">
+		<property name="Model" value="#Entities/LootContainers?cashRegisterClosedPrefab.prefab"/>
+	</append>
+	
+</configs>
