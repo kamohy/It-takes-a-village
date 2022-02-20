@@ -1,0 +1,4 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+attProfessions,progression,Attribute,,,Professions
+attProfessionsName,progression,Attribute,,,"Attribute: Professions"
+attProfessionsDesc,progression,Attribute,,,"Learn a profession to be able to support and contribute to your village."

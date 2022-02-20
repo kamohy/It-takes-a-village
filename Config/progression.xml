@@ -1,0 +1,78 @@
+<configs>
+
+
+<!-- Adding profession tabs! -->
+<append xpath="/progression/attributes[1]">
+	<attribute name="attProfessions" name_key="attProfessionsName" desc_key="attProfessionsDesc" icon="ui_game_symbol_profession" min_level="1" max_level="10" base_skill_point_cost="1" cost_multiplier_per_level="1.14">
+		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="6"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="7"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="8"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="9"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
+		<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
+		<effect_group>
+			<requirement name="ItemHasTags" tags="attTest"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="2,8" value="0.1,.7" tags="head"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="9,10" value=".85,1" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_add" level="2,10" value=".05,.45"/>
+
+			<effect_description level="1"  desc_key="attPerceptionRank01Desc" long_desc_key="attPerceptionRank01LongDesc"/>
+			<effect_description level="2"  desc_key="attPerceptionRank02Desc" long_desc_key="attPerceptionRank02LongDesc"/>
+			<effect_description level="3"  desc_key="attPerceptionRank03Desc" long_desc_key="attPerceptionRank03LongDesc"/>
+			<effect_description level="4"  desc_key="attPerceptionRank04Desc" long_desc_key="attPerceptionRank04LongDesc"/>
+			<effect_description level="5"  desc_key="attPerceptionRank05Desc" long_desc_key="attPerceptionRank05LongDesc"/>
+			<effect_description level="6"  desc_key="attPerceptionRank06Desc" long_desc_key="attPerceptionRank06LongDesc"/>
+			<effect_description level="7"  desc_key="attPerceptionRank07Desc" long_desc_key="attPerceptionRank07LongDesc"/>
+			<effect_description level="8"  desc_key="attPerceptionRank08Desc" long_desc_key="attPerceptionRank08LongDesc"/>
+			<effect_description level="9"  desc_key="attPerceptionRank09Desc" long_desc_key="attPerceptionRank09LongDesc"/>
+			<effect_description level="10" desc_key="attPerceptionRank10Desc" long_desc_key="attPerceptionRank10LongDesc"/>
+		</effect_group>
+	</attribute>
+</append>
+
+<!-- Adding skills under attributes (group titles) 20/02/2022 -->
+<!--
+<append xpath="/progression/skills[1]">
+	<skill name="skillProfessionsCombat" parent="attProfessions" name_key="skillCombatPerksName" desc_key="skillCombatPerksDesc" icon="ui_game_symbol_marksmanship"><effect_group/></skill>
+	<skill name="skillProfessionsGeneral" parent="attProfessions" name_key="skillPerceptionGeneralName" icon="ui_game_symbol_stealth"><effect_group/></skill>
+	<skill name="skillProfessionsScavenging" parent="attProfessions" name_key="skillPerceptionScavengingName" desc_key="skillPerceptionScavengingDesc" icon="ui_game_symbol_hand"><effect_group/></skill>
+
+</append>
+
+-->
+
+
+<!-- Relocating perks to profession skill tree -->
+<setattribute xpath="//perk[@name='perkMasterChef']" name="parent">attProfessions</setattribute>
+<setattribute xpath="//perk[@name='perkMiner69r']" name="parent">attProfessions</setattribute>
+<setattribute xpath="//perk[@name='perkMotherLode']" name="parent">attProfessions</setattribute>
+<setattribute xpath="//perk[@name='perkLivingOffTheLand']" name="parent">attProfessions</setattribute>
+<setattribute xpath="//perk[@name='perkSalvageOperations']" name="parent">attProfessions</setattribute>
+<setattribute xpath="//perk[@name='perkTheHuntsman']" name="parent">attProfessions</setattribute>
+<setattribute xpath="//perk[@name='perkSalvageOperations']" name="parent">attProfessions</setattribute>
+
+<!-- Merge animal tracker with huntsman -->
+
+<remove xpath="//perk[@name='perkAnimalTracker']" />
+<append xpath="//perk[@name='perkTheHuntsman']/effect_group">
+	<passive_effect name="TrackDistance" operation="base_set" level="0,1,5" value="0,100,100"/>
+		<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffAnimalTracker">
+			<requirement name="NotHasBuff" buff="buffAnimalTrackerAcquired"/>
+			<requirement name="ProgressionLevel" progression_name="perkTheHuntsman" operation="GT" value="0"/>
+		</triggered_effect>
+
+		<effect_description level="1" desc_key="perkAnimalTrackerRank1Desc" long_desc_key="perkAnimalTrackerRank1LongDesc"/>
+		<effect_description level="2" desc_key="perkAnimalTrackerRank2Desc" long_desc_key="perkAnimalTrackerRank2LongDesc"/>
+		<effect_description level="3" desc_key="perkAnimalTrackerRank3Desc" long_desc_key="perkAnimalTrackerRank3LongDesc"/>
+
+</append>
+
+
+
+
+	
+</configs>

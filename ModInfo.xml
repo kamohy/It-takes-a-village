@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<ModInfo>
+		<Name value="It Takes A Village"/>
+		<Description value="Work, Fight, Trade, Survive
+
+Choose between x trade professions and collaborate with other survivors attempting to rebuild society.
+Buy and sell goods in your shop to supply the community with specialized resources that only You can loot or craft. 
+Are you the Runner, the Weaponsmith, the Big Game-Hunter or the Chef?
+How will you support the village?"/>
+		<Author value="Cozy Co. Co-op"/>
+		<Version value="1.0"/>
+	</ModInfo>
+</xml>
