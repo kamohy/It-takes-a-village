@@ -1,0 +1,78 @@
+<configs>
+<!-- Changing animal tracking to be huntsman perk -->
+<remove xpath="//buff[@name='buffAnimalTracker']/effect_group[@name='Startup']" />
+<remove xpath="//buff[@name='buffAnimalTracker']/effect_group[@name='check conditions for a successful track']" />
+
+<append xpath="//buff[@name='buffAnimalTracker']">
+	<effect_group name="Startup">
+			<!-- set the time delay for animal tracking -->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="4">
+				<requirement name="ProgressionLevel" progression_name="perkTheHuntsman" operation="LT" value="2"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="3">
+				<requirement name="ProgressionLevel" progression_name="perkTheHuntsman" operation="Equals" value="2"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="2">
+				<requirement name="ProgressionLevel" progression_name="perkTheHuntsman" operation="Equals" value="3"/></triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="add" value="-.5"/>
+		</effect_group>
+
+		<effect_group name="check conditions for a successful track">
+			<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="LTE" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
+				<requirement name="ProgressionLevel" progression_name="perkTheHuntsman" operation="Equals" value="1"/>
+				<requirement name="HasTrackedEntity" tags="perkAT01"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
+				<requirement name="ProgressionLevel" progression_name="perkTheHuntsman" operation="Equals" value="2"/>
+				<requirement name="HasTrackedEntity" tags="perkAT02"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
+				<requirement name="ProgressionLevel" progression_name="perkTheHuntsman" operation="Equals" value="3"/>
+				<requirement name="HasTrackedEntity" tags="perkAT03"/>
+			</triggered_effect>
+	</effect_group>
+</append>
+
+
+<remove xpath="//buff[@name='buffAnimalTrackerAcquired']/effect_group[@name='check conditions for no trackable animals']" />
+<remove xpath="//buff[@name='buffAnimalTrackerAcquired']/effect_group[@name='Track animals']" />
+
+<append xpath="//buff[@name='buffAnimalTrackerAcquired']">
+	
+	<effect_group name="check conditions for no trackable animals">
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="1"/>
+
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
+			<requirement name="ProgressionLevel" progression_name="perkTheHuntsman" operation="Equals" value="1"/>
+			<requirement name="HasTrackedEntity" tags="perkAT01" />
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
+			<requirement name="ProgressionLevel" progression_name="perkTheHuntsman" operation="Equals" value="2"/>
+			<requirement name="HasTrackedEntity" tags="perkAT02" />
+		</triggered_effect>
+
+		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
+			<requirement name="ProgressionLevel" progression_name="perkTheHuntsman" operation="Equals" value="3"/>
+			<requirement name="HasTrackedEntity" tags="perkAT03" />
+		</triggered_effect>
+	</effect_group>
+
+	<effect_group name="Track animals">
+		<passive_effect name="Tracking" operation="base_set" value="1" tags="perkAT01">
+			<requirement name="ProgressionLevel" progression_name="perkTheHuntsman" operation="Equals" value="1"/></passive_effect>
+		<passive_effect name="Tracking" operation="base_set" value="1" tags="perkAT02">
+			<requirement name="ProgressionLevel" progression_name="perkTheHuntsman" operation="Equals" value="2"/></passive_effect>
+		<passive_effect name="Tracking" operation="base_set" value="1" tags="perkAT03">
+			<requirement name="ProgressionLevel" progression_name="perkTheHuntsman" operation="GTE" value="3"/></passive_effect>
+	</effect_group>
+</append>
+
+
+
+
+
+</configs>

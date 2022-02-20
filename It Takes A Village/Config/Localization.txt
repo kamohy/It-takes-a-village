@@ -1,3 +1,4 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english
-attTestName,progression,Attribute,,,"Attribute: Test"
-attTestDesc,progression,Attribute,,,"This is a testament to Pesmax' awesome coding skills"
+attProfessions,progression,Attribute,,,Professions
+attProfessionsName,progression,Attribute,,,"Attribute: Professions"
+attProfessionsDesc,progression,Attribute,,,"Learn a profession to be able to support and contribute to your village."
