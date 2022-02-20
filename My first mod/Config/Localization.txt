@@ -1,6 +1,0 @@
-Key,File,Type,UsedInMainMenu,NoTranslate,english
-
-resourceSteelPipeMFM,Items,Resource,,,"Steel Pipe"
-resourceSteelPipeMFMDesc,Items,Resource,,,"A steel pipe is sturdier than a short iron pipe and can be used to craft stronger stuff."
-resourceSteelPipeMFMSchematic,Items,Schematic,,,"Steel Pipe Schematic"
-solarCellMFMSchematic,Items,Schematic,,,"Solar Cell Schematic"
