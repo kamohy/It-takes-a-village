@@ -1,4 +1,5 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english
-attProfessions,progression,Attribute,,,Professions
-attProfessionsName,progression,Attribute,,,"Attribute: Professions"
-attProfessionsDesc,progression,Attribute,,,"Learn a profession to be able to support and contribute to your village."
+attTestName,progression,Attribute,,,"Attribute: Test"
+attTestDesc,progression,Attribute,,,"This is a testament to Pesmax' awesome coding skills"
+cntVendingMachineITAV,blocks,Container,,,"Player Owned Store"
+cntVendingMachineGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Duke's Casino Tokens. Buy the goods you need from other Player Owned Stores to support them and the community!"

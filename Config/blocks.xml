@@ -4,5 +4,6 @@
 	<append xpath="//block[@name='cntVendingMachine']">
 		<property name="Model" value="#Entities/LootContainers?cashRegisterClosedPrefab.prefab"/>
 	</append>
+
 	
 </configs>

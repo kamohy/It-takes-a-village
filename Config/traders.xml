@@ -1,3 +1,9 @@
 <configs>
 
+<append xpath="//traders">
+	<!-- Player Owned Store that works like a Vending Machine -->
+	<trader_info id="99" reset_interval="-1" override_buy_markup="1.0" override_sell_markup="1.0" allow_sell="false" player_owned="true"/>
+</append>
+
+
 </configs>

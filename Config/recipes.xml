@@ -3,12 +3,12 @@
 	<append xpath="/recipes">
 		
 		<!--Add player vending machine recipe -->
-		<recipe name="cntVendingMachine" count="1" craft_area="workbench">
-			<ingredient name="resourceBrokenGlass" count="5" />
-			<ingredient name="resourceScrapIron" count="50" />
+		<recipe name="cntVendingMachineITAV" count="1" craft_area="workbench" craft_time="3">
+			<ingredient name="resourceBrokenGlass" count="2" />
+			<ingredient name="resourceScrapIron" count="30" />
 			<ingredient name="resourceDuctTape" count="1" />
 			<ingredient name="resourceRockSmall" count="1" />
-			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceScrapPolymers" count="4" />
 		</recipe>
 	
 	
