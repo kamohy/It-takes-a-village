@@ -19,5 +19,10 @@
 		</recipe>
 	
 	</append>
+	
+	<!-- Changing Forged iron and steel to be locked behind perk -->
+	<setattribute xpath="//recipe[@name='resourceForgedIron']" name="tags">learnable,perkSmelterITAV</setattribute>
+	<setattribute xpath="//recipe[@name='resourceForgedSteel']" name="tags">learnable,perkSmelterITAV</setattribute>
+	
 
 </configs>

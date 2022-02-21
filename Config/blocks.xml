@@ -21,5 +21,13 @@
 	</block>
 
 </append>
+
+<append xpath="//block[@name='forge']">
+	<property name="UnlockedBy" value="perkSmelterITAV"/>
+</append>
+<append xpath="//block[@name='workbench']">
+	<property name="UnlockedBy" value="perkSmelterITAV"/>
+</append>
+	
 	
 </configs>

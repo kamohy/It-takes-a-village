@@ -1,6 +1,28 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english
-attProfessions,progression,Attribute,,,Professions
-attProfessionsName,progression,Attribute,,,"Attribute: Professions"
-attProfessionsDesc,progression,Attribute,,,"Learn a profession to be able to support and contribute to your village."
+attProfessionsITAV,progression,Attribute,,,Professions
+attProfessionsNameITAV,progression,Attribute,,,"Attribute: Professions"
+attProfessionsDescITAV,progression,Attribute,,,"Learn a profession to be able to support and contribute to your village."
 cntVendingMachineITAV,blocks,Container,,,"Player Owned Store"
 cntVendingMachineGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Duke's Casino Tokens. Buy the goods you need from other Player Owned Stores to support them and the community!"
+perkSmelterDescITAV,progression,perk Pro,,,"Smelt and craft items in the forge and craft 20% faster on workbenches."
+perkSmelterNameITAV,progression,perk Pro,,,Smelter
+reqProfessionsLevel01ITAV,progression,Attribute,,,Skill Stone
+reqProfessionsLevel02ITAV,progression,Attribute,,,Professions Level 2
+reqProfessionsLevel03ITAV,progression,Attribute,,,Professions Level 3
+reqProfessionsLevel04ITAV,progression,Attribute,,,Professions Level 4
+reqProfessionsLevel05ITAV,progression,Attribute,,,Professions Level 5
+reqProfessionsLevel06ITAV,progression,Attribute,,,Professions Level 6
+reqProfessionsLevel07ITAV,progression,Attribute,,,Professions Level 7
+reqProfessionsLevel08ITAV,progression,Attribute,,,Professions Level 8
+reqProfessionsLevel09ITAV,progression,Attribute,,,Professions Level 9
+reqProfessionsLevel10ITAV,progression,Attribute,,,Professions Level 10
+perkSmelterRank1DescITAV,progression,perk Int,,,Apprentice
+perkSmelterRank1LongDescITAV,progression,perk Int,,,You are now an apprentice smelter and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster.
+perkSmelterRank2DescITAV,progression,perk Int,,,Journeyman
+perkSmelterRank2LongDescITAV,progression,perk Int,,,You are now a journeyman smelter and able to do nothing new!
+perkSmelterRank3DescITAV,progression,perk Int,,,Blacksmith
+perkSmelterRank3LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
+perkSmelterRank4DescITAV,progression,perk Int,,,Blacksmith
+perkSmelterRank4LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
+perkSmelterRank5DescITAV,progression,perk Int,,,Blacksmith
+perkSmelterRank5LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.

@@ -1,3 +1,66 @@
 <configs>
 
+<!-- Locking forged items behind smelter perk -->
+<append xpath="//item[@name='resourceForgedIron']">
+	<property name="UnlockedBy" value="perkSmelterITAV"/>
+</append>
+<append xpath="//item[@name='resourceForgedSteel']">
+	<property name="UnlockedBy" value="perkSmelterITAV"/>
+</append>
+<append xpath="//item[@name='toolForgeCrucible']">
+	<property name="UnlockedBy" value="perkSmelterITAV"/>
+</append>	
+<append xpath="/items"> 
+
+<!-- Adding Profession Potions to unlock a perk in the Professions attribute/tree -->
+
+ <item name="professionPotionMasterITAV">
+    <property name="CreativeMode" value="Player"/>
+    <property name="Tags" value="professionPotion"/>
+    <property name="HoldType" value="3"/>
+    <property name="DisplayType" value="food"/>
+    <property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+    <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+    <property name="Material" value="Mglass"/>
+    <property name="Weight" value="0"/>
+    <property name="Stacknumber" value="1"/>
+    <property name="SellableToTrader" value="false"/>
+    <property name="CanDrop" value="false" />
+    <property class="Action0">
+        <property name="Class" value="Eat"/>
+        <property name="Delay" value="2.0"/>
+        <property name="Use_time" value="2.0"/>
+        <property name="Sound_start" value="read_skillbook"/>
+    </property>
+    <property name="Group" value="Food/Cooking"/>
+		<effect_group tiered="false" name="Drink Tier 1">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24"/>
+			<display_value name="dStaminaRegen" value=".15"/>
+			<display_value name="dEfficientDigestion" value=".15"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffRedTea"/>
+	</effect_group>
+</item>
+
+<!-- (for testing unlocks perk Master Chef)
+<item name="professionPotion_perkCookITAV">
+    <property name="Extends" value="professionPotionMasterITAV" />
+    <property name="Unlocks" value="perkMasterChef" /> 
+</item>-->
+
+<!-- (for testing unlocks perk Smelter) -->
+<item name="professionPotion_perkPhysician">
+    <property name="Extends" value="professionPotionMasterITAV" />
+    <!--<property name="Unlocks" value="perkPhysician" />-->
+
+
+</item>
+
+
+
+</append>
+
+
+
+
 </configs>

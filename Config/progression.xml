@@ -1,9 +1,9 @@
 <configs>
 
 
-<!-- Adding profession tabs! -->
+<!-- Adding professions tab! -->
 <append xpath="/progression/attributes[1]">
-	<attribute name="attProfessions" name_key="attProfessionsName" desc_key="attProfessionsDesc" icon="ui_game_symbol_profession" min_level="1" max_level="10" base_skill_point_cost="1" cost_multiplier_per_level="1.14">
+	<attribute name="attProfessionsITAV" name_key="attProfessionsNameITAV" desc_key="attProfessionsDescITAV" icon="ui_game_symbol_profession" min_level="1" max_level="10" base_skill_point_cost="1" cost_multiplier_per_level="1.14">
 		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
@@ -15,7 +15,7 @@
 		<level_requirements level="9"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
 		<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
 		<effect_group>
-			<requirement name="ItemHasTags" tags="attTest"/>
+			<requirement name="ItemHasTags" tags="attProfessionsITAV"/>
 				<passive_effect name="DamageModifier" operation="perc_add" level="2,8" value="0.1,.7" tags="head"/>
 				<passive_effect name="DamageModifier" operation="perc_add" level="9,10" value=".85,1" tags="head"/>
 				<passive_effect name="DismemberChance" operation="base_add" level="2,10" value=".05,.45"/>
@@ -47,13 +47,13 @@
 
 
 <!-- Relocating perks to profession skill tree -->
-<setattribute xpath="//perk[@name='perkMasterChef']" name="parent">attProfessions</setattribute>
-<setattribute xpath="//perk[@name='perkMiner69r']" name="parent">attProfessions</setattribute>
-<setattribute xpath="//perk[@name='perkMotherLode']" name="parent">attProfessions</setattribute>
-<setattribute xpath="//perk[@name='perkLivingOffTheLand']" name="parent">attProfessions</setattribute>
-<setattribute xpath="//perk[@name='perkSalvageOperations']" name="parent">attProfessions</setattribute>
-<setattribute xpath="//perk[@name='perkTheHuntsman']" name="parent">attProfessions</setattribute>
-<setattribute xpath="//perk[@name='perkSalvageOperations']" name="parent">attProfessions</setattribute>
+<setattribute xpath="//perk[@name='perkMasterChef']" name="parent">attProfessionsITAV</setattribute>
+<setattribute xpath="//perk[@name='perkMiner69r']" name="parent">attProfessionsITAV</setattribute>
+<setattribute xpath="//perk[@name='perkMotherLode']" name="parent">attProfessionsITAV</setattribute>
+<setattribute xpath="//perk[@name='perkLivingOffTheLand']" name="parent">attProfessionsITAV</setattribute>
+<setattribute xpath="//perk[@name='perkSalvageOperations']" name="parent">attProfessionsITAV</setattribute>
+<setattribute xpath="//perk[@name='perkTheHuntsman']" name="parent">attProfessionsITAV</setattribute>
+<setattribute xpath="//perk[@name='perkSalvageOperations']" name="parent">attProfessionsITAV</setattribute>
 
 <!-- Merge animal tracker with huntsman -->
 
@@ -72,6 +72,85 @@
 </append>
 
 
+<!-- Removing Old perks-->
+<remove xpath="//perk[@name='perkAdvancedEngineering']" />
+<remove xpath="//perk[@name='perkMiner69r']" />
+
+
+
+<!-- PERKS -->
+<append xpath="//perks">
+	<!-- Smelter perk -->
+	<perk name="perkSmelterITAV" parent="attProfessionsITAV" name_key="perkSmelterNameITAV" desc_key="perkSmelterDescITAV" icon="ui_game_symbol_workbench">
+		<!--<effect_group>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="SmelterITAVLevel" operation="set" value="1" target="self">
+				<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="Equals" value="1"/>
+				<!--<requirement name="CVarCompare" cvar="SmelterITAVLevel" target="other" operation="LT" value="1"/>
+			</triggered_effect>
+		</effect_group> -->
+		
+		<level_requirements level="1"> 
+				<requirements compare_type="or">
+					<requirement name="HasBuff" buff="buffAnimalTracker" /> 
+					<requirement name="HasBuff" buff="buffRedTea" /> 
+				</requirements>
+				<!--<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="GTE" value="1" desc_key="reqProfessionsLevel01ITAV"/>-->
+			 </level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="4" desc_key="reqProfessionsLevel04ITAV"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="6" desc_key="reqProfessionsLevel06ITAV"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="8" desc_key="reqProfessionsLevel08ITAV"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="10" desc_key="reqProfessionsLevel10ITAV"/></level_requirements>
+
+		
+		
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkAdvancedEngineering"/><!-- fake crafting perk that is used to scale resources -->
+
+				<!-- Engineer use x% less material on all recipes in the forge... by adding it to non engineers T3 10% .9, T4 15% .85, T5 20% .8 -->
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="forge,resourceForgedIron"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.2" tags="perkAdvancedEngineering"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="workbench,chemistryStation,cementMixer"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="2,5" value="-0.2" tags="workbenchCrafting,cementMixerCrafting"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="resourceMilitaryFiber,generatorbank,electricwirerelay,switch,ceilingLight01_player,industrialLight01_player,industrialLight02_player,armorMiningHelmet,spotlightPlayer,speaker,pressureplate,pressureplateLong,dartTrap,electrictimerrelay,motionsensor,tripwirepost,electricfencepost,bladeTrap"/>
+			<passive_effect name="ElectricalTrapXP" operation="base_set" level="3,4,5" value="0.2,0.35,0.5"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="batterybank,shotgunTurret,meleeToolRepairT3Nailgun,garageDoorMetal_v1Powered,garageDoorIndustrial_Powered,metalReinforcedWoodDrawBridgePowered,vaultHatch_v3_Powered,vaultDoor03_Powered"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="toolForgeCrucible,autoTurret,resourceForgedSteel"/>
+
+			<effect_description level="1" desc_key="perkSmelterRank1DescITAV" long_desc_key="perkSmelterRank1LongDescITAV"/>
+			<effect_description level="2" desc_key="perkSmelterRank2DescITAV" long_desc_key="perkSmelterRank2LongDescITAV"/>
+			<effect_description level="3" desc_key="perkSmelterRank3DescITAV" long_desc_key="perkSmelterRank3LongDescITAV"/>
+			<effect_description level="4" desc_key="perkSmelterRank4DescITAV" long_desc_key="perkSmelterRank4LongDescITAV"/>
+			<effect_description level="5" desc_key="perkSmelterRank5DescITAV" long_desc_key="perkSmelterRank5LongDescITAV"/>
+		</effect_group>
+	</perk>
+
+	<!-- Miner perk -->
+		<perk name="perkMinerITAV" parent="attProfessionsITAV" name_key="perkMiner69rName" desc_key="perkMiner69rDesc" icon="ui_game_symbol_mining" tags="learnable">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="11" desc_key="reqProfessionsLevel01ITAV"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="2" desc_key="reqProfessionsLevel02ITAV"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="3" desc_key="reqProfessionsLevel03ITAV"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="5" desc_key="reqProfessionsLevel05ITAV"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="7" desc_key="reqProfessionsLevel07ITAV"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkMiner69r"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolRepairT1ClawHammer,meleeToolAxeT1IronFireaxe,meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel"/>
+
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkMinerITAV"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkMinerITAV"/>
+
+			<effect_description level="1" desc_key="perkMiner69rRank1Desc" long_desc_key="perkMiner69rRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkMiner69rRank2Desc" long_desc_key="perkMiner69rRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkMiner69rRank3Desc" long_desc_key="perkMiner69rRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkMiner69rRank4Desc" long_desc_key="perkMiner69rRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkMiner69rRank5Desc" long_desc_key="perkMiner69rRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+
+
+
+</append>
 
 
 	
