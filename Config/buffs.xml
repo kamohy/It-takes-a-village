@@ -41,7 +41,7 @@
 <remove xpath="//buff[@name='buffAnimalTrackerAcquired']/effect_group[@name='Track animals']" />
 
 <append xpath="//buff[@name='buffAnimalTrackerAcquired']">
-	
+
 	<effect_group name="check conditions for no trackable animals">
 		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="1"/>
 

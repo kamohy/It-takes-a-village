@@ -85,15 +85,12 @@
 		<!--<effect_group>
 			<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="SmelterITAVLevel" operation="set" value="1" target="self">
 				<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="Equals" value="1"/>
-				<!--<requirement name="CVarCompare" cvar="SmelterITAVLevel" target="other" operation="LT" value="1"/>
+				<requirement name="CVarCompare" cvar="SmelterITAVLevel" target="other" operation="LT" value="1"/>
 			</triggered_effect>
 		</effect_group> -->
 		
 		<level_requirements level="1"> 
-				<requirements compare_type="or">
-					<requirement name="HasBuff" buff="buffAnimalTracker" /> 
-					<requirement name="HasBuff" buff="buffRedTea" /> 
-				</requirements>
+			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" />
 				<!--<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="GTE" value="1" desc_key="reqProfessionsLevel01ITAV"/>-->
 			 </level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="4" desc_key="reqProfessionsLevel04ITAV"/></level_requirements>
