@@ -26,3 +26,6 @@ perkSmelterRank4DescITAV,progression,perk Int,,,Blacksmith
 perkSmelterRank4LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
 perkSmelterRank5DescITAV,progression,perk Int,,,Blacksmith
 perkSmelterRank5LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
+drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,Your Profession Perk skill points have been reset.
+drugWillingnessToLearn,items,Medical,,,WillingnessToLearn WtL "Skill stone"
+drugWillingnessToLearnDesc,items,Medical,,,Consume the stone to ready your mind for learning ONE Trade Profession Perk. Trade Professions can only be learned if the mind is ready! Choose wisely, who knows when the next stone will be yours.

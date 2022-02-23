@@ -12,9 +12,9 @@
 </append>	
 <append xpath="/items"> 
 
-<!-- Adding Profession Potions to unlock a perk in the Professions attribute/tree -->
+<!-- Adding Trade Perk Books to unlock a perk in the Professions attribute/Trade tree -->
 
- <item name="professionPotionMasterITAV">
+ <!-- <item name="professionPotionMasterITAV">
     <property name="CreativeMode" value="Player"/>
     <property name="Tags" value="professionPotion"/>
     <property name="HoldType" value="3"/>
@@ -32,7 +32,7 @@
         <property name="Use_time" value="2.0"/>
         <property name="Sound_start" value="read_skillbook"/>
     </property>
- </item>
+ </item> -->
 
 <!-- (for testing unlocks perk Master Chef)
 <item name="professionPotion_perkCookITAV">
@@ -40,13 +40,7 @@
     <property name="Unlocks" value="perkMasterChef" /> 
 </item>-->
 
-<!-- (for testing unlocks perk Smelter) -->
-<item name="professionPotion_perkPhysician">
-    <property name="Extends" value="professionPotionMasterITAV" />
-    <!--<property name="Unlocks" value="perkPhysician" />-->
 
-
-</item>
 
 <item name="bookSmelterITAV"> <!-- first book -->
     <property name="Extends" value="schematicMaster"/>
@@ -56,6 +50,7 @@
     <property name="EconomicValue" value="500"/>
     <property name="Unlocks" value="perkSmelterITAV"/>
     <property name="Group" value="Books,Mods,BooksOnly"/>
+	<property name="SellableToTrader" value="false" />
     <property class="Action0">
         <property name="Class" value="Eat"/>
         <property name="Delay" value="1.0"/>
@@ -67,6 +62,7 @@
 			<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="LT" value="1" />
 		</triggered_effect> <!-- level="-1" sets a perk to max level -->
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkSmelterITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntSmelterITAV" operation="set" value="1"/>
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkFiremansAlmanacComplete" level="-1">
             <requirement name="PerksUnlocked" skill_name="skillFiremansAlmanac" operation="GTE" value="7"/></triggered_effect>
@@ -75,6 +71,51 @@
     </effect_group>
 </item>
 
+<!-- ProfPerkForgettingElixir -->
+<item name="drinkJarProfPerkForgettingElixir"> <!-- respec potion, player version -->
+	<property name="CustomIcon" value="drinkJarGrandpasForgettingElixir" />
+	<property name="CustomIconTint" value="4571ad" />
+	<property name="HoldType" value="3"/>
+	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="Weight" value="10"/>
+	<property name="Stacknumber" value="10"/> <!-- STK resource -->
+	<property name="EconomicValue" value="20000"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="drinkJarEmpty"/>
+	</property>
+	<effect_group tiered="false" name="Drink Tier Trader">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+			<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ResetProgression" reset_books="false"/>  This resets all progression, across attributes and perks. -->
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntSmelterITAV" operation="set" value="0"/>
+
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="player#death" play_in_head="true"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="player_death_stinger" play_in_head="true"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="drinkJarProfPerkForgettingElixirTooltip"/>
+	</effect_group>
+</item>
+
+<!-- Adding WillingnessToLearn item (skill stone), that adds a buff (WillingnessToLearn) required to learn a Trade Profession.  -->
+<item name="drugWillingnessToLearnITAV">
+	<property name="Extends" value="drugRecog"/>
+	<property name="DisplayType" value="drugCovertCats"/> <!-- DisplayType is what buff info is shown in the item description window (I think)-->
+	<effect_group tiered="false" name="Drug Tier 4">
+		<display_value name="dHealthLoss" value=".5"/>
+		<display_value name="$waterAmountAdd" value="30"/>
+		<display_value name="dDuration" value="777"/>
+		<!--<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugWillingnessToLearnDuration" operation="add" value="123"/>
+		 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugWillingnessToLearnITAVDuration" operation="set" value="363">
+			<requirement name="CVarCompare" cvar="$buffDrugWillingnessToLearnITAVDuration" operation="GT" value="363"/></triggered_effect> -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugWillingnessToLearnITAV"/>
+	</effect_group>
+</item>
 
 </append>
 
