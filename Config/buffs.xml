@@ -76,35 +76,31 @@
 
 </append> 
 
-<!--<requirement name="CVarCompare" cvar="SmelterITAVLevel" target="self" operation="GTE" value="1"/>-->
+	<!--<requirement name="CVarCompare" cvar="SmelterITAVLevel" target="self" operation="GTE" value="1"/>-->
 
-<!-- *** buffWillingnessToLearn -->
-<append xpath="/buffs">
+	<!-- *** buffWillingnessToLearn -->
+	<!-- <append xpath="/buffs">
 
-<buff name="buffDrugWillingnessToLearnITAV" name_key="drugWillingnessToLearn" description_key="drugWillingnessToLearnDesc" icon="ui_game_symbol_drug_WtL">
-	<stack_type value="replace"/><duration value="0"/>
-	<display_value value="buffDrugWillingnessToLearn"/><display_value_format value="time"/>
-	<effect_group>
-		<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugWillingnessToLearnDuration" operation="subtract" value="@$MetabolismDuration"/>
-		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="buffDrugWillingnessToLearnDisplay" operation="set" value="@$buffDrugWillingnessToLearnDuration"/> -->
-		<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugWillingnessToLearnDuration" operation="set" value="999" />
-	</effect_group> 
-	<effect_group>
-		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugWillingnessToLearn">
-			<requirement name="CVarCompare" cvar="$buffDrugWillingnessToLearnDuration" operation="LTE" value="0"/>
-		</triggered_effect>
-		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="buffDrugWillingnessToLearnDisplay" operation="set" value="0"/>
-		<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugWillingnessToLearnDuration" operation="set" value="0"/>
-	</effect_group>
+	<buff name="buffDrugWillingnessToLearnITAV" name_key="drugWillingnessToLearnITAV" description_key="drugWillingnessToLearnITAVDesc" icon="ui_game_symbol_drug_WtL">
+		<stack_type value="replace"/><duration value="10"/>
+		<display_value value="buffDrugWillingnessToLearn"/><display_value_key value="Can Learn 1 Trade"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugWillingnessToLearn">
+				<requirement name="CVarCompare" cvar="$buffDrugWillingnessToLearnDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="buffDrugWillingnessToLearnDisplay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugWillingnessToLearnDuration" operation="set" value="0"/>
+		</effect_group>
+	</buff>
 
-	<effect_group>
-		<passive_effect name="HealthLoss" operation="perc_add" value="-.5"/>
-		<passive_effect name="WaterChangeOT" operation="base_subtract" value=".25"/>
-	</effect_group>
-</buff>
+	</append> -->
 
-</append>
-
+<!-- Adding a new secret stash tab to a buff -->
+<!-- <append xpath="//buff[@name='buffDrugFortBites']">
+    <effect_group>
+        <passive_effect name="SecretStash" operation="base_add" value="6000"/>
+    </effect_group>
+</append> -->
 
 
 

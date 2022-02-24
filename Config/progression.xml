@@ -134,19 +134,20 @@
 	</perk>
 
 	<!-- Miner perk -->
-		<perk name="perkMinerITAV" parent="attProfessionsITAV" name_key="perkMiner69rName" desc_key="perkMiner69rDesc" icon="ui_game_symbol_mining" tags="learnable">
+	<perk name="perkMinerITAV" parent="attProfessionsITAV" name_key="perkMiner69rName" desc_key="perkMiner69rDesc" icon="ui_game_symbol_mining" tags="learnable">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="11" desc_key="reqProfessionsLevel01ITAV"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="2" desc_key="reqProfessionsLevel02ITAV"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="3" desc_key="reqProfessionsLevel03ITAV"/></level_requirements>
 		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="5" desc_key="reqProfessionsLevel05ITAV"/></level_requirements>
 		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="7" desc_key="reqProfessionsLevel07ITAV"/></level_requirements>
-
+		
+	<!-- Miner69r effects to MinerITAV -->
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkMiner69r"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolRepairT1ClawHammer,meleeToolAxeT1IronFireaxe,meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel"/>
 
-			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkMinerITAV"/>
-			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkMinerITAV"/>
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkMiner69r"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkMiner69r"/>
 
 			<effect_description level="1" desc_key="perkMiner69rRank1Desc" long_desc_key="perkMiner69rRank1LongDesc"/>
 			<effect_description level="2" desc_key="perkMiner69rRank2Desc" long_desc_key="perkMiner69rRank2LongDesc"/>
@@ -154,6 +155,20 @@
 			<effect_description level="4" desc_key="perkMiner69rRank4Desc" long_desc_key="perkMiner69rRank4LongDesc"/>
 			<effect_description level="5" desc_key="perkMiner69rRank5Desc" long_desc_key="perkMiner69rRank5LongDesc"/>
 		</effect_group>
+		
+	<!-- Motherlode effects to MinerITAV -->
+		<effect_group>
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="oreWoodHarvest"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value="-.1,-.4" tags="Harvesting">
+				<requirement name="HoldingItemHasTags" tags="perkMiner69r"/>
+			</passive_effect>
+
+			<effect_description level="1" desc_key="perkMotherLodeRank1Desc" long_desc_key="perkMotherLodeRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkMotherLodeRank2Desc" long_desc_key="perkMotherLodeRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkMotherLodeRank3Desc" long_desc_key="perkMotherLodeRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkMotherLodeRank4Desc" long_desc_key="perkMotherLodeRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkMotherLodeRank5Desc" long_desc_key="perkMotherLodeRank5LongDesc"/>
+        </effect_group>
 	</perk>
 
 

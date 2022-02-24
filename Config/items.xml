@@ -103,19 +103,13 @@
 </item>
 
 <!-- Adding WillingnessToLearn item (skill stone), that adds a buff (WillingnessToLearn) required to learn a Trade Profession.  -->
-<item name="drugWillingnessToLearnITAV">
+<!-- <item name="drugWillingnessToLearnITAV">
 	<property name="Extends" value="drugRecog"/>
-	<property name="DisplayType" value="drugCovertCats"/> <!-- DisplayType is what buff info is shown in the item description window (I think)-->
-	<effect_group tiered="false" name="Drug Tier 4">
-		<display_value name="dHealthLoss" value=".5"/>
-		<display_value name="$waterAmountAdd" value="30"/>
-		<display_value name="dDuration" value="777"/>
-		<!--<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugWillingnessToLearnDuration" operation="add" value="123"/>
-		 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugWillingnessToLearnITAVDuration" operation="set" value="363">
-			<requirement name="CVarCompare" cvar="$buffDrugWillingnessToLearnITAVDuration" operation="GT" value="363"/></triggered_effect> -->
+	<property name="DisplayType" value=""/>
+	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugWillingnessToLearnITAV"/>
 	</effect_group>
-</item>
+</item> -->
 
 </append>
 
