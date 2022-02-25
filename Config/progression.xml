@@ -90,24 +90,20 @@
 		</effect_group> -->
 		
 		<level_requirements level="1"> 
-			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" />
+			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel01ITAV" />
 				<!--<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="GTE" value="1" desc_key="reqProfessionsLevel01ITAV"/>-->
 		</level_requirements>
 		<level_requirements level="2">
 			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="4" desc_key="reqProfessionsLevel04ITAV"/>
-			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" />
 		</level_requirements>
 		<level_requirements level="3">
 			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="6" desc_key="reqProfessionsLevel06ITAV"/>
-			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" />
 		</level_requirements>
 		<level_requirements level="4">
 			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="8" desc_key="reqProfessionsLevel08ITAV"/>
-			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" />
 		</level_requirements>
 		<level_requirements level="5">
 			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="10" desc_key="reqProfessionsLevel10ITAV"/>
-			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" />
 		</level_requirements>
 
 		

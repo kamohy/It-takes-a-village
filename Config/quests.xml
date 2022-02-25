@@ -1,6 +1,56 @@
 <configs>
 <append xpath="/quests">
 
+	<!-- White River Trade Skill - Get offer explaining Trade Skills, talk to trader who rewards Trade Profession books -->
+	<quest id="quest_whiteRiverTradeSkill">
+		<!-- <property name="group_name_key" value="quest_WhiteRiverTradeSkill"/> -->
+		<property name="name_key" value="quest_WhiteRiverTradeSkill_subtitle"/>
+		<property name="subtitle_key" value="quest_WhiteRiverTradeSkill_subtitle"/>
+		<property name="description_key" value="quest_WhiteRiverTradeSkill_description"/>
+		<property name="offer_key" value="quest_WhiteRiverTradeSkill_offer"/>
+		<property name="statement_key" value="quest_WhiteRiverTradeSkill_statement" />
+		<property name="response_key" value="quest_WhiteRiverTradeSkill_response" />
+		<property name="return_to_quest_giver" value="true" />
+		<property name="icon" value="ui_game_symbol_map_trader"/>
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="easy"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="repeatable" value="false" />
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_WhiteRiverTradeSkill_completion" />
+		<!-- <property name="reward_choices_count" value="5" /> idk what this does -->
+
+		<action type="ShowTip" value="quest_WhiteRiverCitizen1_description">
+			<property name="delay" value="1"/>
+		</action>
+		<!--We can tack on the skill book quest to the end of the intro quest line - but not everyone does that Qline. Most should tho, bcs of the XP. New players follow the Q, old ones do it for the XP. Safest bet?
+			We can have the skill book quest as the first available quest from the trader - but not everyone checks quests. 
+			We can let the trader sell "My first skill book" which starts the skill book quest, where the reward is to chose 1 book. "My second skill book" requires some playerlevel to start.
+			
+		<objective type="Goto" id="trader" value="5" phase="1">
+			<property name="biome_filter_type" value="OnlyBiome" />
+			<property name="biome_filter" value="pine_forest" />
+			<property name="nav_object" value="go_to_trader" />
+		</objective> -->
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Exp" value="500"/>
+		<!-- <reward type="Item" id="bookSmelterITAV" value="1"/> -->
+		<reward type="Item" id="bookSmelterITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="meleeToolRepairT3Nailgun" ischosen="true" isfixed="true" value="1"/>
+
+	</quest>
 
 
 </append>

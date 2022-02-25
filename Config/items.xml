@@ -111,6 +111,28 @@
 	</effect_group>
 </item> -->
 
+
+<item name="qb_myfirstskillbookITAV">
+	<property name="Extends" value="questMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="metalSignLetter_1"/>
+	<property name="DescriptionKey" value="qb_myfirstskillbookITAV_desc"/>
+	<property name="EconomicValue" value="400"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="PickupJournalEntry" value="myFirstSkillbookTip"/>
+	
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" target="self" operation="Equals" value="0" desc_key="reqProfessionsLevel01ITAV"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1" />
+	</effect_group>
+	
+	
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_whiteRiverTradeSkill"/>
+	</property>
+
+</item>
+
 </append>
 
 
