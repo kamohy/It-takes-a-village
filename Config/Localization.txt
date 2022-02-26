@@ -7,9 +7,10 @@ bookSmelterITAVDesc,Items,perk  book,,,"Smelters learn how to make the forge, th
 cntVendingMachineITAV,blocks,Container,,,"Player Owned Store"
 cntVendingMachineGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Duke's Casino Tokens. Buy the goods you need from other Player Owned Stores to support them and the community!"
 
-perkSmelterDescITAV,progression,perk Pro,,,"Smelt and craft items in the forge and craft 20% faster on workbenches."
-perkSmelterNameITAV,progression,perk Pro,,,Smelter
+noteStartingITAV,,,,,"Note to Start with"
+noteStartingITAVDesc,,,,,"Find the others... Work together... It takes a village!"
 
+reqProfessionsLevel00ITAV,progression,Attribute,,,"You already know a profession"
 reqProfessionsLevel01ITAV,progression,Attribute,,,"Read a 'My X Profession' book to unlock"
 reqProfessionsLevel02ITAV,progression,Attribute,,,Professions Level 2
 reqProfessionsLevel03ITAV,progression,Attribute,,,Professions Level 3
@@ -20,6 +21,10 @@ reqProfessionsLevel07ITAV,progression,Attribute,,,Professions Level 7
 reqProfessionsLevel08ITAV,progression,Attribute,,,Professions Level 8
 reqProfessionsLevel09ITAV,progression,Attribute,,,Professions Level 9
 reqProfessionsLevel10ITAV,progression,Attribute,,,Professions Level 10
+allowedProfessionsLevelExceededITAV,,,,,Not yet allowed to learn another profession
+
+perkSmelterDescITAV,progression,perk Pro,,,"Smelt and craft items in the forge and craft 20% faster on workbenches."
+perkSmelterNameITAV,progression,perk Pro,,,Smelter
 
 perkSmelterRank1DescITAV,progression,perk Int,,,Apprentice
 perkSmelterRank1LongDescITAV,progression,perk Int,,,You are now an apprentice smelter and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster.
@@ -31,6 +36,15 @@ perkSmelterRank4DescITAV,progression,perk Int,,,Blacksmith
 perkSmelterRank4LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
 perkSmelterRank5DescITAV,progression,perk Int,,,Blacksmith
 perkSmelterRank5LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
+
+perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster."
+perkMinerITAVName,progression,perk Pro,,,Miner
+
+perkHunterITAVDesc,progression,perk Pro,,,"Become one with the hunt. Gain the ability to track animals and increase damage to and harvest from them."
+perkHunterITAVName,progression,perk Pro,,,Hunter
+
+perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced benefits and learn to cook faster."
+perkCookITAVName,progression,perk Pro,,,Cook
 
 drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,Your Profession Perk skill points have been reset.
 drugWillingnessToLearnITAV,items,Medical,,,Can Learn 1 Trade Skill stone
@@ -44,6 +58,6 @@ quest_WhiteRiverTradeSkill_response,Quests,Quests,,,Trade skill Responze
 quest_WhiteRiverTradeSkill_statement,Quests,Quests,,,Pick a Trade Profession
 quest_WhiteRiverTradeSkill_completion,Quests,Quests,,,"Choose what Trade Profession fits you and your community best.\n\nOnce you have read the profession book, there is no going back.\n\nChoose carefully."
 myFirstSkillbookTip_title,Journal Tip,,,,Learning Trade Professions
-myFirstSkillbookTip,Journal Tip,,,,"To learn a Trade Profession you need to read a 'My X Profession' book. \nThe 'My X Profession' books are bought from the traders and start a quest which rewards a trade book of your choosing. When you read the chosen Trade Profession book, you learn that trade. Once you have maxed out a trade, you will be eligible to read the next 'My X Profession!' book, which allows you to pick an additional trade.n\Keep maxing out your Trade Professions to become able to learn new ones!"
+myFirstSkillbookTip,Journal Tip,,,,"To learn a Trade Profession you need to read a 'My X Profession' book. \nThe 'My X Profession' books are bought from the traders and start a quest which rewards a trade book of your choosing. When you read the chosen Trade Profession book, you learn that trade. Once you have maxed out a trade, you will be eligible to read the next 'My X Profession!' book, which allows you to pick an additional trade. n\Keep maxing out your Trade Professions to become able to learn new ones!"
 qb_myfirstskillbookITAV,Items,,,,My First Profession
 qb_myfirstskillbookITAV_desc,Items,,,,"Reading this book allows you to learn your first Trade Profession! Choose your desired profession from the quest rewards. To unlock a second profession, you must max out your first one."
