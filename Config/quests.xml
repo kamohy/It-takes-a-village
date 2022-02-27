@@ -1,9 +1,50 @@
 <configs>
+<remove xpath="//quest[@id='quest_BasicSurvival8']/reward" />
+<append xpath="//quest[@id='quest_BasicSurvival8']">
+	<reward type="Exp" value="50"/>
+	<reward type="Quest" id="quest_PlayerStore"/>
+</append>
+
+<setattribute xpath="//quest[@id='quest_whiteRiverCitizen1']/action[@type='ShowTip']" name="value">quest_myFirstProfession_description</setattribute>
+
 <append xpath="/quests">
 
-	<!-- White River Trade Skill - Get offer explaining Trade Skills, talk to trader who rewards Trade Profession books -->
+
+	<!-- Basic Survival X - Craft a Player Owned Store (Cashregister) /> -->
+	<quest id="quest_PlayerStore">
+		<property name="group_name_key" value="quest_BasicSurvival"/>
+		<property name="name" value="Create your own store"/>
+		<property name="subtitle" value="Craft a Player Owned Store"/>
+		<property name="description" value="You need a store to sell your goods to other survivors."/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_BasicSurvival_offer"/>
+		<property name="shareable" value="false"/>
+		
+		<objective type="FetchKeep" id="resourceBrokenGlass" value="1" phase="1" />
+		<objective type="FetchKeep" id="resourceScrapIron" value="1" phase="1" />
+		<objective type="FetchKeep" id="resourceDuctTape" value="1" phase="1" />
+		<objective type="FetchKeep" id="resourceRockSmall" value="1" phase="1" />
+		<objective type="FetchKeep" id="resourceScrapPolymers" value="1" phase="1" />
+
+		<objective type="Craft">
+			<property name="phase" value="2"/>
+			<property name="item" value="cntVendingMachineITAV"/>
+			<property name="count" value="1"/>
+		</objective>
+		
+		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="2"/>
+
+		<reward type="Quest" id="quest_whiteRiverCitizen1">
+			<property name="chainquest" value="false"/>
+		</reward>
+		<reward type="SkillPoints" value="4" chainreward="true"/>
+	</quest>
+	
+	
+
+	<!-- My FIRST Profession - Get offer explaining Trade Skills, talk to trader who rewards Trade Profession books -->
 	<quest id="quest_MyFirstProfession">
-		<!-- <property name="group_name_key" value="quest_WhiteRiverTradeSkill"/> -->
 		<property name="name_key" value="quest_MyFirstProfession_subtitle"/>
 		<property name="subtitle_key" value="quest_MyFirstProfession_subtitle"/>
 		<property name="description_key" value="quest_MyFirstProfession_description"/>
@@ -36,10 +77,53 @@
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="Exp" value="500" />
+		<reward type="Exp" value="1" />
 		<reward type="Item" id="bookSmelterITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="meleeToolRepairT3Nailgun" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookMinerITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookHunterITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookCookITAV" ischosen="true" isfixed="true" value="1"/>
+	</quest>
+	
+	<!-- My SECOND Profession - Get offer explaining Trade Skills, talk to trader who rewards Trade Profession books -->
+	<quest id="quest_MySecondProfession">
+		<property name="name_key" value="quest_MySecondProfession_subtitle"/>
+		<property name="subtitle_key" value="quest_MySecondProfession_subtitle"/>
+		<property name="description_key" value="quest_MySecondProfession_description"/>
+		<property name="offer_key" value="quest_MySecondProfession_offer"/>
+		<property name="statement_key" value="quest_MySecondProfession_statement" />
+		<property name="response_key" value="quest_MySecondProfession_response" />
+		<property name="return_to_quest_giver" value="true" />
+		<property name="icon" value="ui_game_symbol_map_trader"/>
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="easy"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="repeatable" value="false" />
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_MySecondProfession_completion" />
+		<!-- <property name="reward_choices_count" value="5" /> idk what this does -->
 
+		<!-- <action type="ShowTip" value="quest_myFirstProfession_description">
+			<property name="delay" value="1"/>
+		</action> -->
+		
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Exp" value="1" />
+		<reward type="Item" id="bookSmelterITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookMinerITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookHunterITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookCookITAV" ischosen="true" isfixed="true" value="1"/>
+		
 	</quest>
 	
 

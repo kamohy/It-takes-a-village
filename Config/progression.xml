@@ -93,6 +93,12 @@
 			<effect_description level="4" desc_key="perkSmelterRank4DescITAV" long_desc_key="perkSmelterRank4LongDescITAV"/>
 			<effect_description level="5" desc_key="perkSmelterRank5DescITAV" long_desc_key="perkSmelterRank5LongDescITAV"/>
 		</effect_group>
+		
+		<effect_group>
+		<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="add" value="1">
+			<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="GTE" value="5" />
+		</triggered_effect>
+		</effect_group>
 	</perk>
 
 	<!-- Miner perk -->
