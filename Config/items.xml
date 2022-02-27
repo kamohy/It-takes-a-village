@@ -13,12 +13,12 @@
 <append xpath="/items"> 
 
 
-<!-- Start note item, to set initial CVars -->
-<item name="noteStartingITAV">
+<!-- Start note item, to set initial CVars (27 feb: currently solved in entityclasses with onSelfFirstSpawn values -->
+<!-- <item name="noteStartingITAV">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="bookSmelterITAV" />
-	<property name="CustomIconTint" value="4571ad" /> -->
+	<property name="CustomIconTint" value="4571ad" /> 
 	<property name="Stacknumber" value="1"/> 
 	<property name="DescriptionKey" value="noteStartingITAVDesc"/>
 	<property name="SellableToTrader" value="false" />
@@ -31,18 +31,46 @@
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="set" value="0" />
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="1" />
-	</effect_group>
-	
+	</effect_group>	
+</item> -->
+
+<!-- Adding Profession Books to unlock holding more Professions (myfirstskillbook) -->
+<!-- My FIRST Profession -->
+<item name="qb_MyFirstProfessionITAV">
+	<property name="Extends" value="questMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="metalSignLetter_1"/>
+	<property name="DescriptionKey" value="qb_MyFirstProfessionITAV_desc"/>
+	<property name="EconomicValue" value="400"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false" />
+	<property name="PickupJournalEntry" value="MyFirstProfessionTip"/>
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_MyFirstProfession" />
+		 <requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="Equals" value="0" desc_key="reqProfessionsLevel00ITAV" />
+		<!--<requirement name="CVarCompare" cvar="numberOfProfessionsAllowed" operation="Equals" value="1" /> -->
+		<!-- <requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="Equals" value="5" /> For the second trade profession book -->
+	</property>
 </item>
 
-<!-- Adding Trade Perk Books to unlock a perk in the Professions attribute/Trade tree -->
-<item name="bookSmelterITAV"> <!-- first book -->
+
+
+<!-- 
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_myXProfession" />
+		<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LTE" value="@numberOfProfessionsAllowed" desc_key="reqProfessionsLevel00ITAV"/>
+		<requirement name="CVarCompare" cvar="numberOfProfessionsAllowed" operation="LT" value="1" /> FOR LATER BOOKS
+	</property>
+	-->
+
+<!-- Adding Trade Profession Perk Books to unlock specific Professions -->
+<!-- Master -->
+<item name="bookMasterITAV">
     <property name="Extends" value="schematicMaster"/>
-    <property name="CustomIcon" value="bookSmelterITAV"/>
+    <property name="CustomIcon" value="bookMasterITAV"/> <!-- Required or Master icon is used -->
     <property name="DescriptionKey" value="perkFiremansAlmanacHeatLongDesc"/>
-    <property name="Stacknumber" value="20"/>
+    <property name="Stacknumber" value="2"/>
     <property name="EconomicValue" value="500"/>
-    <property name="Unlocks" value="perkSmelterITAV"/>
     <property name="Group" value="Books,Mods,BooksOnly"/>
 	<property name="SellableToTrader" value="false" />
     <property class="Action0">
@@ -50,21 +78,83 @@
         <property name="Delay" value="1.0"/>
         <property name="Use_time" value="..."/>
         <property name="Sound_start" value="read_skillbook"/>
-		<requirement name="CVarCompare" cvar="numberOfProfessionsAllowed" operation="Equals" value="1" /> <!-- GT value="@numberOfProfessionsKnown" -->
+		<requirement name="CVarCompare" cvar="numberOfProfessionsAllowed" operation="GT" value="@numberOfProfessionsKnown" />
+    </property>
+</item>
+
+<!-- SMELTER -->
+<item name="bookSmelterITAV">
+    <property name="Extends" value="bookMasterITAV"/>
+    <property name="CustomIcon" value="bookSmelterITAV"/>
+    <property name="DescriptionKey" value="perkFiremansAlmanacHeatLongDesc"/>
+    <property name="Unlocks" value="perkSmelterITAV"/>
+    <property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="LT" value="1" />
     </property>
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSmelterITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="LT" value="1" />
-		</triggered_effect> <!-- level="-1" sets a perk to max level -->
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+		</triggered_effect> 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkSmelterITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntSmelterITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
-		
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkFiremansAlmanacComplete" level="-1">
-            <requirement name="PerksUnlocked" skill_name="skillFiremansAlmanac" operation="GTE" value="7"/></triggered_effect>
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-            <requirement name="PerksUnlocked" skill_name="skillFiremansAlmanac" operation="GTE" value="7"/></triggered_effect>
+    </effect_group>
+</item>
+
+<!-- MINER -->
+<item name="bookMinerITAV">
+    <property name="Extends" value="bookMasterITAV"/>
+    <property name="CustomIcon" value="bookMinerITAV"/>
+    <property name="DescriptionKey" value="perkFiremansAlmanacHeatLongDesc"/>
+    <property name="Unlocks" value="perkMinerITAV"/>
+    <property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="perkMinerITAV" operation="LT" value="1" />
+    </property>
+    <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMinerITAV" level="1">
+			<requirement name="ProgressionLevel" progression_name="perkMinerITAV" operation="LT" value="1" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkMinerITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntMinerITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+    </effect_group>
+</item>
+
+<!-- HUNTER -->
+<item name="bookHunterITAV">
+    <property name="Extends" value="bookMasterITAV"/>
+    <property name="CustomIcon" value="bookHunterITAV"/>
+    <property name="DescriptionKey" value="perkFiremansAlmanacHeatLongDesc"/>
+    <property name="Unlocks" value="perkHunterITAV"/>
+    <property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="LT" value="1" />
+    </property>
+    <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHunterITAV" level="1">
+			<requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="LT" value="1" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkHunterITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntHunterITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+    </effect_group>
+</item>
+
+<!-- COOK -->
+<item name="bookCookITAV">
+    <property name="Extends" value="bookMasterITAV"/>
+    <property name="CustomIcon" value="bookCookITAV"/>
+    <property name="DescriptionKey" value="perkFiremansAlmanacHeatLongDesc"/>
+    <property name="Unlocks" value="perkCookITAV"/>
+    <property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="perkCookITAV" operation="LT" value="1" />
+    </property>
+    <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkCookITAV" level="1">
+			<requirement name="ProgressionLevel" progression_name="perkCookITAV" operation="LT" value="1" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkCookITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntCookITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
     </effect_group>
 </item>
 
@@ -92,7 +182,7 @@
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
 			<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ResetProgression" reset_books="false"/>  This resets all progression, across attributes and perks. -->
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntSmelterITAV" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="1"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="player#death" play_in_head="true"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="player_death_stinger" play_in_head="true"/>
@@ -100,40 +190,6 @@
 	</effect_group>
 </item>
 
-<!-- Adding WillingnessToLearn item (skill stone), that adds a buff (WillingnessToLearn) required to learn a Trade Profession.  -->
-<!-- <item name="drugWillingnessToLearnITAV">
-	<property name="Extends" value="drugRecog"/>
-	<property name="DisplayType" value=""/>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugWillingnessToLearnITAV"/>
-	</effect_group>
-</item> -->
-
-
-<item name="qb_myfirstskillbookITAV">
-	<property name="Extends" value="questMaster"/>
-	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="metalSignLetter_1"/>
-	<property name="DescriptionKey" value="qb_myfirstskillbookITAV_desc"/>
-	<property name="EconomicValue" value="400"/>
-	<property name="Stacknumber" value="1"/>
-	<property name="SellableToTrader" value="false" />
-	<property name="PickupJournalEntry" value="myFirstSkillbookTip"/>
-	<property class="Action0">
-		<property name="QuestGiven" value="quest_whiteRiverTradeSkill" />
-		<!-- <requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="Equals" value="0" desc_key="reqProfessionsLevel00ITAV" />
-		<requirement name="CVarCompare" cvar="numberOfProfessionsAllowed" operation="Equals" value="1" /> -->
-		<!-- <requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="Equals" value="5" /> For the second trade profession book -->
-	</property>
-</item>
-
-<!-- 
-	<property class="Action0">
-		<property name="QuestGiven" value="quest_myXProfession" />
-		<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LTE" value="@numberOfProfessionsAllowed" desc_key="reqProfessionsLevel00ITAV"/>
-		<requirement name="CVarCompare" cvar="numberOfProfessionsAllowed" operation="LT" value="1" /> FOR LATER BOOKS
-	</property>
-	-->
 
 </append>
 

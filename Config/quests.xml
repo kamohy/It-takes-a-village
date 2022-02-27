@@ -2,14 +2,14 @@
 <append xpath="/quests">
 
 	<!-- White River Trade Skill - Get offer explaining Trade Skills, talk to trader who rewards Trade Profession books -->
-	<quest id="quest_whiteRiverTradeSkill">
+	<quest id="quest_MyFirstProfession">
 		<!-- <property name="group_name_key" value="quest_WhiteRiverTradeSkill"/> -->
-		<property name="name_key" value="quest_WhiteRiverTradeSkill_subtitle"/>
-		<property name="subtitle_key" value="quest_WhiteRiverTradeSkill_subtitle"/>
-		<property name="description_key" value="quest_WhiteRiverTradeSkill_description"/>
-		<property name="offer_key" value="quest_WhiteRiverTradeSkill_offer"/>
-		<property name="statement_key" value="quest_WhiteRiverTradeSkill_statement" />
-		<property name="response_key" value="quest_WhiteRiverTradeSkill_response" />
+		<property name="name_key" value="quest_MyFirstProfession_subtitle"/>
+		<property name="subtitle_key" value="quest_MyFirstProfession_subtitle"/>
+		<property name="description_key" value="quest_MyFirstProfession_description"/>
+		<property name="offer_key" value="quest_MyFirstProfession_offer"/>
+		<property name="statement_key" value="quest_MyFirstProfession_statement" />
+		<property name="response_key" value="quest_MyFirstProfession_response" />
 		<property name="return_to_quest_giver" value="true" />
 		<property name="icon" value="ui_game_symbol_map_trader"/>
 		<property name="category_key" value="quest"/>
@@ -18,12 +18,12 @@
 		<property name="repeatable" value="false" />
 		<property name="shareable" value="false"/>
 		<property name="completiontype" value="TurnIn" />
-		<property name="completion_key" value="quest_WhiteRiverTradeSkill_completion" />
+		<property name="completion_key" value="quest_MyFirstProfession_completion" />
 		<!-- <property name="reward_choices_count" value="5" /> idk what this does -->
 
-		<action type="ShowTip" value="quest_WhiteRiverCitizen1_description">
+		<!-- <action type="ShowTip" value="quest_myFirstProfession_description">
 			<property name="delay" value="1"/>
-		</action>
+		</action> -->
 		
 		<objective type="ReturnToNPC">
 			<property name="phase" value="2"/>

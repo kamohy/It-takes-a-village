@@ -7,8 +7,8 @@ bookSmelterITAVDesc,Items,perk  book,,,"Smelters learn how to make the forge, th
 cntVendingMachineITAV,blocks,Container,,,"Player Owned Store"
 cntVendingMachineGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Duke's Casino Tokens. Buy the goods you need from other Player Owned Stores to support them and the community!"
 
-noteStartingITAV,,,,,"Note to Start with"
-noteStartingITAVDesc,,,,,"Find the others... Work together... It takes a village!"
+noteStartingITAV,,,,,"Find the others... work together"
+noteStartingITAVDesc,,,,,"You'll need to get a trade profession to make yourself useful to any other survivors."
 
 reqProfessionsLevel00ITAV,progression,Attribute,,,"You already know a profession"
 reqProfessionsLevel01ITAV,progression,Attribute,,,"Read a 'My X Profession' book to unlock"
@@ -48,16 +48,19 @@ perkCookITAVName,progression,perk Pro,,,Cook
 
 drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,Your Profession Perk skill points have been reset.
 drugWillingnessToLearnITAV,items,Medical,,,Can Learn 1 Trade Skill stone
-drugWillingnessToLearnITAVDesc,items,Medical,,,Consume the stone to ready your mind for learning ONE Trade Profession Perk. A Trade Profession can only be learned if the mind is ready!
+drugWillingnessToLearnITAVDesc,items,Medical,,,Consume the stone to ready your mind for learning ONE Profession Perk. A Profession can only be learned if the mind is ready!
 
-quest_WhiteRiverTradeSkill_offer,Quest,Quest Info,,,"Picking a Trade\n\nGet a profession book from the trader to learn your first Trade Profession. After maxing out the profession, you can learn an additional Trade Profession by buying another 'My X Profession!' book from the trader. Trader stock resets every three days. Coordinate with other survivors to find out what is needed in the community! \n\nChoose your first profession wisely."
-quest_WhiteRiverTradeSkill_subtitle,Quests,Quests,,,My First Profession
-quest_WhiteRiverTradeSkill_description,Quests,Quests,,,"Talking to the Trader will allow me to chose a Trade Profession."
-quest_WhiteRiverTradeSkill_title,Quests,Quests,,,Pick a Trade Profession
-quest_WhiteRiverTradeSkill_response,Quests,Quests,,,Trade skill Responze
-quest_WhiteRiverTradeSkill_statement,Quests,Quests,,,Pick a Trade Profession
-quest_WhiteRiverTradeSkill_completion,Quests,Quests,,,"Choose what Trade Profession fits you and your community best.\n\nOnce you have read the profession book, there is no going back.\n\nChoose carefully."
-myFirstSkillbookTip_title,Journal Tip,,,,Learning Trade Professions
-myFirstSkillbookTip,Journal Tip,,,,"To learn a Trade Profession you need to read a 'My X Profession' book. \nThe 'My X Profession' books are bought from the traders and start a quest which rewards a trade book of your choosing. When you read the chosen Trade Profession book, you learn that trade. Once you have maxed out a trade, you will be eligible to read the next 'My X Profession!' book, which allows you to pick an additional trade. n\Keep maxing out your Trade Professions to become able to learn new ones!"
-qb_myfirstskillbookITAV,Items,,,,My First Profession
-qb_myfirstskillbookITAV_desc,Items,,,,"Reading this book allows you to learn your first Trade Profession! Choose your desired profession from the quest rewards. To unlock a second profession, you must max out your first one."
+quest_myFirstProfession_description_title,Journal Tip,,,,My First Profession
+quest_myFirstProfession_description,Quest,Quest Info,,,"Time to chose your path!\n\nYou will now be able to pick ONE (1) Profession. Only after perfecting this first Profession will you be able to learn your second. Talk to a trader to access your second Profession. \n\n...If you live that long." 
+
+quest_MyFirstProfession_offer,Quest,Quest Info,,,"Picking a Trade \n\nYou only get you first Profession once, so choose carefully. \nOnly after perfecting this first Profession will you be able to learn your second. Talk to a trader to access 'My second Profession!'. \nCoordinate with other survivors to find out what is needed in the community. \n\n...If you live that long."
+quest_MyFirstProfession_subtitle,Quests,Quests,,,My First Profession
+quest_MyFirstProfession_description,Quests,Quests,,,"Talking to the Trader will allow me to chose a Profession."
+quest_MyFirstProfession_title,Quests,Quests,,,Pick a Profession
+quest_MyFirstProfession_response,Quests,Quests,,,Trade skill Responze
+quest_MyFirstProfession_statement,Quests,Quests,,,Pick a Profession
+quest_MyFirstProfession_completion,Quests,Quests,,,"Choose what Profession fits you and your community best.\n\nOnce you have read the Profession book, there is no going back.\n\nChoose carefully."
+MyFirstProfessionTip_title,Journal Tip,,,,Learning Professions
+MyFirstProfessionTip,Journal Tip,,,,"To learn a Profession you need to read a 'My X Profession' book. \nThe 'My X Profession' books are bought from the traders and start a quest which rewards a Profession book of your choosing. When you read the chosen Profession book, you learn that Profession. Once you have maxed out a Profession, you will be eligible to read the next 'My X Profession!' book, which allows you to pick an additional Profession.  n\Keep maxing out your Professions to become able to learn new ones!"
+qb_MyFirstProfessionITAV,Items,,,,My First Profession
+qb_MyFirstProfessionITAV_desc,Items,,,,"Reading this book allows you to learn your first Profession! Choose your desired Profession from the quest rewards. To unlock a second Profession, you must max out your first one."
