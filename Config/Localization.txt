@@ -5,8 +5,42 @@ attProfessionsDescITAV,progression,Attribute,,,"Learn a profession to be able to
 bookSmelterITAV,Items,perk  book,,,"Profession: Smelter"
 bookSmelterITAVDesc,Items,perk  book,,,"Smelters learn how to make the forge, the anvil and later on the crucible. They smelt more efficiently than any other."
 
+bookMinerITAV,Items,perk  book,,,"Profession: Miner"
+bookMinerITAVDesc,progression,perk  book,,,"Miners are efficient at gathering materials. They harvest more resources from trees and veins."
+perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 poor tools, increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger.\nUnlocks all iron tools like pickaxes. And harvest 20% more from ore, stone, terrain blocks and trees."
+
+bookHunterITAV,Items,perk  book,,,"Profession: Hunter"
+bookHunterITAVDesc,progression,perk  book,,,"Hunters specialize in tracking and hunting animals. They also harvest more resources from animal carcasses."
+perkHunterITAVRank1LongDesc,progression,perk Pro,,,"You are now a Hunter. Harvest 20% more resources from animals and crouch to track them. Deal 25% more damage to animals."
+
+
+bookCookITAV,Items,perk  book,,,"Profession: Cook"
+bookCookITAVDesc,progression,perk  book,,,"Cooks learn how to prepare more filling meals. These meals give higher health and stamina bonuses."
+
+
 cntVendingMachineITAV,blocks,Container,,,"Player Owned Store"
 cntVendingMachineGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Casino Coins. Buy the goods you need from other Player Owned Stores to support them and the community!  Store is indestructible unless falling."
+
+attProfessionsITAVRank01Desc,progression,Attribute,,,Freshly Graduated
+attProfessionsITAVRank01LongDesc,progression,Attribute,,,"You are brand new to trading. Can craft Player Owned Store and sell goods."
+attProfessionsITAVRank02Desc,progression,Attribute,,,Assistant 
+attProfessionsITAVRank02LongDesc,progression,Attribute,,,"Support and strengthen your community by buying from other survivors. Can craft ?WTB sign??."
+attProfessionsITAVRank03Desc,progression,Attribute,,,Employee
+attProfessionsITAVRank03LongDesc,progression,Attribute,,,"Your goods are needed on the market. Can craft ?farmers stand??."
+attProfessionsITAVRank04Desc,progression,Attribute,,,Manager
+attProfessionsITAVRank04LongDesc,progression,Attribute,,,"The locals rely on your store to be well-stocked. Can craft ?open sign??."
+attProfessionsITAVRank05Desc,progression,Attribute,,,Corner Shop Owner
+attProfessionsITAVRank05LongDesc,progression,Attribute,,,"How will new customers find your store? Can craft ?WTS signs??."
+attProfessionsITAVRank06Desc,progression,Attribute,,,Farsighted
+attProfessionsITAVRank06LongDesc,progression,Attribute,,,"Trading is becoming a way of life. Can craft ?deco??."
+attProfessionsITAVRank07Desc,progression,Attribute,,,Mentor
+attProfessionsITAVRank07LongDesc,progression,Attribute,,,"Help newcomers set up their own store. Can craft ?deco??."
+attProfessionsITAVRank08Desc,progression,Attribute,,,Sharp
+attProfessionsITAVRank08LongDesc,progression,Attribute,,,"Sell spare goods to the trader. They don't pay very well, but still. Can craft ?deco??."
+attProfessionsITAVRank09Desc,progression,Attribute,,,Business Savvy
+attProfessionsITAVRank09LongDesc,progression,Attribute,,,"Max out current professions to learn new ones. Search for the second, third, fourth etc. books at the trader."
+attProfessionsITAVRank10Desc,progression,Attribute,,,Experienced
+attProfessionsITAVRank10LongDesc,progression,Attribute,,,"Parking and accessibility is key to drive foot traffic to your store. Can craft ?parking sign??."
 
 reqProfessionsLevel00ITAV,progression,Attribute,,,"You already know a profession"
 reqProfessionsLevel01ITAV,progression,Attribute,,,"Read a 'My X Profession' book to unlock"
@@ -28,11 +62,11 @@ perkSmelterRank1DescITAV,progression,perk Int,,,Apprentice
 perkSmelterRank1LongDescITAV,progression,perk Int,,,You are now an apprentice smelter and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster.
 perkSmelterRank2DescITAV,progression,perk Int,,,Journeyman
 perkSmelterRank2LongDescITAV,progression,perk Int,,,You are now a journeyman smelter and able to do nothing new!
-perkSmelterRank3DescITAV,progression,perk Int,,,Blacksmith
+perkSmelterRank3DescITAV,progression,perk Int,,,Expert
 perkSmelterRank3LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
-perkSmelterRank4DescITAV,progression,perk Int,,,Blacksmith
+perkSmelterRank4DescITAV,progression,perk Int,,,Artisan
 perkSmelterRank4LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
-perkSmelterRank5DescITAV,progression,perk Int,,,Blacksmith
+perkSmelterRank5DescITAV,progression,perk Int,,,Master
 perkSmelterRank5LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
 
 perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster."
@@ -83,3 +117,5 @@ qb_MySecondProfessionITAV,Items,,,,My Second Profession
 qb_MySecondProfessionITAV_desc,Items,,,,"Reading this book allows you to learn your second Profession! Choose your desired Profession from the quest rewards. To unlock a third Profession, you must max out your first and second one."
 
 quest_WhiteRiverCitizen1_description,Quest,Quest Info,,,"Good Job Survivor,\n\nYou have proved to be capable with much potential. We have marked your map with the nearest White River Outpost location. There you will find a Trader where you can buy and sell goods, and trade stories with one of our friendly citizens.\n\nWelcome Aboard, Noah"
+
+

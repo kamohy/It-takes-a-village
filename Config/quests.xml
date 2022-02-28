@@ -60,10 +60,10 @@
 		<property name="shareable" value="false"/>
 		<property name="completiontype" value="TurnIn" />
 		<property name="completion_key" value="quest_MyFirstProfession_completion" />
-		<!-- <property name="reward_choices_count" value="5" /> idk what this does -->
+		<property name="reward_choices_count" value="6" /> 
 
 		<action type="ShowTip" value="quest_myFirstProfession_description">
-			<property name="delay" value="10"/>
+			<property name="delay" value="2"/>
 		</action>
 		
 		<objective type="Goto" id="trader" value="5" phase="2">
@@ -78,7 +78,6 @@
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="Exp" value="1" />
 		<reward type="Item" id="bookSmelterITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookMinerITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookHunterITAV" ischosen="true" isfixed="true" value="1"/>
@@ -119,7 +118,6 @@
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="Exp" value="1" />
 		<reward type="Item" id="bookSmelterITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookMinerITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookHunterITAV" ischosen="true" isfixed="true" value="1"/>

@@ -17,5 +17,24 @@
 		</tier_items>
 	</append> 
 	  -->
+	<append xpath="//trader_item_group[@name='traderAlways']">
+		<item name="qb_MySecondProfessionITAV" count="10" />
+	</append>
+	
+	<remove xpath="//trader_info[@id='4']" />
+	
+	<append xpath="/traders">
+		<trader_info id="4" full_reset="false" reset_interval="1" override_buy_markup="1.0" allow_sell="false" min_inventory="10" max_inventory="20" min_items_swapped="6" max_items_swapped="13">
+		<trader_items count="10">
+			<item name="bookSmelterITAV" />
+			<item name="bookMinerITAV" />
+			<item name="bookHunterITAV" />
+			<item name="bookCookITAV" />
+		</trader_items>
+	</trader_info>
+	
+	
+	</append>
+	
   
 </configs>

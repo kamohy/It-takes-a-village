@@ -72,7 +72,7 @@
 <item name="bookSmelterITAV">
     <property name="Extends" value="bookMasterITAV"/>
     <property name="CustomIcon" value="bookSmelterITAV"/>
-    <property name="DescriptionKey" value="perkFiremansAlmanacHeatLongDesc"/>
+    <property name="DescriptionKey" value="bookSmelterITAVDesc"/>
     <property name="Unlocks" value="perkSmelterITAV"/>
     <property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="LT" value="1" />
@@ -92,7 +92,7 @@
 <item name="bookMinerITAV">
     <property name="Extends" value="bookMasterITAV"/>
     <property name="CustomIcon" value="bookMinerITAV"/>
-    <property name="DescriptionKey" value="perkFiremansAlmanacHeatLongDesc"/>
+    <property name="DescriptionKey" value="bookMinerITAVDesc"/>
     <property name="Unlocks" value="perkMinerITAV"/>
     <property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="perkMinerITAV" operation="LT" value="1" />
@@ -112,7 +112,7 @@
 <item name="bookHunterITAV">
     <property name="Extends" value="bookMasterITAV"/>
     <property name="CustomIcon" value="bookHunterITAV"/>
-    <property name="DescriptionKey" value="perkFiremansAlmanacHeatLongDesc"/>
+    <property name="DescriptionKey" value="bookHunterITAVDesc"/>
     <property name="Unlocks" value="perkHunterITAV"/>
     <property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="LT" value="1" />
@@ -132,7 +132,7 @@
 <item name="bookCookITAV">
     <property name="Extends" value="bookMasterITAV"/>
     <property name="CustomIcon" value="bookCookITAV"/>
-    <property name="DescriptionKey" value="perkFiremansAlmanacHeatLongDesc"/>
+    <property name="DescriptionKey" value="bookCookITAVDesc"/>
     <property name="Unlocks" value="perkCookITAV"/>
     <property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="perkCookITAV" operation="LT" value="1" />
