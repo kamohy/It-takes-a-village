@@ -1,0 +1,106 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+attProfessionsITAV,progression,Attribute,,,Professions
+attProfessionsNameITAV,progression,Attribute,,,"Attribute: Professions"
+attProfessionsDescITAV,progression,Attribute,,,"Learn a profession to be able to support and contribute to your village."
+bookSmelterITAV,Items,perk  book,,,"Profession: Smelter"
+bookSmelterITAVDesc,Items,perk  book,,,"Smelters learn how to make the forge, the anvil and later on the crucible. They smelt more efficiently than any other."
+
+cntVendingMachineITAV,blocks,Container,,,"Player Owned Store"
+cntVendingMachineGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Casino Coins. Buy the goods you need from other Player Owned Stores to support them and the community!  Store is indestructible unless falling."
+
+attProfessionsITAVRank01Desc,progression,Attribute,,,Freshly Graduated
+attProfessionsITAVRank01LongDesc,progression,Attribute,,,"You are brand new to trading. Can craft Player Owned Store and sell goods."
+attProfessionsITAVRank02Desc,progression,Attribute,,,Assistant 
+attProfessionsITAVRank02LongDesc,progression,Attribute,,,"Support and strengthen your community by buying from other survivors. Can craft ?WTB sign??."
+attProfessionsITAVRank03Desc,progression,Attribute,,,Employee
+attProfessionsITAVRank03LongDesc,progression,Attribute,,,"Your goods are needed on the market. Can craft ?farmers stand??."
+attProfessionsITAVRank04Desc,progression,Attribute,,,Manager
+attProfessionsITAVRank04LongDesc,progression,Attribute,,,"The locals rely on your store to be well-stocked. Can craft ?open sign??."
+attProfessionsITAVRank05Desc,progression,Attribute,,,Corner Shop Owner
+attProfessionsITAVRank05LongDesc,progression,Attribute,,,"How will new customers find your store? Can craft ?WTS signs??."
+attProfessionsITAVRank06Desc,progression,Attribute,,,Farsighted
+attProfessionsITAVRank06LongDesc,progression,Attribute,,,"Trading is becoming a way of life. Can craft ?deco??."
+attProfessionsITAVRank07Desc,progression,Attribute,,,Mentor
+attProfessionsITAVRank07LongDesc,progression,Attribute,,,"Help newcomers set up their own store. Can craft ?deco??."
+attProfessionsITAVRank08Desc,progression,Attribute,,,Sharp
+attProfessionsITAVRank08LongDesc,progression,Attribute,,,"Sell spare goods to the trader. They don't pay very well, but still. Can craft ?deco??."
+attProfessionsITAVRank09Desc,progression,Attribute,,,Business Savvy
+attProfessionsITAVRank09LongDesc,progression,Attribute,,,"Max out current professions to learn new ones. Search for the second, third, fourth etc. books at the trader."
+attProfessionsITAVRank10Desc,progression,Attribute,,,Experienced
+attProfessionsITAVRank10LongDesc,progression,Attribute,,,"Parking and accessibility is key to drive foot traffic to your store. Can craft ?parking sign??."
+
+reqProfessionsLevel00ITAV,progression,Attribute,,,"You already know a profession"
+reqProfessionsLevel01ITAV,progression,Attribute,,,"Read a 'My X Profession' book to unlock"
+reqProfessionsLevel02ITAV,progression,Attribute,,,Professions Level 2
+reqProfessionsLevel03ITAV,progression,Attribute,,,Professions Level 3
+reqProfessionsLevel04ITAV,progression,Attribute,,,Professions Level 4
+reqProfessionsLevel05ITAV,progression,Attribute,,,Professions Level 5
+reqProfessionsLevel06ITAV,progression,Attribute,,,Professions Level 6
+reqProfessionsLevel07ITAV,progression,Attribute,,,Professions Level 7
+reqProfessionsLevel08ITAV,progression,Attribute,,,Professions Level 8
+reqProfessionsLevel09ITAV,progression,Attribute,,,Professions Level 9
+reqProfessionsLevel10ITAV,progression,Attribute,,,Professions Level 10
+allowedProfessionsLevelExceededITAV,,,,,Not yet allowed to learn another profession
+
+perkSmelterDescITAV,progression,perk Pro,,,"Smelt and craft items in the forge and craft 20% faster on workbenches."
+perkSmelterNameITAV,progression,perk Pro,,,Smelter
+
+perkSmelterRank1DescITAV,progression,perk Int,,,Apprentice
+perkSmelterRank1LongDescITAV,progression,perk Int,,,You are now an apprentice smelter and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster.
+perkSmelterRank2DescITAV,progression,perk Int,,,Journeyman
+perkSmelterRank2LongDescITAV,progression,perk Int,,,You are now a journeyman smelter and able to do nothing new!
+perkSmelterRank3DescITAV,progression,perk Int,,,Blacksmith
+perkSmelterRank3LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
+perkSmelterRank4DescITAV,progression,perk Int,,,Blacksmith
+perkSmelterRank4LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
+perkSmelterRank5DescITAV,progression,perk Int,,,Blacksmith
+perkSmelterRank5LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
+
+perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster."
+perkMinerITAVName,progression,perk Pro,,,Miner
+
+perkHunterITAVDesc,progression,perk Pro,,,"Become one with the hunt. Gain the ability to track animals and increase damage to and harvest from them."
+perkHunterITAVName,progression,perk Pro,,,Hunter
+
+perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced benefits and learn to cook faster."
+perkCookITAVName,progression,perk Pro,,,Cook
+
+hasLearntSmelterITAVTooltip,items,Admin,,,"Profession: Smelter acquired"
+hasLearntMinerITAVTooltip,items,Admin,,,"Profession: Miner acquired"
+hasLearntHunterITAVTooltip,items,Admin,,,"Profession: Hunter acquired"
+hasLearntCookITAVTooltip,items,Admin,,,"Profession: Cook acquired"
+drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,Your Profession Perk skill points have been reset.
+
+tutorialTipITAV_title,Journal Tip,,,,"It Takes A Village"
+tutorialTipITAV,Journal Tip,,,,"You look rough,\n\nIf you can find the other survivors, you can combine your different strengths to better survive in the wasteland.\n\nIt takes a village!"
+
+MyFirstProfessionTip_title,Journal Tip,,,,Learning Professions
+MyFirstProfessionTip,Journal Tip,,,,"To learn a Profession you need to read a 'My X Profession' book. \nThe 'My X Profession' books are bought from the traders and start a quest which rewards a Profession book of your choosing. When you read the chosen Profession book, you learn that Profession. Once you have maxed out a Profession, you will be eligible to read the next 'My X Profession!' book, which allows you to pick an additional Profession.  n\Keep maxing out your Professions to become able to learn new ones!"
+
+quest_myFirstProfession_description_title,Journal Tip,,,,Learning Your First Profession
+quest_myFirstProfession_description,Quest,Quest Info,,,"Time to chose your Profession!\n\nProfessions are incredibly strong: only the Smelter can make Forged Iron, only the Cook can make food worth a damn. Choose carefully; only after perfecting your first Profession will you be able to learn a second. The trader has the books, go see them. \n\n...And don't get eaten on the way." 
+quest_mySecondProfession_description_title,Journal Tip,,,,My Second Profession
+quest_mySecondProfession_description,Quest,Quest Info,,,"Time to chose your second path!\n\nYou will now be able to pick ONE (1) Profession. Only after perfecting this Profession will you be able to learn your third. Talk to a trader to access your third Profession. \n\n...If you live that long... again."
+
+quest_MyFirstProfession_offer,Quest,Quest Info,,,"Picking a Trade \n\nYou only get you first Profession once, so choose carefully. \nOnly after perfecting this first Profession will you be able to learn your second. Talk to a trader to access 'My second Profession!'. \nCoordinate with other survivors to find out what is needed in the community. \n\n...If you live that long."
+quest_MyFirstProfession_subtitle,Quests,Quests,,,My First Profession
+quest_MyFirstProfession_description,Quests,Quests,,,"Time to chose your Profession!\n\nProfessions are incredibly strong: only the Smelter can make Forged Iron, only the Cook can make food worth a damn. Choose carefully; only after perfecting your first Profession will you be able to learn a second. The trader has the books, go see them. \n\n...And don't get eaten on the way."
+quest_MyFirstProfession_title,Quests,Quests,,,Pick a Profession
+quest_MyFirstProfession_response,Quests,Quests,,,Trade Profession Quest Response
+quest_MyFirstProfession_statement,Quests,Quests,,,Pick a Profession
+quest_MyFirstProfession_completion,Quests,Quests,,,"Choose what Profession fits you and your community best.\n\nOnce you have read the Profession book, there is no going back.\n\nChoose carefully."
+
+quest_MySecondProfession_offer,Quest,Quest Info,,,"Picking a Trade \n\nYou only get you second Profession once, so choose carefully. \nOnly after perfecting this second Profession will you be able to learn your third. Talk to a trader to access 'My third Profession!'. \n\nDon't forget to trade with the other survivors!"
+quest_MySecondProfession_subtitle,Quests,Quests,,,My Second Profession
+quest_MySecondProfession_description,Quests,Quests,,,"Talking to the Trader will allow me to chose one more Profession."
+quest_MySecondProfession_title,Quests,Quests,,,Pick a Profession
+quest_MySecondProfession_response,Quests,Quests,,,Trade Profession Quest Response
+quest_MySecondProfession_statement,Quests,Quests,,,Pick a Profession
+quest_MySecondProfession_completion,Quests,Quests,,,"Choose what Profession fits you and your community best.\n\nOnce you have read the Profession book, there is no going back.\n\nChoose carefully."
+
+qb_MyFirstProfessionITAV,Items,,,,My First Profession
+qb_MyFirstProfessionITAV_desc,Items,,,,"Reading this book allows you to learn your first Profession! Choose your desired Profession from the quest rewards. To unlock a second Profession, you must max out your first one."
+qb_MySecondProfessionITAV,Items,,,,My Second Profession
+qb_MySecondProfessionITAV_desc,Items,,,,"Reading this book allows you to learn your second Profession! Choose your desired Profession from the quest rewards. To unlock a third Profession, you must max out your first and second one."
+
+quest_WhiteRiverCitizen1_description,Quest,Quest Info,,,"Good Job Survivor,\n\nYou have proved to be capable with much potential. We have marked your map with the nearest White River Outpost location. There you will find a Trader where you can buy and sell goods, and trade stories with one of our friendly citizens.\n\nWelcome Aboard, Noah"
