@@ -50,19 +50,20 @@ hasLearntHunterITAVTooltip,items,Admin,,,"Profession: Hunter acquired"
 hasLearntCookITAVTooltip,items,Admin,,,"Profession: Cook acquired"
 drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,Your Profession Perk skill points have been reset.
 
-tutorialTipITAV,Journal Tip,,,,"Dear ITAV Friend,\n\nThe wasteland can be an unforgiving place, I found you naked and left for dead with no supplies.
+tutorialTipITAV_title,Journal Tip,,,,"It Takes A Village"
+tutorialTipITAV,Journal Tip,,,,"You look rough,\n\nIf you can find the other survivors, you can combine your different strengths to better survive in the wasteland.\n\nIt takes a village!"
 
 MyFirstProfessionTip_title,Journal Tip,,,,Learning Professions
 MyFirstProfessionTip,Journal Tip,,,,"To learn a Profession you need to read a 'My X Profession' book. \nThe 'My X Profession' books are bought from the traders and start a quest which rewards a Profession book of your choosing. When you read the chosen Profession book, you learn that Profession. Once you have maxed out a Profession, you will be eligible to read the next 'My X Profession!' book, which allows you to pick an additional Profession.  n\Keep maxing out your Professions to become able to learn new ones!"
 
-quest_myFirstProfession_description_title,Journal Tip,,,,My First Profession
-quest_myFirstProfession_description,Quest,Quest Info,,,"Time to chose your path!\n\nYou will now be able to pick ONE (1) Profession. Only after perfecting this first Profession will you be able to learn your second. Talk to a trader to access your second Profession. \n\n...If you live that long." 
+quest_myFirstProfession_description_title,Journal Tip,,,,Learning Your First Profession
+quest_myFirstProfession_description,Quest,Quest Info,,,"Time to chose your Profession!\n\nProfessions are incredibly strong: only the Smelter can make Forged Iron, only the Cook can make food worth a damn. Choose carefully; only after perfecting your first Profession will you be able to learn a second. The trader has the books, go see them. \n\n...And don't get eaten on the way." 
 quest_mySecondProfession_description_title,Journal Tip,,,,My Second Profession
 quest_mySecondProfession_description,Quest,Quest Info,,,"Time to chose your second path!\n\nYou will now be able to pick ONE (1) Profession. Only after perfecting this Profession will you be able to learn your third. Talk to a trader to access your third Profession. \n\n...If you live that long... again."
 
 quest_MyFirstProfession_offer,Quest,Quest Info,,,"Picking a Trade \n\nYou only get you first Profession once, so choose carefully. \nOnly after perfecting this first Profession will you be able to learn your second. Talk to a trader to access 'My second Profession!'. \nCoordinate with other survivors to find out what is needed in the community. \n\n...If you live that long."
 quest_MyFirstProfession_subtitle,Quests,Quests,,,My First Profession
-quest_MyFirstProfession_description,Quests,Quests,,,"Talking to the Trader will allow me to chose a Profession."
+quest_MyFirstProfession_description,Quests,Quests,,,"Time to chose your Profession!\n\nProfessions are incredibly strong: only the Smelter can make Forged Iron, only the Cook can make food worth a damn. Choose carefully; only after perfecting your first Profession will you be able to learn a second. The trader has the books, go see them. \n\n...And don't get eaten on the way."
 quest_MyFirstProfession_title,Quests,Quests,,,Pick a Profession
 quest_MyFirstProfession_response,Quests,Quests,,,Trade Profession Quest Response
 quest_MyFirstProfession_statement,Quests,Quests,,,Pick a Profession

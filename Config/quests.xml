@@ -35,7 +35,7 @@
 		
 		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="2"/>
 
-		<reward type="Quest" id="quest_whiteRiverCitizen1">
+		<reward type="Quest" id="quest_MyFirstProfession">
 			<property name="chainquest" value="false"/>
 		</reward>
 		<reward type="SkillPoints" value="4" chainreward="true"/>
@@ -54,7 +54,7 @@
 		<property name="return_to_quest_giver" value="true" />
 		<property name="icon" value="ui_game_symbol_map_trader"/>
 		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="easy"/>
+		<property name="difficulty" value="medium"/>
 		<property name="difficulty_tier" value="1"/>
 		<property name="repeatable" value="false" />
 		<property name="shareable" value="false"/>
@@ -62,13 +62,14 @@
 		<property name="completion_key" value="quest_MyFirstProfession_completion" />
 		<!-- <property name="reward_choices_count" value="5" /> idk what this does -->
 
-		<!-- <action type="ShowTip" value="quest_myFirstProfession_description">
-			<property name="delay" value="1"/>
-		</action> -->
+		<action type="ShowTip" value="quest_myFirstProfession_description">
+			<property name="delay" value="10"/>
+		</action>
 		
-		<objective type="ReturnToNPC">
-			<property name="phase" value="2"/>
-			<property name="nav_object" value="return_to_trader" />
+		<objective type="Goto" id="trader" value="5" phase="2">
+			<property name="biome_filter_type" value="OnlyBiome" />
+			<property name="biome_filter" value="pine_forest" />
+			<property name="nav_object" value="go_to_trader" />
 		</objective>
 
 		<objective type="InteractWithNPC">
