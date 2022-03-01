@@ -24,5 +24,10 @@
 	<setattribute xpath="//recipe[@name='resourceForgedIron']" name="tags">learnable,perkSmelterITAV</setattribute>
 	<setattribute xpath="//recipe[@name='resourceForgedSteel']" name="tags">learnable,perkSmelterITAV</setattribute>
 	
+	<!-- Updating recipes to being tagged with ITAV on top of old perks -->
+	<append xpath="/recipes/recipe[contains(@tags, 'perkAdvancedEngineering')]/@tags">,perkSmelterITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkMiner69r')]/@tags">,perkMinerITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkMasterChef')]/@tags">,perkCookITAV</append>
+	
 
 </configs>

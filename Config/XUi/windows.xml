@@ -1,0 +1,6 @@
+<configs>
+
+<setattribute xpath="/windows/window[@name='windowQuestTurnInRewards']/rect[@name='rectOptions']/grid[@name='gridOptions']" name="cols">2</setattribute>
+<setattribute xpath="/windows/window[@name='windowQuestTurnInRewards']/rect[@name='rectOptions']/grid[@name='gridOptions']" name="cell_width">325</setattribute>
+
+</configs>

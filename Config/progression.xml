@@ -80,11 +80,11 @@
         </effect_group>
 		
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkAdvancedEngineering"/><!-- fake crafting perk that is used to scale resources -->
+			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkSmelterITAV"/><!-- fake crafting perk that is used to scale resources. perkAdvancedEngineering -->
 
 				<!-- Engineer use x% less material on all recipes in the forge... by adding it to non engineers T3 10% .9, T4 15% .85, T5 20% .8 -->
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="forge,resourceForgedIron"/>
-			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.2" tags="perkAdvancedEngineering"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.2" tags="perkSmelterITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="workbench,chemistryStation,cementMixer"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="2,5" value="-0.2" tags="workbenchCrafting,cementMixerCrafting"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="resourceMilitaryFiber,generatorbank,electricwirerelay,switch,ceilingLight01_player,industrialLight01_player,industrialLight02_player,armorMiningHelmet,spotlightPlayer,speaker,pressureplate,pressureplateLong,dartTrap,electrictimerrelay,motionsensor,tripwirepost,electricfencepost,bladeTrap"/>
@@ -134,11 +134,11 @@
 		
 	<!-- Miner69r effects to MinerITAV -->
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkMiner69r"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkMinerITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolRepairT1ClawHammer,meleeToolAxeT1IronFireaxe,meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel"/>
 
-			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkMiner69r"/>
-			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkMiner69r"/>
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkMinerITAV"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkMinerITAV"/>
 
 			<effect_description level="1" desc_key="perkMiner69rRank1Desc" long_desc_key="perkMinerITAVRank1LongDesc"/>
 			<effect_description level="2" desc_key="perkMiner69rRank2Desc" long_desc_key="perkMiner69rRank2LongDesc"/>
@@ -151,7 +151,7 @@
 		<effect_group>
 			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="oreWoodHarvest"/>
 			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value="-.1,-.4" tags="Harvesting">
-				<requirement name="HoldingItemHasTags" tags="perkMiner69r"/>
+				<requirement name="HoldingItemHasTags" tags="perkMinerITAV"/>
 			</passive_effect>
         </effect_group>
 		
@@ -258,8 +258,8 @@
         </effect_group>
 		
 		<effect_group>
-            <passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkMasterChef"/><!-- fake crafting perk that is used to scale resources -->
-            <passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-.1,-.5" tags="perkMasterChef"/>
+            <passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkCookITAV"/><!-- fake crafting perk that is used to scale resources -->
+            <passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-.1,-.5" tags="perkCookITAV"/>
 
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1"
                 tags="foodBaconAndEggs,foodBoiledMeat,foodGrilledMeat,foodBakedPotato,foodCornBread,foodCornOnTheCob,drinkJarRedTea,drinkJarCoffee,drinkJarGoldenRodTea"/>

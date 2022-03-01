@@ -29,5 +29,8 @@
 	<property name="UnlockedBy" value="perkSmelterITAV"/>
 </append>
 	
+	<!-- Making blocks unlockable by the correct ITAV perk -->
+<setattribute xpath="/blocks/block/property[contains(@value, 'perkAdvancedEngineering')]" name="value">perkSmelterITAV</setattribute>
+
 	
 </configs>
