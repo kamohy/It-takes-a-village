@@ -1,3 +1,19 @@
 <configs>
 
+<!-- Replacing loot group food schematics with pieces of paper to make Cook more viable-->
+<remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item" />
+<append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']">
+	<item name="resourcePaper" />
+</append>
+<remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']/item" />
+<append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']">
+	<item name="resourcePaper" />
+</append>
+<remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']/item" />
+<append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']">
+	<item name="resourcePaper" />
+</append>
+
+
+
 </configs>

@@ -1,5 +1,8 @@
 <configs>
 
+<!-- Increase stacksizes of expected store items -->
+<setattribute xpath="/items/item[(starts-with(@name, 'drink') or starts-with(@name, 'food'))]/property[@name='Stacknumber']" name="value">500</setattribute>
+
 <!-- Locking forged items behind smelter perk -->
 <append xpath="//item[@name='resourceForgedIron']">
 	<property name="UnlockedBy" value="perkSmelterITAV"/>
