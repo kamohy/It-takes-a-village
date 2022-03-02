@@ -20,6 +20,9 @@
 	
 	</append>
 	
+	<!-- Because all armor is now craftable, the stealth boots need to be made more expensive to craft, as it is available at the same time as regular military boots -->
+	<setattribute xpath="recipes/recipe[@name='armorMilitaryStealthBoots']/ingredient[@name='armorMilitarySetParts']" name="count">6</setattribute>
+	
 	<!-- Changing Forged iron and steel to be locked behind perk -->
 	<setattribute xpath="//recipe[@name='resourceForgedIron']" name="tags">learnable,perkSmelterITAV</setattribute>
 	<setattribute xpath="//recipe[@name='resourceForgedSteel']" name="tags">learnable,perkSmelterITAV</setattribute>
@@ -28,6 +31,7 @@
 	<append xpath="/recipes/recipe[contains(@tags, 'perkAdvancedEngineering')]/@tags">,perkSmelterITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkMiner69r')]/@tags">,perkMinerITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkMasterChef')]/@tags">,perkCookITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkLightArmor') or contains(@tags, 'perkHeavyArmor')]/@tags">,perkArmorerITAV</append>
 	
 
 </configs>

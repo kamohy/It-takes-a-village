@@ -1,7 +1,9 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english
-attProfessionsITAV,progression,Attribute,,,Professions
-attProfessionsNameITAV,progression,Attribute,,,"Attribute: Professions"
-attProfessionsDescITAV,progression,Attribute,,,"Learn a profession to be able to support and contribute to your village."
+
+
+attNameITAV,progression,Attribute,,,"Attribute: Passion"
+attitav,progression,Attribute,,,Passion
+attDescITAV,progression,Attribute,,,"Learn a profession to be able to support and contribute to your village."
 bookSmelterITAV,Items,perk  book,,,"Profession: Smelter"
 bookSmelterITAVDesc,Items,perk  book,,,"Smelters learn how to make the forge, the anvil and later on the crucible. They smelt more efficiently than any other."
 
@@ -17,42 +19,45 @@ perkHunterITAVRank1LongDesc,progression,perk Pro,,,"You are now a Hunter. Harves
 bookCookITAV,Items,perk  book,,,"Profession: Cook"
 bookCookITAVDesc,progression,perk  book,,,"Cooks learn how to prepare more filling meals. These meals give higher health and stamina bonuses."
 
+bookArmorerITAV,Items,perk  book,,,"Profession: Armorer"
+bookArmorerITAVDesc,progression,perk  book,,,"Armorers craft light and heavy armor. Higher level Passion reduces the stamina penalty of armor."
+
 
 cntVendingMachineITAV,blocks,Container,,,"Player Owned Store"
 cntVendingMachineGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Casino Coins. Buy the goods you need from other Player Owned Stores to support them and the community!  Store is indestructible unless falling."
 
-attProfessionsITAVRank01Desc,progression,Attribute,,,Freshly Graduated
-attProfessionsITAVRank01LongDesc,progression,Attribute,,,"You are brand new to trading. Can craft Player Owned Store and sell goods."
-attProfessionsITAVRank02Desc,progression,Attribute,,,Assistant 
-attProfessionsITAVRank02LongDesc,progression,Attribute,,,"Support and strengthen your community by buying from other survivors. Can craft ?WTB sign??."
-attProfessionsITAVRank03Desc,progression,Attribute,,,Employee
-attProfessionsITAVRank03LongDesc,progression,Attribute,,,"Your goods are needed on the market. Can craft ?farmers stand??."
-attProfessionsITAVRank04Desc,progression,Attribute,,,Manager
-attProfessionsITAVRank04LongDesc,progression,Attribute,,,"The locals rely on your store to be well-stocked. Can craft ?open sign??."
-attProfessionsITAVRank05Desc,progression,Attribute,,,Corner Shop Owner
-attProfessionsITAVRank05LongDesc,progression,Attribute,,,"How will new customers find your store? Can craft ?WTS signs??."
-attProfessionsITAVRank06Desc,progression,Attribute,,,Farsighted
-attProfessionsITAVRank06LongDesc,progression,Attribute,,,"Trading is becoming a way of life. Can craft ?deco??."
-attProfessionsITAVRank07Desc,progression,Attribute,,,Mentor
-attProfessionsITAVRank07LongDesc,progression,Attribute,,,"Help newcomers set up their own store. Can craft ?deco??."
-attProfessionsITAVRank08Desc,progression,Attribute,,,Sharp
-attProfessionsITAVRank08LongDesc,progression,Attribute,,,"Sell spare goods to the trader. They don't pay very well, but still. Can craft ?deco??."
-attProfessionsITAVRank09Desc,progression,Attribute,,,Business Savvy
-attProfessionsITAVRank09LongDesc,progression,Attribute,,,"Max out current professions to learn new ones. Search for the second, third, fourth etc. books at the trader."
-attProfessionsITAVRank10Desc,progression,Attribute,,,Experienced
-attProfessionsITAVRank10LongDesc,progression,Attribute,,,"Parking and accessibility is key to drive foot traffic to your store. Can craft ?parking sign??."
+attITAVRank01Desc,progression,Attribute,,,No fucks given
+attITAVRank01LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 15% and stamina penalty by 10%. For heavy armor, reduction for both is 5%"
+attITAVRank02Desc,progression,Attribute,,,Indifferent
+attITAVRank02LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 30% and stamina penalty by 20%. For heavy armor, reduction for both is 10%"
+attITAVRank03Desc,progression,Attribute,,,Blasé
+attITAVRank03LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 50% and stamina penalty by 35%. For heavy armor, reduction for both is 17%"
+attITAVRank04Desc,progression,Attribute,,,Curious
+attITAVRank04LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 75% and stamina penalty by 50%. For heavy armor, reduction for both is 25%"
+attITAVRank05Desc,progression,Attribute,,,Into it
+attITAVRank05LongDesc,progression,Attribute,,,"How will new customers find your store? Can craft ?WTS signs??."
+attITAVRank06Desc,progression,Attribute,,,Invested
+attITAVRank06LongDesc,progression,Attribute,,,"Trading is becoming a way of life. Can craft ?deco??."
+attITAVRank07Desc,progression,Attribute,,,Steadfast
+attITAVRank07LongDesc,progression,Attribute,,,"Help newcomers set up their own store. Can craft ?deco??."
+attITAVRank08Desc,progression,Attribute,,,Dedicated
+attITAVRank08LongDesc,progression,Attribute,,,"Sell spare goods to the trader. They don't pay very well, but still. Can craft ?deco??."
+attITAVRank09Desc,progression,Attribute,,,Passionate
+attITAVRank09LongDesc,progression,Attribute,,,"Max out current professions to learn new ones. Search for the second, third, fourth etc. books at the trader."
+attITAVRank10Desc,progression,Attribute,,,Giving ALL the fucks
+attITAVRank10LongDesc,progression,Attribute,,,"Parking and accessibility is key to drive foot traffic to your store. Can craft ?parking sign??."
 
-reqProfessionsLevel00ITAV,progression,Attribute,,,"You already know a profession"
-reqProfessionsLevel01ITAV,progression,Attribute,,,"Read a 'My X Profession' book to unlock"
-reqProfessionsLevel02ITAV,progression,Attribute,,,Professions Level 2
-reqProfessionsLevel03ITAV,progression,Attribute,,,Professions Level 3
-reqProfessionsLevel04ITAV,progression,Attribute,,,Professions Level 4
-reqProfessionsLevel05ITAV,progression,Attribute,,,Professions Level 5
-reqProfessionsLevel06ITAV,progression,Attribute,,,Professions Level 6
-reqProfessionsLevel07ITAV,progression,Attribute,,,Professions Level 7
-reqProfessionsLevel08ITAV,progression,Attribute,,,Professions Level 8
-reqProfessionsLevel09ITAV,progression,Attribute,,,Professions Level 9
-reqProfessionsLevel10ITAV,progression,Attribute,,,Professions Level 10
+reqAttLevel00ITAV,progression,Attribute,,,"You already know a profession"
+reqAttLevel01ITAV,progression,Attribute,,,"Read a 'My X Profession' book to unlock"
+reqAttLevel02ITAV,progression,Attribute,,,Passion Level 2
+reqAttLevel03ITAV,progression,Attribute,,,Passion Level 3
+reqAttLevel04ITAV,progression,Attribute,,,Passion Level 4
+reqAttLevel05ITAV,progression,Attribute,,,Passion Level 5
+reqAttLevel06ITAV,progression,Attribute,,,Passion Level 6
+reqAttLevel07ITAV,progression,Attribute,,,Passion Level 7
+reqAttLevel08ITAV,progression,Attribute,,,Passion Level 8
+reqAttLevel09ITAV,progression,Attribute,,,Passion Level 9
+reqAttLevel10ITAV,progression,Attribute,,,Passion Level 10
 allowedProfessionsLevelExceededITAV,,,,,Not yet allowed to learn another profession
 
 perkSmelterDescITAV,progression,perk Pro,,,"Smelt and craft items in the forge and craft 20% faster on workbenches."
@@ -78,10 +83,14 @@ perkHunterITAVName,progression,perk Pro,,,Hunter
 perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced benefits and learn to cook faster."
 perkCookITAVName,progression,perk Pro,,,Cook
 
+perkArmorerITAVDesc,progression,perk Pro,,,"Craft Light and Heavy Armor"
+perkArmorerITAVName,progression,perk Pro,,,Armorer
+
 hasLearntSmelterITAVTooltip,items,Admin,,,"Profession: Smelter acquired"
 hasLearntMinerITAVTooltip,items,Admin,,,"Profession: Miner acquired"
 hasLearntHunterITAVTooltip,items,Admin,,,"Profession: Hunter acquired"
 hasLearntCookITAVTooltip,items,Admin,,,"Profession: Cook acquired"
+hasLearntArmorerITAVTooltip,items,Admin,,,"Profession: Armorer acquired"
 drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,Your Profession Perk skill points have been reset.
 
 tutorialTipITAV_title,Journal Tip,,,,"It Takes A Village"

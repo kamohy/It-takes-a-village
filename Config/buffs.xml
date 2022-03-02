@@ -72,29 +72,13 @@
 </append>
 
 	
-	<!-- *** buffWillingnessToLearn -->
-	<!-- <append xpath="/buffs">
 
-	<buff name="buffDrugWillingnessToLearnITAV" name_key="drugWillingnessToLearnITAV" description_key="drugWillingnessToLearnITAVDesc" icon="ui_game_symbol_drug_WtL">
-		<stack_type value="replace"/><duration value="10"/>
-		<display_value value="buffDrugWillingnessToLearn"/><display_value_key value="Can Learn 1 Trade"/>
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugWillingnessToLearn">
-				<requirement name="CVarCompare" cvar="$buffDrugWillingnessToLearnDuration" operation="LTE" value="0"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="buffDrugWillingnessToLearnDisplay" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffDrugWillingnessToLearnDuration" operation="set" value="0"/>
-		</effect_group>
-	</buff>
+<!-- Moving armor related benefits from the armor perks to the ITAV Attribute -->
 
-	</append> -->
-
-<!-- Adding a new secret stash tab to a buff -->
-<!-- <append xpath="//buff[@name='buffDrugFortBites']">
-    <effect_group>
-        <passive_effect name="SecretStash" operation="base_add" value="6000"/>
-    </effect_group>
-</append> -->
+<!-- <setattribute xpath="buffs/buff[@name='buffStatusCheck02']/effect_group/requirements/requirement([@name='ProgressionLevel'] and [@progression_name='perkLightArmor'] and [@operation='GT'] and [@value='0'])" name="value">1</setattribute> If we want to let armor related buffs occur at higher levels of ITAV Attribute -->
+<setattribute xpath="//requirement[(@name='ProgressionLevel' and @progression_name='perkLightArmor')]" name="progression_name">attITAV</setattribute>
+<setattribute xpath="//requirement[(@name='ProgressionLevel' and @progression_name='perkHeavyArmor')]" name="progression_name">attITAV</setattribute>
+<setattribute xpath="//requirement[(@name='ProgressionLevel' and @progression_name='attITAV' and @value='4')]" name="operation">GTE</setattribute>
 
 
 

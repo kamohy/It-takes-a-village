@@ -3,7 +3,7 @@
 
 <!-- Adding professions tab! -->
 <append xpath="/progression/attributes[1]">
-	<attribute name="attProfessionsITAV" name_key="attProfessionsNameITAV" desc_key="attProfessionsDescITAV" icon="ui_game_symbol_profession" min_level="1" max_level="10" base_skill_point_cost="1" cost_multiplier_per_level="1.14">
+	<attribute name="attITAV" name_key="attNameITAV" desc_key="attDescITAV" icon="ui_game_symbol_critical" min_level="1" max_level="10" base_skill_point_cost="1" cost_multiplier_per_level="1.14">
 		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
@@ -15,21 +15,21 @@
 		<level_requirements level="9"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
 		<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
 		<effect_group>
-			<requirement name="ItemHasTags" tags="attProfessionsITAV"/>
+			<requirement name="ItemHasTags" tags="attITAV"/>
 				<passive_effect name="DamageModifier" operation="perc_add" level="2,8" value="0.1,.7" tags="head"/>
 				<passive_effect name="DamageModifier" operation="perc_add" level="9,10" value=".85,1" tags="head"/>
 				<passive_effect name="DismemberChance" operation="base_add" level="2,10" value=".05,.45"/>
 
-			<effect_description level="1"  desc_key="attProfessionsITAVRank01Desc" long_desc_key="attProfessionsITAVRank01LongDesc"/>
-			<effect_description level="2"  desc_key="attProfessionsITAVRank02Desc" long_desc_key="attProfessionsITAVRank02LongDesc"/>
-			<effect_description level="3"  desc_key="attProfessionsITAVRank03Desc" long_desc_key="attProfessionsITAVRank03LongDesc"/>
-			<effect_description level="4"  desc_key="attProfessionsITAVRank04Desc" long_desc_key="attProfessionsITAVRank04LongDesc"/>
-			<effect_description level="5"  desc_key="attProfessionsITAVRank05Desc" long_desc_key="attProfessionsITAVRank05LongDesc"/>
-			<effect_description level="6"  desc_key="attProfessionsITAVRank06Desc" long_desc_key="attProfessionsITAVRank06LongDesc"/>
-			<effect_description level="7"  desc_key="attProfessionsITAVRank07Desc" long_desc_key="attProfessionsITAVRank07LongDesc"/>
-			<effect_description level="8"  desc_key="attProfessionsITAVRank08Desc" long_desc_key="attProfessionsITAVRank08LongDesc"/>
-			<effect_description level="9"  desc_key="attProfessionsITAVnRank09Desc" long_desc_key="attProfessionsITAVRank09LongDesc"/>
-			<effect_description level="10" desc_key="attProfessionsITAVRank10Desc" long_desc_key="attProfessionsITAVRank10LongDesc"/>
+			<effect_description level="1"  desc_key="attITAVRank01Desc" long_desc_key="attITAVRank01LongDesc"/>
+			<effect_description level="2"  desc_key="attITAVRank02Desc" long_desc_key="attITAVRank02LongDesc"/>
+			<effect_description level="3"  desc_key="attITAVRank03Desc" long_desc_key="attITAVRank03LongDesc"/>
+			<effect_description level="4"  desc_key="attITAVRank04Desc" long_desc_key="attITAVRank04LongDesc"/>
+			<effect_description level="5"  desc_key="attITAVRank05Desc" long_desc_key="attITAVRank05LongDesc"/>
+			<effect_description level="6"  desc_key="attITAVRank06Desc" long_desc_key="attITAVRank06LongDesc"/>
+			<effect_description level="7"  desc_key="attITAVRank07Desc" long_desc_key="attITAVRank07LongDesc"/>
+			<effect_description level="8"  desc_key="attITAVRank08Desc" long_desc_key="attITAVRank08LongDesc"/>
+			<effect_description level="9"  desc_key="attITAVRank09Desc" long_desc_key="attITAVRank09LongDesc"/>
+			<effect_description level="10" desc_key="attITAVRank10Desc" long_desc_key="attITAVRank10LongDesc"/>
 		</effect_group>
 	</attribute>
 </append>
@@ -46,30 +46,32 @@
 <remove xpath="//perk[@name='perkAnimalTracker']" />
 <remove xpath="//perk[@name='perkTheHuntsman']" />
 <remove xpath="//perk[@name='perkMasterChef']" />
+<remove xpath="//perk[@name='perkLightArmor']" />
+<remove xpath="//perk[@name='perkHeavyArmor']" />
 
 
 <!-- PERKS -->
 <append xpath="//perks">
 	<!-- Smelter perk -->
-	<perk name="perkSmelterITAV" parent="attProfessionsITAV" name_key="perkSmelterNameITAV" desc_key="perkSmelterDescITAV" icon="ui_game_symbol_workbench">		
+	<perk name="perkSmelterITAV" parent="attITAV" name_key="perkSmelterNameITAV" desc_key="perkSmelterDescITAV" icon="ui_game_symbol_workbench">		
 		<level_requirements level="1"> 
-			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel01ITAV" />
+			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
 		</level_requirements>
 		<level_requirements level="2">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="4" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel04ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="4" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel04ITAV" />
 		</level_requirements>
 		<level_requirements level="3">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="6" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel06ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="6" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel06ITAV" />
 		</level_requirements>
 		<level_requirements level="4">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="8" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel08ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="8" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel08ITAV" />
 		</level_requirements>
 		<level_requirements level="5">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="10" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel10ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
 		</level_requirements>
 
 		<!-- Opening up for reading the next quest book -->
@@ -103,25 +105,25 @@
 	</perk>
 
 	<!-- Miner perk -->
-	<perk name="perkMinerITAV" parent="attProfessionsITAV" name_key="perkMinerITAVName" desc_key="perkMinerITAVDesc" icon="ui_game_symbol_mining" tags="learnable">
+	<perk name="perkMinerITAV" parent="attITAV" name_key="perkMinerITAVName" desc_key="perkMinerITAVDesc" icon="ui_game_symbol_mining" tags="learnable">
 		<level_requirements level="1">
-			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel01ITAV" />
+			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
 		</level_requirements>
 		<level_requirements level="2">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="2" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel01ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="2" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel02ITAV" />
 		</level_requirements>
 		<level_requirements level="3">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="3" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel03ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel03ITAV" />
 		</level_requirements>
 		<level_requirements level="4">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="5" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel05ITAV" />	
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />	
 		</level_requirements>
 		<level_requirements level="5">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="7" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel07ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel07ITAV" />
 		</level_requirements>
 		
 		<!-- Opening up for reading the next quest book -->
@@ -158,25 +160,25 @@
 	</perk>
 
 	<!-- Hunter Perk -->
-	<perk name="perkHunterITAV" parent="attProfessionsITAV" name_key="perkHunterITAVName" desc_key="perkHunterITAVDesc" icon="ui_game_symbol_archery">
+	<perk name="perkHunterITAV" parent="attITAV" name_key="perkHunterITAVName" desc_key="perkHunterITAVDesc" icon="ui_game_symbol_archery">
         <level_requirements level="1">
-			<requirement name="CVarCompare" cvar="hasLearntHunterITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel01ITAV" />
+			<requirement name="CVarCompare" cvar="hasLearntHunterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
 		</level_requirements>
         <level_requirements level="2">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="3" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntHunterITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel03ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntHunterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel03ITAV" />
 		</level_requirements>
         <level_requirements level="3">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="5" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntHunterITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel05ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntHunterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />
 		</level_requirements>
         <level_requirements level="4">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="7" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntHunterITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel07ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntHunterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel07ITAV" />
 		</level_requirements>
         <level_requirements level="5">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="10" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntHunterITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel10ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntHunterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
 		</level_requirements>
 
 		<!-- Opening up for reading the next quest book -->
@@ -229,25 +231,25 @@
     </perk>
 
 	<!-- Cook perk -->
-    <perk name="perkCookITAV" parent="attProfessionsITAV" name_key="perkCookITAVName" desc_key="perkCookITAVDesc" icon="ui_game_symbol_spatula">
+    <perk name="perkCookITAV" parent="attITAV" name_key="perkCookITAVName" desc_key="perkCookITAVDesc" icon="ui_game_symbol_spatula">
         <level_requirements level="1">
-			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel01ITAV" />
+			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
 		</level_requirements>
         <level_requirements level="2">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="3" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel03ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel03ITAV" />
 		</level_requirements>
         <level_requirements level="3">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="5" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel05ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />
 		</level_requirements>
         <level_requirements level="4">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="7" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel07ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel07ITAV" />
 		</level_requirements>
         <level_requirements level="5">
-			<requirement name="ProgressionLevel" progression_name="attProfessionsITAV" operation="GTE" value="10" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqProfessionsLevel10ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
 		</level_requirements>
 		
 		<!-- Opening up for reading the next quest book -->
@@ -280,6 +282,41 @@
         </effect_group>
     </perk>
 	
+	<!-- Armorer perk -->
+	<perk name="perkArmorerITAV" max_level="5" parent="attITAV" name_key="perkArmorerITAVName" desc_key="perkArmorerITAVDesc" icon="ui_game_symbol_armor_iron">
+		<level_requirements level="1">
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
+		</level_requirements>
+        <level_requirements level="2">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel03ITAV" />
+		</level_requirements>
+        <level_requirements level="3">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />
+		</level_requirements>
+        <level_requirements level="4">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel07ITAV" />
+		</level_requirements>
+        <level_requirements level="5">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
+		</level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,5" value="1,5" tags="perkArmorerITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="armorIronHelmet,armorIronChest,armorIronGloves,armorIronLegs,armorIronBoots,armorLeatherHood,armorLeatherChest,armorLeatherGloves,armorLeatherPants,armorLeatherBoots,armorSteelBoots,armorSteelChest,armorSteelGloves,armorSteelLegs,armorSteelHelmet,armorMilitaryBoots,armorMilitaryStealthBoots,armorMilitaryGloves,armorMilitaryHelmet,armorMilitaryLegs,armorMilitaryVest"/>
+
+			<!-- Stamina/mobility are handled in buffs (buffStatusCheck02) -->
+
+			<effect_description level="1" desc_key="perkHeavyArmorRank1Desc" long_desc_key="perkHeavyArmorRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkHeavyArmorRank2Desc" long_desc_key="perkHeavyArmorRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkHeavyArmorRank3Desc" long_desc_key="perkHeavyArmorRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkHeavyArmorRank4Desc" long_desc_key="perkHeavyArmorRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkHeavyArmorRank5Desc" long_desc_key="perkHeavyArmorRank5LongDesc"/>
+		</effect_group> 
+	</perk>
 	
 </append>
 

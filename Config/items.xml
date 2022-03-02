@@ -49,6 +49,11 @@
 <!-- <setattribute xpath="/items/item/property[contains(@value, 'perkMiner69r')]" name="value">perkMinerITAV</setattribute>
 <setattribute xpath="/items/item/property[contains(@value, 'perkTheHuntsman')]" name="value">perkHunterITAV</setattribute> -->
 
+<!-- ARMORER -->
+<setattribute xpath="items/item[@name='armorIronMaster']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
+<setattribute xpath="items/item[@name='armorLeatherMaster']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
+<setattribute xpath="items/item[@name='armorSteelMaster']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
+<setattribute xpath="items/item[@name='armorMilitaryMaster']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
 
 
 
@@ -191,6 +196,34 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
     </effect_group>
 </item>
+
+
+<!-- ARMORER -->
+<item name="bookArmorerITAV">
+    <property name="Extends" value="bookMasterITAV"/>
+    <property name="CustomIcon" value="bookArmorerITAV"/>
+    <property name="DescriptionKey" value="bookArmorerITAVDesc"/>
+    <property name="Unlocks" value="perkArmorerITAV"/>
+    <property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="perkArmorerITAV" operation="LT" value="1" />
+    </property>
+    <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkArmorerITAV" level="1">
+			<requirement name="ProgressionLevel" progression_name="perkArmorerITAV" operation="LT" value="1" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkArmorerITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntArmorerITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntArmorerITAVTooltip"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+    </effect_group>
+</item>
+
+
+
+
+
+
+
 
 <!-- ProfPerkForgettingElixir -->
 <item name="drinkJarProfPerkForgettingElixir"> <!-- respec potion, player version -->
