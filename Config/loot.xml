@@ -14,6 +14,11 @@
 	<item name="resourcePaper" />
 </append>
 
-
+<!-- Removing/Replacing GyroCopter -->
+<setattribute xpath="//lootgroup[@name='gyroCopterParts']/item[@name='vehicleGyroCopterChassis']" name="name">vehicle4x4TruckChassis</setattribute>
+<setattribute xpath="//lootgroup[@name='gyroCopterParts']/item[@name='vehicleGyroCopterAccessories']" name="name">vehicle4x4TruckAccessories</setattribute>
+<remove xpath="//lootcontainer[@name='vehicleGyrocopter']"/>
+<remove xpath="//lootgroup[@name='schematicsVehiclesT2']/item[(@name='vehicleGyroCopterChassisSchematic' or @name='vehicleGyroCopterAccessoriesSchematic')]"/>
+<remove xpath="//lootgroup[@name='groupQuestGyrocopterParts']" />
 
 </configs>

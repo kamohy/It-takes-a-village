@@ -310,11 +310,11 @@
 
 			<!-- Stamina/mobility are handled in buffs (buffStatusCheck02) -->
 
-			<effect_description level="1" desc_key="perkHeavyArmorRank1Desc" long_desc_key="perkHeavyArmorRank1LongDesc"/>
-			<effect_description level="2" desc_key="perkHeavyArmorRank2Desc" long_desc_key="perkHeavyArmorRank2LongDesc"/>
-			<effect_description level="3" desc_key="perkHeavyArmorRank3Desc" long_desc_key="perkHeavyArmorRank3LongDesc"/>
-			<effect_description level="4" desc_key="perkHeavyArmorRank4Desc" long_desc_key="perkHeavyArmorRank4LongDesc"/>
-			<effect_description level="5" desc_key="perkHeavyArmorRank5Desc" long_desc_key="perkHeavyArmorRank5LongDesc"/>
+			<effect_description level="1" desc_key="perkArmorerRank1Desc" long_desc_key="perkArmorerRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkArmorerRank2Desc" long_desc_key="perkArmorerRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkArmorerRank3Desc" long_desc_key="perkArmorerRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkArmorerRank4Desc" long_desc_key="perkArmorerRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkArmorerRank5Desc" long_desc_key="perkArmorerRank5LongDesc"/>
 		</effect_group> 
 	</perk>
 	

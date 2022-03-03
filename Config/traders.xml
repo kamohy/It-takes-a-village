@@ -36,10 +36,11 @@
 	
 	</append>
 	
-	<!-- Removing food/drink schematics from trader item groups -->
+	<!-- Removing food/drink and GyroCopter parts/schematics from trader item groups -->
 	<remove xpath="traders/trader_item_groups/trader_item_group[@name='farmingCookingRecipes']/item" />
 	<append xpath="traders/trader_item_groups/trader_item_group[@name='farmingCookingRecipes']">
 		<item name="resourcePaper" />
 	</append>
+	<remove xpath="//item[(contains(@name, 'vehicleGyroCopter'))]"/>
   
 </configs>

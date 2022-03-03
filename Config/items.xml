@@ -1,5 +1,9 @@
 <configs>
 
+<!-- Removing GyroCopter -->
+<remove xpath="//item[(contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter'))]"/>
+<remove xpath="//item[@name='questRewardGyrocopterPartsBundle']" />
+
 <!-- Increase stacksizes of expected store items -->
 <setattribute xpath="/items/item[(starts-with(@name, 'drink') or starts-with(@name, 'food'))]/property[@name='Stacknumber']" name="value">500</setattribute>
 

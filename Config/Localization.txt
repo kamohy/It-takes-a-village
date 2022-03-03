@@ -85,6 +85,16 @@ perkCookITAVName,progression,perk Pro,,,Cook
 
 perkArmorerITAVDesc,progression,perk Pro,,,"Craft Light and Heavy Armor"
 perkArmorerITAVName,progression,perk Pro,,,Armorer
+perkArmorerRank1DescITAV,progression,perk Int,,,Apprentice
+perkArmorerRank1LongDescITAV,progression,perk Int,,,You are now an apprentice armorer and able to create leather armor, iron armor, steel armor and military armor.
+perkArmorerRank2DescITAV,progression,perk Int,,,Journeyman
+perkArmorerRank2LongDescITAV,progression,perk Int,,,You are now a journeyman armorer and able to craft better quality armor.
+perkArmorerRank3DescITAV,progression,perk Int,,,Expert
+perkArmorerRank3LongDescITAV,progression,perk Int,,,You are now an expert armorer and able to craft better quality armor.
+perkArmorerRank4DescITAV,progression,perk Int,,,Artisan
+perkArmorerRank4LongDescITAV,progression,perk Int,,,You are now an artisan armorer and able to craft better quality armor.
+perkArmorerRank5DescITAV,progression,perk Int,,,Master
+perkArmorerRank5LongDescITAV,progression,perk Int,,,You are now a master armorer and able to craft the highest quality armor.
 
 hasLearntSmelterITAVTooltip,items,Admin,,,"Profession: Smelter acquired"
 hasLearntMinerITAVTooltip,items,Admin,,,"Profession: Miner acquired"

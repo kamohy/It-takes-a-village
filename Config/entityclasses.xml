@@ -12,4 +12,7 @@
 			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="1"/>
 	</effect_group>
 </append>
+
+
+<remove xpath="//entity_class[@name='vehicleGyrocopter']"/>
 </configs>

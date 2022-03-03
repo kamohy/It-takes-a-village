@@ -20,6 +20,9 @@
 	
 	</append>
 	
+	<!-- Removing GyroCopter -->
+	<remove xpath="//recipe[(contains(@name, 'vehicleGyroCopter')]"/>
+	
 	<!-- Because all armor is now craftable, the stealth boots need to be made more expensive to craft, as it is available at the same time as regular military boots -->
 	<setattribute xpath="recipes/recipe[@name='armorMilitaryStealthBoots']/ingredient[@name='armorMilitarySetParts']" name="count">6</setattribute>
 	
