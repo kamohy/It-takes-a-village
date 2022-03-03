@@ -10,6 +10,14 @@
 			<ingredient name="resourceRockSmall" count="1" />
 			<ingredient name="resourceScrapPolymers" count="1" />
 		</recipe>
+		
+		<!-- Baseball cap mod -->
+		<recipe name="modArmorBallCap" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceCloth" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<ingredient name="resourceSewingKit" count="1"/>
+		</recipe>
 
 	
 	
@@ -21,7 +29,7 @@
 	</append>
 	
 	<!-- Removing GyroCopter -->
-	<remove xpath="//recipe[(contains(@name, 'vehicleGyroCopter')]"/>
+	<remove xpath="//recipe[contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter')]" />
 	
 	<!-- Because all armor is now craftable, the stealth boots need to be made more expensive to craft, as it is available at the same time as regular military boots -->
 	<setattribute xpath="recipes/recipe[@name='armorMilitaryStealthBoots']/ingredient[@name='armorMilitarySetParts']" name="count">6</setattribute>
@@ -35,6 +43,17 @@
 	<append xpath="/recipes/recipe[contains(@tags, 'perkMiner69r')]/@tags">,perkMinerITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkMasterChef')]/@tags">,perkCookITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkLightArmor') or contains(@tags, 'perkHeavyArmor')]/@tags">,perkArmorerITAV</append>
-	
+	<append xpath="/recipes/recipe[contains(@tags, 'perkMachineGunner')]/@tags">,perkWeaponsmithITAV</append>
+	<!-- <append xpath="/recipes/recipe[contains(@tags, 'perkAutoWeaponsMachineGuns')]/@tags">,perkWeaponsmithITAV</append> -->
+	<append xpath="/recipes/recipe[contains(@tags, 'perkBoomstick')]/@tags">,perkWeaponsmithITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkDeadEye')]/@tags">,perkWeaponsmithITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkGunslinger')]/@tags">,perkWeaponsmithITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkArchery')]/@tags">,perkWeaponsmithITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkJavelinMaster')]/@tags">,perkWeaponsmithITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkPummelPete')]/@tags">,perkWeaponsmithITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkSkullCrusher')]/@tags">,perkWeaponsmithITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkBrawler')]/@tags">,perkWeaponsmithITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkDeepCuts')]/@tags">,perkWeaponsmithITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkElectrocutioner')]/@tags">,perkWeaponsmithITAV</append>
 
 </configs>

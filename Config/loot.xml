@@ -14,6 +14,135 @@
 	<item name="resourcePaper" />
 </append>
 
+<!-- Replacing armor in lootgroups to make Armorer more viable -->
+<remove xpath="/lootcontainers/lootgroup[@name='groupArmorT1']/item" />
+<append xpath="/lootcontainers/lootgroup[@name='groupArmorT1']">
+	<item name="modArmorHelmetLight"/>
+	<item name="modArmorInsulatedLiner"/>
+	<item name="modArmorCoolingMesh"/>
+	<item name="modArmorPlatingBasic"/>
+	<item name="modArmorStoragePocket"/>
+	<item name="modArmorImprovedFittings"/>
+</append>
+<remove xpath="/lootcontainers/lootgroup[@name='groupArmorT2']/item" />
+<append xpath="/lootcontainers/lootgroup[@name='groupArmorT2']">
+	<item name="modArmorBandolier"/>
+	<item name="modArmorDoubleStoragePocket"/>
+	<item name="modArmorTripleStoragePocket"/>
+	<item name="modArmorAdvancedMuffledConnectors"/>
+</append>
+
+
+<!-- Removing schematics in lootgroups to make Armorer and Weaponsmith more viable-->
+<remove xpath="//lootgroup[@name='schematicsToolsT0']/item[@name='meleeWpnBladeT1HuntingKnifeSchematic']" />
+<remove xpath="//lootgroup[@name='schematicsToolsT0']/item[@name='meleeWpnSledgeT1IronSledgehammerSchematic']" />
+<remove xpath="//lootgroup[@name='schematicsToolsT1']/item[@name='meleeWpnSledgeT3SteelSledgehammerSchematic']" />
+<remove xpath="//lootgroup[@name='schematicsWeaponsArmorT0']/item" />
+<append xpath="//lootgroup[@name='schematicsWeaponsArmorT0']">
+	<item name="resourcePaper"/>
+	<item name="resourceGlue"/>
+	<item name="drinkJarBoiledWater"/>
+	<item name="drinkJarYuccaJuice"/>
+	<item name="resourceTrophy2"/>
+	<item name="resourceFishingWeight"/>
+	<item name="resourceTrophy1"/>
+	<item name="resourceCandleStick"/>
+	<item name="resourceDoorKnob"/>
+	<item name="resourceCoal"/>
+	<item name="resourceDuctTape"/>
+	<item name="drinkJarCoffee"/>
+	<item name="drinkYuccaJuiceSmoothie"/>
+</append>
+<remove xpath="//lootgroup[@name='schematicsWeaponsArmorT1']/item" />
+<append xpath="//lootgroup[@name='schematicsWeaponsArmorT1']">
+	<item name="drugSteroids"/>
+	<item name="drugJailBreakers"/>
+	<item name="drugHealthBar"/>
+	<item name="drugAtomJunkies"/>
+	<item name="drugOhShitzDrops"/>
+	<item name="drugAntibiotics"/> 
+	<item name="drugSkullCrushers"/>
+	<item name="drinkCanMegaCrush"/>
+	
+
+</append>
+<remove xpath="//lootgroup[@name='schematicsWeaponsArmorT2']/item" />
+<append xpath="//lootgroup[@name='schematicsWeaponsArmorT2']">
+	<item name="modRoboticDroneCargoModSchematic" loot_prob_template="med"/>
+	<item name="modRoboticDroneMedicModSchematic" loot_prob_template="med"/>
+	<item name="modRoboticDroneHeadlampModSchematic" loot_prob_template="med"/>
+	<item name="modRoboticDroneArmorPlatingModSchematic" loot_prob_template="med"/>
+	<item name="modRoboticDroneMoraleBoosterModSchematic" loot_prob_template="med"/>
+	<item name="drinkJarGrandpasMoonshine" />
+	<item name="drinkJarGrandpasLearningElixir"/>
+	<item name="drugRecog" />
+	<item name="drugFortBites" />
+</append>
+
+
+
+<!-- Replacing weapons in lootgroups to make Weaponsmith more viable-->
+<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Melee']/item" />
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Melee']">
+	<item name="modMeleeGraveDigger"/>
+	<item name="modMeleeSerratedBlade"/>
+	<item name="modMeleeStructuralBrace"/>
+	<item name="modMeleeWeightedHead"/>
+	<item name="modMeleeWoodSplitter"/>
+	<item name="modFuelTankSmall"/>
+	<item name="meleeWpnBatonT2StunBatonParts" />
+</append>
+<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']/item" />
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']">
+	<item name="modMeleeClubBurningShaft"/>
+	<item name="modMeleeClubBarbedWire"/>
+	<item name="modMeleeFortifyingGrip"/>
+	<item name="modMeleeBunkerBuster"/>
+	<item name="modFuelTankLarge"/>
+	<item name="modMeleeClubMetalSpikes"/>
+	<item name="modMeleeClubMetalChain"/>
+	<item name="modMeleeErgonomicGrip"/>
+	<item name="modMeleeTemperedBlade"/>
+	<item name="modMeleeIronBreaker"/>
+</append>
+<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Ranged']/item" />
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Ranged']">
+	<item name="modGunBipod"/>
+	<item name="modGunChoke"/>
+	<item name="modGunDuckbill"/>
+	<item name="modGunFlashlight"/>
+	<item name="modGunForegrip"/>
+	<item name="modGunMagazineExtender"/>
+	<item name="modGunMeleeTheHunter"/>
+	<item name="modGunMuzzleBrake"/>
+	<item name="modGunScopeSmall"/>
+	<item name="modGunTriggerGroupSemi"/>
+	<item name="modShotgunSawedOffBarrel"/>
+</append>
+<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Ranged']/item" />
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Ranged']">
+	<item name="modGunBarrelExtender"/>
+	<item name="modGunCrippleEm"/>
+	<item name="modGunBowArrowRest"/>
+	<item name="modGunLaserSight"/>
+	<item name="modGunReflexSight"/>
+	<item name="modGunRetractingStock"/>
+	<item name="modGunScopeMedium"/>
+	<item name="modGunSoundSuppressorSilencer"/>
+	<item name="modGunTriggerGroupBurst3"/>
+	<item name="modGunShotgunTubeExtenderMagazine"/>
+</append>
+<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Ranged']/item" />
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Ranged']">
+	<item name="modGunBowPolymerString"/>
+	<item name="modGunScopeLarge"/>
+	<item name="modGunTriggerGroupAutomatic"/>
+	<item name="modGunDrumMagazineExtender" loot_prob_template="low"/>
+</append>
+
+
+
+
 <!-- Removing/Replacing GyroCopter -->
 <setattribute xpath="//lootgroup[@name='gyroCopterParts']/item[@name='vehicleGyroCopterChassis']" name="name">vehicle4x4TruckChassis</setattribute>
 <setattribute xpath="//lootgroup[@name='gyroCopterParts']/item[@name='vehicleGyroCopterAccessories']" name="name">vehicle4x4TruckAccessories</setattribute>

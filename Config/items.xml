@@ -1,11 +1,24 @@
 <configs>
 
 <!-- Removing GyroCopter -->
-<remove xpath="//item[(contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter'))]"/>
 <remove xpath="//item[@name='questRewardGyrocopterPartsBundle']" />
+<remove xpath="//item[(contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter'))]"/>
+
 
 <!-- Increase stacksizes of expected store items -->
 <setattribute xpath="/items/item[(starts-with(@name, 'drink') or starts-with(@name, 'food'))]/property[@name='Stacknumber']" name="value">500</setattribute>
+<setattribute xpath="/items/item[starts-with(@name, 'drug')]/property[@name='Stacknumber']" name="value">500</setattribute>
+<setattribute xpath="/items/item[starts-with(@name, 'ammo') and not(starts-with(@name, 'ammoBundle')) and not(starts-with(@name, 'ammoGasCan'))]/property[@name='Stacknumber']" name="value">600</setattribute>
+
+
+<!-- Adding small chance of dysentery to canned foods -->
+<append xpath="//item[@name='foodCanBeef']/effect_group[@name='Food Tier 0']">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="2"/><display_value name="dDysenteryRisk" value=".02"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+				<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+</append>
 
 <!-- Locking forged items behind smelter perk -->
 <append xpath="//item[@name='resourceForgedIron']">
@@ -59,7 +72,9 @@
 <setattribute xpath="items/item[@name='armorSteelMaster']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
 <setattribute xpath="items/item[@name='armorMilitaryMaster']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
 
-
+<!-- WEAPONSMITH -->
+<setattribute xpath="items/item[starts-with(@name, 'gun') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Bot')) and not(contains(@name, 'Pipe')) and not(contains(@name, 'Primitive')) and not(contains(@name, 'Parts'))]/property[@name='UnlockedBy']" name="value">perkWeaponsmithITAV</setattribute>
+<setattribute xpath="items/item[contains(@name, 'Wpn') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Parts')) and not(contains(@name, 'T0'))]/property[@name='UnlockedBy']" name="value">perkWeaponsmithITAV</setattribute>
 
 
 
@@ -223,6 +238,26 @@
 </item>
 
 
+<!-- WEAPONSMITH -->
+<item name="bookWeaponsmithITAV">
+    <property name="Extends" value="bookMasterITAV"/>
+    <property name="CustomIcon" value="schematicMaster"/>
+	<property name="CustomIconTint" value="4571ad" />
+    <property name="DescriptionKey" value="bookWeaponsmithITAVDesc"/>
+    <property name="Unlocks" value="perkWeaponsmithITAV"/>
+    <property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="perkWeaponsmithITAV" operation="LT" value="1" />
+    </property>
+    <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkWeaponsmithITAV" level="1">
+			<requirement name="ProgressionLevel" progression_name="perkWeaponsmithITAV" operation="LT" value="1" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkWeaponsmithITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntWeaponsmithITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntWeaponsmithITAVTooltip"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+    </effect_group>
+</item>
 
 
 

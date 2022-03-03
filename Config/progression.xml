@@ -50,6 +50,12 @@
 <remove xpath="//perk[@name='perkHeavyArmor']" />
 
 
+<!-- Changing perkbooks found in the wild to reward non-profession-intrusive things instead -->
+<setattribute xpath="//perk[@name='perkBatterUpBaseballBats']/effect_group/passive_effect" name="tags">modArmorBallCap</setattribute>
+<setattribute xpath="//perk[@name='perkSpearHunter3SteelSpears']/effect_group/passive_effect" name="tags">modMeleeClubBurningShaft</setattribute>
+<setattribute xpath="//perk[@name='perkAutoWeaponsMachineGuns']/effect_group/passive_effect" name="tags">modGunFlashlight</setattribute>
+<setattribute xpath="//perk[@name='perkUrbanCombatLanding']/effect_group/passive_effect" name="tags">modArmorImpactBracing</setattribute>
+
 <!-- PERKS -->
 <append xpath="//perks">
 	<!-- Smelter perk -->
@@ -310,13 +316,50 @@
 
 			<!-- Stamina/mobility are handled in buffs (buffStatusCheck02) -->
 
-			<effect_description level="1" desc_key="perkArmorerRank1Desc" long_desc_key="perkArmorerRank1LongDesc"/>
-			<effect_description level="2" desc_key="perkArmorerRank2Desc" long_desc_key="perkArmorerRank2LongDesc"/>
-			<effect_description level="3" desc_key="perkArmorerRank3Desc" long_desc_key="perkArmorerRank3LongDesc"/>
-			<effect_description level="4" desc_key="perkArmorerRank4Desc" long_desc_key="perkArmorerRank4LongDesc"/>
-			<effect_description level="5" desc_key="perkArmorerRank5Desc" long_desc_key="perkArmorerRank5LongDesc"/>
+			<effect_description level="1" desc_key="perkArmorerRank1DescITAV" long_desc_key="perkArmorerRank1LongDescITAV"/>
+			<effect_description level="2" desc_key="perkArmorerRank2DescITAV" long_desc_key="perkArmorerRank2LongDescITAV"/>
+			<effect_description level="3" desc_key="perkArmorerRank3DescITAV" long_desc_key="perkArmorerRank3LongDescITAV"/>
+			<effect_description level="4" desc_key="perkArmorerRank4DescITAV" long_desc_key="perkArmorerRank4LongDescITAV"/>
+			<effect_description level="5" desc_key="perkArmorerRank5DescITAV" long_desc_key="perkArmorerRank5LongDescITAV"/>
 		</effect_group> 
 	</perk>
+	
+	
+		<!-- Weaponsmith perk -->
+	<perk name="perkWeaponsmithITAV" max_level="5" parent="attITAV" name_key="perkWeaponsmithITAVName" desc_key="perkWeaponsmithITAVDesc" icon="ui_game_symbol_rifle">
+		<level_requirements level="1">
+			<requirement name="CVarCompare" cvar="hasLearntWeaponsmithITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
+		</level_requirements>
+        <level_requirements level="2">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntWeaponsmithITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel03ITAV" />
+		</level_requirements>
+        <level_requirements level="3">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntWeaponsmithITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />
+		</level_requirements>
+        <level_requirements level="4">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntWeaponsmithITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel07ITAV" />
+		</level_requirements>
+        <level_requirements level="5">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntWeaponsmithITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
+		</level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,5" value="1,5" tags="perkWeaponsmithITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunBowT1WoodenBow,gunBowT3CompoundBow,gunBowT1IronCrossbow,gunBowT3CompoundCrossbow,gunHandgunT1Pistol,gunHandgunT3SMG5,gunHandgunT2Magnum44,gunHandgunT3DesertVulture,gunShotgunT1DoubleBarrel,gunShotgunT2PumpShotgun,gunShotgunT3AutoShotgun,gunRifleT1HuntingRifle,gunRifleT2LeverActionRifle,gunRifleT3SniperRifle,gunMGT1AK47,gunMGT2TacticalAR,gunMGT3M60,gunExplosivesT3RocketLauncher,meleeWpnBladeT1HuntingKnife,meleeWpnBladeT1CandyKnife,meleeWpnBladeT3Machete,meleeWpnClubT1BaseballBat,meleeWpnClubT1CandyClub,meleeWpnClubT3SteelClub,meleeWpnBatonT2StunBaton,meleeWpnSpearT1IronSpear,meleeWpnSpearT3SteelSpear,meleeWpnSledgeT1IronSledgehammer,meleeWpnSledgeT3SteelSledgehammer,meleeWpnKnucklesT1IronKnuckles,meleeWpnKnucklesT3SteelKnuckles"/>
+
+
+			<effect_description level="1" desc_key="perkWeaponsmithITAVRank1Desc" long_desc_key="perkWeaponsmithITAVRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkWeaponsmithITAVRank2Desc" long_desc_key="perkWeaponsmithITAVRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkWeaponsmithITAVRank3Desc" long_desc_key="perkWeaponsmithITAVRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkWeaponsmithITAVRank4Desc" long_desc_key="perkWeaponsmithITAVRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkWeaponsmithITAVRank5Desc" long_desc_key="perkWeaponsmithITAVRank5LongDesc"/>
+		</effect_group> 
+	</perk>
+		
 	
 </append>
 

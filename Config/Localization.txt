@@ -20,11 +20,23 @@ bookCookITAV,Items,perk  book,,,"Profession: Cook"
 bookCookITAVDesc,progression,perk  book,,,"Cooks learn how to prepare more filling meals. These meals give higher health and stamina bonuses."
 
 bookArmorerITAV,Items,perk  book,,,"Profession: Armorer"
-bookArmorerITAVDesc,progression,perk  book,,,"Armorers craft light and heavy armor. Higher level Passion reduces the stamina penalty of armor."
+bookArmorerITAVDesc,progression,perk  book,,,"Armorers craft light and heavy armor."
 
+bookWeapnsmithITAV,Items,perk  book,,,"Profession: Weaponsmith"
+bookWeaponsmithITAVDesc,progression,perk  book,,,"Weaponsmiths craft ranged and melee weaponry, including explosives."
 
 cntVendingMachineITAV,blocks,Container,,,"Player Owned Store"
 cntVendingMachineGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Casino Coins. Buy the goods you need from other Player Owned Stores to support them and the community!  Store is indestructible unless falling."
+
+perkBatterUpBaseballBatsDesc,,,,,"Craft the Baseball Cap Helmet Mod."
+perkBatterUpBaseballBatsLongDesc,,,,,"Shield your eyes from the sun no matter what helmet you are wearing. Learn to craft the Baseball Cap Helmet Mod."
+perkSpearHunter3SteelSpearsDesc,,,,,"Craft the Burning Shaft Weapon Mod."
+perkSpearHunter3SteelSpearsLongDesc,,,,,"Enough flailing in the darkness. Craft the Burning Shaft Weapon Mod and enter the era of Fire."
+perkAutoWeaponsMachineGunsDesc,,,,,"Craft the Weapon Flashlight Mod."
+perkAutoWeaponsMachineGunsLongDesc,,,,,"Don't suck after bedtime. Craft the Weapon Flashlight Mod."
+perkUrbanCombatLandingDesc,,,,,"Craft the Impact Bracing Boots Mod."
+perkUrbanCombatLandingLongDesc,,,,,"Make landing on your feet even more appealing. Craft the Impact Bracing Boots Mod."
+
 
 attITAVRank01Desc,progression,Attribute,,,No fucks given
 attITAVRank01LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 15% and stamina penalty by 10%. For heavy armor, reduction for both is 5%"
@@ -83,24 +95,28 @@ perkHunterITAVName,progression,perk Pro,,,Hunter
 perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced benefits and learn to cook faster."
 perkCookITAVName,progression,perk Pro,,,Cook
 
-perkArmorerITAVDesc,progression,perk Pro,,,"Craft Light and Heavy Armor"
+perkArmorerITAVDesc,progression,perk Pro,,,"Craft Light and Heavy Armor."
 perkArmorerITAVName,progression,perk Pro,,,Armorer
-perkArmorerRank1DescITAV,progression,perk Int,,,Apprentice
-perkArmorerRank1LongDescITAV,progression,perk Int,,,You are now an apprentice armorer and able to create leather armor, iron armor, steel armor and military armor.
-perkArmorerRank2DescITAV,progression,perk Int,,,Journeyman
-perkArmorerRank2LongDescITAV,progression,perk Int,,,You are now a journeyman armorer and able to craft better quality armor.
-perkArmorerRank3DescITAV,progression,perk Int,,,Expert
-perkArmorerRank3LongDescITAV,progression,perk Int,,,You are now an expert armorer and able to craft better quality armor.
-perkArmorerRank4DescITAV,progression,perk Int,,,Artisan
-perkArmorerRank4LongDescITAV,progression,perk Int,,,You are now an artisan armorer and able to craft better quality armor.
-perkArmorerRank5DescITAV,progression,perk Int,,,Master
-perkArmorerRank5LongDescITAV,progression,perk Int,,,You are now a master armorer and able to craft the highest quality armor.
+perkArmorerRank1DescITAV,progression,perk Pro,,,Apprentice
+perkArmorerRank1LongDescITAV,progression,perk Pro,,,You are now an apprentice armorer and able to create leather armor, iron armor, steel armor and military armor.
+perkArmorerRank2DescITAV,progression,perk Pro,,,Journeyman
+perkArmorerRank2LongDescITAV,progression,perk Pro,,,You are now a journeyman armorer and able to craft better quality armor.
+perkArmorerRank3DescITAV,progression,perk Pro,,,Expert
+perkArmorerRank3LongDescITAV,progression,perk Pro,,,You are now an expert armorer and able to craft better quality armor.
+perkArmorerRank4DescITAV,progression,perk Pro,,,Artisan
+perkArmorerRank4LongDescITAV,progression,perk Pro,,,You are now an artisan armorer and able to craft better quality armor.
+perkArmorerRank5DescITAV,progression,perk Pro,,,Master
+perkArmorerRank5LongDescITAV,progression,perk Pro,,,You are now a master armorer and able to craft the highest quality armor.
+
+perkWeaponsmithITAVDesc,progression,perk Pro,,,"Weaponsmiths craft ranged and melee weaponry, including explosives."
+perkWeaponsmithITAVName,progression,perk Pro,,,Weaponsmith
 
 hasLearntSmelterITAVTooltip,items,Admin,,,"Profession: Smelter acquired"
 hasLearntMinerITAVTooltip,items,Admin,,,"Profession: Miner acquired"
 hasLearntHunterITAVTooltip,items,Admin,,,"Profession: Hunter acquired"
 hasLearntCookITAVTooltip,items,Admin,,,"Profession: Cook acquired"
 hasLearntArmorerITAVTooltip,items,Admin,,,"Profession: Armorer acquired"
+hasLearntWeaponsmithITAVTooltip,items,Admin,,,"Profession: Weaponsmith acquired"
 drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,Your Profession Perk skill points have been reset.
 
 tutorialTipITAV_title,Journal Tip,,,,"It Takes A Village"

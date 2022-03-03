@@ -1,0 +1,12 @@
+<configs>
+
+<!-- Replacing learning weaponschematics through books found in the wild, with the ability to craft mods-->
+<append xpath="//item_modifier[@name='modArmorBallCap']">
+	<property name="UnlockedBy" value="perkBatterUpBaseballBats" />
+</append>
+<append xpath="//item_modifier[@name='modMeleeClubBurningShaft']/property[@name='UnlockedBy']/@value">,perkSpearHunter3SteelSpears</append>
+<append xpath="//item_modifier[@name='modGunFlashlight']/property[@name='UnlockedBy']/@value">,perkAutoWeaponsMachineGuns</append>
+<append xpath="//item_modifier[@name='modArmorImpactBracing']/property[@name='UnlockedBy']/@value">,perkUrbanCombatLanding</append>
+
+
+</configs>
