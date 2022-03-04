@@ -22,7 +22,7 @@ bookCookITAVDesc,progression,perk  book,,,"Cooks learn how to prepare more filli
 bookArmorerITAV,Items,perk  book,,,"Profession: Armorer"
 bookArmorerITAVDesc,progression,perk  book,,,"Armorers craft light and heavy armor."
 
-bookWeapnsmithITAV,Items,perk  book,,,"Profession: Weaponsmith"
+bookWeaponsmithITAV,Items,perk  book,,,"Profession: Weaponsmith"
 bookWeaponsmithITAVDesc,progression,perk  book,,,"Weaponsmiths craft ranged and melee weaponry, including explosives."
 
 cntVendingMachineITAV,blocks,Container,,,"Player Owned Store"
