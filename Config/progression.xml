@@ -48,6 +48,20 @@
 <remove xpath="//perk[@name='perkMasterChef']" />
 <remove xpath="//perk[@name='perkLightArmor']" />
 <remove xpath="//perk[@name='perkHeavyArmor']" />
+<remove xpath="//perk[@name='perkLivingOffTheLand']" />
+
+<!-- Removing weapon crafting from vanilla perks, making Weaponsmith more viable -->
+<remove xpath="//perk[@name='perkDeadEye']/effect_group/passive_effect[@name='RecipeTagUnlocked']" />
+<remove xpath="//perk[@name='perkJavelinMaster']/effect_group/passive_effect[@name='RecipeTagUnlocked']" />
+<remove xpath="//perk[@name='perkBoomstick']/effect_group/passive_effect[@name='RecipeTagUnlocked']" />
+<remove xpath="//perk[@name='perkPummelPete']/effect_group/passive_effect[@name='RecipeTagUnlocked']" />
+<remove xpath="//perk[@name='perkSkullCrusher']/effect_group/passive_effect[@name='RecipeTagUnlocked']" />
+<remove xpath="//perk[@name='perkBrawler']/effect_group/passive_effect[@name='RecipeTagUnlocked']" />
+<remove xpath="//perk[@name='perkMachineGunner']/effect_group/passive_effect[@name='RecipeTagUnlocked']" />
+<remove xpath="//perk[@name='perkArchery']/effect_group/passive_effect[@name='RecipeTagUnlocked']" />
+<remove xpath="//perk[@name='perkGunslinger']/effect_group/passive_effect[@name='RecipeTagUnlocked']" />
+<remove xpath="//perk[@name='perkDeepCuts']/effect_group/passive_effect[@name='RecipeTagUnlocked']" />
+<remove xpath="//perk[@name='perkElectrocutioner']/effect_group/passive_effect[@name='RecipeTagUnlocked']" />
 
 
 <!-- Changing perkbooks found in the wild to reward non-profession-intrusive things instead -->
@@ -310,6 +324,13 @@
 			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
 		</level_requirements>
 
+		<!-- Opening up for reading the next quest book -->
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="add" value="1">
+				<requirement name="ProgressionLevel" progression_name="perkArmorerITAV" operation="GTE" value="5" />
+			</triggered_effect>
+        </effect_group>
+
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,5" value="1,5" tags="perkArmorerITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="armorIronHelmet,armorIronChest,armorIronGloves,armorIronLegs,armorIronBoots,armorLeatherHood,armorLeatherChest,armorLeatherGloves,armorLeatherPants,armorLeatherBoots,armorSteelBoots,armorSteelChest,armorSteelGloves,armorSteelLegs,armorSteelHelmet,armorMilitaryBoots,armorMilitaryStealthBoots,armorMilitaryGloves,armorMilitaryHelmet,armorMilitaryLegs,armorMilitaryVest"/>
@@ -346,6 +367,13 @@
 			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
 			<requirement name="CVarCompare" cvar="hasLearntWeaponsmithITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
 		</level_requirements>
+		
+				<!-- Opening up for reading the next quest book -->
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="add" value="1">
+				<requirement name="ProgressionLevel" progression_name="perkWeaponsmithITAV" operation="GTE" value="5" />
+			</triggered_effect>
+        </effect_group>
 
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,5" value="1,5" tags="perkWeaponsmithITAV"/>
@@ -358,6 +386,52 @@
 			<effect_description level="4" desc_key="perkWeaponsmithITAVRank4Desc" long_desc_key="perkWeaponsmithITAVRank4LongDesc"/>
 			<effect_description level="5" desc_key="perkWeaponsmithITAVRank5Desc" long_desc_key="perkWeaponsmithITAVRank5LongDesc"/>
 		</effect_group> 
+	</perk>
+	
+	<!-- Gatherer perk-->
+	<perk name="perkGathererITAV" max_level="3" parent="attITAV" name_key="perkGathererITAVName" desc_key="perkGathererITAVDesc" icon="ui_game_symbol_tree">
+		<level_requirements level="1">
+			<requirement name="CVarCompare" cvar="hasLearntGathererITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
+		</level_requirements>
+		<level_requirements level="2">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntGathererITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel03ITAV" />
+		</level_requirements>
+		<level_requirements level="3">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntGathererITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />
+		</level_requirements>
+		<level_requirements level="4">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntGathererITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel07ITAV" />
+		</level_requirements>
+		<level_requirements level="5">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntGathererITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
+		</level_requirements>
+		
+				<!-- Opening up for reading the next quest book -->
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="add" value="1">
+				<requirement name="ProgressionLevel" progression_name="perkGathererITAV" operation="GTE" value="3" />
+			</triggered_effect>
+        </effect_group>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkLivingOffTheLandCrafting"/><!-- fake crafting perk that is used to scale resources -->
+
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,2,3" value="1,1,2" tags="cropHarvest,wildCropsHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="2,3" value="1,1" tags="bonusCropHarvest"/>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="plantedAloe1,plantedChrysanthemum1,plantedGoldenrod1,plantedYucca1"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="plantedBlueberry1,plantedCoffee1,plantedCorn1,plantedCotton1,plantedMushroom1,plantedPotato1,plantedHop1,plantedPumpkin1,plantedGraceCorn1"/>
+
+			<effect_description level="1" desc_key="perkGathererITAVRank1Desc" long_desc_key="perkGathererITAVRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkGathererITAVRank2Desc" long_desc_key="perkGathererITAVRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkGathererITAVRank3Desc" long_desc_key="perkGathererITAVRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkGathererITAVRank4Desc" long_desc_key="perkGathererITAVRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkGathererITAVRank5Desc" long_desc_key="perkGathererITAVRank5LongDesc"/>
+		</effect_group>
 	</perk>
 		
 	

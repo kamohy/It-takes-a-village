@@ -1,6 +1,6 @@
 <configs>
 
-<!-- Replacing loot group food schematics with pieces of paper to make Cook more viable-->
+<!-- Removing some drink/food loots, and replacing loot group food schematics with pieces of paper to make Cook more viable-->
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']">
 	<item name="resourcePaper" />
@@ -13,6 +13,8 @@
 <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']">
 	<item name="resourcePaper" />
 </append>
+<remove xpath="/lootcontainers/lootgroup[@name='groupCoffeeMaker01']/item[@name='drinkJarCoffee']" />
+
 
 <!-- Replacing armor in lootgroups to make Armorer more viable -->
 <remove xpath="/lootcontainers/lootgroup[@name='groupArmorT1']/item" />
@@ -63,8 +65,6 @@
 	<item name="drugAntibiotics"/> 
 	<item name="drugSkullCrushers"/>
 	<item name="drinkCanMegaCrush"/>
-	
-
 </append>
 <remove xpath="//lootgroup[@name='schematicsWeaponsArmorT2']/item" />
 <append xpath="//lootgroup[@name='schematicsWeaponsArmorT2']">
@@ -139,9 +139,92 @@
 	<item name="modGunTriggerGroupAutomatic"/>
 	<item name="modGunDrumMagazineExtender" loot_prob_template="low"/>
 </append>
+<!-- Removing sledgehammer from tool loot groups despite it being good tool for destroying things -->
+<remove xpath="//lootgroup[@name='groupToolsT1']/item[@name='meleeWpnSledgeT1IronSledgehammer']" />
+<remove xpath="//lootgroup[@name='groupToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']" />
+<remove xpath="//lootgroup[@name='groupQuestToolsT1']/item[@name='meleeWpnSledgeT1IronSledgehammer']" />
+<remove xpath="//lootgroup[@name='groupQuestToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']" />
+
+<remove xpath="/lootcontainers/lootgroup[@name='groupStunBaton']/item[@name='meleeWpnBatonT2StunBaton']" />
+<remove xpath="/lootcontainers/lootgroup[@name='groupStunBaton']/item[@name='meleeWpnBatonT2StunBatonSchematic']" />
+<append xpath="/lootcontainers/lootgroup[@name='groupStunBaton']">
+	<item name="resourceElectricParts" count="4" />
+	<item name="resourceScrapPolymers" count="5" />
+</append>
+
+<!-- **************************** -->
+<!-- Exchanging quest rewards to keep professions more viable -->
+
+
+<remove xpath="//lootgroup[@name='groupQuestWeaponsMeleeT1']/item" />
+<append xpath="//lootgroup[@name='groupQuestWeaponsMeleeT1']">
+	<item name="modMeleeGraveDigger"/>
+	<item name="modMeleeSerratedBlade"/>
+	<item name="modMeleeStructuralBrace"/>
+	<item name="modMeleeWeightedHead"/>
+	<item name="modMeleeWoodSplitter"/>
+	<item name="modFuelTankSmall"/>
+	<item name="meleeWpnBatonT2StunBatonParts" />
+</append>
+
+<remove xpath="//lootgroup[@name='groupQuestWeaponsMeleeT2']/item" />
+<append xpath="//lootgroup[@name='groupQuestWeaponsMeleeT2']">
+	<item name="modMeleeClubBurningShaft"/>
+	<item name="modMeleeClubBarbedWire"/>
+	<item name="modMeleeFortifyingGrip"/>
+	<item name="modMeleeBunkerBuster"/>
+	<item name="modFuelTankLarge"/>
+	<item name="modMeleeClubMetalSpikes"/>
+	<item name="modMeleeClubMetalChain"/>
+	<item name="modMeleeErgonomicGrip"/>
+	<item name="modMeleeTemperedBlade"/>
+	<item name="modMeleeIronBreaker"/>
+</append>
+
+<remove xpath="//lootgroup[@name='groupQuestWeaponsRangedT1']/item" />
+<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT1']">
+	<item name="modGunBipod"/>
+	<item name="modGunChoke"/>
+	<item name="modGunDuckbill"/>
+	<item name="modGunFlashlight"/>
+	<item name="modGunForegrip"/>
+	<item name="modGunMagazineExtender"/>
+	<item name="modGunMeleeTheHunter"/>
+	<item name="modGunMuzzleBrake"/>
+	<item name="modGunScopeSmall"/>
+	<item name="modGunTriggerGroupSemi"/>
+	<item name="modShotgunSawedOffBarrel"/>
+</append>
+
+<remove xpath="//lootgroup[@name='groupQuestWeaponsRangedT2']/item" />
+<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT2']">
+	<item name="modGunBarrelExtender"/>
+	<item name="modGunCrippleEm"/>
+	<item name="modGunBowArrowRest"/>
+	<item name="modGunLaserSight"/>
+	<item name="modGunReflexSight"/>
+	<item name="modGunRetractingStock"/>
+	<item name="modGunScopeMedium"/>
+	<item name="modGunSoundSuppressorSilencer"/>
+	<item name="modGunTriggerGroupBurst3"/>
+	<item name="modGunShotgunTubeExtenderMagazine"/>
+</append>
+
+<remove xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']/item" />
+<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']">
+	<item name="modGunBowPolymerString"/>
+	<item name="modGunScopeLarge"/>
+	<item name="modGunTriggerGroupAutomatic"/>
+	<item name="modGunDrumMagazineExtender" loot_prob_template="low"/>
+</append>
 
 
 
+	
+
+
+
+<!-- **************************** -->
 
 <!-- Removing/Replacing GyroCopter -->
 <setattribute xpath="//lootgroup[@name='gyroCopterParts']/item[@name='vehicleGyroCopterChassis']" name="name">vehicle4x4TruckChassis</setattribute>

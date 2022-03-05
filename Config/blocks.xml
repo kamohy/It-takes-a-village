@@ -22,34 +22,31 @@
 
 </append>
 
-<!-- Testing making chandelier always lit -->
-<!-- <setattribute xpath="//block[@name='chandelierLight']" name="value">""</setattribute>
-<append xpath="//block[@name='chandelierLight']"><property name="Extends" value="porchLight01"></property></append> -->
 
-<append xpath="/blocks">
-	<block name="lanternLight_playerITAV">
-		<property name="Extends" value="ceilingLight01_player" param1="HandleFace"/> <!-- porchLight01-->
-		<property name="Class" value=""/>
-		<property name="CreativeMode" value="Player"/>
-		<property name="CanPickup" value="true"/>
-		<property name="CustomIcon" value="lanternDecorLight"/>
-		<property name="UnlockedBy" value="perkArtOfMiningLantern"/>
-		<property name="Material" value="Mglass"/>
-		<property name="Shape" value="ModelEntity"/>
-		<property name="Model" value="Entities/Lighting/chandelierPrefab"/>
-		<property name="MultiBlockDim" value="3,2,3"/>
-		<property name="DisplayType" value="blockMulti"/>
-		<property name="OnlySimpleRotations" value="true"/>
-		<property name="Path" value="solid"/>
-		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
-		<property name="Group" value="Science,Building,advBuilding"/>
-		<property name="FilterTags" value="MC_playerBlocks,SC_electrical"/>
-		<!-- None of these three have any effect when Class="" -->
-		<property name="RuntimeSwitch" value="true"/>
-		<property name="TakeDelay" value="10"/>
-		<property name="Light" value="0.2"/>
-	</block>
-</append>
+<!-- Changing the bonus dropchance to seeds-->
+<!-- plantedBlueberry1,plantedCoffee1,plantedCorn1,plantedCotton1,plantedMushroom1,plantedPotato1,plantedHop1,plantedPumpkin1,plantedGraceCorn1 -->
+<!-- <append xpath="//block[@name='plantedCoffee3HarvestPlayer']">
+	<drop event="Harvest" name="plantedCoffee1" prob="1" count="1" tag="bonusCropHarvest"/>
+</append> -->
+<setattribute xpath="//block[@name='plantedBlueberry3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedBlueberry3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
+<setattribute xpath="//block[@name='plantedCoffee3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedCoffee3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
+<setattribute xpath="//block[@name='plantedCorn3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedCorn3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
+<setattribute xpath="//block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
+<setattribute xpath="//block[@name='plantedPotato3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedPotato3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
+<setattribute xpath="//block[@name='plantedHop3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedHop3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
+<setattribute xpath="//block[@name='plantedPumpkin3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedPumpkin3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
+<setattribute xpath="//block[@name='plantedGraceCorn3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedGraceCorn3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
+
+
+
 
 <append xpath="//block[@name='forge']">
 	<property name="UnlockedBy" value="perkSmelterITAV"/>
