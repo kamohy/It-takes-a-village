@@ -7,8 +7,13 @@
 
 <setattribute xpath="//quest[@id='quest_whiteRiverCitizen1']/action[@type='ShowTip']" name="value">quest_myFirstProfession_description</setattribute>
 
-<append xpath="/quests">
+<remove xpath="//reward[@id='groupQuestBicycle']" />
+<remove xpath="//reward[@id='groupQuestMinibikeParts']" />
+<remove xpath="//reward[@id='groupQuestMotorcycleParts']" />
+<remove xpath="//reward[@id='groupQuest4x4Parts']"/>
+<remove xpath="//reward[@id='groupQuestGyrocopterParts']" />
 
+<append xpath="/quests">
 
 	<!-- Basic Survival X - Craft a Player Owned Store (Cashregister) /> -->
 	<quest id="quest_PlayerStore">
@@ -33,7 +38,7 @@
 			<property name="count" value="1"/>
 		</objective>
 		
-		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="2"/>
+		<!-- <objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="2"/> -->
 
 		<reward type="Quest" id="quest_MyFirstProfession">
 			<property name="chainquest" value="false"/>
@@ -85,6 +90,10 @@
 		<reward type="Item" id="bookCookITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookArmorerITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookWeaponsmithITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookFarmerITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookChemistITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookRoboticsITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookRunnerITAV" ischosen="true" isfixed="true" value="1"/>
 	</quest>
 	
 	<!-- My SECOND Profession - Get offer explaining Trade Skills, talk to trader who rewards Trade Profession books -->
@@ -125,6 +134,10 @@
 		<reward type="Item" id="bookMinerITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookHunterITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookCookITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookArmorerITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookWeaponsmithITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookFarmerITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookChemistITAV" ischosen="true" isfixed="true" value="1"/>
 		
 	</quest>
 	

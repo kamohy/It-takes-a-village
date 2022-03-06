@@ -20,23 +20,36 @@
 		</triggered_effect>
 </append>
 
-<!-- Locking forged items behind smelter perk -->
-<append xpath="//item[@name='resourceForgedIron']">
-	<property name="UnlockedBy" value="perkSmelterITAV"/>
-</append>
-<append xpath="//item[@name='resourceForgedSteel']">
-	<property name="UnlockedBy" value="perkSmelterITAV"/>
-</append>
-<append xpath="//item[@name='toolForgeCrucible']">
-	<property name="UnlockedBy" value="perkSmelterITAV"/>
-</append>	
+<!-- Locking  items behind ITAV perks -->
+<append xpath="//item[@name='resourceForgedIron']"><property name="UnlockedBy" value="perkSmelterITAV"/></append>
+<append xpath="//item[@name='resourceForgedSteel']"><property name="UnlockedBy" value="perkSmelterITAV"/></append>
+<append xpath="//item[@name='toolForgeCrucible']"><property name="UnlockedBy" value="perkSmelterITAV"/></append>
+<append xpath="//item[@name='resourceGunPowder']"><property name="UnlockedBy" value="perkChemistITAV"/></append>
+<append xpath="//item[@name='resourcePaint']"><property name="UnlockedBy" value="perkChemistITAV"/></append>
+<append xpath="//item[@name='resourceConcreteMix']"><property name="UnlockedBy" value="perkChemistITAV"/></append>
+
+<!-- Moving intellect items from intellect perk to strength perk -->	
+<append xpath="//property[contains(@value, 'attIntellect') and not (contains(@value, 'drone')) and not(contains(@value, 'turret'))]/@value">,attStrength</append>
+
 
 <!-- Making items unlockable by the correct ITAV perk -->
 <setattribute xpath="/items/item/property[contains(@value, 'perkAdvancedEngineering')]" name="value">perkSmelterITAV</setattribute>
 <setattribute xpath="/items/item/property[contains(@value, 'perkMasterChef')]" name="value">perkCookITAV</setattribute>
+<setattribute xpath="/items/item/property[(@name='UnlockedBy' and contains(@value, 'perkTurrets'))]" name="value">perkRoboticsITAV</setattribute>
+<setattribute xpath="//item[contains(@name, 'gunBot')]/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>
+<setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkSalvageOperations'))]" name="value">perkRunnerITAV</setattribute>
+<setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkGreaseMonkey'))]" name="value">perkRunnerITAV</setattribute>
+<append xpath="//item[@name='resourceLockPick']/property[@name='UnlockedBy']/@value">,perkRunnerITAV</append>
+
+<!-- Making items tagged by the correct ITAV perk -->
+<setattribute xpath="//passive_effect[@tags='perkTurrets']" name="tags">perkRoboticsITAV</setattribute>
+<append xpath="//property[(@name='Tags' and contains(@value, 'perkTurrets'))]/@value">,perkRoboticsITAV</append>
+<append xpath="//property[(@name='Tags' and contains(@value, 'perkSalvageOperations'))]/@value">,perkRunnerITAV</append>
+<setattribute xpath="//passive_effect[@tags='perkSalvageOperations']" name="tags">perkRunnerITAV</setattribute>
+
+
 
 <!-- MINER -->
-
 <setattribute xpath="//passive_effect[@tags='perkMiner69r']" name="tags">perkMinerITAV</setattribute>
 <setattribute xpath="//passive_effect[@tags='perkMiner69r,axe']" name="tags">perkMinerITAV,axe</setattribute>
 <setattribute xpath="//passive_effect[@tags='perkMiner69r,miningTool']" name="tags">perkMinerITAV,miningTool</setattribute>
@@ -139,7 +152,8 @@
 <!-- SMELTER -->
 <item name="bookSmelterITAV">
     <property name="Extends" value="bookMasterITAV"/>
-    <property name="CustomIcon" value="bookSmelterITAV"/>
+    <property name="CustomIcon" value="schematicMaster"/>
+	<property name="CustomIconTint" value="e6194B" />
     <property name="DescriptionKey" value="bookSmelterITAVDesc"/>
     <property name="Unlocks" value="perkSmelterITAV"/>
     <property class="Action0">
@@ -159,7 +173,8 @@
 <!-- MINER -->
 <item name="bookMinerITAV">
     <property name="Extends" value="bookMasterITAV"/>
-    <property name="CustomIcon" value="bookMinerITAV"/>
+    <property name="CustomIcon" value="schematicMaster"/>
+	<property name="CustomIconTint" value="f58231" />
     <property name="DescriptionKey" value="bookMinerITAVDesc"/>
     <property name="Unlocks" value="perkMinerITAV"/>
     <property class="Action0">
@@ -179,7 +194,8 @@
 <!-- HUNTER -->
 <item name="bookHunterITAV">
     <property name="Extends" value="bookMasterITAV"/>
-    <property name="CustomIcon" value="bookHunterITAV"/>
+    <property name="CustomIcon" value="schematicMaster"/>
+	<property name="CustomIconTint" value="ffe119" />
     <property name="DescriptionKey" value="bookHunterITAVDesc"/>
     <property name="Unlocks" value="perkHunterITAV"/>
     <property class="Action0">
@@ -199,7 +215,8 @@
 <!-- COOK -->
 <item name="bookCookITAV">
     <property name="Extends" value="bookMasterITAV"/>
-    <property name="CustomIcon" value="bookCookITAV"/>
+    <property name="CustomIcon" value="schematicMaster"/>
+	<property name="CustomIconTint" value="bfef45" />
     <property name="DescriptionKey" value="bookCookITAVDesc"/>
     <property name="Unlocks" value="perkCookITAV"/>
     <property class="Action0">
@@ -220,7 +237,8 @@
 <!-- ARMORER -->
 <item name="bookArmorerITAV">
     <property name="Extends" value="bookMasterITAV"/>
-    <property name="CustomIcon" value="bookArmorerITAV"/>
+    <property name="CustomIcon" value="schematicMaster"/>
+	<property name="CustomIconTint" value="3cb44b" />
     <property name="DescriptionKey" value="bookArmorerITAVDesc"/>
     <property name="Unlocks" value="perkArmorerITAV"/>
     <property class="Action0">
@@ -242,7 +260,7 @@
 <item name="bookWeaponsmithITAV">
     <property name="Extends" value="bookMasterITAV"/>
     <property name="CustomIcon" value="schematicMaster"/>
-	<property name="CustomIconTint" value="4571ad" />
+	<property name="CustomIconTint" value="42d4f4" />
     <property name="DescriptionKey" value="bookWeaponsmithITAVDesc"/>
     <property name="Unlocks" value="perkWeaponsmithITAV"/>
     <property class="Action0">
@@ -259,6 +277,89 @@
     </effect_group>
 </item>
 
+<!-- FARMER -->
+<item name="bookFarmerITAV">
+    <property name="Extends" value="bookMasterITAV"/>
+    <property name="CustomIcon" value="schematicMaster"/>
+	<property name="CustomIconTint" value="4363d8" />
+    <property name="DescriptionKey" value="bookFarmerITAVDesc"/>
+    <property name="Unlocks" value="perkFarmerITAV"/>
+    <property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="perkFarmerITAV" operation="LT" value="1" />
+    </property>
+    <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkFarmerITAV" level="1">
+			<requirement name="ProgressionLevel" progression_name="perkFarmerITAV" operation="LT" value="1" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkFarmerITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntFarmerITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntFarmerITAVTooltip"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+    </effect_group>
+</item>
+
+<!-- CHEMIST -->
+<item name="bookChemistITAV">
+    <property name="Extends" value="bookMasterITAV"/>
+    <property name="CustomIcon" value="schematicMaster"/>
+	<property name="CustomIconTint" value="911eb4" />
+    <property name="DescriptionKey" value="bookChemistITAVDesc"/>
+    <property name="Unlocks" value="perkChemistITAV"/>
+    <property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="perkChemistITAV" operation="LT" value="1" />
+    </property>
+    <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkChemistITAV" level="1">
+			<requirement name="ProgressionLevel" progression_name="perkChemistITAV" operation="LT" value="1" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkChemistITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntChemistITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntChemistITAVTooltip"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+    </effect_group>
+</item>
+
+<!-- ROBOTICS INVENTOR -->
+<item name="bookRoboticsITAV">
+    <property name="Extends" value="bookMasterITAV"/>
+    <property name="CustomIcon" value="schematicMaster"/>
+	<property name="CustomIconTint" value="f032e6" />
+    <property name="DescriptionKey" value="bookRoboticsITAVDesc"/>
+    <property name="Unlocks" value="perkRoboticsITAV"/>
+    <property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="perkRoboticsITAV" operation="LT" value="1" />
+    </property>
+    <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRoboticsITAV" level="1">
+			<requirement name="ProgressionLevel" progression_name="perkRoboticsITAV" operation="LT" value="1" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkRoboticsITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntRoboticsITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntRoboticsITAVTooltip"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+    </effect_group>
+</item>
+
+<!-- RUNNER -->
+<item name="bookRunnerITAV">
+    <property name="Extends" value="bookMasterITAV"/>
+    <property name="CustomIcon" value="schematicMaster"/>
+	<property name="CustomIconTint" value="ffffff" />
+    <property name="DescriptionKey" value="bookRunnerITAVDesc"/>
+    <property name="Unlocks" value="perkRunnerITAV"/>
+    <property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="perkRunnerITAV" operation="LT" value="1" />
+    </property>
+    <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRunnerITAV" level="1">
+			<requirement name="ProgressionLevel" progression_name="perkRunnerITAV" operation="LT" value="1" />
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkRunnerITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntRunnerITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntRunnerITAVTooltip"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+    </effect_group>
+</item>
 
 
 

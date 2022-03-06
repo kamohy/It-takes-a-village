@@ -1,5 +1,8 @@
 <configs>
 
+<setattribute xpath="/traders" name="sell_markdown">0.1</setattribute>
+<setattribute xpath="/traders" name="buy_markup">1.5</setattribute>
+
 	<append xpath="//traders">
 
 		<!-- Player Owned Store that works like a Vending Machine -->
@@ -17,24 +20,17 @@
 		</tier_items>
 	</append> 
 	  -->
-	<append xpath="//trader_item_group[@name='traderAlways']">
+	  
+	<!-- Removing items from traders so they only sell what players have sold them, nothing else (apart from My X Profession books) -->  
+	<remove xpath="//trader_info[(@id='1') or (@id='6') or (@id='2') or (@id='7') or (@id='8')]/trader_items/item" /> 
+	<remove xpath="//trader_info[(@id='1') or (@id='6') or (@id='2') or (@id='7') or (@id='8')]/tier_items/item" /> 
+	  
+	<append xpath="//trader_items[@count='all']">
 		<item name="qb_MySecondProfessionITAV" count="10" />
 	</append>
 	
-	<remove xpath="//trader_info[@id='4']" />
+
 	
-	<append xpath="/traders">
-		<trader_info id="4" full_reset="false" reset_interval="1" override_buy_markup="1.0" allow_sell="false" min_inventory="10" max_inventory="20" min_items_swapped="6" max_items_swapped="13">
-		<trader_items count="10">
-			<item name="bookSmelterITAV" />
-			<item name="bookMinerITAV" />
-			<item name="bookHunterITAV" />
-			<item name="bookCookITAV" />
-		</trader_items>
-	</trader_info>
-	
-	
-	</append>
 	
 	<!-- Removing food/drink and GyroCopter parts/schematics from trader item groups -->
 	<remove xpath="/traders/trader_item_groups/trader_item_group[@name='farmingCookingRecipes']/item" />

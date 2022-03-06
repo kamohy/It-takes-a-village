@@ -8,19 +8,24 @@ bookSmelterITAV,Items,perk  book,,,"Profession: Smelter"
 bookSmelterITAVDesc,Items,perk  book,,,"Smelters learn how to make the forge, the anvil and later on the crucible. They smelt more efficiently than any other."
 bookMinerITAV,Items,perk  book,,,"Profession: Miner"
 bookMinerITAVDesc,progression,perk  book,,,"Miners are efficient at gathering materials. They harvest more resources from trees and veins."
-perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 poor tools, increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger.\nUnlocks all iron tools like pickaxes. And harvest 20% more from ore, stone, terrain blocks and trees."
 bookHunterITAV,Items,perk  book,,,"Profession: Hunter"
 bookHunterITAVDesc,progression,perk  book,,,"Hunters specialize in tracking and hunting animals. They also harvest more resources from animal carcasses."
-perkHunterITAVRank1LongDesc,progression,perk Pro,,,"You are now a Hunter. Harvest 20% more resources from animals and crouch to track them. Deal 25% more damage to animals."
 bookCookITAV,Items,perk  book,,,"Profession: Cook"
 bookCookITAVDesc,progression,perk  book,,,"Cooks learn how to prepare more filling meals. These meals give higher health and stamina bonuses."
 bookArmorerITAV,Items,perk  book,,,"Profession: Armorer"
 bookArmorerITAVDesc,progression,perk  book,,,"Armorers craft light and heavy armor."
 bookWeaponsmithITAV,Items,perk  book,,,"Profession: Weaponsmith"
-bookWeaponsmithITAVDesc,progression,perk  book,,,"Weaponsmiths craft ranged and melee weaponry, including explosives."
-bookGathererITAV,Items,perk  book,,,"Profession: Gatherer"
-bookGathererITAVDesc,progression,perk  book,,,"Gatherers harvest more from crops and can craft seeds from the harvest."
+bookWeaponsmithITAVDesc,progression,perk  book,,,"Weaponsmiths craft ranged and melee weaponry."
+bookFarmerITAV,Items,perk  book,,,"Profession: Farmer"
+bookFarmerITAVDesc,progression,perk  book,,,"Farmers harvest more from crops and can craft seeds from the harvest."
+bookChemistITAV,Items,perk  book,,,"Profession: Chemist"
+bookChemistITAVDesc,progression,perk  book,,,"Chemists create vital items such as gunpowder, medicine, concrete mix... and paint."
+bookRoboticsITAV,Items,perk  book,,,"Profession: Robotics"
+bookRoboticsITAVDesc,progression,perk  book,,,"Robotics Inventors build turrets and triggers and drones."
+bookRunnerITAV,Items,perk  book,,,"Profession: Runner"
+bookRunnerITAVDesc,progression,perk  book,,,"Runners drive straight into danger to gather supplies and salvage materials."
 
+LightITAVDesc,blocks,,,,,"Light up the world! Requires connection to a power source. Use a wire tool to connect it."
 cntVendingMachineITAV,blocks,Container,,,"Player Owned Store"
 cntVendingMachineGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Casino Coins. Buy the goods you need from other Player Owned Stores to support them and the community!  Store is indestructible unless falling."
 
@@ -83,25 +88,25 @@ perkUrbanCombatLandingLongDesc,,,,,"Make landing on your feet even more appealin
 
 
 attITAVRank01Desc,progression,Attribute,,,No fucks given
-attITAVRank01LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 15% and stamina penalty by 10%. For heavy armor, reduction for both is 5%"
+attITAVRank01LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 15% and stamina penalty by 10%. For heavy armor, reduction for both is 5%."
 attITAVRank02Desc,progression,Attribute,,,Indifferent
-attITAVRank02LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 30% and stamina penalty by 20%. For heavy armor, reduction for both is 10%"
+attITAVRank02LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 30% and stamina penalty by 20%. For heavy armor, reduction for both is 10%."
 attITAVRank03Desc,progression,Attribute,,,Blasé
-attITAVRank03LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 50% and stamina penalty by 35%. For heavy armor, reduction for both is 17%"
+attITAVRank03LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 50% and stamina penalty by 35%. For heavy armor, reduction for both is 17%."
 attITAVRank04Desc,progression,Attribute,,,Curious
-attITAVRank04LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 75% and stamina penalty by 50%. For heavy armor, reduction for both is 25%"
+attITAVRank04LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 75% and stamina penalty by 50%. For heavy armor, reduction for both is 25%."
 attITAVRank05Desc,progression,Attribute,,,Into it
-attITAVRank05LongDesc,progression,Attribute,,,"How will new customers find your store? Can craft ?WTS signs??."
+attITAVRank05LongDesc,progression,Attribute,,,"Medical healing items heal 25% more health over time."
 attITAVRank06Desc,progression,Attribute,,,Invested
-attITAVRank06LongDesc,progression,Attribute,,,"Trading is becoming a way of life. Can craft ?deco??."
+attITAVRank06LongDesc,progression,Attribute,,,"Medical healing items heal 40% more health over time."
 attITAVRank07Desc,progression,Attribute,,,Steadfast
-attITAVRank07LongDesc,progression,Attribute,,,"Help newcomers set up their own store. Can craft ?deco??."
+attITAVRank07LongDesc,progression,Attribute,,,"Medical healing items heal 55% more health over time."
 attITAVRank08Desc,progression,Attribute,,,Dedicated
-attITAVRank08LongDesc,progression,Attribute,,,"Sell spare goods to the trader. They don't pay very well, but still. Can craft ?deco??."
+attITAVRank08LongDesc,progression,Attribute,,,"Medical healing items heal 75% more health over time. Gain 20% XP from electrical trap kills."
 attITAVRank09Desc,progression,Attribute,,,Passionate
-attITAVRank09LongDesc,progression,Attribute,,,"Max out current professions to learn new ones. Search for the second, third, fourth etc. books at the trader."
+attITAVRank09LongDesc,progression,Attribute,,,"Gain 35% XP from electrical trap kills."
 attITAVRank10Desc,progression,Attribute,,,Giving ALL the fucks
-attITAVRank10LongDesc,progression,Attribute,,,"Parking and accessibility is key to drive foot traffic to your store. Can craft ?parking sign??."
+attITAVRank10LongDesc,progression,Attribute,,,"Gain 50% XP from electrical trap kills."
 
 reqAttLevel00ITAV,progression,Attribute,,,"You already know a profession"
 reqAttLevel01ITAV,progression,Attribute,,,"Read a 'My X Profession' book to unlock"
@@ -118,22 +123,32 @@ allowedProfessionsLevelExceededITAV,,,,,Not yet allowed to learn another profess
 
 perkSmelterDescITAV,progression,perk Pro,,,"Smelt and craft items in the forge and craft 20% faster on workbenches."
 perkSmelterNameITAV,progression,perk Pro,,,Smelter
-perkSmelterRank1DescITAV,progression,perk Int,,,Apprentice
-perkSmelterRank1LongDescITAV,progression,perk Int,,,You are now an apprentice smelter and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster.
-perkSmelterRank2DescITAV,progression,perk Int,,,Journeyman
-perkSmelterRank2LongDescITAV,progression,perk Int,,,You are now a journeyman smelter and able to do nothing new!
-perkSmelterRank3DescITAV,progression,perk Int,,,Expert
-perkSmelterRank3LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
-perkSmelterRank4DescITAV,progression,perk Int,,,Artisan
-perkSmelterRank4LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
-perkSmelterRank5DescITAV,progression,perk Int,,,Master
-perkSmelterRank5LongDescITAV,progression,perk Int,,,You are now a blacksmith and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Craft glue cheaper.
+perkSmelterRank1DescITAV,progression,perk Pro,,,Apprentice
+perkSmelterRank1LongDescITAV,progression,perk Pro,,,"You are now an apprentice smelter and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Unlocks crafting of forges and forged iron."
+perkSmelterRank2DescITAV,progression,perk,,,Journeyman
+perkSmelterRank2LongDescITAV,progression,perk Pro,,,"Your tinkering is proving useful in the apocalypse. Craft workbenches and cement mixers and craft items with them 20% faster."
+perkSmelterRank3DescITAV,progression,perk,,,Electrician
+perkSmelterRank3LongDescITAV,progression,perk Pro,,,"You are now an electrician. Unlocks crafting of Military Fibers, generator banks, electrical relays, switches, pressure plates, motion sensors and various lights. All forge recipes cost 10% less. Crafting electrical devices cost 15% less."
+perkSmelterRank4DescITAV,progression,perk Pro,,,Artisan
+perkSmelterRank4LongDescITAV,progression,perk Pro,,,"Unlocks crafting of battery bank, nailgun and various powered doors. All forge recipes cost 15% less and electrical devices cost 25% less."
+perkSmelterRank5DescITAV,progression,perk Pro,,,Master
+perkSmelterRank5LongDescITAV,progression,perk Pro,,,"Unlocks crafting of the crucible and forged steel. All forge recipes cost 20% less, and electrical devices cost 35% less."
 
 perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster."
 perkMinerITAVName,progression,perk Pro,,,Miner
+perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 poor tools, increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger. Harvest 20% more from ore, stone, terrain blocks and trees. \nUnlocks all iron tools like pickaxes."
+perkMinerITAVRank2Desc,progression,perk,,,Journeyman
+perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Craft quality 3 fair tools, increase tool damage by 20% and block damage by 60% with any axe, pick, shovel, chainsaw or auger. Harvest 40% more from ore, stone, terrain blocks and trees."
+perkMinerITAVRank3Desc,progression,perk,,,Expert
+perkMinerITAVRank3LongDesc,progression,perk Pro,,,"Craft quality 4 good tools, increase tool damage by 30% and block damage by 90% with any axe, pick, shovel, chainsaw or auger. Harvest 60% more from ore, stone, terrain blocks and trees."
+perkMinerITAVRank4Desc,progression,perk Pro,,,Artisan
+perkMinerITAVRank4LongDesc,progression,perk Pro,,,"Craft quality 5 great tools, increase tool damage by 40% and block damage by 120% with any axe, pick, shovel, chainsaw or auger. Harvest 80% more from ore, stone, terrain blocks and trees."
+perkMinerITAVRank5Desc,progression,perk Pro,,,Master
+perkMinerITAVRank5LongDesc,progression,perk Pro,,,"Craft quality 6 amazing tools, increase tool damage by 50% and block damage by 150% with any axe, pick, shovel, chainsaw or auger. Harvest 100% more from ore, stone, terrain blocks and trees."
 
 perkHunterITAVDesc,progression,perk Pro,,,"Become one with the hunt. Gain the ability to track animals and increase damage to and harvest from them."
 perkHunterITAVName,progression,perk Pro,,,Hunter
+perkHunterITAVRank1LongDesc,progression,perk Pro,,,"You are now a Hunter. Harvest 20% more resources from animals and crouch to track them. Deal 25% more damage to animals."
 
 perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced benefits and learn to cook faster."
 perkCookITAVName,progression,perk Pro,,,Cook
@@ -141,31 +156,80 @@ perkCookITAVName,progression,perk Pro,,,Cook
 perkArmorerITAVDesc,progression,perk Pro,,,"Craft Light and Heavy Armor."
 perkArmorerITAVName,progression,perk Pro,,,Armorer
 perkArmorerRank1DescITAV,progression,perk Pro,,,Apprentice
-perkArmorerRank1LongDescITAV,progression,perk Pro,,,You are now an apprentice armorer and able to create leather armor, iron armor, steel armor and military armor.
+perkArmorerRank1LongDescITAV,progression,perk Pro,,,"You are now an apprentice armorer and able to craft quality 2 leather armor, iron armor, steel armor and military armor."
 perkArmorerRank2DescITAV,progression,perk Pro,,,Journeyman
-perkArmorerRank2LongDescITAV,progression,perk Pro,,,You are now a journeyman armorer and able to craft better quality armor.
+perkArmorerRank2LongDescITAV,progression,perk Pro,,,"You are now a journeyman armorer and able to craft quality 3 armor."
 perkArmorerRank3DescITAV,progression,perk Pro,,,Expert
-perkArmorerRank3LongDescITAV,progression,perk Pro,,,You are now an expert armorer and able to craft better quality armor.
+perkArmorerRank3LongDescITAV,progression,perk Pro,,,"You are now an expert armorer and able to craft quality 4 armor."
 perkArmorerRank4DescITAV,progression,perk Pro,,,Artisan
-perkArmorerRank4LongDescITAV,progression,perk Pro,,,You are now an artisan armorer and able to craft better quality armor.
+perkArmorerRank4LongDescITAV,progression,perk Pro,,,"You are now an artisan armorer and able to craft quality 5 armor."
 perkArmorerRank5DescITAV,progression,perk Pro,,,Master
-perkArmorerRank5LongDescITAV,progression,perk Pro,,,You are now a master armorer and able to craft the highest quality armor.
+perkArmorerRank5LongDescITAV,progression,perk Pro,,,"You are now a master armorer and able to craft quality 6 armor."
 
-perkWeaponsmithITAVDesc,progression,perk Pro,,,"Weaponsmiths craft ranged and melee weaponry, including explosives."
+perkWeaponsmithITAVDesc,progression,perk Pro,,,"Weaponsmiths craft ranged and melee weaponry."
 perkWeaponsmithITAVName,progression,perk Pro,,,Weaponsmith
+perkWeaponsmithITAVRank1Desc,progression,perk Pro,,,Apprentice
+perkWeaponsmithITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 weapons. \nUnlocks crafting of bows, crossbows, hunting rifle, handguns, shotguns, assault rifle, sniper rifle, bladed weapons, blunt weapons, fist weapons, thrown weapons and rocket launcher."
+perkWeaponsmithITAVRank2Desc,progression,perk Pro,,,Journeyman
+perkWeaponsmithITAVRank2LongDesc,progression,perk Pro,,,"Craft quality 3 weapons."
+perkWeaponsmithITAVRank3Desc,progression,perk Pro,,,Expert
+perkWeaponsmithITAVRank3LongDesc,progression,perk Pro,,,"Craft quality 4 weapons."
+perkWeaponsmithITAVRank4Desc,progression,perk Pro,,,Artisan
+perkWeaponsmithITAVRank4LongDesc,progression,perk Pro,,,"Craft quality 5 weapons."
+perkWeaponsmithITAVRank5Desc,progression,perk Pro,,,Master
+perkWeaponsmithITAVRank5LongDesc,progression,perk Pro,,,"Craft quality 6 weapons."
 
-perkGathererITAVDesc,progression,perk Pro,,,"Specialize in harvesting more crops and crafting seeds."
-perkGathererITAVName,progression,perk Pro,,,Gatherer
-perkGathererITAVRank1Desc,progression,perk Pro,,,Forager
-perkGathererITAVRank1LongDesc,progression,perk Pro,,,"Double the harvest of wild or planted crops. Craft seeds for flowers and decorative plants like goldenrod, chrysanthemum, aloe, and yucca.\nFarm plots cost 30% less to craft."
-perkGathererITAVRank2Desc,progression,perk Pro,,,Gardener
-perkGathererITAVRank2LongDesc,progression,perk Pro,,,"You can craft seeds for berries and vegetables.\n50% chance to harvest 1 additional crop.\nFarm plots cost 50% less to craft."
-perkGathererITAVRank3Desc,progression,perk Pro,,,Farmer
-perkGathererITAVRank3LongDesc,progression,perk Pro,,,"Triple the harvest of wild or planted crops."
-perkGathererITAVRank4Desc,progression,perk Pro,,,Artisan
-perkGathererITAVRank4LongDesc,progression,perk Pro,,,"???."
-perkGathererITAVRank5Desc,progression,perk Pro,,,Master
-perkGathererITAVRank5LongDesc,progression,perk Pro,,,"???."
+perkFarmerITAVDesc,progression,perk Pro,,,"Specialize in harvesting more crops and crafting seeds."
+perkFarmerITAVName,progression,perk Pro,,,Farmer
+perkFarmerITAVRank1Desc,progression,perk Pro,,,Forager
+perkFarmerITAVRank1LongDesc,progression,perk Pro,,,"Double the harvest of wild or planted crops. Craft seeds for flowers and decorative plants like goldenrod, chrysanthemum, aloe, and yucca.\nFarm plots cost 30% less to craft."
+perkFarmerITAVRank2Desc,progression,perk Pro,,,Gatherer
+perkFarmerITAVRank2LongDesc,progression,perk Pro,,,"You can craft seeds for berries and vegetables.\n50% chance to harvest 1 additional crop.\nFarm plots cost 50% less to craft."
+perkFarmerITAVRank3Desc,progression,perk Pro,,,Harvester
+perkFarmerITAVRank3LongDesc,progression,perk Pro,,,"Triple the harvest of wild or planted crops."
+perkFarmerITAVRank4Desc,progression,perk Pro,,,Artisan
+perkFarmerITAVRank4LongDesc,progression,perk Pro,,,"???."
+perkFarmerITAVRank5Desc,progression,perk Pro,,,Master
+perkFarmerITAVRank5LongDesc,progression,perk Pro,,,"???."
+
+perkChemistITAVDesc,progression,perk Pro,,,"Specialize in crafting chemicals such as gunpowder, medicine, concrete mix... and paint."
+perkChemistITAVName,progression,perk Pro,,,Chemist
+perkChemistITAVRank1Desc,progression,perk Pro,,,Student
+perkChemistITAVRank1LongDesc,progression,perk Pro,,,"Can craft chemistry stations, first aid bandages, and plaster casts."
+perkChemistITAVRank2Desc,progression,perk Pro,,,Lab Rat
+perkChemistITAVRank2LongDesc,progression,perk Pro,,,"Can craft concrete mix, gun powder and paint. Craft items 20% faster at chemistry stations."
+perkChemistITAVRank3Desc,progression,perk Pro,,,Kitchen Tinkerer
+perkChemistITAVRank3LongDesc,progression,perk Pro,,,"Can craft first aid kits and steroids."
+perkChemistITAVRank4Desc,progression,perk Pro,,,Artisan
+perkChemistITAVRank4LongDesc,progression,perk Pro,,,"Can craft Fortbites, Recog and antibiotics. Craft items 40% faster at chemistry stations."
+perkChemistITAVRank5Desc,progression,perk Pro,,,Master
+perkChemistITAVRank5LongDesc,progression,perk Pro,,,"???."
+
+perkRoboticsITAVDesc,progression,perk Pro,,,"You are fascinated with robotics. Learn to craft deployed weapons."
+perkRoboticsITAVName,progression,perk Pro,,,Robotics Inventor
+perkRoboticsITAVRank1Desc,progression,perk Pro,,,Science Projects
+perkRoboticsITAVRank1LongDesc,progression,perk Pro,,,"Craft poor quality 2 robots, deal 10% more damage, 30% faster fire rate and reload an extra 10 rounds. Robot active range is increased from 10 to 14 meters.\nYou can deploy multiple robots but only the closest will be active. \nUnlocks crafting of Robotic Sledge, Generatorbank, Switch, trigger plates and wires, electric relays and electrical traps."
+perkRoboticsITAVRank2Desc,progression,perk Pro,,,Basic Robotics
+perkRoboticsITAVRank2LongDesc,progression,perk Pro,,,"You are taking your projects to the next level now. Craft fair quality 3 robots, deal 20% more damage, 60% faster fire rate and reload an extra 20 rounds. Robot active range is 15 meters."
+perkRoboticsITAVRank3Desc,progression,perk Pro,,,Automated Weaponry
+perkRoboticsITAVRank3LongDesc,progression,perk Pro,,,"You have mastered the basics of automated weaponry. Craft good quality 4 robotics, deal 30% more damage, 90% faster fire rate and reload an extra 30 rounds. Robot active range is 16 meters. \nUnlocks crafting of Shotgun Auto Turret and Robotic Turret."
+perkRoboticsITAVRank4Desc,progression,perk Pro,,,Advanced Robotics
+perkRoboticsITAVRank4LongDesc,progression,perk Pro,,,"You must be from the year 2077. You are creating some futuristic technology. Craft great quality 5 robots, deal 40% more damage, 120% faster fire rate and reload an extra 40 rounds. Reload robot weapons 10% faster. Robot active range is 17 meters."
+perkRoboticsITAVRank5Desc,progression,perk Pro,,,Robotics Expert
+perkRoboticsITAVRank5LongDesc,progression,perk Pro,,,"You are now a top expert in robotics. Reload robot weapons 20% faster and reload an extra 50 rounds. Robot active range is 18 meters.\nTwo deployed robots can be active at once. \nUnlocks crafting of SMG Auto Turret and Robotic Drone."
+
+perkRunnerITAVDesc,progression,perk Pro,,,"Run those missions!"
+perkRunnerITAVName,progression,perk Pro,,,Runner
+perkRunnerITAVRank1Desc,progression,perk Pro,,,Salvager
+perkRunnerITAVRank1LongDesc,progression,perk Pro,,,"Increases movement speed by 2%. Harvest 20% faster and recieve 20% more resources when harvesting with a wrench, ratchet or impact driver. \nUnlocks crafting of Wrench, Lockpicks, Crushed Car wall, Wheels and Bicycle parts."
+perkRunnerITAVRank2Desc,progression,perk Pro,,,Bikes and Stuff
+perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Increases movement speed by 4%. Harvest 40% faster and recieve 40% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Minibike parts, gas cans and quality 2 car batteries."
+perkRunnerITAVRank3Desc,progression,perk Pro,,,Mechanic
+perkRunnerITAVRank3LongDesc,progression,perk Pro,,,"Increases movement speed by 6%. Can pick up mines. Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of oil and quality 3 car batteries."
+perkRunnerITAVRank4Desc,progression,perk Pro,,,Repurposer
+perkRunnerITAVRank4LongDesc,progression,perk Pro,,,"Increases movement speed by 8%. Harvest 80% faster and recieve 80% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, quality 4 car batteries and more efficient stacks of gas cans."
+perkRunnerITAVRank5Desc,progression,perk Pro,,,Good as New
+perkRunnerITAVRank5LongDesc,progression,perk Pro,,,"Increases movement speed by 10%. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower. Harvest 100% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of 4x4 truck parts and quality 5 car batteries."
 
 hasLearntSmelterITAVTooltip,items,Admin,,,"Profession: Smelter acquired"
 hasLearntMinerITAVTooltip,items,Admin,,,"Profession: Miner acquired"
@@ -173,7 +237,10 @@ hasLearntHunterITAVTooltip,items,Admin,,,"Profession: Hunter acquired"
 hasLearntCookITAVTooltip,items,Admin,,,"Profession: Cook acquired"
 hasLearntArmorerITAVTooltip,items,Admin,,,"Profession: Armorer acquired"
 hasLearntWeaponsmithITAVTooltip,items,Admin,,,"Profession: Weaponsmith acquired"
-hasLearntGathererITAVTooltip,items,Admin,,,"Profession: Gatherer acquired"
+hasLearntFarmerITAVTooltip,items,Admin,,,"Profession: Farmer acquired"
+hasLearntChemistITAVTooltip,items,Admin,,,"Profession: Chemist acquired"
+hasLearntRoboticsITAVTooltip,items,Admin,,,"Profession: Robotics Inventor acquired"
+hasLearntRunnerITAVTooltip,items,Admin,,,"Profession: Runner acquired"
 drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,Your Profession Perk skill points have been reset.
 
 tutorialTipITAV_title,Journal Tip,,,,"It Takes A Village"

@@ -22,41 +22,224 @@
 
 </append>
 
+<append xpath="/blocks">
+	<block name="LightStreetLightClassicITAV">
+		<property name="Class" value="PoweredLight"/>
+		<property name="Extends" value="porchLight01" param1="HandleFace"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="Model" value="Entities/Lighting/streetLamp_ClassicPrefab"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="MultiBlockDim" value="1,5,1"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="ImposterExchange" value="imposterDontBlockCTRPole" param1="169"/>
+		<property name="OnlySimpleRotations" value="true"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		<drop event="Harvest" name="resourceElectricParts" count="4,6" tag="salvageHarvest"/>
+		<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="UnlockedBy" value="perkSmelterITAV"/>
+		<property name="CustomIcon" value="streetLightClassic"/>
+	</block>
+	
+	<block name="signShopOpenLightITAV">
+		<property name="Class" value="PoweredLight"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="IndexName" value="TraderOnOff"/>
+		<property name="CustomIcon" value="signShopOpenSwitch"/>
+		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="Model" value="Entities/Signs/sign_open_Prefab"/>
+		<property name="HandleFace" value="South"/>
+		<property name="ImposterDontBlock" value="true"/>
+		<property name="Material" value="Mmetal_weak"/>
+		<property name="OnlySimpleRotations" value="true"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		<drop event="Harvest" name="resourceElectricParts" count="2" prob="0.7" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceScrapPolymers" count="2" prob="0.8" tag="salvageHarvest"/>
+		<drop event="Destroy" name="resourceScrapIron" count="1,5"/>
+		<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+		<property name="TakeDelay" value="-1"/>
+		<property name="Group" value="Science,Decor/Miscellaneous"/>
+		<property name="EconomicValue" value="150"/> <!-- disassemble value -->
+		<property name="FilterTags" value="MC_building,SC_commercial,SC_lighting,MC_outdoor"/>
+		<property name="SortOrder1" value="70s0"/>
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="UnlockedBy" value="perkSmelterITAV"/>
+	</block>
+	
+	<block name="LightDeskLampLightITAV">
+		<property name="Class" value="PoweredLight"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="Extends" value="porchLight01" param1="HandleFace"/>
+		<property name="Model" value="Entities/Lighting/desk_lampPrefab"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="Material" value="Mglass"/>
+		<property name="CustomIcon" value="deskLampLight"/>
+		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+		<property name="TakeDelay" value="5"/>
+		<drop event="Destroy" name="resourceScrapBrass" count="3"/>
+		<property name="Light" value="0.4"/>
+		<property name="UnlockedBy" value="perkSmelterITAV"/>
+	</block>
+
+
+	<block name="LightTableLampLightITAV">
+		<property name="Class" value="PoweredLight"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="Extends" value="porchLight01" param1="HandleFace"/>
+		<property name="Model" value="Entities/Lighting/table_lampPrefab"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="Material" value="Mglass"/>
+		<property name="CustomIcon" value="tableLampLight"/>
+		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+		<property name="TakeDelay" value="5"/>
+		<property name="Light" value="0.4"/>
+		<property name="UnlockedBy" value="perkSmelterITAV"/>
+	</block>
+
+	
+	<block name="LightTableLampLightCenteredITAV">
+		<property name="Class" value="PoweredLight"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="Extends" value="tableLampLight" param1="HandleFace"/>
+		<property name="CustomIcon" value="tableLampLight"/>
+		<property name="Model" value="Entities/Lighting/table_lamp_centeredPrefab"/>
+		<property name="TakeDelay" value="5"/>
+		<property name="ModelOffset" value="0,0,0"/>
+		<property name="GndAlign" value="1"/>
+		<property name="UnlockedBy" value="perkSmelterITAV"/>
+	</block>
+	
+	
+	<block name="LightPorchLight01ITAV">
+		<property name="Class" value="PoweredLight"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="Extends" value="porchLight01"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="porchLight01"/>
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="Material" value="Mglass"/>
+		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+		<property name="Model" value="Entities/Lighting/porchLight01Prefab"/> <property name="HandleFace" value="Top"/>
+		<property name="TakeDelay" value="5"/>
+		<property name="AllowAllRotations" value="true"/>
+		<property name="UnlockedBy" value="perkSmelterITAV"/>
+		<property name="Light" value="0.6"/>
+	</block>
+
+	<block name="LightPorchLight04BrassITAV">
+		<property name="Class" value="PoweredLight"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="Extends" value="porchLight01"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="porchLight04Brass"/>
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="Material" value="Mglass"/>
+		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+		<property name="Model" value="Entities/Lighting/porchLight04BrassPrefab"/> <property name="HandleFace" value="Top"/>
+		<property name="TakeDelay" value="5"/>
+		<property name="AllowAllRotations" value="true"/>
+		<property name="Light" value="0.6"/>
+		<drop event="Destroy" name="resourceScrapBrass" count="3"/>
+		<property name="UnlockedBy" value="perkSmelterITAV"/>>
+	</block>
+	
+	<block name="LightPorchLight04ITAV">
+		<property name="Class" value="PoweredLight"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="Extends" value="porchLight01"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="porchLight04"/>
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="Material" value="Mglass"/>
+		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+		<property name="Model" value="Entities/Lighting/porchLight04Prefab"/> <property name="HandleFace" value="Top"/>
+		<property name="TakeDelay" value="5"/>
+		<property name="AllowAllRotations" value="true"/>
+		<property name="Light" value="0.6"/>
+		<property name="UnlockedBy" value="perkSmelterITAV"/>
+	</block>
+
+	<block name="LightCeilingLight02ITAV">
+		<property name="Class" value="PoweredLight"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="Extends" value="porchLight01"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="ceilingLight02"/>
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="Material" value="Mglass"/>
+		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+		<property name="Model" value="Entities/Lighting/ceilingLight02Prefab"/> <property name="HandleFace" value="Top"/>
+		<property name="TakeDelay" value="5"/>
+		<property name="Light" value="0.6"/>
+		<property name="UnlockedBy" value="perkSmelterITAV"/>
+	</block>
+
+	<block name="LightCeilingLight02BrassITAV">
+		<property name="Class" value="PoweredLight"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="Extends" value="porchLight01"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="ceilingLight02Brass"/>
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="Material" value="Mglass"/>
+		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+		<property name="Model" value="Entities/Lighting/ceilingLight02BrassPrefab"/> <property name="HandleFace" value="Top"/>
+		<property name="TakeDelay" value="5"/>
+		<drop event="Destroy" name="resourceScrapBrass" count="3"/>
+		<property name="UnlockedBy" value="perkSmelterITAV"/>
+	</block>
+	
+</append>
+
 
 <!-- Changing the bonus dropchance to seeds-->
 <!-- plantedBlueberry1,plantedCoffee1,plantedCorn1,plantedCotton1,plantedMushroom1,plantedPotato1,plantedHop1,plantedPumpkin1,plantedGraceCorn1 -->
 <!-- <append xpath="//block[@name='plantedCoffee3HarvestPlayer']">
 	<drop event="Harvest" name="plantedCoffee1" prob="1" count="1" tag="bonusCropHarvest"/>
 </append> -->
-<setattribute xpath="//block[@name='plantedBlueberry3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedBlueberry3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
 <setattribute xpath="//block[@name='plantedBlueberry3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
-<setattribute xpath="//block[@name='plantedCoffee3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedCoffee3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
 <setattribute xpath="//block[@name='plantedCoffee3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
-<setattribute xpath="//block[@name='plantedCorn3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedCorn3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
 <setattribute xpath="//block[@name='plantedCorn3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
-<setattribute xpath="//block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
 <setattribute xpath="//block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
-<setattribute xpath="//block[@name='plantedPotato3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedPotato3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
 <setattribute xpath="//block[@name='plantedPotato3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
-<setattribute xpath="//block[@name='plantedHop3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedHop3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
 <setattribute xpath="//block[@name='plantedHop3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
-<setattribute xpath="//block[@name='plantedPumpkin3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedPumpkin3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
 <setattribute xpath="//block[@name='plantedPumpkin3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
-<setattribute xpath="//block[@name='plantedGraceCorn3HarvestPlayer']/drop[@event='Destroy']" name="prob">1</setattribute>
+<setattribute xpath="//block[@name='plantedGraceCorn3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
 <setattribute xpath="//block[@name='plantedGraceCorn3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
 
 
-
-
-<append xpath="//block[@name='forge']">
-	<property name="UnlockedBy" value="perkSmelterITAV"/>
-</append>
-<append xpath="//block[@name='workbench']">
-	<property name="UnlockedBy" value="perkSmelterITAV"/>
-</append>
 	
 	<!-- Making blocks unlockable by the correct ITAV perk -->
 <setattribute xpath="/blocks/block/property[contains(@value, 'perkAdvancedEngineering')]" name="value">perkSmelterITAV</setattribute>
+<setattribute xpath="/blocks/block[@name='tripwirepost']/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>
+<setattribute xpath="/blocks/block[@name='electricfencepost']/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>
+<setattribute xpath="/blocks/block[@name='bladeTrap']/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>
+<setattribute xpath="/blocks/block[@name='dartTrap']/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>
+<setattribute xpath="/blocks/block[@name='shotgunTurret']/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>
+<setattribute xpath="/blocks/block[@name='autoTurret']/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>
+
+<append xpath="//block[@name='generatorbank']/property[@name='UnlockedBy']/@value">,perkRoboticsITAV</append>
+<append xpath="//block[@name='electricwirerelay']/property[@name='UnlockedBy']/@value">,perkRoboticsITAV</append>
+<append xpath="//block[@name='switch']/property[@name='UnlockedBy']/@value">,perkRoboticsITAV</append>
+<append xpath="//block[@name='pressureplate']/property[@name='UnlockedBy']/@value">,perkRoboticsITAV</append>
+<append xpath="//block[@name='pressureplateLong']/property[@name='UnlockedBy']/@value">,perkRoboticsITAV</append>
+<append xpath="//block[@name='electrictimerrelay']/property[@name='UnlockedBy']/@value">,perkRoboticsITAV</append>
+<append xpath="//block[@name='motionsensor']/property[@name='UnlockedBy']/@value">,perkRoboticsITAV</append>
+<append xpath="//block[@name='crushedCars']"><property name="UnlockedBy" value="perkRunnerITAV" /></append>
 
 	
 </configs>

@@ -80,6 +80,16 @@
 <setattribute xpath="//requirement[(@name='ProgressionLevel' and @progression_name='perkHeavyArmor')]" name="progression_name">attITAV</setattribute>
 <setattribute xpath="//requirement[(@name='ProgressionLevel' and @progression_name='attITAV' and @value='4')]" name="operation">GTE</setattribute>
 
+<!-- Moving the healing effect buff from physician to the ITAV Attribute -->
+
+<!-- see <buff name="buffPerkAbilityUpdate"> for cvar based ability changes -->	
+<setattribute xpath="//buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect/requirement[(@progression_name='perkPhysician' and @value='1')]" name="value">5</setattribute>
+<setattribute xpath="//buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect/requirement[(@progression_name='perkPhysician' and @value='2')]" name="value">6</setattribute>
+<setattribute xpath="//buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect/requirement[(@progression_name='perkPhysician' and @value='3')]" name="value">7</setattribute>
+<setattribute xpath="//buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect/requirement[(@progression_name='perkPhysician' and @value='4')]" name="value">8</setattribute>
+<setattribute xpath="//buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect/requirement[(@progression_name='perkPhysician' and @value='8')]" name="Operation">GTE</setattribute>
+<setattribute xpath="//buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect/requirement[@progression_name='perkPhysician']" name="progression_name">attITAV</setattribute>
+
 
 
 </configs>

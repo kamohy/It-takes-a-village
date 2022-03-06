@@ -1,5 +1,10 @@
 <configs>
 
+<!-- Tweaking some loots -->
+<append xpath="//lootgroup[@name='groupBirdNest01']"><item name="foodEgg" loot_prob_template="medLow"/></append>
+
+
+
 <!-- Removing some drink/food loots, and replacing loot group food schematics with pieces of paper to make Cook more viable-->
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']">
@@ -14,6 +19,19 @@
 	<item name="resourcePaper" />
 </append>
 <remove xpath="/lootcontainers/lootgroup[@name='groupCoffeeMaker01']/item[@name='drinkJarCoffee']" />
+<remove xpath="/lootcontainers/lootgroup[@name='groupFoodRare']/item" />
+<append xpath="/lootcontainers/lootgroup[@name='groupFoodRare']">
+    <item name="foodCanBeef"/>
+    <item name="foodCanChili"/>
+    <item name="foodCanDogfood"/>
+    <item name="foodCanSham"/>
+    <item name="foodCanLamb"/>
+    <item name="foodCanPasta"/>
+    <item name="foodCanPeas"/>
+    <item name="foodCanSalmon"/>
+    <item name="foodCanStock"/>
+    <item name="foodCanTuna"/>
+</append>
 
 
 <!-- Replacing armor in lootgroups to make Armorer more viable -->

@@ -15,4 +15,9 @@
 
 
 <remove xpath="//entity_class[@name='vehicleGyrocopter']"/>
+
+<append xpath="//entity_class[@name='animalChicken']">
+    <drop event="Harvest" name="foodEgg" tag="butcherHarvest" count="1"/>
+</append>
+
 </configs>
