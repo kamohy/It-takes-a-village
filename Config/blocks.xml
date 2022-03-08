@@ -6,6 +6,7 @@
 	<block name="cntVendingMachineITAV">
 		<property name="Extends" value="cntCashRegister" />
 		<property name="TraderID" value="99"/>
+		<property name="CustomIcon" value="cntCashRegister"/>
 		<property name="Class" value="VendingMachine"/>
 		<property name="DescriptionKey" value="cntVendingMachineGroupDescITAV"/>
 		<property name="DisplayInfo" value="Name"/>
@@ -225,6 +226,7 @@
 	
 	<!-- Making blocks unlockable by the correct ITAV perk -->
 <setattribute xpath="/blocks/block/property[contains(@value, 'perkAdvancedEngineering')]" name="value">perkSmelterITAV</setattribute>
+<setattribute xpath="/blocks/block[@name='chemistryStation']/property[@name='UnlockedBy']" name="value">perkChemistITAV,chemistryStationSchematic</setattribute>
 <setattribute xpath="/blocks/block[@name='tripwirepost']/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>
 <setattribute xpath="/blocks/block[@name='electricfencepost']/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>
 <setattribute xpath="/blocks/block[@name='bladeTrap']/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>
@@ -240,6 +242,7 @@
 <append xpath="//block[@name='electrictimerrelay']/property[@name='UnlockedBy']/@value">,perkRoboticsITAV</append>
 <append xpath="//block[@name='motionsensor']/property[@name='UnlockedBy']/@value">,perkRoboticsITAV</append>
 <append xpath="//block[@name='crushedCars']"><property name="UnlockedBy" value="perkRunnerITAV" /></append>
+
 
 	
 </configs>

@@ -6,9 +6,10 @@
 
 
 <!-- Increase stacksizes of expected store items -->
-<setattribute xpath="/items/item[(starts-with(@name, 'drink') or starts-with(@name, 'food'))]/property[@name='Stacknumber']" name="value">500</setattribute>
-<setattribute xpath="/items/item[starts-with(@name, 'drug')]/property[@name='Stacknumber']" name="value">500</setattribute>
-<setattribute xpath="/items/item[starts-with(@name, 'ammo') and not(starts-with(@name, 'ammoBundle')) and not(starts-with(@name, 'ammoGasCan'))]/property[@name='Stacknumber']" name="value">600</setattribute>
+<setattribute xpath="//item[@name='casinoCoin']/property[@name='Stacknumber']" name="value">999999</setattribute>
+<setattribute xpath="//item[(starts-with(@name, 'drink') or starts-with(@name, 'food'))]/property[@name='Stacknumber']" name="value">500</setattribute>
+<setattribute xpath="//item[starts-with(@name, 'drug')]/property[@name='Stacknumber']" name="value">500</setattribute>
+<setattribute xpath="//item[starts-with(@name, 'ammo') and not(starts-with(@name, 'ammoBundle')) and not(starts-with(@name, 'ammoGasCan'))]/property[@name='Stacknumber']" name="value">600</setattribute>
 
 
 <!-- Adding small chance of dysentery to canned foods -->
@@ -33,9 +34,10 @@
 
 
 <!-- Making items unlockable by the correct ITAV perk -->
-<setattribute xpath="/items/item/property[contains(@value, 'perkAdvancedEngineering')]" name="value">perkSmelterITAV</setattribute>
-<setattribute xpath="/items/item/property[contains(@value, 'perkMasterChef')]" name="value">perkCookITAV</setattribute>
-<setattribute xpath="/items/item/property[(@name='UnlockedBy' and contains(@value, 'perkTurrets'))]" name="value">perkRoboticsITAV</setattribute>
+<setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkAdvancedEngineering'))]" name="value">perkSmelterITAV</setattribute>
+<setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkMasterChef'))]" name="value">perkCookITAV</setattribute>
+<setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkPhysician'))]" name="value">perkChemistITAV</setattribute>
+<setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkTurrets'))]" name="value">perkRoboticsITAV</setattribute>
 <setattribute xpath="//item[contains(@name, 'gunBot')]/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkSalvageOperations'))]" name="value">perkRunnerITAV</setattribute>
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkGreaseMonkey'))]" name="value">perkRunnerITAV</setattribute>

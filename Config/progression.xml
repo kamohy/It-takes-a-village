@@ -75,7 +75,7 @@
 <!-- PERKS -->
 <append xpath="//perks">
 	<!-- Smelter perk -->
-	<perk name="perkSmelterITAV" parent="attITAV" name_key="perkSmelterNameITAV" desc_key="perkSmelterDescITAV" icon="ui_game_symbol_workbench">		
+	<perk name="perkSmelterITAV" parent="attITAV" name_key="perkSmelterITAVName" desc_key="perkSmelterITAVDesc" icon="ui_game_symbol_workbench">		
 		<level_requirements level="1"> 
 			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
 		</level_requirements>
@@ -115,11 +115,11 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="batterybank,meleeToolRepairT3Nailgun,garageDoorMetal_v1Powered,garageDoorIndustrial_Powered,metalReinforcedWoodDrawBridgePowered,vaultHatch_v3_Powered,vaultDoor03_Powered"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="toolForgeCrucible,resourceForgedSteel"/>
 
-			<effect_description level="1" desc_key="perkSmelterRank1DescITAV" long_desc_key="perkSmelterRank1LongDescITAV"/>
-			<effect_description level="2" desc_key="perkSmelterRank2DescITAV" long_desc_key="perkAdvancedEngineeringRank2LongDesc"/>
-			<effect_description level="3" desc_key="perkSmelterRank3DescITAV" long_desc_key="perkAdvancedEngineeringRank3LongDesc"/>
-			<effect_description level="4" desc_key="perkSmelterRank4DescITAV" long_desc_key="perkAdvancedEngineeringRank4LongDesc"/>
-			<effect_description level="5" desc_key="perkSmelterRank5DescITAV" long_desc_key="perkAdvancedEngineeringRank5LongDesc"/>
+			<effect_description level="1" desc_key="perkSmelterITAVRank1Desc" long_desc_key="perkSmelterITAVRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkSmelterITAVRank2Desc" long_desc_key="perkSmelterITAVRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkSmelterITAVRank3Desc" long_desc_key="perkSmelterITAVRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkSmelterITAVRank4Desc" long_desc_key="perkSmelterITAVRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkSmelterITAVRank5Desc" long_desc_key="perkSmelterITAVRank5LongDesc"/>
 		</effect_group>
 		
 
