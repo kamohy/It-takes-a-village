@@ -89,7 +89,7 @@
 		<reward type="Item" id="bookHunterITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookCookITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookArmorerITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookWeaponsmithITAV" ischosen="true" isfixed="true" value="1"/>
+		<!-- <reward type="Item" id="bookWeaponsmithITAV" ischosen="true" isfixed="true" value="1"/> -->
 		<reward type="Item" id="bookFarmerITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookChemistITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookRoboticsITAV" ischosen="true" isfixed="true" value="1"/>

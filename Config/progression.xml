@@ -303,8 +303,8 @@
         </effect_group>
     </perk>
 	
-	<!-- Armorer perk -->
-	<perk name="perkArmorerITAV" max_level="5" parent="attITAV" name_key="perkArmorerITAVName" desc_key="perkArmorerITAVDesc" icon="ui_game_symbol_armor_iron">
+		<!-- Armorer perk v2-->
+	<perk name="perkArmorerITAV" max_level="5" parent="attITAV" name_key="perkArmorerITAVName" desc_key="perkArmorerITAVDesc" icon="ui_game_symbol_rifle">
 		<level_requirements level="1">
 			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
 		</level_requirements>
@@ -324,8 +324,46 @@
 			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
 			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
 		</level_requirements>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="add" value="1">
+				<requirement name="ProgressionLevel" progression_name="perkArmorerITAV" operation="GTE" value="5" />
+			</triggered_effect>
+        </effect_group>
 
-		<!-- Opening up for reading the next quest book -->
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,5" value="1,5" tags="perkArmorerITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="armorIronHelmet,armorIronChest,armorIronGloves,armorIronLegs,armorIronBoots,armorLeatherHood,armorLeatherChest,armorLeatherGloves,armorLeatherPants,armorLeatherBoots,armorSteelBoots,armorSteelChest,armorSteelGloves,armorSteelLegs,armorSteelHelmet,armorMilitaryBoots,armorMilitaryStealthBoots,armorMilitaryGloves,armorMilitaryHelmet,armorMilitaryLegs,armorMilitaryVest,gunBowT1WoodenBow,gunBowT3CompoundBow,gunBowT1IronCrossbow,gunBowT3CompoundCrossbow,gunHandgunT1Pistol,gunHandgunT3SMG5,gunHandgunT2Magnum44,gunHandgunT3DesertVulture,gunShotgunT1DoubleBarrel,gunShotgunT2PumpShotgun,gunShotgunT3AutoShotgun,gunRifleT1HuntingRifle,gunRifleT2LeverActionRifle,gunRifleT3SniperRifle,gunMGT1AK47,gunMGT2TacticalAR,gunMGT3M60,gunExplosivesT3RocketLauncher,meleeWpnBladeT1HuntingKnife,meleeWpnBladeT1CandyKnife,meleeWpnBladeT3Machete,meleeWpnClubT1BaseballBat,meleeWpnClubT1CandyClub,meleeWpnClubT3SteelClub,meleeWpnBatonT2StunBaton,meleeWpnSpearT1IronSpear,meleeWpnSpearT3SteelSpear,meleeWpnSledgeT1IronSledgehammer,meleeWpnSledgeT3SteelSledgehammer,meleeWpnKnucklesT1IronKnuckles,meleeWpnKnucklesT3SteelKnuckles"/>
+
+			<!-- Stamina/mobility are handled in buffs (buffStatusCheck02) -->
+			<effect_description level="1" desc_key="perkArmorerRank1DescITAV" long_desc_key="perkArmorerRank1LongDescITAV"/>
+			<effect_description level="2" desc_key="perkArmorerRank2DescITAV" long_desc_key="perkArmorerRank2LongDescITAV"/>
+			<effect_description level="3" desc_key="perkArmorerRank3DescITAV" long_desc_key="perkArmorerRank3LongDescITAV"/>
+			<effect_description level="4" desc_key="perkArmorerRank4DescITAV" long_desc_key="perkArmorerRank4LongDescITAV"/>
+			<effect_description level="5" desc_key="perkArmorerRank5DescITAV" long_desc_key="perkArmorerRank5LongDescITAV"/>
+		</effect_group> 
+	</perk>
+	
+	<!-- Armorer perk Original-->
+	<!--<perk name="perkArmorerITAV" max_level="5" parent="attITAV" name_key="perkArmorerITAVName" desc_key="perkArmorerITAVDesc" icon="ui_game_symbol_armor_iron">
+		<level_requirements level="1">
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
+		</level_requirements>
+        <level_requirements level="2">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel03ITAV" />
+		</level_requirements>
+        <level_requirements level="3">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />
+		</level_requirements>
+        <level_requirements level="4">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel07ITAV" />
+		</level_requirements>
+        <level_requirements level="5">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
+		</level_requirements>
 		<effect_group>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="add" value="1">
 				<requirement name="ProgressionLevel" progression_name="perkArmorerITAV" operation="GTE" value="5" />
@@ -336,19 +374,18 @@
 			<passive_effect name="CraftingTier" operation="base_add" level="1,5" value="1,5" tags="perkArmorerITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="armorIronHelmet,armorIronChest,armorIronGloves,armorIronLegs,armorIronBoots,armorLeatherHood,armorLeatherChest,armorLeatherGloves,armorLeatherPants,armorLeatherBoots,armorSteelBoots,armorSteelChest,armorSteelGloves,armorSteelLegs,armorSteelHelmet,armorMilitaryBoots,armorMilitaryStealthBoots,armorMilitaryGloves,armorMilitaryHelmet,armorMilitaryLegs,armorMilitaryVest"/>
 
-			<!-- Stamina/mobility are handled in buffs (buffStatusCheck02) -->
-
+			Stamina/mobility are handled in buffs (buffStatusCheck02)
 			<effect_description level="1" desc_key="perkArmorerRank1DescITAV" long_desc_key="perkArmorerRank1LongDescITAV"/>
 			<effect_description level="2" desc_key="perkArmorerRank2DescITAV" long_desc_key="perkArmorerRank2LongDescITAV"/>
 			<effect_description level="3" desc_key="perkArmorerRank3DescITAV" long_desc_key="perkArmorerRank3LongDescITAV"/>
 			<effect_description level="4" desc_key="perkArmorerRank4DescITAV" long_desc_key="perkArmorerRank4LongDescITAV"/>
 			<effect_description level="5" desc_key="perkArmorerRank5DescITAV" long_desc_key="perkArmorerRank5LongDescITAV"/>
 		</effect_group> 
-	</perk>
+	</perk> -->
 	
 	
-		<!-- Weaponsmith perk -->
-	<perk name="perkWeaponsmithITAV" max_level="5" parent="attITAV" name_key="perkWeaponsmithITAVName" desc_key="perkWeaponsmithITAVDesc" icon="ui_game_symbol_rifle">
+		<!-- Weaponsmith perk Original-->
+	<!-- <perk name="perkWeaponsmithITAV" max_level="5" parent="attITAV" name_key="perkWeaponsmithITAVName" desc_key="perkWeaponsmithITAVDesc" icon="ui_game_symbol_rifle">
 		<level_requirements level="1">
 			<requirement name="CVarCompare" cvar="hasLearntWeaponsmithITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
 		</level_requirements>
@@ -368,26 +405,21 @@
 			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
 			<requirement name="CVarCompare" cvar="hasLearntWeaponsmithITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
 		</level_requirements>
-		
-				<!-- Opening up for reading the next quest book -->
-		<effect_group>
+				<effect_group>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="add" value="1">
 				<requirement name="ProgressionLevel" progression_name="perkWeaponsmithITAV" operation="GTE" value="5" />
 			</triggered_effect>
         </effect_group>
-
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,5" value="1,5" tags="perkWeaponsmithITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunBowT1WoodenBow,gunBowT3CompoundBow,gunBowT1IronCrossbow,gunBowT3CompoundCrossbow,gunHandgunT1Pistol,gunHandgunT3SMG5,gunHandgunT2Magnum44,gunHandgunT3DesertVulture,gunShotgunT1DoubleBarrel,gunShotgunT2PumpShotgun,gunShotgunT3AutoShotgun,gunRifleT1HuntingRifle,gunRifleT2LeverActionRifle,gunRifleT3SniperRifle,gunMGT1AK47,gunMGT2TacticalAR,gunMGT3M60,gunExplosivesT3RocketLauncher,meleeWpnBladeT1HuntingKnife,meleeWpnBladeT1CandyKnife,meleeWpnBladeT3Machete,meleeWpnClubT1BaseballBat,meleeWpnClubT1CandyClub,meleeWpnClubT3SteelClub,meleeWpnBatonT2StunBaton,meleeWpnSpearT1IronSpear,meleeWpnSpearT3SteelSpear,meleeWpnSledgeT1IronSledgehammer,meleeWpnSledgeT3SteelSledgehammer,meleeWpnKnucklesT1IronKnuckles,meleeWpnKnucklesT3SteelKnuckles"/>
-
-
 			<effect_description level="1" desc_key="perkWeaponsmithITAVRank1Desc" long_desc_key="perkWeaponsmithITAVRank1LongDesc"/>
 			<effect_description level="2" desc_key="perkWeaponsmithITAVRank2Desc" long_desc_key="perkWeaponsmithITAVRank2LongDesc"/>
 			<effect_description level="3" desc_key="perkWeaponsmithITAVRank3Desc" long_desc_key="perkWeaponsmithITAVRank3LongDesc"/>
 			<effect_description level="4" desc_key="perkWeaponsmithITAVRank4Desc" long_desc_key="perkWeaponsmithITAVRank4LongDesc"/>
 			<effect_description level="5" desc_key="perkWeaponsmithITAVRank5Desc" long_desc_key="perkWeaponsmithITAVRank5LongDesc"/>
 		</effect_group> 
-	</perk>
+	</perk> -->
 	
 	<!-- Farmer perk-->
 	<perk name="perkFarmerITAV" max_level="3" parent="attITAV" name_key="perkFarmerITAVName" desc_key="perkFarmerITAVDesc" icon="ui_game_symbol_tree">
@@ -581,6 +613,7 @@
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkRunnerITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolSalvageT1Wrench,resourceLockPick"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="meleeToolSalvageT2Ratchet"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.1,-.5" tags="salvageScrap"/><!-- does not work on scrapping -->
 			<passive_effect name="RunSpeed" operation="perc_add" level="1,5" value=".02,.1"/>
 			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkRunnerITAV"/>
@@ -588,7 +621,8 @@
 			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="salvageHarvest"/>
 			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value="-.1,-.4" tags="Harvesting">
 				<requirement name="HoldingItemHasTags" tags="perkRunnerITAV"/>
-			</passive_effect>			
+			</passive_effect>	
+			<passive_effect name="ScavengingTime" operation="perc_subtract" level="1,2,3,4,5" value=".1,.2,.4,.6,.8"/>
 			<passive_effect name="TrapDoorTriggerDelay" operation="base_add" level="5" value="2"/>
 			<passive_effect name="LandMineTriggerDelay" operation="base_add" level="5" value="2"/>
 			<passive_effect name="TrapIncomingDamage" operation="perc_add" level="5" value="-.5"/>

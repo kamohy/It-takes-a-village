@@ -2,7 +2,8 @@
 
 <!-- Tweaking some loots -->
 <append xpath="//lootgroup[@name='groupBirdNest01']"><item name="foodEgg" loot_prob_template="medLow"/></append>
-
+<setattribute xpath="//lootgroup[@name='groupMailbox02']/item[@group='booksAllScaled']" name="loot_prob_template">veryLow</setattribute>
+<!-- <setattribute xpath="//lootgroup[@name='groupMailbox01']/item[@group='perkBooksT0Day1']" name="loot_prob_template">veryLow</setattribute> -->
 
 
 <!-- Removing some drink/food loots, and replacing loot group food schematics with pieces of paper to make Cook more viable-->
@@ -53,7 +54,24 @@
 </append>
 
 
-<!-- Removing schematics in lootgroups to make Armorer and Weaponsmith and Chemist more viable-->
+<!-- Removing schematics in lootgroups to make Smelter, Miner, Armorer, Weaponsmith, Chemist, Robotics and Runner/Mechanic more viable-->
+
+<remove xpath="//item[@name='resourceMilitaryFiberSchematic']" />
+<remove xpath="//item[@name='generatorbankSchematic']" />
+<remove xpath="//item[@name='electrictimerrelaySchematic']" />
+<remove xpath="//item[@name='pressureplateSchematic']" />
+<remove xpath="//item[@name='switchSchematic']" />
+<remove xpath="//item[@name='spotlightPlayerSchematic']" />
+<remove xpath="//item[@name='speakerSchematic']" />
+<remove xpath="//item[@name='motionsensorSchematic']" />
+<remove xpath="//item[@name='batterybankSchematic']" />
+<remove xpath="//item[@name='meleeToolRepairT3NailgunSchematic']" />
+<remove xpath="//item[@name='toolForgeCrucibleSchematic']" />
+<remove xpath="//item[@name='meleeToolIronSetSchematic']" />
+<remove xpath="//item[@name='meleeToolSalvageT1WrenchSchematic']" />
+<remove xpath="//item[@name='meleeToolSteelSetSchematic']" />
+<remove xpath="//item[@name='meleeToolSalvageT2RatchetSchematic']" />
+
 <remove xpath="//lootgroup[@name='schematicsToolsT0']/item[@name='meleeWpnBladeT1HuntingKnifeSchematic']" />
 <remove xpath="//lootgroup[@name='schematicsToolsT0']/item[@name='meleeWpnSledgeT1IronSledgehammerSchematic']" />
 <remove xpath="//lootgroup[@name='schematicsToolsT1']/item[@name='meleeWpnSledgeT3SteelSledgehammerSchematic']" />
@@ -98,6 +116,18 @@
 </append>
 <remove xpath="//item[@name='ammoGasCanSchematic']" />
 <remove xpath="//item[(contains(@name, 'medical') and contains(@name, 'Schematic'))]"/>
+<remove xpath="//item[(contains(@name, 'drug') and contains(@name, 'Schematic'))]"/>
+<remove xpath="//item[@name='resourceOilSchematic']" />
+
+<remove xpath="//item[(contains(@name, 'Turret') and contains(@name, 'Schematic'))]" />
+<remove xpath="//item[@name='gunBotT3JunkDroneSchematic']" />
+<remove xpath="//item[@name='dartTrapSchematic']" />
+<remove xpath="//item[@name='electricfencepostSchematic']" />
+<remove xpath="//item[@name='bladeTrapSchematic']" />
+
+<remove xpath="//item[(contains(@name, 'vehicle') and contains(@name, 'Chassis'))]" />
+<remove xpath="//item[(contains(@name, 'vehicle') and contains(@name, 'Handlebars'))]" />
+<remove xpath="//item[(contains(@name, 'vehicle') and contains(@name, 'Accessories'))]" />
 
 
 <!-- Replacing weapons in lootgroups to make Weaponsmith more viable-->
@@ -158,6 +188,7 @@
 	<item name="modGunTriggerGroupAutomatic"/>
 	<item name="modGunDrumMagazineExtender" loot_prob_template="low"/>
 </append>
+
 <!-- Removing sledgehammer from tool loot groups despite it being good tool for destroying things -->
 <remove xpath="//lootgroup[@name='groupToolsT1']/item[@name='meleeWpnSledgeT1IronSledgehammer']" />
 <remove xpath="//lootgroup[@name='groupToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']" />
@@ -170,6 +201,15 @@
 	<item name="resourceElectricParts" count="4" />
 	<item name="resourceScrapPolymers" count="5" />
 </append>
+
+<!-- Replacing handguns in toilets and hunting knives to make Weaponsmith more viable -->
+<remove xpath="/lootcontainers/lootgroup[@name='groupToilet02']/item[@name='gunHandgunT1Pistol']" />
+<remove xpath="//item[@name='meleeWpnBladeT1HuntingKnife']" />
+<append xpath="/lootcontainers/lootgroup[@name='groupToilet02']">
+	<item name="gunHandgunT0PipePistol" loot_prob_template="veryLow" />
+	<item name="resourceCoal" count="2" />
+</append>
+
 
 <!-- **************************** -->
 <!-- Exchanging quest rewards to keep professions more viable -->

@@ -14,7 +14,7 @@
 
 <!-- Adding small chance of dysentery to canned foods -->
 <append xpath="//item[@name='foodCanBeef']/effect_group[@name='Food Tier 0']">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="2"/><display_value name="dDysenteryRisk" value=".02"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="5"/><display_value name="dDysenteryRisk" value=".05"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
 				<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
@@ -42,6 +42,7 @@
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkSalvageOperations'))]" name="value">perkRunnerITAV</setattribute>
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkGreaseMonkey'))]" name="value">perkRunnerITAV</setattribute>
 <append xpath="//item[@name='resourceLockPick']/property[@name='UnlockedBy']/@value">,perkRunnerITAV</append>
+<append xpath="//item[@name='meleeToolSalvageT2Ratchet']/property[@name='UnlockedBy']/@value">,perkRunnerITAV</append>
 
 <!-- Making items tagged by the correct ITAV perk -->
 <setattribute xpath="//passive_effect[@tags='perkTurrets']" name="tags">perkRoboticsITAV</setattribute>
@@ -86,10 +87,12 @@
 <setattribute xpath="items/item[@name='armorLeatherMaster']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
 <setattribute xpath="items/item[@name='armorSteelMaster']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
 <setattribute xpath="items/item[@name='armorMilitaryMaster']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
+<setattribute xpath="items/item[starts-with(@name, 'gun') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Bot')) and not(contains(@name, 'Pipe')) and not(contains(@name, 'Primitive')) and not(contains(@name, 'Parts'))]/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
+<setattribute xpath="items/item[contains(@name, 'Wpn') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Parts')) and not(contains(@name, 'T0'))]/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
 
 <!-- WEAPONSMITH -->
-<setattribute xpath="items/item[starts-with(@name, 'gun') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Bot')) and not(contains(@name, 'Pipe')) and not(contains(@name, 'Primitive')) and not(contains(@name, 'Parts'))]/property[@name='UnlockedBy']" name="value">perkWeaponsmithITAV</setattribute>
-<setattribute xpath="items/item[contains(@name, 'Wpn') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Parts')) and not(contains(@name, 'T0'))]/property[@name='UnlockedBy']" name="value">perkWeaponsmithITAV</setattribute>
+<!-- <setattribute xpath="items/item[starts-with(@name, 'gun') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Bot')) and not(contains(@name, 'Pipe')) and not(contains(@name, 'Primitive')) and not(contains(@name, 'Parts'))]/property[@name='UnlockedBy']" name="value">perkWeaponsmithITAV</setattribute>
+<setattribute xpath="items/item[contains(@name, 'Wpn') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Parts')) and not(contains(@name, 'T0'))]/property[@name='UnlockedBy']" name="value">perkWeaponsmithITAV</setattribute> -->
 
 
 
@@ -259,7 +262,7 @@
 
 
 <!-- WEAPONSMITH -->
-<item name="bookWeaponsmithITAV">
+<!-- <item name="bookWeaponsmithITAV">
     <property name="Extends" value="bookMasterITAV"/>
     <property name="CustomIcon" value="schematicMaster"/>
 	<property name="CustomIconTint" value="42d4f4" />
@@ -277,7 +280,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntWeaponsmithITAVTooltip"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
     </effect_group>
-</item>
+</item> -->
 
 <!-- FARMER -->
 <item name="bookFarmerITAV">

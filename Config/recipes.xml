@@ -115,8 +115,18 @@
 	<append xpath="/recipes/recipe[contains(@tags, 'perkMiner69r')]/@tags">,perkMinerITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkMasterChef')]/@tags">,perkCookITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkLightArmor') or contains(@tags, 'perkHeavyArmor')]/@tags">,perkArmorerITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkMachineGunner')]/@tags">,perkWeaponsmithITAV</append>
-	<!-- <append xpath="/recipes/recipe[contains(@tags, 'perkAutoWeaponsMachineGuns')]/@tags">,perkWeaponsmithITAV</append> -->
+	<append xpath="/recipes/recipe[contains(@tags, 'perkMachineGunner')]/@tags">,perkArmorerITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkBoomstick')]/@tags">,perkArmorerITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkDeadEye')]/@tags">,perkArmorerITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkGunslinger')]/@tags">,perkArmorerITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkArchery')]/@tags">,perkArmorerITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkJavelinMaster')]/@tags">,perkArmorerITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkPummelPete')]/@tags">,perkArmorerITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkSkullCrusher')]/@tags">,perkArmorerITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkBrawler')]/@tags">,perkArmorerITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkDeepCuts')]/@tags">,perkArmorerITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkElectrocutioner')]/@tags">,perkArmorerITAV</append>
+	<!--<append xpath="/recipes/recipe[contains(@tags, 'perkMachineGunner')]/@tags">,perkWeaponsmithITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkBoomstick')]/@tags">,perkWeaponsmithITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkDeadEye')]/@tags">,perkWeaponsmithITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkGunslinger')]/@tags">,perkWeaponsmithITAV</append>
@@ -126,7 +136,7 @@
 	<append xpath="/recipes/recipe[contains(@tags, 'perkSkullCrusher')]/@tags">,perkWeaponsmithITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkBrawler')]/@tags">,perkWeaponsmithITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkDeepCuts')]/@tags">,perkWeaponsmithITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkElectrocutioner')]/@tags">,perkWeaponsmithITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkElectrocutioner')]/@tags">,perkWeaponsmithITAV</append> -->
 	<append xpath="/recipes/recipe[@name='resourceConcreteMix']/@tags">,learnable,perkChemistITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkTurrets')]/@tags">,perkRoboticsITAV</append>
 	<append xpath="/recipes/recipe[@name='generatorbank']/@tags">,perkRoboticsITAV</append>
