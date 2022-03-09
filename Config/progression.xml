@@ -122,6 +122,7 @@
 			<effect_description level="5" desc_key="perkSmelterITAVRank5Desc" long_desc_key="perkSmelterITAVRank5LongDesc"/>
 		</effect_group>
 		
+		
 
 	</perk>
 
@@ -240,14 +241,19 @@
             <requirement name="EntityTagCompare" target="other" tags="animal"/>
         </effect_group>
 		
-		<!-- <effect_group>
-			<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" level="1" buff="buffDrugSteroids" >
-				<requirement name="EntityTagCompare" target="other" tags="entityITAV"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfDamagedOther" action="$buffDrugSteroidsDuration" level="1" operation="set" value="1803" >
-				<requirement name="EntityTagCompare" target="other" tags="entityITAV"/>
-			</triggered_effect>
-		</effect_group> -->
+		<!-- Adding Megacrush buff on damaging zombie bears -->
+         <effect_group>
+            <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" level="1" buff="buffMegaCrush" >
+                <requirement name="EntityTagCompare" target="other" tags="entityITAV"/>
+            </triggered_effect>
+            <triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="add" value="10">
+                <requirement name="EntityTagCompare" target="other" tags="entityITAV"/>
+            </triggered_effect>
+            <triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="set" value="30">
+                <requirement name="CVarCompare" cvar="$buffMegaCrushDuration" operation="GT" value="30"/>
+                <requirement name="EntityTagCompare" target="other" tags="entityITAV"/>
+            </triggered_effect>
+        </effect_group>
 			
     </perk>
 

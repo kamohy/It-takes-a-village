@@ -20,4 +20,7 @@
     <drop event="Harvest" name="foodEgg" tag="butcherHarvest" count="1"/>
 </append>
 
+<!-- Tagging zombie bear so it can proc buff for hunter -->
+<append xpath="//entity_class[@name='animalZombieBear']/property[@name='Tags']/@value">,entityITAV</append>
+
 </configs>
