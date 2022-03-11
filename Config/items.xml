@@ -1,5 +1,36 @@
 <configs>
 
+<!-- Starting note with info on professions -->
+<append xpath="/items">
+	<item name="note01ITAV">
+		<property name="Extends" value="blankNoteMaster"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="DescriptionKey" value="noteITAV01Desc"/>
+		<property name="CustomIcon" value="resourcePaper"/>
+		<property name="CustomIconTint" value="24DA6B" />
+	</item>
+</append>
+
+<append xpath="/items">
+	<item name="note02ITAV">
+		<property name="Extends" value="blankNoteMaster"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="DescriptionKey" value="noteITAV02Desc"/>
+		<property name="CustomIcon" value="resourcePaper"/>
+		<property name="CustomIconTint" value="E4E130" />
+	</item>
+</append>
+
+<append xpath="/items">
+	<item name="note03ITAV">
+		<property name="Extends" value="blankNoteMaster"/>
+		<property name="CreativeMode" value="None"/>
+		<property name="DescriptionKey" value="noteITAV03Desc"/>
+		<property name="CustomIcon" value="resourcePaper"/>
+		<property name="CustomIconTint" value="E46730" />
+	</item>
+</append>
+
 <!-- Removing GyroCopter -->
 <remove xpath="//item[@name='questRewardGyrocopterPartsBundle']" />
 <remove xpath="//item[(contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter'))]"/>
@@ -129,6 +160,22 @@
 		<property name="QuestGiven" value="quest_MySecondProfession" />
 		<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="Equals" value="1" />
 		<requirement name="CVarCompare" cvar="numberOfProfessionsAllowed" operation="Equals" value="2" />
+	</property>
+</item>
+
+<!-- My NEXT Profession -->
+<item name="qb_MyNextProfessionITAV">
+	<property name="Extends" value="questMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="bundleBooks"/>
+		<property name="CustomIconTint" value="ffffff" />
+	<property name="DescriptionKey" value="qb_MyNextProfessionITAV_desc"/>
+	<property name="EconomicValue" value="400"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false" />
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_MyNextProfession" />
+		<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="@numberOfProfessionsAllowed" />
 	</property>
 </item>
 
@@ -366,7 +413,33 @@
     </effect_group>
 </item>
 
+<!-- Baby Rocket boots -->
+<item name="rocketBootsITAV">
+    <property name="Extends" value="apparelGothBoots" param1="DescriptionKey"/>
+    <property name="CreativeMode" value="Player"/>
+    <property name="CustomIcon" value="apparelGothBoots"/>
+    <property name="CustomIconTint" value="2,220,255"/>
+    <property name="ItemTypeIcon" value="computer"/>
+    <property name="Stacknumber" value="1"/>
+    <property name="Tags" value="lowerbody,feet,clothing,admin,noMods"/>
+    <property name="UMA.Overlay0Tint" value="255,0,255"/>
+    <property name="ShowQuality" value="true"/>
+    <property name="Group" value="Special Items"/>
+    <effect_group tiered="false">
+        <passive_effect name="ModSlots" operation="base_set" value="0"/>
+        <passive_effect name="DegradationMax" operation="base_set" value="9999" tags="admin"/>
+        <passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="admin"/>
 
+        <passive_effect name="JumpStrength" operation="perc_add" value="1"/>
+        <passive_effect name="StaminaLoss" operation="perc_add" value="-.75" tags="jumping"/>
+
+        <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffDontBreakMyLeg"/>
+        <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffDontBreakMyLeg"/>
+
+        <triggered_effect trigger="onSelfJump" action="PlaySound" sound="m136_fire" play_in_head="false"/>
+        <triggered_effect trigger="onSelfJump" action="AddBuff" buff="buffJumpJetsAirborne"/>
+    </effect_group>
+</item>
 
 
 

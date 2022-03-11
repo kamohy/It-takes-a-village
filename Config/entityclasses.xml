@@ -1,9 +1,10 @@
 <configs>
 
 <!-- Changing what items a player starts with (first spawns in with) -->
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,resourceScrapIron,resourceScrapPolymers,resourceBrokenGlass,resourceDuctTape</set>
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,resourceScrapIron,resourceScrapPolymers,resourceBrokenGlass,resourceDuctTape</set>
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,resourceScrapIron,resourceScrapPolymers,resourceBrokenGlass,resourceDuctTape</set> 
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,note01ITAV,note02ITAV,note03ITAV</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,note01ITAV,note02ITAV,note03ITAV</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,note01ITAV,note02ITAV,note03ITAV</set> 
+ 
 	
 	
 <append xpath="/entity_classes/entity_class[@name='playerMale']">
@@ -12,6 +13,7 @@
 			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="1"/>
 	</effect_group>
 </append>
+
 
 
 <remove xpath="//entity_class[@name='vehicleGyrocopter']"/>

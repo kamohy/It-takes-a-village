@@ -1,17 +1,59 @@
 <configs>
-<remove xpath="//quest[@id='quest_BasicSurvival8']/reward" />
+
+
+<remove xpath="/quests/quest[@id='quest_BasicSurvival1']/action[@type='ShowTip']"/>
+
+<remove xpath="//quest[@id='quest_BasicSurvival8']/reward[@id='quest_whiteRiverCitizen1']" />
 <append xpath="//quest[@id='quest_BasicSurvival8']">
-	<reward type="Exp" value="50"/>
 	<reward type="Quest" id="quest_PlayerStore"/>
 </append>
 
 <setattribute xpath="//quest[@id='quest_whiteRiverCitizen1']/action[@type='ShowTip']" name="value">quest_myFirstProfession_description</setattribute>
 
+<!-- Removing/replacing quest rewards to make professions more viable -->
 <remove xpath="//reward[@id='groupQuestBicycle']" />
 <remove xpath="//reward[@id='groupQuestMinibikeParts']" />
 <remove xpath="//reward[@id='groupQuestMotorcycleParts']" />
 <remove xpath="//reward[@id='groupQuest4x4Parts']"/>
 <remove xpath="//reward[@id='groupQuestGyrocopterParts']" />
+<remove xpath="//quest[@id='quest_tier1complete']/reward[@type='LootItem' and contains(@id, 'groupQuestT1Books')]" />
+<remove xpath="//quest[@id='quest_tier1complete']/reward[@type='LootItem' and contains(@id, 'groupQuestT1Traps')]" />
+<remove xpath="//quest[@id='quest_tier1complete']/reward[@type='LootItem' and contains(@id, 'groupQuestT2Food')]" />
+<remove xpath="//quest[@id='quest_tier2complete']/reward[@type='LootItem' and contains(@id, 'groupQuestT1Firearms')]" />
+<remove xpath="//quest[@id='quest_tier2complete']/reward[@type='LootItem' and contains(@id, 'groupQuestT2Traps')]" />
+<remove xpath="//quest[@id='quest_tier2complete']/reward[@type='LootItem' and contains(@id, 'groupQuestT3Food')]" />
+<remove xpath="//quest[@id='quest_tier3complete']/reward[@type='LootItem']" />
+<append xpath="//quest[@id='quest_tier3complete']">
+		<reward type="LootItem" id="groupQuestcasinoCoinT3" ischosen="true" value="4" />
+		<reward type="LootItem" id="groupQuestNightVisionGoggles" ischosen="true" value="4" />
+		<reward type="LootItem" id="groupQuestFarmPlotsT3" ischosen="true" value="4" />
+		<reward type="LootItem" id="groupQuestT3MeleeMods" ischosen="true" value="4" />
+		<reward type="LootItem" id="groupQuestT3RangedMods" ischosen="true" value="4" />
+</append>
+
+<remove xpath="//quest[@id='quest_tier4complete']/reward[@type='LootItem']" />
+<append xpath="//quest[@id='quest_tier4complete']">
+		<reward type="LootItem" id="groupQuestcasinoCoinT4" ischosen="true" value="5" />
+		<reward type="LootItem" id="groupQuestConcreteShapes" ischosen="true" value="5" />
+		<reward type="LootItem" id="groupQuestT3MeleeMods" ischosen="true" value="5" />
+		<reward type="LootItem" id="groupQuestT3RangedMods" ischosen="true" value="5" />
+</append>
+
+<remove xpath="//quest[@id='quest_tier5complete']/reward[@type='LootItem']" />
+<append xpath="//quest[@id='quest_tier5complete']">
+		<reward type="LootItem" id="groupQuestcasinoCoinT5" ischosen="true" value="6" />
+		<reward type="LootItem" id="groupQuestSteelShapes" ischosen="true" value="6" />
+		<reward type="LootItem" id="groupQuestT3MeleeMods" ischosen="true" value="6" />
+		<reward type="LootItem" id="groupQuestT3RangedMods" ischosen="true" value="6" />
+		<reward type="LootItem" id="groupQuestAmmoCraftingBundle" ischosen="true" value="6" />
+</append>
+
+
+
+ <!-- Remove/replace treasure map rewards? -->
+
+
+
 
 <append xpath="/quests">
 
@@ -26,14 +68,20 @@
 		<property name="offer_key" value="quest_BasicSurvival_offer"/>
 		<property name="shareable" value="false"/>
 		
-		<objective type="FetchKeep" id="resourceBrokenGlass" value="1" phase="1" />
-		<objective type="FetchKeep" id="resourceScrapIron" value="1" phase="1" />
-		<objective type="FetchKeep" id="resourceDuctTape" value="1" phase="1" />
-		<objective type="FetchKeep" id="resourceRockSmall" value="1" phase="1" />
-		<objective type="FetchKeep" id="resourceScrapPolymers" value="1" phase="1" />
-
+		<objective type="Goto" id="trader" value="5" phase="1">
+			<property name="biome_filter_type" value="OnlyBiome" />
+			<property name="biome_filter" value="pine_forest" />
+			<property name="nav_object" value="go_to_trader" />
+		</objective>
+		
+		<!--<objective type="FetchKeep" id="resourceBrokenGlass" value="1" phase="2" />
+		<objective type="FetchKeep" id="resourceScrapIron" value="1" phase="2" />
+		<objective type="FetchKeep" id="resourceDuctTape" value="1" phase="2" />
+		<objective type="FetchKeep" id="resourceRockSmall" value="1" phase="2" />
+		<objective type="FetchKeep" id="resourceScrapPolymers" value="1" phase="2" /> -->
+		
 		<objective type="Craft">
-			<property name="phase" value="2"/>
+			<property name="phase" value="1"/>
 			<property name="item" value="cntVendingMachineITAV"/>
 			<property name="count" value="1"/>
 		</objective>
@@ -43,7 +91,6 @@
 		<reward type="Quest" id="quest_MyFirstProfession">
 			<property name="chainquest" value="false"/>
 		</reward>
-		<reward type="SkillPoints" value="4" chainreward="true"/>
 	</quest>
 	
 	
@@ -71,19 +118,13 @@
 			<property name="delay" value="2"/>
 		</action>
 		
-		<objective type="Goto" id="trader" value="5" phase="2">
-			<property name="biome_filter_type" value="OnlyBiome" />
-			<property name="biome_filter" value="pine_forest" />
-			<property name="nav_object" value="go_to_trader" />
-		</objective>
-
 		<objective type="InteractWithNPC">
-			<property name="phase" value="2"/>
+			<property name="phase" value="1"/>
 			<property name="nav_object" value="return_to_trader" />
 			<property name="use_closest" value="true" />
 		</objective>
+		
 		<reward type="Item" id="casinoCoin" value="1000"/>
-
 		<reward type="Item" id="bookSmelterITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookMinerITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookHunterITAV" ischosen="true" isfixed="true" value="1"/>
@@ -94,6 +135,9 @@
 		<reward type="Item" id="bookChemistITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookRoboticsITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookRunnerITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Quest" id="quest_ProfCont">
+			<property name="chainquest" value="false"/>
+		</reward>
 	</quest>
 	
 	<!-- My SECOND Profession - Get offer explaining Trade Skills, talk to trader who rewards Trade Profession books -->
@@ -113,11 +157,8 @@
 		<property name="shareable" value="false"/>
 		<property name="completiontype" value="TurnIn" />
 		<property name="completion_key" value="quest_MySecondProfession_completion" />
-		<!-- <property name="reward_choices_count" value="5" /> idk what this does -->
+		<!-- <property name="reward_choices_count" value="12" />  -->
 
-		<!-- <action type="ShowTip" value="quest_myFirstProfession_description">
-			<property name="delay" value="1"/>
-		</action> -->
 		
 		<objective type="ReturnToNPC">
 			<property name="phase" value="2"/>
@@ -129,17 +170,76 @@
 			<property name="nav_object" value="return_to_trader" />
 			<property name="use_closest" value="true" />
 		</objective>
+		
+		
+	</quest>
+	
+	<!-- My NEXT Profession Quest -->
+	<quest id="quest_MyNextProfession">
+		<property name="name_key" value="quest_MyNextProfession_subtitle"/>
+		<property name="subtitle_key" value="quest_MyNextProfession_subtitle"/>
+		<property name="description_key" value="quest_MyNextProfession_description"/>
+		<property name="offer_key" value="quest_MyNextProfession_offer"/>
+		<property name="statement_key" value="quest_MyNextProfession_statement" />
+		<property name="response_key" value="quest_MyNextProfession_response" />
+		<property name="return_to_quest_giver" value="true" />
+		<property name="icon" value="ui_game_symbol_map_trader"/>
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="repeatable" value="false" />
+		<property name="shareable" value="false"/>
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_MyNextProfession_completion" />
+		<property name="reward_choices_count" value="12" /> 
+		
+		<objective type="InteractWithNPC">
+			<property name="phase" value="1"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
 
 		<reward type="Item" id="bookSmelterITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookMinerITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookHunterITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookCookITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookArmorerITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookWeaponsmithITAV" ischosen="true" isfixed="true" value="1"/>
+		<!-- <reward type="Item" id="bookWeaponsmithITAV" ischosen="true" isfixed="true" value="1"/> -->
 		<reward type="Item" id="bookFarmerITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookChemistITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookRoboticsITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookRunnerITAV" ischosen="true" isfixed="true" value="1"/>
+	</quest>
+	
+	
+<!-- Follow-up quest to First Profession -->
+		<quest id="quest_ProfCont">
+		<property name="group_name_key" value="profession_startup"/>
+		<property name="name" value="Setup your Store"/>
+		<property name="subtitle" value="Setup your Store"/>
+		<property name="description" value="You need a store to sell your goods to other survivors."/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="Offer???"/>
+		<property name="shareable" value="false"/>
+		
+		<action type="ShowTip" value="quest_ProfCont_description">
+			<property name="delay" value="15"/>
+		</action>
+			
+		<!-- <objective type="FetchKeep" id="resourceClayLump" value="60" phase="1" />
+		<objective type="FetchKeep" id="resourceScrapIron" value="120" phase="1" /> -->
+		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<!-- <objective type="Craft">
+			<property name="phase" value="1"/>
+			<property name="item" value="playerSignWood1x1"/>
+			<property name="count" value="1"/>
+		</objective>-->
+				
+		<reward type="Exp" value="500"/>
 		
 	</quest>
+	
 	
 
 </append>

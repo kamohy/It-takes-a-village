@@ -4,11 +4,11 @@
 		
 		<!-- Player Owned Store  -->
 		<recipe name="cntVendingMachineITAV" count="1" craft_time="3">
-			<ingredient name="resourceBrokenGlass" count="1" />
-			<ingredient name="resourceScrapIron" count="1" />
+			<ingredient name="resourceBrokenGlass" count="5" />
 			<ingredient name="resourceDuctTape" count="1" />
-			<ingredient name="resourceRockSmall" count="1" />
-			<ingredient name="resourceScrapPolymers" count="1" />
+			<ingredient name="resourceRockSmall" count="2" />
+			<ingredient name="resourceScrapPolymers" count="2" />
+			<ingredient name="drinkCanEmpty" count="1" />
 		</recipe>
 		
 		<!-- Baseball cap mod -->
@@ -89,7 +89,10 @@
 	</append>
 	
 	<!-- Tweaking recipes -->
-	<setattribute xpath="//recipe[@name='foodBaconAndEggs']/ingredient[@name='foodEgg']" name="count">1</setattribute>
+	<setattribute xpath="//recipe[@name='foodBaconAndEggs']/ingredient[@name='foodEgg']" name="count">1</setattribute> 
+	<remove xpath="//recipe[@name='resourceLockPick']/ingredient[@name='resourceMechanicalParts']" />
+	<remove xpath="//recipe[@name='resourceLockPickBundle']/ingredient[@name='resourceMechanicalParts']" />
+	
 	
 	<!-- Removing GyroCopter -->
 	<remove xpath="//recipe[contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter')]" />

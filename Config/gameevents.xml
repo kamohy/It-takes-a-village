@@ -1,5 +1,6 @@
 <configs>
 
+
 <setattribute xpath="/gameevents/action_sequence[@name='game_first_spawn']/action[@class='AddJournalTip']/property[@name='tip_name']" name="value">tutorialTipITAV</setattribute>
 
 </configs>

@@ -26,7 +26,8 @@
 	<remove xpath="//trader_info[(@id='1') or (@id='6') or (@id='2') or (@id='7') or (@id='8')]/tier_items/item" /> 
 	  
 	<append xpath="//trader_items[@count='all']">
-		<item name="qb_MySecondProfessionITAV" count="10" />
+		<!-- <item name="qb_MySecondProfessionITAV" count="10" /> -->
+		<item name="qb_MyNextProfessionITAV" count="10" />
 	</append>
 	
 

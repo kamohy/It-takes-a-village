@@ -91,5 +91,7 @@
 <setattribute xpath="//buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect/requirement[@progression_name='perkPhysician']" name="progression_name">attITAV</setattribute>
 
 
+<!-- Setting buff strength on Baby Rocket boots -->
+<setattribute xpath="//buff[@name='buffJumpJetsAirborne']/effect_group/passive_effect" name="value">0.85</setattribute> <!-- 2.35 -->
 
 </configs>

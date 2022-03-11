@@ -8,13 +8,13 @@
 
 <!-- Removing some drink/food loots, and replacing loot group food schematics with pieces of paper to make Cook more viable-->
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item" />
-<append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']">
+<!-- <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']">
 	<item name="resourcePaper" />
-</append>
+</append> -->
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']/item" />
-<append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']">
+<!-- <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']">
 	<item name="resourcePaper" />
-</append>
+</append> -->
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']">
 	<item name="resourcePaper" />
@@ -34,8 +34,15 @@
     <item name="foodCanTuna"/>
 </append>
 
+<remove xpath="//item[contains(@name, 'medical') and not(contains(@name, 'BloodBag')) and not(contains(@name, 'AloeCream'))]" /> 
+<remove xpath="//item[@name='drugHerbalAntibiotics']" />
+<remove xpath="//item[@name='drugSteroids']" />
+<remove xpath="//item[@name='drugAntibiotics']" />
+<remove xpath="//item[@name='drugFortBites']" />
+<remove xpath="//item[@name='drugRecog']" />
 
-<!-- Replacing armor in lootgroups to make Armorer more viable -->
+
+<!-- Replacing/removing armor/weapons/turrets in lootgroups -->
 <remove xpath="/lootcontainers/lootgroup[@name='groupArmorT1']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='groupArmorT1']">
 	<item name="modArmorHelmetLight"/>
@@ -45,6 +52,7 @@
 	<item name="modArmorStoragePocket"/>
 	<item name="modArmorImprovedFittings"/>
 </append>
+
 <remove xpath="/lootcontainers/lootgroup[@name='groupArmorT2']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='groupArmorT2']">
 	<item name="modArmorBandolier"/>
@@ -53,10 +61,76 @@
 	<item name="modArmorAdvancedMuffledConnectors"/>
 </append>
 
+<remove xpath="//item[@name='armorMilitarySetParts']" />
+<remove xpath="//item[@group='groupArmorScaledTPlus']" />
+<remove xpath="//item[@group='groupWeaponsAllScaledTPlus']" />
+<!-- <remove xpath="//item[@group='groupWeaponsLowHighMed']" />
+<remove xpath="//item[@group='groupWeaponsHighMedLow']" />
+<remove xpath="//item[@group='groupWeaponsMedMedLow']" />
+<remove xpath="//item[@group='groupWeaponsMedMedMed']" />
+<remove xpath="//item[@group='groupWeaponsMedMedHigh']" /> -->
+
+<append xpath="/lootcontainers/lootgroup[@name='groupSmallWeaponBag']">
+	<item group="weaponParts" loot_prob_template="med" force_prob="true"/>
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupLargeWeaponBag']">
+	<item group="weaponParts" loot_prob_template="med" force_prob="true"/>
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupGunRack']">
+	<item group="weaponParts" loot_prob_template="med" force_prob="true"/>
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupAmmoRackDisplay']">
+	<item group="weaponParts" loot_prob_template="med" force_prob="true"/>
+</append>
+<append xpath="/lootcontainers/lootgroup[@name='groupGunSafeSecure']">
+	<item group="weaponParts" loot_prob_template="med" force_prob="true"/>
+</append>
+
+<remove xpath="/lootcontainers/lootgroup[@name='groupPurse03']/item[@group='groupWeaponsT1_Gunslinger']" />
+<append xpath="/lootcontainers/lootgroup[@name='groupPurse03']">
+	<item name="resourceSewingKit" loot_prob_template="veryLow" />
+</append>
+
+<remove xpath="/lootcontainers/lootgroup[@name='groupToilet02']/item[@name='gunHandgunT1Pistol']" />
+<remove xpath="//item[@name='meleeWpnBladeT1HuntingKnife']" />
+<append xpath="/lootcontainers/lootgroup[@name='groupToilet02']">
+	<item name="gunHandgunT0PipePistol" loot_prob_template="veryLow" />
+	<item name="resourceCoal" count="2" />
+</append>
+
+<remove xpath="/lootcontainers/lootgroup[@name='groupDrone']/item[@name='gunBotT3JunkDrone']" />
+<remove xpath="/lootcontainers/lootgroup[@name='groupRobotics']/item[@name='gunBotT1JunkSledge']" />
+<remove xpath="/lootcontainers/lootgroup[@name='groupRobotics']/item[@name='gunBotT2JunkTurret']" />
+<append xpath="/lootcontainers/lootgroup[@name='groupRobotics']">
+	<item name="gunBotRoboticsParts" loot_prob_template="med" />
+</append> 
+<append xpath="/lootcontainers/lootgroup[@name='groupMoPower02']">
+	<item name="resourceElectricParts" count="1,2" loot_prob_template="med" />
+	<item name="resourceMechanicalParts" count="1,2" loot_prob_template="med" />
+</append>
+
+
+
+
+
+<!-- Removing sledgehammer from tool loot groups despite it being good tool for destroying things -->
+<remove xpath="//lootgroup[@name='groupToolsT1']/item[@name='meleeWpnSledgeT1IronSledgehammer']" />
+<remove xpath="//lootgroup[@name='groupToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']" />
+<remove xpath="//lootgroup[@name='groupQuestToolsT1']/item[@name='meleeWpnSledgeT1IronSledgehammer']" />
+<remove xpath="//lootgroup[@name='groupQuestToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']" />
+
+<remove xpath="/lootcontainers/lootgroup[@name='groupStunBaton']/item[@name='meleeWpnBatonT2StunBaton']" />
+<remove xpath="/lootcontainers/lootgroup[@name='groupStunBaton']/item[@name='meleeWpnBatonT2StunBatonSchematic']" />
+<append xpath="/lootcontainers/lootgroup[@name='groupStunBaton']">
+	<item name="resourceElectricParts" count="4" />
+	<item name="resourceScrapPolymers" count="5" />
+</append>
+
+
 
 <!-- Removing schematics in lootgroups to make Smelter, Miner, Armorer, Weaponsmith, Chemist, Robotics and Runner/Mechanic more viable-->
-
 <remove xpath="//item[@name='resourceMilitaryFiberSchematic']" />
+<remove xpath="//item[@name='poweredDoorsSchematic']" /> 
 <remove xpath="//item[@name='generatorbankSchematic']" />
 <remove xpath="//item[@name='electrictimerrelaySchematic']" />
 <remove xpath="//item[@name='pressureplateSchematic']" />
@@ -115,7 +189,6 @@
 	<item name="drugFortBites" />
 </append>
 <remove xpath="//item[@name='ammoGasCanSchematic']" />
-<remove xpath="//item[(contains(@name, 'medical') and contains(@name, 'Schematic'))]"/>
 <remove xpath="//item[(contains(@name, 'drug') and contains(@name, 'Schematic'))]"/>
 <remove xpath="//item[@name='resourceOilSchematic']" />
 
@@ -130,7 +203,7 @@
 <remove xpath="//item[(contains(@name, 'vehicle') and contains(@name, 'Accessories'))]" />
 
 
-<!-- Replacing weapons in lootgroups to make Weaponsmith more viable-->
+<!-- Replacing weapons in lootgroups -->
 <remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Melee']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Melee']">
 	<item name="modMeleeGraveDigger"/>
@@ -187,27 +260,6 @@
 	<item name="modGunScopeLarge"/>
 	<item name="modGunTriggerGroupAutomatic"/>
 	<item name="modGunDrumMagazineExtender" loot_prob_template="low"/>
-</append>
-
-<!-- Removing sledgehammer from tool loot groups despite it being good tool for destroying things -->
-<remove xpath="//lootgroup[@name='groupToolsT1']/item[@name='meleeWpnSledgeT1IronSledgehammer']" />
-<remove xpath="//lootgroup[@name='groupToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']" />
-<remove xpath="//lootgroup[@name='groupQuestToolsT1']/item[@name='meleeWpnSledgeT1IronSledgehammer']" />
-<remove xpath="//lootgroup[@name='groupQuestToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']" />
-
-<remove xpath="/lootcontainers/lootgroup[@name='groupStunBaton']/item[@name='meleeWpnBatonT2StunBaton']" />
-<remove xpath="/lootcontainers/lootgroup[@name='groupStunBaton']/item[@name='meleeWpnBatonT2StunBatonSchematic']" />
-<append xpath="/lootcontainers/lootgroup[@name='groupStunBaton']">
-	<item name="resourceElectricParts" count="4" />
-	<item name="resourceScrapPolymers" count="5" />
-</append>
-
-<!-- Replacing handguns in toilets and hunting knives to make Weaponsmith more viable -->
-<remove xpath="/lootcontainers/lootgroup[@name='groupToilet02']/item[@name='gunHandgunT1Pistol']" />
-<remove xpath="//item[@name='meleeWpnBladeT1HuntingKnife']" />
-<append xpath="/lootcontainers/lootgroup[@name='groupToilet02']">
-	<item name="gunHandgunT0PipePistol" loot_prob_template="veryLow" />
-	<item name="resourceCoal" count="2" />
 </append>
 
 
@@ -277,6 +329,38 @@
 	<item name="modGunDrumMagazineExtender" loot_prob_template="low"/>
 </append>
 
+<remove xpath="//lootgroup[@name='groupQuestArmorT1']/item" />
+<append xpath="//lootgroup[@name='groupQuestArmorT1']">
+    <item name="modArmorHelmetLight"/>
+    <item name="modArmorInsulatedLiner"/>
+    <item name="modArmorCoolingMesh"/>
+    <item name="modArmorPlatingBasic"/>
+    <item name="modArmorStoragePocket"/>
+    <item name="modArmorImprovedFittings"/>
+</append>
+
+<remove xpath="//lootgroup[@name='groupQuestArmorT2']/item" />
+<append xpath="//lootgroup[@name='groupQuestArmorT2']">
+    <item name="modArmorBandolier"/>
+    <item name="modArmorDoubleStoragePocket"/>
+    <item name="modArmorTripleStoragePocket"/>
+    <item name="modArmorAdvancedMuffledConnectors"/>
+</append> 
+
+<remove xpath="//lootgroup[@name='groupQuestMedical']/item" />
+<append xpath="//lootgroup[@name='groupQuestMedical']">
+    <item name="drugVitamins"/>
+    <item name="drugPainkillers"/>
+    <item name="toolBeaker"/>
+</append> 
+
+<remove xpath="//lootgroup[@name='groupQuestSchematics']/item" />
+<append xpath="//lootgroup[@name='groupQuestSchematics']">
+	<item group="perkBooks" prob="4" />
+	<item group="schematicsModsAndGeneralT0" loot_prob_template="QuestT1Prob" />
+	<item group="schematicsModsAndGeneralT1" loot_prob_template="QuestT2Prob" />
+	<item group="schematicsModsAndGeneralT2" loot_prob_template="QuestT3Prob" />
+</append>
 
 
 	
@@ -286,10 +370,10 @@
 <!-- **************************** -->
 
 <!-- Removing/Replacing GyroCopter -->
-<setattribute xpath="//lootgroup[@name='gyroCopterParts']/item[@name='vehicleGyroCopterChassis']" name="name">vehicle4x4TruckChassis</setattribute>
+<!-- <setattribute xpath="//lootgroup[@name='gyroCopterParts']/item[@name='vehicleGyroCopterChassis']" name="name">vehicle4x4TruckChassis</setattribute>
 <setattribute xpath="//lootgroup[@name='gyroCopterParts']/item[@name='vehicleGyroCopterAccessories']" name="name">vehicle4x4TruckAccessories</setattribute>
-<remove xpath="//lootcontainer[@name='vehicleGyrocopter']"/>
-<remove xpath="//lootgroup[@name='schematicsVehiclesT2']/item[(@name='vehicleGyroCopterChassisSchematic' or @name='vehicleGyroCopterAccessoriesSchematic')]"/>
+<remove xpath="//lootgroup[@name='schematicsVehiclesT2']/item[(@name='vehicleGyroCopterChassisSchematic' or @name='vehicleGyroCopterAccessoriesSchematic')]"/> -->
 <remove xpath="//lootgroup[@name='groupQuestGyrocopterParts']" />
+<remove xpath="//lootcontainer[@name='vehicleGyrocopter']"/>
 
 </configs>

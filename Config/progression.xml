@@ -182,7 +182,7 @@
 	</perk>
 
 	<!-- Hunter Perk -->
-	<perk name="perkHunterITAV" parent="attITAV" name_key="perkHunterITAVName" desc_key="perkHunterITAVDesc" icon="ui_game_symbol_archery">
+	<perk name="perkHunterITAV" max_level="2" parent="attITAV" name_key="perkHunterITAVName" desc_key="perkHunterITAVDesc" icon="ui_game_symbol_archery">
         <level_requirements level="1">
 			<requirement name="CVarCompare" cvar="hasLearntHunterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
 		</level_requirements>
@@ -213,26 +213,26 @@
         <!-- Adding Huntsman -->
         <effect_group>
             <!-- stone axe, knives, etc do the base_set 1 -->
-            <passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="butcherHarvest"/>
+            <passive_effect name="HarvestCount" operation="perc_add" level="1,2" value=".2,1" tags="butcherHarvest"/>
 
             <effect_description level="1" desc_key="perkTheHuntsmanRank1Desc" long_desc_key="perkHunterITAVRank1LongDesc"/>
-            <effect_description level="2" desc_key="perkTheHuntsmanRank2Desc" long_desc_key="perkTheHuntsmanRank2LongDesc"/>
+            <!-- <effect_description level="2" desc_key="perkTheHuntsmanRank2Desc" long_desc_key="perkTheHuntsmanRank2LongDesc"/>
             <effect_description level="3" desc_key="perkTheHuntsmanRank3Desc" long_desc_key="perkTheHuntsmanRank3LongDesc"/>
-            <effect_description level="4" desc_key="perkTheHuntsmanRank4Desc" long_desc_key="perkTheHuntsmanRank4LongDesc"/>
-            <effect_description level="5" desc_key="perkTheHuntsmanRank5Desc" long_desc_key="perkTheHuntsmanRank5LongDesc"/>
+            <effect_description level="4" desc_key="perkTheHuntsmanRank4Desc" long_desc_key="perkTheHuntsmanRank4LongDesc"/> -->
+            <effect_description level="2" desc_key="perkHunterITAVRank2Desc" long_desc_key="perkHunterITAVRank2LongDesc"/>
         </effect_group>
 	
 	<!-- Adding Animal tracking -->
         <effect_group>
-                <passive_effect name="TrackDistance" operation="base_set" level="0,1,5" value="0,100,100"/>
+                <passive_effect name="TrackDistance" operation="base_set" level="0,1,2" value="0,100,100"/>
             <triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffAnimalTracker">
                 <requirement name="NotHasBuff" buff="buffAnimalTrackerAcquired"/>
                 <requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="GT" value="0"/>
             </triggered_effect>
 
             <effect_description level="1" desc_key="perkAnimalTrackerRank1Desc" long_desc_key="perkAnimalTrackerRank1LongDesc"/>
-            <effect_description level="2" desc_key="perkAnimalTrackerRank2Desc" long_desc_key="perkAnimalTrackerRank2LongDesc"/>
-            <effect_description level="3" desc_key="perkAnimalTrackerRank3Desc" long_desc_key="perkAnimalTrackerRank3LongDesc"/>
+            <!-- <effect_description level="2" desc_key="perkAnimalTrackerRank2Desc" long_desc_key="perkAnimalTrackerRank2LongDesc"/> -->
+            <effect_description level="2" desc_key="perkAnimalTrackerRank3Desc" long_desc_key="perkAnimalTrackerRank3LongDesc"/>
         </effect_group>
 
         <!-- Adding Animal Damage -->
@@ -253,6 +253,13 @@
                 <requirement name="CVarCompare" cvar="$buffMegaCrushDuration" operation="GT" value="30"/>
                 <requirement name="EntityTagCompare" target="other" tags="entityITAV"/>
             </triggered_effect>
+        </effect_group>
+		
+		<!-- Opening up for reading the next quest book -->
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="add" value="1">
+				<requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="GTE" value="2" />
+			</triggered_effect>
         </effect_group>
 			
     </perk>
