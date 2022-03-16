@@ -3,4 +3,18 @@
 
 <setattribute xpath="/gameevents/action_sequence[@name='game_first_spawn']/action[@class='AddJournalTip']/property[@name='tip_name']" name="value">tutorialTipITAV</setattribute>
 
+<append xpath="/gameevents">
+	<action_sequence name="first_book_read_ITAV">
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />
+		
+		<action class="AddQuest">
+			<property name="quest" value="treasure_taylor" />
+			<property name="phase" value="1" />
+		</action>
+
+
+	</action_sequence>
+</append>
+
 </configs>

@@ -44,8 +44,8 @@
 
 
 <!-- Adding small chance of dysentery to canned foods -->
-<append xpath="//item[@name='foodCanBeef']/effect_group[@name='Food Tier 0']">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="5"/><display_value name="dDysenteryRisk" value=".05"/>
+<append xpath="//item[contains(@name, 'foodCanBeef')]/effect_group[@name='Food Tier 0']">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="2"/><display_value name="dDysenteryRisk" value=".02"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
 				<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
@@ -392,7 +392,7 @@
     </effect_group>
 </item>
 
-<!-- RUNNER -->
+<!-- MECHANIC/RUNNER -->
 <item name="bookRunnerITAV">
     <property name="Extends" value="bookMasterITAV"/>
     <property name="CustomIcon" value="schematicMaster"/>
@@ -441,6 +441,97 @@
     </effect_group>
 </item>
 
+
+<!--<item name="powerizersITAV">
+    <property name="Extends" value="armorLeatherMaster" param1="DescriptionKey"/>
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property name="DisplayType" value="armorLight"/>
+    <property name="CreativeMode" value="Player"/>
+    <property name="CustomIcon" value="apparelPlantFiberShoes"/>
+    <property name="CustomIconTint" value="90,84,72"/>
+	<property name="DescriptionKey" value="powerizersITAVDesc"/>
+    <property name="Stacknumber" value="1"/>
+    <property name="Tags" value="lowerbody,feet,clothing,noMods"/>
+    <property name="UMA.Overlay0Tint" value="90,84,72"/>
+	<property class="UMA">
+		<property name="Mesh" value="plant_fiber_shoes"/>
+		<property name="Overlay0" value="fiberCloth_shoes"/>
+		<property name="Layer" value="1"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+    <property name="ShowQuality" value="true"/>
+    <property name="Group" value="Armor,TCArmor"/>
+	<property name="UnlockedBy" value="perkRoboticsITAV"/>
+    <effect_group tiered="false">
+        <passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="500,750" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.04"/> -->
+        <!-- <passive_effect name="JumpStrength" operation="perc_add" value="1"/> --> 
+		<!--  <passive_effect name="StaminaLoss" operation="perc_add" value="-.75" tags="jumping"/>
+
+        <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffDontBreakMyLeg"/>
+        <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffDontBreakMyLeg"/>
+        <triggered_effect trigger="onSelfJump" action="AddBuff" buff="buffJumpJetsAirborne"/>
+    </effect_group>
+</item> -->
+
+
+<item name="powerizersITAV">
+	<property name="Extends" value="apparelPlantFiberMaster" param1="CustomIcon"/>
+	<property name="DescriptionKey" value="powerizersITAVDesc"/>
+	<property name="CustomIcon" value="apparelGothBoots"/>
+	<property name="CustomIconTint" value="243,252,33"/>
+	<property name="UMA.Overlay0Tint" value="243,252,33"/>
+	<property name="UnlockedBy" value="perkRunnerITAV"/>
+	<property name="Group" value="Clothing"/>
+	<property name="Tags" value="feet,clothing,canHaveCosmetic,noMods"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property class="UMA">
+		<property name="Mesh" value="goth_boots"/>
+		<property name="Overlay0" value="goth_boots"/> 
+		<property name="Layer" value="1"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="HypothermalResist" operation="base_add" value="0"/>
+		<passive_effect name="HyperthermalResist" operation="base_add" value="0"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="-.75" tags="jumping"/>
+
+        <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffDontBreakMyLeg"/>
+        <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffDontBreakMyLeg"/>
+        <triggered_effect trigger="onSelfJump" action="AddBuff" buff="buffJumpJetsAirborne"/>
+	</effect_group>
+</item>
+
+<item name="rocketBoots3ITAV">
+    <property name="Extends" value="apparelHazmatBoots" param1="DescriptionKey"/>
+    <property name="CreativeMode" value="Player"/>
+    <property name="CustomIcon" value="apparelHazmatBoots"/>
+    <property name="CustomIconTint" value="2,110,255"/>
+    <property name="ItemTypeIcon" value="computer"/>
+    <property name="Stacknumber" value="1"/>
+    <property name="Tags" value="lowerbody,feet,clothing,admin,noMods"/>
+    <property name="UMA.Overlay0Tint" value="255,0,255"/>
+    <property name="ShowQuality" value="true"/>
+    <property name="Group" value="Special Items"/>
+    <effect_group tiered="false">
+        <passive_effect name="ModSlots" operation="base_set" value="0"/>
+        <passive_effect name="DegradationMax" operation="base_set" value="9999" tags="admin"/>
+        <passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="admin"/>
+
+        <passive_effect name="JumpStrength" operation="perc_add" value="1"/>
+        <passive_effect name="StaminaLoss" operation="perc_add" value="-.75" tags="jumping"/>
+
+        <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffDontBreakMyLeg"/>
+        <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffDontBreakMyLeg"/>
+
+        <triggered_effect trigger="onSelfJump" action="PlaySound" sound="m136_fire" play_in_head="false"/>
+        <triggered_effect trigger="onSelfJump" action="AddBuff" buff="buffJumpJetsAirborne2ITAV"/>
+    </effect_group>
+</item>
 
 
 <!-- ProfPerkForgettingElixir -->

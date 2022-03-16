@@ -1,8 +1,84 @@
 <configs>
 
-	<!-- Creating block "Player Owned Store" (based on vending machine, looks like a cash register) -->
-<append xpath="/blocks">
+<!-- Attempting to reduce oreWoodHarvest harvest when player is not Miner. Must be countered by increasing the perc_add to oreWoodHarvest for Miner in progression.xml! -->
+<setattribute xpath="//block[@name='rockResource']/drop[@event='Harvest' and @name='resourceRockSmall']" name="count">7</setattribute> <!-- 22 -->
+<setattribute xpath="//block[@name='oreIronBoulder']/drop[@event='Harvest' and @name='resourceScrapIron']" name="count">34</setattribute> <!-- 105 -->
+<setattribute xpath="//block[@name='oreLeadBoulder']/drop[@event='Harvest' and @name='resourceScrapLead']" name="count">17</setattribute> <!-- 50 -->
+<setattribute xpath="//block[@name='oreCoalBoulder']/drop[@event='Harvest' and @name='resourceCoal']" name="count">17</setattribute> <!-- 50 -->
+<setattribute xpath="//block[@name='orePotassiumNitrateBoulder']/drop[@event='Harvest' and @name='resourcePotassiumNitratePowder']" name="count">17</setattribute> <!-- 50 -->
+<setattribute xpath="//block[@name='oreShaleBoulder']/drop[@event='Harvest' and @name='resourceOilShale']" name="count">17</setattribute> <!-- 50 -->
 
+<setattribute xpath="//block[@name='terrStone']/drop[@event='Harvest' and @name='resourceRockSmall']" name="count">17</setattribute> <!-- 55 -->
+<setattribute xpath="//block[@name='terrDirt']/drop[@event='Harvest' and @name='resourceClayLump']" name="count">7</setattribute> <!-- 22 -->
+<setattribute xpath="//block[@name='terrForestGround']/drop[@event='Harvest' and @name='resourceClayLump']" name="count">7</setattribute> <!-- 22 -->
+<setattribute xpath="//block[@name='terrBurntForestGround']/drop[@event='Harvest' and @name='resourceClayLump']" name="count">7</setattribute> <!-- 22 -->
+<setattribute xpath="//block[@name='terrDesertGround']/drop[@event='Harvest' and @name='resourceClayLump']" name="count">3</setattribute> <!-- 9 -->
+<setattribute xpath="//block[@name='terrDesertGround']/drop[@event='Harvest' and @name='resourceCrushedSand']" name="count">3</setattribute> <!-- 9 -->
+<setattribute xpath="//block[@name='terrSand']/drop[@event='Harvest' and @name='resourceClayLump']" name="count">1</setattribute> <!-- 2 -->
+<setattribute xpath="//block[@name='terrSand']/drop[@event='Harvest' and @name='resourceCrushedSand']" name="count">4</setattribute> <!-- 11 -->
+<setattribute xpath="//block[@name='terrSnow']/drop[@event='Harvest' and @name='resourceSnowBall']" name="count">4</setattribute> <!-- 11 -->
+<setattribute xpath="//block[@name='terrDestroyedStone']/drop[@event='Harvest' and @name='resourceCrushedSand']" name="count">1</setattribute> <!-- 4 -->
+<setattribute xpath="//block[@name='terrDestroyedStone']/drop[@event='Harvest' and @name='resourceRockSmall']" name="count">4</setattribute> <!-- 12 -->
+<setattribute xpath="//block[@name='terrGravel']/drop[@event='Harvest' and @name='resourceCrushedSand']" name="count">3</setattribute> <!-- 8 -->
+<setattribute xpath="//block[@name='terrGravel']/drop[@event='Harvest' and @name='resourceRockSmall']" name="count">3</setattribute> <!-- 9 -->
+
+<setattribute xpath="//block[@name='terrOreIron']/drop[@event='Harvest' and @name='resourceScrapIron']" name="count">34</setattribute> <!-- 105 -->
+<setattribute xpath="//block[@name='terrOreIron']/drop[@event='Harvest' and @name='resourceRockSmall']" name="count">5</setattribute> <!-- 14 -->
+<setattribute xpath="//block[@name='terrOreLead']/drop[@event='Harvest' and @name='resourceScrapLead']" name="count">17</setattribute> <!-- 50 -->
+<setattribute xpath="//block[@name='terrOreLead']/drop[@event='Harvest' and @name='resourceRockSmall']" name="count">5</setattribute> <!-- 14 -->
+<setattribute xpath="//block[@name='terrOreCoal']/drop[@event='Harvest' and @name='resourceCoal']" name="count">17</setattribute> <!-- 50 -->
+<setattribute xpath="//block[@name='terrOreCoal']/drop[@event='Harvest' and @name='resourceRockSmall']" name="count">5</setattribute> <!-- 14 -->
+<setattribute xpath="//block[@name='terrOrePotassiumNitrate']/drop[@event='Harvest' and @name='resourcePotassiumNitratePowder']" name="count">17</setattribute> <!-- 50 -->
+<setattribute xpath="//block[@name='terrOrePotassiumNitrate']/drop[@event='Harvest' and @name='resourceRockSmall']" name="count">5</setattribute> <!-- 14 -->
+<setattribute xpath="//block[@name='terrOreOilDeposit']/drop[@event='Harvest' and @name='resourceOilShale']" name="count">17</setattribute> <!-- 50 -->
+<setattribute xpath="//block[@name='terrOreOilDeposit']/drop[@event='Harvest' and @name='resourceRockSmall']" name="count">5</setattribute> <!-- 14 -->
+
+<setattribute xpath="//block[@name='treeJuniper4m']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
+<setattribute xpath="//block[@name='treeDeadTree01']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
+<setattribute xpath="//block[@name='treeDeadTree02']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
+<setattribute xpath="//block[@name='treeOakSml01']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
+<setattribute xpath="//block[@name='treeOakMed01']/drop[@event='Harvest' and @name='resourceWood']" name="count">23</setattribute> <!-- 70 -->
+<setattribute xpath="//block[@name='treeOakMed02']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
+<setattribute xpath="//block[@name='treeOakLrg01']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
+<setattribute xpath="//block[@name='treePlantedOak08m']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
+<setattribute xpath="//block[@name='treePlantedOak16m']/drop[@event='Harvest' and @name='resourceWood']" name="count">23</setattribute> <!-- 70 -->
+<setattribute xpath="//block[@name='treePlantedOak27m']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
+<setattribute xpath="//block[@name='treePlantedOak41m']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
+<setattribute xpath="//block[@name='treePlainsTree2']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
+<setattribute xpath="//block[@name='treeMountainPine12m']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
+<setattribute xpath="//block[@name='treeMountainPine19m']/drop[@event='Harvest' and @name='resourceWood']" name="count">23</setattribute> <!-- 70 -->
+<setattribute xpath="//block[@name='treeMountainPine27m']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
+<setattribute xpath="//block[@name='treeMountainPine31m']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
+<setattribute xpath="//block[@name='treeMountainPine41m']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
+<setattribute xpath="//block[@name='treeMountainPine48m']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
+<setattribute xpath="//block[@name='treeMountainPineDry21m']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
+<setattribute xpath="//block[@name='treePineBurntLrg']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
+<setattribute xpath="//block[@name='treePineBurntMed']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
+<setattribute xpath="//block[@name='treePineBurntFullMed']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
+<setattribute xpath="//block[@name='treeFirLrg01']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
+<setattribute xpath="//block[@name='treePlantedMountainPine12m']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
+<setattribute xpath="//block[@name='treePlantedMountainPine19m']/drop[@event='Harvest' and @name='resourceWood']" name="count">23</setattribute> <!-- 70 -->
+<setattribute xpath="//block[@name='treePlantedMountainPine27m']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
+<setattribute xpath="//block[@name='treePlantedMountainPine41m']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
+<setattribute xpath="//block[@name='treeWinterEverGreen']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
+<setattribute xpath="//block[@name='treeWinterPine13m']/drop[@event='Harvest' and @name='resourceWood']" name="count">23</setattribute> <!-- 70 -->
+<setattribute xpath="//block[@name='treeWinterPine19m']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
+<setattribute xpath="//block[@name='treeWinterPine28m']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
+<setattribute xpath="//block[@name='treePlantedWinterPine6m']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
+<setattribute xpath="//block[@name='treePlantedWinterPine13m']/drop[@event='Harvest' and @name='resourceWood']" name="count">23</setattribute> <!-- 70 -->
+<setattribute xpath="//block[@name='treePlantedWinterPine19m']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
+<setattribute xpath="//block[@name='treePlantedWinterPine28m']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
+
+<setattribute xpath="//block[@name='treeStump']/drop[@event='Harvest' and @name='resourceWood']" name="count">6,10</setattribute> <!-- 20,30 -->
+<setattribute xpath="//block[@name='treeStumpPOI']/drop[@event='Harvest' and @name='resourceWood']" name="count">6,10</setattribute> <!-- 20,30 -->
+<setattribute xpath="//block[@name='treeBurntMaple01']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
+<setattribute xpath="//block[@name='treeBurntMaple02']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
+<setattribute xpath="//block[@name='treeBurntMaple03']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
+
+
+
+<!-- Creating blocks -->
+<append xpath="/blocks">
 	<block name="cntVendingMachineITAV">
 		<property name="Extends" value="cntCashRegister" />
 		<property name="TraderID" value="99"/>
@@ -20,7 +96,6 @@
 			<property name="resourceScrapIron" value="1"/>
 		</property>			
 	</block>
-
 </append>
 
 <append xpath="/blocks">
@@ -224,7 +299,7 @@
 
 
 	
-	<!-- Making blocks unlockable by the correct ITAV perk -->
+<!-- Making blocks unlockable by the correct ITAV perk -->
 <setattribute xpath="/blocks/block/property[contains(@value, 'perkAdvancedEngineering')]" name="value">perkSmelterITAV</setattribute>
 <setattribute xpath="/blocks/block[@name='chemistryStation']/property[@name='UnlockedBy']" name="value">perkChemistITAV,chemistryStationSchematic</setattribute>
 <setattribute xpath="/blocks/block[@name='tripwirepost']/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>

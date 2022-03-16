@@ -8,8 +8,10 @@ noteITAV01Desc,,,,,"Basic professions provide materials for the intermediate and
 
 noteITAV02Desc,,,,,"Intermediate professions can function on their own, but they prosper when supplied by the basic professions. The intermediate professions are Cook and Smelter, and they supply everyone with their goods. \n\nNo matter what profession you choose, you can (and probably should!) specialize in combat as well."
 
-noteITAV03Desc,,,,,"Advanced professions rely heavily on others to provide materials. The advanced professions are Armorer, Runner/Mechanic, Chemist and Robotics Inventor. \n\nNo matter what profession you choose, you can (and probably should!) specialize in combat as well."
+noteITAV03Desc,,,,,"Advanced professions rely heavily on others to provide materials. The advanced professions are Armorer, Mechanic, Chemist and Robotics Inventor. \n\nNo matter what profession you choose, you can (and probably should!) specialize in combat as well."
 
+powerizersITAV,,,,,"Powerizer Boots"
+powerizersITAVDesc,,,,,"Increases speed while jumping by 85%, and reduces stamina cost of jumps by 75%."
 
 attNameITAV,progression,Attribute,,,"Attribute: Passion"
 attitav,progression,Attribute,,,Passion
@@ -32,12 +34,16 @@ bookChemistITAV,Items,perk  book,,,"Profession: Chemist"
 bookChemistITAVDesc,progression,perk  book,,,"Chemists create vital items such as gunpowder, medicine, concrete mix... and paint."
 bookRoboticsITAV,Items,perk  book,,,"Profession: Robotics"
 bookRoboticsITAVDesc,progression,perk  book,,,"Robotics Inventors build turrets and triggers and drones."
-bookRunnerITAV,Items,perk  book,,,"Profession: Runner"
-bookRunnerITAVDesc,progression,perk  book,,,"Runners drive straight into danger to gather supplies and salvage materials."
+bookRunnerITAV,Items,perk  book,,,"Profession: Mechanic"
+bookRunnerITAVDesc,progression,perk  book,,,"Mechanics salvage materials and crafts vehicles and Powerizer boots."
 
 LightITAVDesc,blocks,,,,,"Light up the world! Requires connection to a power source. Use a wire tool to connect it."
 cntVendingMachineITAV,blocks,Container,,,"Player Owned Store"
 cntVendingMachineGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Casino Coins. Buy the goods you need from other Player Owned Stores to support them and the community!  Store is indestructible unless falling."
+modDyeTealITAV,item_modifiers,mod,,,"Dye: Teal"
+modDyePineITAV,item_modifiers,mod,,,"Dye: Pine Green"
+modDyePineITAV,item_modifiers,mod,,,"Dye: Hunter Green"
+
 
 perkDeadEyeRank1LongDesc,progression, perk Per,,,"Pot Shot. You can hit the broad side of a barn and do 10% more damage with rifles. Aim and reload 10% faster. Craft quality 2 pipe rifles. \nAsk an Armorer to craft better weapons for you."
 perkDeadEyeRank2LongDesc,progression, perk Per,,,"You can hit a large rock at 30 yards. Deal 20% more damage, aim 20% faster, reload 15% faster. Craft quality 3 pipe rifles. \nAsk an Armorer to craft better weapons for you."
@@ -83,7 +89,7 @@ perkElectrocutionerRank1LongDesc,progression,perk Int,,,"Where are the instructi
 perkElectrocutionerRank2LongDesc,progression,perk Int,,,"You are getting the hang of using stun batons to incapacitate your enemies. Deal 20% more damage, and stun victim 40% longer. Craft quality 3 pipe batons. \nAsk an Armorer to craft stun batons for you."
 perkElectrocutionerRank3LongDesc,progression,perk Int,,,"You are getting dangerous with stun batons. You could probably knock out cattle if the zombies hadn't ate them all. Deal 30% more damage, and stun victims 60% longer.  Craft quality 4 pipe batons. \nAsk an Armorer to craft stun batons for you."
 perkElectrocutionerRank4LongDesc,progression,perk Int,,,"You are lethal with stun batons. Deal 40% more damage, and stun victims 80% longer. Craft quality 5 pipe batons. \nAsk an Armorer to craft stun batons for you."
-
+perkParkourRank4LongDesc,progression,perk Agi,,,"You are now a parkour master and can navigate difficult situations easily. Reduce stamina cost of jumping by 40%. Increase safe fall distance by 5 meters, can jump 2 meters higher, and never get a sprained or broken leg when falling. Ask a Mechanic to craft a pair of Powerizer boots to take your parkouring to the next level!"
 
 
 
@@ -231,18 +237,18 @@ perkRoboticsITAVRank4LongDesc,progression,perk Pro,,,"You must be from the year 
 perkRoboticsITAVRank5Desc,progression,perk Pro,,,Robotics Expert
 perkRoboticsITAVRank5LongDesc,progression,perk Pro,,,"You are now a top expert in robotics. Reload robot weapons 20% faster and reload an extra 50 rounds. Robot active range is 18 meters.\nTwo deployed robots can be active at once. \nUnlocks crafting of SMG Auto Turret and Robotic Drone."
 
-perkRunnerITAVDesc,progression,perk Pro,,,"Run those missions!"
-perkRunnerITAVName,progression,perk Pro,,,Runner
+perkRunnerITAVDesc,progression,perk Pro,,,"Craft those vehicles!"
+perkRunnerITAVName,progression,perk Pro,,,Mechanic
 perkRunnerITAVRank1Desc,progression,perk Pro,,,Salvager
 perkRunnerITAVRank1LongDesc,progression,perk Pro,,,"Increases movement speed by 2%. Harvest 20% faster and recieve 20% more resources when harvesting with a wrench, ratchet or impact driver. \nUnlocks crafting of Wrench, Lockpicks, Crushed Car wall, Wheels and Bicycle parts."
 perkRunnerITAVRank2Desc,progression,perk Pro,,,Bikes and Stuff
 perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Increases movement speed by 4%. Harvest 40% faster and recieve 40% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Minibike parts, gas cans and quality 2 car batteries."
-perkRunnerITAVRank3Desc,progression,perk Pro,,,Mechanic
+perkRunnerITAVRank3Desc,progression,perk Pro,,,Oil it up
 perkRunnerITAVRank3LongDesc,progression,perk Pro,,,"Increases movement speed by 6%. Can pick up mines. Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of oil and quality 3 car batteries."
-perkRunnerITAVRank4Desc,progression,perk Pro,,,Repurposer
+perkRunnerITAVRank4Desc,progression,perk Pro,,,Motorbiker
 perkRunnerITAVRank4LongDesc,progression,perk Pro,,,"Increases movement speed by 8%. Harvest 80% faster and recieve 80% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, quality 4 car batteries and more efficient stacks of gas cans."
-perkRunnerITAVRank5Desc,progression,perk Pro,,,Good as New
-perkRunnerITAVRank5LongDesc,progression,perk Pro,,,"Increases movement speed by 10%. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower. Harvest 100% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of 4x4 truck parts and quality 5 car batteries."
+perkRunnerITAVRank5Desc,progression,perk Pro,,,Limo out front
+perkRunnerITAVRank5LongDesc,progression,perk Pro,,,"Increases movement speed by 10%. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower. Harvest 100% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of 4x4 truck parts, Powerizer boots and quality 5 car batteries."
 
 hasLearntSmelterITAVTooltip,items,Admin,,,"Profession: Smelter acquired"
 hasLearntMinerITAVTooltip,items,Admin,,,"Profession: Miner acquired"
@@ -253,7 +259,7 @@ hasLearntWeaponsmithITAVTooltip,items,Admin,,,"Profession: Weaponsmith acquired"
 hasLearntFarmerITAVTooltip,items,Admin,,,"Profession: Farmer acquired"
 hasLearntChemistITAVTooltip,items,Admin,,,"Profession: Chemist acquired"
 hasLearntRoboticsITAVTooltip,items,Admin,,,"Profession: Robotics Inventor acquired"
-hasLearntRunnerITAVTooltip,items,Admin,,,"Profession: Runner acquired"
+hasLearntRunnerITAVTooltip,items,Admin,,,"Profession: Mechanic acquired"
 drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,Your Profession Perk skill points have been reset.
 
 tutorialTipITAV_title,Journal Tip,,,,"It Takes A Village"

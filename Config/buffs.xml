@@ -94,4 +94,17 @@
 <!-- Setting buff strength on Baby Rocket boots -->
 <setattribute xpath="//buff[@name='buffJumpJetsAirborne']/effect_group/passive_effect" name="value">0.85</setattribute> <!-- 2.35 -->
 
+<append xpath="/buffs">
+	<buff name="buffJumpJetsAirborne2ITAV" hidden="true">
+		<stack_type value="replace"/>
+		<duration value="5"/>
+		<effect_group>
+			<passive_effect name="WalkSpeed" operation="perc_add" value="1.75"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value="1.75"/>
+			<triggered_effect trigger="onSelfFallImpact" action="RemoveBuff" buff="buffJumpJetsAirborne2ITAV"/>
+		</effect_group>
+	</buff>
+
+</append>
+
 </configs>

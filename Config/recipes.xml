@@ -11,6 +11,15 @@
 			<ingredient name="drinkCanEmpty" count="1" />
 		</recipe>
 		
+				<!-- Powerizer Boots  -->
+		<recipe name="powerizersITAV" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceRawDiamond" count="4" />
+			<ingredient name="resourceSpring" count="6" />
+			<ingredient name="resourceForgedSteel" count="20" />
+			<ingredient name="resourceMechanicalParts" count="40" />
+			<ingredient name="resourceDuctTape" count="100"/>
+		</recipe>
+		
 		<!-- Baseball cap mod -->
 		<recipe name="modArmorBallCap" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 			<ingredient name="resourceCloth" count="10"/>
@@ -92,7 +101,7 @@
 	<setattribute xpath="//recipe[@name='foodBaconAndEggs']/ingredient[@name='foodEgg']" name="count">1</setattribute> 
 	<remove xpath="//recipe[@name='resourceLockPick']/ingredient[@name='resourceMechanicalParts']" />
 	<remove xpath="//recipe[@name='resourceLockPickBundle']/ingredient[@name='resourceMechanicalParts']" />
-	
+
 	
 	<!-- Removing GyroCopter -->
 	<remove xpath="//recipe[contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter')]" />

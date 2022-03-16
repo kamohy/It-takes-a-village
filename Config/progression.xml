@@ -173,7 +173,7 @@
 		
 	<!-- Motherlode effects to MinerITAV -->
 		<effect_group>
-			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="oreWoodHarvest"/>
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value="3.6,5.8" tags="oreWoodHarvest"/> <!-- value=".2,1" -->
 			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value="-.1,-.4" tags="Harvesting">
 				<requirement name="HoldingItemHasTags" tags="perkMinerITAV"/>
 			</passive_effect>
@@ -579,7 +579,7 @@
 		</effect_group>
 	</perk>
 	
-			<!-- Runner perk -->
+			<!-- Mechanic/Runner perk -->
 	<perk name="perkRunnerITAV" parent="attITAV" name_key="perkRunnerITAVName" desc_key="perkRunnerITAVDesc" icon="ui_game_symbol_4x4">
 		<level_requirements level="1">
 			<requirement name="CVarCompare" cvar="hasLearntRunnerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
@@ -615,7 +615,7 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="resourceOil"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="ammoGasCanBundle,vehicleMotorcycleChassis,vehicleMotorcycleHandlebars"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="vehicle4x4TruckChassis,vehicle4x4TruckAccessories"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="vehicle4x4TruckChassis,vehicle4x4TruckAccessories,powerizersITAV"/>
 
 			<effect_description level="1" desc_key="perkRunnerITAVRank1Desc" long_desc_key="perkRunnerITAVRank1LongDesc"/>
 			<effect_description level="2" desc_key="perkRunnerITAVRank2Desc" long_desc_key="perkRunnerITAVRank2LongDesc"/>
@@ -628,7 +628,7 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolSalvageT1Wrench,resourceLockPick"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="meleeToolSalvageT2Ratchet"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.1,-.5" tags="salvageScrap"/><!-- does not work on scrapping -->
-			<passive_effect name="RunSpeed" operation="perc_add" level="1,5" value=".02,.1"/>
+			<!-- <passive_effect name="RunSpeed" operation="perc_add" level="1,5" value=".02,.1"/> -->
 			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkRunnerITAV"/>
 			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkRunnerITAV"/>
 			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="salvageHarvest"/>
