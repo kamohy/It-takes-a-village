@@ -1,5 +1,11 @@
 <configs>
 
+<append xpath="/buffs">
+<buff name="ITAV_start" hidden="false" icon="ui_game_symbol_add" remove_on_death="false">
+
+</buff>
+
+</append>
 
 <remove xpath="//buff[@name='buffAnimalTracker']/effect_group[@name='Startup']" />
 <remove xpath="//buff[@name='buffAnimalTracker']/effect_group[@name='check conditions for a successful track']" />
@@ -99,8 +105,8 @@
 		<stack_type value="replace"/>
 		<duration value="5"/>
 		<effect_group>
-			<passive_effect name="WalkSpeed" operation="perc_add" value="1.75"/>
-			<passive_effect name="RunSpeed" operation="perc_add" value="1.75"/>
+			<passive_effect name="WalkSpeed" operation="perc_add" value=".4"/>
+			<passive_effect name="RunSpeed" operation="perc_add" value=".4"/>
 			<triggered_effect trigger="onSelfFallImpact" action="RemoveBuff" buff="buffJumpJetsAirborne2ITAV"/>
 		</effect_group>
 	</buff>

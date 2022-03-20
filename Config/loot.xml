@@ -1,9 +1,78 @@
 <configs>
 
 <!-- Tweaking some loots -->
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='treasureAmmo']">
+	<lootgroup name="noteDadJokesITAV" count="1">
+		<item name="noteDadJoke01ITAV"/>
+		<item name="noteDadJoke02ITAV"/>
+		<item name="noteDadJoke03ITAV"/>
+		<item name="noteDadJoke04ITAV"/>
+		<item name="noteDadJoke05ITAV"/>
+		<item name="noteDadJoke06ITAV"/>
+		<item name="noteDadJoke07ITAV"/>
+		<item name="noteDadJoke08ITAV"/>
+		<item name="noteDadJoke09ITAV"/>
+		<item name="noteDadJoke10ITAV"/>
+		<item name="noteDadJoke11ITAV"/>
+		<item name="noteDadJoke12ITAV"/>
+		<item name="noteDadJoke13ITAV"/>
+		<item name="noteDadJoke14ITAV"/>
+		<item name="noteDadJoke15ITAV"/>
+		<item name="noteDadJoke16ITAV"/>
+		<item name="noteDadJoke17ITAV"/>
+		<item name="noteDadJoke18ITAV"/>
+		<item name="noteDadJoke19ITAV"/>
+		<item name="noteDadJoke20ITAV"/>
+		<item name="noteDadJoke21ITAV"/>
+		<item name="noteDadJoke22ITAV"/>
+		<item name="noteDadJoke23ITAV"/>
+		<item name="noteDadJoke24ITAV"/>
+		<item name="noteDadJoke25ITAV"/>
+		<item name="noteDadJoke26ITAV"/>
+		<item name="noteDadJoke27ITAV"/>
+		<item name="noteDadJoke28ITAV"/>
+		<item name="noteDadJoke29ITAV"/>
+		<item name="noteDadJoke30ITAV"/>
+		<item name="noteDadJoke31ITAV"/>
+		<item name="noteDadJoke32ITAV"/>
+		<item name="noteDadJoke33ITAV"/>
+		<item name="noteDadJoke34ITAV"/>
+		<item name="noteDadJoke35ITAV"/>
+		<item name="noteDadJoke36ITAV"/>
+		<item name="noteDadJoke37ITAV"/>
+		<item name="noteDadJoke38ITAV"/>
+		<item name="noteDadJoke39ITAV"/>
+		<item name="noteDadJoke40ITAV"/>
+		<item name="noteDadJoke41ITAV"/>
+		<item name="noteDadJoke42ITAV"/>
+		<item name="noteDadJoke43ITAV"/>
+		<item name="noteDadJoke44ITAV"/>
+		<item name="noteDadJoke45ITAV"/>
+		<item name="noteDadJoke46ITAV"/>
+		<item name="noteDadJoke47ITAV"/>
+		<item name="noteDadJoke48ITAV"/>
+		<item name="noteDadJoke49ITAV"/>
+		<item name="noteDadJoke50ITAV"/>
+		<item name="noteDadJoke51ITAV"/>
+		<item name="noteDadJoke52ITAV"/>
+		<item name="noteDadJoke53ITAV"/>
+		<item name="noteDadJoke54ITAV"/>
+		<item name="noteDadJoke55ITAV"/>
+		<item name="noteDadJoke56ITAV"/>
+		<item name="noteDadJoke57ITAV"/>
+		<item name="noteDadJoke58ITAV"/>
+		<item name="noteDadJoke59ITAV"/>
+	</lootgroup>
+</insertAfter>
+
 <append xpath="//lootgroup[@name='groupBirdNest01']"><item name="foodEgg" loot_prob_template="medLow"/></append>
-<setattribute xpath="//lootgroup[@name='groupMailbox02']/item[@group='booksAllScaled']" name="loot_prob_template">veryLow</setattribute>
-<!-- <setattribute xpath="//lootgroup[@name='groupMailbox01']/item[@group='perkBooksT0Day1']" name="loot_prob_template">veryLow</setattribute> -->
+<remove xpath="//lootgroup[@name='groupMailbox02']/item[@group='booksAllScaled']" />
+<remove xpath="//lootgroup[@name='groupMailbox01']/item[@group='perkBooksT0Day1']" />
+<append xpath="//lootgroup[@name='groupMailbox02']">
+	<item group="noteDadJokesITAV" loot_prob_template="low"/>	
+</append>
+
 
 
 <!-- Removing some drink/food loots, and replacing loot group food schematics with pieces of paper to make Cook more viable-->
@@ -12,9 +81,6 @@
 	<item name="resourcePaper" />
 </append> -->
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']/item" />
-<!-- <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']">
-	<item name="resourcePaper" />
-</append> -->
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']">
 	<item name="resourcePaper" />
@@ -22,16 +88,119 @@
 <remove xpath="/lootcontainers/lootgroup[@name='groupCoffeeMaker01']/item[@name='drinkJarCoffee']" />
 <remove xpath="/lootcontainers/lootgroup[@name='groupFoodRare']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='groupFoodRare']">
-    <item name="foodCanBeef"/>
-    <item name="foodCanChili"/>
-    <item name="foodCanDogfood"/>
-    <item name="foodCanSham"/>
-    <item name="foodCanLamb"/>
     <item name="foodCanPasta"/>
     <item name="foodCanPeas"/>
     <item name="foodCanSalmon"/>
     <item name="foodCanStock"/>
-    <item name="foodCanTuna"/>
+	<item name="cntCoffeeMakerCommercial" />
+	<item name="cntSodaFountain" />
+</append>
+
+
+<!-- Tweaking loot group contents -->
+<remove xpath="//lootgroup[@name='groupConstructionCrate01']/item" />
+<append xpath="//lootgroup[@name='groupConstructionCrate01']">
+	<item name="resourceAcid" count ="1" loot_prob_template="low"/>
+	<item name="cntToilet02"/>
+	<item name="faucet02"/>
+	<item name="faucet04"/>
+	<item name="faucetBrass02"/>
+	<item name="faucetBrass04"/>
+	<item name="counterSinkCommercialTile"/>
+	<item name="showerHead"/>
+	<item name="pedestalSink"/>
+	<item name="utilitySink"/>
+	<item name="cntWasherClosed"/>
+	<item name="cntCoffeeMaker"/>
+
+</append>
+
+<remove xpath="//lootgroup[@name='schematicsWeaponsArmorT0']/item" />
+<append xpath="//lootgroup[@name='schematicsWeaponsArmorT0']">
+	<item name="resourcePaper"/>
+	<item name="resourceGlue"/>
+	<item name="drinkJarBoiledWater"/>
+	<item name="drinkJarYuccaJuice"/>
+	<item name="resourceTrophy2"/>
+	<item name="resourceFishingWeight"/>
+	<item name="resourceTrophy1"/>
+	<item name="resourceCandleStick"/>
+	<item name="resourceDoorKnob"/>
+	<item name="resourceCoal"/>
+	<item name="resourceDuctTape"/>
+	<item name="drinkJarCoffee"/>
+	<item name="drinkYuccaJuiceSmoothie"/>
+</append>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='treasureAmmo']">
+	<lootgroup name="weaponSchematicsOnlyITAV">
+		<item name="gunBowT3CompoundBowSchematic"/>
+		<item name="gunBowT3CompoundCrossbowSchematic"/>
+		<item name="meleeWpnBladeT3MacheteSchematic"/>
+		<item name="meleeWpnKnucklesT3SteelKnucklesSchematic"/>
+		<item name="meleeWpnSpearT3SteelSpearSchematic"/>
+		<item name="meleeWpnClubT3SteelClubSchematic"/>
+		<item name="gunExplosivesT3RocketLauncherSchematic"/>
+		<item name="gunHandgunT3DesertVultureSchematic"/>
+		<item name="gunHandgunT3SMG5Schematic"/>
+		<item name="gunMGT3M60Schematic"/>
+		<item name="gunRifleT3SniperRifleSchematic"/>
+		<item name="gunShotgunT3AutoShotgunSchematic"/>
+		<item name="thrownGrenadeContactSchematic"/>
+		<item name="modRoboticDroneCargoModSchematic" loot_prob_template="med"/>
+		<item name="modRoboticDroneMedicModSchematic" loot_prob_template="med"/>
+		<item name="modRoboticDroneHeadlampModSchematic" loot_prob_template="med"/>
+		<item name="modRoboticDroneArmorPlatingModSchematic" loot_prob_template="med"/>
+		<item name="modRoboticDroneMoraleBoosterModSchematic" loot_prob_template="med"/>
+	</lootgroup>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='treasureAmmo']">
+	<lootgroup name="poiCandyOnlyITAV">
+	<item name="drugOhShitzDrops" />
+	<item name="drugEyeKandy" />
+	<item name="drugJailBreakers"/>
+	<item name="drugHealthBar"/>
+	<item name="drugCovertCats"/>
+	</lootgroup>
+</insertAfter>
+
+<remove xpath="//lootgroup[@name='schematicsWeaponsArmorT1']/item" />
+<append xpath="//lootgroup[@name='schematicsWeaponsArmorT1']">
+	<item name="gunBowT3CompoundBowSchematic"/>
+    <item name="gunBowT3CompoundCrossbowSchematic"/>
+    <item name="meleeWpnBladeT3MacheteSchematic"/>
+    <item name="meleeWpnKnucklesT3SteelKnucklesSchematic"/>
+	<item name="meleeWpnSpearT3SteelSpearSchematic"/>
+	<item name="meleeWpnClubT3SteelClubSchematic"/>
+	<item name="drugSteroids"/>
+	<item name="drugJailBreakers"/>
+	<item name="drugHealthBar"/>
+	<item name="drugAtomJunkies"/>
+	<item name="drugOhShitzDrops"/>
+	<item name="drugAntibiotics"/> 
+	<item name="drugSkullCrushers"/>
+	<item name="drinkCanMegaCrush"/>
+</append>
+
+<remove xpath="//lootgroup[@name='schematicsWeaponsArmorT2']/item" />
+<append xpath="//lootgroup[@name='schematicsWeaponsArmorT2']">
+	<item name="gunExplosivesT3RocketLauncherSchematic"/>
+    <item name="gunHandgunT3DesertVultureSchematic"/>
+    <item name="gunHandgunT3SMG5Schematic"/>
+    <item name="gunMGT3M60Schematic"/>
+    <item name="gunRifleT3SniperRifleSchematic"/>
+    <item name="gunShotgunT3AutoShotgunSchematic"/>
+    <item name="thrownGrenadeContactSchematic"/>
+	<item name="modRoboticDroneCargoModSchematic" loot_prob_template="med"/>
+	<item name="modRoboticDroneMedicModSchematic" loot_prob_template="med"/>
+	<item name="modRoboticDroneHeadlampModSchematic" loot_prob_template="med"/>
+	<item name="modRoboticDroneArmorPlatingModSchematic" loot_prob_template="med"/>
+	<item name="modRoboticDroneMoraleBoosterModSchematic" loot_prob_template="med"/>
+	<item name="drinkJarGrandpasMoonshine" />
+	<item name="drinkJarGrandpasLearningElixir"/>
+	<item name="drugRecog" />
+	<item name="drugFortBites" />
 </append>
 
 <remove xpath="//item[contains(@name, 'medical') and not(contains(@name, 'BloodBag')) and not(contains(@name, 'AloeCream'))]" /> 
@@ -41,6 +210,26 @@
 <remove xpath="//item[@name='drugFortBites']" />
 <remove xpath="//item[@name='drugRecog']" />
 
+<!-- Replace some items in Medical loots -->
+<append xpath="//lootgroup[@name='groupMedicalHighLow']">
+	<item name="drugPainkillers" />
+	<item name="foodHoney" />
+</append>
+<remove xpath="//lootgroup[@name='groupMedicalUncommon']/item[@name='medicalBloodBag']" />
+<append xpath="//lootgroup[@name='groupMedicalRare']">
+	<item name="medicalBloodBag" />
+	<item name="toolBeaker" />
+</append>
+
+<remove xpath="//lootgroup[@name='groupChem01']/item[@name='drinkJarRiverWater']" />
+<remove xpath="//lootgroup[@name='groupChem01']/item[@name='drinkJarBoiledWater']" />
+<append xpath="//lootgroup[@name='groupChem01']">
+	<item group="poiCandyOnlyITAV" />
+</append>
+
+<append xpath="//lootgroup[@name='groupMedicalRare']">
+	<item name="cntMedicineCabinetClosed"/>
+</append>
 
 <!-- Replacing/removing armor/weapons/turrets in lootgroups -->
 <remove xpath="/lootcontainers/lootgroup[@name='groupArmorT1']/item" />
@@ -74,7 +263,8 @@
 	<item group="weaponParts" loot_prob_template="med" force_prob="true"/>
 </append>
 <append xpath="/lootcontainers/lootgroup[@name='groupLargeWeaponBag']">
-	<item group="weaponParts" loot_prob_template="med" force_prob="true"/>
+	<item group="weaponParts" loot_prob_template="med" force_prob="true"/> 
+	<item group="weaponSchematicsOnlyITAV" />
 </append>
 <append xpath="/lootcontainers/lootgroup[@name='groupGunRack']">
 	<item group="weaponParts" loot_prob_template="med" force_prob="true"/>
@@ -110,6 +300,44 @@
 </append>
 
 
+<!-- <remove xpath="//lootgroup[@name='groupReinforcedChestT3_03']/item" /> already empty -->
+<append xpath="/lootcontainers/lootgroup[@name='groupReinforcedChestT3_03']">
+	<item group="schematicsWeaponsArmorT1" loot_prob_template="med" force_prob="true"/>
+</append>
+
+<remove xpath="//lootgroup[@name='groupHardenedChestT4_01']/item" />
+<append xpath="//lootgroup[@name='groupHardenedChestT4_01']">
+ <item group="weaponSchematicsOnlyITAV" />
+</append>
+
+<!-- <remove xpath="//lootgroup[@name='groupHardenedChestT4_05']/item" /> already empty -->
+<append xpath="/lootcontainers/lootgroup[@name='groupHardenedChestT4_05']">
+	<item name="solarCell" count="1" loot_prob_template="high" />
+</append>
+
+<remove xpath="//lootgroup[@name='groupHardenedChestT4_09']/item" />
+<append xpath="/lootcontainers/lootgroup[@name='groupHardenedChestT4_09']">
+	<item name="resourceRawDiamond" count="2,3" loot_prob_template="medHigh"/>
+	<item group="schematicsWeaponsArmorT1" loot_prob_template="med" force_prob="true"/>
+	<item group="schematicsWeaponsArmorT2" loot_prob_template="low" force_prob="true"/>
+</append>
+
+<remove xpath="//lootgroup[@name='groupHardenedChestT5_01']/item" />
+<append xpath="//lootgroup[@name='groupHardenedChestT5_01']">
+ <item group="weaponSchematicsOnlyITAV" />
+</append>
+
+<!-- <remove xpath="//lootgroup[@name='groupHardenedChestT5_03']/item" /> already empty -->
+<append xpath="//lootgroup[@name='groupHardenedChestT5_03']">
+	<item name="solarCell" count="1" loot_prob_template="med" />
+	<item name="solarbank" count="1" loot_prob_template="high" />
+</append>
+
+<remove xpath="//lootgroup[@name='groupHardenedChestT5_07']/item" />
+<append xpath="//lootgroup[@name='groupHardenedChestT5_07']">
+	<item name="resourceRawDiamond" count="2,3" loot_prob_template="medHigh"/>
+	<item group="schematicsWeaponsArmorT2" loot_prob_template="med" force_prob="true"/>
+</append>
 
 
 
@@ -117,7 +345,7 @@
 <remove xpath="//lootgroup[@name='groupToolsT1']/item[@name='meleeWpnSledgeT1IronSledgehammer']" />
 <remove xpath="//lootgroup[@name='groupToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']" />
 <remove xpath="//lootgroup[@name='groupQuestToolsT1']/item[@name='meleeWpnSledgeT1IronSledgehammer']" />
-<remove xpath="//lootgroup[@name='groupQuestToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']" />
+<!-- <remove xpath="//lootgroup[@name='groupQuestToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']" /> -->
 
 <remove xpath="/lootcontainers/lootgroup[@name='groupStunBaton']/item[@name='meleeWpnBatonT2StunBaton']" />
 <remove xpath="/lootcontainers/lootgroup[@name='groupStunBaton']/item[@name='meleeWpnBatonT2StunBatonSchematic']" />
@@ -128,7 +356,8 @@
 
 
 
-<!-- Removing schematics in lootgroups to make Smelter, Miner, Armorer, Weaponsmith, Chemist, Robotics and Runner/Mechanic more viable-->
+<!-- Removing/replacing schematics in lootgroups to make Smelter, Miner, Armorer, Weaponsmith, Chemist, Robotics and Runner/Mechanic more viable-->
+
 <remove xpath="//item[@name='resourceMilitaryFiberSchematic']" />
 <remove xpath="//item[@name='poweredDoorsSchematic']" /> 
 <remove xpath="//item[@name='generatorbankSchematic']" />
@@ -148,46 +377,8 @@
 
 <remove xpath="//lootgroup[@name='schematicsToolsT0']/item[@name='meleeWpnBladeT1HuntingKnifeSchematic']" />
 <remove xpath="//lootgroup[@name='schematicsToolsT0']/item[@name='meleeWpnSledgeT1IronSledgehammerSchematic']" />
-<remove xpath="//lootgroup[@name='schematicsToolsT1']/item[@name='meleeWpnSledgeT3SteelSledgehammerSchematic']" />
-<remove xpath="//lootgroup[@name='schematicsWeaponsArmorT0']/item" />
-<append xpath="//lootgroup[@name='schematicsWeaponsArmorT0']">
-	<item name="resourcePaper"/>
-	<item name="resourceGlue"/>
-	<item name="drinkJarBoiledWater"/>
-	<item name="drinkJarYuccaJuice"/>
-	<item name="resourceTrophy2"/>
-	<item name="resourceFishingWeight"/>
-	<item name="resourceTrophy1"/>
-	<item name="resourceCandleStick"/>
-	<item name="resourceDoorKnob"/>
-	<item name="resourceCoal"/>
-	<item name="resourceDuctTape"/>
-	<item name="drinkJarCoffee"/>
-	<item name="drinkYuccaJuiceSmoothie"/>
-</append>
-<remove xpath="//lootgroup[@name='schematicsWeaponsArmorT1']/item" />
-<append xpath="//lootgroup[@name='schematicsWeaponsArmorT1']">
-	<item name="drugSteroids"/>
-	<item name="drugJailBreakers"/>
-	<item name="drugHealthBar"/>
-	<item name="drugAtomJunkies"/>
-	<item name="drugOhShitzDrops"/>
-	<item name="drugAntibiotics"/> 
-	<item name="drugSkullCrushers"/>
-	<item name="drinkCanMegaCrush"/>
-</append>
-<remove xpath="//lootgroup[@name='schematicsWeaponsArmorT2']/item" />
-<append xpath="//lootgroup[@name='schematicsWeaponsArmorT2']">
-	<item name="modRoboticDroneCargoModSchematic" loot_prob_template="med"/>
-	<item name="modRoboticDroneMedicModSchematic" loot_prob_template="med"/>
-	<item name="modRoboticDroneHeadlampModSchematic" loot_prob_template="med"/>
-	<item name="modRoboticDroneArmorPlatingModSchematic" loot_prob_template="med"/>
-	<item name="modRoboticDroneMoraleBoosterModSchematic" loot_prob_template="med"/>
-	<item name="drinkJarGrandpasMoonshine" />
-	<item name="drinkJarGrandpasLearningElixir"/>
-	<item name="drugRecog" />
-	<item name="drugFortBites" />
-</append>
+<!-- <remove xpath="//lootgroup[@name='schematicsToolsT1']/item[@name='meleeWpnSledgeT3SteelSledgehammerSchematic']" /> -->
+
 <remove xpath="//item[@name='ammoGasCanSchematic']" />
 <remove xpath="//item[(contains(@name, 'drug') and contains(@name, 'Schematic'))]"/>
 <remove xpath="//item[@name='resourceOilSchematic']" />
@@ -202,8 +393,32 @@
 <remove xpath="//item[(contains(@name, 'vehicle') and contains(@name, 'Handlebars'))]" />
 <remove xpath="//item[(contains(@name, 'vehicle') and contains(@name, 'Accessories'))]" />
 
+<append xpath="//lootgroup[@name='schematicsElectrical']">
+	<item name="LightStreetLightClassicITAVSchematic"/>
+	<item name="signShopOpenLightITAVSchematic"/>
+	<item name="LightDeskLampLightITAVSchematic"/>
+	<item name="LightTableLampLightITAVSchematic"/>
+	<!-- <item name="LightTableLampLightCenteredITAVSchematic"/> -->
+	<item name="LightPorchLight01ITAVSchematic"/>
+	<item name="LightPorchLight04BrassITAVSchematic"/>
+	<item name="LightPorchLight04ITAVSchematic"/>
+	<item name="LightCeilingLight02ITAVSchematic"/>
+	<item name="LightCeilingLight02BrassITAVSchematic"/>
+</append>
+
+<remove xpath="/lootcontainers/lootgroup[@name='booksAllScaled']/item[@group='farmingCookingRecipesCommon']" />
+<append xpath="//lootgroup[@name='booksAllScaled']">
+	<item group="perkBooks" loot_prob_template="high" />
+</append>
+
+<remove xpath="/lootcontainers/lootgroup[@name='booksRareOnlyScaled']/item[@group='farmingCookingRecipesRare']" />
+<append xpath="//lootgroup[@name='booksRareOnlyScaled']">
+	<item group="perkBooks" loot_prob_template="high" />
+</append>
+
 
 <!-- Replacing weapons in lootgroups -->
+
 <remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Melee']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Melee']">
 	<item name="modMeleeGraveDigger"/>

@@ -33,49 +33,34 @@
 <setattribute xpath="//block[@name='terrOreOilDeposit']/drop[@event='Harvest' and @name='resourceOilShale']" name="count">17</setattribute> <!-- 50 -->
 <setattribute xpath="//block[@name='terrOreOilDeposit']/drop[@event='Harvest' and @name='resourceRockSmall']" name="count">5</setattribute> <!-- 14 -->
 
-<setattribute xpath="//block[@name='treeJuniper4m']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
-<setattribute xpath="//block[@name='treeDeadTree01']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
-<setattribute xpath="//block[@name='treeDeadTree02']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
-<setattribute xpath="//block[@name='treeOakSml01']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
-<setattribute xpath="//block[@name='treeOakMed01']/drop[@event='Harvest' and @name='resourceWood']" name="count">23</setattribute> <!-- 70 -->
-<setattribute xpath="//block[@name='treeOakMed02']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
-<setattribute xpath="//block[@name='treeOakLrg01']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
-<setattribute xpath="//block[@name='treePlantedOak08m']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
-<setattribute xpath="//block[@name='treePlantedOak16m']/drop[@event='Harvest' and @name='resourceWood']" name="count">23</setattribute> <!-- 70 -->
-<setattribute xpath="//block[@name='treePlantedOak27m']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
-<setattribute xpath="//block[@name='treePlantedOak41m']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
-<setattribute xpath="//block[@name='treePlainsTree2']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
-<setattribute xpath="//block[@name='treeMountainPine12m']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
-<setattribute xpath="//block[@name='treeMountainPine19m']/drop[@event='Harvest' and @name='resourceWood']" name="count">23</setattribute> <!-- 70 -->
-<setattribute xpath="//block[@name='treeMountainPine27m']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
-<setattribute xpath="//block[@name='treeMountainPine31m']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
-<setattribute xpath="//block[@name='treeMountainPine41m']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
-<setattribute xpath="//block[@name='treeMountainPine48m']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
-<setattribute xpath="//block[@name='treeMountainPineDry21m']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
-<setattribute xpath="//block[@name='treePineBurntLrg']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
-<setattribute xpath="//block[@name='treePineBurntMed']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
-<setattribute xpath="//block[@name='treePineBurntFullMed']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
-<setattribute xpath="//block[@name='treeFirLrg01']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
-<setattribute xpath="//block[@name='treePlantedMountainPine12m']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
-<setattribute xpath="//block[@name='treePlantedMountainPine19m']/drop[@event='Harvest' and @name='resourceWood']" name="count">23</setattribute> <!-- 70 -->
-<setattribute xpath="//block[@name='treePlantedMountainPine27m']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
-<setattribute xpath="//block[@name='treePlantedMountainPine41m']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
-<setattribute xpath="//block[@name='treeWinterEverGreen']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
-<setattribute xpath="//block[@name='treeWinterPine13m']/drop[@event='Harvest' and @name='resourceWood']" name="count">23</setattribute> <!-- 70 -->
-<setattribute xpath="//block[@name='treeWinterPine19m']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
-<setattribute xpath="//block[@name='treeWinterPine28m']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
-<setattribute xpath="//block[@name='treePlantedWinterPine6m']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
-<setattribute xpath="//block[@name='treePlantedWinterPine13m']/drop[@event='Harvest' and @name='resourceWood']" name="count">23</setattribute> <!-- 70 -->
-<setattribute xpath="//block[@name='treePlantedWinterPine19m']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
-<setattribute xpath="//block[@name='treePlantedWinterPine28m']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
+<setattribute xpath="//block[(contains(@name, 'rock') or contains(@name, 'ore') or contains(@name, 'terr'))]/drop[@tag='oreWoodHarvest']" name="tag">oreWoodHarvest,rockClayHarvest</setattribute>
 
-<setattribute xpath="//block[@name='treeStump']/drop[@event='Harvest' and @name='resourceWood']" name="count">6,10</setattribute> <!-- 20,30 -->
-<setattribute xpath="//block[@name='treeStumpPOI']/drop[@event='Harvest' and @name='resourceWood']" name="count">6,10</setattribute> <!-- 20,30 -->
-<setattribute xpath="//block[@name='treeBurntMaple01']/drop[@event='Harvest' and @name='resourceWood']" name="count">10</setattribute> <!-- 30 -->
-<setattribute xpath="//block[@name='treeBurntMaple02']/drop[@event='Harvest' and @name='resourceWood']" name="count">36</setattribute> <!-- 110 -->
-<setattribute xpath="//block[@name='treeBurntMaple03']/drop[@event='Harvest' and @name='resourceWood']" name="count">50</setattribute> <!-- 150 -->
+<!-- Making ITAV craftable blocks UnlockedBy ITAV Schematics-->
 
-
+<append xpath="//block[@name='signBread01']"><property name="UnlockedBy" value="signBread01ITAVSchematic" /></append>
+<append xpath="//block[@name='signBread02']"><property name="UnlockedBy" value="signBread02ITAVSchematic" /></append>
+<append xpath="//block[@name='decoCookingPot']"><property name="UnlockedBy" value="decoCookingPotITAVSchematic" /></append>
+<append xpath="//block[@name='barStoolVariantHelper']"><property name="UnlockedBy" value="barStoolVariantHelperITAVSchematic" /></append>
+<append xpath="//block[@name='decoReptileTerrarium']"><property name="UnlockedBy" value="decoReptileTerrariumITAVSchematic" /></append>
+<append xpath="//block[@name='cntShoppingCartEmpty']"><property name="UnlockedBy" value="cntShoppingCartEmptyITAVSchematic" /></append>
+<append xpath="//block[@name='cntMailBox01White']"><property name="UnlockedBy" value="cntMailBox01WhiteITAVSchematic" /></append>
+<append xpath="//block[@name='houseFrontDoor1_v1']"><property name="UnlockedBy" value="houseFrontDoor1_v1ITAVSchematic" /></append>
+<append xpath="//block[@name='houseFrontDoor2_v1']"><property name="UnlockedBy" value="houseFrontDoor2_v1ITAVSchematic" /></append>
+<append xpath="//block[@name='cntMicrowaveOvenVer1Closed']"><property name="UnlockedBy" value="cntMicrowaveOvenVer1ClosedITAVSchematic" /></append>
+<append xpath="//block[@name='cntMicrowaveOvenVer2Closed']"><property name="UnlockedBy" value="cntMicrowaveOvenVer2ClosedITAVSchematic" /></append>
+<append xpath="//block[@name='cntRetroFridgeVer1Closed']"><property name="UnlockedBy" value="cntRetroFridgeVer1ClosedITAVSchematic" /></append>
+<append xpath="//block[@name='cntFridgeStainlessSteel']"><property name="UnlockedBy" value="cntFridgeStainlessSteelITAVSchematic" /></append>
+<append xpath="//block[@name='cntDomedTrashCanEmpty']"><property name="UnlockedBy" value="cntDomedTrashCanEmptyITAVSchematic" /></append>
+<append xpath="//block[@name='cntDomedTrashCanCornerEmpty']"><property name="UnlockedBy" value="cntDomedTrashCanCornerEmptyITAVSchematic" /></append>
+<append xpath="//block[@name='cntBruteStyleTrashCanEmpty']"><property name="UnlockedBy" value="cntBruteStyleTrashCanEmptyITAVSchematic" /></append>
+<append xpath="//block[@name='cntWaterCoolerFull']"><property name="UnlockedBy" value="cntWaterCoolerFullITAVSchematic" /></append>
+<append xpath="//block[@name='signDinersMenu']"><property name="UnlockedBy" value="signDinersMenuITAVSchematic" /></append>
+<append xpath="//block[@name='signDinersMenu2m']"><property name="UnlockedBy" value="signDinersMenu2mITAVSchematic" /></append>
+<append xpath="//block[@name='signLaborDaySaleAd']"><property name="UnlockedBy" value="signLaborDaySaleAdITAVSchematic" /></append>
+<append xpath="//block[@name='signSale01']"><property name="UnlockedBy" value="signSale01ITAVSchematic" /></append>
+<append xpath="//block[@name='signSale02']"><property name="UnlockedBy" value="signSale02ITAVSchematic" /></append>
+<append xpath="//block[@name='decoPoolTable']"><property name="UnlockedBy" value="decoPoolTableITAVSchematic" /></append>
+<append xpath="//block[@name='cntWoodBurningStove']"><property name="UnlockedBy" value="cntWoodBurningStoveITAVSchematic" /></append>
 
 <!-- Creating blocks -->
 <append xpath="/blocks">
@@ -87,7 +72,8 @@
 		<property name="DescriptionKey" value="cntVendingMachineGroupDescITAV"/>
 		<property name="DisplayInfo" value="Name"/>
 		<property name="OnlySimpleRotations" value="true"/>
-		<property name="Material" value="MmetalNoGlue"/>
+		<property name="StabilitySupport" value="false"/>
+		<property name="Material" value="Mmetal"/>
 		<!-- Collide disabled to avoid zombies killing the store, or using store as protective block against zombies -->
 		<property name="Collide" value="sight"/> 
 		<property name="CanPickup" value="true"/>
@@ -96,13 +82,19 @@
 			<property name="resourceScrapIron" value="1"/>
 		</property>			
 	</block>
+		
+	
 </append>
+
+
+
 
 <append xpath="/blocks">
 	<block name="LightStreetLightClassicITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="Extends" value="porchLight01" param1="HandleFace"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="EconomicValue" value="400"/>
 		<property name="Model" value="Entities/Lighting/streetLamp_ClassicPrefab"/>
 		<property name="DisplayType" value="blockMulti"/>
 		<property name="MultiBlockDim" value="1,5,1"/>
@@ -116,13 +108,14 @@
 		<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
 
 		<property name="RuntimeSwitch" value="true"/>
-		<property name="UnlockedBy" value="perkSmelterITAV"/>
+		<property name="UnlockedBy" value="perkSmelterITAV,LightStreetLightClassicITAVSchematic"/>
 		<property name="CustomIcon" value="streetLightClassic"/>
 	</block>
 	
-	<block name="signShopOpenLightITAV">
+	<block name="signShopOpenLightITAV"> 
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="EconomicValue" value="400"/>
 		<property name="IndexName" value="TraderOnOff"/>
 		<property name="CustomIcon" value="signShopOpenSwitch"/>
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
@@ -138,18 +131,18 @@
 		<drop event="Harvest" name="resourceScrapPolymers" count="2" prob="0.8" tag="salvageHarvest"/>
 		<drop event="Destroy" name="resourceScrapIron" count="1,5"/>
 		<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-		<property name="TakeDelay" value="-1"/>
 		<property name="Group" value="Science,Decor/Miscellaneous"/>
 		<property name="EconomicValue" value="150"/> <!-- disassemble value -->
 		<property name="FilterTags" value="MC_building,SC_commercial,SC_lighting,MC_outdoor"/>
 		<property name="SortOrder1" value="70s0"/>
 		<property name="RuntimeSwitch" value="true"/>
-		<property name="UnlockedBy" value="perkSmelterITAV"/>
+		<property name="UnlockedBy" value="perkSmelterITAV,signShopOpenLightITAVSchematic"/>
 	</block>
 	
 	<block name="LightDeskLampLightITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="EconomicValue" value="400"/>
 		<property name="Extends" value="porchLight01" param1="HandleFace"/>
 		<property name="Model" value="Entities/Lighting/desk_lampPrefab"/>
 		<property name="CreativeMode" value="Player"/>
@@ -157,45 +150,47 @@
 		<property name="Material" value="Mglass"/>
 		<property name="CustomIcon" value="deskLampLight"/>
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
-		<property name="TakeDelay" value="5"/>
 		<drop event="Destroy" name="resourceScrapBrass" count="3"/>
-		<property name="Light" value="0.4"/>
-		<property name="UnlockedBy" value="perkSmelterITAV"/>
+		<property name="UnlockedBy" value="perkSmelterITAV,LightDeskLampLightITAVSchematic"/>
 	</block>
 
 
 	<block name="LightTableLampLightITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="EconomicValue" value="400"/>
 		<property name="Extends" value="porchLight01" param1="HandleFace"/>
 		<property name="Model" value="Entities/Lighting/table_lampPrefab"/>
+		<property name="ModelOffset" value="0,0,0"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="RuntimeSwitch" value="true"/>
 		<property name="Material" value="Mglass"/>
 		<property name="CustomIcon" value="tableLampLight"/>
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
-		<property name="TakeDelay" value="5"/>
-		<property name="Light" value="0.4"/>
-		<property name="UnlockedBy" value="perkSmelterITAV"/>
+		<property name="UnlockedBy" value="perkSmelterITAV,LightTableLampLightITAVSchematic"/>
 	</block>
 
-	
+	<!-- The offset makes it impossible to destroy. Class makes it impossible to pick up. Ie, can't keep it.	
 	<block name="LightTableLampLightCenteredITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
-		<property name="Extends" value="tableLampLight" param1="HandleFace"/>
-		<property name="CustomIcon" value="tableLampLight"/>
+		<property name="EconomicValue" value="400"/>
+		<property name="Extends" value="porchLight01" param1="HandleFace"/>
 		<property name="Model" value="Entities/Lighting/table_lamp_centeredPrefab"/>
-		<property name="TakeDelay" value="5"/>
 		<property name="ModelOffset" value="0,0,0"/>
-		<property name="GndAlign" value="1"/>
-		<property name="UnlockedBy" value="perkSmelterITAV"/>
-	</block>
+		<property name="CreativeMode" value="Player"/>
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="Material" value="Mglass"/>
+		<property name="CustomIcon" value="tableLampLight"/>
+		<property name="StabilitySupport" value="false"/>
+		<property name="UnlockedBy" value="perkSmelterITAV,LightTableLampLightCenteredITAVSchematic"/>
+	</block> -->
 	
 	
 	<block name="LightPorchLight01ITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="EconomicValue" value="400"/>
 		<property name="Extends" value="porchLight01"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="CustomIcon" value="porchLight01"/>
@@ -205,13 +200,13 @@
 		<property name="Model" value="Entities/Lighting/porchLight01Prefab"/> <property name="HandleFace" value="Top"/>
 		<property name="TakeDelay" value="5"/>
 		<property name="AllowAllRotations" value="true"/>
-		<property name="UnlockedBy" value="perkSmelterITAV"/>
-		<property name="Light" value="0.6"/>
+		<property name="UnlockedBy" value="perkSmelterITAV,LightPorchLight01ITAVSchematic"/>
 	</block>
 
 	<block name="LightPorchLight04BrassITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="EconomicValue" value="400"/>
 		<property name="Extends" value="porchLight01"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="CustomIcon" value="porchLight04Brass"/>
@@ -219,16 +214,16 @@
 		<property name="Material" value="Mglass"/>
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 		<property name="Model" value="Entities/Lighting/porchLight04BrassPrefab"/> <property name="HandleFace" value="Top"/>
-		<property name="TakeDelay" value="5"/>
 		<property name="AllowAllRotations" value="true"/>
-		<property name="Light" value="0.6"/>
 		<drop event="Destroy" name="resourceScrapBrass" count="3"/>
-		<property name="UnlockedBy" value="perkSmelterITAV"/>>
+		<property name="CanPickup" value="true"/>
+		<property name="UnlockedBy" value="perkSmelterITAV,LightPorchLight04BrassITAVSchematic"/>>
 	</block>
 	
 	<block name="LightPorchLight04ITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="EconomicValue" value="400"/>
 		<property name="Extends" value="porchLight01"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="CustomIcon" value="porchLight04"/>
@@ -236,15 +231,15 @@
 		<property name="Material" value="Mglass"/>
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 		<property name="Model" value="Entities/Lighting/porchLight04Prefab"/> <property name="HandleFace" value="Top"/>
-		<property name="TakeDelay" value="5"/>
 		<property name="AllowAllRotations" value="true"/>
 		<property name="Light" value="0.6"/>
-		<property name="UnlockedBy" value="perkSmelterITAV"/>
+		<property name="UnlockedBy" value="perkSmelterITAV,LightPorchLight04ITAVSchematic"/>
 	</block>
 
 	<block name="LightCeilingLight02ITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="EconomicValue" value="400"/>
 		<property name="Extends" value="porchLight01"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="CustomIcon" value="ceilingLight02"/>
@@ -252,14 +247,13 @@
 		<property name="Material" value="Mglass"/>
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 		<property name="Model" value="Entities/Lighting/ceilingLight02Prefab"/> <property name="HandleFace" value="Top"/>
-		<property name="TakeDelay" value="5"/>
-		<property name="Light" value="0.6"/>
-		<property name="UnlockedBy" value="perkSmelterITAV"/>
+		<property name="UnlockedBy" value="perkSmelterITAV,LightCeilingLight02ITAVSchematic"/>
 	</block>
 
 	<block name="LightCeilingLight02BrassITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="EconomicValue" value="400"/>
 		<property name="Extends" value="porchLight01"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="CustomIcon" value="ceilingLight02Brass"/>
@@ -267,11 +261,42 @@
 		<property name="Material" value="Mglass"/>
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 		<property name="Model" value="Entities/Lighting/ceilingLight02BrassPrefab"/> <property name="HandleFace" value="Top"/>
-		<property name="TakeDelay" value="5"/>
 		<drop event="Destroy" name="resourceScrapBrass" count="3"/>
-		<property name="UnlockedBy" value="perkSmelterITAV"/>
+		<property name="UnlockedBy" value="perkSmelterITAV,LightCeilingLight02BrassITAVSchematic"/>
 	</block>
 	
+	
+<block name="wirelessRelayFuseboxLightITAV">
+	<property name="CreativeMode" value="Player"/>
+	<property name="Class" value="Powered"/>
+	<property name="DescriptionKey" value="LightFuseboxITAVDesc"/>
+	<property name="EconomicValue" value="400"/>
+	<property name="CustomIcon" value="fusebox"/>
+	<property name="UnlockedBy" value="perkSmelterITAV,perkRoboticsITAV"/>
+	<property name="Material" value="Mmetal_weak"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="Ext3dModel"/>
+	<property name="Texture" value="293"/>
+	<property name="Mesh" value="models"/>
+	<property name="Model" value="Industrial/fusebox" param1="main_mesh"/>
+	<property name="HandleFace" value="South"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="DisplayType" value="blockElectrical"/>
+	<property name="RequiredPower" value="1"/>
+	<property name="Group" value="Science"/>
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="1"/>
+	</property>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1" prob="0.2" tag="salvageHarvest"/>
+	<drop event="Destroy" name="resourceScrapIron" count="1,5"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="TakeDelay" value="5"/>
+	<property name="FilterTags" value="MC_playerBlocks,SC_electrical"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+
 </append>
 
 
@@ -301,6 +326,7 @@
 	
 <!-- Making blocks unlockable by the correct ITAV perk -->
 <setattribute xpath="/blocks/block/property[contains(@value, 'perkAdvancedEngineering')]" name="value">perkSmelterITAV</setattribute>
+<setattribute xpath="/blocks/block[@name='workbench']/property[@name='UnlockedBy']" name="value">perkSmelterITAV,perkRoboticsITAV,perkArmorerITAV,perkRunnerITAV</setattribute>
 <setattribute xpath="/blocks/block[@name='chemistryStation']/property[@name='UnlockedBy']" name="value">perkChemistITAV,chemistryStationSchematic</setattribute>
 <setattribute xpath="/blocks/block[@name='tripwirepost']/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>
 <setattribute xpath="/blocks/block[@name='electricfencepost']/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>

@@ -1,5 +1,34 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english
 
+
+loadingTipProfessionsITAV,UI,Loading Screen,x,,"Each Profession provides vital goods for the other players. Try to fill any empty roles to improve the chance of survival."
+loadingTipProfessionsITAV_title,UI,Loading Screen,x,,It Takes A Village
+loadingTipMultipleProfessionsITAV,UI,Loading Screen,x,,"Max out your first profession to learn another one. Talk to the trader to start the quest."
+loadingTipMultipleProfessionsITAV_title,UI,Loading Screen,x,,More Professions
+
+loadingTipCraftingBetterQL,UI,Loading Screen,x,,At the start of the game you can only craft quality 1 tools and items such as a stone axe. The quality of an item is displayed at the bottom of its icon. To craft a higher quality item increase the perk it is governed under such as Miner 69’er for the stone axe.
+loadingTipCraftingBetterQL_title,UI,Loading Screen,x,,How do I craft better tools?
+loadingTipEncumbrance,UI,Loading Screen,x,,Carrying too many items in your inventory will slow you down.\nFind or craft pocket mods for clothing or armor to remove encumbrance penalties. Alternatively you can purchase the Pack Mule perk.
+loadingTipEncumbrance_title,UI,Loading Screen,x,,Encumbrance
+loadingTipExtCharStats,UI,Loading Screen,x,,"To access the character menu press [action:local:Inventory][action:permanent:Character], below your character’s name select the Extended Character Stats tab to see all your character’s total stats which include perks, buffs, equipped clothing, armor and weapons."
+loadingTipExtCharStats_title,UI,Loading Screen,x,,Extended Character Stats
+loadingTipGlue,UI,Loading Screen,x,,"Cook bones into glue in a cooking pot or chemistry station. Glue is an essential ingredient to make duct tape, the most useful item in the apocalypse."
+loadingTipGlue_title,ui,Loading Screen,x,,Glue
+loadingTipHarvestingCorpses,UI,Loading Screen,x,,"Animal corpses and rotten remains can be harvested for hide, meat, and bone. Bone is used for crafting glue and duct tape.\nA stone axe will do but knives and machetes are more efficient. A bone knife can be crafted early."
+loadingTipHarvestingCorpses_title,UI,Loading Screen,x,,Harvesting Corpses
+loadingTipHarvestingResources,UI,Loading Screen,x,,"Harvest resources such as trees, rocks and more using your fists with [action:local:Primary]. Tools are much faster and yield higher amounts of resources."
+loadingTipHarvestingResources_title,UI,Loading Screen,x,,Harvesting Resources
+loadingTipPickaxes,UI,Loading Screen,x,,"Pickaxes are great for harvesting the various ores such as iron, lead, coal, oil shale and potassium nitrate."
+loadingTipPickaxes_title,UI,Loading Screen,x,,Pickaxes
+loadingTipProperTools,UI,Loading Screen,x,,"The stone axe works on everything but is slow. Iron tools are fast, steel tools are faster, and motorized tools are fastest. Use axes to harvest wood, pickaxes to harvest stone, metal and ores and knives to harvest meat. Sledgehammers break things easily but are not good at harvesting resources."
+loadingTipProperTools_title,UI,Loading Screen,x,,The Right Tool for the job
+loadingTipStoneAxe,UI,Loading Screen,x,,The stone axe is a primitive starting tool used to gather resources using [action:local:Primary].\nUse [action:local:Secondary] to repair and upgrade blocks.
+loadingTipStoneAxe_title,UI,Loading Screen,x,,The Stone Axe
+loadingTipUnlockingRecipes,UI,Loading Screen,x,,If a recipe shows a lock item then you cannot craft it yet. Clicking on it will show you one or more ways to unlock it.\nEvery recipe that can be unlocked with a perk can also be unlocked by a book or schematic but perks typically offer extra benefits.
+loadingTipUnlockingRecipes_title,UI,Loading Screen,x,,Unlocking Recipes
+
+
+
 note01ITAV,,,,,"Basic Professions"
 note02ITAV,,,,,"Intermediate Professions"
 note03ITAV,,,,,"Advanced Professions"
@@ -12,6 +41,15 @@ noteITAV03Desc,,,,,"Advanced professions rely heavily on others to provide mater
 
 powerizersITAV,,,,,"Powerizer Boots"
 powerizersITAVDesc,,,,,"Increases speed while jumping by 85%, and reduces stamina cost of jumps by 75%."
+powerizersBabyITAV,,,,,"Baby Powerizer Boots"
+powerizersBabyITAVDesc,,,,,"Increases speed while jumping by 40%, and reduces stamina cost of jumps by 35%."
+workBootsITAV,,,,,"Work Boots"
+workBootsITAVDesc,,,,,"Increases stamina regeneration by 15%."
+workBootsBabyITAV,,,,,"Baby Work Boots"
+workBootsBabyITAVDesc,,,,,"Increases stamina regeneration by 7%."
+statStaminaRegenITAV,ui_display,Item stat,,,"Stamina Regen"
+statRunSpeedITAV,ui_display,Item stat,,,"Run Speed While Jumping"
+statStaminaReductionITAV,ui_display,Item stat,,,"Stamina Cost Of Jumping"
 
 attNameITAV,progression,Attribute,,,"Attribute: Passion"
 attitav,progression,Attribute,,,Passion
@@ -35,14 +73,41 @@ bookChemistITAVDesc,progression,perk  book,,,"Chemists create vital items such a
 bookRoboticsITAV,Items,perk  book,,,"Profession: Robotics"
 bookRoboticsITAVDesc,progression,perk  book,,,"Robotics Inventors build turrets and triggers and drones."
 bookRunnerITAV,Items,perk  book,,,"Profession: Mechanic"
-bookRunnerITAVDesc,progression,perk  book,,,"Mechanics salvage materials and crafts vehicles and Powerizer boots."
+bookRunnerITAVDesc,progression,perk  book,,,"Mechanics salvage materials, crafts vehicles and special boots (Powerizer Boots and Work Boots)."
 
-LightITAVDesc,blocks,,,,,"Light up the world! Requires connection to a power source. Use a wire tool to connect it."
+
 cntVendingMachineITAV,blocks,Container,,,"Player Owned Store"
 cntVendingMachineGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Casino Coins. Buy the goods you need from other Player Owned Stores to support them and the community!  Store is indestructible unless falling."
 modDyeTealITAV,item_modifiers,mod,,,"Dye: Teal"
 modDyePineITAV,item_modifiers,mod,,,"Dye: Pine Green"
 modDyePineITAV,item_modifiers,mod,,,"Dye: Hunter Green"
+meleeWpnSpearT3SteelSpearSchematic,,,,,"Steel Spear Schematic"
+meleeWpnClubT3SteelClubSchematic,,,,,"Steel Club Schematic"
+
+LightITAVDesc,blocks,,,,"Light up the world! Requires connection to a power source. Use a wire tool to connect it."
+LightFuseboxITAVDesc,blocks,,,,"Use the wireless fusebox to connect lights to their power source with invisible cables. Requires a wire tool."
+LightStreetLightClassicITAV,blocks,,,,"Classic Street Light"
+signShopOpenLightITAV,blocks,,,,"Shop Open Sign"
+LightDeskLampLightITAV,blocks,,,,"Desk Lamp"
+LightTableLampLightITAV,blocks,,,,"Table Lamp"
+LightTableLampLightCenteredITAV,blocks,,,,"Table Lamp Centered"
+LightPorchLight01ITAV,blocks,,,,"Old Porch Lamp"
+LightPorchLight04BrassITAV,blocks,,,,"Brass Porch Lamp"
+LightPorchLight04ITAV,blocks,,,,"Iron Porch Lamp"
+LightCeilingLight02ITAV,blocks,,,,"Iron Ceiling Lamp"
+LightCeilingLight02BrassITAV,blocks,,,,"Brass Ceiling Lamp"
+
+LightStreetLightClassicITAVSchematic,items,,,,"Classic Street Light"
+signShopOpenLightITAVSchematic,items,,,,"Shop Open Sign"
+LightDeskLampLightITAVSchematic,items,,,,"Desk Lamp"
+LightTableLampLightITAVSchematic,items,,,,"Table Lamp"
+LightTableLampLightCenteredITAVSchematic,items,,,,"Table Lamp Centered"
+LightPorchLight01ITAVSchematic,items,,,,"Old Porch Lamp"
+LightPorchLight04BrassITAVSchematic,items,,,,"Brass Porch Lamp"
+LightPorchLight04ITAVSchematic,items,,,,"Iron Porch Lamp"
+LightCeilingLight02ITAVSchematic,items,,,,"Iron Ceiling Lamp"
+LightCeilingLight02BrassITAVSchematic,items,,,,"Brass Ceiling Lamp"
+
 
 
 perkDeadEyeRank1LongDesc,progression, perk Per,,,"Pot Shot. You can hit the broad side of a barn and do 10% more damage with rifles. Aim and reload 10% faster. Craft quality 2 pipe rifles. \nAsk an Armorer to craft better weapons for you."
@@ -153,15 +218,15 @@ perkSmelterITAVRank5LongDesc,progression,perk Pro,,,"Unlocks crafting of the cru
 perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster."
 perkMinerITAVName,progression,perk Pro,,,Miner
 perkMinerITAVRank1Desc,progression,perk Pro,,,"Woodpecker"
-perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 poor tools, increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger. Harvest 20% more from ore, stone, terrain blocks and trees. \nUnlocks all iron tools like pickaxes."
+perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 poor tools, increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger. Harvest 20% more from trees, and 220% more from ore, stone and terrain blocks. \nUnlocks all iron tools like pickaxes."
 perkMinerITAVRank2Desc,progression,perk,,,"Choppy Chop"
-perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Craft quality 3 fair tools, increase tool damage by 20% and block damage by 60% with any axe, pick, shovel, chainsaw or auger. Harvest 40% more from ore, stone, terrain blocks and trees."
+perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Craft quality 3 fair tools, increase tool damage by 20% and block damage by 60% with any axe, pick, shovel, chainsaw or auger. Harvest 40% more from trees, and 270% more from ore, stone and terrain blocks."
 perkMinerITAVRank3Desc,progression,perk,,,"Bang That Rock"
-perkMinerITAVRank3LongDesc,progression,perk Pro,,,"Craft quality 4 good tools, increase tool damage by 30% and block damage by 90% with any axe, pick, shovel, chainsaw or auger. Harvest 60% more from ore, stone, terrain blocks and trees."
+perkMinerITAVRank3LongDesc,progression,perk Pro,,,"Craft quality 4 good tools, increase tool damage by 30% and block damage by 90% with any axe, pick, shovel, chainsaw or auger. Harvest 60% more from trees, and 320% more from ore, stone and terrain blocks."
 perkMinerITAVRank4Desc,progression,perk Pro,,,"Iron Fist"
-perkMinerITAVRank4LongDesc,progression,perk Pro,,,"Craft quality 5 great tools, increase tool damage by 40% and block damage by 120% with any axe, pick, shovel, chainsaw or auger. Harvest 80% more from ore, stone, terrain blocks and trees."
+perkMinerITAVRank4LongDesc,progression,perk Pro,,,"Craft quality 5 great tools, increase tool damage by 40% and block damage by 120% with any axe, pick, shovel, chainsaw or auger. Harvest 80% more from trees, and 370% more from ore, stone and terrain blocks."
 perkMinerITAVRank5Desc,progression,perk Pro,,,"Cave Troll"
-perkMinerITAVRank5LongDesc,progression,perk Pro,,,"Craft quality 6 amazing tools, increase tool damage by 50% and block damage by 150% with any axe, pick, shovel, chainsaw or auger. Harvest 100% more from ore, stone, terrain blocks and trees."
+perkMinerITAVRank5LongDesc,progression,perk Pro,,,"Craft quality 6 amazing tools, increase tool damage by 50% and block damage by 150% with any axe, pick, shovel, chainsaw or auger. Harvest 100% more from trees, and 420% more from ore, stone and terrain blocks."
 
 perkHunterITAVDesc,progression,perk Pro,,,"Become one with the hunt. Gain the ability to track animals and increase damage to and harvest from them."
 perkHunterITAVName,progression,perk Pro,,,Hunter
@@ -175,7 +240,7 @@ perkCookITAVName,progression,perk Pro,,,Cook
 perkArmorerITAVDesc,progression,perk Pro,,,"Craft ranged and melee weapons, as well as light and heavy armor."
 perkArmorerITAVName,progression,perk Pro,,,Armorer
 perkArmorerRank1DescITAV,progression,perk Pro,,,Apprentice
-perkArmorerRank1LongDescITAV,progression,perk Pro,,,"You are now an apprentice armorer and able to craft quality 2 leather armor, iron armor, steel armor and military armor. \nUnlocks crafting of bows, crossbows, hunting rifle, handguns, shotguns, assault rifle, sniper rifle, bladed weapons, blunt weapons, fist weapons, thrown weapons and rocket launcher."
+perkArmorerRank1LongDescITAV,progression,perk Pro,,,"You are now an apprentice armorer and able to craft quality 2 leather armor, iron armor, steel armor and military armor. \nUnlocks crafting of workbenches, bows, crossbows, hunting rifle, handguns, shotguns, assault rifle, sniper rifle, bladed weapons, blunt weapons, fist weapons, thrown weapons and rocket launcher."
 perkArmorerRank2DescITAV,progression,perk Pro,,,Journeyman
 perkArmorerRank2LongDescITAV,progression,perk Pro,,,"You are now a journeyman armorer and able to craft quality 3 armor and weaponry."
 perkArmorerRank3DescITAV,progression,perk Pro,,,Expert
@@ -227,7 +292,7 @@ perkChemistITAVRank5LongDesc,progression,perk Pro,,,"???."
 perkRoboticsITAVDesc,progression,perk Pro,,,"You are fascinated with robotics. Learn to craft deployed weapons."
 perkRoboticsITAVName,progression,perk Pro,,,Robotics Inventor
 perkRoboticsITAVRank1Desc,progression,perk Pro,,,Science Projects
-perkRoboticsITAVRank1LongDesc,progression,perk Pro,,,"Craft poor quality 2 robots, deal 10% more damage, 30% faster fire rate and reload an extra 10 rounds. Robot active range is increased from 10 to 14 meters.\nYou can deploy multiple robots but only the closest will be active. \nUnlocks crafting of Robotic Sledge, Generatorbank, Switch, trigger plates and wires, electric relays and electrical traps."
+perkRoboticsITAVRank1LongDesc,progression,perk Pro,,,"Craft poor quality 2 robots, deal 10% more damage, 30% faster fire rate and reload an extra 10 rounds. Robot active range is increased from 10 to 14 meters.\nYou can deploy multiple robots but only the closest will be active. \nUnlocks crafting of workbenches, Robotic Sledge, Generatorbank, Switch, trigger plates and wires, electric relays and electrical traps."
 perkRoboticsITAVRank2Desc,progression,perk Pro,,,Basic Robotics
 perkRoboticsITAVRank2LongDesc,progression,perk Pro,,,"You are taking your projects to the next level now. Craft fair quality 3 robots, deal 20% more damage, 60% faster fire rate and reload an extra 20 rounds. Robot active range is 15 meters."
 perkRoboticsITAVRank3Desc,progression,perk Pro,,,Automated Weaponry
@@ -240,9 +305,9 @@ perkRoboticsITAVRank5LongDesc,progression,perk Pro,,,"You are now a top expert i
 perkRunnerITAVDesc,progression,perk Pro,,,"Craft those vehicles!"
 perkRunnerITAVName,progression,perk Pro,,,Mechanic
 perkRunnerITAVRank1Desc,progression,perk Pro,,,Salvager
-perkRunnerITAVRank1LongDesc,progression,perk Pro,,,"Increases movement speed by 2%. Harvest 20% faster and recieve 20% more resources when harvesting with a wrench, ratchet or impact driver. \nUnlocks crafting of Wrench, Lockpicks, Crushed Car wall, Wheels and Bicycle parts."
+perkRunnerITAVRank1LongDesc,progression,perk Pro,,,"Increases movement speed by 2%. Harvest 20% faster and recieve 20% more resources when harvesting with a wrench, ratchet or impact driver. \nUnlocks crafting of workbenches, Wrench, Lockpicks, Crushed Car wall, Wheels and Bicycle parts."
 perkRunnerITAVRank2Desc,progression,perk Pro,,,Bikes and Stuff
-perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Increases movement speed by 4%. Harvest 40% faster and recieve 40% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Minibike parts, gas cans and quality 2 car batteries."
+perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Increases movement speed by 4%. Harvest 40% faster and recieve 40% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Baby Powerizer Boots, Baby Work Boots, Minibike parts, gas cans and quality 2 car batteries."
 perkRunnerITAVRank3Desc,progression,perk Pro,,,Oil it up
 perkRunnerITAVRank3LongDesc,progression,perk Pro,,,"Increases movement speed by 6%. Can pick up mines. Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of oil and quality 3 car batteries."
 perkRunnerITAVRank4Desc,progression,perk Pro,,,Motorbiker
@@ -263,7 +328,7 @@ hasLearntRunnerITAVTooltip,items,Admin,,,"Profession: Mechanic acquired"
 drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,Your Profession Perk skill points have been reset.
 
 tutorialTipITAV_title,Journal Tip,,,,"It Takes A Village"
-tutorialTipITAV,Journal Tip,,,,"You look rough,\n\nIf you can find the other survivors, you can combine your different strengths to better survive in the wasteland. Press N to view the attributes and skills. Press Tab to open the crafting menu and your backpack. Press O to see your Quests. \n\nIt Takes A Village!"
+tutorialTipITAV,Journal Tip,,,,"You look rough,\n\nIf you can find the other survivors, you can combine your different strengths to better survive in the wasteland. Press Tab to open the crafting menu and your backpack. \n\nIt Takes A Village!"
 
 MyFirstProfessionTip_title,Journal Tip,,,,Learning Professions
 MyFirstProfessionTip,Journal Tip,,,,"To learn a Profession you need to read a Profession book from a trader. Once you have maxed out a Profession, you will be eligible to read the 'My Next Profession!' book, which allows you to pick an additional Profession.  n\Keep maxing out your Professions to become able to learn new ones!"
@@ -298,7 +363,14 @@ quest_MyNextProfession_statement,Quests,Quests,,,Pick a Profession
 quest_MyNextProfession_completion,Quests,Quests,,,"Choose what Profession fits you and your community best.\n\nOnce you have read the Profession book, there is no going back. \n\nChoose carefully."
 
 quest_ProfCont_description_title,,,,,"Store Setup"
-quest_ProfCont_description,,,,,"It's time to find or build a safe spot for your store, and put some goods up for sale to let other survivors buy from you. \n\nYou might want to lock the door around your crafting area, so no one walks in and 'borrows' your hard earned stuff..."
+quest_ProfCont_description,,,,,"It's time to find or build a safe spot for your store, and put some goods up for sale to let other survivors buy from you. \nYou might want to lock the door around your crafting area, so no one walks in and 'borrows' your hard earned stuff... \n\nPress 'O' to see Quests, 'N' for skills. "
+
+quest_ProfCont_name,Quests,Quests,,,Setup your Store
+quest_ProfCont_subtitle,Quests,Quests,,,Setup your Store
+quest_ProfCont_statement,Quests,Quests,,,Establish Your Profession
+quest_ProfCont_response,Quests,Quests,,,Profession Quest Response
+quest_ProfCont_completion,Quests,Quests,,,"The Mechanic can craft even stronger versions of these boots. \n\nTreat yourself!"
+
 
 qb_MyFirstProfessionITAV,Items,,,,My First Profession
 qb_MyFirstProfessionITAV_desc,Items,,,,"Reading this book allows you to learn your first Profession! Choose your desired Profession from the quest rewards. To unlock a second Profession, you must max out your first one."
@@ -311,3 +383,121 @@ qb_MyNextProfessionITAV_desc,Items,,,,"Reading this book allows you to learn you
 quest_WhiteRiverCitizen1_description,Quest,Quest Info,,,"Good Job Survivor,\n\nYou have proved to be capable with much potential. We have marked your map with the nearest White River Outpost location. There you will find a Trader where you can buy and sell goods, and trade stories with one of our friendly citizens.\n\nWelcome Aboard, Noah"
 
 
+noteDadJoke01ITAV,,,,,"Don't read it"
+noteDadJoke01ITAVDesc,,,,,"Why do bees have sticky hair? \n\nBecause they use a honeycomb."
+noteDadJoke02ITAV,,,,,"Don't read it"
+noteDadJoke02ITAVDesc,,,,,"What did the police officer say to their belly button? \n\n'You are under a vest.'"
+noteDadJoke03ITAV,,,,,"Don't read it"
+noteDadJoke03ITAVDesc,,,,,"How does it feel to be hit by a stun baton? \n\nIt Hertz."
+noteDadJoke04ITAV,,,,,"Don't read it"
+noteDadJoke04ITAVDesc,,,,,"When does a joke become a 'dad joke'? \n\nWhen it becomes apparent."
+noteDadJoke05ITAV,,,,,"Don't read it"
+noteDadJoke05ITAVDesc,,,,,"I used to hate facial hair. But then it grew on me."
+noteDadJoke06ITAV,,,,,"Don't read it"
+noteDadJoke06ITAVDesc,,,,,"It takes guts to be an organ donor."
+noteDadJoke07ITAV,,,,,"Don't read it"
+noteDadJoke07ITAVDesc,,,,,"Why did the two pieces of pumpkin bread get married? \n\nIt was loaf at first sight."
+noteDadJoke08ITAV,,,,,"Don't read it"
+noteDadJoke08ITAVDesc,,,,,"What do bears eat at parties? \n\nBluebeary pie."
+noteDadJoke09ITAV,,,,,"Don't read it"
+noteDadJoke09ITAVDesc,,,,,"What do you call a bear that doesn't have any ears? \n\nA b."
+noteDadJoke10ITAV,,,,,"Don't read it"
+noteDadJoke10ITAVDesc,,,,,"Why are zombies never arrested? \n\nBecause they can never be taken alive."
+noteDadJoke11ITAV,,,,,"Don't read it"
+noteDadJoke11ITAVDesc,,,,,"What bread do zombies usually eat? \n\nWhole brain."
+noteDadJoke12ITAV,,,,,"Don't read it"
+noteDadJoke12ITAVDesc,,,,,"What do vegetarian zombies eat? \n\nGraaains."
+noteDadJoke13ITAV,,,,,"Don't read it"
+noteDadJoke13ITAVDesc,,,,,"What do bears eat at parties? \n\nBluebeary pie."
+noteDadJoke14ITAV,,,,,"Don't read it"
+noteDadJoke14ITAVDesc,,,,,"Does anyone know if I could take some of my butt flesh and graft it onto someone who isn't a relative? Ass skin for a friend." 
+noteDadJoke15ITAV,,,,,"Don't read it"
+noteDadJoke15ITAVDesc,,,,,"What do you call a flesh eating bee? \n\nA zombee."
+noteDadJoke16ITAV,,,,,"Don't read it"
+noteDadJoke16ITAVDesc,,,,,"What did the rotting flesh say when it was put into Hobo stew? \n\nAh, we meat again!"
+noteDadJoke17ITAV,,,,,"Don't read it"
+noteDadJoke17ITAVDesc,,,,,"Whats a zombies favorite cheese? \n\nZom-brie."
+noteDadJoke18ITAV,,,,,"Don't read it"
+noteDadJoke18ITAVDesc,,,,,"What branch of the military do zombies enlist in? \n\nThe Marine Corpse."
+noteDadJoke19ITAV,,,,,"Don't read it"
+noteDadJoke19ITAVDesc,,,,,"What snacks do zombies take hiking? \n\nEn-trails mix."
+noteDadJoke20ITAV,,,,,"Don't read it"
+noteDadJoke20ITAVDesc,,,,,"Who are zombies favorite people? \n\nBrians"
+noteDadJoke21ITAV,,,,,"Don't read it"
+noteDadJoke21ITAVDesc,,,,,"How much wood could a woodchuck chuck if a woodchuck could chuck wood? \n\nForget that, where did you see a wood chuck? I haven't eaten in days."
+noteDadJoke22ITAV,,,,,"Don't read it"
+noteDadJoke22ITAVDesc,,,,,"Why'd the chicken cross the road? \n\nIt was running from the moaning, dressed in grass, starving person chasing it with a wooden club."
+noteDadJoke23ITAV,,,,,"Don't read it"
+noteDadJoke23ITAVDesc,,,,,"Knock, knock. \n\n'Who is there?' the survivor asks. But no one is there, just hallucinations from the fever as infection sets in. She'll turn soon."
+noteDadJoke24ITAV,,,,,"Don't read it"
+noteDadJoke24ITAVDesc,,,,,"Why did the zombie have social anxiety? \n\nOnce bit, twice shy."
+noteDadJoke25ITAV,,,,,"Don't read it"
+noteDadJoke25ITAVDesc,,,,,"Why did no one go to the club? \n\nDead inside."
+noteDadJoke26ITAV,,,,,"Don't read it"
+noteDadJoke26ITAVDesc,,,,,"'Justice demands integrity.' -Bell Hooks. \n'The only way we have been taught to heal is to hurt.' -Alok V Menon. \n'Uhhhhhhhhhhhhhhgggggggnnnmmm.' -some zombie eating Steve from accounting. \n'AHHHHHHHHH!' -Steve from accounting."
+noteDadJoke27ITAV,,,,,"Don't read it"
+noteDadJoke27ITAVDesc,,,,,"What does Socrates, Emily Brontë, a zombie, and Steve from accounting have in common? \n\nThey are all dead."
+noteDadJoke28ITAV,,,,,"Don't read it"
+noteDadJoke28ITAVDesc,,,,,"Remember, as terrible as today is, at least it's better than tomorrow."
+noteDadJoke29ITAV,,,,,"Don't read it"
+noteDadJoke29ITAVDesc,,,,,"Why did the zombie leave his husband? \n\nFinished eating him. \n\nNow to find the kids."
+noteDadJoke30ITAV,,,,,"Don't read it"
+noteDadJoke30ITAVDesc,,,,,"Why did the zombie go to Shamways? \n\nSteve tripped over a bottle and made alot of noise. \n\nDammit Steve."
+noteDadJoke31ITAV,,,,,"Don't read it"
+noteDadJoke31ITAVDesc,,,,,"They used to say the only things certain in life is death and taxes. Surprise!"
+noteDadJoke32ITAV,,,,,"Don't read it"
+noteDadJoke32ITAVDesc,,,,,"How many zombies does it take to build a house? \n\nDepends on how you stack them. But honestly there are a lot better options."
+noteDadJoke33ITAV,,,,,"Don't read it"
+noteDadJoke33ITAVDesc,,,,,"How do you eat an elephant? \n\nOne bite at a time, just like that zombie ate Steve. I can still hear the screams, they keep me up at night."
+noteDadJoke34ITAV,,,,,"Don't read it"
+noteDadJoke34ITAVDesc,,,,,"What turns on a Demolisher? Not much, just gotta touch his heart from time to time."
+noteDadJoke35ITAV,,,,,"Don't read it"
+noteDadJoke35ITAVDesc,,,,,"What did the zombie get for showing up late to the party? \n\nThe cold shoulder."
+noteDadJoke36ITAV,,,,,"Don't read it"
+noteDadJoke36ITAVDesc,,,,,"This is a joke about construction. I'm still working on it."
+noteDadJoke37ITAV,,,,,"Don't read it"
+noteDadJoke37ITAVDesc,,,,,"I tell dad jokes, but I don't have any kids. I'm a faux pa."
+noteDadJoke38ITAV,,,,,"Don't read it"
+noteDadJoke38ITAVDesc,,,,,"Why did the picture go to jail? \n\nBecause it was framed."
+noteDadJoke39ITAV,,,,,"Don't read it"
+noteDadJoke39ITAVDesc,,,,,"The shovel was a ground-breaking invention."
+noteDadJoke40ITAV,,,,,"Don't read it"
+noteDadJoke40ITAVDesc,,,,,"I bought some shoes from a drug dealer. I don't know what he laced them with, but I was tripping all day!"
+noteDadJoke41ITAV,,,,,"Don't read it"
+noteDadJoke41ITAVDesc,,,,,"I thought about going on an all-acorn diet. But that's just nuts."
+noteDadJoke42ITAV,,,,,"Don't read it"
+noteDadJoke42ITAVDesc,,,,,"My friend keeps saying 'cheer up man it could be worse, you could be stuck underground in a hole full of water.' I know she means well."
+noteDadJoke43ITAV,,,,,"Don't read it"
+noteDadJoke43ITAVDesc,,,,,"I'm thinking about removing my spine. I feel like it’s only holding me back."
+noteDadJoke44ITAV,,,,,"Don't read it"
+noteDadJoke44ITAVDesc,,,,,"Why couldn't the bicycle stand up by itself? \n\nIt was two tired."
+noteDadJoke45ITAV,,,,,"Don't read it"
+noteDadJoke45ITAVDesc,,,,,"I wouldn't buy anything with velcro. It's a total rip-off."
+noteDadJoke46ITAV,,,,,"Don't read it"
+noteDadJoke46ITAVDesc,,,,,"Do you think glass coffins will be a success? \n\nRemains to be seen."
+noteDadJoke47ITAV,,,,,"Don't read it"
+noteDadJoke47ITAVDesc,,,,,"The mechanic was seen having snacks and some coffee in the garage. He must be on his brake!"
+noteDadJoke48ITAV,,,,,"Don't read it"
+noteDadJoke48ITAVDesc,,,,,"What was the name of the mechanic's favorite movie? Lord of the Springs."
+noteDadJoke49ITAV,,,,,"Don't read it"
+noteDadJoke49ITAVDesc,,,,,"Why is a robotics inventor never lonely? \n\nBecause she's always making new friends."
+noteDadJoke50ITAV,,,,,"Don't read it"
+noteDadJoke50ITAVDesc,,,,,"Why did the pig dump her boyfriend? \n\nBecause he was a real BOAR."
+noteDadJoke51ITAV,,,,,"Don't read it"
+noteDadJoke51ITAVDesc,,,,,"As a farmer, I hear lots of jokes about sheep. \n\nI'd tell them to my dog, but she'd herd them all."
+noteDadJoke52ITAV,,,,,"Don't read it"
+noteDadJoke52ITAVDesc,,,,,"Why shouldn’t you tell a secret on a farm? \n\nBecause the potatoes have eyes and the corn has ears."
+noteDadJoke53ITAV,,,,,"Don't read it"
+noteDadJoke53ITAVDesc,,,,,"What did the baby corn say to the mama corn? \n\nWhere's popcorn?"
+noteDadJoke54ITAV,,,,,"Don't read it"
+noteDadJoke54ITAVDesc,,,,,"What new crop did the farmer plant? \n\nBeets me."
+noteDadJoke55ITAV,,,,,"Don't read it"
+noteDadJoke55ITAVDesc,,,,,"No farm building should ever, under any circumstances, be used as a convent… \n\nBarn nun."
+noteDadJoke56ITAV,,,,,"Don't read it"
+noteDadJoke56ITAVDesc,,,,,"What do you call a Demolisher deer? \n\nBombi."
+noteDadJoke57ITAV,,,,,"Don't read it"
+noteDadJoke57ITAVDesc,,,,,"Why did the deer cross the road? \n\nTo prove he wasn’t a chicken."
+noteDadJoke58ITAV,,,,,"Don't read it"
+noteDadJoke58ITAVDesc,,,,,"If I would prefer mining for iron or lead? \n\nEither ore works!"
+noteDadJoke59ITAV,,,,,"Don't read it"
+noteDadJoke59ITAVDesc,,,,,"Ever seen a blacksmith join two metal sheets? \n\nIt's riveting"

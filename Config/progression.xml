@@ -111,7 +111,7 @@
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.2" tags="perkSmelterITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="workbench,chemistryStation,cementMixer"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="2,5" value="-0.2" tags="workbenchCrafting,cementMixerCrafting"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="resourceMilitaryFiber,generatorbank,electricwirerelay,switch,ceilingLight01_player,industrialLight01_player,industrialLight02_player,armorMiningHelmet,spotlightPlayer,speaker,pressureplate,pressureplateLong,electrictimerrelay,motionsensor,LightStreetLightClassicITAV,signShopOpenLightITAV,LightDeskLampLightITAV,LightTableLampLightITAV,LightTableLampLightCenteredITAV,LightPorchLight01ITAV,LightPorchLight04BrassITAV,LightPorchLight04ITAV,LightCeilingLight02ITAV,LightCeilingLight02BrassITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="resourceMilitaryFiber,generatorbank,electricwirerelay,switch,ceilingLight01_player,industrialLight01_player,industrialLight02_player,armorMiningHelmet,spotlightPlayer,speaker,pressureplate,pressureplateLong,electrictimerrelay,motionsensor,LightStreetLightClassicITAV,signShopOpenLightITAV,LightDeskLampLightITAV,LightTableLampLightITAV,LightTableLampLightCenteredITAV,LightPorchLight01ITAV,LightPorchLight04BrassITAV,LightPorchLight04ITAV,LightCeilingLight02ITAV,LightCeilingLight02BrassITAV,wirelessRelayFuseboxLightITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="batterybank,meleeToolRepairT3Nailgun,garageDoorMetal_v1Powered,garageDoorIndustrial_Powered,metalReinforcedWoodDrawBridgePowered,vaultHatch_v3_Powered,vaultDoor03_Powered"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="toolForgeCrucible,resourceForgedSteel"/>
 
@@ -173,7 +173,8 @@
 		
 	<!-- Motherlode effects to MinerITAV -->
 		<effect_group>
-			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value="3.6,5.8" tags="oreWoodHarvest"/> <!-- value=".2,1" -->
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="oreWoodHarvest" /> <!-- value=".2,1" -->
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value="2.2,4.2" tags="rockClayHarvest"/>
 			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value="-.1,-.4" tags="Harvesting">
 				<requirement name="HoldingItemHasTags" tags="perkMinerITAV"/>
 			</passive_effect>
@@ -345,7 +346,8 @@
 
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,5" value="1,5" tags="perkArmorerITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="armorIronHelmet,armorIronChest,armorIronGloves,armorIronLegs,armorIronBoots,armorLeatherHood,armorLeatherChest,armorLeatherGloves,armorLeatherPants,armorLeatherBoots,armorSteelBoots,armorSteelChest,armorSteelGloves,armorSteelLegs,armorSteelHelmet,armorMilitaryBoots,armorMilitaryStealthBoots,armorMilitaryGloves,armorMilitaryHelmet,armorMilitaryLegs,armorMilitaryVest,gunBowT1WoodenBow,gunBowT3CompoundBow,gunBowT1IronCrossbow,gunBowT3CompoundCrossbow,gunHandgunT1Pistol,gunHandgunT3SMG5,gunHandgunT2Magnum44,gunHandgunT3DesertVulture,gunShotgunT1DoubleBarrel,gunShotgunT2PumpShotgun,gunShotgunT3AutoShotgun,gunRifleT1HuntingRifle,gunRifleT2LeverActionRifle,gunRifleT3SniperRifle,gunMGT1AK47,gunMGT2TacticalAR,gunMGT3M60,gunExplosivesT3RocketLauncher,meleeWpnBladeT1HuntingKnife,meleeWpnBladeT1CandyKnife,meleeWpnBladeT3Machete,meleeWpnClubT1BaseballBat,meleeWpnClubT1CandyClub,meleeWpnClubT3SteelClub,meleeWpnBatonT2StunBaton,meleeWpnSpearT1IronSpear,meleeWpnSpearT3SteelSpear,meleeWpnSledgeT1IronSledgehammer,meleeWpnSledgeT3SteelSledgehammer,meleeWpnKnucklesT1IronKnuckles,meleeWpnKnucklesT3SteelKnuckles"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="workbench,armorIronHelmet,armorIronChest,armorIronGloves,armorIronLegs,armorIronBoots,armorLeatherHood,armorLeatherChest,armorLeatherGloves,armorLeatherPants,armorLeatherBoots,armorSteelBoots,armorSteelChest,armorSteelGloves,armorSteelLegs,armorSteelHelmet,armorMilitaryBoots,armorMilitaryStealthBoots,armorMilitaryGloves,armorMilitaryHelmet,armorMilitaryLegs,armorMilitaryVest,gunBowT1WoodenBow,gunBowT1IronCrossbow,gunHandgunT1Pistol,gunHandgunT2Magnum44,gunShotgunT1DoubleBarrel,gunShotgunT2PumpShotgun,gunRifleT1HuntingRifle,gunRifleT2LeverActionRifle,gunMGT1AK47,gunMGT2TacticalAR,meleeWpnBladeT1HuntingKnife,meleeWpnBladeT1CandyKnife,meleeWpnClubT1BaseballBat,meleeWpnClubT1CandyClub,meleeWpnBatonT2StunBaton,meleeWpnSpearT1IronSpear,meleeWpnSledgeT1IronSledgehammer,meleeWpnKnucklesT1IronKnuckles"/>
+			<!--,gunHandgunT3SMG5,meleeWpnKnucklesT3SteelKnuckles,gunHandgunT3DesertVulture,gunShotgunT3AutoShotgun,gunBowT3CompoundBow,gunRifleT3SniperRifle,gunMGT3M60,gunBowT3CompoundCrossbow,gunExplosivesT3RocketLauncher,meleeWpnSpearT3SteelSpear,meleeWpnBladeT3Machete,meleeWpnClubT3SteelClub,meleeWpnSledgeT3SteelSledgehammer -->
 
 			<!-- Stamina/mobility are handled in buffs (buffStatusCheck02) -->
 			<effect_description level="1" desc_key="perkArmorerRank1DescITAV" long_desc_key="perkArmorerRank1LongDescITAV"/>
@@ -555,7 +557,7 @@
 
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkRoboticsITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunBotT1JunkSledge,generatorbank,electricwirerelay,switch,pressureplate,pressureplateLong,electrictimerrelay,motionsensor,dartTrap,tripwirepost,electricfencepost,bladeTrap"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="workbench,gunBotT1JunkSledge,generatorbank,electricwirerelay,switch,pressureplate,pressureplateLong,electrictimerrelay,motionsensor,dartTrap,tripwirepost,electricfencepost,bladeTrap,wirelessRelayFuseboxLightITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="shotgunTurret,gunBotT2JunkTurret"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="autoTurret,gunBotT3JunkDrone"/>
 			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5" value=".125,.25,.375,.5,.5" tags="turretMelee"/>
@@ -611,11 +613,11 @@
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkRunnerITAV"/><!-- fake crafting perk that is used to scale resources or quality like on carBattery -->
 
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="vehicleWheels,vehicleBicycleChassis,vehicleBicycleHandlebars,crushedCars"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="workbench,vehicleWheels,vehicleBicycleChassis,vehicleBicycleHandlebars,crushedCars"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars,powerizersBabyITAV,workBootsBabyITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="resourceOil"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="ammoGasCanBundle,vehicleMotorcycleChassis,vehicleMotorcycleHandlebars"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="vehicle4x4TruckChassis,vehicle4x4TruckAccessories,powerizersITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="vehicle4x4TruckChassis,vehicle4x4TruckAccessories,powerizersITAV,workBootsITAV"/>
 
 			<effect_description level="1" desc_key="perkRunnerITAVRank1Desc" long_desc_key="perkRunnerITAVRank1LongDesc"/>
 			<effect_description level="2" desc_key="perkRunnerITAVRank2Desc" long_desc_key="perkRunnerITAVRank2LongDesc"/>

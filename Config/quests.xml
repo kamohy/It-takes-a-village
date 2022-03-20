@@ -48,6 +48,39 @@
 		<reward type="LootItem" id="groupQuestAmmoCraftingBundle" ischosen="true" value="6" />
 </append>
 
+<setattribute xpath="//quest[@id='tier1_fetch']/reward[@id='casinoCoin']" name="value">70</setattribute>
+<setattribute xpath="//quest[@id='tier2_fetch']/reward[@id='casinoCoin']" name="value">107</setattribute>
+<setattribute xpath="//quest[@id='tier3_fetch']/reward[@id='casinoCoin']" name="value">160</setattribute>
+<setattribute xpath="//quest[@id='tier4_fetch']/reward[@id='casinoCoin']" name="value">200</setattribute>
+<setattribute xpath="//quest[@id='tier5_fetch']/reward[@id='casinoCoin']" name="value">400</setattribute>
+<setattribute xpath="//quest[@id='tier6_fetch']/reward[@id='casinoCoin']" name="value">1200</setattribute>
+
+<setattribute xpath="//quest[@id='tier1_clear']/reward[@id='casinoCoin']" name="value">160</setattribute>
+<setattribute xpath="//quest[@id='tier2_clear']/reward[@id='casinoCoin']" name="value">300</setattribute>
+<setattribute xpath="//quest[@id='tier3_clear']/reward[@id='casinoCoin']" name="value">360</setattribute>
+<setattribute xpath="//quest[@id='tier4_clear']/reward[@id='casinoCoin']" name="value">410</setattribute>
+<setattribute xpath="//quest[@id='tier5_clear']/reward[@id='casinoCoin']" name="value">815</setattribute>
+<setattribute xpath="//quest[@id='tier6_clear']/reward[@id='casinoCoin']" name="value">1440</setattribute>
+
+<setattribute xpath="//quest[@id='tier2_restore_power']/reward[@id='casinoCoin']" name="value">210</setattribute>
+<setattribute xpath="//quest[@id='tier3_restore_power']/reward[@id='casinoCoin']" name="value">400</setattribute>
+<setattribute xpath="//quest[@id='tier4_restore_power']/reward[@id='casinoCoin']" name="value">460</setattribute>
+
+<setattribute xpath="//quest[@id='tier2_fetch_clear']/reward[@id='casinoCoin']" name="value">280</setattribute>
+<setattribute xpath="//quest[@id='tier3_fetch_clear']/reward[@id='casinoCoin']" name="value">400</setattribute>
+<setattribute xpath="//quest[@id='tier4_fetch_clear']/reward[@id='casinoCoin']" name="value">460</setattribute>
+<setattribute xpath="//quest[@id='tier5_fetch_clear']/reward[@id='casinoCoin']" name="value">920</setattribute>
+<setattribute xpath="//quest[@id='tier6_fetch_clear']/reward[@id='casinoCoin']" name="value">1600</setattribute>
+
+<setattribute xpath="//quest[@id='tier1_buried_supplies']/reward[@id='casinoCoin']" name="value">112</setattribute>
+<setattribute xpath="//quest[@id='tier2_buried_supplies']/reward[@id='casinoCoin']" name="value">188</setattribute>
+<setattribute xpath="//quest[@id='tier3_buried_supplies']/reward[@id='casinoCoin']" name="value">264</setattribute>
+
+<setattribute xpath="//quest[@id='quest_tier1complete']/reward[@id='casinoCoin']" name="value">400</setattribute>
+<setattribute xpath="//quest[@id='quest_tier2complete']/reward[@id='casinoCoin']" name="value">400</setattribute>
+<setattribute xpath="//quest[@id='quest_tier3complete']/reward[@id='casinoCoin']" name="value">400</setattribute>
+<setattribute xpath="//quest[@id='quest_tier4complete']/reward[@id='casinoCoin']" name="value">400</setattribute>
+<setattribute xpath="//quest[@id='quest_tier5complete']/reward[@id='casinoCoin']" name="value">400</setattribute>
 
 
  <!-- Remove/replace treasure map rewards? -->
@@ -135,9 +168,9 @@
 		<reward type="Item" id="bookChemistITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookRoboticsITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookRunnerITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Quest" id="quest_ProfCont">
+		<!-- <reward type="Quest" id="quest_ProfCont">
 			<property name="chainquest" value="false"/>
-		</reward>
+		</reward> -->
 	</quest>
 	
 	<!-- My SECOND Profession - Get offer explaining Trade Skills, talk to trader who rewards Trade Profession books -->
@@ -213,7 +246,7 @@
 	
 	
 <!-- Follow-up quest to First Profession -->
-		<quest id="quest_ProfCont">
+	<quest id="quest_ProfCont">
 		<property name="group_name_key" value="profession_startup"/>
 		<property name="name" value="Setup your Store"/>
 		<property name="subtitle" value="Setup your Store"/>
@@ -240,8 +273,332 @@
 		
 	</quest>
 	
-	
+<!--          Profession specific Follow-up quests to First Profession             -->	
 
+	<quest id="quest_ProfContSmelter">
+		<property name="group_name_key" value="profession_startup"/>
+		<property name="name_key" value="quest_ProfCont_name"/>
+		<property name="subtitle_key" value="quest_ProfCont_subtitle"/>
+		<property name="description_key" value="quest_ProfCont_description"/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="Offer???"/>
+		<property name="shareable" value="false"/>
+		<property name="statement_key" value="quest_ProfCont_statement" />
+		<property name="response_key" value="quest_ProfCont_response" />
+		<property name="return_to_quest_giver" value="true" />
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="repeatable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_ProfCont_completion" />
+		<property name="reward_choices_count" value="2" /> 
+		
+		<action type="ShowTip" value="quest_ProfCont_description">
+			<property name="delay" value="15"/>
+		</action>	
+		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>		
+		<objective type="Craft" id="resourceForgedIron" value="10" phase="2" />		
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Item" id="workBootsBabyITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="powerizersBabyITAV" ischosen="true" isfixed="true" value="1"/>				
+		<reward type="Exp" value="500"/>		
+	</quest>
+
+
+	<quest id="quest_ProfContMiner">
+		<property name="group_name_key" value="profession_startup"/>
+		<property name="name_key" value="quest_ProfCont_name"/>
+		<property name="subtitle_key" value="quest_ProfCont_subtitle"/>
+		<property name="description_key" value="quest_ProfCont_description"/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="Offer???"/>
+		<property name="shareable" value="false"/>
+		<property name="statement_key" value="quest_ProfCont_statement" />
+		<property name="response_key" value="quest_ProfCont_response" />
+		<property name="return_to_quest_giver" value="true" />
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="repeatable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_ProfCont_completion" />
+		<property name="reward_choices_count" value="2" /> 
+		
+		<action type="ShowTip" value="quest_ProfCont_description">
+			<property name="delay" value="15"/>
+		</action>
+		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>		
+		<objective type="FetchKeep" id="resourceScrapIron" value="120" phase="2" />
+		<objective type="FetchKeep" id="resourceClayLump" value="60" phase="2" />
+		<objective type="Craft" id="resourceCobblestones" value="40" phase="2" />
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Item" id="workBootsBabyITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="powerizersBabyITAV" ischosen="true" isfixed="true" value="1"/>				
+		<reward type="Exp" value="500"/>		
+	</quest>
+	
+	
+	<quest id="quest_ProfContCook">
+		<property name="group_name_key" value="profession_startup"/>
+		<property name="name_key" value="quest_ProfCont_name"/>
+		<property name="subtitle_key" value="quest_ProfCont_subtitle"/>
+		<property name="description_key" value="quest_ProfCont_description"/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="Offer???"/>
+		<property name="shareable" value="false"/>
+		<property name="statement_key" value="quest_ProfCont_statement" />
+		<property name="response_key" value="quest_ProfCont_response" />
+		<property name="return_to_quest_giver" value="true" />
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="repeatable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_ProfCont_completion" />
+		<property name="reward_choices_count" value="2" /> 
+		
+		<action type="ShowTip" value="quest_ProfCont_description">
+			<property name="delay" value="15"/>
+		</action>			
+		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<objective type="Craft" id="foodBaconAndEggs" value="10" phase="2" />
+		<objective type="Craft" id="drinkJarRedTea" value="10" phase="2" />
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Item" id="workBootsBabyITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="powerizersBabyITAV" ischosen="true" isfixed="true" value="1"/>				
+		<reward type="Exp" value="500"/>		
+	</quest>
+	
+	
+	<quest id="quest_ProfContHunter">
+		<property name="group_name_key" value="profession_startup"/>
+		<property name="name_key" value="quest_ProfCont_name"/>
+		<property name="subtitle_key" value="quest_ProfCont_subtitle"/>
+		<property name="description_key" value="quest_ProfCont_description"/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="Offer???"/>
+		<property name="shareable" value="false"/>
+		<property name="statement_key" value="quest_ProfCont_statement" />
+		<property name="response_key" value="quest_ProfCont_response" />
+		<property name="return_to_quest_giver" value="true" />
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="repeatable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_ProfCont_completion" />
+		<property name="reward_choices_count" value="2" /> 
+		
+		<action type="ShowTip" value="quest_ProfCont_description">
+			<property name="delay" value="15"/>
+		</action>			
+		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<objective type="FetchKeep" id="foodRawMeat" value="50" phase="2" />
+		<objective type="FetchKeep" id="foodEgg" value="10" phase="2" />
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Item" id="workBootsBabyITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="powerizersBabyITAV" ischosen="true" isfixed="true" value="1"/>				
+		<reward type="Exp" value="500"/>		
+	</quest>
+	
+	<quest id="quest_ProfContFarmer">
+		<property name="group_name_key" value="profession_startup"/>
+		<property name="name_key" value="quest_ProfCont_name"/>
+		<property name="subtitle_key" value="quest_ProfCont_subtitle"/>
+		<property name="description_key" value="quest_ProfCont_description"/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="Offer???"/>
+		<property name="shareable" value="false"/>
+		<property name="statement_key" value="quest_ProfCont_statement" />
+		<property name="response_key" value="quest_ProfCont_response" />
+		<property name="return_to_quest_giver" value="true" />
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="repeatable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_ProfCont_completion" />
+		<property name="reward_choices_count" value="2" /> 
+		
+		<action type="ShowTip" value="quest_ProfCont_description">
+			<property name="delay" value="15"/>
+		</action>			
+		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<objective type="FetchKeep" id="resourceCropChrysanthemumPlant" value="20" phase="2" />
+		<objective type="Craft" id="farmPlotBlockVariantHelper" value="4" phase="2" /> <!--frameShapes:VariantHelper-->
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Item" id="workBootsBabyITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="powerizersBabyITAV" ischosen="true" isfixed="true" value="1"/>				
+		<reward type="Exp" value="500"/>		
+	</quest>
+	
+	
+	<quest id="quest_ProfContArmorer">
+		<property name="group_name_key" value="profession_startup"/>
+		<property name="name_key" value="quest_ProfCont_name"/>
+		<property name="subtitle_key" value="quest_ProfCont_subtitle"/>
+		<property name="description_key" value="quest_ProfCont_description"/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="Offer???"/>
+		<property name="shareable" value="false"/>
+		<property name="statement_key" value="quest_ProfCont_statement" />
+		<property name="response_key" value="quest_ProfCont_response" />
+		<property name="return_to_quest_giver" value="true" />
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="repeatable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_ProfCont_completion" />
+		<property name="reward_choices_count" value="2" /> 
+		
+		<action type="ShowTip" value="quest_ProfCont_description">
+			<property name="delay" value="15"/>
+		</action>			
+		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<objective type="Craft" id="workbench" value="1" phase="2" />
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Item" id="workBootsBabyITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="powerizersBabyITAV" ischosen="true" isfixed="true" value="1"/>				
+		<reward type="Exp" value="500"/>		
+	</quest>
+	
+	<quest id="quest_ProfContChemist">
+		<property name="group_name_key" value="profession_startup"/>
+		<property name="name_key" value="quest_ProfCont_name"/>
+		<property name="subtitle_key" value="quest_ProfCont_subtitle"/>
+		<property name="description_key" value="quest_ProfCont_description"/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="Offer???"/>
+		<property name="shareable" value="false"/>
+		<property name="statement_key" value="quest_ProfCont_statement" />
+		<property name="response_key" value="quest_ProfCont_response" />
+		<property name="return_to_quest_giver" value="true" />
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="repeatable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_ProfCont_completion" />
+		<property name="reward_choices_count" value="2" /> 
+		
+		<action type="ShowTip" value="quest_ProfCont_description">
+			<property name="delay" value="15"/>
+		</action>			
+		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<objective type="Craft" id="chemistryStation" value="1" phase="2" />
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Item" id="workBootsBabyITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="powerizersBabyITAV" ischosen="true" isfixed="true" value="1"/>				
+		<reward type="Exp" value="500"/>		
+	</quest>	
+	
+	<quest id="quest_ProfContRobotics">
+		<property name="group_name_key" value="profession_startup"/>
+		<property name="name_key" value="quest_ProfCont_name"/>
+		<property name="subtitle_key" value="quest_ProfCont_subtitle"/>
+		<property name="description_key" value="quest_ProfCont_description"/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="Offer???"/>
+		<property name="shareable" value="false"/>
+		<property name="statement_key" value="quest_ProfCont_statement" />
+		<property name="response_key" value="quest_ProfCont_response" />
+		<property name="return_to_quest_giver" value="true" />
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="repeatable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_ProfCont_completion" />
+		<property name="reward_choices_count" value="2" /> 
+		
+		<action type="ShowTip" value="quest_ProfCont_description">
+			<property name="delay" value="15"/>
+		</action>			
+		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<objective type="Craft" id="workbench" value="1" phase="2" />
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Item" id="workBootsBabyITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="powerizersBabyITAV" ischosen="true" isfixed="true" value="1"/>				
+		<reward type="Exp" value="500"/>		
+	</quest>
+
+	<quest id="quest_ProfContRunner">
+		<property name="group_name_key" value="profession_startup"/>
+		<property name="name_key" value="quest_ProfCont_name"/>
+		<property name="subtitle_key" value="quest_ProfCont_subtitle"/>
+		<property name="description_key" value="quest_ProfCont_description"/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="Offer???"/>
+		<property name="shareable" value="false"/>
+		<property name="statement_key" value="quest_ProfCont_statement" />
+		<property name="response_key" value="quest_ProfCont_response" />
+		<property name="return_to_quest_giver" value="true" />
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="repeatable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_ProfCont_completion" />
+		<property name="reward_choices_count" value="2" /> 
+		
+		<action type="ShowTip" value="quest_ProfCont_description">
+			<property name="delay" value="15"/>
+		</action>			
+		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<objective type="FetchKeep" id="workbench" value="1" phase="2" />
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Item" id="workBootsBabyITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="powerizersBabyITAV" ischosen="true" isfixed="true" value="1"/>				
+		<reward type="Exp" value="500"/>		
+	</quest>
+	
 </append>
 
 </configs>

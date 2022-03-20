@@ -42,9 +42,11 @@
 <setattribute xpath="//item[starts-with(@name, 'drug')]/property[@name='Stacknumber']" name="value">500</setattribute>
 <setattribute xpath="//item[starts-with(@name, 'ammo') and not(starts-with(@name, 'ammoBundle')) and not(starts-with(@name, 'ammoGasCan'))]/property[@name='Stacknumber']" name="value">600</setattribute>
 
+<!-- Reduces block damage to 10 for ranged weapons/ammo -->
+<remove xpath="//item[(contains(@name, 'ammo') and not(contains(@name, 'Vomit')) or (starts-with(@name, 'gun') and not(contains(@name, 'Admin'))) or starts-with(@name, 'thrown'))]/effect_group/passive_effect[@name='BlockDamage']"/>
 
 <!-- Adding small chance of dysentery to canned foods -->
-<append xpath="//item[contains(@name, 'foodCanBeef')]/effect_group[@name='Food Tier 0']">
+<append xpath="//item[contains(@name, 'foodCan')]/effect_group[@name='Food Tier 0']">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="2"/><display_value name="dDysenteryRisk" value=".02"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
@@ -121,6 +123,22 @@
 <setattribute xpath="items/item[starts-with(@name, 'gun') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Bot')) and not(contains(@name, 'Pipe')) and not(contains(@name, 'Primitive')) and not(contains(@name, 'Parts'))]/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
 <setattribute xpath="items/item[contains(@name, 'Wpn') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Parts')) and not(contains(@name, 'T0'))]/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
 
+<setattribute xpath="//item[@name='gunExplosivesT3RocketLauncher']/property[@name='UnlockedBy']" name="value">gunExplosivesT3RocketLauncherSchematic</setattribute>
+<setattribute xpath="//item[@name='gunHandgunT3DesertVulture']/property[@name='UnlockedBy']" name="value">gunHandgunT3DesertVultureSchematic</setattribute>
+<setattribute xpath="//item[@name='gunHandgunT3SMG5']/property[@name='UnlockedBy']" name="value">gunHandgunT3SMG5Schematic</setattribute>
+<setattribute xpath="//item[@name='gunMGT3M60']/property[@name='UnlockedBy']" name="value">gunMGT3M60Schematic</setattribute>
+<setattribute xpath="//item[@name='gunRifleT3SniperRifle']/property[@name='UnlockedBy']" name="value">gunRifleT3SniperRifleSchematic</setattribute>
+<setattribute xpath="//item[@name='gunShotgunT3AutoShotgun']/property[@name='UnlockedBy']" name="value">gunShotgunT3AutoShotgunSchematic</setattribute>
+<setattribute xpath="//item[@name='gunBowT3CompoundBow']/property[@name='UnlockedBy']" name="value">gunBowT3CompoundBowSchematic</setattribute>
+<setattribute xpath="//item[@name='gunBowT3CompoundCrossbow']/property[@name='UnlockedBy']" name="value">gunBowT3CompoundCrossbowSchematic</setattribute>
+<setattribute xpath="//item[@name='meleeWpnBladeT3Machete']/property[@name='UnlockedBy']" name="value">meleeWpnBladeT3MacheteSchematic</setattribute>
+<setattribute xpath="//item[@name='meleeWpnKnucklesT3SteelKnuckles']/property[@name='UnlockedBy']" name="value">meleeWpnKnucklesT3SteelKnucklesSchematic</setattribute>
+<setattribute xpath="//item[@name='meleeWpnClubT3SteelClub']/property[@name='UnlockedBy']" name="value">meleeWpnClubT3SteelClubSchematic</setattribute>
+<setattribute xpath="//item[@name='meleeWpnSpearT3SteelSpear']/property[@name='UnlockedBy']" name="value">meleeWpnSpearT3SteelSpearSchematic</setattribute>
+<setattribute xpath="//item[@name='meleeWpnSledgeT3SteelSledgehammer']/property[@name='UnlockedBy']" name="value">meleeWpnSledgeT3SteelSledgehammerSchematic</setattribute>
+
+
+
 <!-- WEAPONSMITH -->
 <!-- <setattribute xpath="items/item[starts-with(@name, 'gun') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Bot')) and not(contains(@name, 'Pipe')) and not(contains(@name, 'Primitive')) and not(contains(@name, 'Parts'))]/property[@name='UnlockedBy']" name="value">perkWeaponsmithITAV</setattribute>
 <setattribute xpath="items/item[contains(@name, 'Wpn') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Parts')) and not(contains(@name, 'T0'))]/property[@name='UnlockedBy']" name="value">perkWeaponsmithITAV</setattribute> -->
@@ -170,7 +188,7 @@
 	<property name="CustomIcon" value="bundleBooks"/>
 		<property name="CustomIconTint" value="ffffff" />
 	<property name="DescriptionKey" value="qb_MyNextProfessionITAV_desc"/>
-	<property name="EconomicValue" value="400"/>
+	<property name="EconomicValue" value="100"/>
 	<property name="Stacknumber" value="1"/>
 	<property name="SellableToTrader" value="false" />
 	<property class="Action0">
@@ -188,7 +206,7 @@
     <property name="Extends" value="schematicMaster"/>
     <property name="CustomIcon" value="bookMasterITAV"/> <!-- Required or Master icon is used -->
     <property name="DescriptionKey" value="perkFiremansAlmanacHeatLongDesc"/>
-    <property name="Stacknumber" value="2"/>
+    <property name="Stacknumber" value="1"/>
     <property name="EconomicValue" value="500"/>
     <property name="Group" value="Books,Mods,BooksOnly"/>
 	<property name="SellableToTrader" value="false" />
@@ -214,11 +232,13 @@
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSmelterITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="LT" value="1" />
-		</triggered_effect> 
+		</triggered_effect> 		
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_SmelterITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkSmelterITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntSmelterITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntSmelterITAVTooltip"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>		
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>	
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="ITAV_start"/>		
     </effect_group>
 </item>
 
@@ -236,10 +256,12 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMinerITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkMinerITAV" operation="LT" value="1" />
 		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_MinerITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkMinerITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntMinerITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntMinerITAVTooltip"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="ITAV_start"/>
 	</effect_group>
 </item>
 
@@ -257,10 +279,12 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHunterITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="LT" value="1" />
 		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_HunterITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkHunterITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntHunterITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntHunterITAVTooltip"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="ITAV_start"/>
     </effect_group>
 </item>
 
@@ -278,10 +302,12 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkCookITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkCookITAV" operation="LT" value="1" />
 		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_CookITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkCookITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntCookITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntCookITAVTooltip"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="ITAV_start"/>
     </effect_group>
 </item>
 
@@ -300,10 +326,12 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkArmorerITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkArmorerITAV" operation="LT" value="1" />
 		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_ArmorerITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkArmorerITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntArmorerITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntArmorerITAVTooltip"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="ITAV_start"/>
     </effect_group>
 </item>
 
@@ -343,10 +371,12 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkFarmerITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkFarmerITAV" operation="LT" value="1" />
 		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_FarmerITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkFarmerITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntFarmerITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntFarmerITAVTooltip"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="ITAV_start"/>
     </effect_group>
 </item>
 
@@ -364,10 +394,12 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkChemistITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkChemistITAV" operation="LT" value="1" />
 		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_ChemistITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkChemistITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntChemistITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntChemistITAVTooltip"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="ITAV_start"/>
     </effect_group>
 </item>
 
@@ -385,10 +417,12 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRoboticsITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkRoboticsITAV" operation="LT" value="1" />
 		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_RoboticsITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkRoboticsITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntRoboticsITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntRoboticsITAVTooltip"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="ITAV_start"/>
     </effect_group>
 </item>
 
@@ -406,14 +440,18 @@
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRunnerITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkRunnerITAV" operation="LT" value="1" />
 		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_RunnerITAV" />	
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkRunnerITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntRunnerITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntRunnerITAVTooltip"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="ITAV_start"/>
     </effect_group>
 </item>
 
-<!-- Baby Rocket boots -->
+
+<!-- ITAV boots -->
+
 <item name="rocketBootsITAV">
     <property name="Extends" value="apparelGothBoots" param1="DescriptionKey"/>
     <property name="CreativeMode" value="Player"/>
@@ -441,46 +479,10 @@
     </effect_group>
 </item>
 
-
-<!--<item name="powerizersITAV">
-    <property name="Extends" value="armorLeatherMaster" param1="DescriptionKey"/>
-	<property name="Tags" value="lowerbody,feet,armor,armorFeet,lightArmor,lightArmorPenalty,canHaveCosmetic,lightArmorDeg"/>
-	<property name="EquipSlot" value="Feet"/>
-	<property name="DisplayType" value="armorLight"/>
-    <property name="CreativeMode" value="Player"/>
-    <property name="CustomIcon" value="apparelPlantFiberShoes"/>
-    <property name="CustomIconTint" value="90,84,72"/>
-	<property name="DescriptionKey" value="powerizersITAVDesc"/>
-    <property name="Stacknumber" value="1"/>
-    <property name="Tags" value="lowerbody,feet,clothing,noMods"/>
-    <property name="UMA.Overlay0Tint" value="90,84,72"/>
-	<property class="UMA">
-		<property name="Mesh" value="plant_fiber_shoes"/>
-		<property name="Overlay0" value="fiberCloth_shoes"/>
-		<property name="Layer" value="1"/>
-		<property name="UISlot" value="Footwear"/>
-	</property>
-    <property name="ShowQuality" value="true"/>
-    <property name="Group" value="Armor,TCArmor"/>
-	<property name="UnlockedBy" value="perkRoboticsITAV"/>
-    <effect_group tiered="false">
-        <passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="500,750" tier="1,6"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
-		<passive_effect name="Mobility" operation="perc_add" value="-.04"/> -->
-        <!-- <passive_effect name="JumpStrength" operation="perc_add" value="1"/> --> 
-		<!--  <passive_effect name="StaminaLoss" operation="perc_add" value="-.75" tags="jumping"/>
-
-        <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffDontBreakMyLeg"/>
-        <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffDontBreakMyLeg"/>
-        <triggered_effect trigger="onSelfJump" action="AddBuff" buff="buffJumpJetsAirborne"/>
-    </effect_group>
-</item> -->
-
-
 <item name="powerizersITAV">
 	<property name="Extends" value="apparelPlantFiberMaster" param1="CustomIcon"/>
 	<property name="DescriptionKey" value="powerizersITAVDesc"/>
+	<property name="DisplayType" value="powerizersITAV"/>
 	<property name="CustomIcon" value="apparelGothBoots"/>
 	<property name="CustomIconTint" value="243,252,33"/>
 	<property name="UMA.Overlay0Tint" value="243,252,33"/>
@@ -499,41 +501,570 @@
 		<passive_effect name="HypothermalResist" operation="base_add" value="0"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="0"/>
 		<passive_effect name="StaminaLoss" operation="perc_add" value="-.75" tags="jumping"/>
-
+		<display_value name="dRunSpeed" value=".85"/>
+		<display_value name="dStaminaChangeOT" value="-.75"/>
         <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffDontBreakMyLeg"/>
         <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffDontBreakMyLeg"/>
         <triggered_effect trigger="onSelfJump" action="AddBuff" buff="buffJumpJetsAirborne"/>
 	</effect_group>
 </item>
 
-<item name="rocketBoots3ITAV">
-    <property name="Extends" value="apparelHazmatBoots" param1="DescriptionKey"/>
-    <property name="CreativeMode" value="Player"/>
-    <property name="CustomIcon" value="apparelHazmatBoots"/>
-    <property name="CustomIconTint" value="2,110,255"/>
-    <property name="ItemTypeIcon" value="computer"/>
-    <property name="Stacknumber" value="1"/>
-    <property name="Tags" value="lowerbody,feet,clothing,admin,noMods"/>
-    <property name="UMA.Overlay0Tint" value="255,0,255"/>
-    <property name="ShowQuality" value="true"/>
-    <property name="Group" value="Special Items"/>
-    <effect_group tiered="false">
-        <passive_effect name="ModSlots" operation="base_set" value="0"/>
-        <passive_effect name="DegradationMax" operation="base_set" value="9999" tags="admin"/>
-        <passive_effect name="DegradationPerUse" operation="base_set" value="0" tags="admin"/>
-
-        <passive_effect name="JumpStrength" operation="perc_add" value="1"/>
-        <passive_effect name="StaminaLoss" operation="perc_add" value="-.75" tags="jumping"/>
-
+<item name="powerizersBabyITAV">
+	<property name="Extends" value="apparelPlantFiberMaster" param1="CustomIcon"/>
+	<property name="DisplayType" value="powerizersITAV"/>
+	<property name="DescriptionKey" value="powerizersITAVDesc"/>
+	<property name="CustomIcon" value="apparelGothBoots"/>
+	<property name="CustomIconTint" value="33,212,252"/>
+	<property name="UMA.Overlay0Tint" value="33,212,252"/>
+	<property name="UnlockedBy" value="perkRunnerITAV"/>
+	<property name="Group" value="Clothing"/>
+	<property name="Tags" value="feet,clothing,canHaveCosmetic,noMods"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property class="UMA">
+		<property name="Mesh" value="goth_boots"/>
+		<property name="Overlay0" value="goth_boots"/> 
+		<property name="Layer" value="1"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="HypothermalResist" operation="base_add" value="0"/>
+		<passive_effect name="HyperthermalResist" operation="base_add" value="0"/>
+		<passive_effect name="StaminaLoss" operation="perc_add" value="-.35" tags="jumping"/>
+		<display_value name="dRunSpeed" value=".40"/>
+		<display_value name="dStaminaChangeOT" value="-.35"/>
         <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffDontBreakMyLeg"/>
         <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffDontBreakMyLeg"/>
-
-        <triggered_effect trigger="onSelfJump" action="PlaySound" sound="m136_fire" play_in_head="false"/>
         <triggered_effect trigger="onSelfJump" action="AddBuff" buff="buffJumpJetsAirborne2ITAV"/>
-    </effect_group>
+	</effect_group>
+</item>
+
+<item name="workBootsITAV">
+	<property name="Extends" value="apparelPlantFiberMaster" param1="CustomIcon"/>
+	<property name="DisplayType" value="workBootsITAV"/>
+	<property name="DescriptionKey" value="workBootsITAVDesc"/>
+	<property name="CustomIcon" value="armorMilitaryBoots"/>
+	<property name="CustomIconTint" value="243,252,33"/>
+	<property name="UMA.Overlay0Tint" value="243,252,33"/>
+	<property name="UnlockedBy" value="perkRunnerITAV"/>
+	<property name="Group" value="Clothing"/>
+	<property name="Tags" value="feet,clothing,canHaveCosmetic,noMods"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_boots"/>
+		<property name="Overlay0" value="armor_kevlar_boots"/> 
+		<property name="Layer" value="1"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+	<effect_group tiered="false">
+		<display_value name="dStaminaRegen" value=".15"/>
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="HypothermalResist" operation="base_add" value="0"/>
+		<passive_effect name="HyperthermalResist" operation="base_add" value="0"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value=".15" />
+	</effect_group>
+</item>
+
+<item name="workBootsBabyITAV">
+	<property name="Extends" value="apparelPlantFiberMaster" param1="CustomIcon"/>
+	<property name="DisplayType" value="workBootsITAV"/>
+	<property name="DescriptionKey" value="workBootsBabyITAVDesc"/>
+	<property name="CustomIcon" value="armorMilitaryBoots"/>
+	<property name="CustomIconTint" value="33,212,252"/>
+	<property name="UMA.Overlay0Tint" value="33,212,252"/>
+	<property name="UnlockedBy" value="perkRunnerITAV"/>
+	<property name="Group" value="Clothing"/>
+	<property name="Tags" value="feet,clothing,canHaveCosmetic,noMods"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property class="UMA">
+		<property name="Mesh" value="armor_kevlar_boots"/>
+		<property name="Overlay0" value="armor_kevlar_boots"/> 
+		<property name="Layer" value="1"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+	<effect_group tiered="false">
+		<display_value name="dStaminaRegen" value=".07"/>
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="HypothermalResist" operation="base_add" value="0"/>
+		<passive_effect name="HyperthermalResist" operation="base_add" value="0"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value=".07" />
+	</effect_group>
 </item>
 
 
+<!-- Weapon Schematics -->
+
+<item name="meleeWpnSpearT3SteelSpearSchematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="meleeWpnSpearT3SteelSpear"/>
+	<property name="Unlocks" value="meleeWpnSpearT3SteelSpear"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeWpnSpearT3SteelSpear" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="meleeWpnClubT3SteelClubSchematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="meleeWpnClubT3SteelClub"/>
+	<property name="Unlocks" value="meleeWpnClubT3SteelClub"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeWpnClubT3SteelClub" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+
+
+<!-- Assorted decorative items ITAV Schematics -->
+
+<item name="signBread01ITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="signBread01"/>
+	<property name="Unlocks" value="signBread01"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="signBread01" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="signBread02ITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="signBread02"/>
+	<property name="Unlocks" value="signBread02"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="signBread02" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="barStoolVariantHelperITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="barStool"/>
+	<property name="Unlocks" value="barStoolVariantHelper"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="barStoolVariantHelper" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="decoReptileTerrariumITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="decoReptileTerrarium"/>
+	<property name="Unlocks" value="decoReptileTerrarium"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="decoReptileTerrarium" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="bunkBedMadeITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="bunkBedMade"/>
+	<property name="Unlocks" value="bunkBedMade"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="bunkBedMade" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="cntShoppingCartEmptyITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntShoppingCartEmpty"/>
+	<property name="Unlocks" value="cntShoppingCartEmpty"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntShoppingCartEmpty" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="cntMailBox01WhiteITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntMailBox01White"/>
+	<property name="Unlocks" value="cntMailBox01White"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntMailBox01White" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="houseFrontDoor1_v1ITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="houseFrontDoor1_v1"/>
+	<property name="Unlocks" value="houseFrontDoor1_v1"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="houseFrontDoor1_v1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="houseFrontDoor2_v1ITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="houseFrontDoor2_v1"/>
+	<property name="Unlocks" value="houseFrontDoor2_v1"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="houseFrontDoor2_v1" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="cntMicrowaveOvenVer1ClosedITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntMicrowaveOvenVer1Closed"/>
+	<property name="Unlocks" value="cntMicrowaveOvenVer1Closed"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntMicrowaveOvenVer1Closed" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="cntMicrowaveOvenVer2ClosedITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntMicrowaveOvenVer2Closed"/>
+	<property name="Unlocks" value="cntMicrowaveOvenVer2Closed"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntMicrowaveOvenVer2Closed" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="decoCookingPotITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="toolCookingPot"/>
+	<property name="Unlocks" value="decoCookingPot"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="decoCookingPot" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="cntRetroFridgeVer1ClosedITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntRetroFridgeVer1Closed"/>
+	<property name="Unlocks" value="cntRetroFridgeVer1Closed"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntRetroFridgeVer1Closed" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="cntFridgeStainlessSteelITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntFridgeStainlessSteel"/>
+	<property name="Unlocks" value="cntFridgeStainlessSteel"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntFridgeStainlessSteel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="cntDomedTrashCanEmptyITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntDomedTrashCanEmpty"/>
+	<property name="Unlocks" value="cntDomedTrashCanEmpty"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntDomedTrashCanEmpty" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="cntDomedTrashCanCornerEmptyITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntDomedTrashCanEmpty"/>
+	<property name="Unlocks" value="cntDomedTrashCanCornerEmpty"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntDomedTrashCanCornerEmpty" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="cntBruteStyleTrashCanEmptyITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntBruteStyleTrashCanEmpty"/>
+	<property name="Unlocks" value="cntBruteStyleTrashCanEmpty"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntBruteStyleTrashCanEmpty" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="cntWaterCoolerFullITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntWaterCoolerFull"/>
+	<property name="Unlocks" value="cntWaterCoolerFull"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntWaterCoolerFull" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="signDinersMenuITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="signDinersMenu"/>
+	<property name="Unlocks" value="signDinersMenu"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="signDinersMenu" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="signDinersMenu2mITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="signDinersMenu2m"/>
+	<property name="Unlocks" value="signDinersMenu2m"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="signDinersMenu2m" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="signLaborDaySaleAdITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="signLaborDaySaleAd"/>
+	<property name="Unlocks" value="signLaborDaySaleAd"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="signLaborDaySaleAd" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="signSale01ITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="signSale01"/>
+	<property name="Unlocks" value="signSale01"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="signSale01" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="signSale02ITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="signSale02"/>
+	<property name="Unlocks" value="signSale02"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="signSale02" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+
+
+
+<!-- Lights ITAV Schematics -->
+
+<item name="LightStreetLightClassicITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="streetLightClassic"/>
+	<property name="Unlocks" value="LightStreetLightClassicITAV"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LightStreetLightClassicITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="signShopOpenLightITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="signShopOpenSwitch"/>
+	<property name="Unlocks" value="signShopOpenLightITAV"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="signShopOpenLightITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="LightDeskLampLightITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="deskLampLight"/>
+	<property name="Unlocks" value="LightDeskLampLightITAV"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LightDeskLampLightITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="LightTableLampLightITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="tableLampLight"/>
+	<property name="Unlocks" value="LightTableLampLightITAV"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LightTableLampLightITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<!-- Block removed because  it could not be destroyed.
+<item name="LightTableLampLightCenteredITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="tableLampLight"/>
+	<property name="Unlocks" value="LightTableLampLightCenteredITAV"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LightTableLampLightCenteredITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>-->
+
+<item name="LightPorchLight01ITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="porchLight01"/>
+	<property name="Unlocks" value="LightPorchLight01ITAV"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LightPorchLight01ITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="LightPorchLight04BrassITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="porchLight04Brass"/>
+	<property name="Unlocks" value="LightPorchLight04BrassITAV"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LightPorchLight04BrassITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="LightPorchLight04ITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="porchLight04"/>
+	<property name="Unlocks" value="LightPorchLight04ITAV"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LightPorchLight04ITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="LightCeilingLight02ITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ceilingLight02"/>
+	<property name="Unlocks" value="LightCeilingLight02ITAV"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LightCeilingLight02ITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="LightCeilingLight02BrassITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ceilingLight02Brass"/>
+	<property name="Unlocks" value="LightCeilingLight02BrassITAV"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LightCeilingLight02BrassITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+
+
+<!-- Dad jokes on notes -->
+
+	<item name="noteDadJokeMasterITAV">
+		<property name="Extends" value="blankNoteMaster"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="DescriptionKey" value="noteDadJoke01ITAVDesc"/>
+		<property name="CustomIcon" value="resourcePaper"/>
+		<property name="CustomIconTint" value="A7ECFC" />
+		<property name="Material" value="Mpaper"/>
+		<property name="Weight" value="3"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="EconomicValue" value="1"/>
+	</item>
+	
+	<item name="noteDadJoke01ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke01ITAVDesc"/></item>	
+	<item name="noteDadJoke02ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke02ITAVDesc"/></item>	
+	<item name="noteDadJoke03ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke03ITAVDesc"/></item>
+	<item name="noteDadJoke04ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke04ITAVDesc"/></item>	
+	<item name="noteDadJoke05ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke05ITAVDesc"/></item>	
+	<item name="noteDadJoke06ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke06ITAVDesc"/></item>	
+	<item name="noteDadJoke07ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke07ITAVDesc"/></item>	
+	<item name="noteDadJoke08ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke08ITAVDesc"/></item>	
+	<item name="noteDadJoke09ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke09ITAVDesc"/></item>	
+	<item name="noteDadJoke10ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke10ITAVDesc"/></item>	
+	<item name="noteDadJoke11ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke11ITAVDesc"/></item>	
+	<item name="noteDadJoke12ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke12ITAVDesc"/></item>	
+	<item name="noteDadJoke13ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke13ITAVDesc"/></item>	
+	<item name="noteDadJoke14ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke14ITAVDesc"/></item>	
+	<item name="noteDadJoke15ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke15ITAVDesc"/></item>	
+	<item name="noteDadJoke16ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke16ITAVDesc"/></item>
+	<item name="noteDadJoke17ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke17ITAVDesc"/></item>	
+	<item name="noteDadJoke18ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke18ITAVDesc"/></item>	
+	<item name="noteDadJoke19ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke19ITAVDesc"/></item>
+	<item name="noteDadJoke20ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke20ITAVDesc"/></item>
+	<item name="noteDadJoke21ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke21ITAVDesc"/></item>	
+	<item name="noteDadJoke22ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke22ITAVDesc"/></item>	
+	<item name="noteDadJoke23ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke23ITAVDesc"/></item>	
+	<item name="noteDadJoke24ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke24ITAVDesc"/></item>	
+	<item name="noteDadJoke25ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke25ITAVDesc"/></item>	
+	<item name="noteDadJoke26ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke26ITAVDesc"/></item>
+	<item name="noteDadJoke27ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke27ITAVDesc"/></item>	
+	<item name="noteDadJoke28ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke28ITAVDesc"/></item>	
+	<item name="noteDadJoke29ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke29ITAVDesc"/></item>	
+	<item name="noteDadJoke30ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke30ITAVDesc"/></item>	
+	<item name="noteDadJoke31ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke31ITAVDesc"/></item>
+	<item name="noteDadJoke32ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke32ITAVDesc"/></item>	
+	<item name="noteDadJoke33ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke33ITAVDesc"/></item>	
+	<item name="noteDadJoke34ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke34ITAVDesc"/></item>	
+	<item name="noteDadJoke35ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke35ITAVDesc"/></item>
+	<item name="noteDadJoke36ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke36ITAVDesc"/></item>
+	<item name="noteDadJoke37ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke37ITAVDesc"/></item>	
+	<item name="noteDadJoke38ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke38ITAVDesc"/></item>	
+	<item name="noteDadJoke39ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke39ITAVDesc"/></item>	
+	<item name="noteDadJoke40ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke40ITAVDesc"/></item>
+	<item name="noteDadJoke41ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke41ITAVDesc"/></item>
+	<item name="noteDadJoke42ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke42ITAVDesc"/></item>
+	<item name="noteDadJoke43ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke43ITAVDesc"/></item>
+	<item name="noteDadJoke44ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke44ITAVDesc"/></item>
+	<item name="noteDadJoke45ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke45ITAVDesc"/></item>
+	<item name="noteDadJoke46ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke46ITAVDesc"/></item>
+	<item name="noteDadJoke47ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke47ITAVDesc"/></item>
+	<item name="noteDadJoke48ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke48ITAVDesc"/></item>
+	<item name="noteDadJoke49ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke49ITAVDesc"/></item>
+	<item name="noteDadJoke50ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke50ITAVDesc"/></item>
+	<item name="noteDadJoke51ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke51ITAVDesc"/></item>
+	<item name="noteDadJoke52ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke52ITAVDesc"/></item>
+	<item name="noteDadJoke53ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke53ITAVDesc"/></item>
+	<item name="noteDadJoke54ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke54ITAVDesc"/></item>
+	<item name="noteDadJoke55ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke55ITAVDesc"/></item>
+	<item name="noteDadJoke56ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke56ITAVDesc"/></item>
+	<item name="noteDadJoke57ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke57ITAVDesc"/></item>
+	<item name="noteDadJoke58ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke58ITAVDesc"/></item>
+	<item name="noteDadJoke59ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke59ITAVDesc"/></item>
+	
 <!-- ProfPerkForgettingElixir -->
 <item name="drinkJarProfPerkForgettingElixir"> <!-- respec potion, player version -->
 	<property name="CustomIcon" value="drinkJarGrandpasForgettingElixir" />

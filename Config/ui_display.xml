@@ -1,0 +1,14 @@
+<configs>
+
+<append xpath="/ui_display_info/item_display">
+	<item_display_info display_type="workBootsITAV" display_group="groupAttire" >
+		<display_entry name="dStaminaRegen" title_key="statStaminaRegenITAV" display_type="Percent" display_leading_plus="true"/>
+	</item_display_info>
+
+	<item_display_info display_type="powerizersITAV" display_group="groupAttire" >
+		<display_entry name="dRunSpeed" title_key="statRunSpeedITAV" display_type="Percent" display_leading_plus="true"/>
+		<display_entry name="dStaminaChangeOT" title_key="statStaminaReductionITAV" display_type="Percent" display_leading_plus="true"/>
+	</item_display_info>
+</append>
+
+</configs>

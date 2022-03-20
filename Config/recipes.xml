@@ -11,13 +11,442 @@
 			<ingredient name="drinkCanEmpty" count="1" />
 		</recipe>
 		
-				<!-- Powerizer Boots  -->
-		<recipe name="powerizersITAV" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<!-- Pretty bush  -->
+		<recipe name="treeAzalea" count="1" craft_time="10"> 
+			<ingredient name="resourceWood" count="4" />
+			<ingredient name="resourceClayLump" count="10" />
+			<ingredient name="resourceYuccaFibers" count="20" />
+		</recipe>	
+
+		<recipe name="forestFlower" count="5" craft_time="10"> 
+			<ingredient name="resourceClayLump" count="4" />
+			<ingredient name="resourceYuccaFibers" count="8" />
+		</recipe>		
+				
+				
+		<!-- Kitchen and more stuff  -->		
+		<recipe name="signBread01" count="1" craft_time="10" tags="learnable">
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourcePaper" count="10" />
+			<ingredient name="resourcePaint" count="10" />
+		</recipe>
+		<recipe name="signBread02" count="1" craft_time="10" tags="learnable">
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourcePaper" count="10" />
+			<ingredient name="resourcePaint" count="10" />
+		</recipe>
+		
+		<recipe name="decoCookingPot" count="1" craft_time="10" tags="learnable">
+			<ingredient name="resourceForgedIron" count="3" />
+		</recipe>		
+		
+		<recipe name="decoWineBottle" count="1" craft_time="10">
+			<ingredient name="resourceBrokenGlass" count="10" />
+			<ingredient name="medicalBloodBag" count="1" />
+			<ingredient name="drinkJarBoiledWater" count="1" />
+		</recipe>
+		
+		<recipe name="decoWineBottleCorner" count="1" craft_time="10">
+			<ingredient name="resourceBrokenGlass" count="10" />
+			<ingredient name="medicalBloodBag" count="1" />
+			<ingredient name="drinkJarBoiledWater" count="1" />
+		</recipe>
+		
+		<recipe name="decoWineBottleShelfRow" count="1" craft_time="10">
+			<ingredient name="resourceBrokenGlass" count="10" />
+			<ingredient name="medicalBloodBag" count="1" />
+			<ingredient name="drinkJarBoiledWater" count="1" />
+		</recipe>
+		
+		<recipe name="decoReptileTerrarium" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourceBrokenGlass" count="20" />
+			<ingredient name="resourceYuccaFibers" count="6" />
+			<ingredient name="resourceCrushedSand" count="8" />
+			<ingredient name="resourceForgedIron" count="1" />
+			<ingredient name="resourceHeadlight" count="2" />
+		</recipe>	
+
+		<recipe name="barStoolVariantHelper" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourceScrapPolymers" count="5" />
+			<ingredient name="resourceForgedIron" count="1" />
+			<ingredient name="resourceDuctTape" count="1" />
+		</recipe>		
+		
+		<recipe name="bunkBedMade" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceCloth" count="20"/>
+			<ingredient name="resourceCropCottonPlant" count="20"/>
+			<ingredient name="resourceSpring" count="10"/>
+			<ingredient name="resourceWood" count="10"/>
+			<ingredient name="resourceMetalPipe" count="5"/>
+		</recipe>
+
+		<recipe name="cntShoppingCartEmpty" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourceScrapPolymers" count="2"/>
+			<ingredient name="resourceScrapIron" count="20"/>
+			<ingredient name="drinkCanEmpty" count="4"/>
+			<ingredient name="resourceMetalPipe" count="16"/>
+		</recipe>		
+
+		<recipe name="cntMailBox01White" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourcePaint" count="2"/>
+			<ingredient name="resourceScrapIron" count="10"/>
+			<ingredient name="resourceMetalPipe" count="4"/>
+		</recipe>
+		
+		<recipe name="houseFrontDoor1_v1" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="resourceDoorKnob" count="1"/>
+			<ingredient name="resourceWood" count="30"/>
+			<ingredient name="resourceForgedIron" count="2"/>
+		</recipe>
+		
+		<recipe name="houseFrontDoor2_v1" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="resourceDoorKnob" count="1"/>
+			<ingredient name="resourceWood" count="30"/>
+			<ingredient name="resourceForgedIron" count="2"/>
+		</recipe>		
+		
+		<recipe name="cntMicrowaveOvenVer1Closed" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourceForgedIron" count="2" />
+			<ingredient name="resourceScrapIron" count="10" />
+			<ingredient name="resourceBrokenGlass" count="10" />
+			<ingredient name="resourceElectricParts" count="3"/>
+		</recipe>
+		<recipe name="cntMicrowaveOvenVer2Closed" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourceForgedIron" count="2" />
+			<ingredient name="resourceScrapIron" count="10" />
+			<ingredient name="resourceBrokenGlass" count="10" />
+			<ingredient name="resourceElectricParts" count="3"/>
+		</recipe>
+	
+		<recipe name="cntRetroFridgeVer1Closed" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourceForgedIron" count="10" />
+			<ingredient name="resourceScrapIron" count="30" />
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceElectricParts" count="3"/>
+			<ingredient name="resourceMetalPipe" count="5"/>
+		</recipe>		
+		<recipe name="cntFridgeStainlessSteel" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourceForgedSteel" count="10" />
+			<ingredient name="resourceScrapIron" count="30" />
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceElectricParts" count="3"/>
+			<ingredient name="resourceMetalPipe" count="5"/>
+		</recipe>
+		
+		<recipe name="cntDomedTrashCanEmpty" count="1" craft_area="workbench" craft_time="5" tags="learnable">
+			<ingredient name="resourceForgedIron" count="3" />
+		</recipe>		
+		<recipe name="cntDomedTrashCanCornerEmpty" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourceForgedIron" count="3" />
+		</recipe>		
+		<recipe name="cntBruteStyleTrashCanEmpty" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourceScrapPolymers" count="5" />
+			<ingredient name="resourceGlue" count="5" />
+			<ingredient name="resourceDuctTape" count="1" />
+		</recipe>		
+				
+		<recipe name="cntWaterCoolerFull" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourceScrapPolymers" count="5" />
+			<ingredient name="drinkJarBoiledWater" count="1" />
+			<ingredient name="resourceDuctTape" count="1" />
+			<ingredient name="resourceMetalPipe" count="5"/>
+		</recipe>
+
+		<recipe name="signDinersMenu" count="1" craft_time="10" tags="learnable">
+			<ingredient name="resourcePaint" count="5" />
+			<ingredient name="resourceWood" count="5" />
+			<ingredient name="resourcePaper" count="10" />
+		</recipe>
+		
+		<recipe name="signDinersMenu2m" count="1" craft_time="10" tags="learnable">
+			<ingredient name="resourcePaint" count="5" />
+			<ingredient name="resourceWood" count="5" />
+			<ingredient name="resourcePaper" count="10" />
+		</recipe>
+		
+		<recipe name="signLaborDaySaleAd" count="1" craft_time="10" tags="learnable">
+			<ingredient name="resourcePaint" count="5" />
+			<ingredient name="resourceWood" count="5" />
+			<ingredient name="resourcePaper" count="10" />
+		</recipe>
+		
+		<recipe name="signSale01" count="1" craft_time="10" tags="learnable">
+			<ingredient name="resourcePaint" count="5" />
+			<ingredient name="resourceWood" count="5" />
+			<ingredient name="resourcePaper" count="10" />
+		</recipe>
+		
+		<recipe name="signSale02" count="1" craft_time="10" tags="learnable">
+			<ingredient name="resourcePaint" count="5" />
+			<ingredient name="resourceWood" count="5" />
+			<ingredient name="resourcePaper" count="10" />
+		</recipe>
+		
+		<recipe name="decoPoolTable" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourcePaint" count="5" />
+			<ingredient name="foodCropPotato" count="21" />
+			<ingredient name="resourceWood" count="50" />
+			<ingredient name="resourceSnowBall" count="1" />
+			<ingredient name="resourceCloth" count="10" />
+		</recipe>
+	
+		<recipe name="cntWoodBurningStove" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+			<ingredient name="resourceForgedIron" count="20" />
+			<ingredient name="resourceWood" count="50" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBooth" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothBrown" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothRed" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothOrange" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothYellow" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothGreen" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothBlue" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothPurple" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothWhite" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothBlack" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothPink" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothCorner" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothCornerBrown" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothCornerRed" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothCornerOrange" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothCornerYellow" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothCornerGreen" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothCornerBlue" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothCornerPurple" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothCornerWhite" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothCornerBlack" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="restaurantBoothCornerPink" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceCropCottonPlant" count="20" />
+			<ingredient name="resourceWood" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="fastFoodBooth" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourcePaint" count="10" />
+			<ingredient name="resourceWood" count="30" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="fastFoodBoothBrown" craft_area="workbench" count="1" craft_time="10">
+			<ingredient name="resourcePaint" count="10" />
+			<ingredient name="resourceWood" count="30" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="fastFoodBoothRed" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourcePaint" count="10" />
+			<ingredient name="resourceWood" count="30" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="fastFoodBoothOrange" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourcePaint" count="10" />
+			<ingredient name="resourceWood" count="30" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="fastFoodBoothYellow" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourcePaint" count="10" />
+			<ingredient name="resourceWood" count="30" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="fastFoodBoothGreen" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourcePaint" count="10" />
+			<ingredient name="resourceWood" count="30" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="fastFoodBoothPurple" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourcePaint" count="10" />
+			<ingredient name="resourceWood" count="30" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="fastFoodBoothGrey" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourcePaint" count="10" />
+			<ingredient name="resourceWood" count="30" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="fastFoodBoothWhite" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourcePaint" count="10" />
+			<ingredient name="resourceWood" count="30" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="fastFoodBoothBlack" count="1" craft_area="workbench" craft_time="10">
+			<ingredient name="resourcePaint" count="10" />
+			<ingredient name="resourceWood" count="30" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+
+		
+		<!-- Powerizer Boots  -->
+		<recipe name="powerizersITAV" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting,perkRunnerITAV">
 			<ingredient name="resourceRawDiamond" count="4" />
 			<ingredient name="resourceSpring" count="6" />
 			<ingredient name="resourceForgedSteel" count="20" />
 			<ingredient name="resourceMechanicalParts" count="40" />
 			<ingredient name="resourceDuctTape" count="100"/>
+		</recipe>
+		
+		<!-- Baby Powerizer Boots  -->
+		<recipe name="powerizersBabyITAV" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting,perkRunnerITAV">
+			<ingredient name="drinkCanMegaCrush" count="1" />
+			<ingredient name="resourceSpring" count="2" />
+			<ingredient name="resourceForgedIron" count="20" />
+			<ingredient name="resourceMechanicalParts" count="2" />
+			<ingredient name="resourceDuctTape" count="10"/>
+		</recipe>
+		
+		<!-- Work Boots  -->
+		<recipe name="workBootsITAV" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting,perkRunnerITAV">
+			<ingredient name="resourceRawDiamond" count="4" />
+			<ingredient name="drinkJarBlackStrapCoffee" count="1" />
+			<ingredient name="resourceForgedSteel" count="20" />
+			<ingredient name="resourceScrapPolymers" count="200" />
+			<ingredient name="resourceDuctTape" count="100"/>
+		</recipe>
+		
+		<!-- Baby Work Boots  -->
+		<recipe name="workBootsBabyITAV" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting,perkRunnerITAV">
+			<ingredient name="drinkJarCoffee" count="1" />
+			<ingredient name="resourceNail" count="20" />
+			<ingredient name="resourceForgedIron" count="20" />
+			<ingredient name="resourceScrapPolymers" count="20" />
+			<ingredient name="resourceDuctTape" count="10"/>
 		</recipe>
 		
 		<!-- Baseball cap mod -->
@@ -59,11 +488,12 @@
 			<ingredient name="resourceElectricParts" count="1"/>
 		</recipe>
 
+		<!-- Block was indestructible and thus had to be removed.
 		<recipe name="LightTableLampLightCenteredITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
 			<ingredient name="resourceForgedIron" count="3"/>
 			<ingredient name="resourceBrokenGlass" count="6"/>
 			<ingredient name="resourceElectricParts" count="1"/>
-		</recipe>
+		</recipe> -->
 
 		<recipe name="LightPorchLight01ITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
 			<ingredient name="resourceForgedIron" count="4"/>

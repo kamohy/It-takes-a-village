@@ -3,17 +3,122 @@
 
 <setattribute xpath="/gameevents/action_sequence[@name='game_first_spawn']/action[@class='AddJournalTip']/property[@name='tip_name']" name="value">tutorialTipITAV</setattribute>
 
+<append xpath="//action_sequence[@name='game_first_spawn']">
+	<action class="AddBuff">
+		<property name="phase" value="1" />
+		<property name="buff_name" value="ITAV_start" param1="buffname" />
+		<!-- <property name="alt_vision_buff_name" value="twitch_buffVisionAlt" />
+		<property name="target_group" value="party" /> -->
+	</action>
+</append>
+
 <append xpath="/gameevents">
-	<action_sequence name="first_book_read_ITAV">
+	<action_sequence name="first_book_read_SmelterITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+        </requirement>
 		<property name="allow_user_trigger" value="false" />
-		<property name="action_type" value="Game" />
-		
+		<property name="action_type" value="Game" />		
 		<action class="AddQuest">
-			<property name="quest" value="treasure_taylor" />
+			<property name="quest" value="quest_ProfContSmelter" />
 			<property name="phase" value="1" />
 		</action>
-
-
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_MinerITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContMiner" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_HunterITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContHunter" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_CookITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContCook" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_ArmorerITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContArmorer" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_FarmerITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContFarmer" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_ChemistITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContChemist" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_RoboticsITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContRobotics" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_RunnerITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContRunner" />
+			<property name="phase" value="1" />
+		</action>
 	</action_sequence>
 </append>
 
