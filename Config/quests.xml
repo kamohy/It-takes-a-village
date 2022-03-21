@@ -218,7 +218,7 @@
 		<property name="return_to_quest_giver" value="true" />
 		<property name="icon" value="ui_game_symbol_map_trader"/>
 		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="medium"/>
+		<property name="difficulty" value="easy"/>
 		<property name="difficulty_tier" value="1"/>
 		<property name="repeatable" value="false" />
 		<property name="shareable" value="false"/>

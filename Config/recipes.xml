@@ -11,7 +11,7 @@
 			<ingredient name="drinkCanEmpty" count="1" />
 		</recipe>
 		
-		<!-- Pretty bush  -->
+		<!-- Pretty things  -->
 		<recipe name="treeAzalea" count="1" craft_time="10"> 
 			<ingredient name="resourceWood" count="4" />
 			<ingredient name="resourceClayLump" count="10" />
@@ -21,10 +21,36 @@
 		<recipe name="forestFlower" count="5" craft_time="10"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="resourceYuccaFibers" count="8" />
+		</recipe>	
+
+		<recipe name="birdBathPlanter" count="5" craft_time="10"> 
+			<ingredient name="resourceClayLump" count="4" />
+			<ingredient name="resourceCobblestones" count="10" />
 		</recipe>		
+		
+		<recipe name="candelabraLight" count="1" craft_time="10">
+			<ingredient name="candle" count="3" />
+			<ingredient name="resourceCandleStick" count="3" />
+		</recipe>
+			
 				
-				
-		<!-- Kitchen and more stuff  -->		
+		<!-- Kitchen and more stuff  -->	
+		<recipe name="cntFoodPileSmallITAV" count="1" craft_time="10" tags="learnable,perkCookITAV">
+			<ingredient name="drinkCanEmpty" count="5" />
+			<ingredient name="foodCanCatfood" count="3" />
+		</recipe>
+		
+		<recipe name="cntFoodPileMediumITAV" count="1" craft_time="10" tags="learnable,perkCookITAV">
+			<ingredient name="drinkCanEmpty" count="10" />
+			<ingredient name="foodCanCatfood" count="5" />
+		</recipe>
+		
+		<recipe name="cntFoodPileLargeITAV" count="1" craft_time="10" tags="learnable,perkCookITAV">
+			<ingredient name="drinkJarBoiledWater" count="2" />
+			<ingredient name="foodCanCatfood" count="10" />
+			<ingredient name="resourcePaint" count="3" />
+		</recipe>
+		
 		<recipe name="signBread01" count="1" craft_time="10" tags="learnable">
 			<ingredient name="resourceWood" count="10" />
 			<ingredient name="resourcePaper" count="10" />
@@ -36,7 +62,7 @@
 			<ingredient name="resourcePaint" count="10" />
 		</recipe>
 		
-		<recipe name="decoCookingPot" count="1" craft_time="10" tags="learnable">
+		<recipe name="decoCookingPotITAV" count="1" craft_time="10" tags="learnable">
 			<ingredient name="resourceForgedIron" count="3" />
 		</recipe>		
 		
@@ -196,6 +222,13 @@
 			<ingredient name="resourceForgedIron" count="20" />
 			<ingredient name="resourceWood" count="50" />
 			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+				
+		<recipe name="officeChair01VariantHelper" count="1" craft_time="10">
+			<ingredient name="resourceForgedIron" count="4" />
+			<ingredient name="resourceLeather" count="8" />
+			<ingredient name="resourceMechanicalParts" count="4" />
+			<ingredient name="resourceCropCottonPlant" count="10" />
 		</recipe>
 		
 		<recipe name="restaurantBooth" count="1" craft_area="workbench" craft_time="10">
@@ -464,6 +497,11 @@
 		</recipe>
 		
 		<!-- Powered Lights -->
+		<recipe name="LightchandelierLightITAV" count="1" craft_time="10">
+			<ingredient name="resourceScrapBrass" count="200" />
+			<ingredient name="resourceElectricParts" count="3" />
+		</recipe>	
+		
 		<recipe name="LightStreetLightClassicITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
 			<ingredient name="resourceForgedIron" count="25"/>
 			<ingredient name="resourceBrokenGlass" count="6"/>
@@ -477,51 +515,51 @@
 		</recipe>
 		
 		<recipe name="LightDeskLampLightITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
-			<ingredient name="resourceForgedIron" count="2"/>
+			<ingredient name="resourceForgedIron" count="4"/>
 			<ingredient name="resourceBrokenGlass" count="4"/>
-			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe>
 		
 		<recipe name="LightTableLampLightITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
-			<ingredient name="resourceForgedIron" count="3"/>
-			<ingredient name="resourceBrokenGlass" count="6"/>
-			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="resourceForgedIron" count="4"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
+			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe>
 
 		<!-- Block was indestructible and thus had to be removed.
 		<recipe name="LightTableLampLightCenteredITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
-			<ingredient name="resourceForgedIron" count="3"/>
-			<ingredient name="resourceBrokenGlass" count="6"/>
-			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="resourceForgedIron" count="4"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
+			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe> -->
 
 		<recipe name="LightPorchLight01ITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
 			<ingredient name="resourceForgedIron" count="4"/>
-			<ingredient name="resourceBrokenGlass" count="6"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
 			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe>
 		
 		<recipe name="LightPorchLight04BrassITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
 			<ingredient name="resourceForgedIron" count="4"/>
-			<ingredient name="resourceBrokenGlass" count="6"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
 			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe>
 		
 		<recipe name="LightPorchLight04ITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
 			<ingredient name="resourceForgedIron" count="4"/>
-			<ingredient name="resourceBrokenGlass" count="6"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
 			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe>
 		
 		<recipe name="LightCeilingLight02ITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceBrokenGlass" count="6"/>
+			<ingredient name="resourceForgedIron" count="4"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
 			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe>
 		
 		<recipe name="LightCeilingLight02BrassITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceBrokenGlass" count="6"/>
+			<ingredient name="resourceForgedIron" count="4"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
 			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe>
 	
@@ -557,6 +595,7 @@
 	<append xpath="/recipes/recipe[contains(@tags, 'perkMiner69r')]/@tags">,perkMinerITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkMasterChef')]/@tags">,perkCookITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkLightArmor') or contains(@tags, 'perkHeavyArmor')]/@tags">,perkArmorerITAV</append>
+	<append xpath="//recipe[@name='gunExplosivesT3RocketLauncher']/@tags">,perkArmorerITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkMachineGunner')]/@tags">,perkArmorerITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkBoomstick')]/@tags">,perkArmorerITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkDeadEye')]/@tags">,perkArmorerITAV</append>
@@ -590,7 +629,105 @@
 	<append xpath="/recipes/recipe[@name='motionsensor']/@tags">,perkRoboticsITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkGreaseMonkey') or contains(@tags, 'perkSalvageOperations')]/@tags">,perkRunnerITAV</append>
 
-	
+	<!-- Weapon repair kits -->
+	<append xpath="//recipes">
+		<recipe name="gunMGT1AK47Parts" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="weaponPartFragmentITAV" count="100"/>
+		</recipe>
+		<recipe name="gunHandgunT1PistolParts" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="weaponPartFragmentITAV" count="100"/>
+		</recipe>
+		<recipe name="gunRifleT1HuntingRifleParts" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="weaponPartFragmentITAV" count="100"/>
+		</recipe>
+		<recipe name="gunShotgunT1DoubleBarrelParts" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="weaponPartFragmentITAV" count="100"/>
+		</recipe>
+		<recipe name="gunBowT1WoodenBowParts" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="weaponPartFragmentITAV" count="100"/>
+		</recipe>
+		<recipe name="gunExplosivesT3RocketLauncherParts" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="weaponPartFragmentITAV" count="100"/>
+		</recipe>
+		<recipe name="meleeWpnBatonT2StunBatonParts" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="weaponPartFragmentITAV" count="100"/>
+		</recipe>
+		<recipe name="meleeWpnKnucklesT3SteelKnucklesParts" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="weaponPartFragmentITAV" count="100"/>
+		</recipe>
+		<recipe name="meleeWpnBladeT3MacheteParts" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="weaponPartFragmentITAV" count="100"/>
+		</recipe>
+		<recipe name="meleeWpnSpearT3SteelSpearParts" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="weaponPartFragmentITAV" count="100"/>
+		</recipe>
+		<recipe name="meleeWpnClubT3SteelClubParts" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="weaponPartFragmentITAV" count="100"/>
+		</recipe>
+		<recipe name="meleeWpnSledgeT3SteelSledgehammerParts" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="weaponPartFragmentITAV" count="100"/>
+		</recipe>
+		
+		<recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+            <ingredient name="gunMGT1AK47Parts" count="1"/>
+            <ingredient name="resourceDuctTape" count="1"/>
+        </recipe>
+
+        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+            <ingredient name="gunHandgunT1PistolParts" count="1"/>
+            <ingredient name="resourceDuctTape" count="1"/>
+        </recipe>
+
+        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+            <ingredient name="gunRifleT1HuntingRifleParts" count="1"/>
+            <ingredient name="resourceDuctTape" count="1"/>
+        </recipe>
+
+        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+            <ingredient name="gunShotgunT1DoubleBarrelParts" count="1"/>
+            <ingredient name="resourceDuctTape" count="1"/>
+        </recipe>
+
+        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+            <ingredient name="gunBowT1WoodenBowParts" count="1"/>
+            <ingredient name="resourceDuctTape" count="1"/>
+        </recipe>
+		
+		<recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+            <ingredient name="gunExplosivesT3RocketLauncherParts" count="1"/>
+            <ingredient name="resourceDuctTape" count="1"/>
+        </recipe>
+
+        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+            <ingredient name="meleeWpnBatonT2StunBatonParts" count="1"/>
+            <ingredient name="resourceDuctTape" count="1"/>
+        </recipe>
+
+        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+            <ingredient name="meleeWpnKnucklesT3SteelKnucklesParts" count="1"/>
+            <ingredient name="resourceDuctTape" count="1"/>
+        </recipe>
+
+        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+            <ingredient name="meleeWpnBladeT3MacheteParts" count="1"/>
+            <ingredient name="resourceDuctTape" count="1"/>
+        </recipe>
+
+        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+            <ingredient name="meleeWpnSpearT3SteelSpearParts" count="1"/>
+            <ingredient name="resourceDuctTape" count="1"/>
+        </recipe>
+
+        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+            <ingredient name="meleeWpnClubT3SteelClubParts" count="1"/>
+            <ingredient name="resourceDuctTape" count="1"/>
+        </recipe>
+		
+		<recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+            <ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="1"/>
+            <ingredient name="resourceDuctTape" count="1"/>
+        </recipe>
+	</append>
 	
 	
 

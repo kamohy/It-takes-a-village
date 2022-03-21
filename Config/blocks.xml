@@ -81,8 +81,63 @@
 		<property class="RepairItems">
 			<property name="resourceScrapIron" value="1"/>
 		</property>			
+	</block>		
+	
+	<block name="decoCookingPotITAV">
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="toolCookingPot"/>
+		<property name="Material" value="MmetalNoGlue"/>
+		<property name="MaxDamage" value="1"/>
+		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Other/Items?Crafting/cookingPot_01Prefab.prefab"/>
+		<property name="OnlySimpleRotations" value="true"/>
+		<property name="ImposterDontBlock" value="true"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<property name="CanPickup" value="true" />
+		<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+		<property name="Collide" value="melee,bullet,arrow,rocket"/>
+		<property name="Group" value="Tools/Traps,Food/Cooking"/>
+		<property name="EconomicValue" value="12"/>
+		<property name="FilterTags" value="MC_building,SC_decor,SC_residential"/>
+		<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
 	</block>
-		
+	
+	<block name="cntFoodPileSmallITAV">
+		<property name="Class" value="SecureLoot"/>
+		<property name="LootList" value="birdNest"/>
+		<property name="Extends" value="cntAmmoPileSmall"/>
+		<property name="CustomIcon" value="cntFoodPileSmall"/>
+		<property name="Model" value="#Entities/LootContainers?foodClutterPileSmallPrefab.prefab"/>
+		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
+		<property name="ModelOffset" value="0,0,0"/>
+		<property name="GndAlign" value="1"/>
+		<property name="UnlockedBy" value="perkCookITAV" />
+	</block>
+
+	<block name="cntFoodPileMediumITAV">
+		<property name="Class" value="SecureLoot"/>
+		<property name="LootList" value="birdNest"/>
+		<property name="Extends" value="cntFoodPileSmall"/>
+		<property name="CustomIcon" value="cntFoodPileMedium"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<property name="Model" value="#Entities/LootContainers?foodClutterPileMediumPrefab.prefab"/>
+		<property name="ModelOffset" value="0,0,0"/>
+		<property name="GndAlign" value="1"/>
+		<property name="UnlockedBy" value="perkCookITAV" />
+	</block>
+
+	<block name="cntFoodPileLargeITAV">
+		<property name="Class" value="SecureLoot"/>
+		<property name="LootList" value="shamwayCrate"/>
+		<property name="Extends" value="cntFoodPileSmall"/>
+		<property name="CustomIcon" value="cntFoodPileLarge"/>
+		<property name="Model" value="#Entities/LootContainers?foodClutterPileLargePrefab.prefab"/>
+		<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+		<property name="ModelOffset" value="0,0,0"/>
+		<property name="GndAlign" value="1"/>
+		<property name="UnlockedBy" value="perkCookITAV" />
+	</block>	
 	
 </append>
 
@@ -90,6 +145,34 @@
 
 
 <append xpath="/blocks">
+
+	<block name="LightchandelierLightITAV">
+		<property name="Class" value="PoweredLight" param1="HandleFace"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="ImposterExchange" value="streetLightImposter"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="Model" value="Entities/Lighting/chandelierPrefab"/>
+		<property name="MultiBlockDim" value="3,2,3"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="OnlySimpleRotations" value="true"/>
+		<property name="Path" value="solid"/>
+		<property name="ActivationDistance" value="6"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		<drop event="Harvest" name="resourceElectricParts" count="3" tag="salvageHarvest"/>
+		<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+		<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+		<property name="TakeDelay" value="-1"/>
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="Group" value="Science,Decor/Miscellaneous"/>
+		<property name="FilterTags" value="MC_building,SC_lighting"/>
+		<property name="SortOrder1" value="70a0"/>
+		<property name="CustomIcon" value="chandelierLight"/>
+	</block>
+
+
 	<block name="LightStreetLightClassicITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="Extends" value="porchLight01" param1="HandleFace"/>
@@ -104,9 +187,8 @@
 		<property name="OnlySimpleRotations" value="true"/>
 		<property name="IsTerrainDecoration" value="true"/>
 		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-		<drop event="Harvest" name="resourceElectricParts" count="4,6" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceElectricParts" count="3" tag="salvageHarvest"/>
 		<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
-
 		<property name="RuntimeSwitch" value="true"/>
 		<property name="UnlockedBy" value="perkSmelterITAV,LightStreetLightClassicITAVSchematic"/>
 		<property name="CustomIcon" value="streetLightClassic"/>
@@ -127,7 +209,7 @@
 		<property name="Material" value="Mmetal_weak"/>
 		<property name="OnlySimpleRotations" value="true"/>
 		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-		<drop event="Harvest" name="resourceElectricParts" count="2" prob="0.7" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceElectricParts" count="1" prob="0.7" tag="salvageHarvest"/>
 		<drop event="Harvest" name="resourceScrapPolymers" count="2" prob="0.8" tag="salvageHarvest"/>
 		<drop event="Destroy" name="resourceScrapIron" count="1,5"/>
 		<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
@@ -199,6 +281,7 @@
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 		<property name="Model" value="Entities/Lighting/porchLight01Prefab"/> <property name="HandleFace" value="Top"/>
 		<property name="TakeDelay" value="5"/>
+		<property name="HandleFace" value="West"/>
 		<property name="AllowAllRotations" value="true"/>
 		<property name="UnlockedBy" value="perkSmelterITAV,LightPorchLight01ITAVSchematic"/>
 	</block>
@@ -214,6 +297,7 @@
 		<property name="Material" value="Mglass"/>
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 		<property name="Model" value="Entities/Lighting/porchLight04BrassPrefab"/> <property name="HandleFace" value="Top"/>
+		<property name="HandleFace" value="West"/>
 		<property name="AllowAllRotations" value="true"/>
 		<drop event="Destroy" name="resourceScrapBrass" count="3"/>
 		<property name="CanPickup" value="true"/>
@@ -231,6 +315,7 @@
 		<property name="Material" value="Mglass"/>
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 		<property name="Model" value="Entities/Lighting/porchLight04Prefab"/> <property name="HandleFace" value="Top"/>
+		<property name="HandleFace" value="West"/>
 		<property name="AllowAllRotations" value="true"/>
 		<property name="Light" value="0.6"/>
 		<property name="UnlockedBy" value="perkSmelterITAV,LightPorchLight04ITAVSchematic"/>

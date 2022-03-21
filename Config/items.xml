@@ -137,6 +137,18 @@
 <setattribute xpath="//item[@name='meleeWpnSpearT3SteelSpear']/property[@name='UnlockedBy']" name="value">meleeWpnSpearT3SteelSpearSchematic</setattribute>
 <setattribute xpath="//item[@name='meleeWpnSledgeT3SteelSledgehammer']/property[@name='UnlockedBy']" name="value">meleeWpnSledgeT3SteelSledgehammerSchematic</setattribute>
 
+<append xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and contains(@name, 'T3') and contains(@name, 'Schematic')]">
+	<property class="Action0">
+		<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" operation="Equals" value="1" />
+        <property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+        <property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_mod"/>
+		<property name="Sound_in_head" value="true"/>
+  </property>
+</append>
+
 
 
 <!-- WEAPONSMITH -->
@@ -146,11 +158,50 @@
 
 
 
+<!-- Adding weaponPartFragmentITAV and resourceRepairKitITAV -->
+<append xpath="/items/item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and contains(@name, 'Parts') and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]" >
+	<property name="UnlockedBy" value="perkArmorerITAV" />
+</append>
 <append xpath="/items"> 
+	<item name="weaponPartFragmentITAV"> 
+		<property name="Extends" value="partsMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="ItemTypeIcon" value="gunsmithing"/>
+		<property name="DescriptionKey" value="weaponPartFragmentITAVGroupDesc"/>
+		<!--<property name="RepairTools" value="resourceWeaponRepairKitITAV"/>-->
+		<property name="EconomicValue" value="2"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="Group" value="Resources"/>
+		<property name="Weight" value="1"/>
+		<property name="PickupJournalEntry" value="weaponPartsAssemblyTipITAV"/>
+		<property name="Stacknumber" value="9999"/>
+		<property name="CraftingIngredientTime" value=".1"/>
+		<property name="CustomIcon" value="garbage_decor3"/>
+	</item>
+	
+	<item name="resourceRepairKitITAV">
+		<property name="HoldType" value="45"/>
+		<property name="Tags" value="junk"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="DescriptionKey" value="resourceRepairKitITAVDesc"/>
+		<property name="CustomIcon" value="resourceRepairKit"/>
+		<property name="CustomIconTint" value="185,133,248" />
+		<property name="UnlockedBy" value="perkArmorerITAV" />
+		<property name="Material" value="Msteel"/>
+		<property name="Stacknumber" value="100"/> <!-- STK resourceRepairKit -->
+		<property name="EconomicValue" value="226"/>
+		<property name="RepairTime" value="3"/>
+		<property name="RepairAmount" value="32000"/>
+		<property name="Group" value="Resources"/>
+	</item>
+</append>
+
+<setattribute xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and (contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3')) and not(contains(@name, 'Parts')) and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='RepairTools']" name="value">resourceRepairKitITAV</setattribute>
 
 <!-- Adding Profession Books to unlock holding more Professions -->
-<!-- My FIRST Profession -->
-<item name="qb_MyFirstProfessionITAV">
+<append xpath="/items"> 
+<!--<item name="qb_MyFirstProfessionITAV">
 	<property name="Extends" value="questMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="metalSignLetter_1"/>
@@ -165,7 +216,6 @@
 	</property>
 </item>
 
-<!-- My SECOND Profession -->
 <item name="qb_MySecondProfessionITAV">
 	<property name="Extends" value="questMaster"/>
 	<property name="CreativeMode" value="Player"/>
@@ -179,14 +229,14 @@
 		<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="Equals" value="1" />
 		<requirement name="CVarCompare" cvar="numberOfProfessionsAllowed" operation="Equals" value="2" />
 	</property>
-</item>
+</item> -->
 
 <!-- My NEXT Profession -->
 <item name="qb_MyNextProfessionITAV">
 	<property name="Extends" value="questMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="bundleBooks"/>
-		<property name="CustomIconTint" value="ffffff" />
+	<property name="CustomIconTint" value="ffffff" />
 	<property name="DescriptionKey" value="qb_MyNextProfessionITAV_desc"/>
 	<property name="EconomicValue" value="100"/>
 	<property name="Stacknumber" value="1"/>
@@ -232,6 +282,7 @@
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSmelterITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="LT" value="1" />
+			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
 		</triggered_effect> 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_SmelterITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkSmelterITAV" operation="set" value="1"/>
@@ -255,6 +306,7 @@
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMinerITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkMinerITAV" operation="LT" value="1" />
+			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_MinerITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkMinerITAV" operation="set" value="1"/>
@@ -278,6 +330,7 @@
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHunterITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="LT" value="1" />
+			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_HunterITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkHunterITAV" operation="set" value="1"/>
@@ -301,6 +354,7 @@
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkCookITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkCookITAV" operation="LT" value="1" />
+			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_CookITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkCookITAV" operation="set" value="1"/>
@@ -325,6 +379,7 @@
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkArmorerITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkArmorerITAV" operation="LT" value="1" />
+			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_ArmorerITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkArmorerITAV" operation="set" value="1"/>
@@ -370,6 +425,7 @@
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkFarmerITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkFarmerITAV" operation="LT" value="1" />
+			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_FarmerITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkFarmerITAV" operation="set" value="1"/>
@@ -393,6 +449,7 @@
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkChemistITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkChemistITAV" operation="LT" value="1" />
+			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_ChemistITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkChemistITAV" operation="set" value="1"/>
@@ -416,6 +473,7 @@
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRoboticsITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkRoboticsITAV" operation="LT" value="1" />
+			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_RoboticsITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkRoboticsITAV" operation="set" value="1"/>
@@ -439,6 +497,7 @@
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRunnerITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkRunnerITAV" operation="LT" value="1" />
+			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_RunnerITAV" />	
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkRunnerITAV" operation="set" value="1"/>
@@ -664,17 +723,6 @@
 	</effect_group>
 </item>
 
-<item name="bunkBedMadeITAVSchematic">
-	<property name="Extends" value="schematicNoQualityMaster"/>
-	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="bunkBedMade"/>
-	<property name="Unlocks" value="bunkBedMade"/>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="bunkBedMade" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
-</item>
-
 <item name="cntShoppingCartEmptyITAVSchematic">
 	<property name="Extends" value="schematicNoQualityMaster"/>
 	<property name="CreativeMode" value="Player"/>
@@ -745,9 +793,9 @@
 	<property name="Extends" value="schematicNoQualityMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="toolCookingPot"/>
-	<property name="Unlocks" value="decoCookingPot"/>
+	<property name="Unlocks" value="decoCookingPotITAV"/>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="decoCookingPot" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="decoCookingPotITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -873,7 +921,27 @@
 	</effect_group>
 </item>
 
+<item name="decoPoolTableITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="decoPoolTable"/>
+	<property name="Unlocks" value="decoPoolTable"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="decoPoolTable" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
 
+<item name="cntWoodBurningStoveITAVSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="cntWoodBurningStove"/>
+	<property name="Unlocks" value="cntWoodBurningStove"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntWoodBurningStove" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
 
 
 <!-- Lights ITAV Schematics -->
@@ -1089,6 +1157,14 @@
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
 			<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ResetProgression" reset_books="false"/>  This resets all progression, across attributes and perks. -->
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntSmelterITAV" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntMinerITAV" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntHunterITAV" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntCookITAV" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntFarmerITAV" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntArmorerITAV" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntChemistITAV" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntRoboticsITAV" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntRunnerITAV" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="1"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="player#death" play_in_head="true"/>

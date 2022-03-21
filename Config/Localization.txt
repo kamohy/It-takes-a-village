@@ -28,6 +28,7 @@ loadingTipUnlockingRecipes,UI,Loading Screen,x,,If a recipe shows a lock item th
 loadingTipUnlockingRecipes_title,UI,Loading Screen,x,,Unlocking Recipes
 
 
+schematicGeneralGroupDesc,items,Book,,,Reading the schematic will teach you how to craft this item. The Armorer is the only one who can make good quality weapons and armor. \nSome items are crafted with parts and scrap to the same parts.\nAn example are pump shotguns that scrap to pump shotgun parts and are crafted using those parts.
 
 note01ITAV,,,,,"Basic Professions"
 note02ITAV,,,,,"Intermediate Professions"
@@ -86,6 +87,7 @@ meleeWpnClubT3SteelClubSchematic,,,,,"Steel Club Schematic"
 
 LightITAVDesc,blocks,,,,"Light up the world! Requires connection to a power source. Use a wire tool to connect it."
 LightFuseboxITAVDesc,blocks,,,,"Use the wireless fusebox to connect lights to their power source with invisible cables. Requires a wire tool."
+LightchandelierLightITAV,blocks,,,,"Chandelier"
 LightStreetLightClassicITAV,blocks,,,,"Classic Street Light"
 signShopOpenLightITAV,blocks,,,,"Shop Open Sign"
 LightDeskLampLightITAV,blocks,,,,"Desk Lamp"
@@ -96,6 +98,37 @@ LightPorchLight04BrassITAV,blocks,,,,"Brass Porch Lamp"
 LightPorchLight04ITAV,blocks,,,,"Iron Porch Lamp"
 LightCeilingLight02ITAV,blocks,,,,"Iron Ceiling Lamp"
 LightCeilingLight02BrassITAV,blocks,,,,"Brass Ceiling Lamp"
+decoCookingPotITAV,blocks,,,,"Decorative Cooking Pot"
+decoStorageITAVDesc,blocks,,,,"Decorative storage item."
+cntFoodPileSmallITAV,blocks,,,,"Food Pile, Small"
+cntFoodPileMediumITAV,blocks,,,,"Food Pile, Medium"
+cntFoodPileLargeITAV,blocks,,,,"Food Pile, Large"
+
+signBread01,ITAVSchematic,items,,,,"Sign: Bread 01 Schematic"
+signBread02,ITAVSchematic,items,,,,"Sign: Bread 02 Schematic"
+barStoolVariantHelperITAVSchematic,items,,,,"Bar Stool Schematic"
+decoReptileTerrariumITAVSchematic,items,,,,"Reptile Terrarium Schematic"
+cntShoppingCartEmptyITAVSchematic,items,,,,"Empty Shopping Cart Schematic"
+cntMailBox01WhiteITAVSchematic,items,,,,"White Mailbox Schematic"
+houseFrontDoor1_v1ITAVSchematic,items,,,,"House Front Door White Schematic"
+houseFrontDoor2_v1ITAVSchematic,items,,,,"House Front Door Brown Schematic"
+cntMicrowaveOvenVer1ClosedITAVSchematic,items,,,,"Microwave Black Schematic"
+cntMicrowaveOvenVer2ClosedITAVSchematic,items,,,,"Microwave Brown Schematic"
+decoCookingPotITAVSchematic,items,,,,"Decorative Cooking Pot Schematic"
+cntRetroFridgeVer1ClosedITAVSchematic,items,,,,"Retro Refrigerator Schematic"
+cntFridgeStainlessSteelITAVSchematic,items,,,,"Refrigerator, Stainless Steel Schematic"
+cntDomedTrashCanEmptyITAVSchematic,items,,,,"Domed Trash Can, Empty Schematic"
+cntDomedTrashCanCornerEmptyITAVSchematic,items,,,,"Domed Trash Can Corner, Empty Schematic"
+cntBruteStyleTrashCanEmptyITAVSchematic,items,,,,"Trash Can, Empty Schematic"
+cntWaterCoolerFullITAVSchematic,items,,,,"Water Cooler Schematic"
+signDinersMenuITAVSchematic,items,,,,"Sign: Diners Menu Schematic"
+signDinersMenu2mITAVSchematic,items,,,,"Diner Menu Board Schematic"
+signLaborDaySaleAdITAVSchematic,items,,,,"Sign: Labor Day Sle Ad Schematic"
+signSale01ITAVSchematic,items,,,,"Sign: Sale 01 Schematic"
+signSale02ITAVSchematic,items,,,,"Sign: Sale 02 Schematic"
+decoPoolTableITAVSchematic,items,,,,"Pool Table Schematic"
+cntWoodBurningStoveITAVSchematic,items,,,,"Wood Burning Stove Schematic"
+
 
 LightStreetLightClassicITAVSchematic,items,,,,"Classic Street Light"
 signShopOpenLightITAVSchematic,items,,,,"Shop Open Sign"
@@ -230,12 +263,17 @@ perkMinerITAVRank5LongDesc,progression,perk Pro,,,"Craft quality 6 amazing tools
 
 perkHunterITAVDesc,progression,perk Pro,,,"Become one with the hunt. Gain the ability to track animals and increase damage to and harvest from them."
 perkHunterITAVName,progression,perk Pro,,,Hunter
-perkHunterITAVRank1LongDesc,progression,perk Pro,,,"You are now a Pelter. Harvest 20% more resources from animals and crouch to track them. Deal 25% more damage to animals."
-perkHunterITAVRank2Desc,progression,perk Pro,,,Huntress
-perkHunterITAVRank2LongDesc,progression,perk Pro,,,"You are a true Hunter and let nothing go to waste. Harvest 100% more resources from animals, and gain a run speed boost when fighting zombie bears."
+perkHunterITAVRank1LongDesc,progression,perk Pro,,,"You are now a Pelter. Harvest 20% more resources from animals. Crouch to track rabbit, snakes and chickens. Deal 25% more damage to animals."
+perkHunterITAVRank2Desc,progression,perk Pro,,,Tracker
+perkHunterITAVRank2LongDesc,progression,perk Pro,,,"You are now a Tracker. Crouch to track deers, boars, wolves and coyotes. Harvest 60% more resources from animals."
+perkHunterITAVRank3Desc,progression,perk Pro,,,Huntress
+perkHunterITAVRank3LongDesc,progression,perk Pro,,,"You are a true Hunter and let nothing go to waste. Crouch to track mountain lions and bears. Harvest 100% more resources from animals, and gain a run speed boost when fighting zombie bears."
 
 perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced benefits and learn to cook faster."
 perkCookITAVName,progression,perk Pro,,,Cook
+perkCookITAVRank2LongDesc,progression,perk Pro,,,"Just like grandma used to make, tasty hearty meals that fill you up for days. Craft steak and potatoes, meat stew, vegetable stew, blueberry pie and several pumpkin dishes. Cook 20% faster. Unlocks the Small Food Pile storage decoration."
+perkCookITAVRank4LongDesc,progression,perk Pro,,,"Cook for an army by making Gumbo Stew, Shepards Pie, Spaghetti and Tuna Gravy on Toast. Cook 40% faster. Use 20% less of a recipe's main ingredients. Unlocks the Medium Food Pile storage decoration."
+perkCookITAVRank5LongDesc,progression,perk Pro,,,"Learn grandpa's secret recipes that boost stats and attributes! Cook 50% faster. Unlocks the Large Food Pile storage decoration."
 
 perkArmorerITAVDesc,progression,perk Pro,,,"Craft ranged and melee weapons, as well as light and heavy armor."
 perkArmorerITAVName,progression,perk Pro,,,Armorer
@@ -329,6 +367,16 @@ drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,Your Profession Perk skill
 
 tutorialTipITAV_title,Journal Tip,,,,"It Takes A Village"
 tutorialTipITAV,Journal Tip,,,,"You look rough,\n\nIf you can find the other survivors, you can combine your different strengths to better survive in the wasteland. Press Tab to open the crafting menu and your backpack. \n\nIt Takes A Village!"
+weaponPartsAssemblyTipITAV_title, Journal Tip,,,,"Weapon Part Fragments"
+weaponPartsAssemblyTipITAV,Journal Tip,,,,"The Armorer can assemble weapon parts out of fragments."
+weaponPartFragmentITAV,items,,,,"Weapon Part Fragment"
+weaponPartFragmentITAVGroupDesc,items,,,,"The Armorer can assemble any kind of weapon part out of Weapon Part Fragments."
+
+resourceRepairKitDesc,items,Item,,,"Repair Kits are used to repair all tools and worn items, vehicles, turrets, drones and more."
+
+resourceRepairKitITAV,items,Item,,,"Weapon Repair Kit"
+resourceRepairKitITAVDesc,items,Item,,,"Weapon Repair Kits are used to repair all weapons that are made of materials more advanced than wood, stone and leather."
+
 
 MyFirstProfessionTip_title,Journal Tip,,,,Learning Professions
 MyFirstProfessionTip,Journal Tip,,,,"To learn a Profession you need to read a Profession book from a trader. Once you have maxed out a Profession, you will be eligible to read the 'My Next Profession!' book, which allows you to pick an additional Profession.  n\Keep maxing out your Professions to become able to learn new ones!"
@@ -354,7 +402,7 @@ quest_MySecondProfession_response,Quests,Quests,,,Trade Profession Quest Respons
 quest_MySecondProfession_statement,Quests,Quests,,,Pick a Profession
 quest_MySecondProfession_completion,Quests,Quests,,,"Choose what Profession fits you and your community best.\n\nOnce you have read the Profession book, there is no going back.\n\nChoose carefully."
 
-quest_MyNextProfession_offer,Quest,Quest Info,,,"Your next Profession \n\nChoose your next profession carefully. \nOnly after perfecting this Profession will you be able to learn yet another. \n\nBuy what materials you might need from the other survivors!"
+quest_MyNextProfession_offer,Quest,Quest Info,,,"Unlock your next Profession \n\nChoose your next profession carefully. Reading the next book does not give you a point in the chosen profession, it only unlocks it. \nAfter perfecting this Profession, you will be able to learn yet another. \n\nBuy what materials you might need from the other survivors!"
 quest_MyNextProfession_subtitle,Quests,Quests,,,My Next Profession
 quest_MyNextProfession_description,Quests,Quests,,,"Talking to the Trader will allow me to chose one more Profession."
 quest_MyNextProfession_title,Quests,Quests,,,Pick a Profession

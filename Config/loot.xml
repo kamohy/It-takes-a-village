@@ -75,11 +75,14 @@
 
 
 
-<!-- Removing some drink/food loots, and replacing loot group food schematics with pieces of paper to make Cook more viable-->
+<!-- Tweaking loot group contents -->
+
+
+<append xpath="/lootcontainers/lootgroup[@name='groupScrapCommon']">
+	<item name="weaponPartFragmentITAV" count="1,2" />
+</append>
+
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item" />
-<!-- <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']">
-	<item name="resourcePaper" />
-</append> -->
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']/item" />
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']">
@@ -96,23 +99,14 @@
 	<item name="cntSodaFountain" />
 </append>
 
-
-<!-- Tweaking loot group contents -->
 <remove xpath="//lootgroup[@name='groupConstructionCrate01']/item" />
 <append xpath="//lootgroup[@name='groupConstructionCrate01']">
 	<item name="resourceAcid" count ="1" loot_prob_template="low"/>
-	<item name="cntToilet02"/>
-	<item name="faucet02"/>
-	<item name="faucet04"/>
+	<item name="sinksToiletsBlockVariantHelper"/>
 	<item name="faucetBrass02"/>
 	<item name="faucetBrass04"/>
-	<item name="counterSinkCommercialTile"/>
-	<item name="showerHead"/>
-	<item name="pedestalSink"/>
-	<item name="utilitySink"/>
 	<item name="cntWasherClosed"/>
 	<item name="cntCoffeeMaker"/>
-
 </append>
 
 <remove xpath="//lootgroup[@name='schematicsWeaponsArmorT0']/item" />
@@ -157,11 +151,11 @@
 
 <insertAfter xpath="/lootcontainers/lootgroup[@name='treasureAmmo']">
 	<lootgroup name="poiCandyOnlyITAV">
-	<item name="drugOhShitzDrops" />
-	<item name="drugEyeKandy" />
-	<item name="drugJailBreakers"/>
-	<item name="drugHealthBar"/>
-	<item name="drugCovertCats"/>
+		<item name="drugOhShitzDrops" />
+		<item name="drugEyeKandy" />
+		<item name="drugJailBreakers"/>
+		<item name="drugHealthBar"/>
+		<item name="drugCovertCats"/>
 	</lootgroup>
 </insertAfter>
 
@@ -219,17 +213,16 @@
 <append xpath="//lootgroup[@name='groupMedicalRare']">
 	<item name="medicalBloodBag" />
 	<item name="toolBeaker" />
+	<item name="cntMedicineCabinetClosed"/>
 </append>
 
 <remove xpath="//lootgroup[@name='groupChem01']/item[@name='drinkJarRiverWater']" />
 <remove xpath="//lootgroup[@name='groupChem01']/item[@name='drinkJarBoiledWater']" />
 <append xpath="//lootgroup[@name='groupChem01']">
 	<item group="poiCandyOnlyITAV" />
+	<item name="resourceGunPowder" count="3,7" />
 </append>
 
-<append xpath="//lootgroup[@name='groupMedicalRare']">
-	<item name="cntMedicineCabinetClosed"/>
-</append>
 
 <!-- Replacing/removing armor/weapons/turrets in lootgroups -->
 <remove xpath="/lootcontainers/lootgroup[@name='groupArmorT1']/item" />

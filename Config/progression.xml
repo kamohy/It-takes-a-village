@@ -183,7 +183,7 @@
 	</perk>
 
 	<!-- Hunter Perk -->
-	<perk name="perkHunterITAV" max_level="2" parent="attITAV" name_key="perkHunterITAVName" desc_key="perkHunterITAVDesc" icon="ui_game_symbol_archery">
+	<perk name="perkHunterITAV" max_level="3" parent="attITAV" name_key="perkHunterITAVName" desc_key="perkHunterITAVDesc" icon="ui_game_symbol_archery">
         <level_requirements level="1">
 			<requirement name="CVarCompare" cvar="hasLearntHunterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
 		</level_requirements>
@@ -214,26 +214,27 @@
         <!-- Adding Huntsman -->
         <effect_group>
             <!-- stone axe, knives, etc do the base_set 1 -->
-            <passive_effect name="HarvestCount" operation="perc_add" level="1,2" value=".2,1" tags="butcherHarvest"/>
+            <passive_effect name="HarvestCount" operation="perc_add" level="1,3" value=".2,1" tags="butcherHarvest"/>
 
             <effect_description level="1" desc_key="perkTheHuntsmanRank1Desc" long_desc_key="perkHunterITAVRank1LongDesc"/>
             <!-- <effect_description level="2" desc_key="perkTheHuntsmanRank2Desc" long_desc_key="perkTheHuntsmanRank2LongDesc"/>
             <effect_description level="3" desc_key="perkTheHuntsmanRank3Desc" long_desc_key="perkTheHuntsmanRank3LongDesc"/>
             <effect_description level="4" desc_key="perkTheHuntsmanRank4Desc" long_desc_key="perkTheHuntsmanRank4LongDesc"/> -->
             <effect_description level="2" desc_key="perkHunterITAVRank2Desc" long_desc_key="perkHunterITAVRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkHunterITAVRank3Desc" long_desc_key="perkHunterITAVRank3LongDesc"/>
         </effect_group>
 	
 	<!-- Adding Animal tracking -->
         <effect_group>
-                <passive_effect name="TrackDistance" operation="base_set" level="0,1,2" value="0,100,100"/>
+                <passive_effect name="TrackDistance" operation="base_set" level="0,1,3" value="0,100,100"/>
             <triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffAnimalTracker">
                 <requirement name="NotHasBuff" buff="buffAnimalTrackerAcquired"/>
                 <requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="GT" value="0"/>
             </triggered_effect>
 
             <effect_description level="1" desc_key="perkAnimalTrackerRank1Desc" long_desc_key="perkAnimalTrackerRank1LongDesc"/>
-            <!-- <effect_description level="2" desc_key="perkAnimalTrackerRank2Desc" long_desc_key="perkAnimalTrackerRank2LongDesc"/> -->
-            <effect_description level="2" desc_key="perkAnimalTrackerRank3Desc" long_desc_key="perkAnimalTrackerRank3LongDesc"/>
+            <effect_description level="2" desc_key="perkAnimalTrackerRank2Desc" long_desc_key="perkAnimalTrackerRank2LongDesc"/>
+            <effect_description level="3" desc_key="perkAnimalTrackerRank3Desc" long_desc_key="perkAnimalTrackerRank3LongDesc"/>
         </effect_group>
 
         <!-- Adding Animal Damage -->
@@ -244,7 +245,8 @@
 		
 		<!-- Adding Megacrush buff on damaging zombie bears -->
          <effect_group>
-            <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" level="1" buff="buffMegaCrush" >
+			<requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="Equals" value="3" />
+            <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="buffMegaCrush" >
                 <requirement name="EntityTagCompare" target="other" tags="entityITAV"/>
             </triggered_effect>
             <triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="add" value="10">
@@ -301,19 +303,19 @@
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1"
                 tags="foodBaconAndEggs,foodBoiledMeat,foodGrilledMeat,foodBakedPotato,foodCornBread,foodCornOnTheCob,drinkJarRedTea,drinkJarCoffee,drinkJarGoldenRodTea"/>
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1"
-                tags="foodSteakAndPotato,foodBlueberryPie,foodMeatStew,foodVegetableStew,foodPumpkinPie,foodPumpkinCheesecake,foodPumpkinBread"/>
+                tags="foodSteakAndPotato,foodBlueberryPie,foodMeatStew,foodVegetableStew,foodPumpkinPie,foodPumpkinCheesecake,foodPumpkinBread,cntFoodPileSmallITAV"/>
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1"
                 tags="foodShamChowder,foodHoboStew,foodFishTacos,drinkYuccaJuiceSmoothie,foodChiliDog,drinkJarBeer"/>
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1"
-                tags="foodGumboStew,foodShepardsPie,foodSpaghetti,foodTunaFishGravyToast"/>
+                tags="foodGumboStew,foodShepardsPie,foodSpaghetti,foodTunaFishGravyToast,cntFoodPileMediumITAV"/>
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1"
-                tags="drinkJarGrandpasMoonshine,drinkJarGrandpasAwesomeSauce,drinkJarGrandpasLearningElixir"/>
+                tags="drinkJarGrandpasMoonshine,drinkJarGrandpasAwesomeSauce,drinkJarGrandpasLearningElixir,cntFoodPileLargeITAV"/>
 				
 			<effect_description level="1" desc_key="perkMasterChefRank1Desc" long_desc_key="perkMasterChefRank1LongDesc"/>
-            <effect_description level="2" desc_key="perkMasterChefRank2Desc" long_desc_key="perkMasterChefRank2LongDesc"/>
+            <effect_description level="2" desc_key="perkMasterChefRank2Desc" long_desc_key="perkCookITAVRank2LongDesc"/>
             <effect_description level="3" desc_key="perkMasterChefRank3Desc" long_desc_key="perkMasterChefRank3LongDesc"/>
-            <effect_description level="4" desc_key="perkMasterChefRank4Desc" long_desc_key="perkMasterChefRank4LongDesc"/>
-            <effect_description level="5" desc_key="perkMasterChefRank5Desc" long_desc_key="perkMasterChefRank5LongDesc"/>
+            <effect_description level="4" desc_key="perkMasterChefRank4Desc" long_desc_key="perkCookITAVRank4LongDesc"/>
+            <effect_description level="5" desc_key="perkMasterChefRank5Desc" long_desc_key="perkCookITAVRank5LongDesc"/>
         </effect_group>
     </perk>
 	
@@ -346,7 +348,7 @@
 
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,5" value="1,5" tags="perkArmorerITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="workbench,armorIronHelmet,armorIronChest,armorIronGloves,armorIronLegs,armorIronBoots,armorLeatherHood,armorLeatherChest,armorLeatherGloves,armorLeatherPants,armorLeatherBoots,armorSteelBoots,armorSteelChest,armorSteelGloves,armorSteelLegs,armorSteelHelmet,armorMilitaryBoots,armorMilitaryStealthBoots,armorMilitaryGloves,armorMilitaryHelmet,armorMilitaryLegs,armorMilitaryVest,gunBowT1WoodenBow,gunBowT1IronCrossbow,gunHandgunT1Pistol,gunHandgunT2Magnum44,gunShotgunT1DoubleBarrel,gunShotgunT2PumpShotgun,gunRifleT1HuntingRifle,gunRifleT2LeverActionRifle,gunMGT1AK47,gunMGT2TacticalAR,meleeWpnBladeT1HuntingKnife,meleeWpnBladeT1CandyKnife,meleeWpnClubT1BaseballBat,meleeWpnClubT1CandyClub,meleeWpnBatonT2StunBaton,meleeWpnSpearT1IronSpear,meleeWpnSledgeT1IronSledgehammer,meleeWpnKnucklesT1IronKnuckles"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="workbench,armorIronHelmet,armorIronChest,armorIronGloves,armorIronLegs,armorIronBoots,armorLeatherHood,armorLeatherChest,armorLeatherGloves,armorLeatherPants,armorLeatherBoots,armorSteelBoots,armorSteelChest,armorSteelGloves,armorSteelLegs,armorSteelHelmet,armorMilitaryBoots,armorMilitaryStealthBoots,armorMilitaryGloves,armorMilitaryHelmet,armorMilitaryLegs,armorMilitaryVest,gunBowT1WoodenBow,gunBowT1IronCrossbow,gunHandgunT1Pistol,gunHandgunT2Magnum44,gunShotgunT1DoubleBarrel,gunShotgunT2PumpShotgun,gunRifleT1HuntingRifle,gunRifleT2LeverActionRifle,gunMGT1AK47,gunMGT2TacticalAR,meleeWpnBladeT1HuntingKnife,meleeWpnBladeT1CandyKnife,meleeWpnClubT1BaseballBat,meleeWpnClubT1CandyClub,meleeWpnBatonT2StunBaton,meleeWpnSpearT1IronSpear,meleeWpnSledgeT1IronSledgehammer,meleeWpnKnucklesT1IronKnuckles,gunMGT1AK47Parts,gunHandgunT1PistolParts,gunRifleT1HuntingRifleParts,gunShotgunT1DoubleBarrelParts,gunBowT1WoodenBowParts,gunExplosivesT3RocketLauncherParts,meleeWpnBatonT2StunBatonParts,meleeWpnKnucklesT3SteelKnucklesParts,meleeWpnBladeT3MacheteParts,meleeWpnSpearT3SteelSpearParts,meleeWpnClubT3SteelClubParts,meleeWpnSledgeT3SteelSledgehammerParts,resourceRepairKitITAV"/>
 			<!--,gunHandgunT3SMG5,meleeWpnKnucklesT3SteelKnuckles,gunHandgunT3DesertVulture,gunShotgunT3AutoShotgun,gunBowT3CompoundBow,gunRifleT3SniperRifle,gunMGT3M60,gunBowT3CompoundCrossbow,gunExplosivesT3RocketLauncher,meleeWpnSpearT3SteelSpear,meleeWpnBladeT3Machete,meleeWpnClubT3SteelClub,meleeWpnSledgeT3SteelSledgehammer -->
 
 			<!-- Stamina/mobility are handled in buffs (buffStatusCheck02) -->
