@@ -66,6 +66,45 @@
 	</lootgroup>
 </insertAfter>
 
+<insertAfter xpath="/lootcontainers/lootgroup[@name='treasureAmmo']">
+	<lootgroup name="signsITAV" count="1">
+		<item name="signBread01ITAVSchematic" />
+		<item name="signBread02ITAVSchematic" />
+		<item name="signDinersMenu2mITAVSchematic" />
+		<item name="signLaborDaySaleAdITAVSchematic" />
+		<item name="signSale01ITAVSchematic" />
+		<item name="signSale02ITAVSchematic" />
+	</lootgroup>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='treasureAmmo']">
+	<lootgroup name="furnitureITAV" count="1">
+		<item name="barStoolVariantHelperITAVSchematic" />
+		<item name="houseFrontDoor1_v1ITAVSchematic" />
+		<item name="houseFrontDoor2_v1ITAVSchematic" />
+		<item name="cntRetroFridgeVer1ClosedITAVSchematic" />
+		<item name="cntFridgeStainlessSteelITAVSchematic" />
+		<item name="cntMicrowaveOvenVer1ClosedITAVSchematic" />
+		<item name="cntMicrowaveOvenVer2ClosedITAVSchematic" />
+		<item name="cntDomedTrashCanEmptyITAVSchematic" />
+		<item name="cntDomedTrashCanCornerEmptyITAVSchematic" />
+		<item name="cntBruteStyleTrashCanEmptyITAVSchematic" />
+		<item name="cntWoodBurningStoveITAVSchematic" />
+		<item name="decoPoolTableITAVSchematic" />
+	</lootgroup>
+</insertAfter>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='treasureAmmo']">
+	<lootgroup name="decorationITAV" count="1">		
+		<item name="decoReptileTerrariumITAVSchematic" />
+		<item name="cntShoppingCartEmptyITAVSchematic" />
+		<item name="cntMailBox01WhiteITAVSchematic" />
+		<item name="decoCookingPotITAVSchematic" />
+		<item name="cntWaterCoolerFullITAVSchematic" />
+	</lootgroup>
+</insertAfter>
+
+
 <append xpath="//lootgroup[@name='groupBirdNest01']"><item name="foodEgg" loot_prob_template="medLow"/></append>
 <remove xpath="//lootgroup[@name='groupMailbox02']/item[@group='booksAllScaled']" />
 <remove xpath="//lootgroup[@name='groupMailbox01']/item[@group='perkBooksT0Day1']" />
@@ -107,6 +146,7 @@
 	<item name="faucetBrass04"/>
 	<item name="cntWasherClosed"/>
 	<item name="cntCoffeeMaker"/>
+	<item name="decoClawFootBathTub" />
 </append>
 
 <remove xpath="//lootgroup[@name='schematicsWeaponsArmorT0']/item" />
@@ -310,6 +350,7 @@
 
 <remove xpath="//lootgroup[@name='groupHardenedChestT4_09']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='groupHardenedChestT4_09']">
+	<item name="casinoCoin" count="450,900" loot_prob_template="medHigh"/>
 	<item name="resourceRawDiamond" count="2,3" loot_prob_template="medHigh"/>
 	<item group="schematicsWeaponsArmorT1" loot_prob_template="med" force_prob="true"/>
 	<item group="schematicsWeaponsArmorT2" loot_prob_template="low" force_prob="true"/>
@@ -328,6 +369,7 @@
 
 <remove xpath="//lootgroup[@name='groupHardenedChestT5_07']/item" />
 <append xpath="//lootgroup[@name='groupHardenedChestT5_07']">
+	<item name="casinoCoin" count="450,1000" loot_prob_template="medHigh"/>
 	<item name="resourceRawDiamond" count="2,3" loot_prob_template="medHigh"/>
 	<item group="schematicsWeaponsArmorT2" loot_prob_template="med" force_prob="true"/>
 </append>
@@ -402,11 +444,17 @@
 <remove xpath="/lootcontainers/lootgroup[@name='booksAllScaled']/item[@group='farmingCookingRecipesCommon']" />
 <append xpath="//lootgroup[@name='booksAllScaled']">
 	<item group="perkBooks" loot_prob_template="high" />
+	<item group="signsITAV" loot_prob_template="medLow"/>
+	<item group="decorationITAV" loot_prob_template="medLow"/>
+	
 </append>
 
 <remove xpath="/lootcontainers/lootgroup[@name='booksRareOnlyScaled']/item[@group='farmingCookingRecipesRare']" />
 <append xpath="//lootgroup[@name='booksRareOnlyScaled']">
 	<item group="perkBooks" loot_prob_template="high" />
+	<item group="signsITAV" loot_prob_template="medLow" />
+	<item group="furnitureITAV" loot_prob_template="medLow" />
+	<item group="decorationITAV" loot_prob_template="medLow" />
 </append>
 
 

@@ -197,6 +197,27 @@
 	</item>
 </append>
 
+
+<append xpath="/items">
+	<item name="resourceCarFrameITAV">
+		<property name="HoldType" value="45"/>
+		<property name="Tags" value="junk"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="MresourceForgedIron"/>
+		<property name="EconomicValue" value="2"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="Group" value="Resources"/>
+		<property name="Weight" value="20"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="Stacknumber" value="4"/>
+		<property name="CraftingIngredientTime" value="2"/>
+		<property name="DescriptionKey" value="resourceCarFrameITAVDesc"/>
+		<property name="CustomIcon" value="cntCar03SedanDamage2Master"/>
+	</item>
+</append>
+
+
 <setattribute xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and (contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3')) and not(contains(@name, 'Parts')) and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='RepairTools']" name="value">resourceRepairKitITAV</setattribute>
 
 <!-- Adding Profession Books to unlock holding more Professions -->
@@ -247,8 +268,6 @@
 	</property>
 </item>
 
-<!-- My THIRD Profession -->
-<!-- My FOURTH Profession -->
 
 <!-- Adding Trade Profession Perk Books to unlock specific Professions -->
 <!-- Master -->

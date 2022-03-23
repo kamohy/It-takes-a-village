@@ -18,7 +18,7 @@
 			<ingredient name="resourceYuccaFibers" count="20" />
 		</recipe>	
 
-		<recipe name="forestFlower" count="5" craft_time="10"> 
+		<recipe name="forestFlower" count="4" craft_time="10"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="resourceYuccaFibers" count="8" />
 		</recipe>	
@@ -32,7 +32,11 @@
 			<ingredient name="candle" count="3" />
 			<ingredient name="resourceCandleStick" count="3" />
 		</recipe>
-			
+		
+		<recipe name="hangingMoss" count="2" craft_area="chemistryStationT2ITAV" craft_time="10"> 
+			<ingredient name="resourceClayLump" count="1" />
+			<ingredient name="resourceCropGoldenrodPlant" count="8" />
+		</recipe>
 				
 		<!-- Kitchen and more stuff  -->	
 		<recipe name="cntFoodPileSmallITAV" count="1" craft_time="10" tags="learnable,perkCookITAV">
@@ -45,7 +49,7 @@
 			<ingredient name="foodCanCatfood" count="5" />
 		</recipe>
 		
-		<recipe name="cntFoodPileLargeITAV" count="1" craft_time="10" tags="learnable,perkCookITAV">
+		<recipe name="cntFoodPileLargeITAV" count="1" craft_area="campfireT2ITAV" craft_time="10" tags="learnable,perkCookITAV">
 			<ingredient name="drinkJarBoiledWater" count="2" />
 			<ingredient name="foodCanCatfood" count="10" />
 			<ingredient name="resourcePaint" count="3" />
@@ -211,7 +215,7 @@
 		</recipe>
 		
 		<recipe name="decoPoolTable" count="1" craft_area="workbench" craft_time="10" tags="learnable">
-			<ingredient name="resourcePaint" count="5" />
+			<ingredient name="resourcePaint" count="41" />
 			<ingredient name="foodCropPotato" count="21" />
 			<ingredient name="resourceWood" count="50" />
 			<ingredient name="resourceSnowBall" count="1" />
@@ -219,7 +223,7 @@
 		</recipe>
 	
 		<recipe name="cntWoodBurningStove" count="1" craft_area="workbench" craft_time="10" tags="learnable">
-			<ingredient name="resourceForgedIron" count="20" />
+			<ingredient name="resourceForgedIron" count="100" />
 			<ingredient name="resourceWood" count="50" />
 			<ingredient name="resourceMetalPipe" count="10" />
 		</recipe>
@@ -491,9 +495,13 @@
 		</recipe>	
 	
 		<!-- Crushed car wall -->
-		<recipe name="crushedCars" count="1" craft_area="workbench" tag="learnable,perkRunnerITAV">
-			<ingredient name="resourceScrapIron" count="10"/>
-			<ingredient name="resourceMetalPipe" count="2"/>
+		<recipe name="crushedCars" count="1" tag="learnable,perkRunnerITAV">
+			<ingredient name="resourceCarFrameITAV" count="2"/>
+		</recipe>
+		
+		<recipe name="wirelessRelayFuseboxLightITAV" count="1" craft_area="workbench" tags="perkSmelterITAV,perkRoboticsITAV,learnable">
+			<ingredient name="resourceForgedIron" count="2"/>
+			<ingredient name="resourceElectricParts" count="1"/>
 		</recipe>
 		
 		<!-- Powered Lights -->

@@ -79,11 +79,37 @@ bookRunnerITAVDesc,progression,perk  book,,,"Mechanics salvage materials, crafts
 
 cntVendingMachineITAV,blocks,Container,,,"Player Owned Store"
 cntVendingMachineGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Casino Coins. Buy the goods you need from other Player Owned Stores to support them and the community!  Store is indestructible unless falling."
+
+lblCategoryAdvancedChemicals,UI,Tooltip,,,"Advanced Chemicals"
+lblCategoryAdvancedMedicine,UI,Tooltip,,,"Advanced Medicine"
+chemistryStationT2ITAV,blocks,,,,"Advanced Chemistry Station"
+campfireT2ITAV,blocks,,,,"Advanced Campfire"
+workbenchRoboticsT2ITAV,blocks,,,,"Advanced Robotics Table"
+workbenchRunnerT2ITAV,block,,,,"Advanced Mechanics Table"
+
+workstationT2ITAVTip_title,Journal Tip,,,,"Advanced Workstations"
+workstationT2ITAVTip,Journal Tip,,,,"The most advanced recipes require the advanced workstation for each profession to craft."
+
 modDyeTealITAV,item_modifiers,mod,,,"Dye: Teal"
 modDyePineITAV,item_modifiers,mod,,,"Dye: Pine Green"
 modDyePineITAV,item_modifiers,mod,,,"Dye: Hunter Green"
 meleeWpnSpearT3SteelSpearSchematic,,,,,"Steel Spear Schematic"
 meleeWpnClubT3SteelClubSchematic,,,,,"Steel Club Schematic"
+
+
+forestFlowerITAV,blocks,,,,"Decorative Forest Flower"
+plantedGoldenrod3FlowerITAV,blocks,,,,"Decorative Goldenrod plant"
+plantedChrysanthemum3FlowerITAV,blocks,,,,"Decorative Chrysanthemum plant"
+plantedCoffee3FlowerITAV,blocks,,,,"Decorative Coffee plant"
+plantedAloe3FlowerITAV,blocks,,,,"Decorative Aloe plant"
+plantedYucca3FlowerITAV,blocks,,,,"Decorative Yucca plant"
+plantedBlueberry3FlowerITAV,blocks,,,,"Decorative Blueberry plant"
+plantedPotato3FlowerITAV,blocks,,,,"Decorative Potato plant"
+plantedSnowberry3FlowerITAV,blocks,,,,"Decorative Snowberry plant"
+plantedPumpkin3FlowerITAV,blocks,,,,"Decorative Pumpkin plant"
+plantedCorn2FlowerITAV,blocks,,,,"Decorative Corn plant"
+birdBathPlanterITAV,blocks,,,,"Decorative Planter"
+
 
 LightITAVDesc,blocks,,,,"Light up the world! Requires connection to a power source. Use a wire tool to connect it."
 LightFuseboxITAVDesc,blocks,,,,"Use the wireless fusebox to connect lights to their power source with invisible cables. Requires a wire tool."
@@ -376,6 +402,9 @@ resourceRepairKitDesc,items,Item,,,"Repair Kits are used to repair all tools and
 
 resourceRepairKitITAV,items,Item,,,"Weapon Repair Kit"
 resourceRepairKitITAVDesc,items,Item,,,"Weapon Repair Kits are used to repair all weapons that are made of materials more advanced than wood, stone and leather."
+resourceCarFrameITAV,items,Item,,,"Car Frame"
+resourceCarFrameITAVDesc,items,Item,,,"Car Frames are used for crafting Crushed Car walls."
+
 
 
 MyFirstProfessionTip_title,Journal Tip,,,,Learning Professions

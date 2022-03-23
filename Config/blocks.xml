@@ -1,5 +1,9 @@
 <configs>
 
+<append xpath="//block[(contains(@name, 'Sedan') and contains(@name, 'Master'))]">
+    <drop event="Harvest" name="resourceCarFrameITAV" count="1" prob="0.25" tag="salvageHarvest"/>
+</append>
+
 <!-- Attempting to reduce oreWoodHarvest harvest when player is not Miner. Must be countered by increasing the perc_add to oreWoodHarvest for Miner in progression.xml! -->
 <setattribute xpath="//block[@name='rockResource']/drop[@event='Harvest' and @name='resourceRockSmall']" name="count">7</setattribute> <!-- 22 -->
 <setattribute xpath="//block[@name='oreIronBoulder']/drop[@event='Harvest' and @name='resourceScrapIron']" name="count">34</setattribute> <!-- 105 -->
@@ -81,7 +85,343 @@
 		<property class="RepairItems">
 			<property name="resourceScrapIron" value="1"/>
 		</property>			
-	</block>		
+	</block>	
+	
+	
+	<!-- *******************      Advanced Crafting Area blocks            ************************** -->
+	
+	<!-- COOK -->	
+	<block name="campfireT2ITAV">
+		<property name="Class" value="Campfire"/>
+		<property name="CustomIcon" value="cntWallOven" />
+		<property name="Material" value="Mmetal"/>
+		<property name="MaxDamage" value="1000"/>
+		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+		<property name="Texture" value="346,345,341,345,345,345"/>
+		<property name="ImposterDontBlock" value="true"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<property name="ParticleName" value="chemistryStation"/>
+		<property name="ParticleOffset" value="-0.65,0.75,-0.1"/>
+		<property name="UnlockedBy" value="perkCookITAV"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="HeatMapStrength" value="8"/> <!-- 5 -->
+		<property name="HeatMapTime" value="5000"/>
+		<property name="HeatMapFrequency" value="1000"/>
+		<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
+		<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+		<property class="Workstation">
+			<property name="Modules" value="tools,output,fuel,input"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+		</property>
+		<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
+		<property name="CraftActionName" value="lblContextActionCook"/>
+		<property name="CraftIcon" value="ui_game_symbol_spatula"/>
+		<property name="OpenSound" value="campfire_open"/>
+		<property name="CloseSound" value="campfire_close"/>
+		<property name="CraftSound" value="campfire_cook_click"/>
+		<property name="CraftCompleteSound" value="campfire_complete_item"/>
+		<property name="PickupJournalEntry" value="workstationT2ITAVTip"/>
+		<property class="RepairItems">
+			<property name="resourceForgedSteel" value="5"/>
+		</property>
+		<drop event="Destroy" name="resourceForgedIron" count="3"/>
+		<property name="TakeDelay" value="15"/>
+		<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+		<property name="DescriptionKey" value="campfireDesc"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+		<property name="SortOrder1" value="70i0"/>
+	</block>
+	
+	<!-- ARMORER -->
+		
+	<!-- CHEMIST -->
+	<block name="chemistryStationT2ITAV">
+		<property name="Class" value="Campfire"/>
+		<property name="CustomIcon" value="cntChemPileLarge" />
+		<property name="Material" value="Miron_scrap"/>
+		<property name="MaxDamage" value="800"/>
+		<property name="Weight" value="0"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="ParticleName" value="candle_flame"/> <!-- candleWall_flame  hotembers ember_pile campfire forge  chemistryStation-->
+		<property name="ParticleOffset" value="0.15,-0.2,0.34"/> <!-- for candleWall_flame : ParticleOffset value="0.15,0.5,0.34" -->
+		<property name="Path" value="solid"/>
+		<property name="Model" value="Entities/Crafting/ChemSetDPrefab"/>
+		<property name="Place" value="TowardsPlacerInverted"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="MultiBlockDim" value="1,1,1"/>
+		<property name="OnlySimpleRotations" value="true"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<property name="ImposterDontBlock" value="true"/>
+		<property name="UnlockedBy" value="perkChemistITAV"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="HeatMapStrength" value="8"/> <!-- 5 -->
+		<property name="HeatMapTime" value="5000"/>
+		<property name="HeatMapFrequency" value="1000"/>
+		<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+		<property class="Workstation">
+			<property name="Modules" value="output,fuel,input"/>
+		</property>
+		<property name="WorkstationIcon" value="ui_game_symbol_chemistry"/>
+		<property name="CraftActionName" value="lblContextActionMix"/>
+		<property name="CraftIcon" value="ui_game_symbol_chemistry"/>
+		<property name="OpenSound" value="chem_station_open"/>
+		<property name="CloseSound" value="chem_station_close"/>
+		<property name="CraftSound" value="chem_station_mix_click"/>
+		<property name="CraftCompleteSound" value="chem_station_complete_item"/>
+		<property name="WorkstationJournalTip" value="workstationT2ITAVTip"/>
+		<property class="RepairItems">
+			<property name="resourceForgedIron" value="10"/>
+			<property name="resourceMetalPipe" value="10"/>
+			<property name="resourceWood" value="40"/>
+		</property>
+		<drop event="Harvest" name="resourceScrapIron" count="80" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceWood" count="16" tag="allHarvest"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		<drop event="Harvest" name="resourceForgedIron" count="4" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceMetalPipe" count="4" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceWood" count="15" tag="salvageHarvest"/>
+		<drop event="Destroy" count="0"/>
+		<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+		<property name="TakeDelay" value="15"/>
+		<property name="Group" value="Science,Building,advBuilding"/>
+		<property name="EconomicValue" value="5000"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+		<property name="SortOrder1" value="70i0"/>
+	</block>	
+	
+	<!-- ROBOTICS -->
+	<block name="workbenchRoboticsT2ITAV">
+		<property name="Class" value="Workstation"/>
+		<property name="CustomIcon" value="decoComputerMonitorKeyboardMousePC" />
+		<property name="Material" value="Mmetal"/>
+		<property name="MaxDamage" value="800"/>
+		<property name="StabilitySupport" value="false"/>
+		<property name="Weight" value="0"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Electrical/monitorKeyboardMousePCPrefab"/>
+		<property name="Place" value="TowardsPlacerInverted"/>
+		<property name="ModelOffset" value="1,0.5,0"/> <!-- 0.6,0.5,0 for block centered decoComputerMonitorKeyboardMousePC -->
+		<property name="UnlockedBy" value="perkRoboticsITAV"/>
+		<property name="ImposterDontBlock" value="true"/>
+		<property name="OnlySimpleRotations" value="true"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<property name="HeatMapStrength" value="8"/> <!-- 2 -->
+		<property name="HeatMapTime" value="5000"/>
+		<property name="HeatMapFrequency" value="1000"/>
+		<property name="Stacknumber" value="1"/>
+		<property class="Workstation">
+			<property name="Modules" value="output"/>
+			<property name="CraftingAreaRecipes" value="player,workbench"/>
+		</property>
+		<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+		<property name="OpenSound" value="open_workbench"/>
+		<property name="CloseSound" value="close_workbench"/>
+		<property name="WorkstationJournalTip" value="workstationT2ITAVTip"/>
+		<property class="RepairItems">
+			<property name="resourceCropPotato" value="1"/>
+		</property>
+		<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
+		<drop event="Destroy" count="0"/>
+		<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+		<property name="TakeDelay" value="15"/>
+		<property name="DescriptionKey" value="workbenchDesc"/>
+		<property name="EconomicValue" value="2000"/>
+		<property name="Group" value="Building,advBuilding"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+		<property name="SortOrder1" value="70i0"/>
+	</block>
+	
+		
+	<!-- RUNNER/MECHANIC -->	
+	<block name="workbenchRunnerT2ITAV">
+		<property name="Class" value="Workstation"/>
+		<property name="CustomIcon" value="decoCarMotorFlat" />
+		<property name="Material" value="Mmetal"/>
+		<property name="MaxDamage" value="800"/>
+		<property name="StabilitySupport" value="false"/>
+		<property name="Weight" value="0"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="#Entities/Vehicles?Car/motorPrefab.prefab"/>
+		<property name="Place" value="TowardsPlacerInverted"/>
+		<property name="ModelOffset" value="0,.5,0"/>
+		<property name="DisplayType" value="blockMulti"/>
+		<property name="UnlockedBy" value="perkRunnerITAV"/>
+		<property name="MultiBlockDim" value="1,1,2"/>
+		<property name="ImposterDontBlock" value="true"/>
+		<property name="OnlySimpleRotations" value="true"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<property name="HeatMapStrength" value="8"/> <!-- 2 -->
+		<property name="HeatMapTime" value="5000"/>
+		<property name="HeatMapFrequency" value="1000"/>
+		<property name="Stacknumber" value="1"/>
+		<property class="Workstation">
+			<property name="Modules" value="output"/>
+			<property name="CraftingAreaRecipes" value="player,workbench"/>
+		</property>
+		<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+		<property name="OpenSound" value="open_workbench"/>
+		<property name="CloseSound" value="close_workbench"/>
+		<property name="WorkstationJournalTip" value="workstationT2ITAVTip"/>
+		<property class="RepairItems">
+			<property name="resourceForgedIron" value="25"/>
+			<property name="resourceMechanicalParts" value="20"/>
+			<property name="resourceWood" value="50"/>
+		</property>
+		<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
+		<drop event="Destroy" count="0"/>
+		<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+		<property name="TakeDelay" value="15"/>
+		<property name="DescriptionKey" value="workbenchDesc"/>
+		<property name="EconomicValue" value="2000"/>
+		<property name="Group" value="Building,advBuilding"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+		<property name="SortOrder1" value="70i0"/>
+	</block>
+	
+	
+	<!-- ********************************************* -->
+	
+	<block name="forestFlowerITAV">
+		<property name="Extends" value="treeGrassMaster"/>
+		<property name="CustomIcon" value="forestFlower" />
+		<property name="Material" value="Mplants" />
+		<!--<property name="Class" value="Tallgrass"/> -->
+		<property name="Texture" value="567"/>
+	</block>
+	
+	<block name="plantedGoldenrod3FlowerITAV">
+		<property name="Extends" value="cropsHarvestableMaster"/> 
+		<property name="DisplayInfo" value="Name"/>
+		<property name="CustomIcon" value="plantedGoldenrod3HarvestPlayer"/>
+		<property name="Material" value="Mplants" />
+		<property name="Texture" value="362"/>
+		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+	</block>
+	
+	<block name="plantedChrysanthemum3FlowerITAV">
+		<property name="Extends" value="cropsHarvestableMaster"/> 
+		<property name="DisplayInfo" value="Name"/>
+		<property name="CustomIcon" value="plantedChrysanthemum1"/>
+		<property name="Material" value="Mplants" />
+		<property name="Texture" value="244"/>
+		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+	</block>
+	
+	<block name="plantedCoffee3FlowerITAV">
+		<property name="Extends" value="cropsHarvestableMaster"/>
+		<property name="DisplayInfo" value="Name"/>		
+		<property name="CustomIcon" value="plantedCoffee1"/>
+		<property name="Material" value="Mplants" />
+		<property name="Texture" value="395"/>
+		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+	</block>
+	
+	<block name="plantedAloe3FlowerITAV">
+		<property name="Extends" value="cropsHarvestableMaster"/> 
+		<property name="DisplayInfo" value="Name"/>
+		<property name="CustomIcon" value="plantedAloe1"/>
+		<property name="Material" value="Mplants" />
+		<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/plant_aloe_harvestPrefab"/>
+		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+	</block>
+	
+	<block name="plantedYucca3FlowerITAV">
+		<property name="Extends" value="cropsHarvestableMaster"/> 
+		<property name="DisplayInfo" value="Name"/>
+		<property name="CustomIcon" value="plantedYucca1"/>
+		<property name="Material" value="Mplants" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Plants/plant_yucca_harvestPrefab"/>
+		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+	</block>
+	
+	<block name="plantedBlueberry3FlowerITAV">
+		<property name="Extends" value="cropsHarvestableMaster"/> 
+		<property name="DisplayInfo" value="Name"/>
+		<property name="CustomIcon" value="plantedBlueberry1"/>
+		<property name="Material" value="Mplants" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Plants/blueberry_plant_harvestPrefab"/>
+		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+	</block>
+	
+	<block name="plantedPotato3FlowerITAV">
+		<property name="Extends" value="cropsHarvestableMaster"/> 
+		<property name="DisplayInfo" value="Name"/>
+		<property name="CustomIcon" value="plantedPotato1"/>
+		<property name="Material" value="Mplants" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
+		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+	</block>
+	
+	<block name="plantedSnowberry3FlowerITAV">
+		<property name="Extends" value="cropsHarvestableMaster"/>
+		<property name="DisplayInfo" value="Name"/>		
+		<property name="CustomIcon" value="plantedSnowberry1"/>
+		<property name="Material" value="Mplants" />
+		<property name="Texture" value="568" />
+		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+	</block>
+	
+	<block name="plantedPumpkin3FlowerITAV">
+		<property name="Extends" value="cropsHarvestableMaster"/> 
+		<property name="DisplayInfo" value="Name"/>
+		<property name="CustomIcon" value="plantedPumpkin1"/>
+		<property name="Material" value="Mplants" />
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Plants/pumpkinHarvestPrefab"/>
+		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+	</block>
+	
+	<block name="plantedCorn2FlowerITAV">
+		<property name="Extends" value="plantedCorn3Harvest"/> 
+		<property name="DisplayInfo" value="Name"/>
+		<property name="CustomIcon" value="plantedCorn2"/>
+		<property name="Material" value="Mplants" />
+		<property name="Texture" value="395"/>
+		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<property name="Model" value="corn_growth_shape"/>
+	</block>	
+	
+	<block name="birdBathPlanterITAV">
+		<property name="Material" value="Mstone"/>
+		<property name="CustomIcon" value="birdBathPlanter" />
+		<property name="MaxDamage" value="200"/>
+		<property name="StabilitySupport" value="true"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Path" value="solid"/>
+		<property name="Model" value="Entities/OutdoorDecor/planterPrefab"/>
+		<property name="ImposterExchange" value="imposterDontBlockCTRQuarter" param1="170"/>
+		<property class="RepairItems">
+			<property name="resourceCobblestones" value="5"/>
+		</property>
+		<drop event="Harvest" name="resourceRockSmall" count="4" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceClayLump" count="10" tag="allHarvest"/>
+		<drop event="Destroy" count="0"/>
+		<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.1" stick_chance="0.5"/>
+		<property name="EconomicValue" value="56"/>
+		<property name="FilterTags" value="MC_building,SC_decor"/>
+		<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+	</block>	
 	
 	<block name="decoCookingPotITAV">
 		<property name="CreativeMode" value="Player"/>
@@ -100,7 +440,7 @@
 		<property name="Group" value="Tools/Traps,Food/Cooking"/>
 		<property name="EconomicValue" value="12"/>
 		<property name="FilterTags" value="MC_building,SC_decor,SC_residential"/>
-		<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+
 	</block>
 	
 	<block name="cntFoodPileSmallITAV">
@@ -129,6 +469,7 @@
 
 	<block name="cntFoodPileLargeITAV">
 		<property name="Class" value="SecureLoot"/>
+		<property name="EconomicValue" value="965"/>
 		<property name="LootList" value="shamwayCrate"/>
 		<property name="Extends" value="cntFoodPileSmall"/>
 		<property name="CustomIcon" value="cntFoodPileLarge"/>
@@ -150,6 +491,7 @@
 		<property name="Class" value="PoweredLight" param1="HandleFace"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="EconomicValue" value="1270"/>
 		<property name="Material" value="Mmetal"/>
 		<property name="Shape" value="ModelEntity"/>
 		<property name="ImposterExchange" value="streetLightImposter"/>
@@ -177,7 +519,7 @@
 		<property name="Class" value="PoweredLight"/>
 		<property name="Extends" value="porchLight01" param1="HandleFace"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
-		<property name="EconomicValue" value="400"/>
+		<property name="EconomicValue" value="2076"/>
 		<property name="Model" value="Entities/Lighting/streetLamp_ClassicPrefab"/>
 		<property name="DisplayType" value="blockMulti"/>
 		<property name="MultiBlockDim" value="1,5,1"/>
@@ -197,7 +539,7 @@
 	<block name="signShopOpenLightITAV"> 
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
-		<property name="EconomicValue" value="400"/>
+		<property name="EconomicValue" value="240"/>
 		<property name="IndexName" value="TraderOnOff"/>
 		<property name="CustomIcon" value="signShopOpenSwitch"/>
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
@@ -224,7 +566,6 @@
 	<block name="LightDeskLampLightITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
-		<property name="EconomicValue" value="400"/>
 		<property name="Extends" value="porchLight01" param1="HandleFace"/>
 		<property name="Model" value="Entities/Lighting/desk_lampPrefab"/>
 		<property name="CreativeMode" value="Player"/>
@@ -240,7 +581,6 @@
 	<block name="LightTableLampLightITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
-		<property name="EconomicValue" value="400"/>
 		<property name="Extends" value="porchLight01" param1="HandleFace"/>
 		<property name="Model" value="Entities/Lighting/table_lampPrefab"/>
 		<property name="ModelOffset" value="0,0,0"/>
@@ -272,7 +612,6 @@
 	<block name="LightPorchLight01ITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
-		<property name="EconomicValue" value="400"/>
 		<property name="Extends" value="porchLight01"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="CustomIcon" value="porchLight01"/>
@@ -289,7 +628,6 @@
 	<block name="LightPorchLight04BrassITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
-		<property name="EconomicValue" value="400"/>
 		<property name="Extends" value="porchLight01"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="CustomIcon" value="porchLight04Brass"/>
@@ -307,7 +645,6 @@
 	<block name="LightPorchLight04ITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
-		<property name="EconomicValue" value="400"/>
 		<property name="Extends" value="porchLight01"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="CustomIcon" value="porchLight04"/>
@@ -324,7 +661,6 @@
 	<block name="LightCeilingLight02ITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
-		<property name="EconomicValue" value="400"/>
 		<property name="Extends" value="porchLight01"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="CustomIcon" value="ceilingLight02"/>
@@ -338,7 +674,6 @@
 	<block name="LightCeilingLight02BrassITAV">
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
-		<property name="EconomicValue" value="400"/>
 		<property name="Extends" value="porchLight01"/>
 		<property name="CreativeMode" value="Player"/>
 		<property name="CustomIcon" value="ceilingLight02Brass"/>
@@ -355,7 +690,7 @@
 	<property name="CreativeMode" value="Player"/>
 	<property name="Class" value="Powered"/>
 	<property name="DescriptionKey" value="LightFuseboxITAVDesc"/>
-	<property name="EconomicValue" value="400"/>
+	<property name="EconomicValue" value="234"/>
 	<property name="CustomIcon" value="fusebox"/>
 	<property name="UnlockedBy" value="perkSmelterITAV,perkRoboticsITAV"/>
 	<property name="Material" value="Mmetal_weak"/>
