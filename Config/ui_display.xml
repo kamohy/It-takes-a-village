@@ -13,6 +13,18 @@
 
 <append xpath="/ui_display_info/crafting_category_display">
 
+	<crafting_category_list display_type="workbenchMinerT2ITAV">
+		<crafting_category name="Building" icon="ui_game_symbol_map_house" display_name="lblCategoryBuilding" />
+		<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+		<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_knife" display_name="lblCategoryAmmoWeapons" />
+		<crafting_category name="Tools/Traps" icon="ui_game_symbol_tool" display_name="lblCategoryToolsTraps" />
+		<crafting_category name="Science" icon="ui_game_symbol_science" display_name="lblCategoryScience" />
+		<crafting_category name="Mods" icon="ui_game_symbol_assemble" display_name="lblCategoryMods" />
+		<crafting_category name="Clothing" icon="ui_game_symbol_shirt" display_name="lblCategoryClothing" />
+		<crafting_category name="Food/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFoodCooking" />
+		<crafting_category name="Decor/Miscellaneous" icon="ui_game_symbol_chair" display_name="lblCategoryDecorMisc" />
+	</crafting_category_list>
+
 	<crafting_category_list display_type="campfireT2ITAV">
 		<crafting_category name="" icon="ui_game_symbol_fork" display_name="lblAll" />
 		<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
@@ -41,7 +53,7 @@
 		<crafting_category name="Decor/Miscellaneous" icon="ui_game_symbol_chair" display_name="lblCategoryDecorMisc" />
 	</crafting_category_list>
 	
-		<crafting_category_list display_type="workbenchRunnerT2ITAV">
+	<crafting_category_list display_type="workbenchRunnerT2ITAV">
 		<crafting_category name="Building" icon="ui_game_symbol_map_house" display_name="lblCategoryBuilding" />
 		<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
 		<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_knife" display_name="lblCategoryAmmoWeapons" />

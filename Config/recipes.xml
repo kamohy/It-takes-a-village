@@ -3,7 +3,7 @@
 	<append xpath="/recipes">
 		
 		<!-- Player Owned Store  -->
-		<recipe name="cntVendingMachineITAV" count="1" craft_time="3">
+		<recipe name="ShopStoreVendingCashRegisterPlayerITAV" count="1" craft_time="3">
 			<ingredient name="resourceBrokenGlass" count="5" />
 			<ingredient name="resourceDuctTape" count="1" />
 			<ingredient name="resourceRockSmall" count="2" />
@@ -11,17 +11,150 @@
 			<ingredient name="drinkCanEmpty" count="1" />
 		</recipe>
 		
+		<!-- Standard work tables tweaking -->
+		<setattribute xpath="/recipes/recipe[@name='chemistryStation']/ingredient[@name='resourceForgedIron']" name="count">50</setattribute>
+		<setattribute xpath="/recipes/recipe[@name='chemistryStation']/ingredient[@name='resourceAcid']" name="count">2</setattribute>
+		
+		<!-- Advanced work tables -->		
+		<recipe name="workbenchMinerT2ITAV" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="foodChiliDog" count="10"/>
+			<ingredient name="resourceForgedSteel" count="100"/>
+			<ingredient name="resourceMetalPipe" count="50"/>
+			<ingredient name="resourceMechanicalParts" count="50"/>
+			<ingredient name="resourceOil" count="50"/>
+		</recipe>		
+		
+		<recipe name="campfireT2ITAV" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="scrapHatch_v1" count="1"/>
+			<ingredient name="resourceForgedSteel" count="100"/>
+			<ingredient name="resourceMetalPipe" count="50"/>
+			<ingredient name="resourceMechanicalParts" count="50"/>
+			<ingredient name="resourceOil" count="15"/>
+		</recipe>		
+		
+		<recipe name="chemistryStationT2ITAV" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="toolBeaker" count="4"/>
+			<ingredient name="resourceForgedSteel" count="50"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceMetalPipe" count="50"/>
+			<ingredient name="resourceAcid" count="5"/>
+		</recipe>		
+		
+		<recipe name="workbenchRoboticsT2ITAV" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceElectricParts" count="50"/>
+			<ingredient name="resourceForgedSteel" count="100"/>
+			<ingredient name="resourceMetalPipe" count="20"/>
+			<ingredient name="resourceScrapPolymers" count="50"/>
+			<ingredient name="resourceAcid" count="1"/>
+		</recipe>
+
+		<recipe name="workbenchRunnerT2ITAV" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="smallEngine" count="1"/>
+			<ingredient name="resourceForgedSteel" count="80"/>
+			<ingredient name="resourceMetalPipe" count="50"/>
+			<ingredient name="resourceMechanicalParts" count="50"/>
+			<ingredient name="resourceOil" count="15"/>
+		</recipe>		
+		
+		
+		<!-- Craftable "My X profession books" -->
+		
+		<recipe name="qb_MyFirstProfessionITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceCloth" count="20" />
+			<ingredient name="resourcePaper" count="10" />
+			<ingredient name="resourceScrapPolymers" count="10" />
+			<ingredient name="resourceFeather" count="10" />
+		</recipe>
+		
+		<recipe name="qb_MySecondProfessionITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceCloth" count="300" />
+			<ingredient name="resourcePaper" count="100" />
+			<ingredient name="resourceScrapPolymers" count="100" />
+			<ingredient name="resourceFeather" count="50" />
+		</recipe>
+		
+		<recipe name="qb_MyThirdProfessionITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceCloth" count="1000" />
+			<ingredient name="resourcePaper" count="300" />
+			<ingredient name="resourceScrapPolymers" count="100" />
+			<ingredient name="resourceFeather" count="300" />
+		</recipe>
+		
+		<recipe name="qb_MyFourthProfessionITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceCloth" count="1000" />
+			<ingredient name="resourcePaper" count="1000" />
+			<ingredient name="resourceFeather" count="1000" />
+			<ingredient name="resourceRawDiamond" count="1" />
+		</recipe>
+		
 		<!-- Pretty things  -->
+		
+		<recipe name="window03WoodBulletproofITAV" count="1" craft_time="4"> 
+			<ingredient name="resourceWood" count="4"/>
+			<ingredient name="glassBulletproofBlockVariantHelper" count="1"/>
+		</recipe>
+		
 		<recipe name="treeAzalea" count="1" craft_time="10"> 
 			<ingredient name="resourceWood" count="4" />
 			<ingredient name="resourceClayLump" count="10" />
 			<ingredient name="resourceYuccaFibers" count="20" />
 		</recipe>	
 
-		<recipe name="forestFlower" count="4" craft_time="10"> 
+		<recipe name="forestFlowerITAV" count="4" craft_time="10"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="resourceYuccaFibers" count="8" />
-		</recipe>	
+		</recipe>
+
+		<recipe name="plantedGoldenrod3FlowerITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceClayLump" count="4" />
+			<ingredient name="resourceCropGoldenrodPlant" count="1" />
+		</recipe>
+
+		<recipe name="plantedChrysanthemum3FlowerITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceClayLump" count="4" />
+			<ingredient name="resourceCropChrysanthemumPlant" count="1" />
+		</recipe>
+
+		<recipe name="plantedCoffee3FlowerITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceClayLump" count="4" />
+			<ingredient name="resourceCropCoffeeBeans" count="1" />
+		</recipe>
+
+		<recipe name="plantedAloe3FlowerITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceClayLump" count="4" />
+			<ingredient name="resourceCropAloeLeaf" count="1" />
+		</recipe>
+
+		<recipe name="plantedYucca3FlowerITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceClayLump" count="4" />
+			<ingredient name="foodCropYuccaFruit" count="1" />
+		</recipe>
+
+		<recipe name="plantedBlueberry3FlowerITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceClayLump" count="4" />
+			<ingredient name="foodCropBlueberries" count="1" />
+		</recipe>
+
+		<recipe name="plantedPotato3FlowerITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceClayLump" count="4" />
+			<ingredient name="foodCropPotato" count="1" />
+		</recipe>		
+			
+		<recipe name="plantedSnowberry3FlowerITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceClayLump" count="4" />
+			<ingredient name="resourceYuccaFibers" count="4" />
+		</recipe>
+		
+		<recipe name="plantedPumpkin3FlowerITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceClayLump" count="4" />
+			<ingredient name="foodCropPumpkin" count="1" />
+		</recipe>
+		
+		<recipe name="plantedCorn2FlowerITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceClayLump" count="4" />
+			<ingredient name="foodCropCorn" count="1" />
+		</recipe>
+			
 
 		<recipe name="birdBathPlanter" count="5" craft_time="10"> 
 			<ingredient name="resourceClayLump" count="4" />
@@ -577,14 +710,11 @@
 	<setattribute xpath="//recipe[@name='foodBaconAndEggs']/ingredient[@name='foodEgg']" name="count">1</setattribute> 
 	<remove xpath="//recipe[@name='resourceLockPick']/ingredient[@name='resourceMechanicalParts']" />
 	<remove xpath="//recipe[@name='resourceLockPickBundle']/ingredient[@name='resourceMechanicalParts']" />
-
+	<setattribute xpath="recipes/recipe[@name='armorMilitaryStealthBoots']/ingredient[@name='armorMilitarySetParts']" name="count">6</setattribute>
 	
 	<!-- Removing GyroCopter -->
 	<remove xpath="//recipe[contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter')]" />
-	
-	<!-- Because all armor is now craftable, the stealth boots need to be made more expensive to craft, as it is available at the same time as regular military boots -->
-	<setattribute xpath="recipes/recipe[@name='armorMilitaryStealthBoots']/ingredient[@name='armorMilitarySetParts']" name="count">6</setattribute>
-	
+		
 	<!-- Locking things behind ITAV perks -->
 	<setattribute xpath="//recipe[@name='resourceForgedIron']" name="tags">learnable,perkSmelterITAV</setattribute>
 	<setattribute xpath="//recipe[@name='resourceForgedSteel']" name="tags">learnable,perkSmelterITAV</setattribute>
@@ -595,37 +725,25 @@
 	<setattribute xpath="//recipe[@name='bladeTrap']" name="tags">learnable,perkRoboticsITAV</setattribute>
 	<setattribute xpath="//recipe[@name='dartTrap']" name="tags">learnable,perkRoboticsITAV</setattribute>
 	<setattribute xpath="//recipe[@name='shotgunTurret']" name="tags">learnable,perkRoboticsITAV</setattribute>
-	<setattribute xpath="//recipe[@name='autoTurret']" name="tags">learnable,perkRoboticsITAV</setattribute>
-	
+	<setattribute xpath="//recipe[@name='autoTurret']" name="tags">learnable,perkRoboticsITAV</setattribute>	
 	
 	<!-- Updating recipes to being tagged with ITAV on top of old perks -->
 	<append xpath="/recipes/recipe[contains(@tags, 'perkAdvancedEngineering')]/@tags">,perkSmelterITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkMiner69r')]/@tags">,perkMinerITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkMasterChef')]/@tags">,perkCookITAV</append>
+	<append xpath="/recipes/recipe[contains(@tags, 'perkMasterChef')]/@tags">,perkCookITAV</append>	
 	<append xpath="/recipes/recipe[contains(@tags, 'perkLightArmor') or contains(@tags, 'perkHeavyArmor')]/@tags">,perkArmorerITAV</append>
-	<append xpath="//recipe[@name='gunExplosivesT3RocketLauncher']/@tags">,perkArmorerITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkMachineGunner')]/@tags">,perkArmorerITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkBoomstick')]/@tags">,perkArmorerITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkDeadEye')]/@tags">,perkArmorerITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkGunslinger')]/@tags">,perkArmorerITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkArchery')]/@tags">,perkArmorerITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkJavelinMaster')]/@tags">,perkArmorerITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkPummelPete')]/@tags">,perkArmorerITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkSkullCrusher')]/@tags">,perkArmorerITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkBrawler')]/@tags">,perkArmorerITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkDeepCuts')]/@tags">,perkArmorerITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkElectrocutioner')]/@tags">,perkArmorerITAV</append>
-	<!--<append xpath="/recipes/recipe[contains(@tags, 'perkMachineGunner')]/@tags">,perkWeaponsmithITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkBoomstick')]/@tags">,perkWeaponsmithITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkDeadEye')]/@tags">,perkWeaponsmithITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkGunslinger')]/@tags">,perkWeaponsmithITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkArchery')]/@tags">,perkWeaponsmithITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkJavelinMaster')]/@tags">,perkWeaponsmithITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkPummelPete')]/@tags">,perkWeaponsmithITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkSkullCrusher')]/@tags">,perkWeaponsmithITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkBrawler')]/@tags">,perkWeaponsmithITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkDeepCuts')]/@tags">,perkWeaponsmithITAV</append>
-	<append xpath="/recipes/recipe[contains(@tags, 'perkElectrocutioner')]/@tags">,perkWeaponsmithITAV</append> -->
+	<setattribute xpath="//recipe[@name='gunExplosivesT3RocketLauncher']" name="tags">learnable,perkArmorerITAV</setattribute>
+	<setattribute xpath="//recipe[contains(@name, 'gunMG') and not(contains(@name, 'T0'))]" name="tags">learnable,perkArmorerITAV</setattribute>
+	<setattribute xpath="//recipe[contains(@name, 'gunShotgun') and not(contains(@name, 'T0'))]" name="tags">learnable,perkArmorerITAV</setattribute>
+	<setattribute xpath="//recipe[contains(@name, 'gunRifle') and not(contains(@name, 'T0'))]" name="tags">learnable,perkArmorerITAV</setattribute>
+	<setattribute xpath="//recipe[contains(@name, 'gunHandgun') and not(contains(@name, 'T0'))]" name="tags">learnable,perkArmorerITAV</setattribute>
+	<setattribute xpath="//recipe[contains(@name, 'gunBow') and not(contains(@name, 'T0'))]" name="tags">learnable,perkArmorerITAV</setattribute>
+	<setattribute xpath="//recipe[contains(@name, 'meleeWpnSpear') and not(contains(@name, 'T0'))]" name="tags">learnable,perkArmorerITAV</setattribute>
+	<setattribute xpath="//recipe[contains(@name, 'meleeWpnClub') and not(contains(@name, 'T0'))]" name="tags">learnable,perkArmorerITAV</setattribute>
+	<setattribute xpath="//recipe[contains(@name, 'meleeWpnSledge') and not(contains(@name, 'T0'))]" name="tags">learnable,perkArmorerITAV</setattribute>
+	<setattribute xpath="//recipe[contains(@name, 'meleeWpnKnuckles') and not(contains(@name, 'T0'))]" name="tags">learnable,perkArmorerITAV</setattribute>
+	<setattribute xpath="//recipe[contains(@name, 'meleeWpnBlade') and not(contains(@name, 'T0'))]" name="tags">learnable,perkArmorerITAV</setattribute>
+	<setattribute xpath="//recipe[contains(@name, 'meleeWpnBaton') and not(contains(@name, 'T0'))]" name="tags">learnable,perkArmorerITAV</setattribute>	
 	<append xpath="/recipes/recipe[@name='resourceConcreteMix']/@tags">,learnable,perkChemistITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkTurrets')]/@tags">,perkRoboticsITAV</append>
 	<append xpath="/recipes/recipe[@name='generatorbank']/@tags">,perkRoboticsITAV</append>
@@ -677,7 +795,7 @@
 		</recipe>
 		
 		<recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
-            <ingredient name="gunMGT1AK47Parts" count="1"/>
+            <ingredient name="gunMGT1AK47Parts" count="25"/>
             <ingredient name="resourceDuctTape" count="1"/>
         </recipe>
 
@@ -735,8 +853,19 @@
             <ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="1"/>
             <ingredient name="resourceDuctTape" count="1"/>
         </recipe>
+
+	
+	<!-- Elixirs need to be crafted as trader doesn't sell them -->
+		<recipe name="drinkJarGrandpasForgettingElixir" count="1" craft_area="chemistryStationT2ITAV" tags="perkChemistITAV,learnable">
+			<ingredient name="drugFortBites" count="10"/>
+			<ingredient name="toolBeaker" count="1"/>
+			<ingredient name="resourceAcid" count="1"/>
+			<ingredient name="resourceRawDiamond" count="1"/>
+			<ingredient name="foodCropGraceCorn" count="1"/>
+		</recipe>
+		
+		
 	</append>
 	
 	
-
 </configs>

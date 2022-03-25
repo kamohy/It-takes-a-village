@@ -116,6 +116,9 @@
 
 <!-- Tweaking loot group contents -->
 
+<append xpath="/lootcontainers/lootgroup[@name='groupFoodTrash']">
+	<item name="weaponPartFragmentITAV" count="1,2" />
+</append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupScrapCommon']">
 	<item name="weaponPartFragmentITAV" count="1,2" />
@@ -125,7 +128,7 @@
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']/item" />
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']">
-	<item name="resourcePaper" />
+	<item name="foodCanPeas" />
 </append>
 <remove xpath="/lootcontainers/lootgroup[@name='groupCoffeeMaker01']/item[@name='drinkJarCoffee']" />
 <remove xpath="/lootcontainers/lootgroup[@name='groupFoodRare']/item" />
@@ -134,18 +137,18 @@
     <item name="foodCanPeas"/>
     <item name="foodCanSalmon"/>
     <item name="foodCanStock"/>
-	<item name="cntCoffeeMakerCommercial" />
-	<item name="cntSodaFountain" />
+	<item name="cntCoffeeMakerCommercialITAV" />
+	<item name="cntSodaFountainITAV" />
 </append>
 
 <remove xpath="//lootgroup[@name='groupConstructionCrate01']/item" />
 <append xpath="//lootgroup[@name='groupConstructionCrate01']">
-	<item name="resourceAcid" count ="1" loot_prob_template="low"/>
+	<item name="resourceAcid" count ="1" loot_prob_template="veryLow"/>
 	<item name="sinksToiletsBlockVariantHelper"/>
 	<item name="faucetBrass02"/>
 	<item name="faucetBrass04"/>
 	<item name="cntWasherClosed"/>
-	<item name="cntCoffeeMaker"/>
+	<item name="cntCoffeeMakerITAV"/>
 	<item name="decoClawFootBathTub" />
 </append>
 
@@ -252,7 +255,7 @@
 <remove xpath="//lootgroup[@name='groupMedicalUncommon']/item[@name='medicalBloodBag']" />
 <append xpath="//lootgroup[@name='groupMedicalRare']">
 	<item name="medicalBloodBag" />
-	<item name="toolBeaker" />
+	<item name="toolBeaker" loot_prob_template="veryLow" />
 	<item name="cntMedicineCabinetClosed"/>
 </append>
 
@@ -294,10 +297,11 @@
 
 <append xpath="/lootcontainers/lootgroup[@name='groupSmallWeaponBag']">
 	<item group="weaponParts" loot_prob_template="med" force_prob="true"/>
+	<item name="weaponPartFragmentITAV" count="150" loot_prob_template="low" />
 </append>
 <append xpath="/lootcontainers/lootgroup[@name='groupLargeWeaponBag']">
 	<item group="weaponParts" loot_prob_template="med" force_prob="true"/> 
-	<item group="weaponSchematicsOnlyITAV" />
+	<item name="weaponPartFragmentITAV" count="230" loot_prob_template="low" />
 </append>
 <append xpath="/lootcontainers/lootgroup[@name='groupGunRack']">
 	<item group="weaponParts" loot_prob_template="med" force_prob="true"/>
@@ -607,7 +611,7 @@
 <append xpath="//lootgroup[@name='groupQuestMedical']">
     <item name="drugVitamins"/>
     <item name="drugPainkillers"/>
-    <item name="toolBeaker"/>
+    <item name="toolBeaker" loot_prob_template="veryLow" />
 </append> 
 
 <remove xpath="//lootgroup[@name='groupQuestSchematics']/item" />

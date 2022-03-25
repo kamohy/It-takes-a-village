@@ -1,6 +1,6 @@
 <configs>
 
-<setattribute xpath="/traders" name="sell_markdown">0.1</setattribute>
+<setattribute xpath="/traders" name="sell_markdown">0.05</setattribute>
 <setattribute xpath="/traders" name="buy_markup">1.5</setattribute>
 
 	<append xpath="//traders">
@@ -27,7 +27,7 @@
 	  
 	<append xpath="//trader_items[@count='all']">
 		<!-- <item name="qb_MySecondProfessionITAV" count="10" /> -->
-		<item name="qb_MyNextProfessionITAV" count="10" />
+		<!--<item name="qb_MyNextProfessionITAV" count="10" /> -->
 	</append>
 	
 

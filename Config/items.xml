@@ -36,6 +36,16 @@
 <remove xpath="//item[(contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter'))]"/>
 
 
+<!-- To make weapon parts scrappable into weaponPartFragmentITAV -->
+<!-- <append xpath="/items">
+	<item name="unit_weaponPartFragmentITAV">
+		<property name="Extends" value="unit_iron" />
+		<property name="CustomIcon" value="garbage_decor3" />
+		<property name="Material" value="MweaponPartFragmentITAV" />
+		<property name="CreativeMode" value="None" />
+	</item> 
+</append> -->
+
 <!-- Increase stacksizes of expected store items -->
 <setattribute xpath="//item[@name='casinoCoin']/property[@name='Stacknumber']" name="value">999999</setattribute>
 <setattribute xpath="//item[(starts-with(@name, 'drink') or starts-with(@name, 'food'))]/property[@name='Stacknumber']" name="value">500</setattribute>
@@ -52,6 +62,11 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
 				<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
+</append>
+
+<append xpath="//item[@name='drinkJarGrandpasForgettingElixir']/effect_group">
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="set" value="0"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="1"/>
 </append>
 
 <!-- Locking  items behind ITAV perks -->
@@ -112,8 +127,6 @@
 <setattribute xpath="/items/item[@name='meleeWpnBladeT1HuntingKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkHunterITAV,canHaveCosmetic</setattribute>
 <setattribute xpath="/items/item[@name='meleeWpnBladeT1CandyKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkHunterITAV,canHaveCosmetic</setattribute>
 <setattribute xpath="/items/item[@name='meleeWpnBladeT3Machete']/property[@name='Tags']" name="value">machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkHunterITAV,canHaveCosmetic</setattribute>
-<!-- <setattribute xpath="/items/item/property[contains(@value, 'perkMiner69r')]" name="value">perkMinerITAV</setattribute>
-<setattribute xpath="/items/item/property[contains(@value, 'perkTheHuntsman')]" name="value">perkHunterITAV</setattribute> -->
 
 <!-- ARMORER -->
 <setattribute xpath="items/item[@name='armorIronMaster']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
@@ -150,18 +163,13 @@
 </append>
 
 
-
-<!-- WEAPONSMITH -->
-<!-- <setattribute xpath="items/item[starts-with(@name, 'gun') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Bot')) and not(contains(@name, 'Pipe')) and not(contains(@name, 'Primitive')) and not(contains(@name, 'Parts'))]/property[@name='UnlockedBy']" name="value">perkWeaponsmithITAV</setattribute>
-<setattribute xpath="items/item[contains(@name, 'Wpn') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Parts')) and not(contains(@name, 'T0'))]/property[@name='UnlockedBy']" name="value">perkWeaponsmithITAV</setattribute> -->
-
-
-
-
 <!-- Adding weaponPartFragmentITAV and resourceRepairKitITAV -->
 <append xpath="/items/item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and contains(@name, 'Parts') and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]" >
 	<property name="UnlockedBy" value="perkArmorerITAV" />
+	<!--<property name="Material" value="MweaponPartFragmentITAV" />-->
 </append>
+<!--<setattribute xpath="/items/item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and contains(@name, 'Parts') and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='Material']" name="value">MweaponPartFragmentITAV</setattribute>-->
+
 <append xpath="/items"> 
 	<item name="weaponPartFragmentITAV"> 
 		<property name="Extends" value="partsMaster" />
@@ -222,38 +230,74 @@
 
 <!-- Adding Profession Books to unlock holding more Professions -->
 <append xpath="/items"> 
-<!--<item name="qb_MyFirstProfessionITAV">
+
+<item name="qb_MyFirstProfessionITAV">
 	<property name="Extends" value="questMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="metalSignLetter_1"/>
+	<property name="CustomIcon" value="bundleBooks"/>
+	<property name="CustomIconTint" value="F3A0BA" />
 	<property name="DescriptionKey" value="qb_MyFirstProfessionITAV_desc"/>
-	<property name="EconomicValue" value="400"/>
+	<property name="EconomicValue" value="100"/>
 	<property name="Stacknumber" value="1"/>
 	<property name="SellableToTrader" value="false" />
 	<property name="PickupJournalEntry" value="MyFirstProfessionTip"/>
 	<property class="Action0">
-		<property name="QuestGiven" value="quest_MyFirstProfession" />
+		<property name="QuestGiven" value="quest_MyNextProfession" />
 		 <requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="Equals" value="0" desc_key="reqProfessionsLevel00ITAV" />
 	</property>
 </item>
 
+
 <item name="qb_MySecondProfessionITAV">
 	<property name="Extends" value="questMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="metalSignLetter_2"/>
+	<property name="CustomIcon" value="bundleBooks"/>
+	<property name="CustomIconTint" value="DC5881" />
 	<property name="DescriptionKey" value="qb_MySecondProfessionITAV_desc"/>
 	<property name="EconomicValue" value="400"/>
 	<property name="Stacknumber" value="1"/>
 	<property name="SellableToTrader" value="false" />
 	<property class="Action0">
-		<property name="QuestGiven" value="quest_MySecondProfession" />
+		<property name="QuestGiven" value="quest_MyNextProfession" />
 		<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="Equals" value="1" />
 		<requirement name="CVarCompare" cvar="numberOfProfessionsAllowed" operation="Equals" value="2" />
 	</property>
-</item> -->
+</item> 
+
+<item name="qb_MyThirdProfessionITAV">
+	<property name="Extends" value="questMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="bundleBooks"/>
+	<property name="CustomIconTint" value="AA254E" />
+	<property name="DescriptionKey" value="qb_MyThirdProfessionITAV_desc"/>
+	<property name="EconomicValue" value="800"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false" />
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_MyNextProfession" />
+		<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="Equals" value="2" />
+		<requirement name="CVarCompare" cvar="numberOfProfessionsAllowed" operation="Equals" value="3" />
+	</property>
+</item> 
+
+<item name="qb_MyFourthProfessionITAV">
+	<property name="Extends" value="questMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="bundleBooks"/>
+	<property name="CustomIconTint" value="7B092C" />
+	<property name="DescriptionKey" value="qb_MyFourthProfessionITAV_desc"/>
+	<property name="EconomicValue" value="1800"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="SellableToTrader" value="false" />
+	<property class="Action0">
+		<property name="QuestGiven" value="quest_MyNextProfession" />
+		<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="Equals" value="3" />
+		<requirement name="CVarCompare" cvar="numberOfProfessionsAllowed" operation="Equals" value="4" />
+	</property>
+</item> 
 
 <!-- My NEXT Profession -->
-<item name="qb_MyNextProfessionITAV">
+<!--<item name="qb_MyNextProfessionITAV">
 	<property name="Extends" value="questMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="bundleBooks"/>
@@ -266,7 +310,7 @@
 		<property name="QuestGiven" value="quest_MyNextProfession" />
 		<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="@numberOfProfessionsAllowed" />
 	</property>
-</item>
+</item> -->
 
 
 <!-- Adding Trade Profession Perk Books to unlock specific Professions -->
@@ -409,27 +453,6 @@
     </effect_group>
 </item>
 
-
-<!-- WEAPONSMITH -->
-<!-- <item name="bookWeaponsmithITAV">
-    <property name="Extends" value="bookMasterITAV"/>
-    <property name="CustomIcon" value="schematicMaster"/>
-	<property name="CustomIconTint" value="42d4f4" />
-    <property name="DescriptionKey" value="bookWeaponsmithITAVDesc"/>
-    <property name="Unlocks" value="perkWeaponsmithITAV"/>
-    <property class="Action0">
-		<requirement name="ProgressionLevel" progression_name="perkWeaponsmithITAV" operation="LT" value="1" />
-    </property>
-    <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkWeaponsmithITAV" level="1">
-			<requirement name="ProgressionLevel" progression_name="perkWeaponsmithITAV" operation="LT" value="1" />
-		</triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkWeaponsmithITAV" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntWeaponsmithITAV" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntWeaponsmithITAVTooltip"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
-    </effect_group>
-</item> -->
 
 <!-- FARMER -->
 <item name="bookFarmerITAV">
@@ -669,6 +692,12 @@
 	</effect_group>
 </item>
 
+
+<!-- Tweaking vanilla items to fit ITAV gameplay -->
+<setattribute xpath="/items/item[@name='medicalAloeCream']/Stacknumber" name="value">50</setattribute>
+
+
+<!-- ************************** Schematics ***************************************-->
 
 <!-- Weapon Schematics -->
 

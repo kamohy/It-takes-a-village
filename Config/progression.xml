@@ -74,6 +74,7 @@
 
 <!-- PERKS -->
 <append xpath="//perks">
+
 	<!-- Smelter perk -->
 	<perk name="perkSmelterITAV" parent="attITAV" name_key="perkSmelterITAVName" desc_key="perkSmelterITAVDesc" icon="ui_game_symbol_workbench">		
 		<level_requirements level="1"> 
@@ -102,11 +103,16 @@
 				<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="GTE" value="5" />
 			</triggered_effect>
         </effect_group>
-		
+		<effect_group>
+            <triggered_effect trigger="onPerkLevelChanged" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+                <requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="GTE" value="5" />
+            </triggered_effect>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message_key="readyForNextProfessionTooltip">
+				<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="GTE" value="5" />
+            </triggered_effect>
+        </effect_group>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkSmelterITAV"/><!-- fake crafting perk that is used to scale resources. perkAdvancedEngineering -->
-
-				<!-- Engineer use x% less material on all recipes in the forge... by adding it to non engineers T3 10% .9, T4 15% .85, T5 20% .8 -->
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="forge,resourceForgedIron"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.2" tags="perkSmelterITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="workbench,chemistryStation,cementMixer"/>
@@ -121,9 +127,6 @@
 			<effect_description level="4" desc_key="perkSmelterITAVRank4Desc" long_desc_key="perkSmelterITAVRank4LongDesc"/>
 			<effect_description level="5" desc_key="perkSmelterITAVRank5Desc" long_desc_key="perkSmelterITAVRank5LongDesc"/>
 		</effect_group>
-		
-		
-
 	</perk>
 
 	<!-- Miner perk -->
@@ -154,13 +157,20 @@
 				<requirement name="ProgressionLevel" progression_name="perkMinerITAV" operation="GTE" value="5" />
 			</triggered_effect>
         </effect_group>
+		<effect_group>
+            <triggered_effect trigger="onPerkLevelChanged" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+                <requirement name="ProgressionLevel" progression_name="perkMinerITAV" operation="GTE" value="5" />
+            </triggered_effect>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message_key="readyForNextProfessionTooltip">
+				<requirement name="ProgressionLevel" progression_name="perkMinerITAV" operation="GTE" value="5" />
+            </triggered_effect>
+        </effect_group>
 		
-		
-	<!-- Miner69r effects to MinerITAV -->
+		<!-- Miner69r effects to MinerITAV -->
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkMinerITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolRepairT1ClawHammer,meleeToolAxeT1IronFireaxe,meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel"/>
-
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="workbenchMinerT2ITAV"/>
 			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkMinerITAV"/>
 			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkMinerITAV"/>
 
@@ -171,15 +181,14 @@
 			<effect_description level="5" desc_key="perkMinerITAVRank5Desc" long_desc_key="perkMinerITAVRank5LongDesc"/>
 		</effect_group>
 		
-	<!-- Motherlode effects to MinerITAV -->
+		<!-- Motherlode effects to MinerITAV -->
 		<effect_group>
 			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="oreWoodHarvest" /> <!-- value=".2,1" -->
 			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value="2.2,4.2" tags="rockClayHarvest"/>
 			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value="-.1,-.4" tags="Harvesting">
 				<requirement name="HoldingItemHasTags" tags="perkMinerITAV"/>
 			</passive_effect>
-        </effect_group>
-		
+        </effect_group>		
 	</perk>
 
 	<!-- Hunter Perk -->
@@ -204,13 +213,6 @@
 			<requirement name="CVarCompare" cvar="hasLearntHunterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
 		</level_requirements>
 
-		<!-- Opening up for reading the next quest book -->
-		<effect_group>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="add" value="1">
-				<requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="GTE" value="5" />
-			</triggered_effect>
-        </effect_group>
-
         <!-- Adding Huntsman -->
         <effect_group>
             <!-- stone axe, knives, etc do the base_set 1 -->
@@ -224,7 +226,7 @@
 			<effect_description level="3" desc_key="perkHunterITAVRank3Desc" long_desc_key="perkHunterITAVRank3LongDesc"/>
         </effect_group>
 	
-	<!-- Adding Animal tracking -->
+		<!-- Adding Animal tracking -->
         <effect_group>
                 <passive_effect name="TrackDistance" operation="base_set" level="0,1,3" value="0,100,100"/>
             <triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffAnimalTracker">
@@ -264,7 +266,14 @@
 				<requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="GTE" value="2" />
 			</triggered_effect>
         </effect_group>
-			
+		<effect_group>
+            <triggered_effect trigger="onPerkLevelChanged" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+                <requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="GTE" value="5" />
+            </triggered_effect>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message_key="readyForNextProfessionTooltip">
+				<requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="GTE" value="5" />
+            </triggered_effect>
+        </effect_group>			
     </perk>
 
 	<!-- Cook perk -->
@@ -295,6 +304,14 @@
 				<requirement name="ProgressionLevel" progression_name="perkCookITAV" operation="GTE" value="5" />
 			</triggered_effect>
         </effect_group>
+		<effect_group>
+            <triggered_effect trigger="onPerkLevelChanged" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+                <requirement name="ProgressionLevel" progression_name="perkCookITAV" operation="GTE" value="5" />
+            </triggered_effect>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message_key="readyForNextProfessionTooltip">
+				<requirement name="ProgressionLevel" progression_name="perkCookITAV" operation="GTE" value="5" />
+            </triggered_effect>
+        </effect_group>
 		
 		<effect_group>
             <passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkCookITAV"/><!-- fake crafting perk that is used to scale resources -->
@@ -319,7 +336,7 @@
         </effect_group>
     </perk>
 	
-		<!-- Armorer perk v2-->
+		<!-- Armorer perk -->
 	<perk name="perkArmorerITAV" max_level="5" parent="attITAV" name_key="perkArmorerITAVName" desc_key="perkArmorerITAVDesc" icon="ui_game_symbol_rifle">
 		<level_requirements level="1">
 			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
@@ -340,10 +357,20 @@
 			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
 			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
 		</level_requirements>
+		
+		<!-- Opening up for reading the next quest book -->
 		<effect_group>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="add" value="1">
 				<requirement name="ProgressionLevel" progression_name="perkArmorerITAV" operation="GTE" value="5" />
 			</triggered_effect>
+        </effect_group>
+		<effect_group>
+            <triggered_effect trigger="onPerkLevelChanged" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+                <requirement name="ProgressionLevel" progression_name="perkArmorerITAV" operation="GTE" value="5" />
+            </triggered_effect>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message_key="readyForNextProfessionTooltip">
+				<requirement name="ProgressionLevel" progression_name="perkArmorerITAV" operation="GTE" value="5" />
+            </triggered_effect>
         </effect_group>
 
 		<effect_group>
@@ -388,6 +415,14 @@
 				<requirement name="ProgressionLevel" progression_name="perkFarmerITAV" operation="GTE" value="3" />
 			</triggered_effect>
         </effect_group>
+		<effect_group>
+            <triggered_effect trigger="onPerkLevelChanged" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+                <requirement name="ProgressionLevel" progression_name="perkFarmerITAV" operation="GTE" value="5" />
+            </triggered_effect>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message_key="readyForNextProfessionTooltip">
+				<requirement name="ProgressionLevel" progression_name="perkFarmerITAV" operation="GTE" value="5" />
+            </triggered_effect>
+        </effect_group>
 
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkLivingOffTheLandCrafting"/><!-- fake crafting perk that is used to scale resources -->
@@ -428,11 +463,19 @@
 			<requirement name="CVarCompare" cvar="hasLearntChemistITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
 		</level_requirements>
 		
-						<!-- Opening up for reading the next quest book -->
+		<!-- Opening up for reading the next quest book -->
 		<effect_group>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="add" value="1">
 				<requirement name="ProgressionLevel" progression_name="perkChemistITAV" operation="GTE" value="4" />
 			</triggered_effect>
+        </effect_group>
+		<effect_group>
+            <triggered_effect trigger="onPerkLevelChanged" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+                <requirement name="ProgressionLevel" progression_name="perkChemistITAV" operation="GTE" value="5" />
+            </triggered_effect>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message_key="readyForNextProfessionTooltip">
+				<requirement name="ProgressionLevel" progression_name="perkChemistITAV" operation="GTE" value="5" />
+            </triggered_effect>
         </effect_group>
 		
 		<effect_group>
@@ -440,14 +483,13 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,4" value="1" tags="chemistryStation,medicalFirstAidBandage,medicalPlasterCast"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,4" value="1" tags="resourceGunPowder,resourcePaint,resourceConcreteMix"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,4" value="1" tags="medicalFirstAidKit,drugSteroids,chemistryStationT2ITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4" value="1" tags="drugFortBites,drugRecog,drugAntibiotics"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4" value="1" tags="drugFortBites,drugRecog,drugAntibiotics,drinkJarGrandpasForgettingElixir"/>
 
 			<effect_description level="1" desc_key="perkChemistITAVRank1Desc" long_desc_key="perkChemistITAVRank1LongDesc"/>
 			<effect_description level="2" desc_key="perkChemistITAVRank2Desc" long_desc_key="perkChemistITAVRank2LongDesc"/>
 			<effect_description level="3" desc_key="perkChemistITAVRank3Desc" long_desc_key="perkChemistITAVRank3LongDesc"/>
 			<effect_description level="4" desc_key="perkChemistITAVRank4Desc" long_desc_key="perkChemistITAVRank4LongDesc"/>
-		</effect_group>
-		
+		</effect_group>		
 	</perk>
 	
 		<!-- Robotics Inventor perk -->
@@ -472,11 +514,19 @@
 			<requirement name="CVarCompare" cvar="hasLearntRoboticsITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
 		</level_requirements>
 		
-					<!-- Opening up for reading the next quest book -->
+		<!-- Opening up for reading the next quest book -->
 		<effect_group>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="add" value="1">
 				<requirement name="ProgressionLevel" progression_name="perkRoboticsITAV" operation="GTE" value="5" />
 			</triggered_effect>
+        </effect_group>
+		<effect_group>
+            <triggered_effect trigger="onPerkLevelChanged" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+                <requirement name="ProgressionLevel" progression_name="perkRoboticsITAV" operation="GTE" value="5" />
+            </triggered_effect>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message_key="readyForNextProfessionTooltip">
+				<requirement name="ProgressionLevel" progression_name="perkRoboticsITAV" operation="GTE" value="5" />
+            </triggered_effect>
         </effect_group>
 
 		<effect_group>
@@ -527,12 +577,20 @@
 			<requirement name="CVarCompare" cvar="hasLearntRunnerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
 		</level_requirements>
 		
-				<!-- Opening up for reading the next quest book -->
+		<!-- Opening up for reading the next quest book -->
 		<effect_group>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="add" value="1">
 				<requirement name="ProgressionLevel" progression_name="perkRunnerITAV" operation="GTE" value="5" />
 			</triggered_effect>
         </effect_group>		
+		<effect_group>
+            <triggered_effect trigger="onPerkLevelChanged" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+                <requirement name="ProgressionLevel" progression_name="perkRunnerITAV" operation="GTE" value="5" />
+            </triggered_effect>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message_key="readyForNextProfessionTooltip">
+				<requirement name="ProgressionLevel" progression_name="perkRunnerITAV" operation="GTE" value="5" />
+            </triggered_effect>
+        </effect_group>
 		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkRunnerITAV"/><!-- fake crafting perk that is used to scale resources or quality like on carBattery -->
@@ -568,14 +626,13 @@
 			<passive_effect name="BlockPickup" operation="base_set" level="3" value="1" tags="Mine" />
 
 		</effect_group>
-
 	</perk>
 		
 	
 </append>
 
 
-<!-- Removing Old perks-->
+<!-- Removing Vanilla perks-->
 <remove xpath="//perk[@name='perkAdvancedEngineering']" />
 <remove xpath="//perk[@name='perkMiner69r']" />
 <remove xpath="//perk[@name='perkMotherLode']" />
