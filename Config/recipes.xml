@@ -88,8 +88,18 @@
 		</recipe>
 		
 		<!-- Pretty things  -->
+
+		<recipe name="window03WoodITAV" count="1" craft_time="4"> 
+			<ingredient name="resourceWood" count="4"/>
+			<ingredient name="glassBlockVariantHelper" count="1"/>
+		</recipe>
 		
 		<recipe name="window03WoodBulletproofITAV" count="1" craft_time="4"> 
+			<ingredient name="resourceWood" count="4"/>
+			<ingredient name="glassBulletproofBlockVariantHelper" count="1"/>
+		</recipe>
+		
+		<recipe name="window03WoodBulletproofCenterITAV" count="1" craft_time="4"> 
 			<ingredient name="resourceWood" count="4"/>
 			<ingredient name="glassBulletproofBlockVariantHelper" count="1"/>
 		</recipe>
@@ -156,7 +166,7 @@
 		</recipe>
 			
 
-		<recipe name="birdBathPlanter" count="5" craft_time="10"> 
+		<recipe name="birdBathPlanterITAV" count="1" craft_time="10"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="resourceCobblestones" count="10" />
 		</recipe>		
@@ -166,7 +176,7 @@
 			<ingredient name="resourceCandleStick" count="3" />
 		</recipe>
 		
-		<recipe name="hangingMoss" count="2" craft_area="chemistryStationT2ITAV" craft_time="10"> 
+		<recipe name="hangingMoss" count="2" craft_time="10"> 
 			<ingredient name="resourceClayLump" count="1" />
 			<ingredient name="resourceCropGoldenrodPlant" count="8" />
 		</recipe>
@@ -182,7 +192,7 @@
 			<ingredient name="foodCanCatfood" count="5" />
 		</recipe>
 		
-		<recipe name="cntFoodPileLargeITAV" count="1" craft_area="campfireT2ITAV" craft_time="10" tags="learnable,perkCookITAV">
+		<recipe name="cntFoodPileLargeITAV" count="1" craft_time="10" tags="learnable,perkCookITAV">
 			<ingredient name="drinkJarBoiledWater" count="2" />
 			<ingredient name="foodCanCatfood" count="10" />
 			<ingredient name="resourcePaint" count="3" />
@@ -711,6 +721,9 @@
 	<remove xpath="//recipe[@name='resourceLockPick']/ingredient[@name='resourceMechanicalParts']" />
 	<remove xpath="//recipe[@name='resourceLockPickBundle']/ingredient[@name='resourceMechanicalParts']" />
 	<setattribute xpath="recipes/recipe[@name='armorMilitaryStealthBoots']/ingredient[@name='armorMilitarySetParts']" name="count">6</setattribute>
+	<setattribute xpath="//recipe[(@name='resourcePaper') and (@craft_area='chemistryStation')]" name="count">20</setattribute>
+	
+
 	
 	<!-- Removing GyroCopter -->
 	<remove xpath="//recipe[contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter')]" />
@@ -754,6 +767,18 @@
 	<append xpath="/recipes/recipe[@name='electrictimerrelay']/@tags">,perkRoboticsITAV</append>
 	<append xpath="/recipes/recipe[@name='motionsensor']/@tags">,perkRoboticsITAV</append>
 	<append xpath="/recipes/recipe[contains(@tags, 'perkGreaseMonkey') or contains(@tags, 'perkSalvageOperations')]/@tags">,perkRunnerITAV</append>
+	
+	
+	<!-- Moving craft_areas for advanced recipes to advanced ITAV worktables -->
+	<setattribute xpath="//recipe[@name='meleeToolPickT3Auger' or @name='meleeToolAxeT3Chainsaw']" name="craft_area">workbenchMinerT2ITAV</setattribute>
+		
+	<setattribute xpath="//recipe[@name='foodShamChowder' or @name='foodHoboStew' or @name='foodFishTacos' or @name='drinkYuccaJuiceSmoothie' or @name='foodChiliDog' or @name='drinkJarBeer' or @name='foodGumboStew' or @name='foodShepardsPie' or @name='foodSpaghetti' or @name='foodTunaFishGravyToast' or @name='drinkJarGrandpasMoonshine' or @name='drinkJarGrandpasAwesomeSauce' or @name='drinkJarGrandpasLearningElixir']" name="craft_area">campfireT2ITAV</setattribute>
+
+    <setattribute xpath="//recipe[@name='medicalFirstAidKit' or @name='drugSteroids' or @name='drugFortBites' or @name='drugRecog' or (contains(@name, 'drugAntibiotics') and not(contains(@craft_area, 'campfire')))]" name="craft_area">chemistryStationT2ITAV</setattribute>
+
+    <setattribute xpath="//recipe[@name='autoTurret' or @name='gunBotT3JunkDrone']" name="craft_area">workbenchRoboticsT2ITAV</setattribute>
+
+    <setattribute xpath="//recipe[@name='ammoGasCanBundle' or @name='vehicleMotorcycleChassis' or @name='vehicleMotorcycleHandlebars' or @name='vehicle4x4TruckChassis' or @name='vehicle4x4TruckAccessories' or @name='vehicle4x4TruckPlaceable' or @name='vehicleMotorcyclePlaceable']" name="craft_area">workbenchRunnerT2ITAV</setattribute>
 
 	<!-- Weapon repair kits -->
 	<append xpath="//recipes">

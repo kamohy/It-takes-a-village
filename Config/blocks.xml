@@ -1,5 +1,12 @@
 <configs>
 
+<!-- Price adjustments for vanilla (more at the end of the file) -->
+<append xpath="//block"><property name="EconomicBundleSize" value="1"/></append>
+<setattribute xpath="//block/property[@name='EconomicBundleSize']" name="value">1</setattribute>
+
+<!-- Putting books in newspaper mailboxes -->
+<setattribute xpath="//block[@name='cntPostMailbox']/property[@name='LootList']" name="value">postMailbox</setattribute>
+
 <append xpath="//block[(contains(@name, 'Sedan') and contains(@name, 'Master'))]">
     <drop event="Harvest" name="resourceCarFrameITAV" count="1" prob="0.25" tag="salvageHarvest"/>
 </append>
@@ -40,7 +47,6 @@
 <setattribute xpath="//block[(contains(@name, 'rock') or contains(@name, 'ore') or contains(@name, 'terr'))]/drop[@tag='oreWoodHarvest']" name="tag">oreWoodHarvest,rockClayHarvest</setattribute>
 
 <!-- Making ITAV craftable blocks UnlockedBy ITAV Schematics-->
-
 <append xpath="//block[@name='signBread01']"><property name="UnlockedBy" value="signBread01ITAVSchematic" /></append>
 <append xpath="//block[@name='signBread02']"><property name="UnlockedBy" value="signBread02ITAVSchematic" /></append>
 <append xpath="//block[@name='barStoolVariantHelper']"><property name="UnlockedBy" value="barStoolVariantHelperITAVSchematic" /></append>
@@ -80,7 +86,7 @@
 		<!-- Collide disabled to avoid zombies killing the store, or using store as protective block against zombies -->
 		<property name="Collide" value="sight"/> 
 		<property name="CanPickup" value="true"/>
-		<property name="EconomicValue" value=".1"/>
+		<property name="EconomicValue" value="75"/>
 		<property class="RepairItems">
 			<property name="resourceScrapIron" value="1"/>
 		</property>			
@@ -111,9 +117,11 @@
 		<property name="Stacknumber" value="1"/>
 		<property class="Workstation">
 			<property name="Modules" value="output"/>
-			<property name="CraftingAreaRecipes" value="player,workbench"/>
+			<property name="CraftingAreaRecipes" value="workbenchMinerT2ITAV"/>
 		</property>
-		<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+		<property name="WorkstationIcon" value="ui_game_symbol_tool"/>
+		<property name="CraftActionName" value="lblContextActionAssemble"/>
+		<property name="CraftIcon" value="ui_game_symbol_tool"/>
 		<property name="OpenSound" value="open_toolbox"/>
 		<property name="CloseSound" value="close_toolbox"/>
 		<property name="WorkstationJournalTip" value="workstationT2ITAVTip"/>
@@ -128,7 +136,7 @@
 		<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
 		<property name="TakeDelay" value="15"/>
 		<property name="DescriptionKey" value="workbenchDesc"/>
-		<property name="EconomicValue" value="2000"/>
+		<property name="EconomicValue" value="25970"/>
 		<property name="Group" value="Building,advBuilding"/>
 		<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
 		<property name="SortOrder1" value="70i0"/>
@@ -158,8 +166,9 @@
 		<property class="Workstation">
 			<property name="Modules" value="tools,output,fuel,input"/>
 			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="CraftingAreaRecipes" value="campfire,campfireT2ITAV"/>
 		</property>
-		<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
+		<property name="WorkstationIcon" value="ui_game_symbol_spatula"/>
 		<property name="CraftActionName" value="lblContextActionCook"/>
 		<property name="CraftIcon" value="ui_game_symbol_spatula"/>
 		<property name="OpenSound" value="campfire_open"/>
@@ -174,9 +183,9 @@
 		<property name="TakeDelay" value="15"/>
 		<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
 		<property name="DescriptionKey" value="campfireDesc"/>
-		<property name="EconomicValue" value="500"/>
+		<property name="EconomicValue" value="10790"/>
 		<property name="EconomicBundleSize" value="1"/>
-		<property name="SellableToTrader" value="false"/>
+		<property name="SellableToTrader" value="true"/>
 		<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
 		<property name="SortOrder1" value="70i0"/>
 	</block>
@@ -236,8 +245,8 @@
 		<property name="MaxDamage" value="800"/>
 		<property name="Weight" value="0"/>
 		<property name="Shape" value="ModelEntity"/>
-		<property name="ParticleName" value="candle_flame"/> <!-- candleWall_flame  hotembers ember_pile campfire forge  chemistryStation-->
-		<property name="ParticleOffset" value="0.15,-0.2,0.34"/> <!-- for candleWall_flame : ParticleOffset value="0.15,0.5,0.34" -->
+		<property name="ParticleName" value="candle_flame"/>
+		<property name="ParticleOffset" value="0.15,-0.2,0.34"/>
 		<property name="Path" value="solid"/>
 		<property name="Model" value="Entities/Crafting/ChemSetDPrefab"/>
 		<property name="Place" value="TowardsPlacerInverted"/>
@@ -256,9 +265,9 @@
 		<property class="Workstation">
 			<property name="Modules" value="output,fuel,input"/>
 		</property>
-		<property name="WorkstationIcon" value="ui_game_symbol_chemistry"/>
+		<property name="WorkstationIcon" value="ui_game_symbol_science"/>
 		<property name="CraftActionName" value="lblContextActionMix"/>
-		<property name="CraftIcon" value="ui_game_symbol_chemistry"/>
+		<property name="CraftIcon" value="ui_game_symbol_science"/>
 		<property name="OpenSound" value="chem_station_open"/>
 		<property name="CloseSound" value="chem_station_close"/>
 		<property name="CraftSound" value="chem_station_mix_click"/>
@@ -279,9 +288,9 @@
 		<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 		<property name="TakeDelay" value="15"/>
 		<property name="Group" value="Science,Building,advBuilding"/>
-		<property name="EconomicValue" value="5000"/>
+		<property name="EconomicValue" value="10760"/>
 		<property name="EconomicBundleSize" value="1"/>
-		<property name="SellableToTrader" value="false"/>
+		<property name="SellableToTrader" value="true"/>
 		<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
 		<property name="SortOrder1" value="70i0"/>
 	</block>	
@@ -308,9 +317,11 @@
 		<property name="Stacknumber" value="1"/>
 		<property class="Workstation">
 			<property name="Modules" value="output"/>
-			<property name="CraftingAreaRecipes" value="player,workbench"/>
+			<property name="CraftingAreaRecipes" value="workbenchRoboticsT2ITAV"/>
 		</property>
-		<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+		<property name="WorkstationIcon" value="ui_game_symbol_assemble"/>
+		<property name="CraftActionName" value="lblContextActionAssemble"/>
+		<property name="CraftIcon" value="ui_game_symbol_assemble"/>
 		<property name="OpenSound" value="open_workbench"/>
 		<property name="CloseSound" value="close_workbench"/>
 		<property name="WorkstationJournalTip" value="workstationT2ITAVTip"/>
@@ -327,7 +338,7 @@
 		<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
 		<property name="TakeDelay" value="15"/>
 		<property name="DescriptionKey" value="workbenchDesc"/>
-		<property name="EconomicValue" value="2000"/>
+		<property name="EconomicValue" value="16500"/>
 		<property name="Group" value="Building,advBuilding"/>
 		<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
 		<property name="SortOrder1" value="70i0"/>
@@ -358,9 +369,11 @@
 		<property name="Stacknumber" value="1"/>
 		<property class="Workstation">
 			<property name="Modules" value="output"/>
-			<property name="CraftingAreaRecipes" value="player,workbench"/>
+			<property name="CraftingAreaRecipes" value="workbenchRunnerT2ITAV"/>
 		</property>
-		<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+		<property name="WorkstationIcon" value="ui_game_symbol_4x4"/>
+		<property name="CraftActionName" value="lblContextActionAssemble"/>
+		<property name="CraftIcon" value="ui_game_symbol_wrench"/>
 		<property name="OpenSound" value="open_workbench"/>
 		<property name="CloseSound" value="close_workbench"/>
 		<property name="WorkstationJournalTip" value="workstationT2ITAVTip"/>
@@ -379,7 +392,7 @@
 		<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
 		<property name="TakeDelay" value="15"/>
 		<property name="DescriptionKey" value="workbenchDesc"/>
-		<property name="EconomicValue" value="2000"/>
+		<property name="EconomicValue" value="18630"/>
 		<property name="Group" value="Building,advBuilding"/>
 		<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
 		<property name="SortOrder1" value="70i0"/>
@@ -392,8 +405,8 @@
 		<property name="Extends" value="treeGrassMaster"/>
 		<property name="CustomIcon" value="forestFlower" />
 		<property name="Material" value="Mplants" />
-		<!--<property name="Class" value="Tallgrass"/> -->
 		<property name="Texture" value="567"/>
+		<property name="EconomicValue" value="4"/>
 	</block>
 	
 	<block name="plantedGoldenrod3FlowerITAV">
@@ -403,6 +416,7 @@
 		<property name="Material" value="Mplants" />
 		<property name="Texture" value="362"/>
 		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<property name="EconomicValue" value="9"/>
 	</block>
 	
 	<block name="plantedChrysanthemum3FlowerITAV">
@@ -412,6 +426,7 @@
 		<property name="Material" value="Mplants" />
 		<property name="Texture" value="244"/>
 		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<property name="EconomicValue" value="10"/>
 	</block>
 	
 	<block name="plantedCoffee3FlowerITAV">
@@ -421,6 +436,7 @@
 		<property name="Material" value="Mplants" />
 		<property name="Texture" value="395"/>
 		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<property name="EconomicValue" value="11"/>
 	</block>
 	
 	<block name="plantedAloe3FlowerITAV">
@@ -431,6 +447,7 @@
 		<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/plant_aloe_harvestPrefab"/>
 		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<property name="EconomicValue" value="11"/>
 	</block>
 	
 	<block name="plantedYucca3FlowerITAV">
@@ -441,6 +458,7 @@
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/plant_yucca_harvestPrefab"/>
 		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<property name="EconomicValue" value="11"/>
 	</block>
 	
 	<block name="plantedBlueberry3FlowerITAV">
@@ -451,6 +469,7 @@
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/blueberry_plant_harvestPrefab"/>
 		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<property name="EconomicValue" value="12"/>
 	</block>
 	
 	<block name="plantedPotato3FlowerITAV">
@@ -461,6 +480,7 @@
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
 		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<property name="EconomicValue" value="12"/>
 	</block>
 	
 	<block name="plantedSnowberry3FlowerITAV">
@@ -470,6 +490,7 @@
 		<property name="Material" value="Mplants" />
 		<property name="Texture" value="568" />
 		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<property name="EconomicValue" value="12"/>
 	</block>
 	
 	<block name="plantedPumpkin3FlowerITAV">
@@ -480,6 +501,7 @@
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/pumpkinHarvestPrefab"/>
 		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<property name="EconomicValue" value="12"/>
 	</block>
 	
 	<block name="plantedCorn2FlowerITAV">
@@ -489,6 +511,7 @@
 		<property name="Material" value="Mplants" />
 		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
 		<property name="Model" value="corn_growth_shape"/>
+		<property name="EconomicValue" value="11"/>
 	</block>	
 	
 	<block name="birdBathPlanterITAV">
@@ -510,6 +533,7 @@
 		<property name="EconomicValue" value="56"/>
 		<property name="FilterTags" value="MC_building,SC_decor"/>
 		<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+		<property name="EconomicValue" value="38"/>
 	</block>	
 	
 	
@@ -519,12 +543,13 @@
 		<property name="Class" value="SecureLoot"/>
 		<property name="LootList" value="shamwayCrate"/>
 		<property name="Material" value="Mmetal" />
-		<property name="Weight" value="10" />
+		<property name="Weight" value="100" />
 		<property name="Model" value="Entities/Electrical/sodaFountainPrefab"/>
 		<property name="OpenSound" value="open_cooler"/>
 		<property name="CloseSound" value="close_cooler"/>
 		<property name="FilterTags" value="MC_building,SC_loot,SC_electrical,SC_commercial"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
+		<property name="EconomicValue" value="50"/>
 	</block>
 	
 	<block name="cntCoffeeMakerITAV">
@@ -533,12 +558,13 @@
 		<property name="Class" value="SecureLoot"/>
 		<property name="LootList" value="shamwayCrate"/>
 		<property name="Material" value="Mmetal" />
-		<property name="Weight" value="10" />
+		<property name="Weight" value="100" />
 		<property name="Model" value="Entities/Appliances/coffeeMakerPrefab"/>
 		<property name="OpenSound" value="open_cooler"/>
 		<property name="CloseSound" value="close_cooler"/>
 		<property name="FilterTags" value="MC_building,SC_loot,SC_electrical,SC_commercial"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
+		<property name="EconomicValue" value="50"/>
 	</block>	
 	
 	<block name="cntCoffeeMakerCommercialITAV">
@@ -547,12 +573,13 @@
 		<property name="Class" value="SecureLoot"/>
 		<property name="LootList" value="shamwayCrate"/>
 		<property name="Material" value="Mmetal" />
-		<property name="Weight" value="10" />
+		<property name="Weight" value="200" />
 		<property name="Model" value="Entities/Appliances/commercialCoffeeMakerPrefab"/>
 		<property name="OpenSound" value="open_cooler"/>
 		<property name="CloseSound" value="close_cooler"/>
 		<property name="FilterTags" value="MC_building,SC_loot,SC_electrical,SC_commercial"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
+		<property name="EconomicValue" value="100"/>
 	</block>
 	
 	<block name="decoCookingPotITAV">
@@ -570,7 +597,7 @@
 		<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
 		<property name="Collide" value="melee,bullet,arrow,rocket"/>
 		<property name="Group" value="Tools/Traps,Food/Cooking"/>
-		<property name="EconomicValue" value="12"/>
+		<property name="EconomicValue" value="180"/>
 		<property name="FilterTags" value="MC_building,SC_decor,SC_residential"/>
 
 	</block>
@@ -585,6 +612,7 @@
 		<property name="ModelOffset" value="0,0,0"/>
 		<property name="GndAlign" value="1"/>
 		<property name="UnlockedBy" value="perkCookITAV" />
+		<property name="EconomicValue" value="389"/>
 	</block>
 
 	<block name="cntFoodPileMediumITAV">
@@ -597,6 +625,7 @@
 		<property name="ModelOffset" value="0,0,0"/>
 		<property name="GndAlign" value="1"/>
 		<property name="UnlockedBy" value="perkCookITAV" />
+		<property name="EconomicValue" value="685"/>
 	</block>
 
 	<block name="cntFoodPileLargeITAV">
@@ -610,6 +639,7 @@
 		<property name="ModelOffset" value="0,0,0"/>
 		<property name="GndAlign" value="1"/>
 		<property name="UnlockedBy" value="perkCookITAV" />
+		<property name="EconomicValue" value="965"/>
 	</block>	
 	
 </append>
@@ -651,7 +681,7 @@
 		<property name="Extends" value="porchLight01" param1="HandleFace"/>
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
-		<property name="EconomicValue" value="2076"/>
+		<property name="EconomicValue" value="1776"/>
 		<property name="Model" value="Entities/Lighting/streetLamp_ClassicPrefab"/>
 		<property name="DisplayType" value="blockMulti"/>
 		<property name="MultiBlockDim" value="1,5,1"/>
@@ -671,7 +701,7 @@
 	<block name="signShopOpenLightITAV"> 
 		<property name="Class" value="PoweredLight"/>
 		<property name="DescriptionKey" value="LightITAVDesc"/>
-		<property name="EconomicValue" value="240"/>
+		<property name="EconomicValue" value="216"/>
 		<property name="IndexName" value="TraderOnOff"/>
 		<property name="CustomIcon" value="signShopOpenSwitch"/>
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
@@ -707,6 +737,7 @@
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 		<drop event="Destroy" name="resourceScrapBrass" count="3"/>
 		<property name="UnlockedBy" value="perkSmelterITAV,LightDeskLampLightITAVSchematic"/>
+		<property name="EconomicValue" value="424"/>
 	</block>
 
 
@@ -722,6 +753,7 @@
 		<property name="CustomIcon" value="tableLampLight"/>
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 		<property name="UnlockedBy" value="perkSmelterITAV,LightTableLampLightITAVSchematic"/>
+		<property name="EconomicValue" value="424"/>
 	</block>
 
 	<!-- The offset makes it impossible to destroy. Class makes it impossible to pick up. Ie, can't keep it.	
@@ -738,6 +770,7 @@
 		<property name="CustomIcon" value="tableLampLight"/>
 		<property name="StabilitySupport" value="false"/>
 		<property name="UnlockedBy" value="perkSmelterITAV,LightTableLampLightCenteredITAVSchematic"/>
+		<property name="EconomicValue" value="424"/>
 	</block> -->
 	
 	
@@ -755,6 +788,7 @@
 		<property name="HandleFace" value="West"/>
 		<property name="AllowAllRotations" value="true"/>
 		<property name="UnlockedBy" value="perkSmelterITAV,LightPorchLight01ITAVSchematic"/>
+		<property name="EconomicValue" value="424"/>
 	</block>
 
 	<block name="LightPorchLight04BrassITAV">
@@ -771,7 +805,8 @@
 		<property name="AllowAllRotations" value="true"/>
 		<drop event="Destroy" name="resourceScrapBrass" count="3"/>
 		<property name="CanPickup" value="true"/>
-		<property name="UnlockedBy" value="perkSmelterITAV,LightPorchLight04BrassITAVSchematic"/>>
+		<property name="UnlockedBy" value="perkSmelterITAV,LightPorchLight04BrassITAVSchematic"/>
+		<property name="EconomicValue" value="424"/>
 	</block>
 	
 	<block name="LightPorchLight04ITAV">
@@ -788,6 +823,7 @@
 		<property name="AllowAllRotations" value="true"/>
 		<property name="Light" value="0.6"/>
 		<property name="UnlockedBy" value="perkSmelterITAV,LightPorchLight04ITAVSchematic"/>
+		<property name="EconomicValue" value="424"/>
 	</block>
 
 	<block name="LightCeilingLight02ITAV">
@@ -801,6 +837,7 @@
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 		<property name="Model" value="Entities/Lighting/ceilingLight02Prefab"/> <property name="HandleFace" value="Top"/>
 		<property name="UnlockedBy" value="perkSmelterITAV,LightCeilingLight02ITAVSchematic"/>
+		<property name="EconomicValue" value="424"/>
 	</block>
 
 	<block name="LightCeilingLight02BrassITAV">
@@ -815,6 +852,7 @@
 		<property name="Model" value="Entities/Lighting/ceilingLight02BrassPrefab"/> <property name="HandleFace" value="Top"/>
 		<drop event="Destroy" name="resourceScrapBrass" count="3"/>
 		<property name="UnlockedBy" value="perkSmelterITAV,LightCeilingLight02BrassITAVSchematic"/>
+		<property name="EconomicValue" value="424"/>
 	</block>
 	
 	
@@ -822,7 +860,7 @@
 	<property name="CreativeMode" value="Player"/>
 	<property name="Class" value="Powered"/>
 	<property name="DescriptionKey" value="LightFuseboxITAVDesc"/>
-	<property name="EconomicValue" value="234"/>
+	<property name="EconomicValue" value="210"/>
 	<property name="CustomIcon" value="fusebox"/>
 	<property name="UnlockedBy" value="perkSmelterITAV,perkRoboticsITAV"/>
 	<property name="Material" value="Mmetal_weak"/>
@@ -849,6 +887,61 @@
 	<property name="SortOrder1" value="70a0"/>
 </block>
 
+
+<block name="window03WoodITAV">
+	<property name="DescriptionKey" value="woodFrameGroupDesc"/>
+	<property name="Material" value="Mglass"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Buildings/window03WoodPrefab"/>
+	<property name="Place" value="TowardsPlacer"/>
+	<property name="ModelOffset" value="0,0.5,0.5"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="170"/> <!-- ShadowColour -->
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="Weight" value="0"/>
+	<property name="FuelValue" value="200"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plainWoodWindowPlugCTRPlate"/>
+		<property name="Item" value="resourceWood"/>
+		<property name="ItemCount" value="4"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="CustomUpgradeSound" value="place_block_wood"/>
+	<property name="DowngradeBlock" value="window03WoodBroke1"/>
+	<drop event="Destroy" name="resourceBrokenGlass" count="1,3"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="42"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="FilterTags" value="MC_building,SC_windows"/>
+	<property name="SortOrder1" value="7080"/>
+</block>
+
+<block name="window03WoodBulletproofCenterITAV">
+	<property name="DescriptionKey" value="window03WoodBulletproofITAVDesc"/>
+	<property name="CustomIcon" value="window03Wood"/>
+	<property name="CustomIconTint" value="B5E8F7" />
+	<property name="Material" value="MglassBulletproof"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Buildings/window03WoodPrefab"/>
+	<property name="Place" value="TowardsPlacer"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="170"/> <!-- ShadowColour -->
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="Weight" value="0"/>
+	<property name="FuelValue" value="200"/>
+	<property class="RepairItems">
+		<property name="glassBulletproofBlockVariantHelper" value="1"/>
+	</property>
+	<property name="DowngradeBlock" value="window03WoodBroke1"/>
+	<drop event="Destroy" name="resourceBrokenGlass" count="1,3"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="EconomicValue" value="404"/>
+	<property name="FilterTags" value="MC_building,SC_windows"/>
+	<property name="SortOrder1" value="7080"/>
+</block>
+
+
+
 <block name="window03WoodBulletproofITAV">
 	<property name="DescriptionKey" value="window03WoodBulletproofITAVDesc"/>
 	<property name="CustomIcon" value="window03Wood"/>
@@ -858,6 +951,7 @@
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Buildings/window03WoodPrefab"/>
 	<property name="Place" value="TowardsPlacer"/>
+	<property name="ModelOffset" value="0,0.5,0.5"/>
 	<property name="ImposterExchange" value="imposterBlock" param1="170"/> <!-- ShadowColour -->
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="Weight" value="0"/>
@@ -924,6 +1018,293 @@
 <append xpath="//block[@name='motionsensor']/property[@name='UnlockedBy']/@value">,perkRoboticsITAV</append>
 <append xpath="//block[@name='crushedCars']"><property name="UnlockedBy" value="perkRunnerITAV" /></append>
 
+
+
+
+
+
+
+ <!-- ********************* Price adjustments from vanilla ********************* -->
+ 
+ 
+<setattribute xpath="//block[@name='woodShapes']/property[@name='EconomicValue']" name="value">10</setattribute>
+<setattribute xpath="//block[@name='brickShapes']/property[@name='EconomicValue']" name="value">1</setattribute>
+<setattribute xpath="//block[@name='cobblestoneShapes']/property[@name='EconomicValue']" name="value">30</setattribute>
+<setattribute xpath="//block[@name='concreteShapes']/property[@name='EconomicValue']" name="value">120</setattribute>
+<setattribute xpath="//block[@name='steelShapes']/property[@name='EconomicValue']" name="value">1000</setattribute>
+<setattribute xpath="//block[@name='awningShapes']/property[@name='EconomicValue']" name="value">10</setattribute>
+<setattribute xpath="//block[@name='corrugatedMetalShapes']/property[@name='EconomicValue']" name="value">10</setattribute>
+<setattribute xpath="//block[@name='frameShapes']/property[@name='EconomicValue']" name="value">2</setattribute>
+<setattribute xpath="//block[@name='glassBulletproofMaster']/property[@name='EconomicValue']" name="value">400</setattribute>
+<setattribute xpath="//block[@name='woodWeakNoUpgradeMaster']/property[@name='EconomicValue']" name="value">1</setattribute>
+<setattribute xpath="//block[@name='woodNoUpgradeMaster']/property[@name='EconomicValue']" name="value">1</setattribute>
+<setattribute xpath="//block[@name='scrapIronNoUpgradeMaster']/property[@name='EconomicValue']" name="value">40</setattribute>
+<setattribute xpath="//block[@name='concreteNoUpgradeMaster']/property[@name='EconomicValue']" name="value">120</setattribute>
+<setattribute xpath="//block[@name='steelMaster']/property[@name='EconomicValue']" name="value">1000</setattribute>
+<setattribute xpath="//block[@name='stoneNoUpgradeMaster']/property[@name='EconomicValue']" name="value">10</setattribute>
+<setattribute xpath="//block[@name='cobblestoneMaster']/property[@name='EconomicValue']" name="value">30</setattribute>
+<setattribute xpath="//block[@name='brickNoUpgradeMaster']/property[@name='EconomicValue']" name="value">30</setattribute>
+<setattribute xpath="//block[@name='corrugatedMetalNoUpgradeMaster']/property[@name='EconomicValue']" name="value">40</setattribute>
+<setattribute xpath="//block[@name='corrugatedMetalMaster']/property[@name='EconomicValue']" name="value">40</setattribute>
+<setattribute xpath="//block[@name='awningMaster']/property[@name='EconomicValue']" name="value">10</setattribute>
+<setattribute xpath="//block[@name='decoEntityWoodMaster']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//block[@name='decoEntityMetalMaster']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//block[@name='decoEntityPolymerMaster']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//block[@name='decoEntityClothMaster']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//block[@name='decoEntityGlassMaster']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//block[@name='woodLogPillar100']/property[@name='EconomicValue']" name="value">10</setattribute>
+<setattribute xpath="//block[@name='paperPillar100']/property[@name='EconomicValue']" name="value">25</setattribute>
+<setattribute xpath="//block[@name='metalTrussingBlockOld']/property[@name='EconomicValue']" name="value">20</setattribute>
+<setattribute xpath="//block[@name='metalTrussingBlock']/property[@name='EconomicValue']" name="value">20</setattribute>
+<setattribute xpath="//block[@name='concreteDestroyed01']/property[@name='EconomicValue']" name="value">1</setattribute>
+<setattribute xpath="//block[@name='ladderWood']/property[@name='EconomicValue']" name="value">3</setattribute>
+<setattribute xpath="//block[@name='ladderMetal']/property[@name='EconomicValue']" name="value">300</setattribute>
+<setattribute xpath="//block[@name='ladderSteel']/property[@name='EconomicValue']" name="value">500</setattribute>
+<setattribute xpath="//block[@name='metalCatwalk']/property[@name='EconomicValue']" name="value">48</setattribute>
+<setattribute xpath="//block[@name='treeAzalea']/property[@name='EconomicValue']" name="value">44</setattribute>
+<setattribute xpath="//block[@name='treePlantedMountainPine1m']/property[@name='EconomicValue']" name="value">3</setattribute>
+<setattribute xpath="//block[@name='plantedMushroom1']/property[@name='EconomicValue']" name="value">20</setattribute>
+<setattribute xpath="//block[@name='decoPumpkinJackOLantern']/property[@name='EconomicValue']" name="value">7</setattribute>
+<setattribute xpath="//block[@name='farmPlotBlock']/property[@name='EconomicValue']" name="value">324</setattribute>
+<setattribute xpath="//block[@name='metalPipeValve']/property[@name='EconomicValue']" name="value">30</setattribute>
+<setattribute xpath="//block[@name='pipeSmall1x3']/property[@name='EconomicValue']" name="value">60</setattribute>
+<setattribute xpath="//block[@name='fusebox']/property[@name='EconomicValue']" name="value">150</setattribute>
+<setattribute xpath="//block[@name='signShopColdBeer']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//block[@name='metalSignLetter_a']/property[@name='EconomicValue']" name="value">40</setattribute>
+<setattribute xpath="//block[@name='cntSecureStorageChest']/property[@name='EconomicValue']" name="value">10</setattribute>
+<setattribute xpath="//block[@name='cntStorageGeneric']/property[@name='EconomicValue']" name="value">72</setattribute>
+<setattribute xpath="//block[@name='cntStorageGenericSigned']/property[@name='EconomicValue']" name="value">72</setattribute>
+<setattribute xpath="//block[@name='cntCabinetBottomFiller']/property[@name='EconomicValue']" name="value">1</setattribute>
+<setattribute xpath="//block[@name='cntGraniteSink']/property[@name='EconomicValue']" name="value">80</setattribute>
+<setattribute xpath="//block[@name='cntCabinetOldSink']/property[@name='EconomicValue']" name="value">60</setattribute>
+<setattribute xpath="//block[@name='cntStoveOldVer1Closed']/property[@name='EconomicValue']" name="value">156</setattribute>
+<setattribute xpath="//block[@name='cntMicrowaveOvenVer1Open']/property[@name='EconomicValue']" name="value">440</setattribute>
+<setattribute xpath="//block[@name='cntRetroFridgeVer1Closed']/property[@name='EconomicValue']" name="value">1390</setattribute>
+<setattribute xpath="//block[@name='cntCoolerRandomLootHelper']/property[@name='EconomicValue']" name="value">80</setattribute>
+<setattribute xpath="//block[@name='utilitySink']/property[@name='EconomicValue']" name="value">636</setattribute>
+<setattribute xpath="//block[@name='pedestalSink']/property[@name='EconomicValue']" name="value">636</setattribute>
+<setattribute xpath="//block[@name='counterSinkCommercialTile']/property[@name='EconomicValue']" name="value">636</setattribute>
+<setattribute xpath="//block[@name='cntWasherOpen']/property[@name='EconomicValue']" name="value">60</setattribute>
+<setattribute xpath="//block[@name='faucet02']/property[@name='EconomicValue']" name="value">636</setattribute>
+<setattribute xpath="//block[@name='faucet04']/property[@name='EconomicValue']" name="value">636</setattribute>
+<setattribute xpath="//block[@name='faucetBrass02']/property[@name='EconomicValue']" name="value">636</setattribute>
+<setattribute xpath="//block[@name='faucetBrass04']/property[@name='EconomicValue']" name="value">636</setattribute>
+<setattribute xpath="//block[@name='showerHead']/property[@name='EconomicValue']" name="value">636</setattribute>
+<setattribute xpath="//block[@name='cntToilet01']/property[@name='EconomicValue']" name="value">636</setattribute>
+<setattribute xpath="//block[@name='cntTrashCompactor']/property[@name='EconomicValue']" name="value">60</setattribute>
+<setattribute xpath="//block[@name='cntTrash_can01']/property[@name='EconomicValue']" name="value">40</setattribute>
+<setattribute xpath="//block[@name='cntBin']/property[@name='EconomicValue']" name="value">40</setattribute>
+<setattribute xpath="//block[@name='cntDomedTrashCanEmpty']/property[@name='EconomicValue']" name="value">180</setattribute>
+<setattribute xpath="//block[@name='cntDomedTrashCanCornerEmpty']/property[@name='EconomicValue']" name="value">180</setattribute>
+<setattribute xpath="//block[@name='cntBruteStyleTrashCanEmpty']/property[@name='EconomicValue']" name="value">201</setattribute>
+<setattribute xpath="//block[@name='cntTiltTruckEmpty']/property[@name='EconomicValue']" name="value">60</setattribute>
+<setattribute xpath="//block[@name='cntGasPumpRandomLootHelper']/property[@name='EconomicValue']" name="value">400</setattribute>
+<setattribute xpath="//block[@name='cntNightstandRandomLootHelper']/property[@name='EconomicValue']" name="value">72</setattribute>
+<setattribute xpath="//block[@name='cntWallSafe']/property[@name='EconomicValue']" name="value">990</setattribute>
+<setattribute xpath="//block[@name='cntGunSafe']/property[@name='EconomicValue']" name="value">4390</setattribute>
+<setattribute xpath="//block[@name='cntWoodDesk01RandomLootHelper']/property[@name='EconomicValue']" name="value">72</setattribute>
+<setattribute xpath="//block[@name='cntMetalDesk02RandomLootHelper']/property[@name='EconomicValue']" name="value">180</setattribute>
+<setattribute xpath="//block[@name='rustyIronTable']/property[@name='EconomicValue']" name="value">180</setattribute>
+<setattribute xpath="//block[@name='officeChair01']/property[@name='EconomicValue']" name="value">626</setattribute>
+<setattribute xpath="//block[@name='barStool']/property[@name='EconomicValue']" name="value">136</setattribute>
+<setattribute xpath="//block[@name='sectionalPlaidCouchSofaMiddle']/property[@name='EconomicValue']" name="value">75</setattribute>
+<setattribute xpath="//block[@name='sectionalLeatherCouchSofaArm']/property[@name='EconomicValue']" name="value">80</setattribute>
+<setattribute xpath="//block[@name='cntWaterCoolerFull']/property[@name='EconomicValue']" name="value">152</setattribute>
+<setattribute xpath="//block[@name='decoReptileTerrarium']/property[@name='EconomicValue']" name="value">574</setattribute>
+<setattribute xpath="//block[@name='bedroll']/property[@name='EconomicValue']" name="value">10</setattribute>
+<setattribute xpath="//block[@name='bed02']/property[@name='EconomicValue']" name="value">1900</setattribute>
+<setattribute xpath="//block[@name='bunkBedMade']/property[@name='EconomicValue']" name="value">950</setattribute>
+<setattribute xpath="//block[@name='mattressFlatThin']/property[@name='EconomicValue']" name="value">60</setattribute>
+<setattribute xpath="//block[@name='gurneyBed']/property[@name='EconomicValue']" name="value">1330</setattribute>
+<setattribute xpath="//block[@name='morticianDrawer']/property[@name='EconomicValue']" name="value">284</setattribute>
+<setattribute xpath="//block[@name='furnaceDrawer']/property[@name='EconomicValue']" name="value">164</setattribute>
+<setattribute xpath="//block[@name='cntFurnaceDrawer']/property[@name='EconomicValue']" name="value">100</setattribute>
+<setattribute xpath="//block[@name='cntGreenDrawer']/property[@name='EconomicValue']" name="value">800</setattribute>
+<setattribute xpath="//block[@name='cntGreenDrawerInsecure']/property[@name='EconomicValue']" name="value">800</setattribute>
+<setattribute xpath="//block[@name='cntFileCabinetShortRandomLootHelper']/property[@name='EconomicValue']" name="value">60</setattribute>
+<setattribute xpath="//block[@name='cntLockersShortOpen']/property[@name='EconomicValue']" name="value">180</setattribute>
+<setattribute xpath="//block[@name='cntBathTubEmpty']/property[@name='EconomicValue']" name="value">56</setattribute>
+<setattribute xpath="//block[@name='cntCashRegisterEmpty']/property[@name='EconomicValue']" name="value">250</setattribute>
+<setattribute xpath="//block[@name='cntShoppingCartEmpty']/property[@name='EconomicValue']" name="value">1148</setattribute>
+<setattribute xpath="//block[@name='cntUtilityCartEmpty']/property[@name='EconomicValue']" name="value">60</setattribute>
+<setattribute xpath="//block[@name='cntStoreShelfSingleBottomEmpty']/property[@name='EconomicValue']" name="value">180</setattribute>
+<setattribute xpath="//block[@name='cntStoreProduceBasketCornerRandomLootHelper']/property[@name='EconomicValue']" name="value">72</setattribute>
+<setattribute xpath="//block[@name='cntVendingMachine']/property[@name='EconomicValue']" name="value">2000</setattribute>
+<setattribute xpath="//block[@name='cntVendingMachine2Broken']/property[@name='EconomicValue']" name="value">2000</setattribute>
+<setattribute xpath="//block[@name='cntATMSecure']/property[@name='EconomicValue']" name="value">690</setattribute>
+<setattribute xpath="//block[@name='cntMailBox01White']/property[@name='EconomicValue']" name="value">282</setattribute>
+<setattribute xpath="//block[@name='cntPostMailbox']/property[@name='EconomicValue']" name="value">12</setattribute>
+<setattribute xpath="//block[@name='treePlant02']/property[@name='EconomicValue']" name="value">20</setattribute>
+<setattribute xpath="//block[@name='birdBathPlanter']/property[@name='EconomicValue']" name="value">38</setattribute>
+<setattribute xpath="//block[@name='airConditioner']/property[@name='EconomicValue']" name="value">450</setattribute>
+<setattribute xpath="//block[@name='airConditionVentFan']/property[@name='EconomicValue']" name="value">450</setattribute>
+<setattribute xpath="//block[@name='satelliteDish']/property[@name='EconomicValue']" name="value">175</setattribute>
+<setattribute xpath="//block[@name='cntMunitionsBox']/property[@name='EconomicValue']" name="value">250</setattribute>
+<setattribute xpath="//block[@name='campfire']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//block[@name='forge']/property[@name='EconomicValue']" name="value">448</setattribute>
+<setattribute xpath="//block[@name='workbench']/property[@name='EconomicValue']" name="value">5264</setattribute>
+<setattribute xpath="//block[@name='cementMixer']/property[@name='EconomicValue']" name="value">3640</setattribute>
+<setattribute xpath="//block[@name='chemistryStation']/property[@name='EconomicValue']" name="value">6730</setattribute>
+<setattribute xpath="//block[@name='cntLootChestHeroInsecureT1']/property[@name='EconomicValue']" name="value">156</setattribute>
+<setattribute xpath="//block[@name='cntLootChestHero']/property[@name='EconomicValue']" name="value">156</setattribute>
+<setattribute xpath="//block[@name='cntHardenedChestSecure']/property[@name='EconomicValue']" name="value">690</setattribute>
+<setattribute xpath="//block[@name='cntHardenedChestInsecure']/property[@name='EconomicValue']" name="value">690</setattribute>
+<setattribute xpath="//block[@name='porchLight01']/property[@name='EconomicValue']" name="value">424</setattribute>
+<setattribute xpath="//block[@name='ceilingLight07']/property[@name='EconomicValue']" name="value">424</setattribute>
+<setattribute xpath="//block[@name='industrialLight01']/property[@name='EconomicValue']" name="value">600</setattribute>
+<setattribute xpath="//block[@name='spotlightPlayer']/property[@name='EconomicValue']" name="value">1212</setattribute>
+<setattribute xpath="//block[@name='keystoneBlock']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//block[@name='generatorbank']/property[@name='EconomicValue']" name="value">2760</setattribute>
+<setattribute xpath="//block[@name='solarbank']/property[@name='EconomicValue']" name="value">3000</setattribute>
+<setattribute xpath="//block[@name='batterybank']/property[@name='EconomicValue']" name="value">1650</setattribute>
+<setattribute xpath="//block[@name='electricwirerelay']/property[@name='EconomicValue']" name="value">210</setattribute>
+<setattribute xpath="//block[@name='switch']/property[@name='EconomicValue']" name="value">300</setattribute>
+<setattribute xpath="//block[@name='pressureplate']/property[@name='EconomicValue']" name="value">960</setattribute>
+<setattribute xpath="//block[@name='pressureplateLong']/property[@name='EconomicValue']" name="value">4260</setattribute>
+<setattribute xpath="//block[@name='tripwirepost']/property[@name='EconomicValue']" name="value">95</setattribute>
+<setattribute xpath="//block[@name='motionsensor']/property[@name='EconomicValue']" name="value">660</setattribute>
+<setattribute xpath="//block[@name='electrictimerrelay']/property[@name='EconomicValue']" name="value">570</setattribute>
+<setattribute xpath="//block[@name='speaker']/property[@name='EconomicValue']" name="value">510</setattribute>
+<setattribute xpath="//block[@name='electricfencepost']/property[@name='EconomicValue']" name="value">480</setattribute>
+<setattribute xpath="//block[@name='dartTrap']/property[@name='EconomicValue']" name="value">2810</setattribute>
+<setattribute xpath="//block[@name='flamethrowerTrap']/property[@name='EconomicValue']" name="value">220</setattribute>
+<setattribute xpath="//block[@name='bladeTrap']/property[@name='EconomicValue']" name="value">4280</setattribute>
+<setattribute xpath="//block[@name='autoTurret']/property[@name='EconomicValue']" name="value">5730</setattribute>
+<setattribute xpath="//block[@name='shotgunTurret']/property[@name='EconomicValue']" name="value">6780</setattribute>
+<setattribute xpath="//block[@name='ironBarsCentered']/property[@name='EconomicValue']" name="value">440</setattribute>
+<setattribute xpath="//block[@name='securityGateCTRPlate']/property[@name='EconomicValue']" name="value">80</setattribute>
+<setattribute xpath="//block[@name='secureDoorWooden']/property[@name='EconomicValue']" name="value">4</setattribute>
+<setattribute xpath="//block[@name='ironDoor1_v1']/property[@name='EconomicValue']" name="value">600</setattribute>
+<setattribute xpath="//block[@name='vaultDoor01']/property[@name='EconomicValue']" name="value">1680</setattribute>
+<setattribute xpath="//block[@name='cellarDoorDoubleWood']/property[@name='EconomicValue']" name="value">10</setattribute>
+<setattribute xpath="//block[@name='cellarDoorDoubleIron']/property[@name='EconomicValue']" name="value">600</setattribute>
+<setattribute xpath="//block[@name='cellarDoorDoubleSteel']/property[@name='EconomicValue']" name="value">1680</setattribute>
+<setattribute xpath="//block[@name='rollUpDoor3x3White']/property[@name='EconomicValue']" name="value">8070</setattribute>
+<setattribute xpath="//block[@name='rollUpDoor5x4White']/property[@name='EconomicValue']" name="value">11070</setattribute>
+<setattribute xpath="//block[@name='woodHatch1_v1']/property[@name='EconomicValue']" name="value">6</setattribute>
+<setattribute xpath="//block[@name='scrapHatch_v1']/property[@name='EconomicValue']" name="value">160</setattribute>
+<setattribute xpath="//block[@name='vaultHatch_v1']/property[@name='EconomicValue']" name="value">1680</setattribute>
+<setattribute xpath="//block[@name='glassCTRSheet']/property[@name='EconomicValue']" name="value">38</setattribute>
+<setattribute xpath="//block[@name='glassBusinessBlock']/property[@name='EconomicValue']" name="value">38</setattribute>
+<setattribute xpath="//block[@name='glassBusinessSheet']/property[@name='EconomicValue']" name="value">38</setattribute>
+<setattribute xpath="//block[@name='glassIndustrialCTRPlate']/property[@name='EconomicValue']" name="value">38</setattribute>
+<setattribute xpath="//block[@name='glassIndustrial02CTRPlate']/property[@name='EconomicValue']" name="value">38</setattribute>
+<setattribute xpath="//block[@name='window02']/property[@name='EconomicValue']" name="value">20</setattribute>
+<setattribute xpath="//block[@name='windowStoreCornerBulletproof']/property[@name='EconomicValue']" name="value">150</setattribute>
+<setattribute xpath="//block[@name='window03Wood']/property[@name='EconomicValue']" name="value">42</setattribute>
+<setattribute xpath="//block[@name='curtain_top1Sheet3']/property[@name='EconomicValue']" name="value">20</setattribute>
+<setattribute xpath="//block[@name='commercialBlindsTop']/property[@name='EconomicValue']" name="value">10</setattribute>
+<setattribute xpath="//block[@name='miniblindTopSheet']/property[@name='EconomicValue']" name="value">20</setattribute>
+<setattribute xpath="//block[@name='trapSpikesWoodMaster']/property[@name='EconomicValue']" name="value">20</setattribute>
+<setattribute xpath="//block[@name='trapSpikesScrapIronMaster']/property[@name='EconomicValue']" name="value">240</setattribute>
+<setattribute xpath="//block[@name='trapSpikesNew']/property[@name='EconomicValue']" name="value">1</setattribute>
+<setattribute xpath="//block[@name='barbedWireSheet']/property[@name='EconomicValue']" name="value">15</setattribute>
+<setattribute xpath="//block[@name='barbedFence']/property[@name='EconomicValue']" name="value">42</setattribute>
+<setattribute xpath="//block[@name='trapGlassBusinessCTRSheet1x1']/property[@name='EconomicValue']" name="value">51</setattribute>
+<setattribute xpath="//block[@name='mineCandyTin']/property[@name='EconomicValue']" name="value">80</setattribute>
+<setattribute xpath="//block[@name='rScrapIronPlateMine']/property[@name='EconomicValue']" name="value">270</setattribute>
+<setattribute xpath="//block[@name='mineCookingPot']/property[@name='EconomicValue']" name="value">132</setattribute>
+<setattribute xpath="//block[@name='mineHubcap']/property[@name='EconomicValue']" name="value">156</setattribute>
+<setattribute xpath="//block[@name='mineAirFilter']/property[@name='EconomicValue']" name="value">242</setattribute>
+<setattribute xpath="//block[@name='pipeLargeBlockVariantHelper']/property[@name='EconomicValue']" name="value">60</setattribute>
+<setattribute xpath="//block[@name='pipeSmallBlockVariantHelper']/property[@name='EconomicValue']" name="value">60</setattribute>
+<setattribute xpath="//block[@name='sandbagBlockVariantHelper']/property[@name='EconomicValue']" name="value">6</setattribute>
+<setattribute xpath="//block[@name='cntWoodFurnitureBlockVariantHelper']/property[@name='EconomicValue']" name="value">72</setattribute>
+<setattribute xpath="//block[@name='cntWoodFurnitureBlockVariantHelper2']/property[@name='EconomicValue']" name="value">72</setattribute>
+<setattribute xpath="//block[@name='woodSignBlockVariantHelper']/property[@name='EconomicValue']" name="value">70</setattribute>
+<setattribute xpath="//block[@name='restaurantBooth']/property[@name='EconomicValue']" name="value">730</setattribute>
+<setattribute xpath="//block[@name='couchModernArm']/property[@name='EconomicValue']" name="value">75</setattribute>
+<setattribute xpath="//block[@name='cntMunitionsBoxArmy']/property[@name='EconomicValue']" name="value">250</setattribute>
+<setattribute xpath="//block[@name='questGeneratorSmall']/property[@name='EconomicValue']" name="value">500</setattribute>
+<setattribute xpath="//block[@name='churchBell']/property[@name='EconomicValue']" name="value">125</setattribute>
+<setattribute xpath="//block[@name='churchBell1x2x1']/property[@name='EconomicValue']" name="value">125</setattribute>
+<setattribute xpath="//block[@name='churchBellHanging1x2x1']/property[@name='EconomicValue']" name="value">125</setattribute>
+<append xpath="//block[@name='cntDeskSafe']"><property name="EconomicValue" value="1590" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='cntFridgeStainlessSteel']"><property name="EconomicValue" value="1790" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='sinksToiletsBlockVariantHelper']"><property name="EconomicValue" value="636" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='metalFenceRailingTrellisSheetBlockVariantHelper']"><property name="EconomicValue" value="62" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='bedrollBlockVariantHelper']"><property name="EconomicValue" value="10" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='burningBarrelPlayer']"><property name="EconomicValue" value="190" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='shuttersWoodBlockVariantHelper']"><property name="EconomicValue" value="10" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='shuttersIronBlockVariantHelper']"><property name="EconomicValue" value="600" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='shuttersSteelBlockVariantHelper']"><property name="EconomicValue" value="1680" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='candleTableLightPlayer']"><property name="EconomicValue" value="3" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='ceilingLight01_player']"><property name="EconomicValue" value="480" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='industrialLight01_player']"><property name="EconomicValue" value="600" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='industrialLight02_player']"><property name="EconomicValue" value="600" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='cntBeerCooler']"><property name="EconomicValue" value="960" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='cntCoolerClosed']"><property name="EconomicValue" value="80" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='cntGreenDrawerSecure']"><property name="EconomicValue" value="800" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='metalFurnitureBlockVariantHelper']"><property name="EconomicValue" value="180" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='cntMailBox01VariantHelper']"><property name="EconomicValue" value="25" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='cntMailBox02VariantHelper']"><property name="EconomicValue" value="25" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='cntMailBox03VariantHelper']"><property name="EconomicValue" value="25" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='endTableLamp']"><property name="EconomicValue" value="659" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='lanternLight_player']"><property name="EconomicValue" value="1624" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='farmPlotBlockVariantHelper']"><property name="EconomicValue" value="324" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='garageDoorMetal_v1']"><property name="EconomicValue" value="2640" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='garageDoorMetal_v1Powered']"><property name="EconomicValue" value="6520" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='garageDoorHousePlayer']"><property name="EconomicValue" value="7470" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='garageDoorIndustrial_Powered']"><property name="EconomicValue" value="10680" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='rollUpDoor3x3VariantHelper']"><property name="EconomicValue" value="8070" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='rollUpDoor5x4VariantHelper']"><property name="EconomicValue" value="11070" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='rollUpDoor7x4VariantHelper']"><property name="EconomicValue" value="14070" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='metalReinforcedWoodDrawBridge']"><property name="EconomicValue" value="10900" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='metalReinforcedWoodDrawBridgePowered']"><property name="EconomicValue" value="13600" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='glassBulletproofBlockVariantHelper']"><property name="EconomicValue" value="400" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='glassBlockVariantHelper']"><property name="EconomicValue" value="38" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='hayBaleSquare']"><property name="EconomicValue" value="10" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='looseBoardsTrapBlock1x1']"><property name="EconomicValue" value="50" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='ironBarsCentered']"><property name="EconomicValue" value="440" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='looseBoardsTrapBlock3x3']"><property name="EconomicValue" value="360" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='looseBoardsTrapPlate1x1']"><property name="EconomicValue" value="50" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='metalTrussingIBeamBlockVariantHelper']"><property name="EconomicValue" value="170" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='oldChair1VariantHelper']"><property name="EconomicValue" value="35" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedAloe1']"><property name="EconomicValue" value="15" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedBlueberry1']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedChrysanthemum1']"><property name="EconomicValue" value="10" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedCoffee1']"><property name="EconomicValue" value="15" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedCorn1']"><property name="EconomicValue" value="15" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedCotton1']"><property name="EconomicValue" value="5" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedGoldenrod1']"><property name="EconomicValue" value="5" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedGraceCorn1']"><property name="EconomicValue" value="250" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedHop1']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedMushroom1']"><property name="EconomicValue" value="24" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedPotato1']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedYucca1']"><property name="EconomicValue" value="15" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedPumpkin1']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedtreeGrassSeed1']"><property name="EconomicValue" value="5" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='sandbagBlockVariantHelper']"><property name="EconomicValue" value="6" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='terrDirt']"><property name="EconomicValue" value="32" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='terrTopSoil']"><property name="EconomicValue" value="32" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='terrGravel']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='terrAsphalt']"><property name="EconomicValue" value="50" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='terrStone']"><property name="EconomicValue" value="156" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='tv']"><property name="EconomicValue" value="1198" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='tv_large_1']"><property name="EconomicValue" value="1198" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='tv_large_2']"><property name="EconomicValue" value="1198" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='vaultHatch_v3_Powered']"><property name="EconomicValue" value="7200" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='vaultDoor03_Powered']"><property name="EconomicValue" value="7200" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='woodFenceRailingTrellisSheetBlockVariantHelper']"><property name="EconomicValue" value="2" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signBread01']"><property name="EconomicValue" value="50" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signBread02']"><property name="EconomicValue" value="50" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='decoWineBottle']"><property name="EconomicValue" value="56" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='decoWineBottleCorner']"><property name="EconomicValue" value="56" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='decoWineBottleShelfRow']"><property name="EconomicValue" value="56" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='houseFrontDoor1_v1']"><property name="EconomicValue" value="410" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='houseFrontDoor2_v1']"><property name="EconomicValue" value="410" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='cntFridgeStainlessSteel']"><property name="EconomicValue" value="1790" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signDinersMenu']"><property name="EconomicValue" value="40" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signDinersMenu2m']"><property name="EconomicValue" value="40" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signLaborDaySaleAd']"><property name="EconomicValue" value="40" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signSale01']"><property name="EconomicValue" value="40" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signSale02']"><property name="EconomicValue" value="40" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='decoPoolTable']"><property name="EconomicValue" value="186" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='cntWoodBurningStove']"><property name="EconomicValue" value="6650" /><property name="EconomicBundleSize" value="1" /></append>
+<setattribute xpath="//block[@name='officeChair01']/property[@name='EconomicValue']" name="value">626</setattribute>
+<append xpath="//block[@name='fastFoodBooth']"><property name="EconomicValue" value="640" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='hangingMoss']"><property name="EconomicValue" value="10" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='crushedCars']"><property name="EconomicValue" value="160" /><property name="EconomicBundleSize" value="1" /></append>
 
 	
 </configs>

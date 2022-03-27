@@ -80,13 +80,15 @@ bookRunnerITAVDesc,progression,perk  book,,,"Mechanics salvage materials, crafts
 ShopStoreVendingCashRegisterPlayerITAV,blocks,Container,,,"Player Owned Store"
 ShopStoreVendingCashRegisterPlayerGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Casino Coins. Buy the goods you need from other Player Owned Stores to support them and the community!  Store is indestructible unless falling."
 
+lblContextActionAssemble,blocks,,,,"Assemble"
 lblCategoryAdvancedChemicals,UI,Tooltip,,,"Advanced Chemicals"
 lblCategoryAdvancedMedicine,UI,Tooltip,,,"Advanced Medicine"
-workbenchMinerT2ITAV,block,,,,"Advanced Miner's Table"
+workbenchMinerT2ITAV,blocks,,,,"Advanced Miner's Table"
 chemistryStationT2ITAV,blocks,,,,"Advanced Chemistry Station"
-campfireT2ITAV,blocks,,,,"Advanced Campfire"
+campfireT2ITAV,blocks,,,,"Advanced Cooking Stove"
 workbenchRoboticsT2ITAV,blocks,,,,"Advanced Robotic's Table"
-workbenchRunnerT2ITAV,block,,,,"Advanced Mechanic's Table"
+workbenchRunnerT2ITAV,blocks,,,,"Advanced Mechanic's Table"
+
 
 workstationT2ITAVTip_title,Journal Tip,,,,"Advanced Workstations"
 workstationT2ITAVTip,Journal Tip,,,,"The most advanced recipes require a profession specific advanced workstation to craft. Advanced workstations have a higher heat signature than basic workstations."
@@ -129,6 +131,9 @@ LightPorchLight04ITAV,blocks,,,,"Iron Porch Lamp"
 LightCeilingLight02ITAV,blocks,,,,"Iron Ceiling Lamp"
 LightCeilingLight02BrassITAV,blocks,,,,"Brass Ceiling Lamp"
 wirelessRelayFuseboxLightITAV,blocks,,,,"Wireless Fusebox"
+window03WoodITAV,blocks,,,,"Wood Window"
+window03Wood,blocks,,,,"Wood Window Centered"
+window03WoodBulletproofCenterITAV,blocks,,,,"Bulletproof Window Centered"
 window03WoodBulletproofITAV,blocks,,,,"Bulletproof Window"
 window03WoodBulletproofITAVDesc,blocks,,,,"This window takes 3000 dmg before it breaks. Cannot be picked up!"
 
@@ -287,7 +292,7 @@ perkMinerITAVName,progression,perk Pro,,,Miner
 perkMinerITAVRank1Desc,progression,perk Pro,,,"Woodpecker"
 perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 poor tools, increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger. Harvest 20% more from trees, and 220% more from ore, stone and terrain blocks. \nUnlocks all iron tools like pickaxes."
 perkMinerITAVRank2Desc,progression,perk,,,"Choppy Chop"
-perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Craft quality 3 fair tools, increase tool damage by 20% and block damage by 60% with any axe, pick, shovel, chainsaw or auger. Harvest 40% more from trees, and 270% more from ore, stone and terrain blocks."
+perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Craft quality 3 fair tools, increase tool damage by 20% and block damage by 60% with any axe, pick, shovel, chainsaw or auger. Harvest 40% more from trees, and 270% more from ore, stone and terrain blocks. Unlocks Advanced Miner's Table."
 perkMinerITAVRank3Desc,progression,perk,,,"Bang That Rock"
 perkMinerITAVRank3LongDesc,progression,perk Pro,,,"Craft quality 4 good tools, increase tool damage by 30% and block damage by 90% with any axe, pick, shovel, chainsaw or auger. Harvest 60% more from trees, and 320% more from ore, stone and terrain blocks."
 perkMinerITAVRank4Desc,progression,perk Pro,,,"Iron Fist"
@@ -306,6 +311,7 @@ perkHunterITAVRank3LongDesc,progression,perk Pro,,,"You are a true Hunter and le
 perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced benefits and learn to cook faster."
 perkCookITAVName,progression,perk Pro,,,Cook
 perkCookITAVRank2LongDesc,progression,perk Pro,,,"Just like grandma used to make, tasty hearty meals that fill you up for days. Craft steak and potatoes, meat stew, vegetable stew, blueberry pie and several pumpkin dishes. Cook 20% faster. Unlocks the Small Food Pile storage decoration."
+perkCookITAVRank3LongDesc,progression,perk Pro,,,"Learn how to make nutritious meals from canned goods. Craft Sham Chowder, Hobo Stew, Chili dogs and Fish Tacos. Wash them down with Yucca Juice Smoothies and Beer. Cook 30% faster. Unlocks Advanced Cooking Stove."
 perkCookITAVRank4LongDesc,progression,perk Pro,,,"Cook for an army by making Gumbo Stew, Shepards Pie, Spaghetti and Tuna Gravy on Toast. Cook 40% faster. Use 20% less of a recipe's main ingredients. Unlocks the Medium Food Pile storage decoration."
 perkCookITAVRank5LongDesc,progression,perk Pro,,,"Learn grandpa's secret recipes that boost stats and attributes! Cook 50% faster. Unlocks the Large Food Pile storage decoration."
 
@@ -321,19 +327,6 @@ perkArmorerRank4DescITAV,progression,perk Pro,,,Artisan
 perkArmorerRank4LongDescITAV,progression,perk Pro,,,"You are now an artisan armorer and able to craft quality 5 armor and weaponry."
 perkArmorerRank5DescITAV,progression,perk Pro,,,Master
 perkArmorerRank5LongDescITAV,progression,perk Pro,,,"You are now a master armorer and able to craft quality 6 armor and weaponry."
-
-perkWeaponsmithITAVDesc,progression,perk Pro,,,"Weaponsmiths craft ranged and melee weaponry."
-perkWeaponsmithITAVName,progression,perk Pro,,,Weaponsmith
-perkWeaponsmithITAVRank1Desc,progression,perk Pro,,,Apprentice
-perkWeaponsmithITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 weapons. \nUnlocks crafting of bows, crossbows, hunting rifle, handguns, shotguns, assault rifle, sniper rifle, bladed weapons, blunt weapons, fist weapons, thrown weapons and rocket launcher."
-perkWeaponsmithITAVRank2Desc,progression,perk Pro,,,Journeyman
-perkWeaponsmithITAVRank2LongDesc,progression,perk Pro,,,"Craft quality 3 weapons."
-perkWeaponsmithITAVRank3Desc,progression,perk Pro,,,Expert
-perkWeaponsmithITAVRank3LongDesc,progression,perk Pro,,,"Craft quality 4 weapons."
-perkWeaponsmithITAVRank4Desc,progression,perk Pro,,,Artisan
-perkWeaponsmithITAVRank4LongDesc,progression,perk Pro,,,"Craft quality 5 weapons."
-perkWeaponsmithITAVRank5Desc,progression,perk Pro,,,Master
-perkWeaponsmithITAVRank5LongDesc,progression,perk Pro,,,"Craft quality 6 weapons."
 
 perkFarmerITAVDesc,progression,perk Pro,,,"Specialize in harvesting more crops and crafting seeds."
 perkFarmerITAVName,progression,perk Pro,,,Farmer
@@ -352,10 +345,10 @@ perkChemistITAVDesc,progression,perk Pro,,,"Specialize in crafting chemicals suc
 perkChemistITAVName,progression,perk Pro,,,Chemist
 perkChemistITAVRank1Desc,progression,perk Pro,,,Student
 perkChemistITAVRank1LongDesc,progression,perk Pro,,,"Can craft chemistry stations, first aid bandages, and plaster casts."
-perkChemistITAVRank2Desc,progression,perk Pro,,,Lab Rat
+perkChemistITAVRank2Desc,progression,perk Pro,,,Kitchen Tinkerer
 perkChemistITAVRank2LongDesc,progression,perk Pro,,,"Can craft concrete mix, gun powder and paint. Craft items 20% faster at chemistry stations."
-perkChemistITAVRank3Desc,progression,perk Pro,,,Kitchen Tinkerer
-perkChemistITAVRank3LongDesc,progression,perk Pro,,,"Can craft first aid kits and steroids."
+perkChemistITAVRank3Desc,progression,perk Pro,,,Lab Rat
+perkChemistITAVRank3LongDesc,progression,perk Pro,,,"Can craft first aid kits and steroids. Unlocks Advanced Chemistry Station."
 perkChemistITAVRank4Desc,progression,perk Pro,,,Artisan
 perkChemistITAVRank4LongDesc,progression,perk Pro,,,"Can craft Fortbites, Recog, antibiotics and Grandpa's Forgetting Elixir. Craft items 40% faster at chemistry stations."
 perkChemistITAVRank5Desc,progression,perk Pro,,,Master
@@ -372,7 +365,7 @@ perkRoboticsITAVRank3LongDesc,progression,perk Pro,,,"You have mastered the basi
 perkRoboticsITAVRank4Desc,progression,perk Pro,,,Advanced Robotics
 perkRoboticsITAVRank4LongDesc,progression,perk Pro,,,"You must be from the year 2077. You are creating some futuristic technology. Craft great quality 5 robots, deal 40% more damage, 120% faster fire rate and reload an extra 40 rounds. Reload robot weapons 10% faster. Robot active range is 17 meters."
 perkRoboticsITAVRank5Desc,progression,perk Pro,,,Robotics Expert
-perkRoboticsITAVRank5LongDesc,progression,perk Pro,,,"You are now a top expert in robotics. Reload robot weapons 20% faster and reload an extra 50 rounds. Robot active range is 18 meters.\nTwo deployed robots can be active at once. \nUnlocks crafting of SMG Auto Turret and Robotic Drone."
+perkRoboticsITAVRank5LongDesc,progression,perk Pro,,,"You are now a top expert in robotics. Reload robot weapons 20% faster and reload an extra 50 rounds. Robot active range is 18 meters.\nTwo deployed robots can be active at once. \nUnlocks crafting of SMG Auto Turret, Robotic Drone and Advanced Robotic's Table."
 
 perkRunnerITAVDesc,progression,perk Pro,,,"Craft those vehicles!"
 perkRunnerITAVName,progression,perk Pro,,,Mechanic
@@ -383,7 +376,7 @@ perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Increases movement speed by 
 perkRunnerITAVRank3Desc,progression,perk Pro,,,Oil it up
 perkRunnerITAVRank3LongDesc,progression,perk Pro,,,"Increases movement speed by 6%. Can pick up mines. Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of oil and quality 3 car batteries."
 perkRunnerITAVRank4Desc,progression,perk Pro,,,Motorbiker
-perkRunnerITAVRank4LongDesc,progression,perk Pro,,,"Increases movement speed by 8%. Harvest 80% faster and recieve 80% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, quality 4 car batteries and more efficient stacks of gas cans."
+perkRunnerITAVRank4LongDesc,progression,perk Pro,,,"Increases movement speed by 8%. Harvest 80% faster and recieve 80% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, quality 4 car batteries, more efficient stacks of gas cans and Advanced Mechanic's Table."
 perkRunnerITAVRank5Desc,progression,perk Pro,,,Limo out front
 perkRunnerITAVRank5LongDesc,progression,perk Pro,,,"Increases movement speed by 10%. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower. Harvest 100% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of 4x4 truck parts, Powerizer boots and quality 5 car batteries."
 
@@ -518,7 +511,7 @@ noteDadJoke21ITAVDesc,,,,,"How much wood could a woodchuck chuck if a woodchuck 
 noteDadJoke22ITAV,,,,,"Don't read it"
 noteDadJoke22ITAVDesc,,,,,"Why'd the chicken cross the road? \n\nIt was running from the moaning, dressed in grass, starving person chasing it with a wooden club."
 noteDadJoke23ITAV,,,,,"Don't read it"
-noteDadJoke23ITAVDesc,,,,,"Knock, knock. \n\n'Who is there?' the survivor asks. But no one is there, just hallucinations from the fever as infection sets in. She'll turn soon."
+noteDadJoke23ITAVDesc,,,,,"Knock, knock. \n\n'Who is there?' the survivor asks. But no one is there, just hallucinations from the fever as infection sets in.  \n\nShe'll turn soon."
 noteDadJoke24ITAV,,,,,"Don't read it"
 noteDadJoke24ITAVDesc,,,,,"Why did the zombie have social anxiety? \n\nOnce bit, twice shy."
 noteDadJoke25ITAV,,,,,"Don't read it"
@@ -534,41 +527,41 @@ noteDadJoke29ITAVDesc,,,,,"Why did the zombie leave his husband? \n\nFinished ea
 noteDadJoke30ITAV,,,,,"Don't read it"
 noteDadJoke30ITAVDesc,,,,,"Why did the zombie go to Shamways? \n\nSteve tripped over a bottle and made alot of noise. \n\nDammit Steve."
 noteDadJoke31ITAV,,,,,"Don't read it"
-noteDadJoke31ITAVDesc,,,,,"They used to say the only things certain in life is death and taxes. Surprise!"
+noteDadJoke31ITAVDesc,,,,,"They used to say the only things certain in life is death and taxes.  \n\nSurprise!"
 noteDadJoke32ITAV,,,,,"Don't read it"
 noteDadJoke32ITAVDesc,,,,,"How many zombies does it take to build a house? \n\nDepends on how you stack them. But honestly there are a lot better options."
 noteDadJoke33ITAV,,,,,"Don't read it"
 noteDadJoke33ITAVDesc,,,,,"How do you eat an elephant? \n\nOne bite at a time, just like that zombie ate Steve. I can still hear the screams, they keep me up at night."
 noteDadJoke34ITAV,,,,,"Don't read it"
-noteDadJoke34ITAVDesc,,,,,"What turns on a Demolisher? Not much, just gotta touch his heart from time to time."
+noteDadJoke34ITAVDesc,,,,,"What turns on a Demolisher?  \n\nNot much, just gotta touch his heart from time to time."
 noteDadJoke35ITAV,,,,,"Don't read it"
 noteDadJoke35ITAVDesc,,,,,"What did the zombie get for showing up late to the party? \n\nThe cold shoulder."
 noteDadJoke36ITAV,,,,,"Don't read it"
-noteDadJoke36ITAVDesc,,,,,"This is a joke about construction. I'm still working on it."
+noteDadJoke36ITAVDesc,,,,,"This is a joke about construction.  \n\nI'm still working on it."
 noteDadJoke37ITAV,,,,,"Don't read it"
-noteDadJoke37ITAVDesc,,,,,"I tell dad jokes, but I don't have any kids. I'm a faux pa."
+noteDadJoke37ITAVDesc,,,,,"I tell dad jokes, but I don't have any kids.  \n\nI'm a faux pa."
 noteDadJoke38ITAV,,,,,"Don't read it"
 noteDadJoke38ITAVDesc,,,,,"Why did the picture go to jail? \n\nBecause it was framed."
 noteDadJoke39ITAV,,,,,"Don't read it"
 noteDadJoke39ITAVDesc,,,,,"The shovel was a ground-breaking invention."
 noteDadJoke40ITAV,,,,,"Don't read it"
-noteDadJoke40ITAVDesc,,,,,"I bought some shoes from a drug dealer. I don't know what he laced them with, but I was tripping all day!"
+noteDadJoke40ITAVDesc,,,,,"I bought some shoes from a drug dealer.  \n\nI don't know what he laced them with, but I was tripping all day!"
 noteDadJoke41ITAV,,,,,"Don't read it"
-noteDadJoke41ITAVDesc,,,,,"I thought about going on an all-acorn diet. But that's just nuts."
+noteDadJoke41ITAVDesc,,,,,"I thought about going on an all-acorn diet.  \n\nBut that's just nuts."
 noteDadJoke42ITAV,,,,,"Don't read it"
-noteDadJoke42ITAVDesc,,,,,"My friend keeps saying 'cheer up man it could be worse, you could be stuck underground in a hole full of water.' I know she means well."
+noteDadJoke42ITAVDesc,,,,,"My friend keeps saying 'cheer up man it could be worse, you could be stuck underground in a hole full of water.'  \n\nI know she means well."
 noteDadJoke43ITAV,,,,,"Don't read it"
-noteDadJoke43ITAVDesc,,,,,"I'm thinking about removing my spine. I feel like it’s only holding me back."
+noteDadJoke43ITAVDesc,,,,,"I'm thinking about removing my spine.  \n\nI feel like it’s only holding me back."
 noteDadJoke44ITAV,,,,,"Don't read it"
 noteDadJoke44ITAVDesc,,,,,"Why couldn't the bicycle stand up by itself? \n\nIt was two tired."
 noteDadJoke45ITAV,,,,,"Don't read it"
-noteDadJoke45ITAVDesc,,,,,"I wouldn't buy anything with velcro. It's a total rip-off."
+noteDadJoke45ITAVDesc,,,,,"I wouldn't buy anything with velcro.  \n\nIt's a total rip-off."
 noteDadJoke46ITAV,,,,,"Don't read it"
 noteDadJoke46ITAVDesc,,,,,"Do you think glass coffins will be a success? \n\nRemains to be seen."
 noteDadJoke47ITAV,,,,,"Don't read it"
 noteDadJoke47ITAVDesc,,,,,"The mechanic was seen having snacks and some coffee in the garage. He must be on his brake!"
 noteDadJoke48ITAV,,,,,"Don't read it"
-noteDadJoke48ITAVDesc,,,,,"What was the name of the mechanic's favorite movie? Lord of the Springs."
+noteDadJoke48ITAVDesc,,,,,"What was the name of the mechanic's favorite movie?  \n\nLord of the Springs."
 noteDadJoke49ITAV,,,,,"Don't read it"
 noteDadJoke49ITAVDesc,,,,,"Why is a robotics inventor never lonely? \n\nBecause she's always making new friends."
 noteDadJoke50ITAV,,,,,"Don't read it"

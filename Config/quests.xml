@@ -106,20 +106,12 @@
 			<property name="biome_filter" value="pine_forest" />
 			<property name="nav_object" value="go_to_trader" />
 		</objective>
-		
-		<!--<objective type="FetchKeep" id="resourceBrokenGlass" value="1" phase="2" />
-		<objective type="FetchKeep" id="resourceScrapIron" value="1" phase="2" />
-		<objective type="FetchKeep" id="resourceDuctTape" value="1" phase="2" />
-		<objective type="FetchKeep" id="resourceRockSmall" value="1" phase="2" />
-		<objective type="FetchKeep" id="resourceScrapPolymers" value="1" phase="2" /> -->
-		
+				
 		<objective type="Craft">
 			<property name="phase" value="1"/>
-			<property name="item" value="cntVendingMachineITAV"/>
+			<property name="item" value="ShopStoreVendingCashRegisterPlayerITAV"/>
 			<property name="count" value="1"/>
 		</objective>
-		
-		<!-- <objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="2"/> -->
 
 		<reward type="Quest" id="quest_MyFirstProfession">
 			<property name="chainquest" value="false"/>
@@ -157,55 +149,18 @@
 			<property name="use_closest" value="true" />
 		</objective>
 		
-		<reward type="Item" id="casinoCoin" value="1000"/>
+		<reward type="Item" id="casinoCoin" value="2000"/>
 		<reward type="Item" id="bookSmelterITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookMinerITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookHunterITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookCookITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookArmorerITAV" ischosen="true" isfixed="true" value="1"/>
-		<!-- <reward type="Item" id="bookWeaponsmithITAV" ischosen="true" isfixed="true" value="1"/> -->
 		<reward type="Item" id="bookFarmerITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookChemistITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookRoboticsITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookRunnerITAV" ischosen="true" isfixed="true" value="1"/>
-		<!-- <reward type="Quest" id="quest_ProfCont">
-			<property name="chainquest" value="false"/>
-		</reward> -->
 	</quest>
 	
-	<!-- My SECOND Profession - Get offer explaining Trade Skills, talk to trader who rewards Trade Profession books -->
-	<quest id="quest_MySecondProfession">
-		<property name="name_key" value="quest_MySecondProfession_subtitle"/>
-		<property name="subtitle_key" value="quest_MySecondProfession_subtitle"/>
-		<property name="description_key" value="quest_MySecondProfession_description"/>
-		<property name="offer_key" value="quest_MySecondProfession_offer"/>
-		<property name="statement_key" value="quest_MySecondProfession_statement" />
-		<property name="response_key" value="quest_MySecondProfession_response" />
-		<property name="return_to_quest_giver" value="true" />
-		<property name="icon" value="ui_game_symbol_map_trader"/>
-		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="easy"/>
-		<property name="difficulty_tier" value="1"/>
-		<property name="repeatable" value="false" />
-		<property name="shareable" value="false"/>
-		<property name="completiontype" value="TurnIn" />
-		<property name="completion_key" value="quest_MySecondProfession_completion" />
-		<!-- <property name="reward_choices_count" value="12" />  -->
-
-		
-		<objective type="ReturnToNPC">
-			<property name="phase" value="2"/>
-			<property name="nav_object" value="return_to_trader" />
-		</objective>
-
-		<objective type="InteractWithNPC">
-			<property name="phase" value="2"/>
-			<property name="nav_object" value="return_to_trader" />
-			<property name="use_closest" value="true" />
-		</objective>
-		
-		
-	</quest>
 	
 	<!-- My NEXT Profession Quest -->
 	<quest id="quest_MyNextProfession">
@@ -237,7 +192,6 @@
 		<reward type="Item" id="bookHunterITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookCookITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookArmorerITAV" ischosen="true" isfixed="true" value="1"/>
-		<!-- <reward type="Item" id="bookWeaponsmithITAV" ischosen="true" isfixed="true" value="1"/> -->
 		<reward type="Item" id="bookFarmerITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookChemistITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookRoboticsITAV" ischosen="true" isfixed="true" value="1"/>
@@ -246,7 +200,7 @@
 	
 	
 <!-- Follow-up quest to First Profession -->
-	<quest id="quest_ProfCont">
+	<!--<quest id="quest_ProfCont">
 		<property name="group_name_key" value="profession_startup"/>
 		<property name="name" value="Setup your Store"/>
 		<property name="subtitle" value="Setup your Store"/>
@@ -260,18 +214,11 @@
 			<property name="delay" value="15"/>
 		</action>
 			
-		<!-- <objective type="FetchKeep" id="resourceClayLump" value="60" phase="1" />
-		<objective type="FetchKeep" id="resourceScrapIron" value="120" phase="1" /> -->
 		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
-		<!-- <objective type="Craft">
-			<property name="phase" value="1"/>
-			<property name="item" value="playerSignWood1x1"/>
-			<property name="count" value="1"/>
-		</objective>-->
 				
 		<reward type="Exp" value="500"/>
 		
-	</quest>
+	</quest>-->
 	
 <!--          Profession specific Follow-up quests to First Profession             -->	
 
@@ -297,7 +244,7 @@
 		<action type="ShowTip" value="quest_ProfCont_description">
 			<property name="delay" value="15"/>
 		</action>	
-		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>		
+		<objective type="BlockPlace" id="ShopStoreVendingCashRegisterPlayerITAV" value="1" phase="1"/>		
 		<objective type="Craft" id="resourceForgedIron" value="10" phase="2" />		
 		<objective type="InteractWithNPC">
 			<property name="phase" value="3"/>
@@ -333,7 +280,7 @@
 		<action type="ShowTip" value="quest_ProfCont_description">
 			<property name="delay" value="15"/>
 		</action>
-		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>		
+		<objective type="BlockPlace" id="ShopStoreVendingCashRegisterPlayerITAV" value="1" phase="1"/>		
 		<objective type="FetchKeep" id="resourceScrapIron" value="120" phase="2" />
 		<objective type="FetchKeep" id="resourceClayLump" value="60" phase="2" />
 		<objective type="Craft" id="resourceCobblestones" value="40" phase="2" />
@@ -371,7 +318,7 @@
 		<action type="ShowTip" value="quest_ProfCont_description">
 			<property name="delay" value="15"/>
 		</action>			
-		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<objective type="BlockPlace" id="ShopStoreVendingCashRegisterPlayerITAV" value="1" phase="1"/>
 		<objective type="Craft" id="foodBaconAndEggs" value="10" phase="2" />
 		<objective type="Craft" id="drinkJarRedTea" value="10" phase="2" />
 		<objective type="InteractWithNPC">
@@ -408,7 +355,7 @@
 		<action type="ShowTip" value="quest_ProfCont_description">
 			<property name="delay" value="15"/>
 		</action>			
-		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<objective type="BlockPlace" id="ShopStoreVendingCashRegisterPlayerITAV" value="1" phase="1"/>
 		<objective type="FetchKeep" id="foodRawMeat" value="50" phase="2" />
 		<objective type="FetchKeep" id="foodEgg" value="10" phase="2" />
 		<objective type="InteractWithNPC">
@@ -444,7 +391,7 @@
 		<action type="ShowTip" value="quest_ProfCont_description">
 			<property name="delay" value="15"/>
 		</action>			
-		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<objective type="BlockPlace" id="ShopStoreVendingCashRegisterPlayerITAV" value="1" phase="1"/>
 		<objective type="FetchKeep" id="resourceCropChrysanthemumPlant" value="20" phase="2" />
 		<objective type="Craft" id="farmPlotBlockVariantHelper" value="4" phase="2" /> <!--frameShapes:VariantHelper-->
 		<objective type="InteractWithNPC">
@@ -481,7 +428,7 @@
 		<action type="ShowTip" value="quest_ProfCont_description">
 			<property name="delay" value="15"/>
 		</action>			
-		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<objective type="BlockPlace" id="ShopStoreVendingCashRegisterPlayerITAV" value="1" phase="1"/>
 		<objective type="Craft" id="workbench" value="1" phase="2" />
 		<objective type="InteractWithNPC">
 			<property name="phase" value="3"/>
@@ -516,7 +463,7 @@
 		<action type="ShowTip" value="quest_ProfCont_description">
 			<property name="delay" value="15"/>
 		</action>			
-		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<objective type="BlockPlace" id="ShopStoreVendingCashRegisterPlayerITAV" value="1" phase="1"/>
 		<objective type="Craft" id="chemistryStation" value="1" phase="2" />
 		<objective type="InteractWithNPC">
 			<property name="phase" value="3"/>
@@ -551,7 +498,7 @@
 		<action type="ShowTip" value="quest_ProfCont_description">
 			<property name="delay" value="15"/>
 		</action>			
-		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<objective type="BlockPlace" id="ShopStoreVendingCashRegisterPlayerITAV" value="1" phase="1"/>
 		<objective type="Craft" id="workbench" value="1" phase="2" />
 		<objective type="InteractWithNPC">
 			<property name="phase" value="3"/>
@@ -586,7 +533,7 @@
 		<action type="ShowTip" value="quest_ProfCont_description">
 			<property name="delay" value="15"/>
 		</action>			
-		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
+		<objective type="BlockPlace" id="ShopStoreVendingCashRegisterPlayerITAV" value="1" phase="1"/>
 		<objective type="FetchKeep" id="workbench" value="1" phase="2" />
 		<objective type="InteractWithNPC">
 			<property name="phase" value="3"/>

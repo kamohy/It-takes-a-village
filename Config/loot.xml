@@ -104,10 +104,37 @@
 	</lootgroup>
 </insertAfter>
 
+<insertAfter xpath="/lootcontainers/lootgroup[@name='treasureAmmo']">
+	<lootgroup name="poiCandyOnlyITAV">
+		<item name="drugOhShitzDrops" />
+		<item name="drugEyeKandy" />
+		<item name="drugJailBreakers"/>
+		<item name="drugHealthBar"/>
+		<item name="drugCovertCats"/>
+	</lootgroup>
+</insertAfter>
+
+<append xpath="/lootcontainers">
+	<lootgroup name="groupMailbox01ITAV">
+		<item group="perkBooksT0Day1" loot_prob_template="ProbT0"/>
+		<item group="booksAllScaled" loot_prob_template="ProbT1"/>
+		<item group="booksAllScaled" loot_prob_template="ProbT2Cap"/>
+	</lootgroup>
+</append>
+
+<append xpath="/lootcontainers">
+	<lootcontainer id="199" name="postMailbox" count="1" size="6,2" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" loot_quality_template="qualBaseTemplate">
+		<item group="groupMailbox01ITAV"/>
+	</lootcontainer>
+</append>
 
 <append xpath="//lootgroup[@name='groupBirdNest01']"><item name="foodEgg" loot_prob_template="medLow"/></append>
 <remove xpath="//lootgroup[@name='groupMailbox02']/item[@group='booksAllScaled']" />
 <remove xpath="//lootgroup[@name='groupMailbox01']/item[@group='perkBooksT0Day1']" />
+
+<append xpath="//lootgroup[@name='groupMailbox01']">
+	<item name="resourcePaper" loot_prob_template="ProbT0"/>
+</append>
 <append xpath="//lootgroup[@name='groupMailbox02']">
 	<item group="noteDadJokesITAV" loot_prob_template="low"/>	
 </append>
@@ -124,11 +151,23 @@
 	<item name="weaponPartFragmentITAV" count="1,2" />
 </append>
 
+<setattribute xpath="//item[@name='foodCanPears']" name="name">foodCanPeas</setattribute>
+<setattribute xpath="//item[@name='foodCanSoup']" name="name">foodCanStock</setattribute>
+<setattribute xpath="//item[@name='foodCanChicken']" name="name">foodCanBeef</setattribute>
+
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item" />
+<append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']">
+	<item name="foodCanChili" />
+</append>
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']/item" />
+<append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']">
+	<item name="foodCanLamb" />
+	<item name="foodCanPasta"/>
+	<item name="foodCanSalmon"/>
+</append>
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']">
-	<item name="foodCanPeas" />
+	<item name="foodCanDogfood" />
 </append>
 <remove xpath="/lootcontainers/lootgroup[@name='groupCoffeeMaker01']/item[@name='drinkJarCoffee']" />
 <remove xpath="/lootcontainers/lootgroup[@name='groupFoodRare']/item" />
@@ -137,8 +176,8 @@
     <item name="foodCanPeas"/>
     <item name="foodCanSalmon"/>
     <item name="foodCanStock"/>
-	<item name="cntCoffeeMakerCommercialITAV" />
-	<item name="cntSodaFountainITAV" />
+	<item name="cntCoffeeMakerCommercialITAV" loot_prob_template="low" />
+	<item name="cntSodaFountainITAV" loot_prob_template="low" />
 </append>
 
 <remove xpath="//lootgroup[@name='groupConstructionCrate01']/item" />
@@ -192,15 +231,7 @@
 	</lootgroup>
 </insertAfter>
 
-<insertAfter xpath="/lootcontainers/lootgroup[@name='treasureAmmo']">
-	<lootgroup name="poiCandyOnlyITAV">
-		<item name="drugOhShitzDrops" />
-		<item name="drugEyeKandy" />
-		<item name="drugJailBreakers"/>
-		<item name="drugHealthBar"/>
-		<item name="drugCovertCats"/>
-	</lootgroup>
-</insertAfter>
+
 
 <remove xpath="//lootgroup[@name='schematicsWeaponsArmorT1']/item" />
 <append xpath="//lootgroup[@name='schematicsWeaponsArmorT1']">
@@ -229,11 +260,11 @@
     <item name="gunRifleT3SniperRifleSchematic"/>
     <item name="gunShotgunT3AutoShotgunSchematic"/>
     <item name="thrownGrenadeContactSchematic"/>
-	<item name="modRoboticDroneCargoModSchematic" loot_prob_template="med"/>
-	<item name="modRoboticDroneMedicModSchematic" loot_prob_template="med"/>
-	<item name="modRoboticDroneHeadlampModSchematic" loot_prob_template="med"/>
-	<item name="modRoboticDroneArmorPlatingModSchematic" loot_prob_template="med"/>
-	<item name="modRoboticDroneMoraleBoosterModSchematic" loot_prob_template="med"/>
+	<item name="modRoboticDroneCargoModSchematic" loot_prob_template="med" />
+	<item name="modRoboticDroneMedicModSchematic" loot_prob_template="med" />
+	<item name="modRoboticDroneHeadlampModSchematic" loot_prob_template="med" />
+	<item name="modRoboticDroneArmorPlatingModSchematic" loot_prob_template="med" />
+	<item name="modRoboticDroneMoraleBoosterModSchematic" loot_prob_template="med" />
 	<item name="drinkJarGrandpasMoonshine" />
 	<item name="drinkJarGrandpasLearningElixir"/>
 	<item name="drugRecog" />
@@ -251,12 +282,14 @@
 <append xpath="//lootgroup[@name='groupMedicalHighLow']">
 	<item name="drugPainkillers" />
 	<item name="foodHoney" />
+	<item name="foodCanChili" />
 </append>
 <remove xpath="//lootgroup[@name='groupMedicalUncommon']/item[@name='medicalBloodBag']" />
 <append xpath="//lootgroup[@name='groupMedicalRare']">
 	<item name="medicalBloodBag" />
 	<item name="toolBeaker" loot_prob_template="veryLow" />
-	<item name="cntMedicineCabinetClosed"/>
+	<item name="cntMedicineCabinetClosed" loot_prob_template="low" />
+	<item name="foodCanDogfood" />
 </append>
 
 <remove xpath="//lootgroup[@name='groupChem01']/item[@name='drinkJarRiverWater']" />
@@ -264,6 +297,7 @@
 <append xpath="//lootgroup[@name='groupChem01']">
 	<item group="poiCandyOnlyITAV" />
 	<item name="resourceGunPowder" count="3,7" />
+	<item name="foodCanChili" />
 </append>
 
 
@@ -623,16 +657,7 @@
 </append>
 
 
-	
-
-
-
-<!-- **************************** -->
-
 <!-- Removing/Replacing GyroCopter -->
-<!-- <setattribute xpath="//lootgroup[@name='gyroCopterParts']/item[@name='vehicleGyroCopterChassis']" name="name">vehicle4x4TruckChassis</setattribute>
-<setattribute xpath="//lootgroup[@name='gyroCopterParts']/item[@name='vehicleGyroCopterAccessories']" name="name">vehicle4x4TruckAccessories</setattribute>
-<remove xpath="//lootgroup[@name='schematicsVehiclesT2']/item[(@name='vehicleGyroCopterChassisSchematic' or @name='vehicleGyroCopterAccessoriesSchematic')]"/> -->
 <remove xpath="//lootgroup[@name='groupQuestGyrocopterParts']" />
 <remove xpath="//lootcontainer[@name='vehicleGyrocopter']"/>
 

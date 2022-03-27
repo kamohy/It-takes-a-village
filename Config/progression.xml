@@ -170,7 +170,7 @@
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkMinerITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolRepairT1ClawHammer,meleeToolAxeT1IronFireaxe,meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="workbenchMinerT2ITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="workbenchMinerT2ITAV"/>
 			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkMinerITAV"/>
 			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkMinerITAV"/>
 
@@ -330,7 +330,7 @@
 				
 			<effect_description level="1" desc_key="perkMasterChefRank1Desc" long_desc_key="perkMasterChefRank1LongDesc"/>
             <effect_description level="2" desc_key="perkMasterChefRank2Desc" long_desc_key="perkCookITAVRank2LongDesc"/>
-            <effect_description level="3" desc_key="perkMasterChefRank3Desc" long_desc_key="perkMasterChefRank3LongDesc"/>
+            <effect_description level="3" desc_key="perkMasterChefRank3Desc" long_desc_key="perkCookITAVRank3LongDesc"/>
             <effect_description level="4" desc_key="perkMasterChefRank4Desc" long_desc_key="perkCookITAVRank4LongDesc"/>
             <effect_description level="5" desc_key="perkMasterChefRank5Desc" long_desc_key="perkCookITAVRank5LongDesc"/>
         </effect_group>
