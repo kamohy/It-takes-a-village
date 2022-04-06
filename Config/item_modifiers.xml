@@ -178,6 +178,51 @@
 		</item_property_overrides>
 	</item_modifier>
 	
+	<!-- Clothing appearance modifiers -->
+	
+	<item_modifier name="modArmorHazmatBootsITAV" installable_tags="armorFeet" modifier_tags="rare" blocked_tags="noMods,clothing" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="CustomIcon" value="apparelHazmatBoots"/>
+		<property name="EconomicValue" value="440"/>
+		<property name="DisplayType" value="clothing"/>
+		<item_property_overrides name="*">
+			<property name="UMA.Mesh" value="armor_hazmat_feet"/>
+			<property name="UMA.Overlay0" value="armor_hazmat_boots"/>
+			<property name="UMA.Layer" value="0"/>
+		</item_property_overrides>
+
+		<effect_group tiered="false">
+			<passive_effect name="HypothermalResist" operation="base_add" value="2.8,5.2"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="5" tags="lowerbody,feet,radiation,toxic" match_all_tags="true"/>
+		</effect_group>
+	</item_modifier>
+	
+	
+	<item_modifier name="modArmorHazmatMaskITAV" installable_tags="head" modifier_tags="rare" blocked_tags="noMods,clothing" type="attachment">
+		<property name="Extends" value="modGeneralMaster"/>
+		<property name="CustomIcon" value="apparelHazmatMask"/>
+		<property name="EconomicValue" value="440"/>
+		<property name="DisplayType" value="clothing"/>
+		<item_property_overrides name="*">
+			<property name="UMA.Mesh" value="armor_hazmat_head"/>
+			<property name="UMA.Overlay0" value="armor_hazmat_hood"/>
+			<property name="UMA.Layer" value="middle"/>
+			<property name="UMA.Mask1" value="Head" param1="inner"/>
+			<property name="UMA.Mask3" value="Face" param1="inner"/>
+			<property name="UMA.Mask4" value="Face" param1="middle"/>
+			<property name="UMA.Mask5" value="Face" param1="outer"/>
+			<property name="UMA.ShowAltHair" value="true"/>
+		</item_property_overrides>
+		
+		<effect_group tiered="false">
+			<passive_effect name="HypothermalResist" operation="base_add" value="6.5,9.5"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="6" tags="head,radiation" match_all_tags="true"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="15" tags="head,toxic" match_all_tags="true"/>
+		</effect_group>
+	</item_modifier>
+	
 </InsertAfter>
 
 

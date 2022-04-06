@@ -34,11 +34,13 @@ note01ITAV,,,,,"Basic Professions"
 note02ITAV,,,,,"Intermediate Professions"
 note03ITAV,,,,,"Advanced Professions"
 
-noteITAV01Desc,,,,,"Basic professions provide materials for the intermediate and advanced professions. The basic professions are Miner, Hunter and Farmer. \nThe Hunter is well-suited for players who want a combat-oriented gathering experience. \n\nNo matter what profession you choose, you can (and probably should!) specialize in combat as well."
+noteITAV01Desc,,,,,"Basic professions provide materials for the intermediate and advanced professions. The basic professions are Miner, Hunter and Farmer. \n\nNo matter what profession you choose, you can (and probably should!) specialize in combat as well."
 
 noteITAV02Desc,,,,,"Intermediate professions can function on their own, but they prosper when supplied by the basic professions. The intermediate professions are Cook and Smelter, and they supply everyone with their goods. \n\nNo matter what profession you choose, you can (and probably should!) specialize in combat as well."
 
 noteITAV03Desc,,,,,"Advanced professions rely heavily on others to provide materials. The advanced professions are Armorer, Mechanic, Chemist and Robotics Inventor. \n\nNo matter what profession you choose, you can (and probably should!) specialize in combat as well."
+
+starterBundleITAV,items,,,,"Hefty bag"
 
 powerizersITAV,,,,,"Powerizer Boots"
 powerizersITAVDesc,,,,,"Increases speed while jumping by 85%, and reduces stamina cost of jumps by 75%."
@@ -88,6 +90,7 @@ chemistryStationT2ITAV,blocks,,,,"Advanced Chemistry Station"
 campfireT2ITAV,blocks,,,,"Advanced Cooking Stove"
 workbenchRoboticsT2ITAV,blocks,,,,"Advanced Robotic's Table"
 workbenchRunnerT2ITAV,blocks,,,,"Advanced Mechanic's Table"
+campfireDecoITAV,blocks,,,,"Firewood"
 
 
 workstationT2ITAVTip_title,Journal Tip,,,,"Advanced Workstations"
@@ -96,10 +99,16 @@ workstationT2ITAVTip,Journal Tip,,,,"The most advanced recipes require a profess
 modDyeTealITAV,item_modifiers,mod,,,"Dye: Teal"
 modDyePineITAV,item_modifiers,mod,,,"Dye: Pine Green"
 modDyePineITAV,item_modifiers,mod,,,"Dye: Hunter Green"
+modArmorHazmatMaskITAV,item_modifiers,mod,,,""
+modArmorHazmatBootsITAV,item_modifiers,mod,,,""
+
+
+
 meleeWpnSpearT3SteelSpearSchematic,,,,,"Steel Spear Schematic"
 meleeWpnClubT3SteelClubSchematic,,,,,"Steel Club Schematic"
+armorMilitaryStealthBootsSchematic,items,,,,"Military Stealth Boots Schematic"
 
-
+resourceClayLumpBundle,items,,,,"Stack of Clay (6000)"
 forestFlowerITAV,blocks,,,,"Decorative Forest Flower"
 plantedGoldenrod3FlowerITAV,blocks,,,,"Decorative Goldenrod plant"
 plantedChrysanthemum3FlowerITAV,blocks,,,,"Decorative Chrysanthemum plant"
@@ -109,6 +118,7 @@ plantedYucca3FlowerITAV,blocks,,,,"Decorative Yucca plant"
 plantedBlueberry3FlowerITAV,blocks,,,,"Decorative Blueberry plant"
 plantedPotato3FlowerITAV,blocks,,,,"Decorative Potato plant"
 plantedSnowberry3FlowerITAV,blocks,,,,"Decorative Snowberry plant"
+plantedPumpkin2FlowerITAV,blocks,,,,"Decorative Pumpkin flower"
 plantedPumpkin3FlowerITAV,blocks,,,,"Decorative Pumpkin plant"
 plantedCorn2FlowerITAV,blocks,,,,"Decorative Corn plant"
 birdBathPlanterITAV,blocks,,,,"Decorative Planter"
@@ -143,8 +153,8 @@ cntFoodPileSmallITAV,blocks,,,,"Food Pile, Small"
 cntFoodPileMediumITAV,blocks,,,,"Food Pile, Medium"
 cntFoodPileLargeITAV,blocks,,,,"Food Pile, Large"
 
-signBread01,ITAVSchematic,items,,,,"Sign: Bread 01 Schematic"
-signBread02,ITAVSchematic,items,,,,"Sign: Bread 02 Schematic"
+signBread01ITAVSchematic,items,,,,"Sign: Bread 01 Schematic"
+signBread02ITAVSchematic,items,,,,"Sign: Bread 02 Schematic"
 barStoolVariantHelperITAVSchematic,items,,,,"Bar Stool Schematic"
 decoReptileTerrariumITAVSchematic,items,,,,"Reptile Terrarium Schematic"
 cntShoppingCartEmptyITAVSchematic,items,,,,"Empty Shopping Cart Schematic"
@@ -228,7 +238,7 @@ perkElectrocutionerRank3LongDesc,progression,perk Int,,,"You are getting dangero
 perkElectrocutionerRank4LongDesc,progression,perk Int,,,"You are lethal with stun batons. Deal 40% more damage, and stun victims 80% longer. Craft quality 5 pipe batons. \nAsk an Armorer to craft stun batons for you."
 perkParkourRank4LongDesc,progression,perk Agi,,,"You are now a parkour master and can navigate difficult situations easily. Reduce stamina cost of jumping by 40%. Increase safe fall distance by 5 meters, can jump 2 meters higher, and never get a sprained or broken leg when falling. Ask a Mechanic to craft a pair of Powerizer boots to take your parkouring to the next level!"
 
-
+plantedCropsGroupDesc,blocks,Farming,,,"Plant these seeds on a craftable Farm Plot block to grow plants for you to harvest.\n\nWhen harvested, there is a 65% chance to get a seed back for replanting."
 
 perkBatterUpBaseballBatsDesc,,,,,"Craft the Baseball Cap Helmet Mod."
 perkBatterUpBaseballBatsLongDesc,,,,,"Shield your eyes from the sun no matter what helmet you are wearing. Learn to craft the Baseball Cap Helmet Mod."
@@ -283,7 +293,7 @@ perkSmelterITAVRank2LongDesc,progression,perk Pro,,,"Your tinkering is proving u
 perkSmelterITAVRank3Desc,progression,perk,,,Electrician
 perkSmelterITAVRank3LongDesc,progression,perk Pro,,,"You are now an electrician. Unlocks crafting of Military Fibers, generator banks, electrical relays, switches, pressure plates, motion sensors and various lights. All forge recipes cost 10% less. Crafting electrical devices cost 15% less."
 perkSmelterITAVRank4Desc,progression,perk Pro,,,Artisan
-perkSmelterITAVRank4LongDesc,progression,perk Pro,,,"Unlocks crafting of battery bank, nailgun and various powered doors. All forge recipes cost 15% less and electrical devices cost 25% less."
+perkSmelterITAVRank4LongDesc,progression,perk Pro,,,"Unlocks crafting of the crucible, forged steel, battery bank, nailgun and various powered doors. All forge recipes cost 15% less and electrical devices cost 25% less."
 perkSmelterITAVRank5Desc,progression,perk Pro,,,Master
 perkSmelterITAVRank5LongDesc,progression,perk Pro,,,"Unlocks crafting of the crucible and forged steel. All forge recipes cost 20% less, and electrical devices cost 35% less."
 
@@ -396,9 +406,9 @@ readyForNextProfessionTooltip,progression,,,,"Crafting: Profession Book availabl
 tutorialTipITAV_title,Journal Tip,,,,"It Takes A Village"
 tutorialTipITAV,Journal Tip,,,,"You look rough,\n\nIf you can find the other survivors, you can combine your different strengths to better survive in the wasteland. Press Tab to open the crafting menu and your backpack. \n\nIt Takes A Village!"
 weaponPartsAssemblyTipITAV_title, Journal Tip,,,,"Weapon Part Fragments"
-weaponPartsAssemblyTipITAV,Journal Tip,,,,"The Armorer can assemble weapon parts out of fragments."
+weaponPartsAssemblyTipITAV,Journal Tip,,,,"The Armorer can assemble weapon parts out of Fragments, or craft 25 Fragments out of a single weapon part."
 weaponPartFragmentITAV,items,,,,"Weapon Part Fragment"
-weaponPartFragmentITAVGroupDesc,items,,,,"The Armorer can assemble any kind of weapon part out of Weapon Part Fragments."
+weaponPartFragmentITAVGroupDesc,items,,,,"The Armorer can assemble any kind of weapon part out of Weapon Part Fragments, or craft 25 Fragments out of a single weapon part."
 
 resourceRepairKitDesc,items,Item,,,"Repair Kits are used to repair all tools and worn items, vehicles, turrets, drones and more."
 
@@ -413,13 +423,12 @@ MyFirstProfessionTip_title,Journal Tip,,,,Learning Professions
 MyFirstProfessionTip,Journal Tip,,,,"Complete the Profession quest and chose a reward from the trader. Once you have maxed out a Profession, you can craft a 'Profession book', which allows you to pick an additional Profession.  n\Keep maxing out your Professions to become able to learn new ones!"
 
 quest_myFirstProfession_description_title,Journal Tip,,,,Learning Your First Profession
-quest_myFirstProfession_description,Quest,Quest Info,,,"Time to chose your Profession!\n\nProfessions are incredibly strong: Few things drop in loot, and only the Smelter can make Forged Iron, only the Cook can make food worth a damn. No one can make good weapons or armor except the Armorer. Choose carefully; only after perfecting your first Profession will you be able to learn a second." 
+quest_myFirstProfession_description,Quest,Quest Info,,,"Time to chose your Profession!\n\nProfessions are incredibly strong: Few things drop in loot, and only the Smelter can make Forged Iron, only the Cook can make food worth a damn. No one can make good weapons or armor except the Armorer. \n\nThe trader will get you started with a free book, go see them." 
 quest_mySecondProfession_description_title,Journal Tip,,,,My Second Profession
 quest_mySecondProfession_description,Quest,Quest Info,,,"Time to chose your second path!\n\nYou will now be able to pick ONE (1) Profession. Only after perfecting this Profession will you be able to learn your third. \n\n...If you live that long."
 
 quest_MyFirstProfession_offer,Quest,Quest Info,,,"Picking a Trade \n\nYou only get you first Profession once, so choose carefully. \nOnly after perfecting this first Profession will you be able to learn your second. Talk to a trader to access 'My second Profession!'. \nCoordinate with other survivors to find out what is needed in the community. \n\n...If you live that long."
 quest_MyFirstProfession_subtitle,Quests,Quests,,,My First Profession
-quest_MyFirstProfession_description,Quests,Quests,,,"Time to chose your Profession!\n\nProfessions are incredibly strong: Few things drop in loot, and only the Smelter can make Forged Iron, only the Cook can make food worth a damn. Choose carefully; only after perfecting your first Profession will you be able to learn a second. The trader has the books, go see them."
 quest_MyFirstProfession_title,Quests,Quests,,,Pick a Profession
 quest_MyFirstProfession_response,Quests,Quests,,,Trade Profession Quest Response
 quest_MyFirstProfession_statement,Quests,Quests,,,Pick a Profession
@@ -433,7 +442,7 @@ quest_MySecondProfession_response,Quests,Quests,,,Trade Profession Quest Respons
 quest_MySecondProfession_statement,Quests,Quests,,,Pick a Profession
 quest_MySecondProfession_completion,Quests,Quests,,,"Choose what Profession fits you and your community best.\n\nOnce you have read the Profession book, there is no going back.\n\nChoose carefully."
 
-quest_MyNextProfession_offer,Quest,Quest Info,,,"Choose your next Profession carefully. \n\n Note that reading the next book does not give you a point in the chosen Profession, it only unlocks it. \n\n\nAfter perfecting this Profession, you will be able to learn yet another."
+quest_MyNextProfession_offer,Quest,Quest Info,,,"Choose your next Profession carefully. \n\nNote that reading the next book does not give you a point in the chosen Profession, it only unlocks it. \n\n\nAfter perfecting this Profession, you will be able to learn yet another."
 quest_MyNextProfession_subtitle,Quests,Quests,,,Profession Book
 quest_MyNextProfession_description,Quests,Quests,,,"Talking to the Trader will allow me to chose one more Profession."
 quest_MyNextProfession_title,Quests,Quests,,,Pick a Profession
@@ -442,7 +451,7 @@ quest_MyNextProfession_statement,Quests,Quests,,,Pick a Profession
 quest_MyNextProfession_completion,Quests,Quests,,,"Choose what Profession fits you and your community best.\n\nOnce you have read the Profession book, there is no going back. \n\nChoose carefully."
 
 quest_ProfCont_description_title,,,,,"Store Setup"
-quest_ProfCont_description,,,,,"It's time to find or build a safe spot for your store, and put some goods up for sale to let other survivors buy from you. \nYou might want to lock the door around your crafting area, so no one walks in and 'borrows' your hard earned stuff... \n\nPress 'O' to see Quests, 'N' for skills. "
+quest_ProfCont_description,,,,,"It's time to find a safe spot and set up your store, and put some goods up for sale to let other survivors buy from you. \nYou might want to lock the door around your crafting area, so no one walks in and 'borrows' your hard earned stuff... \n\nPress 'O' to see Quests, 'N' for skills. "
 
 quest_ProfCont_name,Quests,Quests,,,Setup your Store
 quest_ProfCont_subtitle,Quests,Quests,,,Setup your Store
@@ -461,9 +470,6 @@ qb_MyFourthProfessionITAV,Items,,,,"Profession Book 4"
 qb_MyFourthProfessionITAV_desc,Items,,,,"Reading this book allows you to learn your fourth Profession! Choose your desired Profession from the quest rewards. Four Professions is the max amount your brain can handle."
 qb_MyNextProfessionITAV,Items,,,,"My Next Profession"
 qb_MyNextProfessionITAV_desc,Items,,,,"Reading this book allows you to learn your an additional Profession! Choose your desired Profession from the quest rewards. Max out the profession to open the ability of learning yet another one."
-
-
-quest_WhiteRiverCitizen1_description,Quest,Quest Info,,,"Good Job Survivor,\n\nYou have proved to be capable with much potential. We have marked your map with the nearest White River Outpost location. There you will find a Trader where you can buy and sell goods, and trade stories with one of our friendly citizens.\n\nWelcome Aboard, Noah"
 
 
 noteDadJoke01ITAV,,,,,"Don't read it"

@@ -7,9 +7,11 @@
 <!-- Putting books in newspaper mailboxes -->
 <setattribute xpath="//block[@name='cntPostMailbox']/property[@name='LootList']" name="value">postMailbox</setattribute>
 
-<append xpath="//block[(contains(@name, 'Sedan') and contains(@name, 'Master'))]">
+<append xpath="//block[contains(@name, 'Sedan') and contains(@name, 'Master') and not(contains(@name, 'SedanDamage1'))]">
     <drop event="Harvest" name="resourceCarFrameITAV" count="1" prob="0.25" tag="salvageHarvest"/>
 </append>
+
+<setattribute xpath="//block[contains(@name, 'chimney')]/property[@name='CreativeMode']" name="value">Dev</setattribute>
 
 <!-- Attempting to reduce oreWoodHarvest harvest when player is not Miner. Must be countered by increasing the perc_add to oreWoodHarvest for Miner in progression.xml! -->
 <setattribute xpath="//block[@name='rockResource']/drop[@event='Harvest' and @name='resourceRockSmall']" name="count">7</setattribute> <!-- 22 -->
@@ -401,12 +403,73 @@
 	
 	<!-- ********************************************* -->
 	
+	<!-- <block name="modularFireWoodStackCITAV">
+		<property name="Extends" value="modularFireWoodStackA"/>
+		<property name="Class" value="Campfire"/>
+		<property name="CustomIcon" value="modularFireWoodStackC" />
+		<property name="MaxDamage" value="50"/>
+		<drop event="Harvest" name="modularFireWoodStackAITAV" count="1" />
+		<property name="Model" value="Entities/OutdoorDecor/modularFireWoodStackCPrefab"/>
+		<property name="ImposterExchange" value="imposterPyramid" param1="32"/>
+		<property name="StabilitySupport" value="false"/> 
+		<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
+		<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="ParticleName" value="campfire"/>
+		<property name="ParticleOffset" value="0.5,0,0.5"/>
+	</block> -->
+	
+	<block name="campfireDecoITAV">
+		<property name="Class" value="Campfire"/>
+		<property name="Material" value="Mwood"/>
+		<property name="CustomIcon" value="modularFireWoodStackC" />
+		<property name="MaxDamage" value="100"/>
+		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/OutdoorDecor/modularFireWoodStackCPrefab"/>
+		<property name="ImposterDontBlock" value="true"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="IsTerrainDecoration" value="true"/>
+		<property name="ParticleName" value="campfire"/>
+		<property name="ParticleOffset" value="0.5,0.1,0.5"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="HeatMapStrength" value="1"/>
+		<property name="HeatMapTime" value="5000"/>
+		<property name="HeatMapFrequency" value="1000"/>
+		<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
+		<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+		<property class="Workstation">
+			<property name="Modules" value="tools,output,fuel,input"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+		</property>
+		<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
+		<property name="CraftActionName" value="lblContextActionCook"/>
+		<property name="CraftIcon" value="ui_game_symbol_spatula"/>
+		<property name="OpenSound" value="campfire_open"/>
+		<property name="CloseSound" value="campfire_close"/>
+		<property name="CraftSound" value="campfire_cook_click"/>
+		<property name="CraftCompleteSound" value="campfire_complete_item"/>
+		<property class="RepairItems">
+			<property name="resourceWood" value="5"/>
+		</property>
+		<drop event="Destroy" name="resourceWood" count="3"/>
+		<property name="Group" value="Decor/Miscellaneous"/>
+		<property name="DescriptionKey" value="campfireDesc"/>
+		<property name="EconomicValue" value="8"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="SellableToTrader" value="true"/>
+		<property name="FilterTags" value="MC_playerBlocks,SC_decor,SC_lighting"/>
+		<property name="SortOrder1" value="70i0"/>
+	</block>
+	
 	<block name="forestFlowerITAV">
 		<property name="Extends" value="treeGrassMaster"/>
 		<property name="CustomIcon" value="forestFlower" />
 		<property name="Material" value="Mplants" />
 		<property name="Texture" value="567"/>
 		<property name="EconomicValue" value="4"/>
+		<drop event="Harvest" name="forestFlowerITAV" count="1" />
+		<property name="ItemTypeIcon" value="star"/>
 	</block>
 	
 	<block name="plantedGoldenrod3FlowerITAV">
@@ -415,8 +478,9 @@
 		<property name="CustomIcon" value="plantedGoldenrod3HarvestPlayer"/>
 		<property name="Material" value="Mplants" />
 		<property name="Texture" value="362"/>
-		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<drop event="Harvest" name="plantedGoldenrod3FlowerITAV" count="1" />
 		<property name="EconomicValue" value="9"/>
+		<property name="ItemTypeIcon" value="star"/>
 	</block>
 	
 	<block name="plantedChrysanthemum3FlowerITAV">
@@ -425,8 +489,9 @@
 		<property name="CustomIcon" value="plantedChrysanthemum1"/>
 		<property name="Material" value="Mplants" />
 		<property name="Texture" value="244"/>
-		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<drop event="Harvest" name="plantedChrysanthemum3FlowerITAV" count="1" />
 		<property name="EconomicValue" value="10"/>
+		<property name="ItemTypeIcon" value="star"/>
 	</block>
 	
 	<block name="plantedCoffee3FlowerITAV">
@@ -435,19 +500,21 @@
 		<property name="CustomIcon" value="plantedCoffee1"/>
 		<property name="Material" value="Mplants" />
 		<property name="Texture" value="395"/>
-		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<drop event="Harvest" name="plantedCoffee3FlowerITAV" count="1" />
 		<property name="EconomicValue" value="11"/>
+		<property name="ItemTypeIcon" value="star"/>
 	</block>
 	
 	<block name="plantedAloe3FlowerITAV">
-		<property name="Extends" value="cropsHarvestableMaster"/> 
+		<property name="Extends" value="treeGrassMaster"/> 
 		<property name="DisplayInfo" value="Name"/>
 		<property name="CustomIcon" value="plantedAloe1"/>
 		<property name="Material" value="Mplants" />
 		<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Plants/plant_aloe_harvestPrefab"/>
-		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<property name="Model" value="Entities/Plants/plant_aloe_harvestPrefab"/>
+		<drop event="Harvest" name="plantedAloe3FlowerITAV" count="1" />
 		<property name="EconomicValue" value="11"/>
+		<property name="ItemTypeIcon" value="star"/>
 	</block>
 	
 	<block name="plantedYucca3FlowerITAV">
@@ -457,30 +524,33 @@
 		<property name="Material" value="Mplants" />
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/plant_yucca_harvestPrefab"/>
-		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<drop event="Harvest" name="plantedYucca3FlowerITAV" count="1" />
 		<property name="EconomicValue" value="11"/>
+		<property name="ItemTypeIcon" value="star"/>
 	</block>
 	
 	<block name="plantedBlueberry3FlowerITAV">
-		<property name="Extends" value="cropsHarvestableMaster"/> 
+		<property name="Extends" value="treeGrassMaster"/> 
 		<property name="DisplayInfo" value="Name"/>
 		<property name="CustomIcon" value="plantedBlueberry1"/>
 		<property name="Material" value="Mplants" />
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/blueberry_plant_harvestPrefab"/>
-		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<drop event="Harvest" name="plantedBlueberry3FlowerITAV" count="1" />
 		<property name="EconomicValue" value="12"/>
+		<property name="ItemTypeIcon" value="star"/>
 	</block>
 	
 	<block name="plantedPotato3FlowerITAV">
-		<property name="Extends" value="cropsHarvestableMaster"/> 
+		<property name="Extends" value="treeGrassMaster"/> 
 		<property name="DisplayInfo" value="Name"/>
 		<property name="CustomIcon" value="plantedPotato1"/>
 		<property name="Material" value="Mplants" />
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/potato_plant_harvestPrefab"/>
-		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<drop event="Harvest" name="plantedPotato3FlowerITAV" count="1" />
 		<property name="EconomicValue" value="12"/>
+		<property name="ItemTypeIcon" value="star"/>
 	</block>
 	
 	<block name="plantedSnowberry3FlowerITAV">
@@ -489,29 +559,45 @@
 		<property name="CustomIcon" value="plantedSnowberry1"/>
 		<property name="Material" value="Mplants" />
 		<property name="Texture" value="568" />
-		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<drop event="Harvest" name="plantedSnowberry3FlowerITAV" count="1" />
 		<property name="EconomicValue" value="12"/>
+		<property name="ItemTypeIcon" value="star"/>
 	</block>
 	
 	<block name="plantedPumpkin3FlowerITAV">
-		<property name="Extends" value="cropsHarvestableMaster"/> 
+		<property name="Extends" value="treeGrassMaster"/> 
 		<property name="DisplayInfo" value="Name"/>
 		<property name="CustomIcon" value="plantedPumpkin1"/>
 		<property name="Material" value="Mplants" />
 		<property name="Shape" value="ModelEntity"/>
 		<property name="Model" value="Entities/Plants/pumpkinHarvestPrefab"/>
-		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<drop event="Harvest" name="plantedPumpkin3FlowerITAV" count="1" />
 		<property name="EconomicValue" value="12"/>
+		<property name="ItemTypeIcon" value="star"/>
 	</block>
+	
+	<block name="plantedPumpkin2FlowerITAV">
+		<property name="Extends" value="treeGrassMaster"/>
+		<property name="DisplayInfo" value="Name"/>
+		<property name="CustomIcon" value="plantedPumpkin1"/>
+		<property name="Material" value="Mplants" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="Shape" value="ModelEntity"/>
+		<property name="Model" value="Entities/Plants/pumpkinGrowthPrefab"/>
+		<drop event="Harvest" name="plantedPumpkin2FlowerITAV" count="1" />
+		<property name="EconomicValue" value="12"/>
+		<property name="ItemTypeIcon" value="star"/>
+</block>
 	
 	<block name="plantedCorn2FlowerITAV">
 		<property name="Extends" value="plantedCorn3Harvest"/> 
 		<property name="DisplayInfo" value="Name"/>
 		<property name="CustomIcon" value="plantedCorn2"/>
 		<property name="Material" value="Mplants" />
-		<drop event="Harvest" name="resourceYuccaFibers" count="1" />
+		<drop event="Harvest" name="plantedCorn2FlowerITAV" count="1" />
 		<property name="Model" value="corn_growth_shape"/>
 		<property name="EconomicValue" value="11"/>
+		<property name="ItemTypeIcon" value="star"/>
 	</block>	
 	
 	<block name="birdBathPlanterITAV">
@@ -534,6 +620,7 @@
 		<property name="FilterTags" value="MC_building,SC_decor"/>
 		<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
 		<property name="EconomicValue" value="38"/>
+		<property name="ItemTypeIcon" value="star"/>
 	</block>	
 	
 	
@@ -599,7 +686,7 @@
 		<property name="Group" value="Tools/Traps,Food/Cooking"/>
 		<property name="EconomicValue" value="180"/>
 		<property name="FilterTags" value="MC_building,SC_decor,SC_residential"/>
-
+		<property name="ItemTypeIcon" value="star"/>
 	</block>
 	
 	<block name="cntFoodPileSmallITAV">
@@ -888,8 +975,11 @@
 </block>
 
 
+
+
 <block name="window03WoodITAV">
 	<property name="DescriptionKey" value="woodFrameGroupDesc"/>
+	<property name="CustomIcon" value="window03Wood"/>
 	<property name="Material" value="Mglass"/>
 	<property name="LightOpacity" value="1"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -900,14 +990,6 @@
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="Weight" value="0"/>
 	<property name="FuelValue" value="200"/>
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="plainWoodWindowPlugCTRPlate"/>
-		<property name="Item" value="resourceWood"/>
-		<property name="ItemCount" value="4"/>
-		<property name="UpgradeHitCount" value="4"/>
-	</property>
-	<property name="CustomUpgradeSound" value="place_block_wood"/>
-	<property name="DowngradeBlock" value="window03WoodBroke1"/>
 	<drop event="Destroy" name="resourceBrokenGlass" count="1,3"/>
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="EconomicValue" value="42"/>
@@ -959,7 +1041,6 @@
 	<property class="RepairItems">
 		<property name="glassBulletproofBlockVariantHelper" value="1"/>
 	</property>
-	<property name="DowngradeBlock" value="window03WoodBroke1"/>
 	<drop event="Destroy" name="resourceBrokenGlass" count="1,3"/>
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="EconomicValue" value="404"/>

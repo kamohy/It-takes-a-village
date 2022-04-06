@@ -1,7 +1,7 @@
 <configs>
 
 <append xpath="/buffs">
-<buff name="ITAV_start" hidden="false" icon="ui_game_symbol_add" remove_on_death="false">
+<buff name="ITAV_start" hidden="true" icon="ui_game_symbol_add" remove_on_death="false">
 
 </buff>
 

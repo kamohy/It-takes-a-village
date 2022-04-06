@@ -1,19 +1,27 @@
 <configs>
 	
+	<setattribute xpath="//recipe[starts-with(@name, 'resource') and contains(@name, 'Bundle') and not(contains(@name, 'GunPowder'))]" name="craft_area">workbench</setattribute>
 	<append xpath="/recipes">
+	
+		<recipe name="resourceClayLumpBundle" count="1" craft_time="10" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceClayLump" count="6000"/>
+		</recipe>
 		
 		<!-- Player Owned Store  -->
 		<recipe name="ShopStoreVendingCashRegisterPlayerITAV" count="1" craft_time="3">
-			<ingredient name="resourceBrokenGlass" count="5" />
+			<ingredient name="resourceBrokenGlass" count="1" />
 			<ingredient name="resourceDuctTape" count="1" />
-			<ingredient name="resourceRockSmall" count="2" />
-			<ingredient name="resourceScrapPolymers" count="2" />
+			<ingredient name="resourceRockSmall" count="1" />
+			<ingredient name="resourceScrapPolymers" count="1" />
 			<ingredient name="drinkCanEmpty" count="1" />
 		</recipe>
 		
 		<!-- Standard work tables tweaking -->
 		<setattribute xpath="/recipes/recipe[@name='chemistryStation']/ingredient[@name='resourceForgedIron']" name="count">50</setattribute>
 		<setattribute xpath="/recipes/recipe[@name='chemistryStation']/ingredient[@name='resourceAcid']" name="count">2</setattribute>
+		<remove xpath="//recipe[@name='workbench']/ingredient[@name='meleeToolSalvageT1Wrench']" />		
+		<setattribute xpath="//recipe[@name='workbench']/ingredient[@name='resourceWood']" name="count">100</setattribute>
+		
 		
 		<!-- Advanced work tables -->		
 		<recipe name="workbenchMinerT2ITAV" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
@@ -59,7 +67,7 @@
 		
 		<!-- Craftable "My X profession books" -->
 		
-		<recipe name="qb_MyFirstProfessionITAV" count="1" craft_time="10"> 
+		<!--<recipe name="qb_MyFirstProfessionITAV" count="1" craft_time="10"> 
 			<ingredient name="resourceCloth" count="20" />
 			<ingredient name="resourcePaper" count="10" />
 			<ingredient name="resourceScrapPolymers" count="10" />
@@ -85,8 +93,9 @@
 			<ingredient name="resourcePaper" count="1000" />
 			<ingredient name="resourceFeather" count="1000" />
 			<ingredient name="resourceRawDiamond" count="1" />
-		</recipe>
+		</recipe> -->
 		
+				
 		<!-- Pretty things  -->
 
 		<recipe name="window03WoodITAV" count="1" craft_time="4"> 
@@ -102,6 +111,15 @@
 		<recipe name="window03WoodBulletproofCenterITAV" count="1" craft_time="4"> 
 			<ingredient name="resourceWood" count="4"/>
 			<ingredient name="glassBulletproofBlockVariantHelper" count="1"/>
+		</recipe>		
+		
+		<recipe name="campfireDecoITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceWood" count="8" />
+		</recipe>	
+		
+		<recipe name="treeJuniper4m" count="1" craft_time="10">
+			<ingredient name="resourceClayLump" count="10" />
+			<ingredient name="treePlantedMountainPine1m" count="10" />
 		</recipe>
 		
 		<recipe name="treeAzalea" count="1" craft_time="10"> 
@@ -154,6 +172,12 @@
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="resourceYuccaFibers" count="4" />
 		</recipe>
+				
+		<recipe name="plantedPumpkin2FlowerITAV" count="1" craft_time="10"> 
+			<ingredient name="resourceClayLump" count="4" />
+			<ingredient name="foodCropPumpkin" count="1" />
+			<ingredient name="resourceCropGoldenrodPlant" count="1" />
+		</recipe>
 		
 		<recipe name="plantedPumpkin3FlowerITAV" count="1" craft_time="10"> 
 			<ingredient name="resourceClayLump" count="4" />
@@ -181,7 +205,8 @@
 			<ingredient name="resourceCropGoldenrodPlant" count="8" />
 		</recipe>
 				
-		<!-- Kitchen and more stuff  -->	
+		<!-- Kitchen and more stuff  -->
+	
 		<recipe name="cntFoodPileSmallITAV" count="1" craft_time="10" tags="learnable,perkCookITAV">
 			<ingredient name="drinkCanEmpty" count="5" />
 			<ingredient name="foodCanCatfood" count="3" />
@@ -629,15 +654,14 @@
 			<ingredient name="resourceDuctTape" count="10"/>
 		</recipe>
 		
-		<!-- Baseball cap mod -->
+		<!-- Misc -->
 		<recipe name="modArmorBallCap" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 			<ingredient name="resourceCloth" count="10"/>
 			<ingredient name="resourceScrapPolymers" count="2"/>
 			<ingredient name="resourceDuctTape" count="2"/>
 			<ingredient name="resourceSewingKit" count="1"/>
 		</recipe>	
-	
-		<!-- Crushed car wall -->
+		
 		<recipe name="crushedCars" count="1" tag="learnable,perkRunnerITAV">
 			<ingredient name="resourceCarFrameITAV" count="2"/>
 		</recipe>
@@ -723,7 +747,6 @@
 	<setattribute xpath="recipes/recipe[@name='armorMilitaryStealthBoots']/ingredient[@name='armorMilitarySetParts']" name="count">6</setattribute>
 	<setattribute xpath="//recipe[(@name='resourcePaper') and (@craft_area='chemistryStation')]" name="count">20</setattribute>
 	
-
 	
 	<!-- Removing GyroCopter -->
 	<remove xpath="//recipe[contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter')]" />
@@ -780,7 +803,7 @@
 
     <setattribute xpath="//recipe[@name='ammoGasCanBundle' or @name='vehicleMotorcycleChassis' or @name='vehicleMotorcycleHandlebars' or @name='vehicle4x4TruckChassis' or @name='vehicle4x4TruckAccessories' or @name='vehicle4x4TruckPlaceable' or @name='vehicleMotorcyclePlaceable']" name="craft_area">workbenchRunnerT2ITAV</setattribute>
 
-	<!-- Weapon repair kits -->
+	<!-- Weapon parts made from weaponPartFragmentITAV-->
 	<append xpath="//recipes">
 		<recipe name="gunMGT1AK47Parts" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
 			<ingredient name="weaponPartFragmentITAV" count="100"/>
@@ -818,7 +841,10 @@
 		<recipe name="meleeWpnSledgeT3SteelSledgehammerParts" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
 			<ingredient name="weaponPartFragmentITAV" count="100"/>
 		</recipe>
+	</append>	
 		
+	<!-- Weapon repair kits made from weapon parts-->
+	<append xpath="//recipes">	
 		<recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
             <ingredient name="gunMGT1AK47Parts" count="25"/>
             <ingredient name="resourceDuctTape" count="1"/>
@@ -877,10 +903,63 @@
 		<recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
             <ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="1"/>
             <ingredient name="resourceDuctTape" count="1"/>
-        </recipe>
-
+        </recipe>		
+	</append>
+	
+	<!-- weaponPartFragmentITAV made from weapon parts-->	 
+	<append xpath="//recipes">
+		<recipe name="weaponPartFragmentITAV" count="25" tags="learnable,perkArmorerITAV" craft_time="10">
+			<ingredient name="gunMGT1AK47Parts" count="1"/>
+		</recipe>
+		
+		<recipe name="weaponPartFragmentITAV" count="25" tags="learnable,perkArmorerITAV" craft_time="10">
+			<ingredient name="gunHandgunT1PistolParts" count="1"/>
+		</recipe>
+		
+		<recipe name="weaponPartFragmentITAV" count="25" tags="learnable,perkArmorerITAV" craft_time="10">
+			<ingredient name="gunRifleT1HuntingRifleParts" count="1"/>
+		</recipe>
+		
+		<recipe name="weaponPartFragmentITAV" count="25" tags="learnable,perkArmorerITAV" craft_time="10">
+			<ingredient name="gunShotgunT1DoubleBarrelParts" count="1"/>
+		</recipe>
+		
+		<recipe name="weaponPartFragmentITAV" count="25" tags="learnable,perkArmorerITAV" craft_time="10">
+			<ingredient name="gunBowT1WoodenBowParts" count="1"/>
+		</recipe>
+		
+		<recipe name="weaponPartFragmentITAV" count="25" tags="learnable,perkArmorerITAV" craft_time="10">
+			<ingredient name="gunExplosivesT3RocketLauncherParts" count="1"/>
+		</recipe>
+		
+		<recipe name="weaponPartFragmentITAV" count="25" tags="learnable,perkArmorerITAV" craft_time="10">
+			<ingredient name="meleeWpnBatonT2StunBatonParts" count="1"/>
+		</recipe>
+		
+		<recipe name="weaponPartFragmentITAV" count="25" tags="learnable,perkArmorerITAV" craft_time="10">
+			<ingredient name="meleeWpnKnucklesT3SteelKnucklesParts" count="1"/>
+		</recipe>
+		
+		<recipe name="weaponPartFragmentITAV" count="25" tags="learnable,perkArmorerITAV" craft_time="10">
+			<ingredient name="meleeWpnBladeT3MacheteParts" count="1"/>
+		</recipe>
+		
+		<recipe name="weaponPartFragmentITAV" count="25" tags="learnable,perkArmorerITAV" craft_time="10">
+			<ingredient name="meleeWpnSpearT3SteelSpearParts" count="1"/>
+		</recipe>
+		
+		<recipe name="weaponPartFragmentITAV" count="25" tags="learnable,perkArmorerITAV" craft_time="10">
+			<ingredient name="meleeWpnClubT3SteelClubParts" count="1"/>
+		</recipe>
+		
+		<recipe name="weaponPartFragmentITAV" count="25" tags="learnable,perkArmorerITAV" craft_time="10">
+			<ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="1"/>
+		</recipe>
+	</append>
+	
 	
 	<!-- Elixirs need to be crafted as trader doesn't sell them -->
+	<append xpath="//recipes">
 		<recipe name="drinkJarGrandpasForgettingElixir" count="1" craft_area="chemistryStationT2ITAV" tags="perkChemistITAV,learnable">
 			<ingredient name="drugFortBites" count="10"/>
 			<ingredient name="toolBeaker" count="1"/>
@@ -888,9 +967,6 @@
 			<ingredient name="resourceRawDiamond" count="1"/>
 			<ingredient name="foodCropGraceCorn" count="1"/>
 		</recipe>
-		
-		
 	</append>
-	
 	
 </configs>

@@ -6,7 +6,7 @@
 
 
 <!-- Starting note with info on professions -->
-<append xpath="/items">
+<!--<append xpath="/items">
 	<item name="note01ITAV">
 		<property name="Extends" value="blankNoteMaster"/>
 		<property name="CreativeMode" value="None"/>
@@ -34,7 +34,7 @@
 		<property name="CustomIcon" value="resourcePaper"/>
 		<property name="CustomIconTint" value="E46730" />
 	</item>
-</append>
+</append> -->
 
 <!-- Removing GyroCopter -->
 <remove xpath="//item[@name='questRewardGyrocopterPartsBundle']" />
@@ -56,6 +56,9 @@
 <setattribute xpath="//item[(starts-with(@name, 'drink') or starts-with(@name, 'food'))]/property[@name='Stacknumber']" name="value">500</setattribute>
 <setattribute xpath="//item[starts-with(@name, 'drug')]/property[@name='Stacknumber']" name="value">500</setattribute>
 <setattribute xpath="//item[starts-with(@name, 'ammo') and not(starts-with(@name, 'ammoBundle')) and not(starts-with(@name, 'ammoGasCan'))]/property[@name='Stacknumber']" name="value">600</setattribute>
+<setattribute xpath="/items/item[@name='medicalAloeCream']/property[@name='Stacknumber']" name="value">50</setattribute>
+<setattribute xpath="/items/item[starts-with(@name, 'thrown')]/property[@name='Stacknumber']" name="value">50</setattribute>
+<setattribute xpath="/items/item[@name='resourceCloth']/property[@name='Stacknumber']" name="value">500</setattribute>
 
 <!-- Reduces block damage to 10 for ranged weapons/ammo -->
 <remove xpath="//item[(contains(@name, 'ammo') and not(contains(@name, 'Vomit')) or (starts-with(@name, 'gun') and not(contains(@name, 'Admin'))) or starts-with(@name, 'thrown'))]/effect_group/passive_effect[@name='BlockDamage']"/>
@@ -141,6 +144,7 @@
 <setattribute xpath="items/item[starts-with(@name, 'gun') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Bot')) and not(contains(@name, 'Pipe')) and not(contains(@name, 'Primitive')) and not(contains(@name, 'Parts'))]/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
 <setattribute xpath="items/item[contains(@name, 'Wpn') and not(contains(@name, 'Schematic')) and not(contains(@name, 'Parts')) and not(contains(@name, 'T0'))]/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
 
+<!-- Highest tier weapons/armor gated behind schematics -->
 <setattribute xpath="//item[@name='gunExplosivesT3RocketLauncher']/property[@name='UnlockedBy']" name="value">gunExplosivesT3RocketLauncherSchematic</setattribute>
 <setattribute xpath="//item[@name='gunHandgunT3DesertVulture']/property[@name='UnlockedBy']" name="value">gunHandgunT3DesertVultureSchematic</setattribute>
 <setattribute xpath="//item[@name='gunHandgunT3SMG5']/property[@name='UnlockedBy']" name="value">gunHandgunT3SMG5Schematic</setattribute>
@@ -154,6 +158,7 @@
 <setattribute xpath="//item[@name='meleeWpnClubT3SteelClub']/property[@name='UnlockedBy']" name="value">meleeWpnClubT3SteelClubSchematic</setattribute>
 <setattribute xpath="//item[@name='meleeWpnSpearT3SteelSpear']/property[@name='UnlockedBy']" name="value">meleeWpnSpearT3SteelSpearSchematic</setattribute>
 <setattribute xpath="//item[@name='meleeWpnSledgeT3SteelSledgehammer']/property[@name='UnlockedBy']" name="value">meleeWpnSledgeT3SteelSledgehammerSchematic</setattribute>
+<setattribute xpath="//item[@name='armorMilitaryStealthBoots']/property[@name='UnlockedBy']" name="value">armorMilitaryStealthBootsSchematic</setattribute>
 
 <append xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and contains(@name, 'T3') and contains(@name, 'Schematic')]">
 	<property class="Action0">
@@ -176,12 +181,33 @@
 <!--<setattribute xpath="/items/item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and contains(@name, 'Parts') and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='Material']" name="value">MweaponPartFragmentITAV</setattribute>-->
 
 <append xpath="/items"> 
+	<item name="starterBundleITAV">
+		<property name="CustomIcon" value="cntBackpack01"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mcloth"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="EconomicValue" value="1" />
+		<property name="Group" value="Special Items"/>
+		<property class="Action0">
+			<property name="Class" value="OpenBundle"/>
+			<property name="Delay" value="0"/>
+			<property name="Use_time" value="0"/>
+			<property name="Sound_start" value="close_backpack"/>
+			<property name="Create_item" value="casinoCoin,resourceDuctTape,foodCornBread,foodEggBoiled"/>
+			<property name="Create_item_count" value="250,1,1,1"/>
+		</property>
+	</item>
+
 	<item name="weaponPartFragmentITAV"> 
 		<property name="Extends" value="partsMaster" />
 		<property name="CreativeMode" value="Player"/>
 		<property name="ItemTypeIcon" value="gunsmithing"/>
 		<property name="DescriptionKey" value="weaponPartFragmentITAVGroupDesc"/>
 		<!--<property name="RepairTools" value="resourceWeaponRepairKitITAV"/>-->
+		<property name="UnlockedBy" value="perkArmorerITAV" />
 		<property name="EconomicValue" value="2"/>
 		<property name="EconomicBundleSize" value="1"/>
 		<property name="Group" value="Resources"/>
@@ -189,7 +215,7 @@
 		<property name="PickupJournalEntry" value="weaponPartsAssemblyTipITAV"/>
 		<property name="Stacknumber" value="9999"/>
 		<property name="CraftingIngredientTime" value=".1"/>
-		<property name="CustomIcon" value="garbage_decor3"/>
+		<property name="CustomIcon" value="apparelFacialPiercings"/>
 	</item>
 	
 	<item name="resourceRepairKitITAV">
@@ -223,13 +249,37 @@
 		<property name="Group" value="Resources"/>
 		<property name="Weight" value="20"/>
 		<property name="CreativeMode" value="Player"/>
-		<property name="Stacknumber" value="4"/>
+		<property name="Stacknumber" value="20"/>
 		<property name="CraftingIngredientTime" value="2"/>
 		<property name="DescriptionKey" value="resourceCarFrameITAVDesc"/>
 		<property name="CustomIcon" value="cntCar03SedanDamage2Master"/>
 	</item>
+
+
+<item name="resourceClayLumpBundle">
+	<property name="CustomIcon" value="resourceClayLump"/><property name="ItemTypeIcon" value="treasure"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="UnlockedBy" value="perkArtOfMiningPallets"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="5"/>
+	<property name="SellableToTrader" value="true"/>
+	<property name="EconomicValue" value="12000" />
+	<property name="Group" value="Resources"/>
+	<property class="Action0">
+		<property name="Class" value="OpenBundle"/>
+		<property name="Delay" value="0"/>
+		<property name="Use_time" value="0"/>
+		<property name="Sound_start" value="close_garbage"/>
+		<property name="Create_item" value="resourceClayLump"/>
+		<property name="Create_item_count" value="6000"/>
+	</property>
+</item>
+
 </append>
 
+<setattribute xpath="//item[@name='resourceRockSmallBundle']/property[@name='SellableToTrader']" name="value">true</setattribute>
 
 <setattribute xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and (contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3')) and not(contains(@name, 'Parts')) and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='RepairTools']" name="value">resourceRepairKitITAV</setattribute>
 
@@ -624,8 +674,8 @@
 	<property name="DisplayType" value="powerizersITAV"/>
 	<property name="DescriptionKey" value="powerizersITAVDesc"/>
 	<property name="CustomIcon" value="apparelGothBoots"/>
-	<property name="CustomIconTint" value="33,212,252"/>
-	<property name="UMA.Overlay0Tint" value="33,212,252"/>
+	<property name="CustomIconTint" value="40,73,121"/>
+	<property name="UMA.Overlay0Tint" value="40,73,121"/>
 	<property name="UnlockedBy" value="perkRunnerITAV"/>
 	<property name="Group" value="Clothing"/>
 	<property name="Tags" value="feet,clothing,canHaveCosmetic,noMods"/>
@@ -680,8 +730,8 @@
 	<property name="DisplayType" value="workBootsITAV"/>
 	<property name="DescriptionKey" value="workBootsBabyITAVDesc"/>
 	<property name="CustomIcon" value="armorMilitaryBoots"/>
-	<property name="CustomIconTint" value="33,212,252"/>
-	<property name="UMA.Overlay0Tint" value="33,212,252"/>
+	<property name="CustomIconTint" value="234,216,34"/>
+	<property name="UMA.Overlay0Tint" value="234,216,34"/>
 	<property name="UnlockedBy" value="perkRunnerITAV"/>
 	<property name="Group" value="Clothing"/>
 	<property name="Tags" value="feet,clothing,canHaveCosmetic,noMods"/>
@@ -702,8 +752,7 @@
 </item>
 
 
-<!-- Tweaking vanilla items to fit ITAV gameplay -->
-<setattribute xpath="/items/item[@name='medicalAloeCream']/Stacknumber" name="value">50</setattribute>
+
 
 
 <!-- ************************** Schematics ***************************************-->
@@ -732,6 +781,18 @@
 	</effect_group>
 </item>
 
+<!-- Armor Schematics -->
+
+<item name="armorMilitaryStealthBootsSchematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="armorMilitaryBoots"/>
+	<property name="Unlocks" value="armorMilitaryStealthBoots"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorMilitaryStealthBoots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
 
 
 <!-- Assorted decorative items ITAV Schematics -->
@@ -1241,6 +1302,9 @@
 
  <!-- ********************* Price adjustments from vanilla ********************* -->
 <setattribute xpath="//item[contains(@name, 'T0') and not(contains(@name, 'Flashlight')) and not(contains(@name, 'pipe')) and not(contains(@name, 'quest')) and not(contains(@name, 'leather'))]/property[@name='SellableToTrader']" name="value">true</setattribute>
+
+<setattribute xpath="//item[starts-with(@name, 'book')]/property[@name='EconomicValue']" name="value">200</setattribute>
+<setattribute xpath="//item[contains(@name, 'Schematic')]/property[@name='EconomicValue']" name="value">200</setattribute>
  
 <setattribute xpath="//item[@name='resourceRockSmall']/property[@name='EconomicValue']" name="value">1</setattribute>
 <setattribute xpath="//item[@name='resourceSnowBall']/property[@name='EconomicValue']" name="value">1</setattribute>
