@@ -151,13 +151,15 @@
 <setattribute xpath="//lootgroup/item[@name='casinoCoin' and (@count='5,10' or @count='1,10')]" name="count">40,50</setattribute>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupFoodTrash']">
-	<item name="weaponPartFragmentITAV" count="2,4" />
+	<item name="weaponPartFragmentITAV" count="4,8" />
 	<item name="casinoCoin" count="20,40" />
+	<item name="resourceScrapIron" count="7,13" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupScrapCommon']">
-	<item name="weaponPartFragmentITAV" count="2,4" />
+	<item name="weaponPartFragmentITAV" count="4,8" />
 	<item name="casinoCoin" count="20,40" />
+	<item name="resourceScrapIron" count="7,18" />
 </append>
 
 <setattribute xpath="//item[@name='foodCanPears']" name="name">foodCanPeas</setattribute>

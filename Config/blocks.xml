@@ -48,6 +48,8 @@
 
 <setattribute xpath="//block[(contains(@name, 'rock') or contains(@name, 'ore') or contains(@name, 'terr'))]/drop[@tag='oreWoodHarvest']" name="tag">oreWoodHarvest,rockClayHarvest</setattribute>
 
+<setattribute xpath="//block[@name='treeMasterGrowing']/property[@name='PlantGrowing.GrowthRate']" name="value">126</setattribute> <!-- Attempting to make trees grow slower -->
+
 <!-- Making ITAV craftable blocks UnlockedBy ITAV Schematics-->
 <append xpath="//block[@name='signBread01']"><property name="UnlockedBy" value="signBread01ITAVSchematic" /></append>
 <append xpath="//block[@name='signBread02']"><property name="UnlockedBy" value="signBread02ITAVSchematic" /></append>
@@ -628,13 +630,13 @@
 		<property name="Extends" value="cntCoffeeMaker"/>
 		<property name="CustomIcon" value="cntSodaFountain" />
 		<property name="Class" value="SecureLoot"/>
-		<property name="LootList" value="shamwayCrate"/>
+		<property name="LootList" value="beerCooler"/>
 		<property name="Material" value="Mmetal" />
 		<property name="Weight" value="100" />
 		<property name="Model" value="Entities/Electrical/sodaFountainPrefab"/>
 		<property name="OpenSound" value="open_cooler"/>
 		<property name="CloseSound" value="close_cooler"/>
-		<property name="FilterTags" value="MC_building,SC_loot,SC_electrical,SC_commercial"/>
+		<property name="FilterTags" value="MC_building,SC_loot,SC_electrical,SC_commercial,SC_decor"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="EconomicValue" value="50"/>
 	</block>
@@ -643,13 +645,13 @@
 		<property name="Extends" value="cntCoffeeMaker"/>
 		<property name="CustomIcon" value="cntCoffeeMaker" />
 		<property name="Class" value="SecureLoot"/>
-		<property name="LootList" value="shamwayCrate"/>
+		<property name="LootList" value="beerCooler"/>
 		<property name="Material" value="Mmetal" />
 		<property name="Weight" value="100" />
 		<property name="Model" value="Entities/Appliances/coffeeMakerPrefab"/>
 		<property name="OpenSound" value="open_cooler"/>
 		<property name="CloseSound" value="close_cooler"/>
-		<property name="FilterTags" value="MC_building,SC_loot,SC_electrical,SC_commercial"/>
+		<property name="FilterTags" value="MC_building,SC_loot,SC_electrical,SC_commercial,SC_decor"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="EconomicValue" value="50"/>
 	</block>	
@@ -658,13 +660,13 @@
 		<property name="Extends" value="cntCoffeeMaker"/>
 		<property name="CustomIcon" value="cntCoffeeMakerCommercial" />
 		<property name="Class" value="SecureLoot"/>
-		<property name="LootList" value="shamwayCrate"/>
+		<property name="LootList" value="beerCooler"/>
 		<property name="Material" value="Mmetal" />
 		<property name="Weight" value="200" />
 		<property name="Model" value="Entities/Appliances/commercialCoffeeMakerPrefab"/>
 		<property name="OpenSound" value="open_cooler"/>
 		<property name="CloseSound" value="close_cooler"/>
-		<property name="FilterTags" value="MC_building,SC_loot,SC_electrical,SC_commercial"/>
+		<property name="FilterTags" value="MC_building,SC_loot,SC_electrical,SC_commercial,SC_decor"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="EconomicValue" value="100"/>
 	</block>
@@ -699,6 +701,7 @@
 		<property name="ModelOffset" value="0,0,0"/>
 		<property name="GndAlign" value="1"/>
 		<property name="UnlockedBy" value="perkCookITAV" />
+		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="389"/>
 	</block>
 
@@ -712,13 +715,13 @@
 		<property name="ModelOffset" value="0,0,0"/>
 		<property name="GndAlign" value="1"/>
 		<property name="UnlockedBy" value="perkCookITAV" />
+		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="685"/>
 	</block>
 
 	<block name="cntFoodPileLargeITAV">
 		<property name="Extends" value="cntFoodPileSmall"/>
 		<property name="Class" value="SecureLoot"/>
-		<property name="EconomicValue" value="965"/>
 		<property name="LootList" value="shamwayCrate"/>
 		<property name="CustomIcon" value="cntFoodPileLarge"/>
 		<property name="Model" value="#Entities/LootContainers?foodClutterPileLargePrefab.prefab"/>
@@ -726,8 +729,67 @@
 		<property name="ModelOffset" value="0,0,0"/>
 		<property name="GndAlign" value="1"/>
 		<property name="UnlockedBy" value="perkCookITAV" />
+		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="965"/>
 	</block>	
+	
+	<block name="cntClothesRackRectanglePantsITAV">
+		<property name="Extends" value="cntClothesRackRoundPants"/>
+		<property name="Class" value="SecureLoot"/>
+		<property name="LootList" value="reinforcedChestT2"/>
+		<property name="CustomIcon" value="cntClothesRackRectanglePants"/>
+		<property name="Model" value="#Entities/LootContainers?clothsRacksRectanglePantsPrefab.prefab"/>
+		<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+		<property name="ModelOffset" value="0,0.5,0"/>
+		<property name="MultiBlockDim" value="1,2,2"/>
+		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
+		<property name="FilterTags" value="SC_decor"/>
+		<property name="EconomicValue" value="1280"/>
+		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
+	</block>	
+	
+	<block name="cntClothesRackRectangleShirtsITAV">
+		<property name="Extends" value="cntClothesRackRoundPants"/>
+		<property name="Class" value="SecureLoot"/>
+		<property name="LootList" value="reinforcedChestT2"/>
+		<property name="CustomIcon" value="cntClothesRackRectangleShirts"/>
+		<property name="Model" value="#Entities/LootContainers?clothsRacksRectangleShirtsPrefab.prefab"/>
+		<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+		<property name="ModelOffset" value="0,0.5,0"/>
+		<property name="MultiBlockDim" value="1,2,2"/>
+		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
+		<property name="FilterTags" value="SC_decor"/>
+		<property name="EconomicValue" value="1280"/>
+		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
+	</block>
+	
+	<block name="cntClothesRackRoundPantsITAV">
+		<property name="Extends" value="cntClothesRackRoundPants"/>
+		<property name="Class" value="SecureLoot"/>
+		<property name="LootList" value="reinforcedChestT2"/>
+		<property name="CustomIcon" value="cntClothesRackRoundPants"/>
+		<property name="Model" value="#Entities/LootContainers?clothsRackRoundPantsPrefab.prefab"/>
+		<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+		<property name="ModelOffset" value="0,0.5,0"/>
+		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
+		<property name="FilterTags" value="SC_decor"/>
+		<property name="EconomicValue" value="1280"/>
+		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
+	</block>
+	
+	<block name="cntClothesRackRoundShirtsITAV">
+		<property name="Extends" value="cntClothesRackRoundPants"/>
+		<property name="Class" value="SecureLoot"/>
+		<property name="LootList" value="reinforcedChestT2"/>
+		<property name="CustomIcon" value="cntClothesRackRoundShirts"/>
+		<property name="Model" value="#Entities/LootContainers?clothsRackRoundShirtsPrefab.prefab"/>
+		<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+		<property name="ModelOffset" value="0,0.5,0"/>
+		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
+		<property name="FilterTags" value="SC_decor"/>
+		<property name="EconomicValue" value="1280"/>
+		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
+	</block>
 	
 </append>
 
@@ -758,7 +820,7 @@
 		<property name="TakeDelay" value="-1"/>
 		<property name="RuntimeSwitch" value="true"/>
 		<property name="Group" value="Science,Decor/Miscellaneous"/>
-		<property name="FilterTags" value="MC_building,SC_lighting"/>
+		<property name="FilterTags" value="MC_building,SC_lighting,SC_decor"/>
 		<property name="SortOrder1" value="70a0"/>
 		<property name="CustomIcon" value="chandelierLight"/>
 	</block>

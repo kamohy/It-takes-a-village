@@ -223,6 +223,26 @@
 			<ingredient name="resourcePaint" count="3" />
 		</recipe>
 		
+		<recipe name="cntClothesRackRectanglePantsITAV" count="1" craft_time="10" tags="learnable">
+			<ingredient name="resourceScrapIron" count="20"/>
+			<ingredient name="resourceMetalPipe" count="20"/>
+		</recipe>
+
+		<recipe name="cntClothesRackRectangleShirtsITAV" count="1" craft_time="10" tags="learnable">
+			<ingredient name="resourceScrapIron" count="20"/>
+			<ingredient name="resourceMetalPipe" count="20"/>
+		</recipe>
+
+		<recipe name="cntClothesRackRoundPantsITAV" count="1" craft_time="10" tags="learnable">
+			<ingredient name="resourceScrapIron" count="20"/>
+			<ingredient name="resourceMetalPipe" count="20"/>
+		</recipe>
+
+		<recipe name="cntClothesRackRoundShirtsITAV" count="1" craft_time="10" tags="learnable">
+			<ingredient name="resourceScrapIron" count="20"/>
+			<ingredient name="resourceMetalPipe" count="20"/>
+		</recipe>	
+		
 		<recipe name="signBread01" count="1" craft_time="10" tags="learnable">
 			<ingredient name="resourceWood" count="10" />
 			<ingredient name="resourcePaper" count="10" />

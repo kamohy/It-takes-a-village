@@ -80,14 +80,13 @@
 
 <remove xpath="//quest[@id='quest_BasicSurvival7']/reward[@id='quest_BasicSurvival8']" />
 <append xpath="//quest[@id='quest_BasicSurvival7']">
-	<reward type="SkillPoints" value="4" chainreward="true"/>
-	<reward type="Quest" id="quest_MyFirstProfession"/>
+		<reward type="Quest" id="quest_MyFirstProfession"/>
 </append>
 
 
 <append xpath="/quests">
 	<!-- Basic Survival X - Craft a Player Owned Store (Cashregister) /> -->
-	<quest id="quest_PlayerStore">
+	<!-- <quest id="quest_PlayerStore">
 		<property name="group_name_key" value="quest_BasicSurvival"/>
 		<property name="name" value="Create your own store"/>
 		<property name="subtitle" value="Craft a Player Owned Store"/>
@@ -106,7 +105,7 @@
 		<reward type="Quest" id="quest_MyFirstProfession">
 			<property name="chainquest" value="false"/>
 		</reward>
-	</quest>
+	</quest> -->
 	
 	
 
@@ -146,6 +145,7 @@
 		</objective>
 		
 		<reward type="Item" id="casinoCoin" value="3000"/>
+		<reward type="SkillPoints" value="4" chainreward="true"/>
 		<reward type="Item" id="bookSmelterITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookMinerITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookHunterITAV" ischosen="true" isfixed="true" value="1"/>
