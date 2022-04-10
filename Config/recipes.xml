@@ -812,6 +812,106 @@
 	<append xpath="/recipes/recipe[contains(@tags, 'perkGreaseMonkey') or contains(@tags, 'perkSalvageOperations')]/@tags">,perkRunnerITAV</append>
 	
 	
+	<!-- Making T3 weapons schematics craftable by the Armorer at max level -->
+	<append xpath="/recipes">
+		<recipe name="meleeWpnClubT3SteelClubSchematic" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="meleeWpnClubT3SteelClubParts" count="17"/>
+			<ingredient name="resourceForgedSteel" count="35"/>
+			<ingredient name="resourceWood" count="35"/>
+			<ingredient name="resourceLeather" count="10"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+		</recipe>
+		
+		<recipe name="meleeWpnSpearT3SteelSpearSchematic" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="meleeWpnSpearT3SteelSpearParts" count="17"/>
+			<ingredient name="resourceForgedSteel" count="35"/>
+			<ingredient name="resourceWood" count="35"/>
+			<ingredient name="resourceLeather" count="10"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+		</recipe>
+		
+		<recipe name="meleeWpnBladeT3MacheteSchematic" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="meleeWpnBladeT3MacheteParts" count="17"/>
+			<ingredient name="resourceForgedSteel" count="35"/>
+			<ingredient name="resourceWood" count="35"/>
+			<ingredient name="resourceLeather" count="10"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+		</recipe>
+		
+		<recipe name="meleeWpnSledgeT3SteelSledgehammerSchematic" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="17"/>
+			<ingredient name="resourceForgedSteel" count="35"/>
+			<ingredient name="resourceWood" count="35"/>
+			<ingredient name="resourceLeather" count="10"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+		</recipe>
+				
+		<recipe name="meleeWpnKnucklesT3SteelKnucklesSchematic" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="meleeWpnKnucklesT3SteelKnucklesParts" count="17"/>
+			<ingredient name="resourceForgedSteel" count="35"/>
+			<ingredient name="resourceWood" count="35"/>
+			<ingredient name="resourceLeather" count="10"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+		</recipe>
+		
+		<recipe name="gunHandgunT3DesertVultureSchematic" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="gunHandgunT1PistolParts" count="21"/>
+			<ingredient name="resourceForgedSteel" count="70"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="70"/>
+			<ingredient name="resourceSpring" count="21"/>
+		</recipe>
+		
+		<recipe name="gunHandgunT3SMG5Schematic" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="gunHandgunT1PistolParts" count="17"/>
+			<ingredient name="resourceForgedSteel" count="35"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="35"/>
+			<ingredient name="resourceSpring" count="10"/>
+		</recipe>
+		
+		<recipe name="gunShotgunT3AutoShotgunSchematic" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="gunShotgunT1DoubleBarrelParts" count="21"/>
+			<ingredient name="resourceForgedSteel" count="105"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="140"/>
+			<ingredient name="resourceSpring" count="14"/>
+		</recipe>
+		
+		<recipe name="gunRifleT3SniperRifleSchematic" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="gunRifleT1HuntingRifleParts" count="21"/>
+			<ingredient name="resourceForgedSteel" count="105"/>
+			<ingredient name="resourceDuctTape" count="35"/>
+			<ingredient name="resourceScrapPolymers" count="140"/>
+			<ingredient name="resourceSpring" count="42"/>
+		</recipe>
+		
+		<recipe name="gunMGT3M60Schematic" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="gunMGT1AK47Parts" count="21"/>
+			<ingredient name="resourceForgedSteel" count="70"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="35"/>
+			<ingredient name="resourceSpring" count="14"/>
+		</recipe>
+		
+		<recipe name="gunBowT3CompoundBowSchematic" count="1" craft_time="60" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="gunBowT1WoodenBowParts" count="17"/>
+			<ingredient name="resourceLeather" count="17"/>
+			<ingredient name="resourceDuctTape" count="17"/>
+			<ingredient name="resourceScrapPolymers" count="87"/>
+			<ingredient name="resourceSpring" count="35"/>
+		</recipe>
+		
+		<recipe name="gunBowT3CompoundCrossbowSchematic" craft_time="60" count="1" craft_area="workbench" tags="learnable,perkArmorerITAV">
+			<ingredient name="gunBowT1WoodenBowParts" count="17"/>
+			<ingredient name="resourceLeather" count="3"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="70"/>
+			<ingredient name="resourceForgedSteel" count="52"/>
+		</recipe>	
+	</append>
+	
+	
 	<!-- Moving craft_areas for advanced recipes to advanced ITAV worktables -->
 	<setattribute xpath="//recipe[@name='meleeToolPickT3Auger' or @name='meleeToolAxeT3Chainsaw']" name="craft_area">workbenchMinerT2ITAV</setattribute>
 		

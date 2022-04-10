@@ -3,8 +3,10 @@ Key,File,Type,UsedInMainMenu,NoTranslate,english
 
 loadingTipProfessionsITAV,UI,Loading Screen,x,,"Each Profession provides vital goods for the other players. Try to fill any empty roles to improve the chance of survival."
 loadingTipProfessionsITAV_title,UI,Loading Screen,x,,It Takes A Village
-loadingTipMultipleProfessionsITAV,UI,Loading Screen,x,,"Max out your first profession to learn another one. Talk to the trader to start the quest."
-loadingTipMultipleProfessionsITAV_title,UI,Loading Screen,x,,More Professions
+loadingTipSmelterITAV,UI,Loading Screen,x,,"Many crafting recipes require large amounts of steel. Do you have a Smelter to help you out?"
+loadingTipSmelterITAV_title,UI,Loading Screen,x,,"Got a Smelter friend?"
+loadingTipCustomThingsITAV,UI,Loading Screen,x,,"Search for 'deco' or 'itav' in the crafting window to find custom things!"
+loadingTipCustomThingsITAV_title,UI,Loading Screen,x,,"More stuff"
 
 loadingTipCraftingBetterQL,UI,Loading Screen,x,,At the start of the game you can only craft quality 1 tools and items such as a stone axe. The quality of an item is displayed at the bottom of its icon. To craft a higher quality item increase the perk it is governed under such as Miner 69’er for the stone axe.
 loadingTipCraftingBetterQL_title,UI,Loading Screen,x,,How do I craft better tools?
@@ -332,7 +334,7 @@ perkArmorerRank1LongDescITAV,progression,perk Pro,,,"You are now an apprentice a
 perkArmorerRank2DescITAV,progression,perk Pro,,,Journeyman
 perkArmorerRank2LongDescITAV,progression,perk Pro,,,"You are now a journeyman armorer and able to craft quality 3 armor and weaponry."
 perkArmorerRank3DescITAV,progression,perk Pro,,,Expert
-perkArmorerRank3LongDescITAV,progression,perk Pro,,,"You are now an expert armorer and able to craft quality 4 armor and weaponry."
+perkArmorerRank3LongDescITAV,progression,perk Pro,,,"You are now an expert armorer and able to craft quality 4 armor and weaponry, as well as schematics for the most powerful weaponry. These schematics can also be found in loot, but only the Armorer can learn them."
 perkArmorerRank4DescITAV,progression,perk Pro,,,Artisan
 perkArmorerRank4LongDescITAV,progression,perk Pro,,,"You are now an artisan armorer and able to craft quality 5 armor and weaponry."
 perkArmorerRank5DescITAV,progression,perk Pro,,,Master

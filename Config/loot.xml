@@ -141,10 +141,14 @@
 	<item group="mailboxT0ITAV" loot_prob_template="ProbT0"/>
 </append>
 <append xpath="//lootgroup[@name='groupMailbox02']">
-	<item group="noteDadJokesITAV" loot_prob_template="low"/>	
+	<item group="noteDadJokesITAV" loot_prob_template="low"/>
+	<item name="thrownAmmoPipeBomb" count="1" loot_prob_template="veryLow"/>	
 </append>
 
-
+<!-- Removing candy that increases yield -->
+<remove xpath="//item[@name='drugSugarButts']" />
+<remove xpath="//item[@name='drugRockBusters']" />
+<remove xpath="//item[@name='drugHackers']" />
 
 <!-- Tweaking loot group contents -->
 
@@ -162,13 +166,17 @@
 	<item name="resourceScrapIron" count="7,18" />
 </append>
 
+<append xpath="/lootcontainers/lootgroup[@name='groupToilet02']">
+	<item name="thrownAmmoPipeBomb" count="1" loot_prob_template="veryLow"/>
+</append>
+
 <setattribute xpath="//item[@name='foodCanPears']" name="name">foodCanPeas</setattribute>
 <setattribute xpath="//item[@name='foodCanSoup']" name="name">foodCanStock</setattribute>
 <setattribute xpath="//item[@name='foodCanChicken']" name="name">foodCanBeef</setattribute>
 
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']">
-	<item name="foodCanChili" />
+	<item group="groupWeapons_Demolitionist" count="1" loot_prob_template="veryLow"/>
 </append>
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']">
@@ -344,12 +352,6 @@
 
 <remove xpath="//lootgroup[starts-with(@name, 'groupZpack')]/item[@name='oldCash']" />
 
-<!-- <remove xpath="//item[@group='groupWeaponsLowHighMed']" />
-<remove xpath="//item[@group='groupWeaponsHighMedLow']" />
-<remove xpath="//item[@group='groupWeaponsMedMedLow']" />
-<remove xpath="//item[@group='groupWeaponsMedMedMed']" />
-<remove xpath="//item[@group='groupWeaponsMedMedHigh']" /> -->
-
 <setattribute xpath="//lootgroup[@name='groupSmallSafeLoot03']/item[@name='oldCash']" name="name">casinoCoin</setattribute>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupSmallWeaponBag']">
@@ -435,7 +437,7 @@
 	<item group="schematicsWeaponsArmorT2" loot_prob_template="med" force_prob="true"/>
 </append>
 
-
+<remove xpath="//lootgroup[@name='groupHardenedChestT5']/item[@group='groupHardenedChestT5_08']" />
 
 <!-- Removing sledgehammer from tool loot groups despite it being good tool for destroying things -->
 <remove xpath="//lootgroup[@name='groupToolsT1']/item[@name='meleeWpnSledgeT1IronSledgehammer']" />

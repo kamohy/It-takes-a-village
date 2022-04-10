@@ -31,8 +31,6 @@
 	
 	<crafting_category_list display_type="chemistryStationT2ITAV">
 		<crafting_category name="" icon="ui_game_symbol_science" display_name="lblAll" />
-		<!--<crafting_category name="Chemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryAdvancedChemicals" />
-		<crafting_category name="Medical" icon="ui_game_symbol_medical" display_name="lblCategoryAdvancedMedicine" />-->
 	</crafting_category_list>
 	
 	<crafting_category_list display_type="workbenchRoboticsT2ITAV">

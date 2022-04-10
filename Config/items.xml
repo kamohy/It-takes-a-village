@@ -170,6 +170,7 @@
 		<property name="Sound_start" value="read_mod"/>
 		<property name="Sound_in_head" value="true"/>
   </property>
+  <property name="UnlockedBy" value="perkArmorerITAV" />
 </append>
 
 
@@ -764,6 +765,16 @@
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="meleeWpnSpearT3SteelSpear"/>
 	<property name="Unlocks" value="meleeWpnSpearT3SteelSpear"/>
+	<property name="UnlockedBy" value="perkArmorerITAV" />
+	<property class="Action0">
+		<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" operation="Equals" value="1" />
+        <property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+        <property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_mod"/>
+		<property name="Sound_in_head" value="true"/>
+  </property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeWpnSpearT3SteelSpear" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
@@ -775,6 +786,16 @@
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="meleeWpnClubT3SteelClub"/>
 	<property name="Unlocks" value="meleeWpnClubT3SteelClub"/>
+	<property name="UnlockedBy" value="perkArmorerITAV" />
+	<property class="Action0">
+		<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" operation="Equals" value="1" />
+        <property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+        <property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_mod"/>
+		<property name="Sound_in_head" value="true"/>
+	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeWpnClubT3SteelClub" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>

@@ -4,7 +4,8 @@
 	<append xpath="//tips">
 		<tip key="loadingTipMainHUD" />
 		<tip key="loadingTipProfessionsITAV" />
-		<tip key="loadingTipMultipleProfessionsITAV" />
+		<tip key="loadingTipSmelterITAV" />
+		<tip key="loadingTipCustomThingsITAV" />
 		<tip key="loadingTipStoneAxe" />
 		<!--<tip key="loadingTipHarvestingResources" />
 		<tip key="loadingTipDistraction" />
