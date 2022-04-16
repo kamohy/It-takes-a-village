@@ -32,16 +32,6 @@ loadingTipUnlockingRecipes_title,UI,Loading Screen,x,,Unlocking Recipes
 
 schematicGeneralGroupDesc,items,Book,,,Reading the schematic will teach you how to craft this item. The Armorer is the only one who can make good quality weapons and armor. \nSome items are crafted with parts and scrap to the same parts.\nAn example are pump shotguns that scrap to pump shotgun parts and are crafted using those parts.
 
-note01ITAV,,,,,"Basic Professions"
-note02ITAV,,,,,"Intermediate Professions"
-note03ITAV,,,,,"Advanced Professions"
-
-noteITAV01Desc,,,,,"Basic professions provide materials for the intermediate and advanced professions. The basic professions are Miner, Hunter and Farmer. \n\nNo matter what profession you choose, you can (and probably should!) specialize in combat as well."
-
-noteITAV02Desc,,,,,"Intermediate professions can function on their own, but they prosper when supplied by the basic professions. The intermediate professions are Cook and Smelter, and they supply everyone with their goods. \n\nNo matter what profession you choose, you can (and probably should!) specialize in combat as well."
-
-noteITAV03Desc,,,,,"Advanced professions rely heavily on others to provide materials. The advanced professions are Armorer, Mechanic, Chemist and Robotics Inventor. \n\nNo matter what profession you choose, you can (and probably should!) specialize in combat as well."
-
 starterBundleITAV,items,,,,"Hefty bag"
 
 powerizersITAV,,,,,"Powerizer Boots"
@@ -85,6 +75,7 @@ ShopStoreVendingCashRegisterPlayerITAV,blocks,Container,,,"Player Owned Store"
 ShopStoreVendingCashRegisterPlayerGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Casino Coins. Buy the goods you need from other Player Owned Stores to support them and the community!  Store is indestructible unless falling."
 
 lblContextActionAssemble,blocks,,,,"Assemble"
+lblContextActionPrepare,blocks,,,,"Prepare"
 lblCategoryAdvancedChemicals,UI,Tooltip,,,"Advanced Chemicals"
 lblCategoryAdvancedMedicine,UI,Tooltip,,,"Advanced Medicine"
 workbenchMinerT2ITAV,blocks,,,,"Advanced Miner's Table"
@@ -98,11 +89,14 @@ campfireDecoITAV,blocks,,,,"Firewood"
 workstationT2ITAVTip_title,Journal Tip,,,,"Advanced Workstations"
 workstationT2ITAVTip,Journal Tip,,,,"The most advanced recipes require a profession specific advanced workstation to craft. Advanced workstations have a higher heat signature than basic workstations."
 
+modDyeInvisibleITAV,item_modifiers,mod,,,"Dye: Invisible"
 modDyeTealITAV,item_modifiers,mod,,,"Dye: Teal"
 modDyePineITAV,item_modifiers,mod,,,"Dye: Pine Green"
 modDyePineITAV,item_modifiers,mod,,,"Dye: Hunter Green"
-modArmorHazmatMaskITAV,item_modifiers,mod,,,""
-modArmorHazmatBootsITAV,item_modifiers,mod,,,""
+modArmorHazmatMaskITAV,item_modifiers,mod,,,"Hazmat Mask mod"
+modArmorHazmatMaskITAVDesc,item_modifiers,mod,,,"A stylish Hazmat Mask mod that includes double pockets!"
+modArmorHazmatBootsITAV,item_modifiers,mod,,,"Hazmat Boots mod"
+modArmorHazmatBootsITAVDesc,item_modifiers,mod,,,"These fancy Hazmat Boots includes double pockets!"
 
 
 
@@ -130,7 +124,9 @@ cntCoffeeMakerCommercialITAV,blocks,,,,"Large Coffee Maker"
 
 
 LightITAVDesc,blocks,,,,"Light up the world! Requires connection to a power source. Use a wire tool to connect it."
+
 LightFuseboxITAVDesc,blocks,,,,"Use the wireless fusebox to connect lights to their power source with invisible cables. Requires a wire tool."
+LightwallLight01ITAV,blocks,,,,"Warehouse Outdoor Light"
 LightchandelierLightITAV,blocks,,,,"Chandelier"
 LightStreetLightClassicITAV,blocks,,,,"Classic Street Light"
 signShopOpenLightITAV,blocks,,,,"Shop Open Sign"
@@ -142,6 +138,7 @@ LightPorchLight04BrassITAV,blocks,,,,"Brass Porch Lamp"
 LightPorchLight04ITAV,blocks,,,,"Iron Porch Lamp"
 LightCeilingLight02ITAV,blocks,,,,"Iron Ceiling Lamp"
 LightCeilingLight02BrassITAV,blocks,,,,"Brass Ceiling Lamp"
+LightEndTableLampITAV,blocks,,,,"Side Table with Lamp"
 wirelessRelayFuseboxLightITAV,blocks,,,,"Wireless Fusebox"
 window03WoodITAV,blocks,,,,"Wood Window"
 window03Wood,blocks,,,,"Wood Window Centered"
@@ -154,6 +151,12 @@ decoStorageITAVDesc,blocks,,,,"Decorative storage item."
 cntFoodPileSmallITAV,blocks,,,,"Food Pile, Small"
 cntFoodPileMediumITAV,blocks,,,,"Food Pile, Medium"
 cntFoodPileLargeITAV,blocks,,,,"Food Pile, Large"
+cntClothesRackRectanglePantsITAV,blocks,,,,"Clothes Rack, Rectangle, Pants"
+cntClothesRackRectangleShirtsITAV,blocks,,,,"Clothes Rack, Rectangle, Shirts"
+cntClothesRackRoundPantsITAV,blocks,,,,"Clothes Rack, Round, Pants"
+cntClothesRackRoundShirtsITAV,blocks,,,,"Clothes Rack, Round, Shirts"
+restaurantBoothVariantHelper,blocks,,,,"Restaurant Booth Sofa Variant Helper"
+fastFoodBoothVariantHelper,blocks,,,,"Fast Food Booth Table Variant Helper"
 
 signBread01ITAVSchematic,items,,,,"Sign: Bread 01 Schematic"
 signBread02ITAVSchematic,items,,,,"Sign: Bread 02 Schematic"
@@ -181,6 +184,7 @@ decoPoolTableITAVSchematic,items,,,,"Pool Table Schematic"
 cntWoodBurningStoveITAVSchematic,items,,,,"Wood Burning Stove Schematic"
 
 
+
 LightStreetLightClassicITAVSchematic,items,,,,"Classic Street Light"
 signShopOpenLightITAVSchematic,items,,,,"Shop Open Sign"
 LightDeskLampLightITAVSchematic,items,,,,"Desk Lamp"
@@ -191,6 +195,34 @@ LightPorchLight04BrassITAVSchematic,items,,,,"Brass Porch Lamp"
 LightPorchLight04ITAVSchematic,items,,,,"Iron Porch Lamp"
 LightCeilingLight02ITAVSchematic,items,,,,"Iron Ceiling Lamp"
 LightCeilingLight02BrassITAVSchematic,items,,,,"Brass Ceiling Lamp"
+
+
+foodRawChickenMeatITAV,items,,,,"Raw Chicken Meat"
+foodRawChickenMeatITAVDesc,items,,,,"Chicken Meat can be eaten raw but is better charred, grilled or boiled at a campfire. Can be prepared for better cooking by a Cook."
+foodRawChickenMeatPreparedITAV,items,,,,"Prepared Raw Chicken Meat"
+foodRawChickenMeatPreparedITAVDesc,items,,,,"Prepared Raw Chicken Meat is sliced, diced and ready for some serious cooking action. \n\nThis recipe produces 1 serving."
+foodRawMeatPreparedITAV,items,,,,"Prepared Raw Meat"
+foodRawMeatPreparedITAVDesc,items,,,,"Prepared Raw Meat is sliced, diced and ready for some serious cooking action. \n\nThis recipe produces 1 serving."
+foodChickenBrothITAV,items,,,,"Chicken Broth"
+foodChickenBrothITAVDesc,items,,,,"Chicken Broth, best used for cooking more advanced meals with. \n\nThis recipe produces 1 serving."
+foodMeatBrothITAV,items,,,,"Meat Broth"
+foodMeatBrothITAVDesc,items,,,,"Meat Broth, best used for cooking more advanced meals with. \n\nThis recipe produces 1 serving."
+foodVegetableBrothITAV,items,,,,"Vegetable Broth"
+foodVegetableBrothITAVDesc,items,,,,"Vegetable Broth, best used for cooking more advanced meals with. \n\nThis recipe produces 1 serving."
+foodChickenSoupITAV,items,,,,"Chicken Soup"
+foodChickenSoupITAVDesc,items,,,,"Nothing is more soothing than a nice bowl of Chicken Soup. Except perhaps a strong and well-maintained perimiter defense. \n\nThis recipe produces 3 servings."
+foodChickenSoupSpicyITAV,items,,,,"Spicy Chicken Soup"
+foodChickenSoupSpicyITAVDesc,items,,,,"Spicy Chicken Soup, the hot cousin of regular Chicken Soup. Keeps your tummy warm and happy. \n\nThis recipe produces 1 serving."
+foodSrirachaKetchupSpiceITAV,items,,,,"Sriracha Sauce"
+foodSrirachaKetchupSpiceITAVDesc,items,,,,"Sriracha Sauce. Hot hot hot! The label says 'Don't eat it'."
+foodChickenStewITAV,items,,,,"Chicken Stew"
+foodChickenStewITAVDesc,items,,,,"Tastes like Chicken! ...Stew. \n\nThis recipe produces 3 servings."
+drinkJarCoffeeSpicyITAV,items,,,,"Spicy Coffee Cocktail"
+drinkJarCoffeeSpicyITAVDesc,items,,,,"A zippy cousin of the Blackstrap coffee, this tasty treat will give you long lasting energy and keep you warm at the same time. \n\nThis recipe produces 1 serving."
+foodChickenEmpanadasITAV,items,,,,"Chicken Empanadas"
+foodChickenEmpanadasITAVDesc,items,,,,"Tender, juicy, shredded and spiced chicken make a savory filling for empanadas. \n\nThis recipe produces 3 servings."
+foodHoboStewDesc,items,,,,"Nutritious and deli... it's edible, ok? \n\nThis recipe produces 3 servings."
+foodGumboStewDesc,items,,,,"Vomiting is for the poor! Eat like apocalyptic royalty with this super filling, delicious gumbo stew. \n\nThis recipe produces 2 servings."
 
 
 
@@ -251,6 +283,8 @@ perkAutoWeaponsMachineGunsLongDesc,,,,,"Don't suck after bedtime. Craft the Weap
 perkUrbanCombatLandingDesc,,,,,"Craft the Impact Bracing Boots Mod."
 perkUrbanCombatLandingLongDesc,,,,,"Make landing on your feet even more appealing. Craft the Impact Bracing Boots Mod."
 
+foodPumpkinCheesecakeDesc,items,Food,,,"This pumpkin cheesecake tastes delicious and grants you a beer buzz buff!"
+
 
 attITAVRank01Desc,progression,Attribute,,,No fucks given
 attITAVRank01LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 15% and stamina penalty by 10%. For heavy armor, reduction for both is 5%."
@@ -286,35 +320,35 @@ reqAttLevel09ITAV,progression,Attribute,,,Passion Level 9
 reqAttLevel10ITAV,progression,Attribute,,,Passion Level 10
 allowedProfessionsLevelExceededITAV,,,,,Not yet allowed to learn another profession
 
-perkSmelterITAVDesc,progression,perk Pro,,,"Smelt and craft items in the forge and craft 20% faster on workbenches."
+perkSmelterITAVDesc,progression,perk Pro,,,"Smelt and craft items in the forge."
 perkSmelterITAVName,progression,perk Pro,,,Smelter
-perkSmelterITAVRank1Desc,progression,perk Pro,,,Apprentice
-perkSmelterITAVRank1LongDesc,progression,perk Pro,,,"You are now an apprentice smelter and able to forge iron and other metal objects. Craft forges and craft items with them 20% faster. Unlocks crafting of forges and forged iron."
-perkSmelterITAVRank2Desc,progression,perk,,,Journeyman
-perkSmelterITAVRank2LongDesc,progression,perk Pro,,,"Your tinkering is proving useful in the apocalypse. Craft workbenches and cement mixers and craft items with them 20% faster."
+perkSmelterITAVRank1Desc,progression,perk Pro,,,Iron Fist
+perkSmelterITAVRank1LongDesc,progression,perk Pro,,,"Forge iron and other metal objects. Craft forge, workstation, cementmixer and chemistry station. Unlocks crafting of Military Fibers, generator banks, electrical relays, switches, pressure plates, motion sensors and lights."
+perkSmelterITAVRank2Desc,progression,perk,,,Serious Steel
+perkSmelterITAVRank2LongDesc,progression,perk Pro,,,"Unlocks crafting of the crucible, forged steel, battery bank, nailgun and various powered doors."
 perkSmelterITAVRank3Desc,progression,perk,,,Electrician
 perkSmelterITAVRank3LongDesc,progression,perk Pro,,,"You are now an electrician. Unlocks crafting of Military Fibers, generator banks, electrical relays, switches, pressure plates, motion sensors and various lights. All forge recipes cost 10% less. Crafting electrical devices cost 15% less."
 perkSmelterITAVRank4Desc,progression,perk Pro,,,Artisan
-perkSmelterITAVRank4LongDesc,progression,perk Pro,,,"Unlocks crafting of the crucible, forged steel, battery bank, nailgun and various powered doors. All forge recipes cost 15% less and electrical devices cost 25% less."
+perkSmelterITAVRank4LongDesc,progression,perk Pro,,,"Unlocks crafting of the crucible, forged steel, battery bank, nailgun and various powered doors."
 perkSmelterITAVRank5Desc,progression,perk Pro,,,Master
 perkSmelterITAVRank5LongDesc,progression,perk Pro,,,"Unlocks crafting of the crucible and forged steel. All forge recipes cost 20% less, and electrical devices cost 35% less."
 
 perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster."
 perkMinerITAVName,progression,perk Pro,,,Miner
 perkMinerITAVRank1Desc,progression,perk Pro,,,"Woodpecker"
-perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 poor tools, increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger. Harvest 20% more from trees, and 220% more from ore, stone and terrain blocks. \nUnlocks all iron tools like pickaxes."
+perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 poor tools, increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger. Harvest 20% more from trees, and 40% more from ore, stone and terrain blocks. \nUnlocks all iron tools like pickaxes."
 perkMinerITAVRank2Desc,progression,perk,,,"Choppy Chop"
-perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Craft quality 3 fair tools, increase tool damage by 20% and block damage by 60% with any axe, pick, shovel, chainsaw or auger. Harvest 40% more from trees, and 270% more from ore, stone and terrain blocks. Unlocks Advanced Miner's Table."
+perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Craft quality 3 fair tools, increase tool damage by 20% and block damage by 60% with any axe, pick, shovel, chainsaw or auger. Harvest 40% more from trees, and 80% more from ore, stone and terrain blocks. Unlocks Advanced Miner's Table."
 perkMinerITAVRank3Desc,progression,perk,,,"Bang That Rock"
-perkMinerITAVRank3LongDesc,progression,perk Pro,,,"Craft quality 4 good tools, increase tool damage by 30% and block damage by 90% with any axe, pick, shovel, chainsaw or auger. Harvest 60% more from trees, and 320% more from ore, stone and terrain blocks."
+perkMinerITAVRank3LongDesc,progression,perk Pro,,,"Craft quality 4 good tools, increase tool damage by 30% and block damage by 90% with any axe, pick, shovel, chainsaw or auger. Harvest 60% more from trees, and 120% more from ore, stone and terrain blocks."
 perkMinerITAVRank4Desc,progression,perk Pro,,,"Iron Fist"
-perkMinerITAVRank4LongDesc,progression,perk Pro,,,"Craft quality 5 great tools, increase tool damage by 40% and block damage by 120% with any axe, pick, shovel, chainsaw or auger. Harvest 80% more from trees, and 370% more from ore, stone and terrain blocks."
+perkMinerITAVRank4LongDesc,progression,perk Pro,,,"Craft quality 5 great tools, increase tool damage by 40% and block damage by 120% with any axe, pick, shovel, chainsaw or auger. Harvest 80% more from trees, and 160% more from ore, stone and terrain blocks."
 perkMinerITAVRank5Desc,progression,perk Pro,,,"Cave Troll"
-perkMinerITAVRank5LongDesc,progression,perk Pro,,,"Craft quality 6 amazing tools, increase tool damage by 50% and block damage by 150% with any axe, pick, shovel, chainsaw or auger. Harvest 100% more from trees, and 420% more from ore, stone and terrain blocks."
+perkMinerITAVRank5LongDesc,progression,perk Pro,,,"Craft quality 6 amazing tools, increase tool damage by 50% and block damage by 150% with any axe, pick, shovel, chainsaw or auger. Harvest 100% more from trees, and 200% more from ore, stone and terrain blocks."
 
 perkHunterITAVDesc,progression,perk Pro,,,"Become one with the hunt. Gain the ability to track animals and increase damage to and harvest from them."
 perkHunterITAVName,progression,perk Pro,,,Hunter
-perkHunterITAVRank1LongDesc,progression,perk Pro,,,"You are now a Pelter. Harvest 20% more resources from animals. Crouch to track rabbit, snakes and chickens. Deal 25% more damage to animals."
+perkHunterITAVRank1LongDesc,progression,perk Pro,,,"You are now a Pelter. Harvest 20% more resources from animals. Crouch to track rabbits, snakes and chickens. Deal 25% more damage to animals."
 perkHunterITAVRank2Desc,progression,perk Pro,,,Tracker
 perkHunterITAVRank2LongDesc,progression,perk Pro,,,"You are now a Tracker. Crouch to track deers, boars, wolves and coyotes. Harvest 60% more resources from animals."
 perkHunterITAVRank3Desc,progression,perk Pro,,,Huntress
@@ -324,7 +358,7 @@ perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced
 perkCookITAVName,progression,perk Pro,,,Cook
 perkCookITAVRank2LongDesc,progression,perk Pro,,,"Just like grandma used to make, tasty hearty meals that fill you up for days. Craft steak and potatoes, meat stew, vegetable stew, blueberry pie and several pumpkin dishes. Cook 20% faster. Unlocks the Small Food Pile storage decoration."
 perkCookITAVRank3LongDesc,progression,perk Pro,,,"Learn how to make nutritious meals from canned goods. Craft Sham Chowder, Hobo Stew, Chili dogs and Fish Tacos. Wash them down with Yucca Juice Smoothies and Beer. Cook 30% faster. Unlocks Advanced Cooking Stove."
-perkCookITAVRank4LongDesc,progression,perk Pro,,,"Cook for an army by making Gumbo Stew, Shepards Pie, Spaghetti and Tuna Gravy on Toast. Cook 40% faster. Use 20% less of a recipe's main ingredients. Unlocks the Medium Food Pile storage decoration."
+perkCookITAVRank4LongDesc,progression,perk Pro,,,"Cook for an army by making Gumbo Stew, Shepards Pie, Spaghetti and Tuna Gravy on Toast. Cook 40% faster. Unlocks the Medium Food Pile storage decoration."
 perkCookITAVRank5LongDesc,progression,perk Pro,,,"Learn grandpa's secret recipes that boost stats and attributes! Cook 50% faster. Unlocks the Large Food Pile storage decoration."
 
 perkArmorerITAVDesc,progression,perk Pro,,,"Craft ranged and melee weapons, as well as light and heavy armor."
@@ -340,14 +374,14 @@ perkArmorerRank4LongDescITAV,progression,perk Pro,,,"You are now an artisan armo
 perkArmorerRank5DescITAV,progression,perk Pro,,,Master
 perkArmorerRank5LongDescITAV,progression,perk Pro,,,"You are now a master armorer and able to craft quality 6 armor and weaponry."
 
-perkFarmerITAVDesc,progression,perk Pro,,,"Specialize in harvesting more crops and crafting seeds."
+perkFarmerITAVDesc,progression,perk Pro,,,"Specialize in harvesting more crops and crafting seeds. Gain the ability to track animals and increase damage to and harvest from them."
 perkFarmerITAVName,progression,perk Pro,,,Farmer
 perkFarmerITAVRank1Desc,progression,perk Pro,,,Forager
-perkFarmerITAVRank1LongDesc,progression,perk Pro,,,"Double the harvest of wild or planted crops. Craft seeds for flowers and decorative plants like goldenrod, chrysanthemum, aloe, and yucca.\nFarm plots cost 30% less to craft."
-perkFarmerITAVRank2Desc,progression,perk Pro,,,Gatherer
-perkFarmerITAVRank2LongDesc,progression,perk Pro,,,"You can craft seeds for berries and vegetables.\n50% chance to harvest 1 additional crop.\nFarm plots cost 50% less to craft."
-perkFarmerITAVRank3Desc,progression,perk Pro,,,Harvester
-perkFarmerITAVRank3LongDesc,progression,perk Pro,,,"Triple the harvest of wild or planted crops."
+perkFarmerITAVRank1LongDesc,progression,perk Pro,,,"Double the harvest of wild or planted crops. Craft seeds for flowers and decorative plants like goldenrod, chrysanthemum, aloe, and yucca.\nFarm plots cost 30% less to craft. Harvest 20% more resources from animals. Crouch to track rabbits, snakes and chickens. Deal 25% more damage to animals."
+perkFarmerITAVRank2Desc,progression,perk Pro,,,Hunter
+perkFarmerITAVRank2LongDesc,progression,perk Pro,,,"You can craft seeds for berries and vegetables.\n50% chance to harvest 1 additional crop.\nFarm plots cost 50% less to craft. Crouch to track deers, boars, wolves and coyotes. Harvest 60% more resources from animals."
+perkFarmerITAVRank3Desc,progression,perk Pro,,,Living off the Land
+perkFarmerITAVRank3LongDesc,progression,perk Pro,,,"Triple the harvest of wild or planted crops. Crouch to track mountain lions and bears. Harvest 100% more resources from animals, and gain a run speed boost when fighting zombie bears."
 perkFarmerITAVRank4Desc,progression,perk Pro,,,Artisan
 perkFarmerITAVRank4LongDesc,progression,perk Pro,,,"???."
 perkFarmerITAVRank5Desc,progression,perk Pro,,,Master
@@ -391,6 +425,14 @@ perkRunnerITAVRank4Desc,progression,perk Pro,,,Motorbiker
 perkRunnerITAVRank4LongDesc,progression,perk Pro,,,"Increases movement speed by 8%. Harvest 80% faster and recieve 80% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, quality 4 car batteries, more efficient stacks of gas cans and Advanced Mechanic's Table."
 perkRunnerITAVRank5Desc,progression,perk Pro,,,Limo out front
 perkRunnerITAVRank5LongDesc,progression,perk Pro,,,"Increases movement speed by 10%. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower. Harvest 100% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of 4x4 truck parts, Powerizer boots and quality 5 car batteries."
+
+perkDecoratorITAVDesc,progression,perk Pro,,,"Spice up your apocalypse"
+perkDecoratorITAVName,progression,perk Pro,,,Decorator
+perkDecoratorITAVRank1Desc,progression,perk Pro,,,"Dyes, Pocket, Flowers and Furniture"
+perkDecoratorITAVRank1LongDesc,progression,perk Pro,,,"Unlocks invisible dye, clothing pocket, clothes racks, coffee and soda machines, bathtub, single bed, planter, candelabra, logfire, wood burning stove, booths, pool table, signs, water cooler, trash cans, fridges, microwave ovens, front doors, shopping cart, terrarium, bar stools, decorative cooking pot, wine bottles, flowers, hanging moss, juniper and azalea."
+perkDecoratorITAVRank2Desc,progression,perk Pro,,,Lumination
+perkDecoratorITAVRank2LongDesc,progression,perk Pro,,,"Unlocks cargo pockets, shop sign, porch lights, table lamps, ceiling lamps and chandelier. Use the wireless fusebox to connect them to a power source."
+
 
 hasLearntSmelterITAVTooltip,items,Admin,,,"Profession: Smelter acquired"
 hasLearntMinerITAVTooltip,items,Admin,,,"Profession: Miner acquired"

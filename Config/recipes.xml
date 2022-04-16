@@ -1,5 +1,7 @@
 <configs>
 	
+	<remove xpath="//passive_effect[@name='CraftingIngredientCount']" />
+	
 	<setattribute xpath="//recipe[starts-with(@name, 'resource') and contains(@name, 'Bundle') and not(contains(@name, 'GunPowder'))]" name="craft_area">workbench</setattribute>
 	<append xpath="/recipes">
 	
@@ -16,15 +18,17 @@
 			<ingredient name="drinkCanEmpty" count="1" />
 		</recipe>
 		
+	</append>	
 		<!-- Standard work tables tweaking -->
 		<setattribute xpath="/recipes/recipe[@name='chemistryStation']/ingredient[@name='resourceForgedIron']" name="count">50</setattribute>
 		<setattribute xpath="/recipes/recipe[@name='chemistryStation']/ingredient[@name='resourceAcid']" name="count">2</setattribute>
 		<remove xpath="//recipe[@name='workbench']/ingredient[@name='meleeToolSalvageT1Wrench']" />		
 		<setattribute xpath="//recipe[@name='workbench']/ingredient[@name='resourceWood']" name="count">100</setattribute>
 		
-		
-		<!-- Advanced work tables -->		
-		<recipe name="workbenchMinerT2ITAV" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+
+		<!-- Advanced work tables -->
+	<append xpath="/recipes">			
+		<recipe name="workbenchMinerT2ITAV" count="1" craft_area="workbench" tags="learnable">
 			<ingredient name="foodChiliDog" count="10"/>
 			<ingredient name="resourceForgedSteel" count="100"/>
 			<ingredient name="resourceMetalPipe" count="50"/>
@@ -32,7 +36,7 @@
 			<ingredient name="resourceOil" count="50"/>
 		</recipe>		
 		
-		<recipe name="campfireT2ITAV" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<recipe name="campfireT2ITAV" count="1" craft_area="workbench" tags="learnable">
 			<ingredient name="scrapHatch_v1" count="1"/>
 			<ingredient name="resourceForgedSteel" count="100"/>
 			<ingredient name="resourceMetalPipe" count="50"/>
@@ -40,7 +44,7 @@
 			<ingredient name="resourceOil" count="15"/>
 		</recipe>		
 		
-		<recipe name="chemistryStationT2ITAV" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<recipe name="chemistryStationT2ITAV" count="1" craft_area="workbench" tags="learnable">
 			<ingredient name="toolBeaker" count="4"/>
 			<ingredient name="resourceForgedSteel" count="50"/>
 			<ingredient name="resourceDuctTape" count="10"/>
@@ -48,7 +52,7 @@
 			<ingredient name="resourceAcid" count="5"/>
 		</recipe>		
 		
-		<recipe name="workbenchRoboticsT2ITAV" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<recipe name="workbenchRoboticsT2ITAV" count="1" craft_area="workbench" tags="learnable">
 			<ingredient name="resourceElectricParts" count="50"/>
 			<ingredient name="resourceForgedSteel" count="100"/>
 			<ingredient name="resourceMetalPipe" count="20"/>
@@ -56,12 +60,26 @@
 			<ingredient name="resourceAcid" count="1"/>
 		</recipe>
 
-		<recipe name="workbenchRunnerT2ITAV" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<recipe name="workbenchRunnerT2ITAV" count="1" craft_area="workbench" tags="learnable">
 			<ingredient name="smallEngine" count="1"/>
 			<ingredient name="resourceForgedSteel" count="80"/>
 			<ingredient name="resourceMetalPipe" count="50"/>
 			<ingredient name="resourceMechanicalParts" count="50"/>
 			<ingredient name="resourceOil" count="15"/>
+		</recipe>	
+
+		<recipe name="workbenchDecoratorT1ITAV" count="1" tags="learnable">
+			<ingredient name="resourceWood" count="100"/>
+			<ingredient name="resourceForgedIron" count="40"/>
+			<ingredient name="resourceMetalPipe" count="25"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceOil" count="15"/>
+		</recipe>	
+	
+		<recipe name="workbenchFarmerT1ITAV" count="1" tags="learnable">
+			<ingredient name="resourceForgedIron" count="10"/>
+			<ingredient name="resourceMetalPipe" count="10"/>
+			<ingredient name="drinkJarBoiledWater" count="10"/>
 		</recipe>		
 		
 		
@@ -94,10 +112,10 @@
 			<ingredient name="resourceFeather" count="1000" />
 			<ingredient name="resourceRawDiamond" count="1" />
 		</recipe> -->
-		
+	</append>	
 				
 		<!-- Pretty things  -->
-
+	<append xpath="/recipes">
 		<recipe name="window03WoodITAV" count="1" craft_time="4"> 
 			<ingredient name="resourceWood" count="4"/>
 			<ingredient name="glassBlockVariantHelper" count="1"/>
@@ -113,100 +131,100 @@
 			<ingredient name="glassBulletproofBlockVariantHelper" count="1"/>
 		</recipe>		
 		
-		<recipe name="campfireDecoITAV" count="1" craft_time="10"> 
+		<recipe name="campfireDecoITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV" >   
 			<ingredient name="resourceWood" count="8" />
 		</recipe>	
 		
-		<recipe name="treeJuniper4m" count="1" craft_time="10">
+		<recipe name="treeJuniper4m" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceClayLump" count="10" />
 			<ingredient name="treePlantedMountainPine1m" count="10" />
 		</recipe>
 		
-		<recipe name="treeAzalea" count="1" craft_time="10"> 
+		<recipe name="treeAzalea" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceWood" count="4" />
 			<ingredient name="resourceClayLump" count="10" />
 			<ingredient name="resourceYuccaFibers" count="20" />
 		</recipe>	
 
-		<recipe name="forestFlowerITAV" count="4" craft_time="10"> 
+		<recipe name="forestFlowerITAV" count="4" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="resourceYuccaFibers" count="8" />
 		</recipe>
 
-		<recipe name="plantedGoldenrod3FlowerITAV" count="1" craft_time="10"> 
+		<recipe name="plantedGoldenrod3FlowerITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="resourceCropGoldenrodPlant" count="1" />
 		</recipe>
 
-		<recipe name="plantedChrysanthemum3FlowerITAV" count="1" craft_time="10"> 
+		<recipe name="plantedChrysanthemum3FlowerITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="resourceCropChrysanthemumPlant" count="1" />
 		</recipe>
 
-		<recipe name="plantedCoffee3FlowerITAV" count="1" craft_time="10"> 
+		<recipe name="plantedCoffee3FlowerITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="resourceCropCoffeeBeans" count="1" />
 		</recipe>
 
-		<recipe name="plantedAloe3FlowerITAV" count="1" craft_time="10"> 
+		<recipe name="plantedAloe3FlowerITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="resourceCropAloeLeaf" count="1" />
 		</recipe>
 
-		<recipe name="plantedYucca3FlowerITAV" count="1" craft_time="10"> 
+		<recipe name="plantedYucca3FlowerITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="foodCropYuccaFruit" count="1" />
 		</recipe>
 
-		<recipe name="plantedBlueberry3FlowerITAV" count="1" craft_time="10"> 
+		<recipe name="plantedBlueberry3FlowerITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="foodCropBlueberries" count="1" />
 		</recipe>
 
-		<recipe name="plantedPotato3FlowerITAV" count="1" craft_time="10"> 
+		<recipe name="plantedPotato3FlowerITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="foodCropPotato" count="1" />
 		</recipe>		
 			
-		<recipe name="plantedSnowberry3FlowerITAV" count="1" craft_time="10"> 
+		<recipe name="plantedSnowberry3FlowerITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="resourceYuccaFibers" count="4" />
 		</recipe>
 				
-		<recipe name="plantedPumpkin2FlowerITAV" count="1" craft_time="10"> 
+		<recipe name="plantedPumpkin2FlowerITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="foodCropPumpkin" count="1" />
 			<ingredient name="resourceCropGoldenrodPlant" count="1" />
 		</recipe>
 		
-		<recipe name="plantedPumpkin3FlowerITAV" count="1" craft_time="10"> 
+		<recipe name="plantedPumpkin3FlowerITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="foodCropPumpkin" count="1" />
 		</recipe>
 		
-		<recipe name="plantedCorn2FlowerITAV" count="1" craft_time="10"> 
+		<recipe name="plantedCorn2FlowerITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="foodCropCorn" count="1" />
 		</recipe>
 			
 
-		<recipe name="birdBathPlanterITAV" count="1" craft_time="10"> 
+		<recipe name="birdBathPlanterITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceClayLump" count="4" />
 			<ingredient name="resourceCobblestones" count="10" />
 		</recipe>		
 		
-		<recipe name="candelabraLight" count="1" craft_time="10">
+		<recipe name="candelabraLight" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="candle" count="3" />
 			<ingredient name="resourceCandleStick" count="3" />
 		</recipe>
 		
-		<recipe name="hangingMoss" count="2" craft_time="10"> 
+		<recipe name="hangingMoss" count="2" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV"> 
 			<ingredient name="resourceClayLump" count="1" />
 			<ingredient name="resourceCropGoldenrodPlant" count="8" />
 		</recipe>
-				
+	</append>			
 		<!-- Kitchen and more stuff  -->
-	
+	<append xpath="/recipes">	
 		<recipe name="cntFoodPileSmallITAV" count="1" craft_time="10" tags="learnable,perkCookITAV">
 			<ingredient name="drinkCanEmpty" count="5" />
 			<ingredient name="foodCanCatfood" count="3" />
@@ -223,60 +241,60 @@
 			<ingredient name="resourcePaint" count="3" />
 		</recipe>
 		
-		<recipe name="cntClothesRackRectanglePantsITAV" count="1" craft_time="10" tags="learnable">
+		<recipe name="cntClothesRackRectanglePantsITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceScrapIron" count="20"/>
 			<ingredient name="resourceMetalPipe" count="20"/>
 		</recipe>
 
-		<recipe name="cntClothesRackRectangleShirtsITAV" count="1" craft_time="10" tags="learnable">
+		<recipe name="cntClothesRackRectangleShirtsITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceScrapIron" count="20"/>
 			<ingredient name="resourceMetalPipe" count="20"/>
 		</recipe>
 
-		<recipe name="cntClothesRackRoundPantsITAV" count="1" craft_time="10" tags="learnable">
+		<recipe name="cntClothesRackRoundPantsITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceScrapIron" count="20"/>
 			<ingredient name="resourceMetalPipe" count="20"/>
 		</recipe>
 
-		<recipe name="cntClothesRackRoundShirtsITAV" count="1" craft_time="10" tags="learnable">
+		<recipe name="cntClothesRackRoundShirtsITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceScrapIron" count="20"/>
 			<ingredient name="resourceMetalPipe" count="20"/>
 		</recipe>	
 		
-		<recipe name="signBread01" count="1" craft_time="10" tags="learnable">
+		<recipe name="signBread01" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceWood" count="10" />
 			<ingredient name="resourcePaper" count="10" />
 			<ingredient name="resourcePaint" count="10" />
 		</recipe>
-		<recipe name="signBread02" count="1" craft_time="10" tags="learnable">
+		<recipe name="signBread02" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceWood" count="10" />
 			<ingredient name="resourcePaper" count="10" />
 			<ingredient name="resourcePaint" count="10" />
 		</recipe>
 		
-		<recipe name="decoCookingPotITAV" count="1" craft_time="10" tags="learnable">
+		<recipe name="decoCookingPotITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="3" />
 		</recipe>		
 		
-		<recipe name="decoWineBottle" count="1" craft_time="10">
+		<recipe name="decoWineBottle" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceBrokenGlass" count="10" />
 			<ingredient name="medicalBloodBag" count="1" />
 			<ingredient name="drinkJarBoiledWater" count="1" />
 		</recipe>
 		
-		<recipe name="decoWineBottleCorner" count="1" craft_time="10">
+		<recipe name="decoWineBottleCorner" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceBrokenGlass" count="10" />
 			<ingredient name="medicalBloodBag" count="1" />
 			<ingredient name="drinkJarBoiledWater" count="1" />
 		</recipe>
 		
-		<recipe name="decoWineBottleShelfRow" count="1" craft_time="10">
+		<recipe name="decoWineBottleShelfRow" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceBrokenGlass" count="10" />
 			<ingredient name="medicalBloodBag" count="1" />
 			<ingredient name="drinkJarBoiledWater" count="1" />
 		</recipe>
 		
-		<recipe name="decoReptileTerrarium" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="decoReptileTerrarium" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceBrokenGlass" count="20" />
 			<ingredient name="resourceYuccaFibers" count="6" />
 			<ingredient name="resourceCrushedSand" count="8" />
@@ -284,13 +302,13 @@
 			<ingredient name="resourceHeadlight" count="2" />
 		</recipe>	
 
-		<recipe name="barStoolVariantHelper" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="barStoolVariantHelper" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceScrapPolymers" count="5" />
 			<ingredient name="resourceForgedIron" count="1" />
 			<ingredient name="resourceDuctTape" count="1" />
 		</recipe>		
 		
-		<recipe name="bunkBedMade" count="1" craft_area="workbench" craft_time="10">
+		<recipe name="bunkBedMade" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceCloth" count="20"/>
 			<ingredient name="resourceCropCottonPlant" count="20"/>
 			<ingredient name="resourceSpring" count="10"/>
@@ -298,54 +316,54 @@
 			<ingredient name="resourceMetalPipe" count="5"/>
 		</recipe>
 
-		<recipe name="cntShoppingCartEmpty" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="cntShoppingCartEmpty" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceScrapPolymers" count="2"/>
 			<ingredient name="resourceScrapIron" count="20"/>
 			<ingredient name="drinkCanEmpty" count="4"/>
 			<ingredient name="resourceMetalPipe" count="16"/>
 		</recipe>		
 
-		<recipe name="cntMailBox01White" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="cntMailBox01White" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourcePaint" count="2"/>
 			<ingredient name="resourceScrapIron" count="10"/>
 			<ingredient name="resourceMetalPipe" count="4"/>
 		</recipe>
 		
-		<recipe name="houseFrontDoor1_v1" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="houseFrontDoor1_v1" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="resourceDoorKnob" count="1"/>
 			<ingredient name="resourceWood" count="30"/>
 			<ingredient name="resourceForgedIron" count="2"/>
 		</recipe>
 		
-		<recipe name="houseFrontDoor2_v1" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="houseFrontDoor2_v1" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourcePaint" count="10"/>
 			<ingredient name="resourceDoorKnob" count="1"/>
 			<ingredient name="resourceWood" count="30"/>
 			<ingredient name="resourceForgedIron" count="2"/>
 		</recipe>		
 		
-		<recipe name="cntMicrowaveOvenVer1Closed" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="cntMicrowaveOvenVer1Closed" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="2" />
 			<ingredient name="resourceScrapIron" count="10" />
 			<ingredient name="resourceBrokenGlass" count="10" />
 			<ingredient name="resourceElectricParts" count="3"/>
 		</recipe>
-		<recipe name="cntMicrowaveOvenVer2Closed" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="cntMicrowaveOvenVer2Closed" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="2" />
 			<ingredient name="resourceScrapIron" count="10" />
 			<ingredient name="resourceBrokenGlass" count="10" />
 			<ingredient name="resourceElectricParts" count="3"/>
 		</recipe>
 	
-		<recipe name="cntRetroFridgeVer1Closed" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="cntRetroFridgeVer1Closed" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="10" />
 			<ingredient name="resourceScrapIron" count="30" />
 			<ingredient name="resourceScrapPolymers" count="10" />
 			<ingredient name="resourceElectricParts" count="3"/>
 			<ingredient name="resourceMetalPipe" count="5"/>
 		</recipe>		
-		<recipe name="cntFridgeStainlessSteel" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="cntFridgeStainlessSteel" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedSteel" count="10" />
 			<ingredient name="resourceScrapIron" count="30" />
 			<ingredient name="resourceScrapPolymers" count="10" />
@@ -353,56 +371,56 @@
 			<ingredient name="resourceMetalPipe" count="5"/>
 		</recipe>
 		
-		<recipe name="cntDomedTrashCanEmpty" count="1" craft_area="workbench" craft_time="5" tags="learnable">
+		<recipe name="cntDomedTrashCanEmpty" count="1" craft_time="5" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="3" />
 		</recipe>		
-		<recipe name="cntDomedTrashCanCornerEmpty" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="cntDomedTrashCanCornerEmpty" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="3" />
 		</recipe>		
-		<recipe name="cntBruteStyleTrashCanEmpty" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="cntBruteStyleTrashCanEmpty" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceScrapPolymers" count="5" />
 			<ingredient name="resourceGlue" count="5" />
 			<ingredient name="resourceDuctTape" count="1" />
 		</recipe>		
 				
-		<recipe name="cntWaterCoolerFull" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="cntWaterCoolerFull" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceScrapPolymers" count="5" />
 			<ingredient name="drinkJarBoiledWater" count="1" />
 			<ingredient name="resourceDuctTape" count="1" />
 			<ingredient name="resourceMetalPipe" count="5"/>
 		</recipe>
 
-		<recipe name="signDinersMenu" count="1" craft_time="10" tags="learnable">
+		<recipe name="signDinersMenu" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourcePaint" count="5" />
 			<ingredient name="resourceWood" count="5" />
 			<ingredient name="resourcePaper" count="10" />
 		</recipe>
 		
-		<recipe name="signDinersMenu2m" count="1" craft_time="10" tags="learnable">
+		<recipe name="signDinersMenu2m" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourcePaint" count="5" />
 			<ingredient name="resourceWood" count="5" />
 			<ingredient name="resourcePaper" count="10" />
 		</recipe>
 		
-		<recipe name="signLaborDaySaleAd" count="1" craft_time="10" tags="learnable">
+		<recipe name="signLaborDaySaleAd" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourcePaint" count="5" />
 			<ingredient name="resourceWood" count="5" />
 			<ingredient name="resourcePaper" count="10" />
 		</recipe>
 		
-		<recipe name="signSale01" count="1" craft_time="10" tags="learnable">
+		<recipe name="signSale01" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourcePaint" count="5" />
 			<ingredient name="resourceWood" count="5" />
 			<ingredient name="resourcePaper" count="10" />
 		</recipe>
 		
-		<recipe name="signSale02" count="1" craft_time="10" tags="learnable">
+		<recipe name="signSale02" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourcePaint" count="5" />
 			<ingredient name="resourceWood" count="5" />
 			<ingredient name="resourcePaper" count="10" />
 		</recipe>
 		
-		<recipe name="decoPoolTable" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="decoPoolTable" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourcePaint" count="41" />
 			<ingredient name="foodCropPotato" count="21" />
 			<ingredient name="resourceWood" count="50" />
@@ -410,235 +428,72 @@
 			<ingredient name="resourceCloth" count="10" />
 		</recipe>
 	
-		<recipe name="cntWoodBurningStove" count="1" craft_area="workbench" craft_time="10" tags="learnable">
+		<recipe name="cntWoodBurningStove" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="100" />
 			<ingredient name="resourceWood" count="50" />
 			<ingredient name="resourceMetalPipe" count="10" />
 		</recipe>
+		
+		<recipe name="faucetBrass02" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceScrapBrass" count="100" />
+		</recipe>
+		
+		<recipe name="faucetBrass04" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceScrapBrass" count="100" />
+		</recipe>		
+		
+		<recipe name="cntCoffeeMakerITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="10" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="cntCoffeeMakerCommercialITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="20" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="cntSodaFountainITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="20" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
+		
+		<recipe name="decoClawFootBathTub" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="100" />
+			<ingredient name="resourceMetalPipe" count="10" />
+			<ingredient name="faucetBrass04" count="1" />
+			<ingredient name="resourceDoorKnob" count="4" />
+		</recipe>
+		
+		<recipe name="cntWasherClosed" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="100" />
+			<ingredient name="resourceMechanicalParts" count="50" />
+			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>
 				
-		<recipe name="officeChair01VariantHelper" count="1" craft_time="10">
+		<recipe name="officeChair01VariantHelper" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="4" />
 			<ingredient name="resourceLeather" count="8" />
 			<ingredient name="resourceMechanicalParts" count="4" />
 			<ingredient name="resourceCropCottonPlant" count="10" />
 		</recipe>
 		
-		<recipe name="restaurantBooth" count="1" craft_area="workbench" craft_time="10">
+		<recipe name="restaurantBoothVariantHelper" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceScrapPolymers" count="10" />
 			<ingredient name="resourceCropCottonPlant" count="20" />
 			<ingredient name="resourceWood" count="10" />
 			<ingredient name="resourceMetalPipe" count="10" />
 		</recipe>
 		
-		<recipe name="restaurantBoothBrown" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothRed" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothOrange" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothYellow" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothGreen" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothBlue" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothPurple" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothWhite" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothBlack" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothPink" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothCorner" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothCornerBrown" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothCornerRed" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothCornerOrange" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothCornerYellow" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothCornerGreen" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothCornerBlue" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothCornerPurple" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothCornerWhite" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothCornerBlack" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="restaurantBoothCornerPink" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceCropCottonPlant" count="20" />
-			<ingredient name="resourceWood" count="10" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="fastFoodBooth" count="1" craft_area="workbench" craft_time="10">
+		<recipe name="fastFoodBoothVariantHelper" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourcePaint" count="10" />
 			<ingredient name="resourceWood" count="30" />
 			<ingredient name="resourceMetalPipe" count="10" />
 		</recipe>
-		
-		<recipe name="fastFoodBoothBrown" craft_area="workbench" count="1" craft_time="10">
-			<ingredient name="resourcePaint" count="10" />
-			<ingredient name="resourceWood" count="30" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="fastFoodBoothRed" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourcePaint" count="10" />
-			<ingredient name="resourceWood" count="30" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="fastFoodBoothOrange" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourcePaint" count="10" />
-			<ingredient name="resourceWood" count="30" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="fastFoodBoothYellow" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourcePaint" count="10" />
-			<ingredient name="resourceWood" count="30" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="fastFoodBoothGreen" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourcePaint" count="10" />
-			<ingredient name="resourceWood" count="30" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="fastFoodBoothPurple" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourcePaint" count="10" />
-			<ingredient name="resourceWood" count="30" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="fastFoodBoothGrey" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourcePaint" count="10" />
-			<ingredient name="resourceWood" count="30" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="fastFoodBoothWhite" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourcePaint" count="10" />
-			<ingredient name="resourceWood" count="30" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
-		
-		<recipe name="fastFoodBoothBlack" count="1" craft_area="workbench" craft_time="10">
-			<ingredient name="resourcePaint" count="10" />
-			<ingredient name="resourceWood" count="30" />
-			<ingredient name="resourceMetalPipe" count="10" />
-		</recipe>
+	</append>	
 
 		
 		<!-- Powerizer Boots  -->
+	<append xpath="/recipes">	
 		<recipe name="powerizersITAV" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting,perkRunnerITAV">
 			<ingredient name="resourceRawDiamond" count="4" />
 			<ingredient name="resourceSpring" count="6" />
@@ -673,14 +528,40 @@
 			<ingredient name="resourceScrapPolymers" count="20" />
 			<ingredient name="resourceDuctTape" count="10"/>
 		</recipe>
-		
+	</append>
+	
 		<!-- Misc -->
+	<append xpath="/recipes">	
 		<recipe name="modArmorBallCap" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 			<ingredient name="resourceCloth" count="10"/>
 			<ingredient name="resourceScrapPolymers" count="2"/>
 			<ingredient name="resourceDuctTape" count="2"/>
 			<ingredient name="resourceSewingKit" count="1"/>
+		</recipe>		
+		
+		<recipe name="modDyeInvisibleITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="10"/>
+			<ingredient name="resourceBrokenGlass" count="10"/>
+			<ingredient name="resourcePaint" count="100"/>
+			<ingredient name="resourceSewingKit" count="1"/>
+		</recipe>			
+		
+		<recipe name="modArmorHazmatBootsITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modArmorDoubleStoragePocket" count="1"/>
 		</recipe>	
+		
+		<recipe name="modArmorHazmatMaskITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modArmorDoubleStoragePocket" count="1"/>
+		</recipe>	
+		
 		
 		<recipe name="crushedCars" count="1" tag="learnable,perkRunnerITAV">
 			<ingredient name="resourceCarFrameITAV" count="2"/>
@@ -690,82 +571,219 @@
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="1"/>
 		</recipe>
-		
+	</append>
+	
 		<!-- Powered Lights -->
-		<recipe name="LightchandelierLightITAV" count="1" craft_time="10">
+	<append xpath="/recipes">
+
+		<recipe name="LightwallLight01ITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="4"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
+			<ingredient name="resourceElectricParts" count="2"/>
+		</recipe>
+	
+		<recipe name="LightchandelierLightITAV" craft_area="workbenchDecoratorT1ITAV" count="1" craft_time="10" tags="perkDecoratorITAV,learnable">
 			<ingredient name="resourceScrapBrass" count="200" />
 			<ingredient name="resourceElectricParts" count="3" />
 		</recipe>	
 		
-		<recipe name="LightStreetLightClassicITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
+		<recipe name="LightStreetLightClassicITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="25"/>
 			<ingredient name="resourceBrokenGlass" count="6"/>
 			<ingredient name="resourceElectricParts" count="3"/>
 		</recipe>
 		
-		<recipe name="signShopOpenLightITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
+		<recipe name="signShopOpenLightITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceBrokenGlass" count="6"/>
 			<ingredient name="resourceElectricParts" count="1"/>
 		</recipe>
 		
-		<recipe name="LightDeskLampLightITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
+		<recipe name="LightDeskLampLightITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="4"/>
 			<ingredient name="resourceBrokenGlass" count="4"/>
 			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe>
 		
-		<recipe name="LightTableLampLightITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
+		<recipe name="LightTableLampLightITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="4"/>
 			<ingredient name="resourceBrokenGlass" count="4"/>
 			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe>
 
 		<!-- Block was indestructible and thus had to be removed.
-		<recipe name="LightTableLampLightCenteredITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
+		<recipe name="LightTableLampLightCenteredITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkSmelterITAV">
 			<ingredient name="resourceForgedIron" count="4"/>
 			<ingredient name="resourceBrokenGlass" count="4"/>
 			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe> -->
 
-		<recipe name="LightPorchLight01ITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
+		<recipe name="LightPorchLight01ITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="4"/>
 			<ingredient name="resourceBrokenGlass" count="4"/>
 			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe>
 		
-		<recipe name="LightPorchLight04BrassITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
+		<recipe name="LightPorchLight04BrassITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="4"/>
 			<ingredient name="resourceBrokenGlass" count="4"/>
 			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe>
 		
-		<recipe name="LightPorchLight04ITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
+		<recipe name="LightPorchLight04ITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="4"/>
 			<ingredient name="resourceBrokenGlass" count="4"/>
 			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe>
 		
-		<recipe name="LightCeilingLight02ITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
+		<recipe name="LightCeilingLight02ITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="4"/>
 			<ingredient name="resourceBrokenGlass" count="4"/>
 			<ingredient name="resourceElectricParts" count="2"/>
 		</recipe>
 		
-		<recipe name="LightCeilingLight02BrassITAV" count="1" craft_area="workbench" tags="learnable,perkSmelterITAV">
+		<recipe name="LightCeilingLight02BrassITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="4"/>
 			<ingredient name="resourceBrokenGlass" count="4"/>
 			<ingredient name="resourceElectricParts" count="2"/>
+		</recipe>
+		
+		<recipe name="LightEndTableLampITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="4"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
+			<ingredient name="resourceElectricParts" count="2"/>
+			<ingredient name="resourceWood" count="50"/>
 		</recipe>
 	
 	</append>
 	
+	<!-- New food recipes -->
+	<append xpath="//recipes">		
+		<recipe name="foodCharredMeat" count="1" craft_area="campfire" tags="perkCookITAV">
+			<ingredient name="foodRawChickenMeatITAV" count="5"/>
+		</recipe>
+		
+		<recipe name="foodBoiledMeat" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable,perkCookITAV">
+			<ingredient name="foodRawChickenMeatITAV" count="5" />
+			<ingredient name="drinkJarBoiledWater" count="1" />
+			<ingredient name="drinkCanEmpty" count="1"/>
+		</recipe>
+		
+		<recipe name="foodGrilledMeat" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="learnable,perkCookITAV">
+			<ingredient name="foodRawChickenMeatITAV" count="5" />
+		</recipe>
+		
+		<recipe name="foodRawChickenMeatPreparedITAV" count="1" craft_area="workbenchFarmerT1ITAV" tags="learnable,perkFarmerITAV">
+			<ingredient name="foodRawChickenMeatITAV" count="5"/>
+		</recipe>
+		
+		<recipe name="foodRawChickenMeatPreparedITAV" count="1" tags="learnable,perkCookITAV,perkFarmerITAV">
+			<ingredient name="foodRawChickenMeatITAV" count="6"/>
+		</recipe>		
+		
+		<recipe name="foodRawMeatPreparedITAV" count="1" craft_area="workbenchFarmerT1ITAV" tags="learnable,perkFarmerITAV">
+			<ingredient name="foodRawMeat" count="5"/>
+		</recipe>
+		
+		<recipe name="foodRawMeatPreparedITAV" count="1" tags="learnable,perkCookITAV">
+			<ingredient name="foodRawMeat" count="6"/>
+		</recipe>
+		
+		<recipe name="foodChickenBrothITAV" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="400" tags="learnable,perkCookITAV">
+			<ingredient name="foodRawChickenMeatPreparedITAV" count="3"/>
+			<ingredient name="drinkJarBoiledWater" count="5"/>
+			<ingredient name="resourceBone" count="5"/>
+		</recipe>
+		
+		<recipe name="foodMeatBrothITAV" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="400" tags="learnable,perkCookITAV">
+			<ingredient name="foodRawMeatPreparedITAV" count="3"/>
+			<ingredient name="drinkJarBoiledWater" count="5"/>
+			<ingredient name="resourceBone" count="5"/>
+		</recipe>
+		
+		<recipe name="foodVegetableBrothITAV" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="400" tags="learnable,perkCookITAV">
+			<ingredient name="foodCropMushrooms" count="4"/>
+			<ingredient name="foodCropYuccaFruit" count="6"/>
+			<ingredient name="drinkJarBoiledWater" count="5"/>
+		</recipe>
+		
+		<recipe name="foodVegetableBrothITAV" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="400" tags="learnable,perkCookITAV">
+			<ingredient name="foodCropCorn" count="6"/>
+			<ingredient name="foodCropPumpkin" count="4"/>
+			<ingredient name="drinkJarBoiledWater" count="5"/>
+		</recipe>
+		
+		<recipe name="foodChickenSoupITAV" count="3" craft_area="campfire" craft_tool="toolCookingPot" craft_time="120" tags="learnable,perkCookITAV">
+			<ingredient name="foodRawChickenMeatPreparedITAV" count="2"/>
+			<ingredient name="foodChickenBrothITAV" count="2"/>
+			<ingredient name="foodCropCorn" count="3"/>
+			<ingredient name="foodCropMushrooms" count="5"/>
+		</recipe>
+				
+		<recipe name="foodChickenSoupSpicyITAV" count="3" craft_area="campfireT2ITAV" craft_time="180" tags="learnable,perkCookITAV">
+			<ingredient name="foodRawChickenMeatPreparedITAV" count="2"/>
+			<ingredient name="foodChickenBrothITAV" count="2"/>
+			<ingredient name="foodCropCorn" count="3"/>
+			<ingredient name="foodCropMushrooms" count="5"/>
+			<ingredient name="foodSrirachaKetchupSpiceITAV" count="1"/>
+		</recipe>
+		
+		<recipe name="foodChickenStewITAV" count="3" craft_area="campfire" craft_tool="toolCookingPot" craft_time="120" tags="learnable,perkCookITAV">
+			<ingredient name="foodRawChickenMeatPreparedITAV" count="2"/>
+			<ingredient name="foodChickenBrothITAV" count="2"/>
+			<ingredient name="foodCropPotato" count="4"/>
+			<ingredient name="foodCropPumpkin" count="3"/>
+			<ingredient name="resourceAnimalFat" count="1"/>
+		</recipe>
+		
+		<recipe name="drinkJarCoffeeSpicyITAV" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable,perkCookITAV">
+			<ingredient name="drinkJarCoffee" count="1" />
+			<ingredient name="foodSrirachaKetchupSpiceITAV" count="1" />
+		</recipe>
+		
+		<recipe name="foodChickenEmpanadasITAV" count="3" craft_area="campfire" craft_tool="toolCookingGrill" craft_time="120" tags="learnable,perkCookITAV">
+			<ingredient name="foodRawChickenMeatPreparedITAV" count="2" />
+			<ingredient name="foodSrirachaKetchupSpiceITAV" count="1" />
+			<ingredient name="foodCornMeal" count="10" />
+			<ingredient name="foodCanPeas" count="1" />
+			
+		</recipe>
+
+		
+	</append>
+	
 	<!-- Tweaking recipes -->
 	<setattribute xpath="//recipe[@name='foodBaconAndEggs']/ingredient[@name='foodEgg']" name="count">1</setattribute> 
+	<setattribute xpath="//recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']" name="count">1</setattribute> 
+	<setattribute xpath="//recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']" name="foodRawMeat">foodRawMeatPreparedITAV</setattribute> 
+	
+	<append xpath="//recipe[@name='foodVegetableStew']"><ingredient name="foodVegetableBrothITAV" count="1"/></append>
+	<setattribute xpath="//recipe[@name='foodVegetableStew']" name="count">4</setattribute>
+
+	<setattribute xpath="//recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']" name="count">2</setattribute>
+	<setattribute xpath="//recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']" name="name">foodRawMeatPreparedITAV</setattribute>
+	<setattribute xpath="//recipe[@name='foodMeatStew']/ingredient[@name='drinkJarBoiledWater']" name="count">2</setattribute>
+	<setattribute xpath="//recipe[@name='foodMeatStew']/ingredient[@name='drinkJarBoiledWater']" name="name">foodMeatBrothITAV</setattribute>
+	<setattribute xpath="//recipe[@name='foodMeatStew']" name="count">3</setattribute>
+
+	<setattribute xpath="//recipe[@name='foodHoboStew']" name="count">3</setattribute>
+	<remove xpath="//recipe[@name='foodHoboStew']/ingredient" />
+	<append xpath="//recipe[@name='foodHoboStew']">
+		<ingredient name="foodRottingFlesh" count="30" />
+		<ingredient name="foodVegetableBrothITAV" count="1"/>
+		<ingredient name="resourceAnimalFat" count="3" />
+	</append>
+	
+	<setattribute xpath="//recipe[@name='foodGumboStew']" name="count">2</setattribute>
+	<setattribute xpath="//recipe[@name='foodGumboStew']/ingredient[@name='foodCanStock']" name="name">foodMeatBrothITAV</setattribute>
+	<setattribute xpath="//recipe[@name='foodGumboStew']/ingredient[@name='drinkJarBoiledWater']" name="name">foodVegetableBrothITAV</setattribute>
+	<setattribute xpath="//recipe[@name='foodGumboStew']/ingredient[@name='resourceAnimalFat']" name="count">1</setattribute>
+	
 	<remove xpath="//recipe[@name='resourceLockPick']/ingredient[@name='resourceMechanicalParts']" />
 	<remove xpath="//recipe[@name='resourceLockPickBundle']/ingredient[@name='resourceMechanicalParts']" />
 	<setattribute xpath="recipes/recipe[@name='armorMilitaryStealthBoots']/ingredient[@name='armorMilitarySetParts']" name="count">6</setattribute>
 	<setattribute xpath="//recipe[(@name='resourcePaper') and (@craft_area='chemistryStation')]" name="count">20</setattribute>
+	<append xpath="//recipe[@name='foodBoiledMeat']"><ingredient name="drinkCanEmpty" count="1"/></append>
 	
 	
 	<!-- Removing GyroCopter -->
@@ -781,7 +799,9 @@
 	<setattribute xpath="//recipe[@name='bladeTrap']" name="tags">learnable,perkRoboticsITAV</setattribute>
 	<setattribute xpath="//recipe[@name='dartTrap']" name="tags">learnable,perkRoboticsITAV</setattribute>
 	<setattribute xpath="//recipe[@name='shotgunTurret']" name="tags">learnable,perkRoboticsITAV</setattribute>
-	<setattribute xpath="//recipe[@name='autoTurret']" name="tags">learnable,perkRoboticsITAV</setattribute>	
+	<setattribute xpath="//recipe[@name='autoTurret']" name="tags">learnable,perkRoboticsITAV</setattribute>		
+	<setattribute xpath="//recipe[@name='modClothingStoragePocket']" name="tags">learnable,perkDecoratorITAV</setattribute>
+	<setattribute xpath="//recipe[@name='modClothingCargoStoragePocket']" name="tags">learnable,perkDecoratorITAV</setattribute>
 	
 	<!-- Updating recipes to being tagged with ITAV on top of old perks -->
 	<append xpath="/recipes/recipe[contains(@tags, 'perkAdvancedEngineering')]/@tags">,perkSmelterITAV</append>
@@ -915,7 +935,7 @@
 	<!-- Moving craft_areas for advanced recipes to advanced ITAV worktables -->
 	<setattribute xpath="//recipe[@name='meleeToolPickT3Auger' or @name='meleeToolAxeT3Chainsaw']" name="craft_area">workbenchMinerT2ITAV</setattribute>
 		
-	<setattribute xpath="//recipe[@name='foodShamChowder' or @name='foodHoboStew' or @name='foodFishTacos' or @name='drinkYuccaJuiceSmoothie' or @name='foodChiliDog' or @name='drinkJarBeer' or @name='foodGumboStew' or @name='foodShepardsPie' or @name='foodSpaghetti' or @name='foodTunaFishGravyToast' or @name='drinkJarGrandpasMoonshine' or @name='drinkJarGrandpasAwesomeSauce' or @name='drinkJarGrandpasLearningElixir']" name="craft_area">campfireT2ITAV</setattribute>
+	<setattribute xpath="//recipe[@name='foodGumboStew' or @name='foodShepardsPie' or @name='foodSpaghetti' or @name='foodTunaFishGravyToast' or @name='drinkJarGrandpasMoonshine' or @name='drinkJarGrandpasAwesomeSauce' or @name='drinkJarGrandpasLearningElixir']" name="craft_area">campfireT2ITAV</setattribute>
 
     <setattribute xpath="//recipe[@name='medicalFirstAidKit' or @name='drugSteroids' or @name='drugFortBites' or @name='drugRecog' or (contains(@name, 'drugAntibiotics') and not(contains(@craft_area, 'campfire')))]" name="craft_area">chemistryStationT2ITAV</setattribute>
 

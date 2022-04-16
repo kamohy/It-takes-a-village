@@ -74,30 +74,24 @@
 
 <!-- PERKS -->
 <append xpath="/progression">
-<perks min_level="0" max_level="5" base_skill_point_cost="3" cost_multiplier_per_level="0.82" max_level_ratio_to_parent="5">
+<perks min_level="0" max_level="2" base_skill_point_cost="2" cost_multiplier_per_level="1.3" max_level_ratio_to_parent="5">
 	<!-- Smelter perk -->
-	<perk name="perkSmelterITAV" parent="attITAV" name_key="perkSmelterITAVName" max_level="4" desc_key="perkSmelterITAVDesc" icon="ui_game_symbol_workbench">		
+	<perk name="perkSmelterITAV" parent="attITAV" name_key="perkSmelterITAVName" max_level="2" desc_key="perkSmelterITAVDesc" icon="ui_game_symbol_workbench">		
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="reqAttLevel03ITAV"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="reqAttLevel05ITAV"/></level_requirements>
-		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="reqAttLevel07ITAV"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="8" desc_key="reqAttLevel08ITAV"/></level_requirements>
 
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_set" level="0,4" value="0,4" tags="perkSmelterITAV"/><!-- fake crafting perk that is used to scale resources. perkAdvancedEngineering -->
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,4" value="1" tags="forge,resourceForgedIron"/>
-			<passive_effect name="CraftingTime" operation="perc_add" level="1,4" value="-0.2" tags="perkSmelterITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,4" value="1" tags="workbench,chemistryStation,cementMixer"/>
-			<passive_effect name="CraftingTime" operation="perc_add" level="2,4" value="-0.2" tags="workbenchCrafting,cementMixerCrafting"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,4" value="1" tags="resourceMilitaryFiber,generatorbank,electricwirerelay,switch,ceilingLight01_player,industrialLight01_player,industrialLight02_player,armorMiningHelmet,spotlightPlayer,speaker,pressureplate,pressureplateLong,electrictimerrelay,motionsensor,LightStreetLightClassicITAV,signShopOpenLightITAV,LightDeskLampLightITAV,LightTableLampLightITAV,LightTableLampLightCenteredITAV,LightPorchLight01ITAV,LightPorchLight04BrassITAV,LightPorchLight04ITAV,LightCeilingLight02ITAV,LightCeilingLight02BrassITAV,wirelessRelayFuseboxLightITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4" value="1" tags="toolForgeCrucible,resourceForgedSteel,batterybank,meleeToolRepairT3Nailgun,garageDoorMetal_v1Powered,garageDoorIndustrial_Powered,metalReinforcedWoodDrawBridgePowered,vaultHatch_v3_Powered,vaultDoor03_Powered"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="0,2" value="0,2" tags="perkSmelterITAV"/><!-- fake crafting perk that is used to scale resources. perkAdvancedEngineering -->
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,4" value="1" tags="forge,resourceForgedIron,workbench,chemistryStation,cementMixer,resourceMilitaryFiber,generatorbank,electricwirerelay,switch,ceilingLight01_player,industrialLight01_player,industrialLight02_player,armorMiningHelmet,spotlightPlayer,speaker,pressureplate,pressureplateLong,electrictimerrelay,motionsensor,wirelessRelayFuseboxLightITAV"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2" value="-0.2" tags="perkSmelterITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,2" value="1" tags="toolForgeCrucible,resourceForgedSteel,batterybank,meleeToolRepairT3Nailgun,garageDoorMetal_v1Powered,garageDoorIndustrial_Powered,metalReinforcedWoodDrawBridgePowered,vaultHatch_v3_Powered,vaultDoor03_Powered"/>
 
 			<effect_description level="1" desc_key="perkSmelterITAVRank1Desc" long_desc_key="perkSmelterITAVRank1LongDesc"/>
 			<effect_description level="2" desc_key="perkSmelterITAVRank2Desc" long_desc_key="perkSmelterITAVRank2LongDesc"/>
-			<effect_description level="3" desc_key="perkSmelterITAVRank3Desc" long_desc_key="perkSmelterITAVRank3LongDesc"/>
-			<effect_description level="4" desc_key="perkSmelterITAVRank4Desc" long_desc_key="perkSmelterITAVRank4LongDesc"/>
 		</effect_group>
 	</perk>
-
+</perks>
+<perks min_level="0" max_level="5" base_skill_point_cost="3" cost_multiplier_per_level="0.82" max_level_ratio_to_parent="5">
 	<!-- Miner perk -->
 	<perk name="perkMinerITAV" parent="attITAV" name_key="perkMinerITAVName" desc_key="perkMinerITAVDesc" icon="ui_game_symbol_mining" tags="learnable">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
@@ -124,68 +118,13 @@
 		<!-- Motherlode effects to MinerITAV -->
 		<effect_group>
 			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="oreWoodHarvest" /> <!-- value=".2,1" -->
-			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value="2.2,4.2" tags="rockClayHarvest"/>
-			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value="-.1,-.4" tags="Harvesting">
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="rockClayHarvest"/> <!-- value="2.2,4.2" -->
+			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value="-.2,-.6" tags="Harvesting"> <!-- value="-.1,-.4" -->
 				<requirement name="HoldingItemHasTags" tags="perkMinerITAV"/>
 			</passive_effect>
         </effect_group>		
 	</perk>
 
-	<!-- Hunter Perk -->
-	<perk name="perkHunterITAV" max_level="3" parent="attITAV" name_key="perkHunterITAVName" desc_key="perkHunterITAVDesc" icon="ui_game_symbol_archery">
-        <level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
-        <level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="reqAttLevel03ITAV"/></level_requirements>
-        <level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="reqAttLevel05ITAV"/></level_requirements>
-        <level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="reqAttLevel07ITAV"/></level_requirements>
-        <level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="reqAttLevel10ITAV"/></level_requirements>
-
-        <!-- Adding Huntsman -->
-        <effect_group>
-            <!-- stone axe, knives, etc do the base_set 1 -->
-            <passive_effect name="HarvestCount" operation="perc_add" level="1,3" value=".2,1" tags="butcherHarvest"/>
-
-            <effect_description level="1" desc_key="perkTheHuntsmanRank1Desc" long_desc_key="perkHunterITAVRank1LongDesc"/>
-            <!-- <effect_description level="2" desc_key="perkTheHuntsmanRank2Desc" long_desc_key="perkTheHuntsmanRank2LongDesc"/>
-            <effect_description level="3" desc_key="perkTheHuntsmanRank3Desc" long_desc_key="perkTheHuntsmanRank3LongDesc"/>
-            <effect_description level="4" desc_key="perkTheHuntsmanRank4Desc" long_desc_key="perkTheHuntsmanRank4LongDesc"/> -->
-            <effect_description level="2" desc_key="perkHunterITAVRank2Desc" long_desc_key="perkHunterITAVRank2LongDesc"/>
-			<effect_description level="3" desc_key="perkHunterITAVRank3Desc" long_desc_key="perkHunterITAVRank3LongDesc"/>
-        </effect_group>
-	
-		<!-- Adding Animal tracking -->
-        <effect_group>
-                <passive_effect name="TrackDistance" operation="base_set" level="0,1,3" value="0,100,100"/>
-            <triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffAnimalTracker">
-                <requirement name="NotHasBuff" buff="buffAnimalTrackerAcquired"/>
-                <requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="GT" value="0"/>
-            </triggered_effect>
-
-            <effect_description level="1" desc_key="perkAnimalTrackerRank1Desc" long_desc_key="perkAnimalTrackerRank1LongDesc"/>
-            <effect_description level="2" desc_key="perkAnimalTrackerRank2Desc" long_desc_key="perkAnimalTrackerRank2LongDesc"/>
-            <effect_description level="3" desc_key="perkAnimalTrackerRank3Desc" long_desc_key="perkAnimalTrackerRank3LongDesc"/>
-        </effect_group>
-
-        <!-- Adding Animal Damage -->
-        <effect_group>
-            <passive_effect name="EntityDamage" operation="perc_add" level="1" value=".25"/>
-            <requirement name="EntityTagCompare" target="other" tags="animal"/>
-        </effect_group>
-		
-		<!-- Adding Megacrush buff on damaging zombie bears -->
-         <effect_group>
-			<requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="Equals" value="3" />
-            <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="buffMegaCrush" >
-                <requirement name="EntityTagCompare" target="other" tags="entityITAV"/>
-            </triggered_effect>
-            <triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="add" value="10">
-                <requirement name="EntityTagCompare" target="other" tags="entityITAV"/>
-            </triggered_effect>
-            <triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="set" value="30">
-                <requirement name="CVarCompare" cvar="$buffMegaCrushDuration" operation="GT" value="30"/>
-                <requirement name="EntityTagCompare" target="other" tags="entityITAV"/>
-            </triggered_effect>
-        </effect_group>		
-    </perk>
 
 	<!-- Cook perk -->
     <perk name="perkCookITAV" parent="attITAV" name_key="perkCookITAVName" desc_key="perkCookITAVDesc" icon="ui_game_symbol_spatula">
@@ -200,15 +139,15 @@
             <passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-.1,-.5" tags="perkCookITAV"/>
 
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1"
-                tags="foodBaconAndEggs,foodBoiledMeat,foodGrilledMeat,foodBakedPotato,foodCornBread,foodCornOnTheCob,drinkJarRedTea,drinkJarCoffee,drinkJarGoldenRodTea"/>
+                tags="foodRawChickenMeatPreparedITAV,foodRawMeatPreparedITAV,foodBaconAndEggs,foodBoiledMeat,foodGrilledMeat,foodBakedPotato,foodCornBread,foodCornOnTheCob,drinkJarRedTea,drinkJarCoffee,drinkJarGoldenRodTea"/>
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1"
-                tags="foodSteakAndPotato,foodBlueberryPie,foodMeatStew,foodVegetableStew,foodPumpkinPie,foodPumpkinCheesecake,foodPumpkinBread,cntFoodPileSmallITAV"/>
+                tags="foodChickenBrothITAV,foodMeatBrothITAV,foodVegetableBrothITAV,foodSteakAndPotato,foodBlueberryPie,foodMeatStew,foodVegetableStew,foodPumpkinPie,foodPumpkinCheesecake,foodPumpkinBread,drinkJarCoffeeSpicyITAV,cntFoodPileSmallITAV"/>
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1"
-                tags="foodShamChowder,foodHoboStew,foodFishTacos,drinkYuccaJuiceSmoothie,foodChiliDog,drinkJarBeer"/>
+                tags="foodShamChowder,foodHoboStew,foodFishTacos,drinkYuccaJuiceSmoothie,foodChiliDog,drinkJarBeer,foodChickenStewITAV,foodChickenSoupITAV,foodChickenEmpanadasITAV"/>
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1"
-                tags="foodGumboStew,foodShepardsPie,foodSpaghetti,foodTunaFishGravyToast,cntFoodPileMediumITAV,campfireT2ITAV"/>
+                tags="foodGumboStew,foodShepardsPie,foodSpaghetti,foodTunaFishGravyToast,foodChickenSoupSpicyITAV,cntFoodPileMediumITAV,campfireT2ITAV"/>
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1"
-                tags="drinkJarGrandpasMoonshine,drinkJarGrandpasAwesomeSauce,drinkJarGrandpasLearningElixir,cntFoodPileLargeITAV"/>
+                tags="drinkJarGrandpasMoonshine,drinkJarGrandpasLearningElixir,cntFoodPileLargeITAV"/>
 				
 			<effect_description level="1" desc_key="perkMasterChefRank1Desc" long_desc_key="perkMasterChefRank1LongDesc"/>
             <effect_description level="2" desc_key="perkMasterChefRank2Desc" long_desc_key="perkCookITAVRank2LongDesc"/>
@@ -247,24 +186,64 @@
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="reqAttLevel03ITAV"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="reqAttLevel05ITAV"/></level_requirements>
-		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="reqAttLevel07ITAV"/></level_requirements>
-		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="reqAttLevel10ITAV"/></level_requirements>
 		
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkLivingOffTheLandCrafting"/><!-- fake crafting perk that is used to scale resources -->
+			<passive_effect name="CraftingTier" operation="base_set" level="0,3" value="0,3" tags="perkLivingOffTheLandCrafting"/><!-- fake crafting perk that is used to scale resources -->
 
 			<passive_effect name="HarvestCount" operation="perc_add" level="1,2,3" value="1,1,2" tags="cropHarvest,wildCropsHarvest"/>
 			<passive_effect name="HarvestCount" operation="base_set" level="2,3" value="1,1" tags="bonusCropHarvest"/>
 			
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="plantedAloe1,plantedChrysanthemum1,plantedGoldenrod1,plantedYucca1"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="workbenchFarmerT1ITAV,foodRawChickenMeatPreparedITAV,foodRawMeatPreparedITAV,plantedAloe1,plantedChrysanthemum1,plantedGoldenrod1,plantedYucca1"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="plantedBlueberry1,plantedCoffee1,plantedCorn1,plantedCotton1,plantedMushroom1,plantedPotato1,plantedHop1,plantedPumpkin1,plantedGraceCorn1"/>
 
 			<effect_description level="1" desc_key="perkFarmerITAVRank1Desc" long_desc_key="perkFarmerITAVRank1LongDesc"/>
 			<effect_description level="2" desc_key="perkFarmerITAVRank2Desc" long_desc_key="perkFarmerITAVRank2LongDesc"/>
 			<effect_description level="3" desc_key="perkFarmerITAVRank3Desc" long_desc_key="perkFarmerITAVRank3LongDesc"/>
-			<effect_description level="4" desc_key="perkFarmerITAVRank4Desc" long_desc_key="perkFarmerITAVRank4LongDesc"/>
-			<effect_description level="5" desc_key="perkFarmerITAVRank5Desc" long_desc_key="perkFarmerITAVRank5LongDesc"/>
 		</effect_group>
+		
+		<!-- Adding Huntsman -->
+        <effect_group>
+            <!-- stone axe, knives, etc do the base_set 1 -->
+            <passive_effect name="HarvestCount" operation="perc_add" level="1,3" value=".2,1" tags="butcherHarvest"/>
+            <!-- <effect_description level="1" desc_key="perkTheHuntsmanRank1Desc" long_desc_key="perkHunterITAVRank1LongDesc"/>
+            <effect_description level="2" desc_key="perkHunterITAVRank2Desc" long_desc_key="perkHunterITAVRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkHunterITAVRank3Desc" long_desc_key="perkHunterITAVRank3LongDesc"/> -->
+        </effect_group>
+	
+		<!-- Adding Animal tracking -->
+        <effect_group>
+                <passive_effect name="TrackDistance" operation="base_set" level="0,1,3" value="0,100,100"/>
+            <triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffAnimalTracker">
+                <requirement name="NotHasBuff" buff="buffAnimalTrackerAcquired"/>
+                <requirement name="ProgressionLevel" progression_name="perkFarmerITAV" operation="GT" value="0"/>
+            </triggered_effect>
+
+            <effect_description level="1" desc_key="perkAnimalTrackerRank1Desc" long_desc_key="perkAnimalTrackerRank1LongDesc"/>
+            <effect_description level="2" desc_key="perkAnimalTrackerRank2Desc" long_desc_key="perkAnimalTrackerRank2LongDesc"/>
+            <effect_description level="3" desc_key="perkAnimalTrackerRank3Desc" long_desc_key="perkAnimalTrackerRank3LongDesc"/>
+        </effect_group>
+
+        <!-- Adding Animal Damage -->
+        <effect_group>
+            <passive_effect name="EntityDamage" operation="perc_add" level="1" value=".25"/>
+            <requirement name="EntityTagCompare" target="other" tags="animal"/>
+        </effect_group>
+		
+		<!-- Adding Megacrush buff on damaging zombie bears -->
+         <effect_group>
+			<requirement name="ProgressionLevel" progression_name="perkFarmerITAV" operation="Equals" value="3" />
+            <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="buffMegaCrush" >
+                <requirement name="EntityTagCompare" target="other" tags="entityITAV"/>
+            </triggered_effect>
+            <triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="add" value="10">
+                <requirement name="EntityTagCompare" target="other" tags="entityITAV"/>
+            </triggered_effect>
+            <triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="set" value="30">
+                <requirement name="CVarCompare" cvar="$buffMegaCrushDuration" operation="GT" value="30"/>
+                <requirement name="EntityTagCompare" target="other" tags="entityITAV"/>
+            </triggered_effect>
+        </effect_group>	
+		
 	</perk>
 	
 		<!-- Chemist perk-->
@@ -366,7 +345,23 @@
 
 		</effect_group>
 	</perk>
+	
 </perks>	
+<perks min_level="0" max_level="2" base_skill_point_cost="1" cost_multiplier_per_level="1" max_level_ratio_to_parent="5">
+		<!-- Decorator perk -->
+	<perk name="perkDecoratorITAV" parent="attITAV" name_key="perkDecoratorITAVName" max_level="2" desc_key="perkDecoratorITAVDesc" icon="ui_game_symbol_paint_brush">		
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="2" desc_key="reqAttLevel02ITAV"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2" value="1" tags="workbenchDecoratorT1ITAV,modDyeInvisibleITAV,cntClothesRackRectanglePantsITAV,cntClothesRackRectangleShirtsITAV,cntClothesRackRoundPantsITAV,cntClothesRackRoundShirtsITAV,barStoolVariantHelper,restaurantBoothVariantHelper,fastFoodBoothVariantHelper,cntWoodBurningStove,campfireDecoITAV,bunkBedMade,officeChair01VariantHelper,birdBathPlanterITAV,cntShoppingCartEmpty,cntMailBox01White,candelabraLight,houseFrontDoor1_v1,houseFrontDoor2_v1,cntMicrowaveOvenVer1Closed,cntMicrowaveOvenVer2Closed,cntRetroFridgeVer1Closed,cntFridgeStainlessSteel,cntDomedTrashCanEmpty,cntDomedTrashCanCornerEmpty,cntBruteStyleTrashCanEmpty,cntWaterCoolerFull,signBread01,signBread02,signDinersMenu,signDinersMenu2m,signLaborDaySaleAd,signSale01,signSale02,decoPoolTable,decoCookingPotITAV,decoWineBottle,decoWineBottleCorner,decoWineBottleShelfRow,decoReptileTerrarium,plantedCorn2FlowerITAV,plantedPumpkin3FlowerITAV,plantedPumpkin2FlowerITAV,plantedSnowberry3FlowerITAV,plantedPotato3FlowerITAV,plantedBlueberry3FlowerITAV,plantedYucca3FlowerITAV,plantedAloe3FlowerITAV,plantedCoffee3FlowerITAV,plantedChrysanthemum3FlowerITAV,plantedGoldenrod3FlowerITAV,forestFlowerITAV,hangingMoss,treeJuniper4m,treeAzalea"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,2" value="1" tags="modClothingCargoStoragePocket,signShopOpenLightITAV,LightwallLight01ITAV,LightStreetLightClassicITAV,LightDeskLampLightITAV,LightTableLampLightITAV,LightTableLampLightCenteredITAV,LightPorchLight01ITAV,LightPorchLight04BrassITAV,LightPorchLight04ITAV,LightCeilingLight02ITAV,LightCeilingLight02BrassITAV,LightEndTableLampITAV,LightchandelierLightITAV,wirelessRelayFuseboxLightITAV"/>
+
+			<effect_description level="1" desc_key="perkDecoratorITAVRank1Desc" long_desc_key="perkDecoratorITAVRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkDecoratorITAVRank2Desc" long_desc_key="perkDecoratorITAVRank2LongDesc"/>
+		</effect_group>
+	</perk>
+</perks>
 </append>
 
 

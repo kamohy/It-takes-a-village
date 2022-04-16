@@ -13,6 +13,22 @@
 <!-- Adding custom dyes-->
 <InsertAfter xpath="/item_modifiers/item_modifier[@name='modDyeWhite']">
 
+	<item_modifier name="modDyeInvisibleITAV" installable_tags="clothing,armor" modifier_tags="dye" blocked_tags="noMods" type="attachment" cosmetic_install_chance="0">
+        <property name="CustomIcon" value="modDyeWhite"/>
+        <property name="Stacknumber" value="100"/>
+        <property name="Group" value="Mods"/>
+        <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+        <property name="EconomicValue" value="170"/>
+        <property name="SellableToTrader" value="true"/>
+		<property name="UnlockedBy" value="perkDecoratorITAV" />
+
+        <item_property_overrides name="*">
+            <property name="UMA.Mesh" value=""/>
+            <property name="UMA.Overlay0" value=""/>
+            <property name="UMA.ShowAltHair" value="false"/>
+        </item_property_overrides>
+    </item_modifier>
+
 	<item_modifier name="modDyeTealITAV" installable_tags="clothing,armor,weapon,tool,vehicle" modifier_tags="dye" type="attachment" cosmetic_install_chance=".13">
 		<property name="Extends" value="modGeneralMaster"/>
 		<property name="CreativeMode" value="Player"/>
@@ -27,36 +43,6 @@
 			<property name="CustomIconTint" value="23,151,163"/>
 			<property name="UMA.Overlay0Tint" value="62,142,150"/>
 		</item_property_overrides>
-
-		<item_property_overrides name="apparelTankTop">
-			<property name="CustomIconTint" value="17,183,198"/>
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="17,183,198"/>
-		</item_property_overrides>
-
-		<item_property_overrides name="apparelTShirtPlain">
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="17,183,198"/>
-		</item_property_overrides>
-
-		<item_property_overrides name="apparelTShirtZU">
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="17,183,198"/>
-		</item_property_overrides>
-
-		<item_property_overrides name="apparelCoatJacketLetterZU">
-			<property name="UMA.Overlay0Tint" value="17,183,198,255"/>
-		</item_property_overrides>
-
-		<item_property_overrides name="apparelDenimShortsPants">
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="23,151,163"/>
-		</item_property_overrides>
-
-		<item_property_overrides name="apparelCoatPufferCoat">
-			<property name="CustomIconTint" value="17,183,198"/>
-			<property name="UMA.Overlay0Tint" value="17,183,198"/>
-		</item_property_overrides>
 	</item_modifier>
 	
 	
@@ -68,35 +54,11 @@
 		<property name="CustomIconTint" value="60,172,127"/>
 		<property name="Material" value="Mpaint"/>
 		<property name="Weight" value="20"/>
+		
 		<item_property_overrides name="*">
 			<property name="TintColor" value="94,150,127"/>
 			<property name="CustomIconTint" value="94,150,127"/>
 			<property name="UMA.Overlay0Tint" value="94,150,127"/>
-		</item_property_overrides>
-
-		<item_property_overrides name="apparelTankTop">
-			<property name="CustomIconTint" value="60,172,127"/>
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="60,172,127"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelTShirtPlain">
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="60,172,127"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelTShirtZU">
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="60,172,127"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelCoatJacketLetterZU">
-			<property name="UMA.Overlay0Tint" value="60,172,127,255"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelDenimShortsPants">
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="94,150,127"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelCoatPufferCoat">
-			<property name="CustomIconTint" value="60,172,127"/>
-			<property name="UMA.Overlay0Tint" value="60,172,127"/>
 		</item_property_overrides>
 	</item_modifier>
 	
@@ -108,34 +70,11 @@
 		<property name="CustomIconTint" value="60,172,127"/>
 		<property name="Material" value="Mpaint"/>
 		<property name="Weight" value="20"/>
+		
 		<item_property_overrides name="*">
 			<property name="TintColor" value="94,150,127"/>
 			<property name="CustomIconTint" value="94,150,127"/>
 			<property name="UMA.Overlay0Tint" value="94,150,127"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelTankTop">
-			<property name="CustomIconTint" value="60,172,127"/>
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="60,172,127"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelTShirtPlain">
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="60,172,127"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelTShirtZU">
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="60,172,127"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelCoatJacketLetterZU">
-			<property name="UMA.Overlay0Tint" value="60,172,127,255"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelDenimShortsPants">
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="94,150,127"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelCoatPufferCoat">
-			<property name="CustomIconTint" value="60,172,127"/>
-			<property name="UMA.Overlay0Tint" value="60,172,127"/>
 		</item_property_overrides>
 	</item_modifier>
 	
@@ -152,39 +91,15 @@
 			<property name="CustomIconTint" value="53,77,44"/>
 			<property name="UMA.Overlay0Tint" value="53,77,44"/>
 		</item_property_overrides>
-		<item_property_overrides name="apparelTankTop">
-			<property name="CustomIconTint" value="53,77,44"/>
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="53,77,44"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelTShirtPlain">
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="53,77,44"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelTShirtZU">
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="53,77,44"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelCoatJacketLetterZU">
-			<property name="UMA.Overlay0Tint" value="53,77,44,255"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelDenimShortsPants">
-			<property name="UMA.Overlay0Tint" value="skin"/>
-			<property name="UMA.Overlay1Tint" value="53,77,44"/>
-		</item_property_overrides>
-		<item_property_overrides name="apparelCoatPufferCoat">
-			<property name="CustomIconTint" value="53,77,44"/>
-			<property name="UMA.Overlay0Tint" value="53,77,44"/>
-		</item_property_overrides>
 	</item_modifier>
 	
-	<!-- Clothing appearance modifiers -->
 	
-	<item_modifier name="modArmorHazmatBootsITAV" installable_tags="armorFeet" modifier_tags="rare" blocked_tags="noMods,clothing" type="attachment">
+	<!-- Clothing appearance modifiers -->
+		<item_modifier name="modArmorHazmatBootsITAV" installable_tags="armorFeet" modifier_tags="carryweight" blocked_tags="noMods,clothing" type="attachment">
 		<property name="Extends" value="modGeneralMaster"/>
 		<property name="CustomIcon" value="apparelHazmatBoots"/>
-		<property name="EconomicValue" value="440"/>
-		<property name="DisplayType" value="clothing"/>
+		<property name="EconomicValue" value="2060"/>
+		<property name="DisplayType" value="modCarryCapacity"/>
 		<item_property_overrides name="*">
 			<property name="UMA.Mesh" value="armor_hazmat_feet"/>
 			<property name="UMA.Overlay0" value="armor_hazmat_boots"/>
@@ -192,18 +107,18 @@
 		</item_property_overrides>
 
 		<effect_group tiered="false">
-			<passive_effect name="HypothermalResist" operation="base_add" value="2.8,5.2"/>
-			<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
+			<passive_effect name="CarryCapacity" operation="base_add" value="2"/>
+			<display_value name="dCarryCapacity" value="2"/>
 			<passive_effect name="ElementalDamageResist" operation="base_add" value="5" tags="lowerbody,feet,radiation,toxic" match_all_tags="true"/>
 		</effect_group>
 	</item_modifier>
 	
 	
-	<item_modifier name="modArmorHazmatMaskITAV" installable_tags="head" modifier_tags="rare" blocked_tags="noMods,clothing" type="attachment">
+	<item_modifier name="modArmorHazmatMaskITAV" installable_tags="head" modifier_tags="carryweight" blocked_tags="noMods,clothing" type="attachment">
 		<property name="Extends" value="modGeneralMaster"/>
 		<property name="CustomIcon" value="apparelHazmatMask"/>
-		<property name="EconomicValue" value="440"/>
-		<property name="DisplayType" value="clothing"/>
+		<property name="EconomicValue" value="2060"/>
+		<property name="DisplayType" value="modCarryCapacity"/>
 		<item_property_overrides name="*">
 			<property name="UMA.Mesh" value="armor_hazmat_head"/>
 			<property name="UMA.Overlay0" value="armor_hazmat_hood"/>
@@ -216,8 +131,8 @@
 		</item_property_overrides>
 		
 		<effect_group tiered="false">
-			<passive_effect name="HypothermalResist" operation="base_add" value="6.5,9.5"/>
-			<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
+			<passive_effect name="CarryCapacity" operation="base_add" value="2"/>
+			<display_value name="dCarryCapacity" value="2"/>
 			<passive_effect name="ElementalDamageResist" operation="base_add" value="6" tags="head,radiation" match_all_tags="true"/>
 			<passive_effect name="ElementalDamageResist" operation="base_add" value="15" tags="head,toxic" match_all_tags="true"/>
 		</effect_group>
@@ -225,6 +140,8 @@
 	
 </InsertAfter>
 
+<!-- Putting certain mods on perkDecoratorITAV -->
+<setattribute xpath="//item_modifier[@name='modClothingCargoStoragePocket']/property[@name='UnlockedBy']" name="value">perkNeedleAndThreadPockets,perkDecoratorITAV</setattribute>
 
  <!-- ********************* Price adjustments from vanilla ********************* -->
  <!-- Prices are scaled up by a factor of 2.5 compared to the cost of their materials. This is because the game scales the prices back down somehow. -->

@@ -1,0 +1,9 @@
+<configs>
+
+<!-- Increase number of zombies and reducing wildlife spawning in cities -->
+<setattribute xpath="//spawn[contains(@tags, 'downtown') or contains(@tags, 'commercial,industrial')]" name="maxcount">9</setattribute>
+
+<setattribute xpath="//biome[not(contains(@name, 'wasteland'))]/spawn[@entitygroup='WildGameForest' or contains(@entitygroup, 'EnemyAnimals')]" name="notags">commercial,industrial,downtown</setattribute>
+
+
+</configs>

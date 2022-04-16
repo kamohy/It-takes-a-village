@@ -4,38 +4,6 @@
 <append xpath="//item"><property name="EconomicValue" value="1"/><property name="EconomicBundleSize" value="1"/></append>
 <setattribute xpath="//item/property[@name='EconomicBundleSize']" name="value">1</setattribute>
 
-
-<!-- Starting note with info on professions -->
-<!--<append xpath="/items">
-	<item name="note01ITAV">
-		<property name="Extends" value="blankNoteMaster"/>
-		<property name="CreativeMode" value="None"/>
-		<property name="DescriptionKey" value="noteITAV01Desc"/>
-		<property name="CustomIcon" value="resourcePaper"/>
-		<property name="CustomIconTint" value="24DA6B" />
-	</item>
-</append>
-
-<append xpath="/items">
-	<item name="note02ITAV">
-		<property name="Extends" value="blankNoteMaster"/>
-		<property name="CreativeMode" value="None"/>
-		<property name="DescriptionKey" value="noteITAV02Desc"/>
-		<property name="CustomIcon" value="resourcePaper"/>
-		<property name="CustomIconTint" value="E4E130" />
-	</item>
-</append>
-
-<append xpath="/items">
-	<item name="note03ITAV">
-		<property name="Extends" value="blankNoteMaster"/>
-		<property name="CreativeMode" value="None"/>
-		<property name="DescriptionKey" value="noteITAV03Desc"/>
-		<property name="CustomIcon" value="resourcePaper"/>
-		<property name="CustomIconTint" value="E46730" />
-	</item>
-</append> -->
-
 <!-- Removing GyroCopter -->
 <remove xpath="//item[@name='questRewardGyrocopterPartsBundle']" />
 <remove xpath="//item[(contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter'))]"/>
@@ -59,6 +27,28 @@
 <setattribute xpath="/items/item[@name='medicalAloeCream']/property[@name='Stacknumber']" name="value">50</setattribute>
 <setattribute xpath="/items/item[starts-with(@name, 'thrown')]/property[@name='Stacknumber']" name="value">50</setattribute>
 <setattribute xpath="/items/item[@name='resourceCloth']/property[@name='Stacknumber']" name="value">500</setattribute>
+
+<!-- Tweaking Pumpkin Cheesecake to give beer buff instead of bartering -->
+<remove xpath="//item[@name='foodPumpkinCheesecake']/effect_group/display_value" />
+<remove xpath="//item[@name='foodPumpkinCheesecake']/effect_group/triggered_effect[@cvar='$buffPumpkinCheesecakeDuration']" />
+<remove xpath="//item[@name='foodPumpkinCheesecake']/effect_group/triggered_effect[@buff='buffPumpkinCheesecake']" />
+<append xpath="//item[@name='foodPumpkinCheesecake']">
+	<effect_group tiered="false" name="Drink Tier 3">
+        <requirement name="NotHasBuff" buff="buffIsOnFire"/>
+		<display_value name="dStaminaRegen" value=".4"/>
+		<display_value name="dEntityDamageBrawling" value="3"/>
+		<display_value name="dStunResist" value="1"/>
+		<display_value name="dDuration" value="45"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffBeerDuration" operation="add" value="48"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffBeerDuration" operation="set" value="138">
+			<requirement name="CVarCompare" cvar="$buffBeerDuration" operation="GT" value="138"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBeer"/>
+    </effect_group>
+</append>
+
+<append xpath="//item[@name='foodBoiledMeat']">
+	<property name="CustomIcon" value="resourceCandyTin" /> 
+</append>
 
 <!-- Reduces block damage to 10 for ranged weapons/ammo -->
 <remove xpath="//item[(contains(@name, 'ammo') and not(contains(@name, 'Vomit')) or (starts-with(@name, 'gun') and not(contains(@name, 'Admin'))) or starts-with(@name, 'thrown'))]/effect_group/passive_effect[@name='BlockDamage']"/>
@@ -128,13 +118,13 @@
 <setattribute xpath="/items/item[@name='meleeToolHammerOfGodAdmin']/property[@name='Tags']" name="value">melee,light,tool,attStrength,perkMinerITAV,admin,noMods</setattribute>
 
 
-<!-- HUNTER -->
-<setattribute xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@name='Tags']" name="value">axe,melee,light,tool,longShaft,repairTool,miningTool,attStrength,perkMinerITAV,perkHunterITAV,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/property[@name='Tags']" name="value">axe,melee,light,tool,longShaft,tazas,repairTool,miningTool,attStrength,perkMinerITAV,perkHunterITAV,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeWpnBladeT0BoneKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkHunterITAV,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeWpnBladeT1HuntingKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkHunterITAV,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeWpnBladeT1CandyKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkHunterITAV,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeWpnBladeT3Machete']/property[@name='Tags']" name="value">machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkHunterITAV,canHaveCosmetic</setattribute>
+<!-- FARMER -->
+<setattribute xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@name='Tags']" name="value">axe,melee,light,tool,longShaft,repairTool,miningTool,attStrength,perkMinerITAV,perkFarmerITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/property[@name='Tags']" name="value">axe,melee,light,tool,longShaft,tazas,repairTool,miningTool,attStrength,perkMinerITAV,perkFarmerITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="/items/item[@name='meleeWpnBladeT0BoneKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkFarmerITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="/items/item[@name='meleeWpnBladeT1HuntingKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkFarmerITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="/items/item[@name='meleeWpnBladeT1CandyKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkFarmerITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="/items/item[@name='meleeWpnBladeT3Machete']/property[@name='Tags']" name="value">machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkFarmerITAV,canHaveCosmetic</setattribute>
 
 <!-- ARMORER -->
 <setattribute xpath="items/item[@name='armorIronMaster']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
@@ -198,7 +188,7 @@
 			<property name="Use_time" value="0"/>
 			<property name="Sound_start" value="close_backpack"/>
 			<property name="Create_item" value="casinoCoin,resourceDuctTape,foodCornBread,foodEggBoiled"/>
-			<property name="Create_item_count" value="250,1,1,1"/>
+			<property name="Create_item_count" value="350,1,1,1"/>
 		</property>
 	</item>
 
@@ -235,10 +225,7 @@
 		<property name="RepairAmount" value="32000"/>
 		<property name="Group" value="Resources"/>
 	</item>
-</append>
-
-
-<append xpath="/items">
+	
 	<item name="resourceCarFrameITAV">
 		<property name="HoldType" value="45"/>
 		<property name="Tags" value="junk"/>
@@ -256,105 +243,409 @@
 		<property name="CustomIcon" value="cntCar03SedanDamage2Master"/>
 	</item>
 
-
-<item name="resourceClayLumpBundle">
-	<property name="CustomIcon" value="resourceClayLump"/><property name="ItemTypeIcon" value="treasure"/>
-	<property name="HoldType" value="45"/>
-	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="UnlockedBy" value="perkArtOfMiningPallets"/>
-	<property name="Material" value="Morganic"/>
-	<property name="Stacknumber" value="5"/>
-	<property name="SellableToTrader" value="true"/>
-	<property name="EconomicValue" value="12000" />
-	<property name="Group" value="Resources"/>
-	<property class="Action0">
-		<property name="Class" value="OpenBundle"/>
-		<property name="Delay" value="0"/>
-		<property name="Use_time" value="0"/>
-		<property name="Sound_start" value="close_garbage"/>
-		<property name="Create_item" value="resourceClayLump"/>
-		<property name="Create_item_count" value="6000"/>
-	</property>
-</item>
+	<item name="resourceClayLumpBundle">
+		<property name="CustomIcon" value="resourceClayLump"/><property name="ItemTypeIcon" value="treasure"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="UnlockedBy" value="perkArtOfMiningPallets"/>
+		<property name="Material" value="Morganic"/>
+		<property name="Stacknumber" value="5"/>
+		<property name="SellableToTrader" value="true"/>
+		<property name="EconomicValue" value="12000" />
+		<property name="Group" value="Resources"/>
+		<property class="Action0">
+			<property name="Class" value="OpenBundle"/>
+			<property name="Delay" value="0"/>
+			<property name="Use_time" value="0"/>
+			<property name="Sound_start" value="close_garbage"/>
+			<property name="Create_item" value="resourceClayLump"/>
+			<property name="Create_item_count" value="6000"/>
+		</property>
+	</item>
 
 </append>
 
+<!-- New foods and drinks -->
+<append xpath="/items">
+	<item name="foodRawChickenMeatITAV">
+		<property name="Tags" value="food"/>
+		<property name="HoldType" value="31"/>
+		<property name="CustomIcon" value="foodBoiledMeat"/>
+		<property name="DisplayType" value="foodRaw"/>
+		<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="MfoodRawMeat"/>
+		<property name="Stacknumber" value="500"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="EconomicValue" value="5"/>
+		<property name="CraftingIngredientTime" value="3"/>
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_eating"/>
+		</property>
+		<property name="Smell" value="ExLargeSmell"/>
+		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+		<effect_group tiered="false" name="Food Tier 0">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/><display_value name="foodHealthAmount" value="-1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/><display_value name="dDysenteryRisk" value=".12"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+				<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+			</triggered_effect>
+		</effect_group>
+	</item>
+	
+	<item name="foodRawChickenMeatPreparedITAV">
+		<property name="Tags" value="food"/>
+		<property name="HoldType" value="31"/>
+		<property name="CustomIcon" value="glassIndustrialPlate"/>
+		<property name="CustomIconTint" value="249,192,192" />
+		<property name="DisplayType" value="foodRaw"/>
+		<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="MfoodRawMeat"/>
+		<property name="Stacknumber" value="500"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="EconomicValue" value="30"/>
+		<property name="CraftingIngredientTime" value="3"/>
+		<property name="UnlockedBy" value="perkFarmerITAV,perkCookITAV" />
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_eating"/>
+		</property>
+		<property name="Smell" value="ExLargeSmell"/>
+		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+		<effect_group tiered="false" name="Food Tier 0">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/><display_value name="foodHealthAmount" value="-1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/><display_value name="dDysenteryRisk" value=".12"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+				<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+			</triggered_effect>
+		</effect_group>
+	</item>
+	
+	<item name="foodRawMeatPreparedITAV">
+		<property name="Tags" value="food"/>
+		<property name="HoldType" value="31"/>
+		<property name="CustomIcon" value="glassIndustrialPlate"/>
+		<property name="CustomIconTint" value="201,96,96" />
+		<property name="DisplayType" value="foodRaw"/>
+		<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="MfoodRawMeat"/>
+		<property name="Stacknumber" value="500"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="EconomicValue" value="30"/>
+		<property name="CraftingIngredientTime" value="3"/>
+		<property name="UnlockedBy" value="perkFarmerITAV,perkCookITAV" />
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_eating"/>
+		</property>
+		<property name="Smell" value="ExLargeSmell"/>
+		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+		<effect_group tiered="false" name="Food Tier 0">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/><display_value name="foodHealthAmount" value="-1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/><display_value name="dDysenteryRisk" value=".12"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+				<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+			</triggered_effect>
+		</effect_group>
+	</item>
+	
+	<item name="foodChickenBrothITAV">
+		<property name="Tags" value="food"/>
+		<property name="HoldType" value="31"/>
+		<property name="DisplayType" value="foodWater"/>
+		<property name="CustomIcon" value="drinkJarRiverWater"/>
+		<property name="CustomIconTint" value="254,230,58" />
+		<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mplants"/>
+		<property name="Stacknumber" value="500"/> 
+		<property name="EconomicValue" value="180"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="CraftingIngredientTime" value="30"/>
+		<property name="UnlockedBy" value="perkCookITAV" />
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_eating"/>
+		</property>
+		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+		<effect_group tiered="false" name="Food Tier 0">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="4"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+		</effect_group>
+	</item>
+	
+	<item name="foodMeatBrothITAV">
+		<property name="Tags" value="food"/>
+		<property name="HoldType" value="31"/>
+		<property name="DisplayType" value="foodWater"/>
+		<property name="CustomIcon" value="drinkJarRiverWater"/>
+		<property name="CustomIconTint" value="141,97,96" />
+		<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mplants"/>
+		<property name="Stacknumber" value="500"/> 
+		<property name="EconomicValue" value="180"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="CraftingIngredientTime" value="30"/>
+		<property name="UnlockedBy" value="perkCookITAV" />
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_eating"/>
+		</property>
+		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+		<effect_group tiered="false" name="Food Tier 0">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="4"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+		</effect_group>
+	</item>
+		
+	<item name="foodVegetableBrothITAV">
+		<property name="Tags" value="food"/>
+		<property name="HoldType" value="31"/>
+		<property name="DisplayType" value="foodWater"/>
+		<property name="CustomIcon" value="drinkJarRiverWater"/>
+		<property name="CustomIconTint" value="139,170,72" />
+		<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mplants"/>
+		<property name="Stacknumber" value="500"/> 
+		<property name="EconomicValue" value="114"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="CraftingIngredientTime" value="30"/>
+		<property name="UnlockedBy" value="perkCookITAV" />
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1.0"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_eating"/>
+		</property>
+		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+		<effect_group tiered="false" name="Food Tier 0">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="4"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+		</effect_group>
+	</item>
+	
+	<item name="foodChickenSoupITAV">
+		<property name="Extends" value="foodCanSham"/>
+		<property name="DisplayType" value="foodShamChowder"/>
+		<property name="CustomIcon" value="foodShamChowder"/>
+		<property name="CustomIconTint" value="244,238,184" />
+		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+		<property name="EconomicValue" value="122"/>
+		<property name="UnlockedBy" value="perkCookITAV"/>
+		<effect_group tiered="false" name="Food Tier 3">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="53"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="80"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="30"/>
+
+			<display_value name="dFortitude" value="1"/>
+			<display_value name="dDuration" value="600"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffShamChowderDuration" operation="add" value="603"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffShamChowderDuration" operation="set" value="1803">
+				<requirement name="CVarCompare" cvar="$buffShamChowderDuration" operation="GT" value="1803"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffShamChowder"/>
+		</effect_group>
+	</item>
+	
+	<item name="foodChickenSoupSpicyITAV">
+		<property name="Extends" value="foodCanSham"/>
+		<property name="DisplayType" value="foodChickenSoupSpicyITAV"/>
+		<property name="CustomIcon" value="foodShamChowder"/>
+		<property name="CustomIconTint" value="251,165,109" />
+		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+		<property name="EconomicValue" value="172"/>
+		<property name="UnlockedBy" value="perkCookITAV"/>
+		<effect_group tiered="false" name="Food Tier 3">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="53"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="80"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="30"/>
+
+			<display_value name="dFortitude" value="1"/>
+			<display_value name="dHypothermalResist" value="30"/>
+            <display_value name="dDuration" value="900"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffShamChowderDuration" operation="add" value="903"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffShamChowderDuration" operation="set" value="2703">
+				<requirement name="CVarCompare" cvar="$buffShamChowderDuration" operation="GT" value="2703"/>
+				</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffShamChowder,buffYuccaJuiceSmoothie"/>
+			
+            <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="add" value="903"/>
+            <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="set" value="2703">
+				<requirement name="CVarCompare" cvar="$buffYuccaJuiceSmoothieDuration" operation="GT" value="2703"/>
+			</triggered_effect>
+		</effect_group>
+	</item>	
+	
+	<item name="foodSrirachaKetchupSpiceITAV">
+		<property name="Tags" value="food"/>
+		<property name="HoldType" value="31"/>
+		<property name="DisplayType" value="foodWaterNegative"/>
+		<property name="CustomIcon" value="drinkJarGrandpasAwesomeSauce"/>
+		<property name="CustomIconTint" value="89,35,26" />
+		<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="Stacknumber" value="500"/> 
+		<property name="EconomicValue" value="20"/>
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="2.1"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_eating"/>
+		</property>
+		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+		<effect_group tiered="false" name="Food Tier 0/1">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="water" operation="add" value="-50"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="2"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffIsOnFireDuration" operation="add" value="50"/>
+            <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffIsOnFireDuration" operation="set" value="100">
+				<requirement name="CVarCompare" cvar="$buffIsOnFireDuration" operation="GT" value="100"/>
+			</triggered_effect>
+			<display_value name="$waterAmountAdd" value="-50"/>
+		</effect_group>
+	</item>
+	
+	<item name="foodChickenStewITAV">
+		<property name="Tags" value="food" />
+		<property name="HoldType" value="31" />
+		<property name="DisplayType" value="foodWater" />
+		<property name="CustomIcon" value="foodVegetableStew"/>
+		<property name="CustomIconTint" value="244,238,184" />
+		<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab" />
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
+		<property name="Material" value="Morganic" />
+		<property name="Stacknumber" value="500"/>
+		<property name="EconomicValue" value="121"/>
+		<property name="UnlockedBy" value="perkCookITAV"/>
+		<property class="Action0">
+			<property name="Class" value="Eat" />
+			<property name="Delay" value="1.0" />
+			<property name="Use_time" value="..." />
+			<property name="Sound_start" value="player_drinking" />
+		</property>
+		<property name="Group" value="Food/Cooking,CFFood/Cooking" />
+
+		<effect_group tiered="false" name="Food Tier 2">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="20" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables" />
+		</effect_group>
+		<property name="EconomicBundleSize" value="1"/>
+	</item>
+	
+	
+	<item name="drinkJarCoffeeSpicyITAV">
+		<property name="Extends" value="drinkJarCoffee" />
+		<property name="UnlockedBy" value="perkCookITAV" />
+		<property name="CustomIcon" value="drinkJarYuccaCocktail"/>
+		<effect_group tiered="false" name="Drink Tier Found">
+			<requirement name="NotHasBuff" buff="buffIsOnFire" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24" />
+			<display_value name="dStaminaRegen" value=".25" />
+			<display_value name="dHypothermalResist" value="10" />
+			<display_value name="dDuration" value="360" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeBSDuration" operation="add" value="363" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeBSDuration" operation="set" value="1083">
+			<requirement name="CVarCompare" cvar="$buffCoffeeBSDuration" operation="GT" value="1083" /></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffBlackStrapCoffee,buffIsOnFire" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffIsOnFireDuration" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffIsOnFireDuration" operation="set" value="3">
+				<requirement name="CVarCompare" cvar="$buffIsOnFireDuration" operation="GT" value="3"/>
+			</triggered_effect>
+		</effect_group>
+
+		<!--<effect_group tiered="false">
+			<requirement name="HasBuff" buff="buffIsOnFire" />
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire" />
+		</effect_group> -->
+		<property name="EconomicValue" value="69"/>
+		<property name="EconomicBundleSize" value="1"/>
+	</item>	
+	
+	<item name="foodChickenEmpanadasITAV"> 
+		<property name="Tags" value="food" />
+		<property name="HoldType" value="31" />
+		<property name="DisplayType" value="food" />
+		<property name="CustomIcon" value="foodFishTacos"/>
+		<property name="CustomIconTint" value="206,170,146" /> <!--176,134,127 -->
+		<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab" />
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
+		<property name="Material" value="Mplants" />
+		<property name="Stacknumber" value="500"/>
+		<property name="EconomicValue" value="56"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="CraftingIngredientTime" value="10" />
+		<property name="UnlockedBy" value="perkCookITAV"/>
+		<property class="Action0">
+			<property name="Class" value="Eat" />
+			<property name="Delay" value="1.0" />
+			<property name="Use_time" value="..." />
+			<property name="Sound_start" value="player_eating" />
+		</property>
+		<property name="Group" value="Food/Cooking,CFFood/Cooking" />
+		<effect_group tiered="false" name="Food Tier 3">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="46" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="40" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="30" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables" />
+		</effect_group>
+	</item>
+	
+</append>
+<append xpath="//item[@name='foodVegetableStew']">
+	<property name="CustomIconTint" value="162,251,145" />
+</append>
 <setattribute xpath="//item[@name='resourceRockSmallBundle']/property[@name='SellableToTrader']" name="value">true</setattribute>
 
 <setattribute xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and (contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3')) and not(contains(@name, 'Parts')) and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='RepairTools']" name="value">resourceRepairKitITAV</setattribute>
 
-<!-- Adding Profession Books to unlock holding more Professions -->
-<append xpath="/items"> 
-
-<item name="qb_MyFirstProfessionITAV">
-	<property name="Extends" value="questMaster"/>
-	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="bundleBooks"/>
-	<property name="CustomIconTint" value="F3A0BA" />
-	<property name="DescriptionKey" value="qb_MyFirstProfessionITAV_desc"/>
-	<property name="EconomicValue" value="170"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="SellableToTrader" value="true"/>
-	<property name="Stacknumber" value="1"/>
-	<property name="PickupJournalEntry" value="MyFirstProfessionTip"/>
-	<property class="Action0">
-		<property name="QuestGiven" value="quest_MyNextProfession" />
-		 <requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="Equals" value="0" desc_key="reqProfessionsLevel00ITAV" />
-	</property>
-</item>
-
-
-<item name="qb_MySecondProfessionITAV">
-	<property name="Extends" value="questMaster"/>
-	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="bundleBooks"/>
-	<property name="CustomIconTint" value="DC5881" />
-	<property name="DescriptionKey" value="qb_MySecondProfessionITAV_desc"/>
-	<property name="EconomicValue" value="1700"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="SellableToTrader" value="true"/>
-	<property name="Stacknumber" value="1"/>
-	<property class="Action0">
-		<property name="QuestGiven" value="quest_MyNextProfession" />
-		<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="Equals" value="1" />
-		<requirement name="CVarCompare" cvar="numberOfProfessionsAllowed" operation="Equals" value="2" />
-	</property>
-</item> 
-
-<item name="qb_MyThirdProfessionITAV">
-	<property name="Extends" value="questMaster"/>
-	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="bundleBooks"/>
-	<property name="CustomIconTint" value="AA254E" />
-	<property name="DescriptionKey" value="qb_MyThirdProfessionITAV_desc"/>
-	<property name="EconomicValue" value="4400"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="SellableToTrader" value="true"/>
-	<property name="Stacknumber" value="1"/>
-	<property class="Action0">
-		<property name="QuestGiven" value="quest_MyNextProfession" />
-		<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="Equals" value="2" />
-		<requirement name="CVarCompare" cvar="numberOfProfessionsAllowed" operation="Equals" value="3" />
-	</property>
-</item> 
-
-<item name="qb_MyFourthProfessionITAV">
-	<property name="Extends" value="questMaster"/>
-	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="bundleBooks"/>
-	<property name="CustomIconTint" value="7B092C" />
-	<property name="DescriptionKey" value="qb_MyFourthProfessionITAV_desc"/>
-	<property name="EconomicValue" value="9700"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="SellableToTrader" value="true"/>
-	<property name="Stacknumber" value="1"/>
-	<property class="Action0">
-		<property name="QuestGiven" value="quest_MyNextProfession" />
-		<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="Equals" value="3" />
-		<requirement name="CVarCompare" cvar="numberOfProfessionsAllowed" operation="Equals" value="4" />
-	</property>
-</item> 
 
 <!-- My NEXT Profession -->
 <!--<item name="qb_MyNextProfessionITAV">
@@ -372,12 +663,14 @@
 	</property>
 </item> -->
 
+<append xpath="/items"> 
 
 <!-- Adding Trade Profession Perk Books to unlock specific Professions -->
-<!-- Master -->
+
 <item name="bookMasterITAV">
     <property name="Extends" value="schematicMaster"/>
     <property name="CustomIcon" value="bookMasterITAV"/> <!-- Required or Master icon is used -->
+	<property name="CreativeMode" value="None"/>
     <property name="DescriptionKey" value="perkFiremansAlmanacHeatLongDesc"/>
     <property name="Stacknumber" value="1"/>
     <property name="EconomicValue" value="500"/>
@@ -438,30 +731,6 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="ITAV_start"/>
 	</effect_group>
-</item>
-
-<!-- HUNTER -->
-<item name="bookHunterITAV">
-    <property name="Extends" value="bookMasterITAV"/>
-    <property name="CustomIcon" value="schematicMaster"/>
-	<property name="CustomIconTint" value="ffe119" />
-    <property name="DescriptionKey" value="bookHunterITAVDesc"/>
-    <property name="Unlocks" value="perkHunterITAV"/>
-    <property class="Action0">
-		<requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="LT" value="1" />
-    </property>
-    <effect_group tiered="false">
-        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHunterITAV" level="1">
-			<requirement name="ProgressionLevel" progression_name="perkHunterITAV" operation="LT" value="1" />
-			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
-		</triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_HunterITAV"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkHunterITAV" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntHunterITAV" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntHunterITAVTooltip"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="ITAV_start"/>
-    </effect_group>
 </item>
 
 <!-- COOK -->
@@ -615,7 +884,7 @@
 
 <item name="rocketBootsITAV">
     <property name="Extends" value="apparelGothBoots" param1="DescriptionKey"/>
-    <property name="CreativeMode" value="Player"/>
+    <property name="CreativeMode" value="Dev"/>
     <property name="CustomIcon" value="apparelGothBoots"/>
     <property name="CustomIconTint" value="2,220,255"/>
     <property name="ItemTypeIcon" value="computer"/>
@@ -658,7 +927,7 @@
 		<property name="UISlot" value="Footwear"/>
 	</property>
 	<effect_group tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="0"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="0"/>
 		<passive_effect name="StaminaLoss" operation="perc_add" value="-.75" tags="jumping"/>
@@ -688,7 +957,7 @@
 		<property name="UISlot" value="Footwear"/>
 	</property>
 	<effect_group tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="0"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="0"/>
 		<passive_effect name="StaminaLoss" operation="perc_add" value="-.35" tags="jumping"/>
@@ -719,7 +988,7 @@
 	</property>
 	<effect_group tiered="false">
 		<display_value name="dStaminaRegen" value=".15"/>
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="0"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="0"/>
 		<passive_effect name="StaminaChangeOT" operation="perc_add" value=".15" />
@@ -745,7 +1014,7 @@
 	</property>
 	<effect_group tiered="false">
 		<display_value name="dStaminaRegen" value=".07"/>
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="0"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="0"/>
 		<passive_effect name="StaminaChangeOT" operation="perc_add" value=".07" />
@@ -815,9 +1084,11 @@
 	</effect_group>
 </item>
 
+</append>
+
 
 <!-- Assorted decorative items ITAV Schematics -->
-
+<!--<append xpath="//items">
 <item name="signBread01ITAVSchematic">
 	<property name="Extends" value="schematicNoQualityMaster"/>
 	<property name="CreativeMode" value="Player"/>
@@ -1080,12 +1351,12 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cntWoodBurningStove" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
-</item>
+</item> -->
 
 
 <!-- Lights ITAV Schematics -->
 
-<item name="LightStreetLightClassicITAVSchematic">
+<!-- <item name="LightStreetLightClassicITAVSchematic">
 	<property name="Extends" value="schematicNoQualityMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="streetLightClassic"/>
@@ -1127,7 +1398,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LightTableLampLightITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
-</item>
+</item> -->
 
 <!-- Block removed because  it could not be destroyed.
 <item name="LightTableLampLightCenteredITAVSchematic">
@@ -1140,7 +1411,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>-->
-
+<!--
 <item name="LightPorchLight01ITAVSchematic">
 	<property name="Extends" value="schematicNoQualityMaster"/>
 	<property name="CreativeMode" value="Player"/>
@@ -1194,15 +1465,15 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="LightCeilingLight02BrassITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
-</item>
+</item> </append> -->
 
 
 
 <!-- Dad jokes on notes -->
-
+<append xpath="//items">
 	<item name="noteDadJokeMasterITAV">
 		<property name="Extends" value="blankNoteMaster"/>
-		<property name="CreativeMode" value="Player"/>
+		<property name="CreativeMode" value="None"/>
 		<property name="DescriptionKey" value="noteDadJoke01ITAVDesc"/>
 		<property name="CustomIcon" value="resourcePaper"/>
 		<property name="CustomIconTint" value="A7ECFC" />
@@ -1212,65 +1483,65 @@
 		<property name="EconomicValue" value="1"/>
 	</item>
 	
-	<item name="noteDadJoke01ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke01ITAVDesc"/></item>	
-	<item name="noteDadJoke02ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke02ITAVDesc"/></item>	
-	<item name="noteDadJoke03ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke03ITAVDesc"/></item>
-	<item name="noteDadJoke04ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke04ITAVDesc"/></item>	
-	<item name="noteDadJoke05ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke05ITAVDesc"/></item>	
-	<item name="noteDadJoke06ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke06ITAVDesc"/></item>	
-	<item name="noteDadJoke07ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke07ITAVDesc"/></item>	
-	<item name="noteDadJoke08ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke08ITAVDesc"/></item>	
-	<item name="noteDadJoke09ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke09ITAVDesc"/></item>	
-	<item name="noteDadJoke10ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke10ITAVDesc"/></item>	
-	<item name="noteDadJoke11ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke11ITAVDesc"/></item>	
-	<item name="noteDadJoke12ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke12ITAVDesc"/></item>	
-	<item name="noteDadJoke13ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke13ITAVDesc"/></item>	
-	<item name="noteDadJoke14ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke14ITAVDesc"/></item>	
-	<item name="noteDadJoke15ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke15ITAVDesc"/></item>	
-	<item name="noteDadJoke16ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke16ITAVDesc"/></item>
-	<item name="noteDadJoke17ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke17ITAVDesc"/></item>	
-	<item name="noteDadJoke18ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke18ITAVDesc"/></item>	
-	<item name="noteDadJoke19ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke19ITAVDesc"/></item>
-	<item name="noteDadJoke20ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke20ITAVDesc"/></item>
-	<item name="noteDadJoke21ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke21ITAVDesc"/></item>	
-	<item name="noteDadJoke22ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke22ITAVDesc"/></item>	
-	<item name="noteDadJoke23ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke23ITAVDesc"/></item>	
-	<item name="noteDadJoke24ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke24ITAVDesc"/></item>	
-	<item name="noteDadJoke25ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke25ITAVDesc"/></item>	
-	<item name="noteDadJoke26ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke26ITAVDesc"/></item>
-	<item name="noteDadJoke27ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke27ITAVDesc"/></item>	
-	<item name="noteDadJoke28ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke28ITAVDesc"/></item>	
-	<item name="noteDadJoke29ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke29ITAVDesc"/></item>	
-	<item name="noteDadJoke30ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke30ITAVDesc"/></item>	
-	<item name="noteDadJoke31ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke31ITAVDesc"/></item>
-	<item name="noteDadJoke32ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke32ITAVDesc"/></item>	
-	<item name="noteDadJoke33ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke33ITAVDesc"/></item>	
-	<item name="noteDadJoke34ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke34ITAVDesc"/></item>	
-	<item name="noteDadJoke35ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke35ITAVDesc"/></item>
-	<item name="noteDadJoke36ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke36ITAVDesc"/></item>
-	<item name="noteDadJoke37ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke37ITAVDesc"/></item>	
-	<item name="noteDadJoke38ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke38ITAVDesc"/></item>	
-	<item name="noteDadJoke39ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke39ITAVDesc"/></item>	
-	<item name="noteDadJoke40ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke40ITAVDesc"/></item>
-	<item name="noteDadJoke41ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke41ITAVDesc"/></item>
-	<item name="noteDadJoke42ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke42ITAVDesc"/></item>
-	<item name="noteDadJoke43ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke43ITAVDesc"/></item>
-	<item name="noteDadJoke44ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke44ITAVDesc"/></item>
-	<item name="noteDadJoke45ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke45ITAVDesc"/></item>
-	<item name="noteDadJoke46ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke46ITAVDesc"/></item>
-	<item name="noteDadJoke47ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke47ITAVDesc"/></item>
-	<item name="noteDadJoke48ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke48ITAVDesc"/></item>
-	<item name="noteDadJoke49ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke49ITAVDesc"/></item>
-	<item name="noteDadJoke50ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke50ITAVDesc"/></item>
-	<item name="noteDadJoke51ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke51ITAVDesc"/></item>
-	<item name="noteDadJoke52ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke52ITAVDesc"/></item>
-	<item name="noteDadJoke53ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke53ITAVDesc"/></item>
-	<item name="noteDadJoke54ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke54ITAVDesc"/></item>
-	<item name="noteDadJoke55ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke55ITAVDesc"/></item>
-	<item name="noteDadJoke56ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke56ITAVDesc"/></item>
-	<item name="noteDadJoke57ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke57ITAVDesc"/></item>
-	<item name="noteDadJoke58ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke58ITAVDesc"/></item>
-	<item name="noteDadJoke59ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke59ITAVDesc"/></item>
+	<item name="noteDadJoke01ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke01ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke02ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke02ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke03ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke03ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke04ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke04ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke05ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke05ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke06ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke06ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke07ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke07ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke08ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke08ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke09ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke09ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke10ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke10ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke11ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke11ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke12ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke12ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke13ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke13ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke14ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke14ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke15ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke15ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke16ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke16ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke17ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke17ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke18ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke18ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke19ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke19ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke20ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke20ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke21ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke21ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke22ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke22ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke23ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke23ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke24ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke24ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke25ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke25ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke26ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke26ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke27ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke27ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke28ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke28ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke29ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke29ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke30ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke30ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke31ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke31ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke32ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke32ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke33ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke33ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke34ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke34ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke35ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke35ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke36ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke36ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke37ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke37ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke38ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke38ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke39ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke39ITAVDesc"/><property name="CreativeMode" value="None"/></item>	
+	<item name="noteDadJoke40ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke40ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke41ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke41ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke42ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke42ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke43ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke43ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke44ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke44ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke45ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke45ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke46ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke46ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke47ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke47ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke48ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke48ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke49ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke49ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke50ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke50ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke51ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke51ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke52ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke52ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke53ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke53ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke54ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke54ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke55ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke55ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke56ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke56ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke57ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke57ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke58ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke58ITAVDesc"/><property name="CreativeMode" value="None"/></item>
+	<item name="noteDadJoke59ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke59ITAVDesc"/><property name="CreativeMode" value="None"/></item>
 	
 <!-- ProfPerkForgettingElixir -->
 <item name="drinkJarProfPerkForgettingElixir"> <!-- respec potion, player version -->
@@ -1297,7 +1568,6 @@
 			<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ResetProgression" reset_books="false"/>  This resets all progression, across attributes and perks. -->
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntSmelterITAV" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntMinerITAV" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntHunterITAV" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntCookITAV" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntFarmerITAV" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntArmorerITAV" operation="set" value="0"/>
@@ -1770,7 +2040,7 @@
 <setattribute xpath="//item[@name='foodCharredMeat']/property[@name='EconomicValue']" name="value">25</setattribute>
 <setattribute xpath="//item[@name='foodGrilledMeat']/property[@name='EconomicValue']" name="value">25</setattribute>
 <setattribute xpath="//item[@name='foodBoiledMeat']/property[@name='EconomicValue']" name="value">141</setattribute>
-<setattribute xpath="//item[@name='foodMeatStew']/property[@name='EconomicValue']" name="value">157</setattribute>
+<setattribute xpath="//item[@name='foodMeatStew']/property[@name='EconomicValue']" name="value">146</setattribute>
 <setattribute xpath="//item[@name='foodSteakAndPotato']/property[@name='EconomicValue']" name="value">143</setattribute>
 <setattribute xpath="//item[@name='foodShamChowder']/property[@name='EconomicValue']" name="value">118</setattribute>
 <setattribute xpath="//item[@name='foodHoboStew']/property[@name='EconomicValue']" name="value">52</setattribute>

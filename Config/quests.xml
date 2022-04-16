@@ -144,11 +144,10 @@
 			<property name="use_closest" value="true" />
 		</objective>
 		
-		<reward type="Item" id="casinoCoin" value="3000"/>
+		<reward type="Item" id="casinoCoin" value="5000"/>
 		<reward type="SkillPoints" value="4" chainreward="true"/>
 		<reward type="Item" id="bookSmelterITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookMinerITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookHunterITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookCookITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookArmorerITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookFarmerITAV" ischosen="true" isfixed="true" value="1"/>
@@ -579,6 +578,7 @@
 		<reward type="Exp" value="500"/>		
 	</quest>
 	
+		
 </append>
 
 </configs>
