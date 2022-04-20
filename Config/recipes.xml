@@ -1,6 +1,19 @@
 <configs>
 	
-	<remove xpath="//passive_effect[@name='CraftingIngredientCount']" />
+	<remove xpath="//recipe[not((contains(@name, 'T1')) or (contains(@name, 'T2')) or (contains(@name, 'T3')))]/effect_group/passive_effect[@name='CraftingIngredientCount']" />
+	<append xpath="//recipe[@name='farmPlotBlockVariantHelper']/effect_group">
+		<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="foodRottingFlesh,resourcePotassiumNitratePowder,resourceClayLump"/>
+	</append>
+	
+	<remove xpath="//recipe[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='CraftingIngredientCount']" />
+	<append xpath="//recipe[@name='gunBowT3CompoundBow']/effect_group">
+		<passive_effect name="CraftingIngredientCount" level="2,3,4,5,6" operation="perc_add" value="0,0.75,1.5,2.2,3" tags="gunBowT1WoodenBowParts,resourceScrapPolymers,resourceLeather,resourceDuctTape,resourceSpring" />
+	</append>
+	
+		<remove xpath="//recipe[@name='gunMGT3M60']/effect_group/passive_effect[@name='CraftingIngredientCount']" />
+	<append xpath="//recipe[@name='gunMGT3M60']/effect_group">
+		<passive_effect name="CraftingIngredientCount" level="2,3,4,5,6" operation="perc_add" value="0,0.75,1.5,2.2,3" tags="gunMGT1AK47Parts,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring" />
+	</append>
 	
 	<setattribute xpath="//recipe[starts-with(@name, 'resource') and contains(@name, 'Bundle') and not(contains(@name, 'GunPowder'))]" name="craft_area">workbench</setattribute>
 	<append xpath="/recipes">
@@ -222,7 +235,8 @@
 			<ingredient name="resourceClayLump" count="1" />
 			<ingredient name="resourceCropGoldenrodPlant" count="8" />
 		</recipe>
-	</append>			
+	</append>		
+	
 		<!-- Kitchen and more stuff  -->
 	<append xpath="/recipes">	
 		<recipe name="cntFoodPileSmallITAV" count="1" craft_time="10" tags="learnable,perkCookITAV">
@@ -233,12 +247,17 @@
 		<recipe name="cntFoodPileMediumITAV" count="1" craft_time="10" tags="learnable,perkCookITAV">
 			<ingredient name="drinkCanEmpty" count="10" />
 			<ingredient name="foodCanCatfood" count="5" />
-		</recipe>
+		</recipe>	
 		
 		<recipe name="cntFoodPileLargeITAV" count="1" craft_time="10" tags="learnable,perkCookITAV">
 			<ingredient name="drinkJarBoiledWater" count="2" />
 			<ingredient name="foodCanCatfood" count="10" />
 			<ingredient name="resourcePaint" count="3" />
+		</recipe>
+		
+		<recipe name="decoLaptop" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceScrapPolymers" count="20"/>
+			<ingredient name="resourceElectricParts" count="20"/>
 		</recipe>
 		
 		<recipe name="cntClothesRackRectanglePantsITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
@@ -343,12 +362,18 @@
 			<ingredient name="resourceForgedIron" count="2"/>
 		</recipe>		
 		
+		<recipe name="cntToaster" count="1" craft_time="5" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="3" />
+			<ingredient name="resourceElectricParts" count="3"/>
+		</recipe>
+		
 		<recipe name="cntMicrowaveOvenVer1Closed" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="2" />
 			<ingredient name="resourceScrapIron" count="10" />
 			<ingredient name="resourceBrokenGlass" count="10" />
 			<ingredient name="resourceElectricParts" count="3"/>
 		</recipe>
+		
 		<recipe name="cntMicrowaveOvenVer2Closed" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="2" />
 			<ingredient name="resourceScrapIron" count="10" />
@@ -428,10 +453,18 @@
 			<ingredient name="resourceCloth" count="10" />
 		</recipe>
 	
-		<recipe name="cntWoodBurningStove" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+		<recipe name="cntWoodBurningStoveDecoITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceForgedIron" count="100" />
 			<ingredient name="resourceWood" count="50" />
 			<ingredient name="resourceMetalPipe" count="10" />
+		</recipe>		
+		
+		<recipe name="decoMannequinMale" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceScrapPolymers" count="100" />
+		</recipe>
+		
+		<recipe name="decoMannequinFemale" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceScrapPolymers" count="100" />
 		</recipe>
 		
 		<recipe name="faucetBrass02" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
@@ -489,6 +522,47 @@
 			<ingredient name="resourceWood" count="30" />
 			<ingredient name="resourceMetalPipe" count="10" />
 		</recipe>
+		
+		
+		<recipe name="cntBarrelAcidQuadAITAV" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="40" />
+			<ingredient name="resourceWood" count="10" />
+		</recipe>
+		
+		<recipe name="cntBarrelGasQuadAITAV" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="40" />
+			<ingredient name="resourceWood" count="10" />
+		</recipe>
+		
+		<recipe name="cntBarrelGenericQuadAITAV" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="40" />
+			<ingredient name="resourceWood" count="10" />
+		</recipe>
+		
+		<recipe name="cntBarrelAcidQuadBITAV" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="40" />
+		</recipe>
+		
+		<recipe name="cntBarrelGasQuadBITAV" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="40" />
+		</recipe>
+		
+		<recipe name="cntBarrelGenericQuadBITAV" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="40" />
+		</recipe>
+		
+		<recipe name="cntBarrelGasSingle00" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="10" />
+		</recipe>
+		
+		<recipe name="cntBarrelAcidSingle00" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="10" />
+		</recipe>
+		
+		<recipe name="cntBarrelGenericSingle00" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="10" />
+		</recipe>
+		
 	</append>	
 
 		
@@ -532,36 +606,12 @@
 	
 		<!-- Misc -->
 	<append xpath="/recipes">	
-		<recipe name="modArmorBallCap" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
-			<ingredient name="resourceCloth" count="10"/>
-			<ingredient name="resourceScrapPolymers" count="2"/>
-			<ingredient name="resourceDuctTape" count="2"/>
-			<ingredient name="resourceSewingKit" count="1"/>
-		</recipe>		
-		
 		<recipe name="modDyeInvisibleITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
 			<ingredient name="resourceCloth" count="10"/>
 			<ingredient name="resourceBrokenGlass" count="10"/>
 			<ingredient name="resourcePaint" count="100"/>
 			<ingredient name="resourceSewingKit" count="1"/>
-		</recipe>			
-		
-		<recipe name="modArmorHazmatBootsITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
-			<ingredient name="resourceCloth" count="100"/>
-			<ingredient name="resourceScrapPolymers" count="100"/>
-			<ingredient name="resourceDuctTape" count="20"/>
-			<ingredient name="resourceSewingKit" count="5"/>
-			<ingredient name="modArmorDoubleStoragePocket" count="1"/>
-		</recipe>	
-		
-		<recipe name="modArmorHazmatMaskITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
-			<ingredient name="resourceCloth" count="100"/>
-			<ingredient name="resourceScrapPolymers" count="100"/>
-			<ingredient name="resourceDuctTape" count="20"/>
-			<ingredient name="resourceSewingKit" count="5"/>
-			<ingredient name="modArmorDoubleStoragePocket" count="1"/>
-		</recipe>	
-		
+		</recipe>
 		
 		<recipe name="crushedCars" count="1" tag="learnable,perkRunnerITAV">
 			<ingredient name="resourceCarFrameITAV" count="2"/>
@@ -571,6 +621,364 @@
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="1"/>
 		</recipe>
+		
+		<!--  ******** Clothing mods ************* -->
+		
+		<recipe name="modArmorBallCap" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceCloth" count="10"/>
+			<ingredient name="resourceScrapPolymers" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<ingredient name="resourceSewingKit" count="1"/>
+		</recipe>	
+
+		
+		<recipe name="modApparelHazmatBootsITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>	
+		
+		<recipe name="modApparelHazmatMaskITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelHazmatPantsITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelHazmatJacketITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelHazmatGlovesITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>		
+		
+		<recipe name="modApparelDenimPantsITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelDenimShortsPantsITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelArmyPantsITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelOverallsITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelSkirtITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelGothPantsITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelWornBootsITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelRunningShoesRegularITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelCowboyBootsITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelGothBootsITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelLongShirtITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelArmyShirtITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelSweatshirtITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+		
+		<recipe name="modApparelFlannelShirtITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelTShirtPlainITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelTShirtZUITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelTankTopITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelHoodySweatshirtITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelCoatLeatherPonchoITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelCoatLeatherDusterITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelCoatPufferCoatITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelCoatJacketGenericITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelCoatJacketLetterZUITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelSuitPantsITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelSuitJacketITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelSuitDressShoesITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelPlantFiberGlovesITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelPlantFiberShoesITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelGhillieSuitHoodITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelGhillieSuitPantsITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>
+
+		<recipe name="modApparelGhillieSuitJacketITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="100"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceSewingKit" count="5"/>
+			<ingredient name="modClothingCargoStoragePocket" count="1"/>
+		</recipe>	
+		
+	</append>
+	
+		<!-- Movie Posters and signs -->	
+	<append xpath="/recipes">
+		<recipe name="signPosterMovie2159" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="5"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="resourcePaper" count="20"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
+			<ingredient name="resourceWood" count="4"/>
+		</recipe>
+		
+				
+		<recipe name="signPosterMovieLoneWolf" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="5"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="resourcePaper" count="20"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
+			<ingredient name="resourceWood" count="4"/>
+		</recipe>
+
+		<recipe name="signPosterMovieMammasJustice" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="5"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="resourcePaper" count="20"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
+			<ingredient name="resourceWood" count="4"/>
+		</recipe>
+
+		<recipe name="signPosterMovieSexualTension" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceCloth" count="5"/>
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="resourcePaper" count="20"/>
+			<ingredient name="resourceBrokenGlass" count="4"/>
+			<ingredient name="resourceWood" count="4"/>
+		</recipe>
+
+		<recipe name="signNotice01" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="resourcePaper" count="20"/>
+		</recipe>
+
+		<recipe name="signNotice04" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourcePaint" count="10"/>
+			<ingredient name="resourcePaper" count="20"/>
+		</recipe>
+
+		<recipe name="signPillsLogoSmallLightITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="2"/>
+			<ingredient name="resourceBrokenGlass" count="6"/>
+			<ingredient name="resourceElectricParts" count="1"/>
+		</recipe>
+
+		<recipe name="signPillsLogoLightITAV" count="1" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="8"/>
+			<ingredient name="resourceBrokenGlass" count="24"/>
+			<ingredient name="resourceElectricParts" count="4"/>
+		</recipe>
+	
 	</append>
 	
 		<!-- Powered Lights -->
@@ -666,7 +1074,6 @@
 		<recipe name="foodBoiledMeat" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable,perkCookITAV">
 			<ingredient name="foodRawChickenMeatITAV" count="5" />
 			<ingredient name="drinkJarBoiledWater" count="1" />
-			<ingredient name="drinkCanEmpty" count="1"/>
 		</recipe>
 		
 		<recipe name="foodGrilledMeat" count="1" craft_area="campfire" craft_tool="toolCookingGrill" tags="learnable,perkCookITAV">
@@ -689,25 +1096,25 @@
 			<ingredient name="foodRawMeat" count="6"/>
 		</recipe>
 		
-		<recipe name="foodChickenBrothITAV" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="400" tags="learnable,perkCookITAV">
+		<recipe name="foodChickenBrothITAV" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="300" tags="learnable,perkCookITAV">
 			<ingredient name="foodRawChickenMeatPreparedITAV" count="3"/>
 			<ingredient name="drinkJarBoiledWater" count="5"/>
 			<ingredient name="resourceBone" count="5"/>
 		</recipe>
 		
-		<recipe name="foodMeatBrothITAV" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="400" tags="learnable,perkCookITAV">
+		<recipe name="foodMeatBrothITAV" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="300" tags="learnable,perkCookITAV">
 			<ingredient name="foodRawMeatPreparedITAV" count="3"/>
 			<ingredient name="drinkJarBoiledWater" count="5"/>
 			<ingredient name="resourceBone" count="5"/>
 		</recipe>
 		
-		<recipe name="foodVegetableBrothITAV" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="400" tags="learnable,perkCookITAV">
+		<recipe name="foodVegetableBrothITAV" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="300" tags="learnable,perkCookITAV">
 			<ingredient name="foodCropMushrooms" count="4"/>
 			<ingredient name="foodCropYuccaFruit" count="6"/>
 			<ingredient name="drinkJarBoiledWater" count="5"/>
 		</recipe>
 		
-		<recipe name="foodVegetableBrothITAV" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="400" tags="learnable,perkCookITAV">
+		<recipe name="foodVegetableBrothITAV" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="300" tags="learnable,perkCookITAV">
 			<ingredient name="foodCropCorn" count="6"/>
 			<ingredient name="foodCropPumpkin" count="4"/>
 			<ingredient name="drinkJarBoiledWater" count="5"/>
@@ -716,14 +1123,14 @@
 		<recipe name="foodChickenSoupITAV" count="3" craft_area="campfire" craft_tool="toolCookingPot" craft_time="120" tags="learnable,perkCookITAV">
 			<ingredient name="foodRawChickenMeatPreparedITAV" count="2"/>
 			<ingredient name="foodChickenBrothITAV" count="2"/>
-			<ingredient name="foodCropCorn" count="3"/>
+			<ingredient name="foodCropPumpkin" count="3"/>
 			<ingredient name="foodCropMushrooms" count="5"/>
 		</recipe>
 				
 		<recipe name="foodChickenSoupSpicyITAV" count="3" craft_area="campfireT2ITAV" craft_time="180" tags="learnable,perkCookITAV">
 			<ingredient name="foodRawChickenMeatPreparedITAV" count="2"/>
 			<ingredient name="foodChickenBrothITAV" count="2"/>
-			<ingredient name="foodCropCorn" count="3"/>
+			<ingredient name="foodCropPumpkin" count="3"/>
 			<ingredient name="foodCropMushrooms" count="5"/>
 			<ingredient name="foodSrirachaKetchupSpiceITAV" count="1"/>
 		</recipe>
@@ -732,7 +1139,7 @@
 			<ingredient name="foodRawChickenMeatPreparedITAV" count="2"/>
 			<ingredient name="foodChickenBrothITAV" count="2"/>
 			<ingredient name="foodCropPotato" count="4"/>
-			<ingredient name="foodCropPumpkin" count="3"/>
+			<ingredient name="foodCropCorn" count="3"/>
 			<ingredient name="resourceAnimalFat" count="1"/>
 		</recipe>
 		
@@ -753,9 +1160,15 @@
 	</append>
 	
 	<!-- Tweaking recipes -->
-	<setattribute xpath="//recipe[@name='foodBaconAndEggs']/ingredient[@name='foodEgg']" name="count">1</setattribute> 
-	<setattribute xpath="//recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']" name="count">1</setattribute> 
-	<setattribute xpath="//recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']" name="foodRawMeat">foodRawMeatPreparedITAV</setattribute> 
+	<remove xpath="//recipe[@name='foodBaconAndEggs']"/>
+	<append xpath="//recipes">
+		<recipe name="foodBaconAndEggs" count="1" craft_time="45" craft_area="campfire" craft_tool="toolCookingPot" tags="learnable,perkCookITAV">
+			<ingredient name="foodRawMeatPreparedITAV" count="1"></ingredient>
+			<ingredient name="foodEgg" count="1"></ingredient>
+		</recipe>
+	</append>
+		
+	<setattribute xpath="//recipe[@name='foodBlueberryPie']/ingredient[@name='foodCropBlueberries']" name="count">4</setattribute>
 	
 	<append xpath="//recipe[@name='foodVegetableStew']"><ingredient name="foodVegetableBrothITAV" count="1"/></append>
 	<setattribute xpath="//recipe[@name='foodVegetableStew']" name="count">4</setattribute>
@@ -779,12 +1192,112 @@
 	<setattribute xpath="//recipe[@name='foodGumboStew']/ingredient[@name='drinkJarBoiledWater']" name="name">foodVegetableBrothITAV</setattribute>
 	<setattribute xpath="//recipe[@name='foodGumboStew']/ingredient[@name='resourceAnimalFat']" name="count">1</setattribute>
 	
+	<setattribute xpath="//recipe[@name='foodChiliDog']" name="craft_time">43</setattribute> 
+	
+	<setattribute xpath="//recipe[@name='foodFishTacos']" name="craft_time">45</setattribute> 
+	
+	<setattribute xpath="//recipe[@name='foodShamChowder']" name="craft_time">95</setattribute> 
+	
 	<remove xpath="//recipe[@name='resourceLockPick']/ingredient[@name='resourceMechanicalParts']" />
 	<remove xpath="//recipe[@name='resourceLockPickBundle']/ingredient[@name='resourceMechanicalParts']" />
 	<setattribute xpath="recipes/recipe[@name='armorMilitaryStealthBoots']/ingredient[@name='armorMilitarySetParts']" name="count">6</setattribute>
 	<setattribute xpath="//recipe[(@name='resourcePaper') and (@craft_area='chemistryStation')]" name="count">20</setattribute>
 	<append xpath="//recipe[@name='foodBoiledMeat']"><ingredient name="drinkCanEmpty" count="1"/></append>
 	
+	<setattribute xpath="//recipe[@name='resourceLockPick']" name="count">5</setattribute>
+	<!-- Alternative arrow/bolt recipes with wood and feather instead of scrap polymer -->
+	<append xpath="/recipes">
+
+	<recipe name="ammoArrowFlaming" count="1" craft_time="12" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
+		<ingredient name="resourceFeather" count="1"/>
+		<ingredient name="resourceGunPowder" count="2"/>
+		<ingredient name="resourceCloth" count="1"/>
+		<ingredient name="resourceAnimalFat" count="1"/>
+	</recipe>
+
+	<recipe name="ammoBundleArrowFlaming" count="1" craft_time="360" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceArrowHeadSteelAP" count="80"/>
+		<ingredient name="resourceScrapPolymers" count="160"/>
+		<ingredient name="resourceGunPowder" count="160"/>
+		<ingredient name="resourceCloth" count="80"/>
+		<ingredient name="resourceAnimalFat" count="80"/>
+	</recipe>
+
+	<recipe name="ammoArrowExploding" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
+		<ingredient name="resourceWood" count="1"/>
+		<ingredient name="resourceFeather" count="1"/>
+		<ingredient name="resourceGunPowder" count="6"/>
+		<ingredient name="resourceDuctTape" count="1"/>
+	</recipe>
+
+	<recipe name="ammoBundleArrowExploding" count="1" craft_time="360" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceArrowHeadSteelAP" count="60"/>
+		<ingredient name="resourceWood" count="60"/>
+		<ingredient name="resourceFeather" count="60"/>
+		<ingredient name="resourceGunPowder" count="360"/>
+		<ingredient name="resourceDuctTape" count="60"/>
+	</recipe>
+
+	<recipe name="ammoArrowSteelAP" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
+		<ingredient name="resourceWood" count="1"/>
+		<ingredient name="resourceFeather" count="1"/>
+	</recipe>
+
+	<recipe name="ammoBundleArrowSteelAP" count="1" craft_time="240" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceArrowHeadSteelAP" count="80"/>
+		<ingredient name="resourceWood" count="80"/>
+		<ingredient name="resourceFeather" count="80"/>
+	</recipe>
+	
+	<recipe name="ammoCrossbowBoltFlaming" count="1" craft_time="14" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
+		<ingredient name="resourceWood" count="1"/>
+		<ingredient name="resourceFeather" count="1"/>
+		<ingredient name="resourceGunPowder" count="2"/>
+		<ingredient name="resourceCloth" count="1"/>
+		<ingredient name="resourceAnimalFat" count="1"/>
+	</recipe>
+
+	<recipe name="ammoBundleCrossbowBoltFlaming" count="1" craft_time="360" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceArrowHeadSteelAP" count="80"/>
+		<ingredient name="resourceFeather" count="80"/>
+		<ingredient name="resourceGunPowder" count="160"/>
+		<ingredient name="resourceCloth" count="80"/>
+		<ingredient name="resourceAnimalFat" count="80"/>
+	</recipe>
+
+	<recipe name="ammoCrossbowBoltExploding" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
+		<ingredient name="resourceWood" count="1"/>
+		<ingredient name="resourceFeather" count="1"/>
+		<ingredient name="resourceGunPowder" count="8"/>
+		<ingredient name="resourceDuctTape" count="1"/>
+	</recipe>
+
+	<recipe name="ammoBundleCrossbowBoltExploding" count="1" craft_time="360" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceArrowHeadSteelAP" count="60"/>
+		<ingredient name="resourceWood" count="60"/>
+		<ingredient name="resourceFeather" count="60"/>
+		<ingredient name="resourceGunPowder" count="480"/>
+		<ingredient name="resourceDuctTape" count="60"/>
+	</recipe>
+
+	<recipe name="ammoCrossbowBoltSteelAP" count="1" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
+		<ingredient name="resourceWood" count="1"/>
+		<ingredient name="resourceFeather" count="1"/>
+	</recipe>
+
+	<recipe name="ammoBundleCrossbowBoltSteelAP" count="1" craft_time="240" craft_area="workbench" tags="learnable">
+		<ingredient name="resourceArrowHeadSteelAP" count="80"/>
+		<ingredient name="resourceWood" count="80"/>
+		<ingredient name="resourceFeather" count="80"/>
+	</recipe>
+	
+	</append>
 	
 	<!-- Removing GyroCopter -->
 	<remove xpath="//recipe[contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter')]" />
@@ -802,6 +1315,8 @@
 	<setattribute xpath="//recipe[@name='autoTurret']" name="tags">learnable,perkRoboticsITAV</setattribute>		
 	<setattribute xpath="//recipe[@name='modClothingStoragePocket']" name="tags">learnable,perkDecoratorITAV</setattribute>
 	<setattribute xpath="//recipe[@name='modClothingCargoStoragePocket']" name="tags">learnable,perkDecoratorITAV</setattribute>
+	<setattribute xpath="//recipe[@name='modArmorDoubleStoragePocket']" name="tags">learnable,perkDecoratorITAV</setattribute>
+	
 	
 	<!-- Updating recipes to being tagged with ITAV on top of old perks -->
 	<append xpath="/recipes/recipe[contains(@tags, 'perkAdvancedEngineering')]/@tags">,perkSmelterITAV</append>
@@ -985,62 +1500,62 @@
 		
 	<!-- Weapon repair kits made from weapon parts-->
 	<append xpath="//recipes">	
-		<recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
-            <ingredient name="gunMGT1AK47Parts" count="25"/>
+		<recipe name="resourceWeaponRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+            <ingredient name="gunMGT1AK47Parts" count="1"/>
             <ingredient name="resourceDuctTape" count="1"/>
         </recipe>
 
-        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+        <recipe name="resourceWeaponRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
             <ingredient name="gunHandgunT1PistolParts" count="1"/>
             <ingredient name="resourceDuctTape" count="1"/>
         </recipe>
 
-        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+        <recipe name="resourceWeaponRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
             <ingredient name="gunRifleT1HuntingRifleParts" count="1"/>
             <ingredient name="resourceDuctTape" count="1"/>
         </recipe>
 
-        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+        <recipe name="resourceWeaponRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
             <ingredient name="gunShotgunT1DoubleBarrelParts" count="1"/>
             <ingredient name="resourceDuctTape" count="1"/>
         </recipe>
 
-        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+        <recipe name="resourceWeaponRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
             <ingredient name="gunBowT1WoodenBowParts" count="1"/>
             <ingredient name="resourceDuctTape" count="1"/>
         </recipe>
 		
-		<recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+		<recipe name="resourceWeaponRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
             <ingredient name="gunExplosivesT3RocketLauncherParts" count="1"/>
             <ingredient name="resourceDuctTape" count="1"/>
         </recipe>
 
-        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+        <recipe name="resourceWeaponRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
             <ingredient name="meleeWpnBatonT2StunBatonParts" count="1"/>
             <ingredient name="resourceDuctTape" count="1"/>
         </recipe>
 
-        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+        <recipe name="resourceWeaponRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
             <ingredient name="meleeWpnKnucklesT3SteelKnucklesParts" count="1"/>
             <ingredient name="resourceDuctTape" count="1"/>
         </recipe>
 
-        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+        <recipe name="resourceWeaponRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
             <ingredient name="meleeWpnBladeT3MacheteParts" count="1"/>
             <ingredient name="resourceDuctTape" count="1"/>
         </recipe>
 
-        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+        <recipe name="resourceWeaponRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
             <ingredient name="meleeWpnSpearT3SteelSpearParts" count="1"/>
             <ingredient name="resourceDuctTape" count="1"/>
         </recipe>
 
-        <recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+        <recipe name="resourceWeaponRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
             <ingredient name="meleeWpnClubT3SteelClubParts" count="1"/>
             <ingredient name="resourceDuctTape" count="1"/>
         </recipe>
 		
-		<recipe name="resourceRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
+		<recipe name="resourceWeaponRepairKitITAV" count="1" craft_time="11" tags="learnable,perkArmorerITAV">
             <ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="1"/>
             <ingredient name="resourceDuctTape" count="1"/>
         </recipe>		

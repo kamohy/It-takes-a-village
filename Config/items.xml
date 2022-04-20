@@ -3,6 +3,9 @@
 <!-- Price adjustments for vanilla (more at the end of the file) -->
 <append xpath="//item"><property name="EconomicValue" value="1"/><property name="EconomicBundleSize" value="1"/></append>
 <setattribute xpath="//item/property[@name='EconomicBundleSize']" name="value">1</setattribute>
+<setattribute xpath="//item[starts-with(@name, 'book')]/property[@name='EconomicValue']" name="value">200</setattribute>
+<setattribute xpath="//item[contains(@name, 'Schematic')]/property[@name='EconomicValue']" name="value">200</setattribute>
+<setattribute xpath="//item[@name='ammoGasCan']/property[@name='EconomicBundleSize']" name="value">4</setattribute>
 
 <!-- Removing GyroCopter -->
 <remove xpath="//item[@name='questRewardGyrocopterPartsBundle']" />
@@ -164,7 +167,7 @@
 </append>
 
 
-<!-- Adding weaponPartFragmentITAV and resourceRepairKitITAV -->
+<!-- Adding items, weaponPartFragmentITAV and resourceWeaponRepairKitITAV etc. -->
 <append xpath="/items/item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and contains(@name, 'Parts') and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]" >
 	<property name="UnlockedBy" value="perkArmorerITAV" />
 	<!--<property name="Material" value="MweaponPartFragmentITAV" />-->
@@ -199,7 +202,7 @@
 		<property name="DescriptionKey" value="weaponPartFragmentITAVGroupDesc"/>
 		<!--<property name="RepairTools" value="resourceWeaponRepairKitITAV"/>-->
 		<property name="UnlockedBy" value="perkArmorerITAV" />
-		<property name="EconomicValue" value="2"/>
+		<property name="EconomicValue" value="3"/>
 		<property name="EconomicBundleSize" value="1"/>
 		<property name="Group" value="Resources"/>
 		<property name="Weight" value="1"/>
@@ -209,18 +212,18 @@
 		<property name="CustomIcon" value="apparelFacialPiercings"/>
 	</item>
 	
-	<item name="resourceRepairKitITAV">
+	<item name="resourceWeaponRepairKitITAV">
 		<property name="HoldType" value="45"/>
 		<property name="Tags" value="junk"/>
 		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-		<property name="DescriptionKey" value="resourceRepairKitITAVDesc"/>
+		<property name="DescriptionKey" value="resourceWeaponRepairKitITAVDesc"/>
 		<property name="CustomIcon" value="resourceRepairKit"/>
 		<property name="CustomIconTint" value="185,133,248" />
 		<property name="UnlockedBy" value="perkArmorerITAV" />
 		<property name="Material" value="Msteel"/>
 		<property name="Stacknumber" value="100"/> <!-- STK resourceRepairKit -->
-		<property name="EconomicValue" value="226"/>
+		<property name="EconomicValue" value="220"/>
 		<property name="RepairTime" value="3"/>
 		<property name="RepairAmount" value="32000"/>
 		<property name="Group" value="Resources"/>
@@ -252,7 +255,7 @@
 		<property name="Material" value="Morganic"/>
 		<property name="Stacknumber" value="5"/>
 		<property name="SellableToTrader" value="true"/>
-		<property name="EconomicValue" value="12000" />
+		<property name="EconomicValue" value="6000" />
 		<property name="Group" value="Resources"/>
 		<property class="Action0">
 			<property name="Class" value="OpenBundle"/>
@@ -278,7 +281,7 @@
 		<property name="Material" value="MfoodRawMeat"/>
 		<property name="Stacknumber" value="500"/>
 		<property name="EconomicBundleSize" value="1"/>
-		<property name="EconomicValue" value="5"/>
+		<property name="EconomicValue" value="3"/>
 		<property name="CraftingIngredientTime" value="3"/>
 		<property class="Action0">
 			<property name="Class" value="Eat"/>
@@ -313,7 +316,7 @@
 		<property name="Material" value="MfoodRawMeat"/>
 		<property name="Stacknumber" value="500"/>
 		<property name="EconomicBundleSize" value="1"/>
-		<property name="EconomicValue" value="30"/>
+		<property name="EconomicValue" value="18"/>
 		<property name="CraftingIngredientTime" value="3"/>
 		<property name="UnlockedBy" value="perkFarmerITAV,perkCookITAV" />
 		<property class="Action0">
@@ -349,7 +352,7 @@
 		<property name="Material" value="MfoodRawMeat"/>
 		<property name="Stacknumber" value="500"/>
 		<property name="EconomicBundleSize" value="1"/>
-		<property name="EconomicValue" value="30"/>
+		<property name="EconomicValue" value="18"/>
 		<property name="CraftingIngredientTime" value="3"/>
 		<property name="UnlockedBy" value="perkFarmerITAV,perkCookITAV" />
 		<property class="Action0">
@@ -384,7 +387,7 @@
 		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 		<property name="Material" value="Mplants"/>
 		<property name="Stacknumber" value="500"/> 
-		<property name="EconomicValue" value="180"/>
+		<property name="EconomicValue" value="134"/>
 		<property name="EconomicBundleSize" value="1"/>
 		<property name="CraftingIngredientTime" value="30"/>
 		<property name="UnlockedBy" value="perkCookITAV" />
@@ -414,7 +417,7 @@
 		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 		<property name="Material" value="Mplants"/>
 		<property name="Stacknumber" value="500"/> 
-		<property name="EconomicValue" value="180"/>
+		<property name="EconomicValue" value="134"/>
 		<property name="EconomicBundleSize" value="1"/>
 		<property name="CraftingIngredientTime" value="30"/>
 		<property name="UnlockedBy" value="perkCookITAV" />
@@ -444,7 +447,7 @@
 		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 		<property name="Material" value="Mplants"/>
 		<property name="Stacknumber" value="500"/> 
-		<property name="EconomicValue" value="114"/>
+		<property name="EconomicValue" value="119"/>
 		<property name="EconomicBundleSize" value="1"/>
 		<property name="CraftingIngredientTime" value="30"/>
 		<property name="UnlockedBy" value="perkCookITAV" />
@@ -470,7 +473,7 @@
 		<property name="CustomIcon" value="foodShamChowder"/>
 		<property name="CustomIconTint" value="244,238,184" />
 		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
-		<property name="EconomicValue" value="122"/>
+		<property name="EconomicValue" value="115"/>
 		<property name="UnlockedBy" value="perkCookITAV"/>
 		<effect_group tiered="false" name="Food Tier 3">
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="53"/>
@@ -493,7 +496,7 @@
 		<property name="CustomIcon" value="foodShamChowder"/>
 		<property name="CustomIconTint" value="251,165,109" />
 		<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
-		<property name="EconomicValue" value="172"/>
+		<property name="EconomicValue" value="165"/>
 		<property name="UnlockedBy" value="perkCookITAV"/>
 		<effect_group tiered="false" name="Food Tier 3">
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="53"/>
@@ -527,7 +530,7 @@
 		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 		<property name="Material" value="Morganic"/>
 		<property name="Stacknumber" value="500"/> 
-		<property name="EconomicValue" value="20"/>
+		<property name="EconomicValue" value="50"/>
 		<property class="Action0">
 			<property name="Class" value="Eat"/>
 			<property name="Delay" value="2.1"/>
@@ -560,7 +563,7 @@
 		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
 		<property name="Material" value="Morganic" />
 		<property name="Stacknumber" value="500"/>
-		<property name="EconomicValue" value="121"/>
+		<property name="EconomicValue" value="114"/>
 		<property name="UnlockedBy" value="perkCookITAV"/>
 		<property class="Action0">
 			<property name="Class" value="Eat" />
@@ -590,7 +593,7 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="24" />
 			<display_value name="dStaminaRegen" value=".25" />
 			<display_value name="dHypothermalResist" value="10" />
-			<display_value name="dDuration" value="360" />
+			<display_value name="dDuration" value="68" />
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeBSDuration" operation="add" value="363" />
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeBSDuration" operation="set" value="1083">
 			<requirement name="CVarCompare" cvar="$buffCoffeeBSDuration" operation="GT" value="1083" /></triggered_effect>
@@ -600,11 +603,6 @@
 				<requirement name="CVarCompare" cvar="$buffIsOnFireDuration" operation="GT" value="3"/>
 			</triggered_effect>
 		</effect_group>
-
-		<!--<effect_group tiered="false">
-			<requirement name="HasBuff" buff="buffIsOnFire" />
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire" />
-		</effect_group> -->
 		<property name="EconomicValue" value="69"/>
 		<property name="EconomicBundleSize" value="1"/>
 	</item>	
@@ -614,7 +612,7 @@
 		<property name="HoldType" value="31" />
 		<property name="DisplayType" value="food" />
 		<property name="CustomIcon" value="foodFishTacos"/>
-		<property name="CustomIconTint" value="206,170,146" /> <!--176,134,127 -->
+		<property name="CustomIconTint" value="206,170,146" />
 		<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab" />
 		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
 		<property name="Material" value="Mplants" />
@@ -644,7 +642,7 @@
 </append>
 <setattribute xpath="//item[@name='resourceRockSmallBundle']/property[@name='SellableToTrader']" name="value">true</setattribute>
 
-<setattribute xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and (contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3')) and not(contains(@name, 'Parts')) and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='RepairTools']" name="value">resourceRepairKitITAV</setattribute>
+<setattribute xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and (contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3')) and not(contains(@name, 'Parts')) and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='RepairTools']" name="value">resourceWeaponRepairKitITAV</setattribute>
 
 
 <!-- My NEXT Profession -->
@@ -673,7 +671,7 @@
 	<property name="CreativeMode" value="None"/>
     <property name="DescriptionKey" value="perkFiremansAlmanacHeatLongDesc"/>
     <property name="Stacknumber" value="1"/>
-    <property name="EconomicValue" value="500"/>
+    <property name="EconomicValue" value="1000"/>
     <property name="Group" value="Books,Mods,BooksOnly"/>
 	<property name="SellableToTrader" value="false" />
     <property class="Action0">
@@ -692,13 +690,14 @@
 	<property name="CustomIconTint" value="e6194B" />
     <property name="DescriptionKey" value="bookSmelterITAVDesc"/>
     <property name="Unlocks" value="perkSmelterITAV"/>
+	<property name="EconomicValue" value="1000"/>
     <property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="LT" value="1" />
     </property>
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSmelterITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="LT" value="1" />
-			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
+			<!--<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" /> -->
 		</triggered_effect> 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_SmelterITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkSmelterITAV" operation="set" value="1"/>
@@ -716,13 +715,14 @@
 	<property name="CustomIconTint" value="f58231" />
     <property name="DescriptionKey" value="bookMinerITAVDesc"/>
     <property name="Unlocks" value="perkMinerITAV"/>
+	<property name="EconomicValue" value="1000"/>
     <property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="perkMinerITAV" operation="LT" value="1" />
     </property>
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMinerITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkMinerITAV" operation="LT" value="1" />
-			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
+			<!--<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />-->
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_MinerITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkMinerITAV" operation="set" value="1"/>
@@ -740,13 +740,14 @@
 	<property name="CustomIconTint" value="bfef45" />
     <property name="DescriptionKey" value="bookCookITAVDesc"/>
     <property name="Unlocks" value="perkCookITAV"/>
+	<property name="EconomicValue" value="1000"/>
     <property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="perkCookITAV" operation="LT" value="1" />
     </property>
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkCookITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkCookITAV" operation="LT" value="1" />
-			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
+			<!--<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />-->
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_CookITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkCookITAV" operation="set" value="1"/>
@@ -765,13 +766,14 @@
 	<property name="CustomIconTint" value="3cb44b" />
     <property name="DescriptionKey" value="bookArmorerITAVDesc"/>
     <property name="Unlocks" value="perkArmorerITAV"/>
+	<property name="EconomicValue" value="1000"/>
     <property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="perkArmorerITAV" operation="LT" value="1" />
     </property>
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkArmorerITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkArmorerITAV" operation="LT" value="1" />
-			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
+			<!--<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />-->
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_ArmorerITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkArmorerITAV" operation="set" value="1"/>
@@ -790,13 +792,14 @@
 	<property name="CustomIconTint" value="4363d8" />
     <property name="DescriptionKey" value="bookFarmerITAVDesc"/>
     <property name="Unlocks" value="perkFarmerITAV"/>
+	<property name="EconomicValue" value="1000"/>
     <property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="perkFarmerITAV" operation="LT" value="1" />
     </property>
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkFarmerITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkFarmerITAV" operation="LT" value="1" />
-			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
+			<!--<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" /> -->
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_FarmerITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkFarmerITAV" operation="set" value="1"/>
@@ -814,13 +817,14 @@
 	<property name="CustomIconTint" value="911eb4" />
     <property name="DescriptionKey" value="bookChemistITAVDesc"/>
     <property name="Unlocks" value="perkChemistITAV"/>
+	<property name="EconomicValue" value="1000"/>
     <property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="perkChemistITAV" operation="LT" value="1" />
     </property>
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkChemistITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkChemistITAV" operation="LT" value="1" />
-			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
+			<!--<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />-->
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_ChemistITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkChemistITAV" operation="set" value="1"/>
@@ -838,13 +842,14 @@
 	<property name="CustomIconTint" value="f032e6" />
     <property name="DescriptionKey" value="bookRoboticsITAVDesc"/>
     <property name="Unlocks" value="perkRoboticsITAV"/>
+	<property name="EconomicValue" value="1000"/>
     <property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="perkRoboticsITAV" operation="LT" value="1" />
     </property>
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRoboticsITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkRoboticsITAV" operation="LT" value="1" />
-			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
+			<!--<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />-->
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_RoboticsITAV"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkRoboticsITAV" operation="set" value="1"/>
@@ -859,21 +864,48 @@
 <item name="bookRunnerITAV">
     <property name="Extends" value="bookMasterITAV"/>
     <property name="CustomIcon" value="schematicMaster"/>
-	<property name="CustomIconTint" value="ffffff" />
+	<property name="CustomIconTint" value="333333" />
     <property name="DescriptionKey" value="bookRunnerITAVDesc"/>
     <property name="Unlocks" value="perkRunnerITAV"/>
+	<property name="EconomicValue" value="10000"/>
     <property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="perkRunnerITAV" operation="LT" value="1" />
     </property>
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRunnerITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkRunnerITAV" operation="LT" value="1" />
-			<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />
+			<!--<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />-->
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_RunnerITAV" />	
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkRunnerITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntRunnerITAV" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntRunnerITAVTooltip"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="ITAV_start"/>
+    </effect_group>
+</item>
+
+
+<!-- DECORATOR -->
+<item name="bookDecoratorITAV">
+    <property name="Extends" value="bookMasterITAV"/>
+    <property name="CustomIcon" value="schematicMaster"/>
+	<property name="CustomIconTint" value="ffffff" />
+    <property name="DescriptionKey" value="bookDecoratorITAVDesc"/>
+    <property name="Unlocks" value="perkDecoratorITAV"/>
+	<property name="EconomicValue" value="1000"/>
+    <property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="perkDecoratorITAV" operation="LT" value="1" />
+    </property>
+    <effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkDecoratorITAV" level="1">
+			<requirement name="ProgressionLevel" progression_name="perkDecoratorITAV" operation="LT" value="1" />
+			<!--<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />-->
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_DecoratorITAV" />	
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkDecoratorITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntDecoratorITAV" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="hasLearntDecoratorITAVTooltip"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="ITAV_start"/>
     </effect_group>
@@ -918,7 +950,8 @@
 	<property name="UMA.Overlay0Tint" value="243,252,33"/>
 	<property name="UnlockedBy" value="perkRunnerITAV"/>
 	<property name="Group" value="Clothing"/>
-	<property name="Tags" value="feet,clothing,canHaveCosmetic,noMods"/>
+	<property name="EconomicValue" value="8560" />
+	<property name="Tags" value="feet,clothing,canHaveCosmetic"/>
 	<property name="EquipSlot" value="Feet"/>
 	<property class="UMA">
 		<property name="Mesh" value="goth_boots"/>
@@ -948,7 +981,8 @@
 	<property name="UMA.Overlay0Tint" value="40,73,121"/>
 	<property name="UnlockedBy" value="perkRunnerITAV"/>
 	<property name="Group" value="Clothing"/>
-	<property name="Tags" value="feet,clothing,canHaveCosmetic,noMods"/>
+	<property name="EconomicValue" value="1290" />
+	<property name="Tags" value="feet,clothing,canHaveCosmetic"/>
 	<property name="EquipSlot" value="Feet"/>
 	<property class="UMA">
 		<property name="Mesh" value="goth_boots"/>
@@ -978,7 +1012,8 @@
 	<property name="UMA.Overlay0Tint" value="243,252,33"/>
 	<property name="UnlockedBy" value="perkRunnerITAV"/>
 	<property name="Group" value="Clothing"/>
-	<property name="Tags" value="feet,clothing,canHaveCosmetic,noMods"/>
+	<property name="EconomicValue" value="7238" />
+	<property name="Tags" value="feet,clothing,canHaveCosmetic"/>
 	<property name="EquipSlot" value="Feet"/>
 	<property class="UMA">
 		<property name="Mesh" value="armor_kevlar_boots"/>
@@ -1004,7 +1039,8 @@
 	<property name="UMA.Overlay0Tint" value="234,216,34"/>
 	<property name="UnlockedBy" value="perkRunnerITAV"/>
 	<property name="Group" value="Clothing"/>
-	<property name="Tags" value="feet,clothing,canHaveCosmetic,noMods"/>
+	<property name="EconomicValue" value="1018" />
+	<property name="Tags" value="feet,clothing,canHaveCosmetic"/>
 	<property name="EquipSlot" value="Feet"/>
 	<property class="UMA">
 		<property name="Mesh" value="armor_kevlar_boots"/>
@@ -1021,7 +1057,7 @@
 	</effect_group>
 </item>
 
-
+</append>
 
 
 
@@ -1029,11 +1065,24 @@
 
 <!-- Weapon Schematics -->
 
+<setattribute xpath="//item[@name='meleeWpnBladeT3MacheteSchematic']/property[@name='EconomicValue']" name="value">5405</setattribute>
+<setattribute xpath="//item[@name='meleeWpnSledgeT3SteelSledgehammerSchematic']/property[@name='EconomicValue']" name="value">5405</setattribute>
+<setattribute xpath="//item[@name='meleeWpnKnucklesT3SteelKnucklesSchematic']/property[@name='EconomicValue']" name="value">5405</setattribute>
+<setattribute xpath="//item[@name='gunHandgunT3DesertVultureSchematic']/property[@name='EconomicValue']" name="value">8990</setattribute>
+<setattribute xpath="//item[@name='gunHandgunT3SMG5Schematic']/property[@name='EconomicValue']" name="value">6195</setattribute>
+<setattribute xpath="//item[@name='gunShotgunT3AutoShotgunSchematic']/property[@name='EconomicValue']" name="value">11470</setattribute>
+<setattribute xpath="//item[@name='gunRifleT3SniperRifleSchematic']/property[@name='EconomicValue']" name="value">13650</setattribute>
+<setattribute xpath="//item[@name='gunMGT3M60Schematic']/property[@name='EconomicValue']" name="value">8985</setattribute>
+<setattribute xpath="//item[@name='gunBowT3CompoundBowSchematic']/property[@name='EconomicValue']" name="value">6483</setattribute>
+<setattribute xpath="//item[@name='gunBowT3CompoundCrossbowSchematic']/property[@name='EconomicValue']" name="value">6696</setattribute>
+
+<append xpath="/items">
 <item name="meleeWpnSpearT3SteelSpearSchematic">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="meleeWpnSpearT3SteelSpear"/>
 	<property name="Unlocks" value="meleeWpnSpearT3SteelSpear"/>
+	<property name="EconomicValue" value="5405" />
 	<property name="UnlockedBy" value="perkArmorerITAV" />
 	<property class="Action0">
 		<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" operation="Equals" value="1" />
@@ -1056,6 +1105,7 @@
 	<property name="CustomIcon" value="meleeWpnClubT3SteelClub"/>
 	<property name="Unlocks" value="meleeWpnClubT3SteelClub"/>
 	<property name="UnlockedBy" value="perkArmorerITAV" />
+	<property name="EconomicValue" value="5405" />
 	<property class="Action0">
 		<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" operation="Equals" value="1" />
         <property name="Class" value="Eat"/>
@@ -1078,6 +1128,7 @@
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="armorMilitaryBoots"/>
 	<property name="Unlocks" value="armorMilitaryStealthBoots"/>
+	<property name="EconomicValue" value="800" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorMilitaryStealthBoots" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
@@ -1088,6 +1139,8 @@
 
 
 <!-- Assorted decorative items ITAV Schematics -->
+<append xpath="//item[contains(@name, 'apparel') and (contains(@name, 'Shirt') or contains(@name, 'shirt') or contains(@name, 'TankTop'))]/property[@name='Tags']/@value">,shirtITAV</append>
+
 <!--<append xpath="//items">
 <item name="signBread01ITAVSchematic">
 	<property name="Extends" value="schematicNoQualityMaster"/>
@@ -1618,8 +1671,7 @@
  <!-- ********************* Price adjustments from vanilla ********************* -->
 <setattribute xpath="//item[contains(@name, 'T0') and not(contains(@name, 'Flashlight')) and not(contains(@name, 'pipe')) and not(contains(@name, 'quest')) and not(contains(@name, 'leather'))]/property[@name='SellableToTrader']" name="value">true</setattribute>
 
-<setattribute xpath="//item[starts-with(@name, 'book')]/property[@name='EconomicValue']" name="value">200</setattribute>
-<setattribute xpath="//item[contains(@name, 'Schematic')]/property[@name='EconomicValue']" name="value">200</setattribute>
+
  
 <setattribute xpath="//item[@name='resourceRockSmall']/property[@name='EconomicValue']" name="value">1</setattribute>
 <setattribute xpath="//item[@name='resourceSnowBall']/property[@name='EconomicValue']" name="value">1</setattribute>
@@ -1628,14 +1680,14 @@
 <setattribute xpath="//item[@name='resourceWood']/property[@name='EconomicValue']" name="value">1</setattribute>
 <setattribute xpath="//item[@name='resourceCrushedSand']/property[@name='EconomicValue']" name="value">1</setattribute>
 <setattribute xpath="//item[@name='resourceBrokenGlass']/property[@name='EconomicValue']" name="value">1</setattribute>
-<setattribute xpath="//item[@name='resourceScrapIron']/property[@name='EconomicValue']" name="value">4</setattribute>
-<setattribute xpath="//item[@name='resourceForgedIron']/property[@name='EconomicValue']" name="value">60</setattribute>
-<setattribute xpath="//item[@name='resourceMetalPipe']/property[@name='EconomicValue']" name="value">60</setattribute>
-<setattribute xpath="//item[@name='resourceForgedSteel']/property[@name='EconomicValue']" name="value">100</setattribute>
-<setattribute xpath="//item[@name='resourceScrapPolymers']/property[@name='EconomicValue']" name="value">10</setattribute>
+<setattribute xpath="//item[@name='resourceScrapIron']/property[@name='EconomicValue']" name="value">2</setattribute>
+<setattribute xpath="//item[@name='resourceForgedIron']/property[@name='EconomicValue']" name="value">30</setattribute>
+<setattribute xpath="//item[@name='resourceMetalPipe']/property[@name='EconomicValue']" name="value">30</setattribute>
+<setattribute xpath="//item[@name='resourceForgedSteel']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='resourceScrapPolymers']/property[@name='EconomicValue']" name="value">7</setattribute>
 <setattribute xpath="//item[@name='resourceSewingKit']/property[@name='EconomicValue']" name="value">50</setattribute>
-<setattribute xpath="//item[@name='resourceOilShale']/property[@name='EconomicValue']" name="value">5</setattribute>
-<setattribute xpath="//item[@name='resourceBone']/property[@name='EconomicValue']" name="value">2</setattribute>
+<setattribute xpath="//item[@name='resourceOilShale']/property[@name='EconomicValue']" name="value">3</setattribute>
+<setattribute xpath="//item[@name='resourceBone']/property[@name='EconomicValue']" name="value">1</setattribute>
 <setattribute xpath="//item[@name='resourceLeather']/property[@name='EconomicValue']" name="value">2</setattribute>
 <setattribute xpath="//item[@name='resourceAnimalFat']/property[@name='EconomicValue']" name="value">2</setattribute>
 <setattribute xpath="//item[@name='resourceTestosteroneExtract']/property[@name='EconomicValue']" name="value">50</setattribute>
@@ -1645,226 +1697,226 @@
 <setattribute xpath="//item[@name='resourceCropCottonPlant']/property[@name='EconomicValue']" name="value">1</setattribute>
 <setattribute xpath="//item[@name='resourceCropGoldenrodPlant']/property[@name='EconomicValue']" name="value">1</setattribute>
 <setattribute xpath="//item[@name='resourceCropCoffeeBeans']/property[@name='EconomicValue']" name="value">3</setattribute>
-<setattribute xpath="//item[@name='resourceScrapBrass']/property[@name='EconomicValue']" name="value">5</setattribute>
-<setattribute xpath="//item[@name='resourceScrapLead']/property[@name='EconomicValue']" name="value">4</setattribute>
-<setattribute xpath="//item[@name='resourceClayLump']/property[@name='EconomicValue']" name="value">2</setattribute>
-<setattribute xpath="//item[@name='resourceCobblestones']/property[@name='EconomicValue']" name="value">3</setattribute>
+<setattribute xpath="//item[@name='resourceScrapBrass']/property[@name='EconomicValue']" name="value">3</setattribute>
+<setattribute xpath="//item[@name='resourceScrapLead']/property[@name='EconomicValue']" name="value">2</setattribute>
+<setattribute xpath="//item[@name='resourceClayLump']/property[@name='EconomicValue']" name="value">1</setattribute>
+<setattribute xpath="//item[@name='resourceCobblestones']/property[@name='EconomicValue']" name="value">2</setattribute>
 <setattribute xpath="//item[@name='resourceCement']/property[@name='EconomicValue']" name="value">10</setattribute>
 <setattribute xpath="//item[@name='resourceConcreteMix']/property[@name='EconomicValue']" name="value">12</setattribute>
 <setattribute xpath="//item[@name='resourceCloth']/property[@name='EconomicValue']" name="value">1</setattribute>
-<setattribute xpath="//item[@name='resourcePaper']/property[@name='EconomicValue']" name="value">3</setattribute>
-<setattribute xpath="//item[@name='resourceMilitaryFiber']/property[@name='EconomicValue']" name="value">630</setattribute>
-<setattribute xpath="//item[@name='resourceElectricParts']/property[@name='EconomicValue']" name="value">90</setattribute>
-<setattribute xpath="//item[@name='resourceMechanicalParts']/property[@name='EconomicValue']" name="value">90</setattribute>
+<setattribute xpath="//item[@name='resourcePaper']/property[@name='EconomicValue']" name="value">1</setattribute>
+<setattribute xpath="//item[@name='resourceMilitaryFiber']/property[@name='EconomicValue']" name="value">570</setattribute>
+<setattribute xpath="//item[@name='resourceElectricParts']/property[@name='EconomicValue']" name="value">60</setattribute>
+<setattribute xpath="//item[@name='resourceMechanicalParts']/property[@name='EconomicValue']" name="value">60</setattribute>
 <setattribute xpath="//item[@name='resourceFeather']/property[@name='EconomicValue']" name="value">2</setattribute>
-<setattribute xpath="//item[@name='resourceArrowHeadIron']/property[@name='EconomicValue']" name="value">10</setattribute>
-<setattribute xpath="//item[@name='resourceArrowHeadSteelAP']/property[@name='EconomicValue']" name="value">30</setattribute>
-<setattribute xpath="//item[@name='resourceCoal']/property[@name='EconomicValue']" name="value">4</setattribute>
-<setattribute xpath="//item[@name='resourcePotassiumNitratePowder']/property[@name='EconomicValue']" name="value">4</setattribute>
-<setattribute xpath="//item[@name='resourceGunPowder']/property[@name='EconomicValue']" name="value">8</setattribute>
-<setattribute xpath="//item[@name='resourceBuckshot']/property[@name='EconomicValue']" name="value">14</setattribute>
-<setattribute xpath="//item[@name='resourceBulletCasing']/property[@name='EconomicValue']" name="value">32</setattribute>
-<setattribute xpath="//item[@name='resourceBulletTip']/property[@name='EconomicValue']" name="value">10</setattribute>
-<setattribute xpath="//item[@name='resourceNail']/property[@name='EconomicValue']" name="value">6</setattribute>
-<setattribute xpath="//item[@name='resourceRocketTip']/property[@name='EconomicValue']" name="value">322</setattribute>
-<setattribute xpath="//item[@name='resourceRocketCasing']/property[@name='EconomicValue']" name="value">322</setattribute>
-<setattribute xpath="//item[@name='resourceRepairKit']/property[@name='EconomicValue']" name="value">86</setattribute>
-<setattribute xpath="//item[@name='resourceOil']/property[@name='EconomicValue']" name="value">142</setattribute>
+<setattribute xpath="//item[@name='resourceArrowHeadIron']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//item[@name='resourceArrowHeadSteelAP']/property[@name='EconomicValue']" name="value">15</setattribute>
+<setattribute xpath="//item[@name='resourceCoal']/property[@name='EconomicValue']" name="value">2</setattribute>
+<setattribute xpath="//item[@name='resourcePotassiumNitratePowder']/property[@name='EconomicValue']" name="value">2</setattribute>
+<setattribute xpath="//item[@name='resourceGunPowder']/property[@name='EconomicValue']" name="value">4</setattribute>
+<setattribute xpath="//item[@name='resourceBuckshot']/property[@name='EconomicValue']" name="value">7</setattribute>
+<setattribute xpath="//item[@name='resourceBulletCasing']/property[@name='EconomicValue']" name="value">19</setattribute>
+<setattribute xpath="//item[@name='resourceBulletTip']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//item[@name='resourceNail']/property[@name='EconomicValue']" name="value">3</setattribute>
+<setattribute xpath="//item[@name='resourceRocketTip']/property[@name='EconomicValue']" name="value">161</setattribute>
+<setattribute xpath="//item[@name='resourceRocketCasing']/property[@name='EconomicValue']" name="value">161</setattribute>
+<setattribute xpath="//item[@name='resourceRepairKit']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='resourceOil']/property[@name='EconomicValue']" name="value">83</setattribute>
 <setattribute xpath="//item[@name='resourcePaint']/property[@name='EconomicValue']" name="value">1</setattribute>
-<setattribute xpath="//item[@name='resourceDoorKnob']/property[@name='EconomicValue']" name="value">250</setattribute>
-<setattribute xpath="//item[@name='resourceCandleStick']/property[@name='EconomicValue']" name="value">750</setattribute>
-<setattribute xpath="//item[@name='resourceRadiator']/property[@name='EconomicValue']" name="value">1250</setattribute>
-<setattribute xpath="//item[@name='resourceFishingWeight']/property[@name='EconomicValue']" name="value">20</setattribute>
-<setattribute xpath="//item[@name='resourceTrophy1']/property[@name='EconomicValue']" name="value">250</setattribute>
-<setattribute xpath="//item[@name='resourceTrophy2']/property[@name='EconomicValue']" name="value">40</setattribute>
+<setattribute xpath="//item[@name='resourceDoorKnob']/property[@name='EconomicValue']" name="value">150</setattribute>
+<setattribute xpath="//item[@name='resourceCandleStick']/property[@name='EconomicValue']" name="value">450</setattribute>
+<setattribute xpath="//item[@name='resourceRadiator']/property[@name='EconomicValue']" name="value">750</setattribute>
+<setattribute xpath="//item[@name='resourceFishingWeight']/property[@name='EconomicValue']" name="value">10</setattribute>
+<setattribute xpath="//item[@name='resourceTrophy1']/property[@name='EconomicValue']" name="value">150</setattribute>
+<setattribute xpath="//item[@name='resourceTrophy2']/property[@name='EconomicValue']" name="value">20</setattribute>
 <setattribute xpath="//item[@name='resourceSilverNugget']/property[@name='EconomicValue']" name="value">200</setattribute>
 <setattribute xpath="//item[@name='resourceGoldNugget']/property[@name='EconomicValue']" name="value">400</setattribute>
 <setattribute xpath="//item[@name='resourceRawDiamond']/property[@name='EconomicValue']" name="value">700</setattribute>
-<setattribute xpath="//item[@name='resourceHeadlight']/property[@name='EconomicValue']" name="value">240</setattribute>
+<setattribute xpath="//item[@name='resourceHeadlight']/property[@name='EconomicValue']" name="value">150</setattribute>
 <setattribute xpath="//item[@name='smallEngine']/property[@name='EconomicValue']" name="value">1000</setattribute>
-<setattribute xpath="//item[@name='carBattery']/property[@name='EconomicValue']" name="value">1980</setattribute>
+<setattribute xpath="//item[@name='carBattery']/property[@name='EconomicValue']" name="value">1602</setattribute>
 <setattribute xpath="//item[@name='oldCash']/property[@name='EconomicValue']" name="value">1</setattribute>
 <setattribute xpath="//item[@name='solarCell']/property[@name='EconomicValue']" name="value">2000</setattribute>
-<setattribute xpath="//item[@name='resourceGlue']/property[@name='EconomicValue']" name="value">25</setattribute>
-<setattribute xpath="//item[@name='resourceDuctTape']/property[@name='EconomicValue']" name="value">26</setattribute>
+<setattribute xpath="//item[@name='resourceGlue']/property[@name='EconomicValue']" name="value">19</setattribute>
+<setattribute xpath="//item[@name='resourceDuctTape']/property[@name='EconomicValue']" name="value">20</setattribute>
 <setattribute xpath="//item[@name='resourceSpring']/property[@name='EconomicValue']" name="value">60</setattribute>
-<setattribute xpath="//item[@name='resourceLockPick']/property[@name='EconomicValue']" name="value">150</setattribute>
-<setattribute xpath="//item[@name='drinkJarRiverWater']/property[@name='EconomicValue']" name="value">15</setattribute>
-<setattribute xpath="//item[@name='drinkJarEmpty']/property[@name='EconomicValue']" name="value">14</setattribute>
-<setattribute xpath="//item[@name='drinkJarBoiledWater']/property[@name='EconomicValue']" name="value">16</setattribute>
-<setattribute xpath="//item[@name='drinkJarGoldenRodTea']/property[@name='EconomicValue']" name="value">17</setattribute>
-<setattribute xpath="//item[@name='drinkJarRedTea']/property[@name='EconomicValue']" name="value">18</setattribute>
-<setattribute xpath="//item[@name='drinkJarYuccaJuice']/property[@name='EconomicValue']" name="value">20</setattribute>
-<setattribute xpath="//item[@name='drinkYuccaJuiceSmoothie']/property[@name='EconomicValue']" name="value">43</setattribute>
-<setattribute xpath="//item[@name='foodCropCorn']/property[@name='EconomicValue']" name="value">3</setattribute>
+<setattribute xpath="//item[@name='resourceLockPick']/property[@name='EconomicValue']" name="value">18</setattribute>
+<setattribute xpath="//item[@name='drinkJarRiverWater']/property[@name='EconomicValue']" name="value">14</setattribute>
+<setattribute xpath="//item[@name='drinkJarEmpty']/property[@name='EconomicValue']" name="value">13</setattribute>
+<setattribute xpath="//item[@name='drinkJarBoiledWater']/property[@name='EconomicValue']" name="value">15</setattribute>
+<setattribute xpath="//item[@name='drinkJarGoldenRodTea']/property[@name='EconomicValue']" name="value">16</setattribute>
+<setattribute xpath="//item[@name='drinkJarRedTea']/property[@name='EconomicValue']" name="value">17</setattribute>
+<setattribute xpath="//item[@name='drinkJarYuccaJuice']/property[@name='EconomicValue']" name="value">21</setattribute>
+<setattribute xpath="//item[@name='drinkYuccaJuiceSmoothie']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCropCorn']/property[@name='EconomicValue']" name="value">5</setattribute>
 <setattribute xpath="//item[@name='foodCropGraceCorn']/property[@name='EconomicValue']" name="value">50</setattribute>
-<setattribute xpath="//item[@name='foodRawMeat']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//item[@name='foodRawMeat']/property[@name='EconomicValue']" name="value">3</setattribute>
 <setattribute xpath="//item[@name='foodRottingFlesh']/property[@name='EconomicValue']" name="value">2</setattribute>
-<setattribute xpath="//item[@name='foodEgg']/property[@name='EconomicValue']" name="value">6</setattribute>
+<setattribute xpath="//item[@name='foodEgg']/property[@name='EconomicValue']" name="value">3</setattribute>
 <setattribute xpath="//item[@name='foodCornMeal']/property[@name='EconomicValue']" name="value">3</setattribute>
-<setattribute xpath="//item[@name='foodCropBlueberries']/property[@name='EconomicValue']" name="value">4</setattribute>
-<setattribute xpath="//item[@name='foodCropPotato']/property[@name='EconomicValue']" name="value">4</setattribute>
-<setattribute xpath="//item[@name='foodCropMushrooms']/property[@name='EconomicValue']" name="value">4</setattribute>
-<setattribute xpath="//item[@name='foodCropYuccaFruit']/property[@name='EconomicValue']" name="value">3</setattribute>
-<setattribute xpath="//item[@name='foodCropPumpkin']/property[@name='EconomicValue']" name="value">4</setattribute>
+<setattribute xpath="//item[@name='foodCropBlueberries']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//item[@name='foodCropPotato']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//item[@name='foodCropMushrooms']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//item[@name='foodCropYuccaFruit']/property[@name='EconomicValue']" name="value">4</setattribute>
+<setattribute xpath="//item[@name='foodCropPumpkin']/property[@name='EconomicValue']" name="value">5</setattribute>
 <setattribute xpath="//item[@name='drinkCanEmpty']/property[@name='EconomicValue']" name="value">15</setattribute>
 <setattribute xpath="//item[@name='drinkCanMegaCrush']/property[@name='EconomicValue']" name="value">250</setattribute>
-<setattribute xpath="//item[@name='drinkJarCoffee']/property[@name='EconomicValue']" name="value">19</setattribute>
-<setattribute xpath="//item[@name='drinkJarBlackStrapCoffee']/property[@name='EconomicValue']" name="value">59</setattribute>
-<setattribute xpath="//item[@name='drinkJarBeer']/property[@name='EconomicValue']" name="value">31</setattribute>
-<setattribute xpath="//item[@name='drinkJarGrandpasMoonshine']/property[@name='EconomicValue']" name="value">416</setattribute>
-<setattribute xpath="//item[@name='drinkJarGrandpasAwesomeSauce']/property[@name='EconomicValue']" name="value">630</setattribute>
-<setattribute xpath="//item[@name='drinkJarGrandpasLearningElixir']/property[@name='EconomicValue']" name="value">603</setattribute>
-<setattribute xpath="//item[@name='drinkJarGrandpasForgettingElixir']/property[@name='EconomicValue']" name="value">30570</setattribute>
-<setattribute xpath="//item[@name='bucketEmpty']/property[@name='EconomicValue']" name="value">420</setattribute>
-<setattribute xpath="//item[@name='bucketRiverWater']/property[@name='EconomicValue']" name="value">422</setattribute>
+<setattribute xpath="//item[@name='drinkJarCoffee']/property[@name='EconomicValue']" name="value">18</setattribute>
+<setattribute xpath="//item[@name='drinkJarBlackStrapCoffee']/property[@name='EconomicValue']" name="value">38</setattribute>
+<setattribute xpath="//item[@name='drinkJarBeer']/property[@name='EconomicValue']" name="value">30</setattribute>
+<setattribute xpath="//item[@name='drinkJarGrandpasMoonshine']/property[@name='EconomicValue']" name="value">420</setattribute>
+<setattribute xpath="//item[@name='drinkJarGrandpasAwesomeSauce']/property[@name='EconomicValue']" name="value">635</setattribute>
+<setattribute xpath="//item[@name='drinkJarGrandpasLearningElixir']/property[@name='EconomicValue']" name="value">514</setattribute>
+<setattribute xpath="//item[@name='drinkJarGrandpasForgettingElixir']/property[@name='EconomicValue']" name="value">28020</setattribute>
+<setattribute xpath="//item[@name='bucketEmpty']/property[@name='EconomicValue']" name="value">210</setattribute>
+<setattribute xpath="//item[@name='bucketRiverWater']/property[@name='EconomicValue']" name="value">212</setattribute>
 <setattribute xpath="//item[@name='schematicMaster']/property[@name='EconomicValue']" name="value">800</setattribute>
 <setattribute xpath="//item[@name='skillBookMaster']/property[@name='EconomicValue']" name="value">500</setattribute>
 <setattribute xpath="//item[@name='candle']/property[@name='EconomicValue']" name="value">3</setattribute>
-<setattribute xpath="//item[@name='toolCookingGrill']/property[@name='EconomicValue']" name="value">110</setattribute>
-<setattribute xpath="//item[@name='toolCookingPot']/property[@name='EconomicValue']" name="value">110</setattribute>
+<setattribute xpath="//item[@name='toolCookingGrill']/property[@name='EconomicValue']" name="value">55</setattribute>
+<setattribute xpath="//item[@name='toolCookingPot']/property[@name='EconomicValue']" name="value">55</setattribute>
 <setattribute xpath="//item[@name='toolBeaker']/property[@name='EconomicValue']" name="value">1000</setattribute>
-<setattribute xpath="//item[@name='toolBellows']/property[@name='EconomicValue']" name="value">326</setattribute>
-<setattribute xpath="//item[@name='toolAnvil']/property[@name='EconomicValue']" name="value">4200</setattribute>
-<setattribute xpath="//item[@name='toolForgeCrucible']/property[@name='EconomicValue']" name="value">13640</setattribute>
-<setattribute xpath="//item[@name='resourceLockPickBundle']/property[@name='EconomicValue']" name="value">2400</setattribute>
+<setattribute xpath="//item[@name='toolBellows']/property[@name='EconomicValue']" name="value">221</setattribute>
+<setattribute xpath="//item[@name='toolAnvil']/property[@name='EconomicValue']" name="value">2100</setattribute>
+<setattribute xpath="//item[@name='toolForgeCrucible']/property[@name='EconomicValue']" name="value">7960</setattribute>
+<setattribute xpath="//item[@name='resourceLockPickBundle']/property[@name='EconomicValue']" name="value">1200</setattribute>
 <setattribute xpath="//item[@name='bookFiremansAlmanacHeat']/property[@name='EconomicValue']" name="value">500</setattribute>
 <setattribute xpath="//item[@name='meleeToolRepairT0StoneAxe']/property[@name='EconomicValue']" name="value">6</setattribute>
 <setattribute xpath="//item[@name='meleeToolRepairT0TazasStoneAxe']/property[@name='EconomicValue']" name="value">1000</setattribute>
-<setattribute xpath="//item[@name='meleeToolRepairT1ClawHammer']/property[@name='EconomicValue']" name="value">782</setattribute>
-<setattribute xpath="//item[@name='meleeToolRepairT3Nailgun']/property[@name='EconomicValue']" name="value">4252</setattribute>
-<setattribute xpath="//item[@name='meleeToolAxeT1IronFireaxe']/property[@name='EconomicValue']" name="value">1266</setattribute>
-<setattribute xpath="//item[@name='meleeToolAxeT2SteelAxe']/property[@name='EconomicValue']" name="value">2094</setattribute>
-<setattribute xpath="//item[@name='meleeToolPickT1IronPickaxe']/property[@name='EconomicValue']" name="value">1266</setattribute>
-<setattribute xpath="//item[@name='meleeToolPickT2SteelPickaxe']/property[@name='EconomicValue']" name="value">1694</setattribute>
+<setattribute xpath="//item[@name='meleeToolRepairT1ClawHammer']/property[@name='EconomicValue']" name="value">410</setattribute>
+<setattribute xpath="//item[@name='meleeToolRepairT3Nailgun']/property[@name='EconomicValue']" name="value">2610</setattribute>
+<setattribute xpath="//item[@name='meleeToolAxeT1IronFireaxe']/property[@name='EconomicValue']" name="value">654</setattribute>
+<setattribute xpath="//item[@name='meleeToolAxeT2SteelAxe']/property[@name='EconomicValue']" name="value">1576</setattribute>
+<setattribute xpath="//item[@name='meleeToolPickT1IronPickaxe']/property[@name='EconomicValue']" name="value">654</setattribute>
+<setattribute xpath="//item[@name='meleeToolPickT2SteelPickaxe']/property[@name='EconomicValue']" name="value">1376</setattribute>
 <setattribute xpath="//item[@name='meleeToolShovelT0StoneShovel']/property[@name='EconomicValue']" name="value">11</setattribute>
-<setattribute xpath="//item[@name='meleeToolShovelT1IronShovel']/property[@name='EconomicValue']" name="value">1026</setattribute>
-<setattribute xpath="//item[@name='meleeToolShovelT2SteelShovel']/property[@name='EconomicValue']" name="value">2094</setattribute>
-<setattribute xpath="//item[@name='meleeToolAxeT3Chainsaw']/property[@name='EconomicValue']" name="value">3626</setattribute>
-<setattribute xpath="//item[@name='meleeToolPickT3Auger']/property[@name='EconomicValue']" name="value">3626</setattribute>
-<setattribute xpath="//item[@name='meleeToolSalvageT1Wrench']/property[@name='EconomicValue']" name="value">1132</setattribute>
-<setattribute xpath="//item[@name='meleeToolSalvageT2Ratchet']/property[@name='EconomicValue']" name="value">2422</setattribute>
-<setattribute xpath="//item[@name='meleeToolSalvageT3ImpactDriver']/property[@name='EconomicValue']" name="value">3398</setattribute>
-<setattribute xpath="//item[@name='meleeWpnBladeT0BoneKnife']/property[@name='EconomicValue']" name="value">10</setattribute>
-<setattribute xpath="//item[@name='meleeWpnBladeT1HuntingKnife']/property[@name='EconomicValue']" name="value">540</setattribute>
+<setattribute xpath="//item[@name='meleeToolShovelT1IronShovel']/property[@name='EconomicValue']" name="value">534</setattribute>
+<setattribute xpath="//item[@name='meleeToolShovelT2SteelShovel']/property[@name='EconomicValue']" name="value">1576</setattribute>
+<setattribute xpath="//item[@name='meleeToolAxeT3Chainsaw']/property[@name='EconomicValue']" name="value">2904</setattribute>
+<setattribute xpath="//item[@name='meleeToolPickT3Auger']/property[@name='EconomicValue']" name="value">2904</setattribute>
+<setattribute xpath="//item[@name='meleeToolSalvageT1Wrench']/property[@name='EconomicValue']" name="value">640</setattribute>
+<setattribute xpath="//item[@name='meleeToolSalvageT2Ratchet']/property[@name='EconomicValue']" name="value">1860</setattribute>
+<setattribute xpath="//item[@name='meleeToolSalvageT3ImpactDriver']/property[@name='EconomicValue']" name="value">2400</setattribute>
+<setattribute xpath="//item[@name='meleeWpnBladeT0BoneKnife']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//item[@name='meleeWpnBladeT1HuntingKnife']/property[@name='EconomicValue']" name="value">288</setattribute>
 <setattribute xpath="//item[@name='meleeWpnBladeT1CandyKnife']/property[@name='EconomicValue']" name="value">350</setattribute>
-<setattribute xpath="//item[@name='meleeWpnBladeT3Machete']/property[@name='EconomicValue']" name="value">2094</setattribute>
+<setattribute xpath="//item[@name='meleeWpnBladeT3Machete']/property[@name='EconomicValue']" name="value">1576</setattribute>
 <setattribute xpath="//item[@name='meleeWpnClubT0WoodenClub']/property[@name='EconomicValue']" name="value">5</setattribute>
-<setattribute xpath="//item[@name='meleeWpnClubT1BaseballBat']/property[@name='EconomicValue']" name="value">1238</setattribute>
+<setattribute xpath="//item[@name='meleeWpnClubT1BaseballBat']/property[@name='EconomicValue']" name="value">632</setattribute>
 <setattribute xpath="//item[@name='meleeWpnClubT1CandyClub']/property[@name='EconomicValue']" name="value">350</setattribute>
-<setattribute xpath="//item[@name='meleeWpnClubT3SteelClub']/property[@name='EconomicValue']" name="value">2094</setattribute>
-<setattribute xpath="//item[@name='meleeWpnBatonT0PipeBaton']/property[@name='EconomicValue']" name="value">296</setattribute>
-<setattribute xpath="//item[@name='meleeWpnBatonT2StunBaton']/property[@name='EconomicValue']" name="value">1336</setattribute>
+<setattribute xpath="//item[@name='meleeWpnClubT3SteelClub']/property[@name='EconomicValue']" name="value">1576</setattribute>
+<setattribute xpath="//item[@name='meleeWpnBatonT0PipeBaton']/property[@name='EconomicValue']" name="value">164</setattribute>
+<setattribute xpath="//item[@name='meleeWpnBatonT2StunBaton']/property[@name='EconomicValue']" name="value">1114</setattribute>
 <setattribute xpath="//item[@name='meleeWpnSpearT0StoneSpear']/property[@name='EconomicValue']" name="value">11</setattribute>
-<setattribute xpath="//item[@name='meleeWpnSpearT1IronSpear']/property[@name='EconomicValue']" name="value">1026</setattribute>
+<setattribute xpath="//item[@name='meleeWpnSpearT1IronSpear']/property[@name='EconomicValue']" name="value">534</setattribute>
 <setattribute xpath="//item[@name='meleeWpnSledgeT0StoneSledgehammer']/property[@name='EconomicValue']" name="value">30</setattribute>
-<setattribute xpath="//item[@name='meleeWpnSledgeT1IronSledgehammer']/property[@name='EconomicValue']" name="value">1866</setattribute>
-<setattribute xpath="//item[@name='meleeWpnSledgeT3SteelSledgehammer']/property[@name='EconomicValue']" name="value">2094</setattribute>
-<setattribute xpath="//item[@name='meleeWpnKnucklesT0LeatherKnuckles']/property[@name='EconomicValue']" name="value">28</setattribute>
-<setattribute xpath="//item[@name='meleeWpnKnucklesT1IronKnuckles']/property[@name='EconomicValue']" name="value">1136</setattribute>
-<setattribute xpath="//item[@name='meleeWpnKnucklesT3SteelKnuckles']/property[@name='EconomicValue']" name="value">2084</setattribute>
+<setattribute xpath="//item[@name='meleeWpnSledgeT1IronSledgehammer']/property[@name='EconomicValue']" name="value">954</setattribute>
+<setattribute xpath="//item[@name='meleeWpnSledgeT3SteelSledgehammer']/property[@name='EconomicValue']" name="value">1576</setattribute>
+<setattribute xpath="//item[@name='meleeWpnKnucklesT0LeatherKnuckles']/property[@name='EconomicValue']" name="value">16</setattribute>
+<setattribute xpath="//item[@name='meleeWpnKnucklesT1IronKnuckles']/property[@name='EconomicValue']" name="value">644</setattribute>
+<setattribute xpath="//item[@name='meleeWpnKnucklesT3SteelKnuckles']/property[@name='EconomicValue']" name="value">1566</setattribute>
 <setattribute xpath="//item[@name='meleeToolFarmT1IronHoe']/property[@name='EconomicValue']" name="value">350</setattribute>
-<setattribute xpath="//item[@name='meleeToolFlashlight02']/property[@name='EconomicValue']" name="value">1104</setattribute>
+<setattribute xpath="//item[@name='meleeToolFlashlight02']/property[@name='EconomicValue']" name="value">738</setattribute>
 <setattribute xpath="//item[@name='meleeToolTorch']/property[@name='EconomicValue']" name="value">4</setattribute>
-<setattribute xpath="//item[@name='meleeToolWireTool']/property[@name='EconomicValue']" name="value">1170</setattribute>
+<setattribute xpath="//item[@name='meleeToolWireTool']/property[@name='EconomicValue']" name="value">630</setattribute>
 <setattribute xpath="//item[@name='meleeToolPaintTool']/property[@name='EconomicValue']" name="value">4</setattribute>
-<setattribute xpath="//item[@name='gunHandgunT0PipePistol']/property[@name='EconomicValue']" name="value">506</setattribute>
-<setattribute xpath="//item[@name='gunHandgunT1Pistol']/property[@name='EconomicValue']" name="value">1622</setattribute>
-<setattribute xpath="//item[@name='gunHandgunT3SMG5']/property[@name='EconomicValue']" name="value">2358</setattribute>
-<setattribute xpath="//item[@name='gunHandgunT2Magnum44']/property[@name='EconomicValue']" name="value">2478</setattribute>
-<setattribute xpath="//item[@name='gunHandgunT3DesertVulture']/property[@name='EconomicValue']" name="value">3838</setattribute>
-<setattribute xpath="//item[@name='gunShotgunT0PipeShotgun']/property[@name='EconomicValue']" name="value">298</setattribute>
-<setattribute xpath="//item[@name='gunShotgunT1DoubleBarrel']/property[@name='EconomicValue']" name="value">1672</setattribute>
-<setattribute xpath="//item[@name='gunShotgunT2PumpShotgun']/property[@name='EconomicValue']" name="value">2958</setattribute>
-<setattribute xpath="//item[@name='gunShotgunT3AutoShotgun']/property[@name='EconomicValue']" name="value">4918</setattribute>
-<setattribute xpath="//item[@name='gunRifleT0PipeRifle']/property[@name='EconomicValue']" name="value">296</setattribute>
-<setattribute xpath="//item[@name='gunRifleT1HuntingRifle']/property[@name='EconomicValue']" name="value">1672</setattribute>
-<setattribute xpath="//item[@name='gunRifleT2LeverActionRifle']/property[@name='EconomicValue']" name="value">3560</setattribute>
-<setattribute xpath="//item[@name='gunRifleT3SniperRifle']/property[@name='EconomicValue']" name="value">5580</setattribute>
-<setattribute xpath="//item[@name='gunMGT0PipeMachineGun']/property[@name='EconomicValue']" name="value">296</setattribute>
-<setattribute xpath="//item[@name='gunMGT1AK47']/property[@name='EconomicValue']" name="value">1672</setattribute>
-<setattribute xpath="//item[@name='gunMGT2TacticalAR']/property[@name='EconomicValue']" name="value">2308</setattribute>
-<setattribute xpath="//item[@name='gunMGT3M60']/property[@name='EconomicValue']" name="value">3618</setattribute>
-<setattribute xpath="//item[@name='gunExplosivesT3RocketLauncher']/property[@name='EconomicValue']" name="value">3508</setattribute>
+<setattribute xpath="//item[@name='gunHandgunT0PipePistol']/property[@name='EconomicValue']" name="value">386</setattribute>
+<setattribute xpath="//item[@name='gunHandgunT1Pistol']/property[@name='EconomicValue']" name="value">1295</setattribute>
+<setattribute xpath="//item[@name='gunHandgunT3SMG5']/property[@name='EconomicValue']" name="value">1810</setattribute>
+<setattribute xpath="//item[@name='gunHandgunT2Magnum44']/property[@name='EconomicValue']" name="value">1930</setattribute>
+<setattribute xpath="//item[@name='gunHandgunT3DesertVulture']/property[@name='EconomicValue']" name="value">2760</setattribute>
+<setattribute xpath="//item[@name='gunShotgunT0PipeShotgun']/property[@name='EconomicValue']" name="value">166</setattribute>
+<setattribute xpath="//item[@name='gunShotgunT1DoubleBarrel']/property[@name='EconomicValue']" name="value">1330</setattribute>
+<setattribute xpath="//item[@name='gunShotgunT2PumpShotgun']/property[@name='EconomicValue']" name="value">2130</setattribute>
+<setattribute xpath="//item[@name='gunShotgunT3AutoShotgun']/property[@name='EconomicValue']" name="value">3280</setattribute>
+<setattribute xpath="//item[@name='gunRifleT0PipeRifle']/property[@name='EconomicValue']" name="value">164</setattribute>
+<setattribute xpath="//item[@name='gunRifleT1HuntingRifle']/property[@name='EconomicValue']" name="value">1330</setattribute>
+<setattribute xpath="//item[@name='gunRifleT2LeverActionRifle']/property[@name='EconomicValue']" name="value">2690</setattribute>
+<setattribute xpath="//item[@name='gunRifleT3SniperRifle']/property[@name='EconomicValue']" name="value">3900</setattribute>
+<setattribute xpath="//item[@name='gunMGT0PipeMachineGun']/property[@name='EconomicValue']" name="value">164</setattribute>
+<setattribute xpath="//item[@name='gunMGT1AK47']/property[@name='EconomicValue']" name="value">1330</setattribute>
+<setattribute xpath="//item[@name='gunMGT2TacticalAR']/property[@name='EconomicValue']" name="value">1775</setattribute>
+<setattribute xpath="//item[@name='gunMGT3M60']/property[@name='EconomicValue']" name="value">1285</setattribute> <!-- TEST 2570 -->
+<setattribute xpath="//item[@name='gunExplosivesT3RocketLauncher']/property[@name='EconomicValue']" name="value">2340</setattribute>
 <setattribute xpath="//item[@name='gunBowT0PrimitiveBow']/property[@name='EconomicValue']" name="value">11</setattribute>
-<setattribute xpath="//item[@name='gunBowT1WoodenBow']/property[@name='EconomicValue']" name="value">954</setattribute>
-<setattribute xpath="//item[@name='gunBowT3CompoundBow']/property[@name='EconomicValue']" name="value">1990</setattribute>
-<setattribute xpath="//item[@name='gunBowT1IronCrossbow']/property[@name='EconomicValue']" name="value">1804</setattribute>
-<setattribute xpath="//item[@name='gunBowT3CompoundCrossbow']/property[@name='EconomicValue']" name="value">2784</setattribute>
-<setattribute xpath="//item[@name='gunBotT1JunkSledge']/property[@name='EconomicValue']" name="value">4160</setattribute>
-<setattribute xpath="//item[@name='gunBotT2JunkTurret']/property[@name='EconomicValue']" name="value">5760</setattribute>
-<setattribute xpath="//item[@name='gunBotT3JunkDrone']/property[@name='EconomicValue']" name="value">3860</setattribute>
-<setattribute xpath="//item[@name='ammo9mmBulletBall']/property[@name='EconomicValue']" name="value">50</setattribute>
-<setattribute xpath="//item[@name='ammo9mmBulletHP']/property[@name='EconomicValue']" name="value">60</setattribute>
-<setattribute xpath="//item[@name='ammo9mmBulletAP']/property[@name='EconomicValue']" name="value">68</setattribute>
-<setattribute xpath="//item[@name='ammo44MagnumBulletBall']/property[@name='EconomicValue']" name="value">58</setattribute>
-<setattribute xpath="//item[@name='ammo44MagnumBulletHP']/property[@name='EconomicValue']" name="value">68</setattribute>
-<setattribute xpath="//item[@name='ammo44MagnumBulletAP']/property[@name='EconomicValue']" name="value">76</setattribute>
-<setattribute xpath="//item[@name='ammo762mmBulletBall']/property[@name='EconomicValue']" name="value">66</setattribute>
-<setattribute xpath="//item[@name='ammo762mmBulletHP']/property[@name='EconomicValue']" name="value">76</setattribute>
-<setattribute xpath="//item[@name='ammo762mmBulletAP']/property[@name='EconomicValue']" name="value">92</setattribute>
-<setattribute xpath="//item[@name='ammoShotgunShell']/property[@name='EconomicValue']" name="value">49</setattribute>
-<setattribute xpath="//item[@name='ammoShotgunSlug']/property[@name='EconomicValue']" name="value">70</setattribute>
-<setattribute xpath="//item[@name='ammoShotgunBreachingSlug']/property[@name='EconomicValue']" name="value">346</setattribute>
-<setattribute xpath="//item[@name='ammoJunkTurretRegular']/property[@name='EconomicValue']" name="value">12</setattribute>
-<setattribute xpath="//item[@name='ammoJunkTurretShell']/property[@name='EconomicValue']" name="value">18</setattribute>
-<setattribute xpath="//item[@name='ammoJunkTurretAP']/property[@name='EconomicValue']" name="value">24</setattribute>
-<setattribute xpath="//item[@name='ammoRocketHE']/property[@name='EconomicValue']" name="value">1316</setattribute>
-<setattribute xpath="//item[@name='ammoRocketFrag']/property[@name='EconomicValue']" name="value">1344</setattribute>
+<setattribute xpath="//item[@name='gunBowT1WoodenBow']/property[@name='EconomicValue']" name="value">924</setattribute>
+<setattribute xpath="//item[@name='gunBowT3CompoundBow']/property[@name='EconomicValue']" name="value">943</setattribute> <!-- TEST 1885 -->
+<setattribute xpath="//item[@name='gunBowT1IronCrossbow']/property[@name='EconomicValue']" name="value">1336</setattribute>
+<setattribute xpath="//item[@name='gunBowT3CompoundCrossbow']/property[@name='EconomicValue']" name="value">1956</setattribute>
+<setattribute xpath="//item[@name='gunBotT1JunkSledge']/property[@name='EconomicValue']" name="value">2870</setattribute>
+<setattribute xpath="//item[@name='gunBotT2JunkTurret']/property[@name='EconomicValue']" name="value">3670</setattribute>
+<setattribute xpath="//item[@name='gunBotT3JunkDrone']/property[@name='EconomicValue']" name="value">2745</setattribute>
+<setattribute xpath="//item[@name='ammo9mmBulletBall']/property[@name='EconomicValue']" name="value">28</setattribute>
+<setattribute xpath="//item[@name='ammo9mmBulletHP']/property[@name='EconomicValue']" name="value">33</setattribute>
+<setattribute xpath="//item[@name='ammo9mmBulletAP']/property[@name='EconomicValue']" name="value">37</setattribute>
+<setattribute xpath="//item[@name='ammo44MagnumBulletBall']/property[@name='EconomicValue']" name="value">32</setattribute>
+<setattribute xpath="//item[@name='ammo44MagnumBulletHP']/property[@name='EconomicValue']" name="value">37</setattribute>
+<setattribute xpath="//item[@name='ammo44MagnumBulletAP']/property[@name='EconomicValue']" name="value">41</setattribute>
+<setattribute xpath="//item[@name='ammo762mmBulletBall']/property[@name='EconomicValue']" name="value">36</setattribute>
+<setattribute xpath="//item[@name='ammo762mmBulletHP']/property[@name='EconomicValue']" name="value">41</setattribute>
+<setattribute xpath="//item[@name='ammo762mmBulletAP']/property[@name='EconomicValue']" name="value">49</setattribute>
+<setattribute xpath="//item[@name='ammoShotgunShell']/property[@name='EconomicValue']" name="value">24</setattribute>
+<setattribute xpath="//item[@name='ammoShotgunSlug']/property[@name='EconomicValue']" name="value">37</setattribute>
+<setattribute xpath="//item[@name='ammoShotgunBreachingSlug']/property[@name='EconomicValue']" name="value">175</setattribute>
+<setattribute xpath="//item[@name='ammoJunkTurretRegular']/property[@name='EconomicValue']" name="value">6</setattribute>
+<setattribute xpath="//item[@name='ammoJunkTurretShell']/property[@name='EconomicValue']" name="value">9</setattribute>
+<setattribute xpath="//item[@name='ammoJunkTurretAP']/property[@name='EconomicValue']" name="value">12</setattribute>
+<setattribute xpath="//item[@name='ammoRocketHE']/property[@name='EconomicValue']" name="value">922</setattribute>
+<setattribute xpath="//item[@name='ammoRocketFrag']/property[@name='EconomicValue']" name="value">936</setattribute>
 <setattribute xpath="//item[@name='ammoGasCan']/property[@name='EconomicValue']" name="value">1</setattribute>
 <setattribute xpath="//item[@name='ammoArrowStone']/property[@name='EconomicValue']" name="value">4</setattribute>
-<setattribute xpath="//item[@name='ammoArrowIron']/property[@name='EconomicValue']" name="value">13</setattribute>
-<setattribute xpath="//item[@name='ammoArrowSteelAP']/property[@name='EconomicValue']" name="value">50</setattribute>
-<setattribute xpath="//item[@name='ammoArrowFlaming']/property[@name='EconomicValue']" name="value">69</setattribute>
-<setattribute xpath="//item[@name='ammoArrowExploding']/property[@name='EconomicValue']" name="value">124</setattribute>
+<setattribute xpath="//item[@name='ammoArrowIron']/property[@name='EconomicValue']" name="value">8</setattribute>
+<setattribute xpath="//item[@name='ammoArrowSteelAP']/property[@name='EconomicValue']" name="value">29</setattribute>
+<setattribute xpath="//item[@name='ammoArrowFlaming']/property[@name='EconomicValue']" name="value">40</setattribute>
+<setattribute xpath="//item[@name='ammoArrowExploding']/property[@name='EconomicValue']" name="value">73</setattribute>
 <setattribute xpath="//item[@name='ammoCrossbowBoltStone']/property[@name='EconomicValue']" name="value">4</setattribute>
-<setattribute xpath="//item[@name='ammoCrossbowBoltIron']/property[@name='EconomicValue']" name="value">13</setattribute>
-<setattribute xpath="//item[@name='ammoCrossbowBoltSteelAP']/property[@name='EconomicValue']" name="value">50</setattribute>
-<setattribute xpath="//item[@name='ammoCrossbowBoltFlaming']/property[@name='EconomicValue']" name="value">69</setattribute>
-<setattribute xpath="//item[@name='ammoCrossbowBoltExploding']/property[@name='EconomicValue']" name="value">140</setattribute>
+<setattribute xpath="//item[@name='ammoCrossbowBoltIron']/property[@name='EconomicValue']" name="value">8</setattribute>
+<setattribute xpath="//item[@name='ammoCrossbowBoltSteelAP']/property[@name='EconomicValue']" name="value">29</setattribute>
+<setattribute xpath="//item[@name='ammoCrossbowBoltFlaming']/property[@name='EconomicValue']" name="value">40</setattribute>
+<setattribute xpath="//item[@name='ammoCrossbowBoltExploding']/property[@name='EconomicValue']" name="value">81</setattribute>
 <setattribute xpath="//item[@name='ammoBundleMaster']/property[@name='EconomicValue']" name="value">900</setattribute>
-<setattribute xpath="//item[@name='ammoBundle9mmBulletBall']/property[@name='EconomicValue']" name="value">4000</setattribute>
-<setattribute xpath="//item[@name='ammoBundle9mmBulletHP']/property[@name='EconomicValue']" name="value">4800</setattribute>
-<setattribute xpath="//item[@name='ammoBundle9mmBulletAP']/property[@name='EconomicValue']" name="value">5440</setattribute>
-<setattribute xpath="//item[@name='ammoBundle44MagnumBulletBall']/property[@name='EconomicValue']" name="value">4640</setattribute>
-<setattribute xpath="//item[@name='ammoBundle44MagnumBulletHP']/property[@name='EconomicValue']" name="value">5440</setattribute>
-<setattribute xpath="//item[@name='ammoBundle44MagnumBulletAP']/property[@name='EconomicValue']" name="value">6080</setattribute>
-<setattribute xpath="//item[@name='ammoBundle762mmBulletBall']/property[@name='EconomicValue']" name="value">5280</setattribute>
-<setattribute xpath="//item[@name='ammoBundle762mmBulletHP']/property[@name='EconomicValue']" name="value">6080</setattribute>
-<setattribute xpath="//item[@name='ammoBundle762mmBulletAP']/property[@name='EconomicValue']" name="value">7360</setattribute>
-<setattribute xpath="//item[@name='ammoBundleShotgunShell']/property[@name='EconomicValue']" name="value">3920</setattribute>
-<setattribute xpath="//item[@name='ammoBundleShotgunSlug']/property[@name='EconomicValue']" name="value">5600</setattribute>
-<setattribute xpath="//item[@name='ammoBundleShotgunBreachingSlug']/property[@name='EconomicValue']" name="value">27680</setattribute>
-<setattribute xpath="//item[@name='ammoBundleJunkTurretRegular']/property[@name='EconomicValue']" name="value">9600</setattribute>
-<setattribute xpath="//item[@name='ammoBundleJunkTurretShell']/property[@name='EconomicValue']" name="value">14400</setattribute>
-<setattribute xpath="//item[@name='ammoBundleJunkTurretAP']/property[@name='EconomicValue']" name="value">19200</setattribute>
-<setattribute xpath="//item[@name='ammoBundleArrowStone']/property[@name='EconomicValue']" name="value">105280</setattribute>
-<setattribute xpath="//item[@name='ammoBundleArrowIron']/property[@name='EconomicValue']" name="value">107520</setattribute>
+<setattribute xpath="//item[@name='ammoBundle9mmBulletBall']/property[@name='EconomicValue']" name="value">2240</setattribute>
+<setattribute xpath="//item[@name='ammoBundle9mmBulletHP']/property[@name='EconomicValue']" name="value">2640</setattribute>
+<setattribute xpath="//item[@name='ammoBundle9mmBulletAP']/property[@name='EconomicValue']" name="value">2960</setattribute>
+<setattribute xpath="//item[@name='ammoBundle44MagnumBulletBall']/property[@name='EconomicValue']" name="value">2560</setattribute>
+<setattribute xpath="//item[@name='ammoBundle44MagnumBulletHP']/property[@name='EconomicValue']" name="value">2960</setattribute>
+<setattribute xpath="//item[@name='ammoBundle44MagnumBulletAP']/property[@name='EconomicValue']" name="value">3280</setattribute>
+<setattribute xpath="//item[@name='ammoBundle762mmBulletBall']/property[@name='EconomicValue']" name="value">2880</setattribute>
+<setattribute xpath="//item[@name='ammoBundle762mmBulletHP']/property[@name='EconomicValue']" name="value">3280</setattribute>
+<setattribute xpath="//item[@name='ammoBundle762mmBulletAP']/property[@name='EconomicValue']" name="value">3920</setattribute>
+<setattribute xpath="//item[@name='ammoBundleShotgunShell']/property[@name='EconomicValue']" name="value">1920</setattribute>
+<setattribute xpath="//item[@name='ammoBundleShotgunSlug']/property[@name='EconomicValue']" name="value">2960</setattribute>
+<setattribute xpath="//item[@name='ammoBundleShotgunBreachingSlug']/property[@name='EconomicValue']" name="value">14000</setattribute>
+<setattribute xpath="//item[@name='ammoBundleJunkTurretRegular']/property[@name='EconomicValue']" name="value">4800</setattribute>
+<setattribute xpath="//item[@name='ammoBundleJunkTurretShell']/property[@name='EconomicValue']" name="value">7200</setattribute>
+<setattribute xpath="//item[@name='ammoBundleJunkTurretAP']/property[@name='EconomicValue']" name="value">9600</setattribute>
+<setattribute xpath="//item[@name='ammoBundleArrowStone']/property[@name='EconomicValue']" name="value">73760</setattribute>
+<setattribute xpath="//item[@name='ammoBundleArrowIron']/property[@name='EconomicValue']" name="value">74880</setattribute>
 <setattribute xpath="//item[@name='ammoBundleArrowSteelAP']/property[@name='EconomicValue']" name="value">80</setattribute>
 <setattribute xpath="//item[@name='ammoBundleArrowFlaming']/property[@name='EconomicValue']" name="value">320</setattribute>
-<setattribute xpath="//item[@name='ammoBundleArrowExploding']/property[@name='EconomicValue']" name="value">780</setattribute>
-<setattribute xpath="//item[@name='ammoBundleCrossbowBoltStone']/property[@name='EconomicValue']" name="value">4000</setattribute>
-<setattribute xpath="//item[@name='ammoBundleCrossbowBoltIron']/property[@name='EconomicValue']" name="value">5520</setattribute>
-<setattribute xpath="//item[@name='ammoBundleCrossbowBoltSteelAP']/property[@name='EconomicValue']" name="value">9920</setattribute>
+<setattribute xpath="//item[@name='ammoBundleArrowExploding']/property[@name='EconomicValue']" name="value">480</setattribute>
+<setattribute xpath="//item[@name='ammoBundleCrossbowBoltStone']/property[@name='EconomicValue']" name="value">2320</setattribute>
+<setattribute xpath="//item[@name='ammoBundleCrossbowBoltIron']/property[@name='EconomicValue']" name="value">3200</setattribute>
+<setattribute xpath="//item[@name='ammoBundleCrossbowBoltSteelAP']/property[@name='EconomicValue']" name="value">5840</setattribute>
 <setattribute xpath="//item[@name='ammoBundleCrossbowBoltFlaming']/property[@name='EconomicValue']" name="value">320</setattribute>
-<setattribute xpath="//item[@name='ammoBundleCrossbowBoltExploding']/property[@name='EconomicValue']" name="value">780</setattribute>
+<setattribute xpath="//item[@name='ammoBundleCrossbowBoltExploding']/property[@name='EconomicValue']" name="value">480</setattribute>
 <setattribute xpath="//item[@name='resourceRockSmallBundle']/property[@name='EconomicValue']" name="value">6000</setattribute>
 <setattribute xpath="//item[@name='resourceWoodBundle']/property[@name='EconomicValue']" name="value">6000</setattribute>
-<setattribute xpath="//item[@name='resourceScrapIronBundle']/property[@name='EconomicValue']" name="value">24000</setattribute>
-<setattribute xpath="//item[@name='resourcePotassiumNitratePowderBundle']/property[@name='EconomicValue']" name="value">24000</setattribute>
-<setattribute xpath="//item[@name='resourceLeadBundle']/property[@name='EconomicValue']" name="value">24000</setattribute>
-<setattribute xpath="//item[@name='resourceCoalBundle']/property[@name='EconomicValue']" name="value">24000</setattribute>
-<setattribute xpath="//item[@name='resourceOilShaleBundle']/property[@name='EconomicValue']" name="value">30000</setattribute>
+<setattribute xpath="//item[@name='resourceScrapIronBundle']/property[@name='EconomicValue']" name="value">12000</setattribute>
+<setattribute xpath="//item[@name='resourcePotassiumNitratePowderBundle']/property[@name='EconomicValue']" name="value">12000</setattribute>
+<setattribute xpath="//item[@name='resourceLeadBundle']/property[@name='EconomicValue']" name="value">12000</setattribute>
+<setattribute xpath="//item[@name='resourceCoalBundle']/property[@name='EconomicValue']" name="value">12000</setattribute>
+<setattribute xpath="//item[@name='resourceOilShaleBundle']/property[@name='EconomicValue']" name="value">18000</setattribute>
 <setattribute xpath="//item[@name='ammoGasCanBundle']/property[@name='EconomicValue']" name="value">800</setattribute>
-<setattribute xpath="//item[@name='resourceGunPowderBundle']/property[@name='EconomicValue']" name="value">6400</setattribute>
-<setattribute xpath="//item[@name='thrownAmmoPipeBomb']/property[@name='EconomicValue']" name="value">157</setattribute>
-<setattribute xpath="//item[@name='thrownGrenadeContact']/property[@name='EconomicValue']" name="value">592</setattribute>
-<setattribute xpath="//item[@name='thrownGrenade']/property[@name='EconomicValue']" name="value">502</setattribute>
-<setattribute xpath="//item[@name='thrownTimedCharge']/property[@name='EconomicValue']" name="value">250</setattribute>
-<setattribute xpath="//item[@name='thrownDynamite']/property[@name='EconomicValue']" name="value">243</setattribute>
-<setattribute xpath="//item[@name='thrownAmmoMolotovCocktail']/property[@name='EconomicValue']" name="value">457</setattribute>
+<setattribute xpath="//item[@name='resourceGunPowderBundle']/property[@name='EconomicValue']" name="value">3200</setattribute>
+<setattribute xpath="//item[@name='thrownAmmoPipeBomb']/property[@name='EconomicValue']" name="value">79</setattribute>
+<setattribute xpath="//item[@name='thrownGrenadeContact']/property[@name='EconomicValue']" name="value">356</setattribute>
+<setattribute xpath="//item[@name='thrownGrenade']/property[@name='EconomicValue']" name="value">296</setattribute>
+<setattribute xpath="//item[@name='thrownTimedCharge']/property[@name='EconomicValue']" name="value">140</setattribute>
+<setattribute xpath="//item[@name='thrownDynamite']/property[@name='EconomicValue']" name="value">131</setattribute>
+<setattribute xpath="//item[@name='thrownAmmoMolotovCocktail']/property[@name='EconomicValue']" name="value">397</setattribute>
 <setattribute xpath="//item[@name='thrownAmmoFlare']/property[@name='EconomicValue']" name="value">5</setattribute>
-<setattribute xpath="//item[@name='ammoDartIron']/property[@name='EconomicValue']" name="value">14</setattribute>
+<setattribute xpath="//item[@name='ammoDartIron']/property[@name='EconomicValue']" name="value">7</setattribute>
 <setattribute xpath="//item[@name='partsMaster']/property[@name='EconomicValue']" name="value">750</setattribute>
 <setattribute xpath="//item[@name='gunMGT1AK47Parts']/property[@name='EconomicValue']" name="value">200</setattribute>
 <setattribute xpath="//item[@name='gunHandgunT1PistolParts']/property[@name='EconomicValue']" name="value">200</setattribute>
@@ -1883,58 +1935,58 @@
 <setattribute xpath="//item[@name='armorMilitarySetParts']/property[@name='EconomicValue']" name="value">200</setattribute>
 <setattribute xpath="//item[@name='armorSteelSetParts']/property[@name='EconomicValue']" name="value">200</setattribute>
 <setattribute xpath="//item[@name='meleeToolAxeT3ChainsawParts']/property[@name='EconomicValue']" name="value">200</setattribute>
-<setattribute xpath="//item[@name='vehicleWheels']/property[@name='EconomicValue']" name="value">904</setattribute>
-<setattribute xpath="//item[@name='vehicleMinibikeChassis']/property[@name='EconomicValue']" name="value">1162</setattribute>
-<setattribute xpath="//item[@name='vehicleMinibikeHandlebars']/property[@name='EconomicValue']" name="value">1260</setattribute>
-<setattribute xpath="//item[@name='vehicleMinibikePlaceable']/property[@name='EconomicValue']" name="value">7210</setattribute>
-<setattribute xpath="//item[@name='vehicleBicycleChassis']/property[@name='EconomicValue']" name="value">656</setattribute>
-<setattribute xpath="//item[@name='vehicleBicycleHandlebars']/property[@name='EconomicValue']" name="value">626</setattribute>
-<setattribute xpath="//item[@name='vehicleBicyclePlaceable']/property[@name='EconomicValue']" name="value">3180</setattribute>
-<setattribute xpath="//item[@name='vehicleMotorcycleChassis']/property[@name='EconomicValue']" name="value">3950</setattribute>
-<setattribute xpath="//item[@name='vehicleMotorcycleHandlebars']/property[@name='EconomicValue']" name="value">2440</setattribute>
-<setattribute xpath="//item[@name='vehicleMotorcyclePlaceable']/property[@name='EconomicValue']" name="value">11178</setattribute>
-<setattribute xpath="//item[@name='vehicle4x4TruckChassis']/property[@name='EconomicValue']" name="value">30640</setattribute>
-<setattribute xpath="//item[@name='vehicle4x4TruckAccessories']/property[@name='EconomicValue']" name="value">9570</setattribute>
-<setattribute xpath="//item[@name='vehicle4x4TruckPlaceable']/property[@name='EconomicValue']" name="value">44998</setattribute>
-<setattribute xpath="//item[@name='armorClothMaster']/property[@name='EconomicValue']" name="value">31</setattribute>
-<setattribute xpath="//item[@name='armorClothHat']/property[@name='EconomicValue']" name="value">31</setattribute>
-<setattribute xpath="//item[@name='armorSantaHat']/property[@name='EconomicValue']" name="value">31</setattribute>
-<setattribute xpath="//item[@name='armorClothJacket']/property[@name='EconomicValue']" name="value">31</setattribute>
-<setattribute xpath="//item[@name='armorClothGloves']/property[@name='EconomicValue']" name="value">31</setattribute>
-<setattribute xpath="//item[@name='armorClothPants']/property[@name='EconomicValue']" name="value">31</setattribute>
-<setattribute xpath="//item[@name='armorClothBoots']/property[@name='EconomicValue']" name="value">31</setattribute>
-<setattribute xpath="//item[@name='armorLeatherMaster']/property[@name='EconomicValue']" name="value">86</setattribute>
-<setattribute xpath="//item[@name='armorLeatherHood']/property[@name='EconomicValue']" name="value">86</setattribute>
-<setattribute xpath="//item[@name='armorLeatherChest']/property[@name='EconomicValue']" name="value">86</setattribute>
-<setattribute xpath="//item[@name='armorLeatherGloves']/property[@name='EconomicValue']" name="value">86</setattribute>
-<setattribute xpath="//item[@name='armorLeatherPants']/property[@name='EconomicValue']" name="value">86</setattribute>
-<setattribute xpath="//item[@name='armorLeatherBoots']/property[@name='EconomicValue']" name="value">86</setattribute>
-<setattribute xpath="//item[@name='armorMilitaryMaster']/property[@name='EconomicValue']" name="value">1576</setattribute>
-<setattribute xpath="//item[@name='armorMilitaryHelmet']/property[@name='EconomicValue']" name="value">1576</setattribute>
-<setattribute xpath="//item[@name='armorMilitaryVest']/property[@name='EconomicValue']" name="value">1576</setattribute>
-<setattribute xpath="//item[@name='armorMilitaryGloves']/property[@name='EconomicValue']" name="value">1576</setattribute>
-<setattribute xpath="//item[@name='armorMilitaryLegs']/property[@name='EconomicValue']" name="value">1576</setattribute>
-<setattribute xpath="//item[@name='armorMilitaryBoots']/property[@name='EconomicValue']" name="value">1576</setattribute>
-<setattribute xpath="//item[@name='armorMilitaryStealthBoots']/property[@name='EconomicValue']" name="value">1976</setattribute>
-<setattribute xpath="//item[@name='armorScrapMaster']/property[@name='EconomicValue']" name="value">230</setattribute>
-<setattribute xpath="//item[@name='armorScrapHelmet']/property[@name='EconomicValue']" name="value">230</setattribute>
-<setattribute xpath="//item[@name='armorScrapChest']/property[@name='EconomicValue']" name="value">230</setattribute>
-<setattribute xpath="//item[@name='armorScrapGloves']/property[@name='EconomicValue']" name="value">230</setattribute>
-<setattribute xpath="//item[@name='armorScrapLegs']/property[@name='EconomicValue']" name="value">230</setattribute>
-<setattribute xpath="//item[@name='armorScrapBoots']/property[@name='EconomicValue']" name="value">230</setattribute>
-<setattribute xpath="//item[@name='armorIronMaster']/property[@name='EconomicValue']" name="value">986</setattribute>
-<setattribute xpath="//item[@name='armorIronHelmet']/property[@name='EconomicValue']" name="value">986</setattribute>
-<setattribute xpath="//item[@name='armorIronChest']/property[@name='EconomicValue']" name="value">986</setattribute>
-<setattribute xpath="//item[@name='armorIronGloves']/property[@name='EconomicValue']" name="value">986</setattribute>
-<setattribute xpath="//item[@name='armorIronLegs']/property[@name='EconomicValue']" name="value">986</setattribute>
-<setattribute xpath="//item[@name='armorIronBoots']/property[@name='EconomicValue']" name="value">986</setattribute>
-<setattribute xpath="//item[@name='armorSteelMaster']/property[@name='EconomicValue']" name="value">1956</setattribute>
-<setattribute xpath="//item[@name='armorSteelChest']/property[@name='EconomicValue']" name="value">1956</setattribute>
-<setattribute xpath="//item[@name='armorSteelGloves']/property[@name='EconomicValue']" name="value">1956</setattribute>
-<setattribute xpath="//item[@name='armorSteelLegs']/property[@name='EconomicValue']" name="value">1956</setattribute>
-<setattribute xpath="//item[@name='armorSteelBoots']/property[@name='EconomicValue']" name="value">1956</setattribute>
-<setattribute xpath="//item[@name='armorMiningHelmet']/property[@name='EconomicValue']" name="value">236</setattribute>
-<setattribute xpath="//item[@name='armorFirefightersHelmet']/property[@name='EconomicValue']" name="value">236</setattribute>
+<setattribute xpath="//item[@name='vehicleWheels']/property[@name='EconomicValue']" name="value">658</setattribute>
+<setattribute xpath="//item[@name='vehicleMinibikeChassis']/property[@name='EconomicValue']" name="value">688</setattribute>
+<setattribute xpath="//item[@name='vehicleMinibikeHandlebars']/property[@name='EconomicValue']" name="value">810</setattribute>
+<setattribute xpath="//item[@name='vehicleMinibikePlaceable']/property[@name='EconomicValue']" name="value">5416</setattribute>
+<setattribute xpath="//item[@name='vehicleBicycleChassis']/property[@name='EconomicValue']" name="value">434</setattribute>
+<setattribute xpath="//item[@name='vehicleBicycleHandlebars']/property[@name='EconomicValue']" name="value">404</setattribute>
+<setattribute xpath="//item[@name='vehicleBicyclePlaceable']/property[@name='EconomicValue']" name="value">2214</setattribute>
+<setattribute xpath="//item[@name='vehicleMotorcycleChassis']/property[@name='EconomicValue']" name="value">2250</setattribute>
+<setattribute xpath="//item[@name='vehicleMotorcycleHandlebars']/property[@name='EconomicValue']" name="value">1560</setattribute>
+<setattribute xpath="//item[@name='vehicleMotorcyclePlaceable']/property[@name='EconomicValue']" name="value">7728</setattribute>
+<setattribute xpath="//item[@name='vehicle4x4TruckChassis']/property[@name='EconomicValue']" name="value">16340</setattribute>
+<setattribute xpath="//item[@name='vehicle4x4TruckAccessories']/property[@name='EconomicValue']" name="value">5880</setattribute>
+<setattribute xpath="//item[@name='vehicle4x4TruckPlaceable']/property[@name='EconomicValue']" name="value">26138</setattribute>
+<setattribute xpath="//item[@name='armorClothMaster']/property[@name='EconomicValue']" name="value">25</setattribute>
+<setattribute xpath="//item[@name='armorClothHat']/property[@name='EconomicValue']" name="value">25</setattribute>
+<setattribute xpath="//item[@name='armorSantaHat']/property[@name='EconomicValue']" name="value">25</setattribute>
+<setattribute xpath="//item[@name='armorClothJacket']/property[@name='EconomicValue']" name="value">25</setattribute>
+<setattribute xpath="//item[@name='armorClothGloves']/property[@name='EconomicValue']" name="value">25</setattribute>
+<setattribute xpath="//item[@name='armorClothPants']/property[@name='EconomicValue']" name="value">25</setattribute>
+<setattribute xpath="//item[@name='armorClothBoots']/property[@name='EconomicValue']" name="value">25</setattribute>
+<setattribute xpath="//item[@name='armorLeatherMaster']/property[@name='EconomicValue']" name="value">80</setattribute>
+<setattribute xpath="//item[@name='armorLeatherHood']/property[@name='EconomicValue']" name="value">80</setattribute>
+<setattribute xpath="//item[@name='armorLeatherChest']/property[@name='EconomicValue']" name="value">80</setattribute>
+<setattribute xpath="//item[@name='armorLeatherGloves']/property[@name='EconomicValue']" name="value">80</setattribute>
+<setattribute xpath="//item[@name='armorLeatherPants']/property[@name='EconomicValue']" name="value">80</setattribute>
+<setattribute xpath="//item[@name='armorLeatherBoots']/property[@name='EconomicValue']" name="value">80</setattribute>
+<setattribute xpath="//item[@name='armorMilitaryMaster']/property[@name='EconomicValue']" name="value">1504</setattribute>
+<setattribute xpath="//item[@name='armorMilitaryHelmet']/property[@name='EconomicValue']" name="value">1504</setattribute>
+<setattribute xpath="//item[@name='armorMilitaryVest']/property[@name='EconomicValue']" name="value">1504</setattribute>
+<setattribute xpath="//item[@name='armorMilitaryGloves']/property[@name='EconomicValue']" name="value">1504</setattribute>
+<setattribute xpath="//item[@name='armorMilitaryLegs']/property[@name='EconomicValue']" name="value">1504</setattribute>
+<setattribute xpath="//item[@name='armorMilitaryBoots']/property[@name='EconomicValue']" name="value">1504</setattribute>
+<setattribute xpath="//item[@name='armorMilitaryStealthBoots']/property[@name='EconomicValue']" name="value">1904</setattribute>
+<setattribute xpath="//item[@name='armorScrapMaster']/property[@name='EconomicValue']" name="value">124</setattribute>
+<setattribute xpath="//item[@name='armorScrapHelmet']/property[@name='EconomicValue']" name="value">124</setattribute>
+<setattribute xpath="//item[@name='armorScrapChest']/property[@name='EconomicValue']" name="value">124</setattribute>
+<setattribute xpath="//item[@name='armorScrapGloves']/property[@name='EconomicValue']" name="value">124</setattribute>
+<setattribute xpath="//item[@name='armorScrapLegs']/property[@name='EconomicValue']" name="value">124</setattribute>
+<setattribute xpath="//item[@name='armorScrapBoots']/property[@name='EconomicValue']" name="value">124</setattribute>
+<setattribute xpath="//item[@name='armorIronMaster']/property[@name='EconomicValue']" name="value">530</setattribute>
+<setattribute xpath="//item[@name='armorIronHelmet']/property[@name='EconomicValue']" name="value">530</setattribute>
+<setattribute xpath="//item[@name='armorIronChest']/property[@name='EconomicValue']" name="value">530</setattribute>
+<setattribute xpath="//item[@name='armorIronGloves']/property[@name='EconomicValue']" name="value">530</setattribute>
+<setattribute xpath="//item[@name='armorIronLegs']/property[@name='EconomicValue']" name="value">530</setattribute>
+<setattribute xpath="//item[@name='armorIronBoots']/property[@name='EconomicValue']" name="value">530</setattribute>
+<setattribute xpath="//item[@name='armorSteelMaster']/property[@name='EconomicValue']" name="value">1444</setattribute>
+<setattribute xpath="//item[@name='armorSteelChest']/property[@name='EconomicValue']" name="value">1444</setattribute>
+<setattribute xpath="//item[@name='armorSteelGloves']/property[@name='EconomicValue']" name="value">1444</setattribute>
+<setattribute xpath="//item[@name='armorSteelLegs']/property[@name='EconomicValue']" name="value">1444</setattribute>
+<setattribute xpath="//item[@name='armorSteelBoots']/property[@name='EconomicValue']" name="value">1444</setattribute>
+<setattribute xpath="//item[@name='armorMiningHelmet']/property[@name='EconomicValue']" name="value">185</setattribute>
+<setattribute xpath="//item[@name='armorFirefightersHelmet']/property[@name='EconomicValue']" name="value">185</setattribute>
 <setattribute xpath="//item[@name='armorSwatHelmet']/property[@name='EconomicValue']" name="value">1000</setattribute>
 <setattribute xpath="//item[@name='armorFootballHelmet']/property[@name='EconomicValue']" name="value">400</setattribute>
 <setattribute xpath="//item[@name='armorFootballHelmetZU']/property[@name='EconomicValue']" name="value">400</setattribute>
@@ -1964,22 +2016,22 @@
 <setattribute xpath="//item[@name='apparelSkiGoggles']/property[@name='EconomicValue']" name="value">500</setattribute>
 <setattribute xpath="//item[@name='apparelNerdGlasses']/property[@name='EconomicValue']" name="value">500</setattribute>
 <setattribute xpath="//item[@name='apparelNightvisionGoggles']/property[@name='EconomicValue']" name="value">2000</setattribute>
-<setattribute xpath="//item[@name='apparelCigar']/property[@name='EconomicValue']" name="value">303</setattribute>
+<setattribute xpath="//item[@name='apparelCigar']/property[@name='EconomicValue']" name="value">301</setattribute>
 <setattribute xpath="//item[@name='apparelFacialPiercings']/property[@name='EconomicValue']" name="value">50</setattribute>
 <setattribute xpath="//item[@name='apparelBandana']/property[@name='EconomicValue']" name="value">4</setattribute>
 <setattribute xpath="//item[@name='apparelDenimPants']/property[@name='EconomicValue']" name="value">75</setattribute>
 <setattribute xpath="//item[@name='apparelDenimShortsPants']/property[@name='EconomicValue']" name="value">70</setattribute>
-<setattribute xpath="//item[@name='apparelArmyPants']/property[@name='EconomicValue']" name="value">805</setattribute>
+<setattribute xpath="//item[@name='apparelArmyPants']/property[@name='EconomicValue']" name="value">745</setattribute>
 <setattribute xpath="//item[@name='apparelOveralls']/property[@name='EconomicValue']" name="value">75</setattribute>
 <setattribute xpath="//item[@name='apparelSkirt']/property[@name='EconomicValue']" name="value">70</setattribute>
 <setattribute xpath="//item[@name='apparelGothPants']/property[@name='EconomicValue']" name="value">90</setattribute>
-<setattribute xpath="//item[@name='apparelWornBoots']/property[@name='EconomicValue']" name="value">110</setattribute>
-<setattribute xpath="//item[@name='apparelRunningShoesRegular']/property[@name='EconomicValue']" name="value">110</setattribute>
+<setattribute xpath="//item[@name='apparelWornBoots']/property[@name='EconomicValue']" name="value">95</setattribute>
+<setattribute xpath="//item[@name='apparelRunningShoesRegular']/property[@name='EconomicValue']" name="value">95</setattribute>
 <setattribute xpath="//item[@name='apparelRunningShoesHP']/property[@name='EconomicValue']" name="value">200</setattribute>
-<setattribute xpath="//item[@name='apparelCowboyBoots']/property[@name='EconomicValue']" name="value">110</setattribute>
+<setattribute xpath="//item[@name='apparelCowboyBoots']/property[@name='EconomicValue']" name="value">95</setattribute>
 <setattribute xpath="//item[@name='apparelGothBoots']/property[@name='EconomicValue']" name="value">250</setattribute>
 <setattribute xpath="//item[@name='apparelLongShirt']/property[@name='EconomicValue']" name="value">90</setattribute>
-<setattribute xpath="//item[@name='apparelArmyShirt']/property[@name='EconomicValue']" name="value">805</setattribute>
+<setattribute xpath="//item[@name='apparelArmyShirt']/property[@name='EconomicValue']" name="value">745</setattribute>
 <setattribute xpath="//item[@name='apparelSweatshirt']/property[@name='EconomicValue']" name="value">75</setattribute>
 <setattribute xpath="//item[@name='apparelFlannelShirt']/property[@name='EconomicValue']" name="value">70</setattribute>
 <setattribute xpath="//item[@name='apparelTShirtPlain']/property[@name='EconomicValue']" name="value">75</setattribute>
@@ -1993,20 +2045,20 @@
 <setattribute xpath="//item[@name='apparelCoatJacketLetterZU']/property[@name='EconomicValue']" name="value">350</setattribute>
 <setattribute xpath="//item[@name='apparelSuitPants']/property[@name='EconomicValue']" name="value">350</setattribute>
 <setattribute xpath="//item[@name='apparelSuitJacket']/property[@name='EconomicValue']" name="value">350</setattribute>
-<setattribute xpath="//item[@name='apparelSuitDressShoes']/property[@name='EconomicValue']" name="value">110</setattribute>
+<setattribute xpath="//item[@name='apparelSuitDressShoes']/property[@name='EconomicValue']" name="value">95</setattribute>
 <setattribute xpath="//item[@name='medicalAloeCream']/property[@name='EconomicValue']" name="value">12</setattribute>
 <setattribute xpath="//item[@name='medicalBandage']/property[@name='EconomicValue']" name="value">2</setattribute>
 <setattribute xpath="//item[@name='medicalFirstAidBandage']/property[@name='EconomicValue']" name="value">14</setattribute>
-<setattribute xpath="//item[@name='medicalFirstAidKit']/property[@name='EconomicValue']" name="value">113</setattribute>
-<setattribute xpath="//item[@name='medicalSplint']/property[@name='EconomicValue']" name="value">30</setattribute>
-<setattribute xpath="//item[@name='medicalPlasterCast']/property[@name='EconomicValue']" name="value">31</setattribute>
+<setattribute xpath="//item[@name='medicalFirstAidKit']/property[@name='EconomicValue']" name="value">112</setattribute>
+<setattribute xpath="//item[@name='medicalSplint']/property[@name='EconomicValue']" name="value">24</setattribute>
+<setattribute xpath="//item[@name='medicalPlasterCast']/property[@name='EconomicValue']" name="value">30</setattribute>
 <setattribute xpath="//item[@name='medicalBloodBag']/property[@name='EconomicValue']" name="value">30</setattribute>
 <setattribute xpath="//item[@name='drugPainkillers']/property[@name='EconomicValue']" name="value">80</setattribute>
 <setattribute xpath="//item[@name='drugHerbalAntibiotics']/property[@name='EconomicValue']" name="value">34</setattribute>
-<setattribute xpath="//item[@name='drugAntibiotics']/property[@name='EconomicValue']" name="value">24</setattribute>
-<setattribute xpath="//item[@name='drugSteroids']/property[@name='EconomicValue']" name="value">223</setattribute>
-<setattribute xpath="//item[@name='drugRecog']/property[@name='EconomicValue']" name="value">781</setattribute>
-<setattribute xpath="//item[@name='drugFortBites']/property[@name='EconomicValue']" name="value">321</setattribute>
+<setattribute xpath="//item[@name='drugAntibiotics']/property[@name='EconomicValue']" name="value">21</setattribute>
+<setattribute xpath="//item[@name='drugSteroids']/property[@name='EconomicValue']" name="value">163</setattribute>
+<setattribute xpath="//item[@name='drugRecog']/property[@name='EconomicValue']" name="value">765</setattribute>
+<setattribute xpath="//item[@name='drugFortBites']/property[@name='EconomicValue']" name="value">320</setattribute>
 <setattribute xpath="//item[@name='drugAtomJunkies']/property[@name='EconomicValue']" name="value">200</setattribute>
 <setattribute xpath="//item[@name='drugCovertCats']/property[@name='EconomicValue']" name="value">200</setattribute>
 <setattribute xpath="//item[@name='drugEyeKandy']/property[@name='EconomicValue']" name="value">200</setattribute>
@@ -2019,45 +2071,45 @@
 <setattribute xpath="//item[@name='drugSkullCrushers']/property[@name='EconomicValue']" name="value">200</setattribute>
 <setattribute xpath="//item[@name='drugSugarButts']/property[@name='EconomicValue']" name="value">200</setattribute>
 <setattribute xpath="//item[@name='foodHoney']/property[@name='EconomicValue']" name="value">100</setattribute>
-<setattribute xpath="//item[@name='foodCanBeef']/property[@name='EconomicValue']" name="value">93</setattribute>
-<setattribute xpath="//item[@name='foodCanChicken']/property[@name='EconomicValue']" name="value">93</setattribute>
-<setattribute xpath="//item[@name='foodCanLamb']/property[@name='EconomicValue']" name="value">93</setattribute>
-<setattribute xpath="//item[@name='foodCanCatfood']/property[@name='EconomicValue']" name="value">93</setattribute>
-<setattribute xpath="//item[@name='foodCanDogfood']/property[@name='EconomicValue']" name="value">93</setattribute>
-<setattribute xpath="//item[@name='foodCanChili']/property[@name='EconomicValue']" name="value">93</setattribute>
-<setattribute xpath="//item[@name='foodCanTuna']/property[@name='EconomicValue']" name="value">93</setattribute>
-<setattribute xpath="//item[@name='foodCanSham']/property[@name='EconomicValue']" name="value">88</setattribute>
-<setattribute xpath="//item[@name='foodCanPasta']/property[@name='EconomicValue']" name="value">93</setattribute>
-<setattribute xpath="//item[@name='foodCanSalmon']/property[@name='EconomicValue']" name="value">93</setattribute>
-<setattribute xpath="//item[@name='foodCanMiso']/property[@name='EconomicValue']" name="value">93</setattribute>
-<setattribute xpath="//item[@name='foodCanPeas']/property[@name='EconomicValue']" name="value">93</setattribute>
-<setattribute xpath="//item[@name='foodCanPears']/property[@name='EconomicValue']" name="value">93</setattribute>
-<setattribute xpath="//item[@name='foodCanSoup']/property[@name='EconomicValue']" name="value">93</setattribute>
-<setattribute xpath="//item[@name='foodCanStock']/property[@name='EconomicValue']" name="value">93</setattribute>
-<setattribute xpath="//item[@name='foodCornOnTheCob']/property[@name='EconomicValue']" name="value">19</setattribute>
-<setattribute xpath="//item[@name='foodCornBread']/property[@name='EconomicValue']" name="value">19</setattribute>
+<setattribute xpath="//item[@name='foodCanBeef']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCanChicken']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCanLamb']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCanCatfood']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCanDogfood']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCanChili']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCanTuna']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCanSham']/property[@name='EconomicValue']" name="value">76</setattribute>
+<setattribute xpath="//item[@name='foodCanPasta']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCanSalmon']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCanMiso']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCanPeas']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCanPears']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCanSoup']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCanStock']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//item[@name='foodCornOnTheCob']/property[@name='EconomicValue']" name="value">20</setattribute>
+<setattribute xpath="//item[@name='foodCornBread']/property[@name='EconomicValue']" name="value">18</setattribute>
 <setattribute xpath="//item[@name='foodShamSandwich']/property[@name='EconomicValue']" name="value">5</setattribute>
-<setattribute xpath="//item[@name='foodCharredMeat']/property[@name='EconomicValue']" name="value">25</setattribute>
-<setattribute xpath="//item[@name='foodGrilledMeat']/property[@name='EconomicValue']" name="value">25</setattribute>
-<setattribute xpath="//item[@name='foodBoiledMeat']/property[@name='EconomicValue']" name="value">141</setattribute>
-<setattribute xpath="//item[@name='foodMeatStew']/property[@name='EconomicValue']" name="value">146</setattribute>
-<setattribute xpath="//item[@name='foodSteakAndPotato']/property[@name='EconomicValue']" name="value">143</setattribute>
-<setattribute xpath="//item[@name='foodShamChowder']/property[@name='EconomicValue']" name="value">118</setattribute>
-<setattribute xpath="//item[@name='foodHoboStew']/property[@name='EconomicValue']" name="value">52</setattribute>
-<setattribute xpath="//item[@name='foodFishTacos']/property[@name='EconomicValue']" name="value">99</setattribute>
-<setattribute xpath="//item[@name='foodChiliDog']/property[@name='EconomicValue']" name="value">137</setattribute>
-<setattribute xpath="//item[@name='foodBakedPotato']/property[@name='EconomicValue']" name="value">4</setattribute>
-<setattribute xpath="//item[@name='foodBlueberryPie']/property[@name='EconomicValue']" name="value">47</setattribute>
-<setattribute xpath="//item[@name='foodPumpkinPie']/property[@name='EconomicValue']" name="value">35</setattribute>
-<setattribute xpath="//item[@name='foodPumpkinCheesecake']/property[@name='EconomicValue']" name="value">46</setattribute>
+<setattribute xpath="//item[@name='foodCharredMeat']/property[@name='EconomicValue']" name="value">15</setattribute>
+<setattribute xpath="//item[@name='foodGrilledMeat']/property[@name='EconomicValue']" name="value">15</setattribute>
+<setattribute xpath="//item[@name='foodBoiledMeat']/property[@name='EconomicValue']" name="value">90</setattribute>
+<setattribute xpath="//item[@name='foodMeatStew']/property[@name='EconomicValue']" name="value">109</setattribute>
+<setattribute xpath="//item[@name='foodSteakAndPotato']/property[@name='EconomicValue']" name="value">97</setattribute>
+<setattribute xpath="//item[@name='foodShamChowder']/property[@name='EconomicValue']" name="value">111</setattribute>
+<setattribute xpath="//item[@name='foodHoboStew']/property[@name='EconomicValue']" name="value">62</setattribute>
+<setattribute xpath="//item[@name='foodFishTacos']/property[@name='EconomicValue']" name="value">56</setattribute>
+<setattribute xpath="//item[@name='foodChiliDog']/property[@name='EconomicValue']" name="value">83</setattribute>
+<setattribute xpath="//item[@name='foodBakedPotato']/property[@name='EconomicValue']" name="value">5</setattribute>
+<setattribute xpath="//item[@name='foodBlueberryPie']/property[@name='EconomicValue']" name="value">43</setattribute>
+<setattribute xpath="//item[@name='foodPumpkinPie']/property[@name='EconomicValue']" name="value">33</setattribute>
+<setattribute xpath="//item[@name='foodPumpkinCheesecake']/property[@name='EconomicValue']" name="value">43</setattribute>
 <setattribute xpath="//item[@name='foodPumpkinBread']/property[@name='EconomicValue']" name="value">23</setattribute>
-<setattribute xpath="//item[@name='foodGumboStew']/property[@name='EconomicValue']" name="value">301</setattribute>
-<setattribute xpath="//item[@name='foodShepardsPie']/property[@name='EconomicValue']" name="value">199</setattribute>
-<setattribute xpath="//item[@name='foodSpaghetti']/property[@name='EconomicValue']" name="value">212</setattribute>
-<setattribute xpath="//item[@name='foodTunaFishGravyToast']/property[@name='EconomicValue']" name="value">233</setattribute>
-<setattribute xpath="//item[@name='foodEggBoiled']/property[@name='EconomicValue']" name="value">22</setattribute>
-<setattribute xpath="//item[@name='foodBaconAndEggs']/property[@name='EconomicValue']" name="value">131</setattribute>
-<setattribute xpath="//item[@name='foodVegetableStew']/property[@name='EconomicValue']" name="value">38</setattribute>
+<setattribute xpath="//item[@name='foodGumboStew']/property[@name='EconomicValue']" name="value">178</setattribute>
+<setattribute xpath="//item[@name='foodShepardsPie']/property[@name='EconomicValue']" name="value">116</setattribute>
+<setattribute xpath="//item[@name='foodSpaghetti']/property[@name='EconomicValue']" name="value">126</setattribute>
+<setattribute xpath="//item[@name='foodTunaFishGravyToast']/property[@name='EconomicValue']" name="value">145</setattribute>
+<setattribute xpath="//item[@name='foodEggBoiled']/property[@name='EconomicValue']" name="value">18</setattribute>
+<setattribute xpath="//item[@name='foodBaconAndEggs']/property[@name='EconomicValue']" name="value">78</setattribute>
+<setattribute xpath="//item[@name='foodVegetableStew']/property[@name='EconomicValue']" name="value">41</setattribute>
 <setattribute xpath="//item[@name='drugVitamins']/property[@name='EconomicValue']" name="value">100</setattribute>
 
 

@@ -133,7 +133,7 @@
 	</lootcontainer>
 </append>
 
-<append xpath="//lootgroup[@name='groupBirdNest01']"><item name="foodEgg" loot_prob_template="medLow"/></append>
+<!--<append xpath="//lootgroup[@name='groupBirdNest01']"><item name="foodEgg" loot_prob_template="medLow"/></append> -->
 <remove xpath="//lootgroup[@name='groupMailbox02']/item[@group='booksAllScaled']" />
 <remove xpath="//lootgroup[@name='groupMailbox01']/item[@group='perkBooksT0Day1']" />
 
@@ -155,19 +155,19 @@
 
 <remove xpath="//item[@name='gunHandgunT1Pistol']" />
 
-<setattribute xpath="//lootgroup/item[@name='casinoCoin' and (@count='5,10' or @count='1,10')]" name="count">40,50</setattribute>
+<setattribute xpath="//lootgroup/item[@name='casinoCoin' and (@count='5,10' or @count='1,10')]" name="count">50,60</setattribute>
 <remove xpath="/lootcontainers/lootgroup[@name='groupValuablesExtraLarge']/item[@name='oldCash']" />
 <setattribute xpath="/lootcontainers/lootgroup[@name='groupValuablesExtraLarge']/item[@name='casinoCoin']" name="count">1000,1200</setattribute>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupFoodTrash']">
 	<item name="weaponPartFragmentITAV" count="4,8" />
-	<item name="casinoCoin" count="20,40" />
+	<item name="casinoCoin" count="32,51" />
 	<item name="resourceScrapIron" count="7,13" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupScrapCommon']">
 	<item name="weaponPartFragmentITAV" count="4,8" />
-	<item name="casinoCoin" count="20,40" />
+	<item name="casinoCoin" count="36,54" />
 	<item name="resourceScrapIron" count="7,18" />
 </append>
 
@@ -192,7 +192,7 @@
 
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']">
-	<item group="groupWeapons_Demolitionist" count="1" loot_prob_template="veryLow"/>
+	<item group="groupWeapons_Demolitionist" count="1" loot_prob_template="low"/>
 </append>
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']">

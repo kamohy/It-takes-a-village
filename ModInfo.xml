@@ -5,12 +5,14 @@
 		<Description value="Work, Fight, Trade, Survive
 
 Choose between x trade professions and collaborate with other survivors attempting to rebuild society.
-Buy and sell goods in your shop to supply the community with specialized resources that only You can loot or craft. 
+Buy and sell goods in your shop to supply the community with specialized resources that only You can obtain. 
 Are you the Mechanic, the Armorer, the Farmer or the Cook?
 How will you support the village?
 
 
-Invisible Dye credit: Haidrgna"/>
+Invisible Dye credit: Haidrgna
+We started our modding adventure with Max Fox's XML Modding Tutorial series on youtube, and we couldn't have made this mod without it.
+Throughout the process, Guppy's Unoffical 7dtd discord server has also been really helpful."/>
 		<Author value="Cozy Co. Co-op"/>
 		<Version value="1.0"/>
 	</ModInfo>

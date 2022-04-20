@@ -578,6 +578,47 @@
 		<reward type="Exp" value="500"/>		
 	</quest>
 	
+	
+	<quest id="quest_ProfContDecorator">
+		<property name="group_name_key" value="profession_startup"/>
+		<property name="name_key" value="quest_ProfCont_name"/>
+		<property name="subtitle_key" value="quest_ProfCont_subtitle"/>
+		<property name="description_key" value="quest_ProfCont_description"/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="Offer???"/>
+		<property name="shareable" value="false"/>
+		<property name="statement_key" value="quest_ProfCont_statement" />
+		<property name="response_key" value="quest_ProfCont_response" />
+		<property name="return_to_quest_giver" value="true" />
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="repeatable" value="false" />
+		<property name="completiontype" value="TurnIn" />
+		<property name="completion_key" value="quest_ProfCont_completion" />
+		<property name="reward_choices_count" value="2" /> 
+		
+		<action type="ShowTip" value="quest_ProfCont_description">
+			<property name="delay" value="1"/>
+		</action>			
+		<objective type="Craft">
+			<property name="phase" value="1"/>
+			<property name="item" value="ShopStoreVendingCashRegisterPlayerITAV"/>
+			<property name="count" value="1"/>
+		</objective>
+		<objective type="FetchKeep" id="workbenchDecoratorT1ITAV" value="1" phase="2" />
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Item" id="workBootsBabyITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="powerizersBabyITAV" ischosen="true" isfixed="true" value="1"/>				
+		<reward type="Exp" value="500"/>		
+	</quest>
+	
+	
 		
 </append>
 

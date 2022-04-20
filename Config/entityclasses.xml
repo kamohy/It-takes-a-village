@@ -18,6 +18,8 @@
 <setattribute xpath="//entity_class[@name='zombiePartyGirlFeral']/property[@name='Mesh']" name="value">#Entities/Zombies?Prefabs/ZLabFeral.prefab</setattribute>
 <setattribute xpath="//entity_class[@name='zombiePartyGirlRadiated']/property[@name='Mesh']" name="value">#Entities/Zombies?Prefabs/ZLabRadiated.prefab</setattribute>
 
+<setattribute xpath="//entity_class[@name='zombieBoeFeral']/property[@name='Mesh']" name="value">#Entities/Zombies?Prefabs/ZSpiderFeral.prefab</setattribute>
+
 <remove xpath="//entity_class[@name='vehicleGyrocopter']"/>
 
 <setattribute xpath="//entity_class[@name='animalChicken']/drop[@event='Harvest' and @name='foodRawMeat']" name="name">foodRawChickenMeatITAV</setattribute>

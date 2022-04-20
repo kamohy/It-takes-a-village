@@ -69,6 +69,8 @@ bookRoboticsITAV,Items,perk  book,,,"Profession: Robotics"
 bookRoboticsITAVDesc,progression,perk  book,,,"Robotics Inventors build turrets and triggers and drones."
 bookRunnerITAV,Items,perk  book,,,"Profession: Mechanic"
 bookRunnerITAVDesc,progression,perk  book,,,"Mechanics salvage materials, crafts vehicles and special boots (Powerizer Boots and Work Boots)."
+bookDecoratorITAV,Items,perk  book,,,"Profession: Decorator"
+bookDecoratorITAVDesc,Items,perk  book,,,"Decorators can craft invisible dyes as well as clothing mods that change appearance of apparel while adding pockets to them. They can also create a plethora of decorative items, such as flowers, signs, lamps, appliances, posters and clutter."
 
 
 ShopStoreVendingCashRegisterPlayerITAV,blocks,Container,,,"Player Owned Store"
@@ -81,8 +83,10 @@ lblCategoryAdvancedMedicine,UI,Tooltip,,,"Advanced Medicine"
 workbenchMinerT2ITAV,blocks,,,,"Advanced Miner's Table"
 chemistryStationT2ITAV,blocks,,,,"Advanced Chemistry Station"
 campfireT2ITAV,blocks,,,,"Advanced Cooking Stove"
+workbenchFarmerT1ITAV,blocks,,,,"Farmer's Sink"
 workbenchRoboticsT2ITAV,blocks,,,,"Advanced Robotic's Table"
 workbenchRunnerT2ITAV,blocks,,,,"Advanced Mechanic's Table"
+workbenchDecoratorT1ITAV,blocks,,,,"Decorator's Table Saw"
 campfireDecoITAV,blocks,,,,"Firewood"
 
 
@@ -93,10 +97,44 @@ modDyeInvisibleITAV,item_modifiers,mod,,,"Dye: Invisible"
 modDyeTealITAV,item_modifiers,mod,,,"Dye: Teal"
 modDyePineITAV,item_modifiers,mod,,,"Dye: Pine Green"
 modDyePineITAV,item_modifiers,mod,,,"Dye: Hunter Green"
-modArmorHazmatMaskITAV,item_modifiers,mod,,,"Hazmat Mask mod"
-modArmorHazmatMaskITAVDesc,item_modifiers,mod,,,"A stylish Hazmat Mask mod that includes double pockets!"
-modArmorHazmatBootsITAV,item_modifiers,mod,,,"Hazmat Boots mod"
-modArmorHazmatBootsITAVDesc,item_modifiers,mod,,,"These fancy Hazmat Boots includes double pockets!"
+modApparelGeneralITAVDesc,item_modifiers,mod,,,"This cosmetic mod includes double pockets!"
+modApparelHazmatMaskITAV,item_modifiers,mod,,,"Hazmat Mask Mod"
+modApparelHazmatBootsITAV,item_modifiers,mod,,,"Hazmat Boots Mod"
+modApparelHazmatPantsITAV,item_modifiers,mod,,,"Hazmat Pants Mod"
+modApparelHazmatJacketITAV,item_modifiers,mod,,,"Hazmat Jacket Mod"
+modApparelHazmatGlovesITAV,item_modifiers,mod,,,"Hazmat Gloves Mod"
+modApparelDenimPantsITAV,item_modifiers,mod,,,"Denim Pants Mod"
+modApparelDenimShortsPantsITAV,item_modifiers,mod,,,"Denim Shorts Mod"
+modApparelArmyPantsITAV,item_modifiers,mod,,,"BDU Pants Mod"
+modApparelOverallsITAV,item_modifiers,mod,,,"Overalls Mod"
+modApparelSkirtITAV,item_modifiers,mod,,,"Skirt Mod"
+modApparelGothPantsITAV,item_modifiers,mod,,,"Gothic Pants Mod"
+modApparelWornBootsITAV,item_modifiers,mod,,,"Worn Boots Mod"
+modApparelRunningShoesRegularITAV,item_modifiers,mod,,,"Running Shoes Mod"
+modApparelCowboyBootsITAV,item_modifiers,mod,,,"Cowboy Boots Mod"
+modApparelGothBootsITAV,item_modifiers,mod,,,"Goth Boots Mod"
+modApparelLongShirtITAV,item_modifiers,mod,,,"Long Sleeved Shirt Mod"
+modApparelArmyShirtITAV,item_modifiers,mod,,,"BDU Top Mod"
+modApparelSweatshirtITAV,item_modifiers,mod,,,"Sweatshirt Mod"
+modApparelFlannelShirtITAV,item_modifiers,mod,,,"Flannel Shirt Mod"
+modApparelTShirtPlainITAV,item_modifiers,mod,,,"T-shirt Mod"
+modApparelTShirtZUITAV,item_modifiers,mod,,,"ZU T-shirt Mod"
+modApparelTankTopITAV,item_modifiers,mod,,,"Tank Top Mod"
+modApparelHoodySweatshirtITAV,item_modifiers,mod,,,"Hoodie Mod"
+modApparelCoatLeatherPonchoITAV,item_modifiers,mod,,,"Poncho Mod"
+modApparelCoatLeatherDusterITAV,item_modifiers,mod,,,"Leather Duster Mod"
+modApparelCoatPufferCoatITAV,item_modifiers,mod,,,"Puffer Coat Mod"
+modApparelCoatJacketGenericITAV,item_modifiers,mod,,,"Jacket Mod"
+modApparelCoatJacketLetterZUITAV,item_modifiers,mod,,,"College Jacket Mod"
+modApparelSuitPantsITAV,item_modifiers,mod,,,"Suit Pants Mod"
+modApparelSuitJacketITAV,item_modifiers,mod,,,"Suit Jacket Mod"
+modApparelSuitDressShoesITAV,item_modifiers,mod,,,"Dress Shoes Mod"
+modApparelPlantFiberGlovesITAV,item_modifiers,mod,,,"Plant Fiber Gloves Mod"
+modApparelPlantFiberShoesITAV,item_modifiers,mod,,,"Plant Fiber Shoes Mod"
+modApparelGhillieSuitHoodITAV,item_modifiers,mod,,,"Ghillie Hood Mod"
+modApparelGhillieSuitPantsITAV,item_modifiers,mod,,,"Ghillie Pants Mod"
+modApparelGhillieSuitJacketITAV,item_modifiers,mod,,,"Ghillie Jacket Mod"
+
 
 
 
@@ -126,6 +164,8 @@ cntCoffeeMakerCommercialITAV,blocks,,,,"Large Coffee Maker"
 LightITAVDesc,blocks,,,,"Light up the world! Requires connection to a power source. Use a wire tool to connect it."
 
 LightFuseboxITAVDesc,blocks,,,,"Use the wireless fusebox to connect lights to their power source with invisible cables. Requires a wire tool."
+signPillsLogoSmallLightITAV,blocks,,,,"Small Pills Logo Sign"
+signPillsLogoLightITAV,blocks,,,,"Pills Logo Sign"
 LightwallLight01ITAV,blocks,,,,"Warehouse Outdoor Light"
 LightchandelierLightITAV,blocks,,,,"Chandelier"
 LightStreetLightClassicITAV,blocks,,,,"Classic Street Light"
@@ -157,6 +197,13 @@ cntClothesRackRoundPantsITAV,blocks,,,,"Clothes Rack, Round, Pants"
 cntClothesRackRoundShirtsITAV,blocks,,,,"Clothes Rack, Round, Shirts"
 restaurantBoothVariantHelper,blocks,,,,"Restaurant Booth Sofa Variant Helper"
 fastFoodBoothVariantHelper,blocks,,,,"Fast Food Booth Table Variant Helper"
+cntBarrelAcidQuadAITAV,blocks,Block,,,Rusty green barrels
+cntBarrelGenericQuadAITAV,blocks,Block,,,Rusty grey barrels
+cntBarrelGasQuadAITAV,blocks,Block,,,Rusty gas barrels
+cntBarrelAcidQuadBITAV,blocks,Block,,,Rusty green barrels
+cntBarrelGenericQuadBITAV,blocks,Block,,,Rusty grey barrels
+cntBarrelGasQuadBITAV,blocks,Block,,,Rusty gas barrels
+
 
 signBread01ITAVSchematic,items,,,,"Sign: Bread 01 Schematic"
 signBread02ITAVSchematic,items,,,,"Sign: Bread 02 Schematic"
@@ -210,19 +257,19 @@ foodMeatBrothITAVDesc,items,,,,"Meat Broth, best used for cooking more advanced 
 foodVegetableBrothITAV,items,,,,"Vegetable Broth"
 foodVegetableBrothITAVDesc,items,,,,"Vegetable Broth, best used for cooking more advanced meals with. \n\nThis recipe produces 1 serving."
 foodChickenSoupITAV,items,,,,"Chicken Soup"
-foodChickenSoupITAVDesc,items,,,,"Nothing is more soothing than a nice bowl of Chicken Soup. Except perhaps a strong and well-maintained perimiter defense. \n\nThis recipe produces 3 servings."
+foodChickenSoupITAVDesc,items,,,,"Nothing is more soothing than a nice bowl of Chicken Soup. Except perhaps a strong and well-maintained perimiter defense. \n\nThis recipe produces 3 comforting servings."
 foodChickenSoupSpicyITAV,items,,,,"Spicy Chicken Soup"
-foodChickenSoupSpicyITAVDesc,items,,,,"Spicy Chicken Soup, the hot cousin of regular Chicken Soup. Keeps your tummy warm and happy. \n\nThis recipe produces 1 serving."
+foodChickenSoupSpicyITAVDesc,items,,,,"Spicy Chicken Soup, the hot cousin of regular Chicken Soup. Keeps your tummy warm and happy. \n\nThis recipe produces 1 warming serving."
 foodSrirachaKetchupSpiceITAV,items,,,,"Sriracha Sauce"
 foodSrirachaKetchupSpiceITAVDesc,items,,,,"Sriracha Sauce. Hot hot hot! The label says 'Don't eat it'."
 foodChickenStewITAV,items,,,,"Chicken Stew"
-foodChickenStewITAVDesc,items,,,,"Tastes like Chicken! ...Stew. \n\nThis recipe produces 3 servings."
+foodChickenStewITAVDesc,items,,,,"Tastes like Chicken! \n\nThis recipe produces 3 juicy servings."
 drinkJarCoffeeSpicyITAV,items,,,,"Spicy Coffee Cocktail"
-drinkJarCoffeeSpicyITAVDesc,items,,,,"A zippy cousin of the Blackstrap coffee, this tasty treat will give you long lasting energy and keep you warm at the same time. \n\nThis recipe produces 1 serving."
+drinkJarCoffeeSpicyITAVDesc,items,,,,"A zippy cousin of the Blackstrap coffee, this tasty treat will give you long lasting energy and keep you warm at the same time. \n\nThis recipe produces 1 hot serving."
 foodChickenEmpanadasITAV,items,,,,"Chicken Empanadas"
-foodChickenEmpanadasITAVDesc,items,,,,"Tender, juicy, shredded and spiced chicken make a savory filling for empanadas. \n\nThis recipe produces 3 servings."
-foodHoboStewDesc,items,,,,"Nutritious and deli... it's edible, ok? \n\nThis recipe produces 3 servings."
-foodGumboStewDesc,items,,,,"Vomiting is for the poor! Eat like apocalyptic royalty with this super filling, delicious gumbo stew. \n\nThis recipe produces 2 servings."
+foodChickenEmpanadasITAVDesc,items,,,,"Tender, juicy, shredded and spiced chicken make a savory filling for empanadas. \n\nThis recipe produces 3 crispy servings."
+foodHoboStewDesc,items,,,,"Nutritious and deli... it's edible, ok? \n\nThis recipe produces 3 questionable servings."
+foodGumboStewDesc,items,,,,"Vomiting is for the poor! Eat like apocalyptic royalty with this super filling, delicious gumbo stew. \n\nThis recipe produces 2 filling servings."
 
 
 
@@ -333,7 +380,7 @@ perkSmelterITAVRank4LongDesc,progression,perk Pro,,,"Unlocks crafting of the cru
 perkSmelterITAVRank5Desc,progression,perk Pro,,,Master
 perkSmelterITAVRank5LongDesc,progression,perk Pro,,,"Unlocks crafting of the crucible and forged steel. All forge recipes cost 20% less, and electrical devices cost 35% less."
 
-perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster."
+perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster. Perform high-end crafts at the Advanced Miner's Table."
 perkMinerITAVName,progression,perk Pro,,,Miner
 perkMinerITAVRank1Desc,progression,perk Pro,,,"Woodpecker"
 perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 poor tools, increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger. Harvest 20% more from trees, and 40% more from ore, stone and terrain blocks. \nUnlocks all iron tools like pickaxes."
@@ -354,12 +401,12 @@ perkHunterITAVRank2LongDesc,progression,perk Pro,,,"You are now a Tracker. Crouc
 perkHunterITAVRank3Desc,progression,perk Pro,,,Huntress
 perkHunterITAVRank3LongDesc,progression,perk Pro,,,"You are a true Hunter and let nothing go to waste. Crouch to track mountain lions and bears. Harvest 100% more resources from animals, and gain a run speed boost when fighting zombie bears."
 
-perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced benefits and learn to cook faster."
+perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced benefits and learn to cook faster. Cook high-end items at the Advanced Cooking Stove."
 perkCookITAVName,progression,perk Pro,,,Cook
-perkCookITAVRank2LongDesc,progression,perk Pro,,,"Just like grandma used to make, tasty hearty meals that fill you up for days. Craft steak and potatoes, meat stew, vegetable stew, blueberry pie and several pumpkin dishes. Cook 20% faster. Unlocks the Small Food Pile storage decoration."
-perkCookITAVRank3LongDesc,progression,perk Pro,,,"Learn how to make nutritious meals from canned goods. Craft Sham Chowder, Hobo Stew, Chili dogs and Fish Tacos. Wash them down with Yucca Juice Smoothies and Beer. Cook 30% faster. Unlocks Advanced Cooking Stove."
-perkCookITAVRank4LongDesc,progression,perk Pro,,,"Cook for an army by making Gumbo Stew, Shepards Pie, Spaghetti and Tuna Gravy on Toast. Cook 40% faster. Unlocks the Medium Food Pile storage decoration."
-perkCookITAVRank5LongDesc,progression,perk Pro,,,"Learn grandpa's secret recipes that boost stats and attributes! Cook 50% faster. Unlocks the Large Food Pile storage decoration."
+perkCookITAVRank2LongDesc,progression,perk Pro,,,"Just like grandma used to make, tasty hearty meals that fill you up for days. Craft Steak and Potatoes, Chicken Stew, Meat Stew, Vegetable Stew, Blueberry Pie and several pumpkin dishes. Warm yourself with a delicious glass of Spicy Coffee. Unlocks the Small Food Pile storage decoration."
+perkCookITAVRank3LongDesc,progression,perk Pro,,,"Learn how to make nutritious meals from canned goods. Craft Sham Chowder, Hobo Stew, Chili dogs, Fish Tacos, Chicken Soup and Chicken Empanadas. Wash them down with Yucca Juice Smoothies and Beer."
+perkCookITAVRank4LongDesc,progression,perk Pro,,,"Cook for an army by making Gumbo Stew, Shepards Pie, Spaghetti, Tuna Gravy on Toast and Spicy Chicken Soup. Unlocks the Medium Food Pile storage decoration, and the Advanced Cooking Stove."
+perkCookITAVRank5LongDesc,progression,perk Pro,,,"Learn grandpa's secret recipes that boost stats and attributes! Unlocks the Large Food Pile storage decoration."
 
 perkArmorerITAVDesc,progression,perk Pro,,,"Craft ranged and melee weapons, as well as light and heavy armor."
 perkArmorerITAVName,progression,perk Pro,,,Armorer
@@ -374,10 +421,10 @@ perkArmorerRank4LongDescITAV,progression,perk Pro,,,"You are now an artisan armo
 perkArmorerRank5DescITAV,progression,perk Pro,,,Master
 perkArmorerRank5LongDescITAV,progression,perk Pro,,,"You are now a master armorer and able to craft quality 6 armor and weaponry."
 
-perkFarmerITAVDesc,progression,perk Pro,,,"Specialize in harvesting more crops and crafting seeds. Gain the ability to track animals and increase damage to and harvest from them."
+perkFarmerITAVDesc,progression,perk Pro,,,"Specialize in harvesting more crops and crafting seeds. Gain the ability to track animals and increase damage to and harvest from them. Meat can be efficiently prepared in the Farmer's Sink workbench."
 perkFarmerITAVName,progression,perk Pro,,,Farmer
 perkFarmerITAVRank1Desc,progression,perk Pro,,,Forager
-perkFarmerITAVRank1LongDesc,progression,perk Pro,,,"Double the harvest of wild or planted crops. Craft seeds for flowers and decorative plants like goldenrod, chrysanthemum, aloe, and yucca.\nFarm plots cost 30% less to craft. Harvest 20% more resources from animals. Crouch to track rabbits, snakes and chickens. Deal 25% more damage to animals."
+perkFarmerITAVRank1LongDesc,progression,perk Pro,,,"Double the harvest of wild or planted crops. Craft seeds for flowers and decorative plants like goldenrod, chrysanthemum, aloe, and yucca.\nFarm plots cost 30% less to craft. Harvest 20% more resources from animals. Crouch to track rabbits, snakes and chickens. Deal 25% more damage to animals. Unlocks the Farmer's Sink workbench."
 perkFarmerITAVRank2Desc,progression,perk Pro,,,Hunter
 perkFarmerITAVRank2LongDesc,progression,perk Pro,,,"You can craft seeds for berries and vegetables.\n50% chance to harvest 1 additional crop.\nFarm plots cost 50% less to craft. Crouch to track deers, boars, wolves and coyotes. Harvest 60% more resources from animals."
 perkFarmerITAVRank3Desc,progression,perk Pro,,,Living off the Land
@@ -387,7 +434,7 @@ perkFarmerITAVRank4LongDesc,progression,perk Pro,,,"???."
 perkFarmerITAVRank5Desc,progression,perk Pro,,,Master
 perkFarmerITAVRank5LongDesc,progression,perk Pro,,,"???."
 
-perkChemistITAVDesc,progression,perk Pro,,,"Specialize in crafting chemicals such as gunpowder, medicine, concrete mix... and paint."
+perkChemistITAVDesc,progression,perk Pro,,,"Specialize in crafting chemicals such as gunpowder, medicine, concrete mix... and paint. Perform high-end crafts at the Advanced Chemistry Station."
 perkChemistITAVName,progression,perk Pro,,,Chemist
 perkChemistITAVRank1Desc,progression,perk Pro,,,Student
 perkChemistITAVRank1LongDesc,progression,perk Pro,,,"Can craft chemistry stations, first aid bandages, and plaster casts."
@@ -400,7 +447,7 @@ perkChemistITAVRank4LongDesc,progression,perk Pro,,,"Can craft Fortbites, Recog,
 perkChemistITAVRank5Desc,progression,perk Pro,,,Master
 perkChemistITAVRank5LongDesc,progression,perk Pro,,,"???."
 
-perkRoboticsITAVDesc,progression,perk Pro,,,"You are fascinated with robotics. Learn to craft deployed weapons."
+perkRoboticsITAVDesc,progression,perk Pro,,,"You are fascinated with robotics. Learn to craft deployed weapons. Perform high-end crafts at the Advanced Robotic's Table."
 perkRoboticsITAVName,progression,perk Pro,,,Robotics Inventor
 perkRoboticsITAVRank1Desc,progression,perk Pro,,,Science Projects
 perkRoboticsITAVRank1LongDesc,progression,perk Pro,,,"Craft poor quality 2 robots, deal 10% more damage, 30% faster fire rate and reload an extra 10 rounds. Robot active range is increased from 10 to 14 meters.\nYou can deploy multiple robots but only the closest will be active. \nUnlocks crafting of workbenches, Robotic Sledge, Generatorbank, Switch, trigger plates and wires, electric relays and electrical traps."
@@ -413,25 +460,25 @@ perkRoboticsITAVRank4LongDesc,progression,perk Pro,,,"You must be from the year 
 perkRoboticsITAVRank5Desc,progression,perk Pro,,,Robotics Expert
 perkRoboticsITAVRank5LongDesc,progression,perk Pro,,,"You are now a top expert in robotics. Reload robot weapons 20% faster and reload an extra 50 rounds. Robot active range is 18 meters.\nTwo deployed robots can be active at once. \nUnlocks crafting of SMG Auto Turret, Robotic Drone and Advanced Robotic's Table."
 
-perkRunnerITAVDesc,progression,perk Pro,,,"Craft those vehicles!"
+perkRunnerITAVDesc,progression,perk Pro,,,"Craft those vehicles! Perform high-end crafts at the Advanced Mechanic's Table."
 perkRunnerITAVName,progression,perk Pro,,,Mechanic
 perkRunnerITAVRank1Desc,progression,perk Pro,,,Salvager
-perkRunnerITAVRank1LongDesc,progression,perk Pro,,,"Increases movement speed by 2%. Harvest 20% faster and recieve 20% more resources when harvesting with a wrench, ratchet or impact driver. \nUnlocks crafting of workbenches, Wrench, Lockpicks, Crushed Car wall, Wheels and Bicycle parts."
+perkRunnerITAVRank1LongDesc,progression,perk Pro,,,"Harvest 20% faster and recieve 20% more resources when harvesting with a wrench, ratchet or impact driver. \nUnlocks crafting of workbenches, Wrench, Lockpicks, Crushed Car wall, Wheels and Bicycle parts."
 perkRunnerITAVRank2Desc,progression,perk Pro,,,Bikes and Stuff
-perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Increases movement speed by 4%. Harvest 40% faster and recieve 40% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Baby Powerizer Boots, Baby Work Boots, Minibike parts, gas cans and quality 2 car batteries."
-perkRunnerITAVRank3Desc,progression,perk Pro,,,Oil it up
-perkRunnerITAVRank3LongDesc,progression,perk Pro,,,"Increases movement speed by 6%. Can pick up mines. Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of oil and quality 3 car batteries."
-perkRunnerITAVRank4Desc,progression,perk Pro,,,Motorbiker
-perkRunnerITAVRank4LongDesc,progression,perk Pro,,,"Increases movement speed by 8%. Harvest 80% faster and recieve 80% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, quality 4 car batteries, more efficient stacks of gas cans and Advanced Mechanic's Table."
+perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Harvest 40% faster and recieve 40% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Baby Powerizer Boots, Baby Work Boots, Minibike parts, gas cans and quality 2 car batteries."
+perkRunnerITAVRank3Desc,progression,perk Pro,,,Motorbiker
+perkRunnerITAVRank3LongDesc,progression,perk Pro,,,"Can pick up mines. Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, oil, gas can bundle, quality 3 car batteries and Advanced Mechanic's Table."."
+perkRunnerITAVRank4Desc,progression,perk Pro,,,Better Boots
+perkRunnerITAVRank4LongDesc,progression,perk Pro,,,"Harvest 80% faster and recieve 80% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Powerizer Boots, Work Boots and quality 4 car batteries."
 perkRunnerITAVRank5Desc,progression,perk Pro,,,Limo out front
-perkRunnerITAVRank5LongDesc,progression,perk Pro,,,"Increases movement speed by 10%. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower. Harvest 100% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of 4x4 truck parts, Powerizer boots and quality 5 car batteries."
+perkRunnerITAVRank5LongDesc,progression,perk Pro,,,"Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower. Harvest 100% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of 4x4 truck parts and quality 5 car batteries."
 
-perkDecoratorITAVDesc,progression,perk Pro,,,"Spice up your apocalypse"
+perkDecoratorITAVDesc,progression,perk Pro,,,"Spice up your apocalypse! Decorative items are crafted in a Decorator's Table Saw."
 perkDecoratorITAVName,progression,perk Pro,,,Decorator
 perkDecoratorITAVRank1Desc,progression,perk Pro,,,"Dyes, Pocket, Flowers and Furniture"
-perkDecoratorITAVRank1LongDesc,progression,perk Pro,,,"Unlocks invisible dye, clothing pocket, clothes racks, coffee and soda machines, bathtub, single bed, planter, candelabra, logfire, wood burning stove, booths, pool table, signs, water cooler, trash cans, fridges, microwave ovens, front doors, shopping cart, terrarium, bar stools, decorative cooking pot, wine bottles, flowers, hanging moss, juniper and azalea."
-perkDecoratorITAVRank2Desc,progression,perk Pro,,,Lumination
-perkDecoratorITAVRank2LongDesc,progression,perk Pro,,,"Unlocks cargo pockets, shop sign, porch lights, table lamps, ceiling lamps and chandelier. Use the wireless fusebox to connect them to a power source."
+perkDecoratorITAVRank1LongDesc,progression,perk Pro,,,"Unlocks invisible dye, clothing pocket, clothes racks, coffee and soda machines, bathtub, single bed, planter, candelabra, logfire, wood burning stove, booths, pool table, signs, water cooler, trash cans, fridges, toaster, microwave ovens, front doors, shopping cart, terrarium, bar stools, decorative cooking pot, wine bottles, flowers, hanging moss, juniper and azalea."
+perkDecoratorITAVRank2Desc,progression,perk Pro,,,Lumination, Signs and Wardrobe
+perkDecoratorITAVRank2LongDesc,progression,perk Pro,,,"Unlocks double pockets, cosmetic clothes mods, mannequins, laptop, movie posters, signs, neon shop sign, porch lights, table lamps, ceiling lamps and chandelier. Use the wireless fusebox to connect them to a power source."
 
 
 hasLearntSmelterITAVTooltip,items,Admin,,,"Profession: Smelter acquired"
@@ -448,7 +495,7 @@ drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,"Your Profession Perk skil
 readyForNextProfessionTooltip,progression,,,,"Crafting: Profession Book available!"
 
 tutorialTipITAV_title,Journal Tip,,,,"It Takes A Village"
-tutorialTipITAV,Journal Tip,,,,"You look rough,\n\nIf you can find the other survivors, you can combine your different strengths to better survive in the wasteland. Press Tab to open the crafting menu and your backpack. \n\nIt Takes A Village!"
+tutorialTipITAV,Journal Tip,,,,"You look rough,\n\nIf you can find the other survivors, you can combine your different strengths to better survive the apocalypse. Press Tab to open the crafting menu and your backpack. \n\nIt Takes A Village!"
 weaponPartsAssemblyTipITAV_title, Journal Tip,,,,"Weapon Part Fragments"
 weaponPartsAssemblyTipITAV,Journal Tip,,,,"The Armorer can assemble weapon parts out of Fragments, or craft 25 Fragments out of a single weapon part."
 weaponPartFragmentITAV,items,,,,"Weapon Part Fragment"
@@ -456,8 +503,8 @@ weaponPartFragmentITAVGroupDesc,items,,,,"The Armorer can assemble any kind of w
 
 resourceRepairKitDesc,items,Item,,,"Repair Kits are used to repair all tools and worn items, vehicles, turrets, drones and more."
 
-resourceRepairKitITAV,items,Item,,,"Weapon Repair Kit"
-resourceRepairKitITAVDesc,items,Item,,,"Weapon Repair Kits are used to repair all weapons that are made of materials more advanced than wood, stone and leather."
+resourceWeaponRepairKitITAV,items,Item,,,"Weapon Repair Kit"
+resourceWeaponRepairKitITAVDesc,items,Item,,,"Weapon Repair Kits are used to repair all weapons that are made of materials more advanced than wood, stone and leather."
 resourceCarFrameITAV,items,Item,,,"Car Frame"
 resourceCarFrameITAVDesc,items,Item,,,"Car Frames are used for crafting Crushed Car walls."
 
