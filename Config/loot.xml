@@ -159,6 +159,37 @@
 <remove xpath="/lootcontainers/lootgroup[@name='groupValuablesExtraLarge']/item[@name='oldCash']" />
 <setattribute xpath="/lootcontainers/lootgroup[@name='groupValuablesExtraLarge']/item[@name='casinoCoin']" name="count">1000,1200</setattribute>
 
+<!-- To enable a playstyle based around looting rather than grinding for mats, we need to reduce the cost of ammo. Replacing brass in loot with casings, and lead with bullet tips, 
+makes the looter more financially self sustained than if they had to buy all their ammo from the miner/smelter/chemist. -->
+<setattribute xpath="//item[(@name='resourceDoorKnob' or @name='resourceTrophy1') and @count='1,5']" name="count">10,50</setattribute>
+<setattribute xpath="//item[(@name='resourceDoorKnob' or @name='resourceTrophy1') and @count='3,8']" name="count">30,80</setattribute>
+<setattribute xpath="//lootgroup[@name='groupTrophies']/item[@name='resourceTrophy1']" name="count">10</setattribute>
+<setattribute xpath="//item[@name='resourceDoorKnob' or @name='resourceTrophy1']" name="name">resourceBulletCasing</setattribute>
+
+<setattribute xpath="//item[(@name='resourceCandleStick') and @count='1,2']" name="count">30,60</setattribute>
+<setattribute xpath="//item[(@name='resourceCandleStick') and @count='1,3']" name="count">30,90</setattribute>
+<setattribute xpath="//item[@name='resourceCandleStick']" name="name">resourceBulletCasing</setattribute>
+
+<setattribute xpath="//item[(@name='resourceFishingWeight') and @count='1,3']" name="count">3,8</setattribute>
+<setattribute xpath="//item[(@name='resourceTrophy2') and @count='1,5']" name="count">5,25</setattribute>
+<setattribute xpath="//lootgroup[@name='groupTrophies']/item[@name='resourceTrophy2']" name="count">5</setattribute>
+<setattribute xpath="//item[@name='resourceFishingWeight' or @name='resourceTrophy2']" name="name">resourceBulletTip</setattribute>
+
+
+<setattribute xpath="//item[(@name='resourceScrapBrass') and @count='40,250']" name="count">8,50</setattribute>
+<setattribute xpath="//item[(@name='resourceScrapBrass') and @count='110,370']" name="count">22,75</setattribute>
+<setattribute xpath="//item[(@name='resourceScrapBrass') and @count='10,100']" name="count">2,20</setattribute>
+<setattribute xpath="//item[(@name='resourceScrapBrass') and @count='25,75']" name="count">5,15</setattribute>
+<setattribute xpath="//item[(@name='resourceScrapBrass') and @count='10,30']" name="count">2,6</setattribute>
+<setattribute xpath="//item[@name='resourceScrapBrass']" name="name">resourceBulletCasing</setattribute>
+
+<setattribute xpath="//item[(@name='resourceScrapLead') and @count='1,20']" name="count">1,10</setattribute>
+<setattribute xpath="//item[(@name='resourceScrapLead') and @count='25,50']" name="count">13,25</setattribute>
+<setattribute xpath="//item[(@name='resourceScrapLead') and @count='20,60']" name="count">10,30</setattribute>
+<setattribute xpath="//item[(@name='resourceScrapLead') and @count='10,30']" name="count">5,15</setattribute>
+<setattribute xpath="//item[@name='resourceScrapLead']" name="name">resourceBulletTip</setattribute>
+
+
 <append xpath="/lootcontainers/lootgroup[@name='groupFoodTrash']">
 	<item name="weaponPartFragmentITAV" count="4,8" />
 	<item name="casinoCoin" count="32,51" />
@@ -226,11 +257,6 @@
 	<item name="resourceGlue"/>
 	<item name="drinkJarBoiledWater"/>
 	<item name="drinkJarYuccaJuice"/>
-	<item name="resourceTrophy2"/>
-	<item name="resourceFishingWeight"/>
-	<item name="resourceTrophy1"/>
-	<item name="resourceCandleStick"/>
-	<item name="resourceDoorKnob"/>
 	<item name="resourceCoal"/>
 	<item name="resourceDuctTape"/>
 	<item name="drinkJarCoffee"/>
@@ -429,7 +455,7 @@
 
 <remove xpath="//lootgroup[@name='groupHardenedChestT4_09']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='groupHardenedChestT4_09']">
-	<item name="resourceRawDiamond" count="2,3" loot_prob_template="medHigh"/>
+	<item name="resourceRawDiamond" count="1" loot_prob_template="medHigh"/>
 	<item group="schematicsWeaponsArmorT1" loot_prob_template="med" force_prob="true"/>
 	<item group="schematicsWeaponsArmorT2" loot_prob_template="low" force_prob="true"/>
 </append>

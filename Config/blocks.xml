@@ -11,6 +11,12 @@
     <drop event="Harvest" name="resourceCarFrameITAV" count="1" prob="0.25" tag="salvageHarvest"/>
 </append>
 
+<setattribute xpath="//block[@name='couchModernArm']/drop[@event='Destroy' and @name='resourceCloth']" name="name">resourceFeather</setattribute>
+<setattribute xpath="//block[@name='couchModernArm']/drop[@event='Harvest' and @name='oldCash']" name="name">casinoCoin</setattribute>
+<setattribute xpath="//block[@name='couchModernArm']/drop[@event='Destroy']" name="count">1,2</setattribute>
+
+
+
 <setattribute xpath="//block[contains(@name, 'chimney')]/property[@name='CreativeMode']" name="value">Dev</setattribute>
 
 <!-- Attempting to reduce oreWoodHarvest harvest when player is not Miner. Must be countered by increasing the perc_add to oreWoodHarvest for Miner in progression.xml! -->
@@ -509,7 +515,7 @@
 		<property name="IsTerrainDecoration" value="true"/>
 		<property name="ParticleName" value="chemistryStation"/>
 		<property name="ParticleOffset" value="-0.6,0.5,0.1"/>
-		<property name="Stacknumber" value="1"/>
+		<property name="Stacknumber" value="500"/>
 		<property name="HeatMapStrength" value="1"/>
 		<property name="HeatMapTime" value="5000"/>
 		<property name="HeatMapFrequency" value="1000"/>
@@ -553,7 +559,7 @@
 		<property name="IsTerrainDecoration" value="true"/>
 		<property name="ParticleName" value="campfire"/>
 		<property name="ParticleOffset" value="0.5,0.1,0.5"/>
-		<property name="Stacknumber" value="1"/>
+		<property name="Stacknumber" value="500"/>
 		<property name="HeatMapStrength" value="1"/>
 		<property name="HeatMapTime" value="5000"/>
 		<property name="HeatMapFrequency" value="1000"/>
@@ -593,6 +599,7 @@
 		<drop event="Harvest" name="forestFlowerITAV" count="1" />
 		<property name="ItemTypeIcon" value="star"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="plantedGoldenrod3FlowerITAV">
@@ -605,6 +612,7 @@
 		<property name="EconomicValue" value="5"/>
 		<property name="ItemTypeIcon" value="star"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="plantedChrysanthemum3FlowerITAV">
@@ -617,6 +625,7 @@
 		<property name="EconomicValue" value="6"/>
 		<property name="ItemTypeIcon" value="star"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="plantedCoffee3FlowerITAV">
@@ -629,6 +638,7 @@
 		<property name="EconomicValue" value="7"/>
 		<property name="ItemTypeIcon" value="star"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="plantedAloe3FlowerITAV">
@@ -642,6 +652,7 @@
 		<property name="EconomicValue" value="7"/>
 		<property name="ItemTypeIcon" value="star"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="plantedYucca3FlowerITAV">
@@ -655,6 +666,7 @@
 		<property name="EconomicValue" value="7"/>
 		<property name="ItemTypeIcon" value="star"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="plantedBlueberry3FlowerITAV">
@@ -668,6 +680,7 @@
 		<property name="EconomicValue" value="8"/>
 		<property name="ItemTypeIcon" value="star"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="plantedPotato3FlowerITAV">
@@ -681,6 +694,7 @@
 		<property name="EconomicValue" value="8"/>
 		<property name="ItemTypeIcon" value="star"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 		
 	<block name="plantedSnowberry3FlowerITAV">
@@ -693,6 +707,7 @@
 		<property name="EconomicValue" value="8"/>
 		<property name="ItemTypeIcon" value="star"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="plantedPumpkin3FlowerITAV">
@@ -706,6 +721,7 @@
 		<property name="EconomicValue" value="8"/>
 		<property name="ItemTypeIcon" value="star"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="plantedPumpkin2FlowerITAV">
@@ -720,6 +736,7 @@
 		<property name="EconomicValue" value="8"/>
 		<property name="ItemTypeIcon" value="star"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 </block>
 	
 	<block name="plantedCorn2FlowerITAV">
@@ -732,6 +749,7 @@
 		<property name="EconomicValue" value="7"/>
 		<property name="ItemTypeIcon" value="star"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>	
 	
 	<block name="birdBathPlanterITAV">
@@ -756,6 +774,7 @@
 		<property name="EconomicValue" value="24"/>
 		<property name="ItemTypeIcon" value="star"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>	
 	
 	
@@ -773,6 +792,7 @@
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="EconomicValue" value="900"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="cntCoffeeMakerITAV">
@@ -789,6 +809,7 @@
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="EconomicValue" value="600"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>	
 	
 	<block name="cntCoffeeMakerCommercialITAV">
@@ -805,6 +826,7 @@
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="EconomicValue" value="900"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="decoCookingPotITAV">
@@ -826,6 +848,7 @@
 		<property name="FilterTags" value="MC_building,SC_decor,SC_residential"/>
 		<property name="ItemTypeIcon" value="star"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="cntFoodPileSmallITAV">
@@ -840,6 +863,7 @@
 		<property name="UnlockedBy" value="perkCookITAV" />
 		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="205"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 
 	<block name="cntFoodPileMediumITAV">
@@ -854,6 +878,7 @@
 		<property name="UnlockedBy" value="perkCookITAV" />
 		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="360"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 
 	<block name="cntFoodPileLargeITAV">
@@ -868,6 +893,7 @@
 		<property name="UnlockedBy" value="perkCookITAV" />
 		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="533"/>
+		<property name="Stacknumber" value="500"/>
 	</block>	
 	
 	
@@ -885,6 +911,7 @@
 		<property name="EconomicValue" value="1210"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>	
 	
 	<block name="cntBarrelGenericQuadAITAV">
@@ -900,6 +927,7 @@
 		<property name="EconomicValue" value="1210"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="cntBarrelGasQuadAITAV">
@@ -915,6 +943,7 @@
 		<property name="EconomicValue" value="1210"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 		<block name="cntBarrelAcidQuadBITAV">
@@ -930,6 +959,7 @@
 		<property name="EconomicValue" value="1200"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>	
 	
 	<block name="cntBarrelGenericQuadBITAV">
@@ -945,6 +975,7 @@
 		<property name="EconomicValue" value="1200"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="cntBarrelGasQuadBITAV">
@@ -960,6 +991,7 @@
 		<property name="EconomicValue" value="1200"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="cntClothesRackRectanglePantsITAV">
@@ -976,6 +1008,7 @@
 		<property name="EconomicValue" value="640"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>	
 	
 	<block name="cntClothesRackRectangleShirtsITAV">
@@ -992,6 +1025,7 @@
 		<property name="EconomicValue" value="640"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="cntClothesRackRoundPantsITAV">
@@ -1007,6 +1041,7 @@
 		<property name="EconomicValue" value="640"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="cntClothesRackRoundShirtsITAV">
@@ -1022,13 +1057,14 @@
 		<property name="EconomicValue" value="640"/>
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="restaurantBoothVariantHelper">
 		<property name="Extends" value="restaurantBooth"/>
 		<property name="CustomIcon" value="restaurantBooth"/>
 		<property name="CustomIconTint" value="464646"/>
-		<property name="CreativeMode" value="Dev"/>
+		<property name="CreativeMode" value="Player"/>
 		<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
 		<property name="ItemTypeIcon" value="all_blocks"/>
 		<property name="SelectAlternates" value="true"/>
@@ -1038,13 +1074,14 @@
 		<property name="Group" value="Decor/Miscellaneous"/>
 		<property name="EconomicValue" value="400" />
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="fastFoodBoothVariantHelper">
         <property name="Extends" value="fastFoodBooth"/>
         <property name="CustomIcon" value="fastFoodBooth"/>
         <property name="CustomIconTint" value="294D65"/>
-        <property name="CreativeMode" value="Dev"/>
+        <property name="CreativeMode" value="Player"/>
         <property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
         <property name="ItemTypeIcon" value="all_blocks"/>
         <property name="SelectAlternates" value="true"/>
@@ -1054,6 +1091,7 @@
         <property name="Group" value="Decor/Miscellaneous"/>
 		<property name="EconomicValue" value="340" />
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
+		<property name="Stacknumber" value="500"/>
     </block>
 	
 </append>
@@ -1087,6 +1125,7 @@
 		<property name="RuntimeSwitch" value="true"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV"/>
 		<property name="EconomicValue" value="126"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="signPillsLogoLightITAV"> 
@@ -1113,6 +1152,7 @@
 		<property name="RuntimeSwitch" value="true"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV"/>
 		<property name="EconomicValue" value="504"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 
 	<block name="LightwallLight01ITAV">
@@ -1139,6 +1179,7 @@
 		<property name="SortOrder1" value="70a0"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
 		<property name="CustomIcon" value="wallLight01"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 
 	<block name="LightchandelierLightITAV">
@@ -1167,6 +1208,7 @@
 		<property name="SortOrder1" value="70a0"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
 		<property name="CustomIcon" value="chandelierLight"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 
 
@@ -1189,6 +1231,7 @@
 		<property name="RuntimeSwitch" value="true"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV"/>
 		<property name="CustomIcon" value="streetLightClassic"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="signShopOpenLightITAV"> 
@@ -1215,6 +1258,7 @@
 		<property name="SortOrder1" value="70s0"/>
 		<property name="RuntimeSwitch" value="true"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="LightDeskLampLightITAV">
@@ -1230,6 +1274,7 @@
 		<drop event="Destroy" name="resourceScrapBrass" count="3"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV"/>
 		<property name="EconomicValue" value="244"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 
 
@@ -1246,6 +1291,7 @@
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 		<property name="UnlockedBy" value="perkDecoratorITAV"/>
 		<property name="EconomicValue" value="244"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 
 	<!-- The offset makes it impossible to destroy. Class makes it impossible to pick up. Ie, can't keep it.	
@@ -1281,6 +1327,7 @@
 		<property name="AllowAllRotations" value="true"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV"/>
 		<property name="EconomicValue" value="244"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 
 	<block name="LightPorchLight04BrassITAV">
@@ -1299,6 +1346,7 @@
 		<property name="CanPickup" value="true"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV"/>
 		<property name="EconomicValue" value="244"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="LightPorchLight04ITAV">
@@ -1316,6 +1364,7 @@
 		<property name="Light" value="0.6"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV"/>
 		<property name="EconomicValue" value="244"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 
 	<block name="LightCeilingLight02ITAV">
@@ -1330,6 +1379,7 @@
 		<property name="Model" value="Entities/Lighting/ceilingLight02Prefab"/> <property name="HandleFace" value="Top"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV"/>
 		<property name="EconomicValue" value="244"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 
 	<block name="LightCeilingLight02BrassITAV">
@@ -1345,6 +1395,7 @@
 		<drop event="Destroy" name="resourceScrapBrass" count="3"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV"/>
 		<property name="EconomicValue" value="244"/>
+		<property name="Stacknumber" value="500"/>
 	</block>
 	
 	<block name="LightEndTableLampITAV">
@@ -1354,7 +1405,7 @@
 		<property name="CustomIcon" value="endTableLamp"/>
 		<property name="RuntimeSwitch" value="true"/>
 		<property name="Material" value="Mwood"/>
-		<property name="Stacknumber" value="10"/>
+		<property name="Stacknumber" value="500"/>
 		<property name="Path" value="solid"/>
 		<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 		<property name="Model" value="Entities/Lighting/endTableLampPrefab"/>
@@ -1364,6 +1415,91 @@
 		<property name="UnlockedBy" value="perkDecoratorITAV"/>
 		<property name="EconomicValue" value="244"/>
 	</block>
+	
+	
+	<block name="sconce1LightITAV">
+		<property name="Extends" value="porchLight01"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="Model" value="Entities/Lighting/sconce_1_Prefab"/>
+		<property name="Class" value="PoweredLight"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="CustomIcon" value="sconce1Light"/>
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="Stacknumber" value="500"/>
+		<property name="Path" value="solid"/>
+		<property name="StabilitySupport" value="false"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="Group" value="Decor/Miscellaneous"/>
+		<drop event="Destroy" name="resourceScrapIron" count="3"/>
+		<property name="UnlockedBy" value="perkDecoratorITAV"/>
+		<property name="EconomicValue" value="244"/>
+	</block>
+	
+	
+	<block name="ceilingFanLightITAV">
+		<property name="Extends" value="porchLight01"/>
+		<property name="Path" value="solid"/>
+		<property name="Model" value="Entities/Lighting/ceiling_fanPrefab"/>
+		<property name="HandleFace" value="Top"/>
+		<property class="RepairItems">
+			<property name="resourceForgedIron" value="1"/>
+			<property name="resourceElectricParts" value="3"/>
+			<property name="resourceMechanicalParts" value="2"/>
+		</property>
+		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+		<drop event="Harvest" name="resourceMechanicalParts" count="1,2" tag="salvageHarvest"/>
+		<property name="Class" value="PoweredLight"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="CustomIcon" value="ceilingFanLight"/>
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="Stacknumber" value="500"/>
+		<property name="StabilitySupport" value="false"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="Group" value="Decor/Miscellaneous"/>
+		<drop event="Destroy" name="resourceScrapIron" count="3"/>
+		<property name="UnlockedBy" value="perkDecoratorITAV"/>
+		<property name="EconomicValue" value="244"/>
+	</block>
+	
+	<block name="recessedLightITAV">
+		<property name="Extends" value="porchLight01"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="Model" value="Entities/Lighting/recessedLightPrefab"/>
+		<property name="HandleFace" value="Top"/>
+		<property name="Class" value="PoweredLight"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="CustomIcon" value="recessedLight"/>
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="Stacknumber" value="500"/>
+		<property name="StabilitySupport" value="false"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="Group" value="Decor/Miscellaneous"/>
+		<drop event="Destroy" name="resourceScrapIron" count="3"/>
+		<property name="UnlockedBy" value="perkDecoratorITAV"/>
+		<property name="EconomicValue" value="244"/>
+	</block>
+	
+	<block name="industrialLight02RedLightITAV">
+		<property name="Extends" value="porchLight01"/>
+		<property name="Model" value="Entities/Lighting/industrial_light_02_redPrefab"/>
+		<property name="HandleFace" value="Top"/>
+		<property name="Class" value="PoweredLight"/>
+		<property name="DescriptionKey" value="LightITAVDesc"/>
+		<property name="CustomIcon" value="industrialLight02Red"/>
+		<property name="RuntimeSwitch" value="true"/>
+		<property name="Material" value="Mmetal"/>
+		<property name="Stacknumber" value="500"/>
+		<property name="StabilitySupport" value="false"/>
+		<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+		<property name="Group" value="Decor/Miscellaneous"/>
+		<drop event="Destroy" name="resourceScrapIron" count="3"/>
+		<property name="UnlockedBy" value="perkDecoratorITAV"/>
+		<property name="EconomicValue" value="244"/>
+	</block>
+	
 	
 <block name="wirelessRelayFuseboxLightITAV">
 	<property name="CreativeMode" value="Player"/>
@@ -1394,6 +1530,7 @@
 	<property name="TakeDelay" value="5"/>
 	<property name="FilterTags" value="MC_playerBlocks,SC_electrical"/>
 	<property name="SortOrder1" value="70a0"/>
+	<property name="Stacknumber" value="500"/>
 </block>
 
 
@@ -1621,8 +1758,8 @@
 <setattribute xpath="//block[@name='metalCatwalk']/property[@name='EconomicValue']" name="value">48</setattribute>
 <setattribute xpath="//block[@name='treeAzalea']/property[@name='EconomicValue']" name="value">34</setattribute>
 <setattribute xpath="//block[@name='treePlantedMountainPine1m']/property[@name='EconomicValue']" name="value">3</setattribute>
-<setattribute xpath="//block[@name='plantedMushroom1']/property[@name='EconomicValue']" name="value">25</setattribute>
-<setattribute xpath="//block[@name='decoPumpkinJackOLantern']/property[@name='EconomicValue']" name="value">8</setattribute>
+<setattribute xpath="//block[@name='plantedMushroom1']/property[@name='EconomicValue']" name="value">18</setattribute>
+<setattribute xpath="//block[@name='decoPumpkinJackOLantern']/property[@name='EconomicValue']" name="value">15</setattribute>
 <setattribute xpath="//block[@name='farmPlotBlock']/property[@name='EconomicValue']" name="value">174</setattribute>
 <setattribute xpath="//block[@name='metalPipeValve']/property[@name='EconomicValue']" name="value">30</setattribute>
 <setattribute xpath="//block[@name='pipeSmall1x3']/property[@name='EconomicValue']" name="value">60</setattribute>
@@ -1654,7 +1791,7 @@
 <setattribute xpath="//block[@name='cntBin']/property[@name='EconomicValue']" name="value">40</setattribute>
 <setattribute xpath="//block[@name='cntDomedTrashCanEmpty']/property[@name='EconomicValue']" name="value">90</setattribute>
 <setattribute xpath="//block[@name='cntDomedTrashCanCornerEmpty']/property[@name='EconomicValue']" name="value">90</setattribute>
-<setattribute xpath="//block[@name='cntBruteStyleTrashCanEmpty']/property[@name='EconomicValue']" name="value">150</setattribute>
+<setattribute xpath="//block[@name='cntBruteStyleTrashCanEmpty']/property[@name='EconomicValue']" name="value">108</setattribute>
 <setattribute xpath="//block[@name='cntTiltTruckEmpty']/property[@name='EconomicValue']" name="value">60</setattribute>
 <setattribute xpath="//block[@name='cntGasPumpRandomLootHelper']/property[@name='EconomicValue']" name="value">400</setattribute>
 <setattribute xpath="//block[@name='cntNightstandRandomLootHelper']/property[@name='EconomicValue']" name="value">42</setattribute>
@@ -1664,10 +1801,10 @@
 <setattribute xpath="//block[@name='cntMetalDesk02RandomLootHelper']/property[@name='EconomicValue']" name="value">90</setattribute>
 <setattribute xpath="//block[@name='rustyIronTable']/property[@name='EconomicValue']" name="value">90</setattribute>
 <setattribute xpath="//block[@name='officeChair01']/property[@name='EconomicValue']" name="value">386</setattribute>
-<setattribute xpath="//block[@name='barStool']/property[@name='EconomicValue']" name="value">85</setattribute>
+<setattribute xpath="//block[@name='barStool']/property[@name='EconomicValue']" name="value">78</setattribute>
 <setattribute xpath="//block[@name='sectionalPlaidCouchSofaMiddle']/property[@name='EconomicValue']" name="value">45</setattribute>
 <setattribute xpath="//block[@name='sectionalLeatherCouchSofaArm']/property[@name='EconomicValue']" name="value">50</setattribute>
-<setattribute xpath="//block[@name='cntWaterCoolerFull']/property[@name='EconomicValue']" name="value">100</setattribute>
+<setattribute xpath="//block[@name='cntWaterCoolerFull']/property[@name='EconomicValue']" name="value">86</setattribute>
 <setattribute xpath="//block[@name='decoReptileTerrarium']/property[@name='EconomicValue']" name="value">364</setattribute>
 <setattribute xpath="//block[@name='bedroll']/property[@name='EconomicValue']" name="value">10</setattribute>
 <setattribute xpath="//block[@name='bed02']/property[@name='EconomicValue']" name="value">1600</setattribute>
@@ -1699,8 +1836,8 @@
 <setattribute xpath="//block[@name='satelliteDish']/property[@name='EconomicValue']" name="value">175</setattribute>
 <setattribute xpath="//block[@name='cntMunitionsBox']/property[@name='EconomicValue']" name="value">250</setattribute>
 <setattribute xpath="//block[@name='campfire']/property[@name='EconomicValue']" name="value">5</setattribute>
-<setattribute xpath="//block[@name='forge']/property[@name='EconomicValue']" name="value">280</setattribute>
-<setattribute xpath="//block[@name='workbench']/property[@name='EconomicValue']" name="value">3050</setattribute>
+<setattribute xpath="//block[@name='forge']/property[@name='EconomicValue']" name="value">259</setattribute>
+<setattribute xpath="//block[@name='workbench']/property[@name='EconomicValue']" name="value">3022</setattribute>
 <setattribute xpath="//block[@name='cementMixer']/property[@name='EconomicValue']" name="value">2590</setattribute>
 <setattribute xpath="//block[@name='chemistryStation']/property[@name='EconomicValue']" name="value">4165</setattribute>
 <setattribute xpath="//block[@name='cntLootChestHeroInsecureT1']/property[@name='EconomicValue']" name="value">156</setattribute>
@@ -1710,7 +1847,7 @@
 <setattribute xpath="//block[@name='porchLight01']/property[@name='EconomicValue']" name="value">244</setattribute>
 <setattribute xpath="//block[@name='ceilingLight07']/property[@name='EconomicValue']" name="value">244</setattribute>
 <setattribute xpath="//block[@name='industrialLight01']/property[@name='EconomicValue']" name="value">360</setattribute>
-<setattribute xpath="//block[@name='spotlightPlayer']/property[@name='EconomicValue']" name="value">770</setattribute>
+<setattribute xpath="//block[@name='spotlightPlayer']/property[@name='EconomicValue']" name="value">756</setattribute>
 <setattribute xpath="//block[@name='keystoneBlock']/property[@name='EconomicValue']" name="value">5</setattribute>
 <setattribute xpath="//block[@name='generatorbank']/property[@name='EconomicValue']" name="value">1740</setattribute>
 <setattribute xpath="//block[@name='solarbank']/property[@name='EconomicValue']" name="value">3000</setattribute>
@@ -1759,11 +1896,11 @@
 <setattribute xpath="//block[@name='barbedWireSheet']/property[@name='EconomicValue']" name="value">15</setattribute>
 <setattribute xpath="//block[@name='barbedFence']/property[@name='EconomicValue']" name="value">26</setattribute>
 <setattribute xpath="//block[@name='trapGlassBusinessCTRSheet1x1']/property[@name='EconomicValue']" name="value">38</setattribute>
-<setattribute xpath="//block[@name='mineCandyTin']/property[@name='EconomicValue']" name="value">47</setattribute>
-<setattribute xpath="//block[@name='rScrapIronPlateMine']/property[@name='EconomicValue']" name="value">172</setattribute>
-<setattribute xpath="//block[@name='mineCookingPot']/property[@name='EconomicValue']" name="value">73</setattribute>
-<setattribute xpath="//block[@name='mineHubcap']/property[@name='EconomicValue']" name="value">85</setattribute>
-<setattribute xpath="//block[@name='mineAirFilter']/property[@name='EconomicValue']" name="value">158</setattribute>
+<setattribute xpath="//block[@name='mineCandyTin']/property[@name='EconomicValue']" name="value">40</setattribute>
+<setattribute xpath="//block[@name='rScrapIronPlateMine']/property[@name='EconomicValue']" name="value">165</setattribute>
+<setattribute xpath="//block[@name='mineCookingPot']/property[@name='EconomicValue']" name="value">66</setattribute>
+<setattribute xpath="//block[@name='mineHubcap']/property[@name='EconomicValue']" name="value">78</setattribute>
+<setattribute xpath="//block[@name='mineAirFilter']/property[@name='EconomicValue']" name="value">151</setattribute>
 <setattribute xpath="//block[@name='pipeLargeBlockVariantHelper']/property[@name='EconomicValue']" name="value">60</setattribute>
 <setattribute xpath="//block[@name='pipeSmallBlockVariantHelper']/property[@name='EconomicValue']" name="value">60</setattribute>
 <setattribute xpath="//block[@name='sandbagBlockVariantHelper']/property[@name='EconomicValue']" name="value">6</setattribute>
@@ -1797,8 +1934,8 @@
 <append xpath="//block[@name='cntMailBox01VariantHelper']"><property name="EconomicValue" value="15" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='cntMailBox02VariantHelper']"><property name="EconomicValue" value="15" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='cntMailBox03VariantHelper']"><property name="EconomicValue" value="15" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='endTableLamp']"><property name="EconomicValue" value="443" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='lanternLight_player']"><property name="EconomicValue" value="975" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='endTableLamp']"><property name="EconomicValue" value="415" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='lanternLight_player']"><property name="EconomicValue" value="947" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='farmPlotBlockVariantHelper']"><property name="EconomicValue" value="174" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='garageDoorMetal_v1']"><property name="EconomicValue" value="1680" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='garageDoorMetal_v1Powered']"><property name="EconomicValue" value="3800" /><property name="EconomicBundleSize" value="1" /></append>
@@ -1818,20 +1955,20 @@
 <append xpath="//block[@name='looseBoardsTrapPlate1x1']"><property name="EconomicValue" value="35" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='metalTrussingIBeamBlockVariantHelper']"><property name="EconomicValue" value="85" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='oldChair1VariantHelper']"><property name="EconomicValue" value="25" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='plantedAloe1']"><property name="EconomicValue" value="15" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='plantedBlueberry1']"><property name="EconomicValue" value="25" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='plantedChrysanthemum1']"><property name="EconomicValue" value="10" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='plantedCoffee1']"><property name="EconomicValue" value="15" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='plantedCorn1']"><property name="EconomicValue" value="25" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='plantedCotton1']"><property name="EconomicValue" value="5" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='plantedGoldenrod1']"><property name="EconomicValue" value="5" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='plantedGraceCorn1']"><property name="EconomicValue" value="250" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='plantedHop1']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='plantedMushroom1']"><property name="EconomicValue" value="27" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='plantedPotato1']"><property name="EconomicValue" value="25" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='plantedYucca1']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='plantedPumpkin1']"><property name="EconomicValue" value="25" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='plantedtreeGrassSeed1']"><property name="EconomicValue" value="5" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedAloe1']"><property name="EconomicValue" value="6" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedBlueberry1']"><property name="EconomicValue" value="16" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedChrysanthemum1']"><property name="EconomicValue" value="4" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedCoffee1']"><property name="EconomicValue" value="6" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedCorn1']"><property name="EconomicValue" value="18" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedCotton1']"><property name="EconomicValue" value="2" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedGoldenrod1']"><property name="EconomicValue" value="2" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedGraceCorn1']"><property name="EconomicValue" value="100" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedHop1']"><property name="EconomicValue" value="8" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedMushroom1']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedPotato1']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedYucca1']"><property name="EconomicValue" value="12" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedPumpkin1']"><property name="EconomicValue" value="24" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='plantedtreeGrassSeed1']"><property name="EconomicValue" value="2" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='sandbagBlockVariantHelper']"><property name="EconomicValue" value="6" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='terrDirt']"><property name="EconomicValue" value="16" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='terrTopSoil']"><property name="EconomicValue" value="16" /><property name="EconomicBundleSize" value="1" /></append>
@@ -1846,9 +1983,9 @@
 <append xpath="//block[@name='woodFenceRailingTrellisSheetBlockVariantHelper']"><property name="EconomicValue" value="2" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='signBread01']"><property name="EconomicValue" value="30" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='signBread02']"><property name="EconomicValue" value="30" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='decoWineBottle']"><property name="EconomicValue" value="55" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='decoWineBottleCorner']"><property name="EconomicValue" value="55" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='decoWineBottleShelfRow']"><property name="EconomicValue" value="55" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='decoWineBottle']"><property name="EconomicValue" value="48" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='decoWineBottleCorner']"><property name="EconomicValue" value="48" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='decoWineBottleShelfRow']"><property name="EconomicValue" value="48" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='houseFrontDoor1_v1']"><property name="EconomicValue" value="250" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='houseFrontDoor2_v1']"><property name="EconomicValue" value="250" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='cntFridgeStainlessSteel']"><property name="EconomicValue" value="960" /><property name="EconomicBundleSize" value="1" /></append>
@@ -1857,7 +1994,7 @@
 <append xpath="//block[@name='signLaborDaySaleAd']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='signSale01']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='signSale02']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='decoPoolTable']"><property name="EconomicValue" value="207" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='decoPoolTable']"><property name="EconomicValue" value="312" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='cntWoodBurningStove']"><property name="EconomicValue" value="3350" /><property name="EconomicBundleSize" value="1" /></append>
 <setattribute xpath="//block[@name='officeChair01']/property[@name='EconomicValue']" name="value">386</setattribute>
 <append xpath="//block[@name='fastFoodBooth']"><property name="EconomicValue" value="340" /><property name="EconomicBundleSize" value="1" /></append>
@@ -1879,4 +2016,6 @@
 <append xpath="//block[@name='cntBarrelGasSingle00']"><property name="EconomicValue" value="300" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='cntBarrelAcidSingle00']"><property name="EconomicValue" value="300" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='cntBarrelGenericSingle00']"><property name="EconomicValue" value="300" /><property name="EconomicBundleSize" value="1" /></append>
+
+
 </configs>

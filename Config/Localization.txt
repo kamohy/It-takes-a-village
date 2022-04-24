@@ -179,6 +179,11 @@ LightPorchLight04ITAV,blocks,,,,"Iron Porch Lamp"
 LightCeilingLight02ITAV,blocks,,,,"Iron Ceiling Lamp"
 LightCeilingLight02BrassITAV,blocks,,,,"Brass Ceiling Lamp"
 LightEndTableLampITAV,blocks,,,,"Side Table with Lamp"
+sconce1LightITAV,blocks,,,,"Sconce Light"
+ceilingFanLightITAV,blocks,,,,"Ceiling Fan Light"
+recessedLightITAV,blocks,,,,"Recessed Light"
+industrialLight02RedLightITAV,blocks,,,,"Red Industrial Light"
+
 wirelessRelayFuseboxLightITAV,blocks,,,,"Wireless Fusebox"
 window03WoodITAV,blocks,,,,"Wood Window"
 window03Wood,blocks,,,,"Wood Window Centered"
@@ -251,11 +256,11 @@ foodRawChickenMeatPreparedITAVDesc,items,,,,"Prepared Raw Chicken Meat is sliced
 foodRawMeatPreparedITAV,items,,,,"Prepared Raw Meat"
 foodRawMeatPreparedITAVDesc,items,,,,"Prepared Raw Meat is sliced, diced and ready for some serious cooking action. \n\nThis recipe produces 1 serving."
 foodChickenBrothITAV,items,,,,"Chicken Broth"
-foodChickenBrothITAVDesc,items,,,,"Chicken Broth, best used for cooking more advanced meals with. \n\nThis recipe produces 1 serving."
+foodChickenBrothITAVDesc,items,,,,"Chicken Broth, best used for cooking more advanced meals with. \n\nThis recipe produces 5 servings."
 foodMeatBrothITAV,items,,,,"Meat Broth"
-foodMeatBrothITAVDesc,items,,,,"Meat Broth, best used for cooking more advanced meals with. \n\nThis recipe produces 1 serving."
+foodMeatBrothITAVDesc,items,,,,"Meat Broth, best used for cooking more advanced meals with. \n\nThis recipe produces 5 servings."
 foodVegetableBrothITAV,items,,,,"Vegetable Broth"
-foodVegetableBrothITAVDesc,items,,,,"Vegetable Broth, best used for cooking more advanced meals with. \n\nThis recipe produces 1 serving."
+foodVegetableBrothITAVDesc,items,,,,"Vegetable Broth, best used for cooking more advanced meals with. \n\nThis recipe produces 2 servings."
 foodChickenSoupITAV,items,,,,"Chicken Soup"
 foodChickenSoupITAVDesc,items,,,,"Nothing is more soothing than a nice bowl of Chicken Soup. Except perhaps a strong and well-maintained perimiter defense. \n\nThis recipe produces 3 comforting servings."
 foodChickenSoupSpicyITAV,items,,,,"Spicy Chicken Soup"
@@ -268,9 +273,12 @@ drinkJarCoffeeSpicyITAV,items,,,,"Spicy Coffee Cocktail"
 drinkJarCoffeeSpicyITAVDesc,items,,,,"A zippy cousin of the Blackstrap coffee, this tasty treat will give you long lasting energy and keep you warm at the same time. \n\nThis recipe produces 1 hot serving."
 foodChickenEmpanadasITAV,items,,,,"Chicken Empanadas"
 foodChickenEmpanadasITAVDesc,items,,,,"Tender, juicy, shredded and spiced chicken make a savory filling for empanadas. \n\nThis recipe produces 3 crispy servings."
-foodHoboStewDesc,items,,,,"Nutritious and deli... it's edible, ok? \n\nThis recipe produces 3 questionable servings."
+foodHoboStewDesc,items,,,,"Nutritious and deli... it's edible, ok? \n\nThis recipe produces 2 questionable servings."
 foodGumboStewDesc,items,,,,"Vomiting is for the poor! Eat like apocalyptic royalty with this super filling, delicious gumbo stew. \n\nThis recipe produces 2 filling servings."
-
+foodRosysCrunchyAcornPieITAV,items,,,,"Rosy's Crunchy Acorn Pie"
+foodRosysCrunchyAcornPieITAVDesc,items,,,,"This delightful pastry is the pride of every baker worth their salt. \n\n...Until someone questions the ingredients, and the shotgun comes out."
+foodDoughITAV,items,,,,"Dough"
+foodDoughITAVDesc,items,,,,"Dough is used for turning blueberries, pumpkins or acorns into pies or cheesecake."
 
 
 perkDeadEyeRank1LongDesc,progression, perk Per,,,"Pot Shot. You can hit the broad side of a barn and do 10% more damage with rifles. Aim and reload 10% faster. Craft quality 2 pipe rifles. \nAsk an Armorer to craft better weapons for you."
@@ -344,18 +352,18 @@ attITAVRank04LongDesc,progression,Attribute,,,"Reduces light armor movement pena
 attITAVRank05Desc,progression,Attribute,,,Into it
 attITAVRank05LongDesc,progression,Attribute,,,"Medical healing items heal 25% more health over time."
 attITAVRank06Desc,progression,Attribute,,,Invested
-attITAVRank06LongDesc,progression,Attribute,,,"Medical healing items heal 40% more health over time."
+attITAVRank06LongDesc,progression,Attribute,,,"Medical healing items heal 40% more health over time. Adds 5% to loot bonus for containers that you open personally. Looting is 10% faster."
 attITAVRank07Desc,progression,Attribute,,,Steadfast
-attITAVRank07LongDesc,progression,Attribute,,,"Medical healing items heal 55% more health over time."
+attITAVRank07LongDesc,progression,Attribute,,,"Medical healing items heal 55% more health over time. Adds 10% to loot bonus for containers that you open personally. Looting is 20% faster."
 attITAVRank08Desc,progression,Attribute,,,Dedicated
-attITAVRank08LongDesc,progression,Attribute,,,"Medical healing items heal 75% more health over time. Gain 20% XP from electrical trap kills."
+attITAVRank08LongDesc,progression,Attribute,,,"Medical healing items heal 75% more health over time. Gain 15% XP from electrical trap kills. Adds 15% to loot bonus for containers that you open personally. Looting is 40% faster."
 attITAVRank09Desc,progression,Attribute,,,Passionate
-attITAVRank09LongDesc,progression,Attribute,,,"Gain 35% XP from electrical trap kills."
+attITAVRank09LongDesc,progression,Attribute,,,"Gain 35% XP from electrical trap kills. Adds 20% to loot bonus for containers that you open personally. Looting is 60% faster."
 attITAVRank10Desc,progression,Attribute,,,Giving ALL the fucks
-attITAVRank10LongDesc,progression,Attribute,,,"Gain 50% XP from electrical trap kills."
+attITAVRank10LongDesc,progression,Attribute,,,"Gain 50% XP from electrical trap kills. Adds 25% to loot bonus for containers that you open personally. Looting is 80% faster."
 
 reqAttLevel00ITAV,progression,Attribute,,,"You already know a profession"
-reqAttLevel01ITAV,progression,Attribute,,,"Read a 'My Next Profession' book to unlock"
+reqAttLevel01ITAV,progression,Attribute,,,Passion Level 1
 reqAttLevel02ITAV,progression,Attribute,,,Passion Level 2
 reqAttLevel03ITAV,progression,Attribute,,,Passion Level 3
 reqAttLevel04ITAV,progression,Attribute,,,Passion Level 4
@@ -403,7 +411,7 @@ perkHunterITAVRank3LongDesc,progression,perk Pro,,,"You are a true Hunter and le
 
 perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced benefits and learn to cook faster. Cook high-end items at the Advanced Cooking Stove."
 perkCookITAVName,progression,perk Pro,,,Cook
-perkCookITAVRank2LongDesc,progression,perk Pro,,,"Just like grandma used to make, tasty hearty meals that fill you up for days. Craft Steak and Potatoes, Chicken Stew, Meat Stew, Vegetable Stew, Blueberry Pie and several pumpkin dishes. Warm yourself with a delicious glass of Spicy Coffee. Unlocks the Small Food Pile storage decoration."
+perkCookITAVRank2LongDesc,progression,perk Pro,,,"Just like grandma used to make, tasty hearty meals that fill you up for days. Craft Steak and Potatoes, Chicken Stew, Meat Stew, Vegetable Stew, Blueberry Pie, Acorn Pie and several pumpkin dishes. Warm yourself with a delicious glass of Spicy Coffee. Unlocks the Small Food Pile storage decoration."
 perkCookITAVRank3LongDesc,progression,perk Pro,,,"Learn how to make nutritious meals from canned goods. Craft Sham Chowder, Hobo Stew, Chili dogs, Fish Tacos, Chicken Soup and Chicken Empanadas. Wash them down with Yucca Juice Smoothies and Beer."
 perkCookITAVRank4LongDesc,progression,perk Pro,,,"Cook for an army by making Gumbo Stew, Shepards Pie, Spaghetti, Tuna Gravy on Toast and Spicy Chicken Soup. Unlocks the Medium Food Pile storage decoration, and the Advanced Cooking Stove."
 perkCookITAVRank5LongDesc,progression,perk Pro,,,"Learn grandpa's secret recipes that boost stats and attributes! Unlocks the Large Food Pile storage decoration."
