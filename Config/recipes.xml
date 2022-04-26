@@ -36,7 +36,7 @@
 
 		<!-- Advanced work tables -->
 	<append xpath="/recipes">			
-		<recipe name="workbenchMinerT2ITAV" count="1" craft_area="workbench" tags="learnable">
+		<recipe name="workbenchMinerT2ITAV" count="1" craft_time="600" craft_area="workbench" tags="learnable">
 			<ingredient name="foodChiliDog" count="10"/>
 			<ingredient name="resourceForgedSteel" count="100"/>
 			<ingredient name="resourceMetalPipe" count="50"/>
@@ -44,7 +44,7 @@
 			<ingredient name="resourceOil" count="50"/>
 		</recipe>		
 		
-		<recipe name="campfireT2ITAV" count="1" craft_area="workbench" tags="learnable">
+		<recipe name="campfireT2ITAV" count="1" craft_time="600" craft_area="workbench" tags="learnable">
 			<ingredient name="scrapHatch_v1" count="1"/>
 			<ingredient name="resourceForgedSteel" count="100"/>
 			<ingredient name="resourceMetalPipe" count="50"/>
@@ -52,7 +52,7 @@
 			<ingredient name="resourceOil" count="15"/>
 		</recipe>		
 		
-		<recipe name="chemistryStationT2ITAV" count="1" craft_area="workbench" tags="learnable">
+		<recipe name="chemistryStationT2ITAV" count="1" craft_time="600" craft_area="workbench" tags="learnable">
 			<ingredient name="toolBeaker" count="4"/>
 			<ingredient name="resourceForgedSteel" count="50"/>
 			<ingredient name="resourceDuctTape" count="10"/>
@@ -60,7 +60,7 @@
 			<ingredient name="resourceAcid" count="5"/>
 		</recipe>		
 		
-		<recipe name="workbenchRoboticsT2ITAV" count="1" craft_area="workbench" tags="learnable">
+		<recipe name="workbenchRoboticsT2ITAV" count="1" craft_time="600" craft_area="workbench" tags="learnable">
 			<ingredient name="resourceElectricParts" count="50"/>
 			<ingredient name="resourceForgedSteel" count="100"/>
 			<ingredient name="resourceMetalPipe" count="20"/>
@@ -68,7 +68,7 @@
 			<ingredient name="resourceAcid" count="1"/>
 		</recipe>
 
-		<recipe name="workbenchRunnerT2ITAV" count="1" craft_area="workbench" tags="learnable">
+		<recipe name="workbenchRunnerT2ITAV" count="1" craft_time="600" craft_area="workbench" tags="learnable">
 			<ingredient name="smallEngine" count="1"/>
 			<ingredient name="resourceForgedSteel" count="80"/>
 			<ingredient name="resourceMetalPipe" count="50"/>
@@ -76,7 +76,7 @@
 			<ingredient name="resourceOil" count="15"/>
 		</recipe>	
 
-		<recipe name="workbenchDecoratorT1ITAV" count="1" tags="learnable">
+		<recipe name="workbenchDecoratorT1ITAV" count="1" craft_time="300" tags="learnable">
 			<ingredient name="resourceWood" count="100"/>
 			<ingredient name="resourceForgedIron" count="40"/>
 			<ingredient name="resourceMetalPipe" count="25"/>
@@ -84,42 +84,12 @@
 			<ingredient name="resourceOil" count="15"/>
 		</recipe>	
 	
-		<recipe name="workbenchFarmerT1ITAV" count="1" tags="learnable">
+		<recipe name="workbenchFarmerT1ITAV" count="1" craft_time="300" tags="learnable">
 			<ingredient name="resourceForgedIron" count="10"/>
 			<ingredient name="resourceMetalPipe" count="10"/>
 			<ingredient name="drinkJarBoiledWater" count="10"/>
 		</recipe>		
 		
-		
-		<!-- Craftable "My X profession books" -->
-		
-		<!--<recipe name="qb_MyFirstProfessionITAV" count="1" craft_time="10"> 
-			<ingredient name="resourceCloth" count="20" />
-			<ingredient name="resourcePaper" count="10" />
-			<ingredient name="resourceScrapPolymers" count="10" />
-			<ingredient name="resourceFeather" count="10" />
-		</recipe>
-		
-		<recipe name="qb_MySecondProfessionITAV" count="1" craft_time="10"> 
-			<ingredient name="resourceCloth" count="300" />
-			<ingredient name="resourcePaper" count="100" />
-			<ingredient name="resourceScrapPolymers" count="100" />
-			<ingredient name="resourceFeather" count="50" />
-		</recipe>
-		
-		<recipe name="qb_MyThirdProfessionITAV" count="1" craft_time="10"> 
-			<ingredient name="resourceCloth" count="1000" />
-			<ingredient name="resourcePaper" count="300" />
-			<ingredient name="resourceScrapPolymers" count="100" />
-			<ingredient name="resourceFeather" count="300" />
-		</recipe>
-		
-		<recipe name="qb_MyFourthProfessionITAV" count="1" craft_time="10"> 
-			<ingredient name="resourceCloth" count="1000" />
-			<ingredient name="resourcePaper" count="1000" />
-			<ingredient name="resourceFeather" count="1000" />
-			<ingredient name="resourceRawDiamond" count="1" />
-		</recipe> -->
 	</append>	
 				
 		<!-- Pretty things  -->
@@ -1176,7 +1146,7 @@
 			<ingredient name="foodCanPeas" count="1" />			
 		</recipe>
 
-		<recipe name="foodDoughITAV" count="1" craft_time="120" tags="learnable,perkCookITAV">
+		<recipe name="foodDoughITAV" count="1" craft_time="40" tags="learnable,perkCookITAV">
 			<ingredient name="drinkJarBoiledWater" count="1" />
 			<ingredient name="resourceAnimalFat" count="1" />
 			<ingredient name="foodCornMeal" count="1" />
@@ -1192,7 +1162,7 @@
 	</append>
 
 	<!-- Tweaking recipes -->
-	<setattribute xpath="//recipe[@name='drinkJarEmpty']/ingredient[@name='resourceCrushedSand']" name="count">5</setattribute>
+	<setattribute xpath="//recipe[@name='drinkJarEmpty']/ingredient[@name='unit_glass']" name="count">5</setattribute>
 	<append xpath="//recipe[@name='foodBoiledMeat']"><ingredient name="drinkCanEmpty" count="1"/></append>
 	
 	<remove xpath="//recipe[@name='foodBaconAndEggs']"/>
@@ -1236,6 +1206,12 @@
 	<setattribute xpath="//recipe[@name='foodMeatStew']/ingredient[@name='drinkJarBoiledWater']" name="count">1</setattribute>
 	<setattribute xpath="//recipe[@name='foodMeatStew']/ingredient[@name='drinkJarBoiledWater']" name="name">foodMeatBrothITAV</setattribute>
 	<setattribute xpath="//recipe[@name='foodMeatStew']" name="count">1</setattribute>
+	
+	<setattribute xpath="//recipe[@name='foodChiliDog']/ingredient[@name='foodRawMeat']" name="count">1</setattribute>
+	<setattribute xpath="//recipe[@name='foodChiliDog']/ingredient[@name='foodRawMeat']" name="name">foodRawMeatPreparedITAV</setattribute>	
+	
+	<setattribute xpath="//recipe[@name='foodSteakAndPotato']/ingredient[@name='foodRawMeat']" name="count">1</setattribute>
+	<setattribute xpath="//recipe[@name='foodSteakAndPotato']/ingredient[@name='foodRawMeat']" name="name">foodRawMeatPreparedITAV</setattribute>
 
 	<setattribute xpath="//recipe[@name='foodHoboStew']" name="count">2</setattribute>
 	<remove xpath="//recipe[@name='foodHoboStew']/ingredient" />
@@ -1256,7 +1232,7 @@
 	
 	
 	<setattribute xpath="//recipe[@name='foodShamChowder']" name="craft_time">95</setattribute> 
-	<setattribute xpath="//recipe[@name='foodShamChowder']" name="count">10</setattribute> 
+	<setattribute xpath="//recipe[@name='foodCanSham']" name="count">10</setattribute> 
 	
 	<setattribute xpath="//recipe[@name='toolForgeCrucible']/ingredient[@name='resourceClayLump']" name="count">400</setattribute>
 	<remove xpath="//recipe[@name='resourceLockPick']/ingredient[@name='resourceMechanicalParts']" />
@@ -1276,7 +1252,7 @@
 
 	
 
-	<recipe name="ammoArrowFlaming" count="1" craft_time="12" craft_area="workbench" tags="learnable">
+	<recipe name="ammoArrowFlaming" count="1" craft_time="4" craft_area="workbench" tags="learnable">
 		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
 		<ingredient name="resourceFeather" count="1"/>
 		<ingredient name="resourceGunPowder" count="2"/>
@@ -1292,7 +1268,7 @@
 		<ingredient name="resourceAnimalFat" count="80"/>
 	</recipe>
 
-	<recipe name="ammoArrowExploding" count="1" craft_area="workbench" tags="learnable">
+	<recipe name="ammoArrowExploding" count="1" craft_time="4" craft_area="workbench" tags="learnable">
 		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
 		<ingredient name="resourceWood" count="1"/>
 		<ingredient name="resourceFeather" count="1"/>
@@ -1308,7 +1284,7 @@
 		<ingredient name="resourceDuctTape" count="60"/>
 	</recipe>
 
-	<recipe name="ammoArrowSteelAP" count="1" craft_area="workbench" tags="learnable">
+	<recipe name="ammoArrowSteelAP" count="1" craft_time="3" craft_area="workbench" tags="learnable">
 		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
 		<ingredient name="resourceWood" count="1"/>
 		<ingredient name="resourceFeather" count="1"/>
@@ -1320,7 +1296,7 @@
 		<ingredient name="resourceFeather" count="80"/>
 	</recipe>
 	
-	<recipe name="ammoCrossbowBoltFlaming" count="1" craft_time="14" craft_area="workbench" tags="learnable">
+	<recipe name="ammoCrossbowBoltFlaming" count="1" craft_time="5" craft_area="workbench" tags="learnable">
 		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
 		<ingredient name="resourceWood" count="1"/>
 		<ingredient name="resourceFeather" count="1"/>
@@ -1337,7 +1313,7 @@
 		<ingredient name="resourceAnimalFat" count="80"/>
 	</recipe>
 
-	<recipe name="ammoCrossbowBoltExploding" count="1" craft_area="workbench" tags="learnable">
+	<recipe name="ammoCrossbowBoltExploding" count="1" craft_time="4" craft_area="workbench" tags="learnable">
 		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
 		<ingredient name="resourceWood" count="1"/>
 		<ingredient name="resourceFeather" count="1"/>
@@ -1353,7 +1329,7 @@
 		<ingredient name="resourceDuctTape" count="60"/>
 	</recipe>
 
-	<recipe name="ammoCrossbowBoltSteelAP" count="1" craft_area="workbench" tags="learnable">
+	<recipe name="ammoCrossbowBoltSteelAP" count="1" craft_time="3" craft_area="workbench" tags="learnable">
 		<ingredient name="resourceArrowHeadSteelAP" count="1"/>
 		<ingredient name="resourceWood" count="1"/>
 		<ingredient name="resourceFeather" count="1"/>
@@ -1366,6 +1342,23 @@
 	</recipe>
 	
 	</append>
+	
+		
+	<setattribute xpath="//recipe[@name='ammo9mmBulletBall']" name="craft_time">2</setattribute>
+	<setattribute xpath="//recipe[@name='ammo9mmBulletHP']" name="craft_time">3</setattribute>
+	<setattribute xpath="//recipe[@name='ammo9mmBulletAP']" name="craft_time">3</setattribute>
+	<setattribute xpath="//recipe[@name='ammo44MagnumBulletBall']" name="craft_time">3</setattribute>
+	<setattribute xpath="//recipe[@name='ammo44MagnumBulletHP']" name="craft_time">3</setattribute>
+	<setattribute xpath="//recipe[@name='ammo44MagnumBulletAP']" name="craft_time">4</setattribute>
+	<setattribute xpath="//recipe[@name='ammo762mmBulletBall']" name="craft_time">3</setattribute>
+	<setattribute xpath="//recipe[@name='ammo762mmBulletHP']" name="craft_time">4</setattribute>
+	<setattribute xpath="//recipe[@name='ammo762mmBulletAP']" name="craft_time">6</setattribute>
+	<setattribute xpath="//recipe[@name='ammoShotgunShell']" name="craft_time">3</setattribute>
+	<setattribute xpath="//recipe[@name='ammoShotgunSlug']" name="craft_time">5</setattribute>
+	<setattribute xpath="//recipe[@name='ammoShotgunBreachingSlug']" name="craft_time">7</setattribute>
+	<setattribute xpath="//recipe[@name='ammoArrowFlaming']" name="craft_time">9</setattribute>
+
+	
 	
 	<!-- Removing GyroCopter -->
 	<remove xpath="//recipe[contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter')]" />
@@ -1629,7 +1622,7 @@
         </recipe>		
 	</append>
 	
-	<!-- weaponPartFragmentITAV made from weapon parts-->	 
+	<!-- weaponPartFragmentITAV made from weapon parts and tool parts-->	 
 	<append xpath="//recipes">
 		<recipe name="weaponPartFragmentITAV" count="25" tags="learnable,perkArmorerITAV" craft_time="10">
 			<ingredient name="gunMGT1AK47Parts" count="1"/>
@@ -1677,6 +1670,14 @@
 		
 		<recipe name="weaponPartFragmentITAV" count="25" tags="learnable,perkArmorerITAV" craft_time="10">
 			<ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="1"/>
+		</recipe>
+		
+		<recipe name="weaponPartFragmentITAV" count="10" tags="learnable,perkArmorerITAV" craft_time="10">
+			<ingredient name="meleeToolAxeT3ChainsawParts" count="1"/>
+		</recipe>
+		
+		<recipe name="weaponPartFragmentITAV" count="10" tags="learnable,perkArmorerITAV" craft_time="10">
+			<ingredient name="meleeToolAllSteelParts" count="1"/>
 		</recipe>
 	</append>
 	

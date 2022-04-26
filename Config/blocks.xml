@@ -1621,6 +1621,7 @@
 </append> 
 
 
+<setattribute xpath="//drop[@event='Harvest' and @name='resourceRawDiamond']" name="prob">.002</setattribute>
 
 <!-- Changing the bonus dropchance -->
 <setattribute xpath="//block[@name='plantedBlueberry3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
