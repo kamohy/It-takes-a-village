@@ -1,18 +1,26 @@
 <configs>
 
 <!-- Changing what items a player starts with (first spawns in with) -->
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,starterBundleITAV</set>
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,starterBundleITAV</set>
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,starterBundleITAV</set> 
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,starterBundleITAV,vehicleBicyclePlaceable</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,starterBundleITAV,vehicleBicyclePlaceable</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,starterBundleITAV,vehicleBicyclePlaceable</set> 
  
 	
 	
 <append xpath="/entity_classes/entity_class[@name='playerMale']">
+	<property name="SwimSpeed" value="5"/>
+	<!-- <property name="SwimStrokeRate" value="1,1.5"/> -->
 	<effect_group name="Base Effects">
 			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="set" value="0" />
 			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="1"/>
 	</effect_group>
 </append>
+
+<setattribute xpath="//entity_class[@name='vehicleBicycle']/property[@name='LootListAlive']" name="value">coffeeMaker</setattribute>
+
+<setattribute xpath="//entity_class[@name='animalBear']/property[@name='ExperienceGain']" name="value">2000</setattribute> <!-- 1600 HP, 750 XP in vanilla -->
+<setattribute xpath="//entity_class[@name='animalZombieBear']/property[@name='ExperienceGain']" name="value">2500</setattribute> <!-- 2000 HP, 750 XP in vanilla -->
+<setattribute xpath="//entity_class[@name='animalDireWolf']/property[@name='ExperienceGain']" name="value">1200</setattribute> <!-- 750 HP, 750 XP in vanilla -->
 
 <setattribute xpath="//entity_class[@name='zombiePartyGirl']/property[@name='Mesh']" name="value">#Entities/Zombies?Prefabs/ZLab.prefab</setattribute>
 <setattribute xpath="//entity_class[@name='zombiePartyGirlFeral']/property[@name='Mesh']" name="value">#Entities/Zombies?Prefabs/ZLabFeral.prefab</setattribute>

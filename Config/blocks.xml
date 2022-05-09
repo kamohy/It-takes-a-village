@@ -15,7 +15,8 @@
 <setattribute xpath="//block[@name='couchModernArm']/drop[@event='Harvest' and @name='oldCash']" name="name">casinoCoin</setattribute>
 <setattribute xpath="//block[@name='couchModernArm']/drop[@event='Destroy']" name="count">1,2</setattribute>
 
-
+<remove xpath="//drop[@name='resourceGoldNugget']"/>
+<remove xpath="//drop[@name='resourceSilverNugget']"/>
 
 <setattribute xpath="//block[contains(@name, 'chimney')]/property[@name='CreativeMode']" name="value">Dev</setattribute>
 
@@ -486,21 +487,6 @@
 	
 	<!-- ********************************************* -->
 	
-<!-- <block name="cntWoodBurningStove">
-	<property name="Extends" value="decoEntityMetalMaster"/>
-	<property name="Model" value="Entities/Furniture/woodBurningStovePrefab"/>
-	<property name="Place" value="TowardsPlacerInverted"/>
-	<property class="RepairItems">
-		<property name="resourceScrapIron" value="10"/>
-		<property name="resourceCoal" value="10"/>
-	</property>
-	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceCoal" count="5" tag="allHarvest"/>
-	<drop event="Destroy" name="resourceScrapIron" count="5"/>
-	<property name="FilterTags" value="MC_building,SC_decor"/>
-	<property name="Class" value="Light"/>
-	<property name="Light" value="0.5"/>
-</block> -->
 
 	<block name="cntWoodBurningStoveDecoITAV">
 		<property name="Class" value="Campfire"/>
@@ -1538,6 +1524,7 @@
 
 <block name="window03WoodITAV">
 	<property name="DescriptionKey" value="woodFrameGroupDesc"/>
+	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="window03Wood"/>
 	<property name="Material" value="Mglass"/>
 	<property name="LightOpacity" value="1"/>
@@ -1559,6 +1546,7 @@
 
 <block name="window03WoodBulletproofCenterITAV">
 	<property name="DescriptionKey" value="window03WoodBulletproofITAVDesc"/>
+	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="window03Wood"/>
 	<property name="CustomIconTint" value="B5E8F7" />
 	<property name="Material" value="MglassBulletproof"/>
@@ -1585,6 +1573,7 @@
 
 <block name="window03WoodBulletproofITAV">
 	<property name="DescriptionKey" value="window03WoodBulletproofITAVDesc"/>
+	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="window03Wood"/>
 	<property name="CustomIconTint" value="B5E8F7" />
 	<property name="Material" value="MglassBulletproof"/>
@@ -1607,9 +1596,86 @@
 	<property name="SortOrder1" value="7080"/>
 </block>
 
+
+<block name="houseFrontDoor1_v1BulletProofITAV">
+	<property name="DescriptionKey" value="doorBulletproofITAVDesc"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="houseFrontDoor1_v1"/>
+	<property name="CustomIconTint" value="B5E8F7" />
+	<property name="Class" value="DoorSecure"/>
+	<property name="Material" value="MglassBulletproof"/> <!-- Mwood_regular -->
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor1_v1Prefab"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="MeshDamage" value="
+		Door/Door_DMG0, 1000,
+		Door/Door_DMG1, 750,
+		Door/Door_DMG2, 500,
+		Door/Door_DMG3, 250,
+		Door/Door_DMG4, 40
+		"/>
+	<property name="OpenSound" value="door_wood_open"/>
+	<property name="CloseSound" value="door_wood_close"/>
+	<property class="RepairItems">
+		<property name="glassBulletproofBlockVariantHelper" value="1"/>
+	</property>
+	<property name="EconomicValue" value="540"/>
+	<property name="FilterTags" value="MC_building,SC_doors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0140"/>
+</block>
+
+<block name="houseFrontDoor2_v1BulletProofITAV">
+	<property name="DescriptionKey" value="doorBulletproofITAVDesc"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="houseFrontDoor2_v1"/>
+	<property name="CustomIconTint" value="B5E8F7" />
+	<property name="Class" value="DoorSecure"/>
+	<property name="Material" value="MglassBulletproof"/> <!-- Mwood_regular -->
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor1_v1Prefab"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="MeshDamage" value="
+		Door/Door_DMG0, 1000,
+		Door/Door_DMG1, 750,
+		Door/Door_DMG2, 500,
+		Door/Door_DMG3, 250,
+		Door/Door_DMG4, 40
+		"/>
+	<property name="OpenSound" value="door_wood_open"/>
+	<property name="CloseSound" value="door_wood_close"/>
+	<property class="RepairItems">
+		<property name="glassBulletproofBlockVariantHelper" value="1"/>
+	</property>
+	<property name="EconomicValue" value="540"/>
+	<property name="FilterTags" value="MC_building,SC_doors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0140"/>
+</block>
+
+
 </append>
 
-	
 
 
 <!-- Tweaking blocks -->
@@ -1623,24 +1689,88 @@
 
 <setattribute xpath="//drop[@event='Harvest' and @name='resourceRawDiamond']" name="prob">.002</setattribute>
 
-<!-- Changing the bonus dropchance -->
-<setattribute xpath="//block[@name='plantedBlueberry3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
-<setattribute xpath="//block[@name='plantedBlueberry3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
-<setattribute xpath="//block[@name='plantedCoffee3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
-<setattribute xpath="//block[@name='plantedCoffee3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
-<setattribute xpath="//block[@name='plantedCorn3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
-<setattribute xpath="//block[@name='plantedCorn3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
-<setattribute xpath="//block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
-<setattribute xpath="//block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
-<setattribute xpath="//block[@name='plantedPotato3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
-<setattribute xpath="//block[@name='plantedPotato3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
-<setattribute xpath="//block[@name='plantedHop3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
-<setattribute xpath="//block[@name='plantedHop3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
-<setattribute xpath="//block[@name='plantedPumpkin3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
-<setattribute xpath="//block[@name='plantedPumpkin3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
-<setattribute xpath="//block[@name='plantedGraceCorn3HarvestPlayer']/drop[@event='Destroy']" name="prob">0.65</setattribute>
-<setattribute xpath="//block[@name='plantedGraceCorn3HarvestPlayer']/drop[@event='Destroy']" name="tag">bonusCropHarvest</setattribute>
 
+<!-- Allowing Farmer to get guaranteed seed back at level 2 or above -->
+<remove xpath="//block[contains(@name,'3HarvestPlayer')]/drop[@event='Destroy']" />
+
+<append xpath="//block[@name='plantedMushroom3HarvestPlayer']">
+	<drop event="Harvest" name="plantedMushroom1" count="1" prob="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="plantedMushroom1" count="1" prob="0.5" tag="bonusCropHarvestITAV"/>
+</append>
+
+<append xpath="//block[@name='plantedYucca3HarvestPlayer']">
+	<drop event="Harvest" name="plantedYucca1" count="1" prob="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="plantedYucca1" count="1" prob="0.5" tag="bonusCropHarvestITAV"/>
+</append>
+<append xpath="//block[@name='plantedCotton3HarvestPlayer']">
+	<drop event="Harvest" name="plantedCotton1" count="1" prob="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="plantedCotton1" count="1" prob="0.5" tag="bonusCropHarvestITAV"/>
+</append>
+
+<append xpath="//block[@name='plantedCoffee3HarvestPlayer']">
+	<drop event="Harvest" name="plantedCoffee1" count="1" prob="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="plantedCoffee1" count="1" prob="0.5" tag="bonusCropHarvestITAV"/>
+</append>
+
+<append xpath="//block[@name='plantedGoldenrod3HarvestPlayer']">
+	<drop event="Harvest" name="plantedGoldenrod1" count="1" prob="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="plantedGoldenrod1" count="1" prob="0.5" tag="bonusCropHarvestITAV"/>
+</append>
+
+<append xpath="//block[@name='plantedAloe3HarvestPlayer']">
+	<drop event="Harvest" name="plantedAloe1" count="1" prob="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="plantedAloe1" count="1" prob="0.5" tag="bonusCropHarvestITAV"/>
+</append>
+
+<append xpath="//block[@name='plantedBlueberry3HarvestPlayer']">
+	<drop event="Harvest" name="plantedBlueberry1" count="1" prob="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="plantedBlueberry1" count="1" prob="0.5" tag="bonusCropHarvestITAV"/>
+</append>
+
+<append xpath="//block[@name='plantedPotato3HarvestPlayer']">
+	<drop event="Harvest" name="plantedPotato1" count="1" prob="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="plantedPotato1" count="1" prob="0.5" tag="bonusCropHarvestITAV"/>
+</append>
+
+<append xpath="//block[@name='plantedChrysanthemum3HarvestPlayer']">
+	<drop event="Harvest" name="plantedChrysanthemum1" count="1" prob="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="plantedChrysanthemum1" count="1" prob="0.5" tag="bonusCropHarvestITAV"/>
+</append>
+
+<append xpath="//block[@name='plantedCorn3HarvestPlayer']">
+	<drop event="Harvest" name="plantedCorn1" count="1" prob="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="plantedCorn1" count="1" prob="0.5" tag="bonusCropHarvestITAV"/>
+</append>
+
+<append xpath="//block[@name='plantedGraceCorn3HarvestPlayer']">
+	<drop event="Harvest" name="plantedGraceCorn1" count="1" prob="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="plantedGraceCorn1" count="1" prob="0.5" tag="bonusCropHarvestITAV"/>
+</append>
+
+<append xpath="//block[@name='plantedHop3HarvestPlayer']">
+	<drop event="Harvest" name="plantedHop1" count="1" prob="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="plantedHop1" count="1" prob="0.5" tag="bonusCropHarvestITAV"/>
+</append>
+
+<append xpath="//block[@name='plantedSnowberry3HarvestPlayer']">
+	<drop event="Harvest" name="plantedSnowberry1" count="1" prob="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="plantedSnowberry1" count="1" prob="0.5" tag="bonusCropHarvestITAV"/>
+</append>
+
+<append xpath="//block[@name='plantedPumpkin3HarvestPlayer']">
+	<drop event="Harvest" name="plantedPumpkin1" count="1" prob="1" tag="bonusCropHarvest"/>
+	<drop event="Harvest" name="plantedPumpkin1" count="1" prob="0.5" tag="bonusCropHarvestITAV"/>
+</append>
+
+<!-- Changing the bonus dropchance -->
+<setattribute xpath="//block[@name='plantedBlueberry3HarvestPlayer']/drop[@event='Harvest' and @prob='0.5']" name="prob">0.8</setattribute>
+<setattribute xpath="//block[@name='plantedCoffee3HarvestPlayer']/drop[@event='Harvest' and @prob='0.5']" name="prob">0.8</setattribute>
+<setattribute xpath="//block[@name='plantedCorn3HarvestPlayer']/drop[@event='Harvest' and @prob='0.5']" name="prob">0.8</setattribute>
+<setattribute xpath="//block[@name='plantedMushroom3HarvestPlayer']/drop[@event='Harvest' and @prob='0.5']" name="prob">0.8</setattribute>
+<setattribute xpath="//block[@name='plantedPotato3HarvestPlayer']/drop[@event='Harvest' and @prob='0.5']" name="prob">0.8</setattribute>
+<setattribute xpath="//block[@name='plantedHop3HarvestPlayer']/drop[@event='Harvest' and @prob='0.5']" name="prob">0.8</setattribute>
+<setattribute xpath="//block[@name='plantedPumpkin3HarvestPlayer']/drop[@event='Harvest' and @prob='0.5']" name="prob">0.8</setattribute>
+<setattribute xpath="//block[@name='plantedGraceCorn3HarvestPlayer']/drop[@event='Harvest' and @prob='0.5']" name="prob">0.8</setattribute>
 
 	
 <!-- Making blocks unlockable by the correct ITAV perk -->
@@ -1665,7 +1795,7 @@
 <append xpath="//block[@name='crushedCars']"><property name="UnlockedBy" value="perkRunnerITAV" /></append>
 
 
-
+<!-- Adjusting prices -->
 <append xpath="//block[@name='signPosterMovie2159']"><property name="UnlockedBy" value="perkDecoratorITAV" /><property name="EconomicValue" value="83" /></append>
 <append xpath="//block[@name='signPosterMovieLoneWolf']"><property name="UnlockedBy" value="perkDecoratorITAV" /><property name="EconomicValue" value="83" /></append>
 <append xpath="//block[@name='signPosterMovieMammasJustice']"><property name="UnlockedBy" value="perkDecoratorITAV" /><property name="EconomicValue" value="83" /></append>

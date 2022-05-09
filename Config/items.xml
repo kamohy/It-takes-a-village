@@ -4,6 +4,7 @@
 <append xpath="//item"><property name="EconomicValue" value="1"/><property name="EconomicBundleSize" value="1"/></append>
 <setattribute xpath="//item/property[@name='EconomicBundleSize']" name="value">1</setattribute>
 <setattribute xpath="//item[starts-with(@name, 'book')]/property[@name='EconomicValue']" name="value">200</setattribute>
+<setattribute xpath="//item[starts-with(@name, 'qt_')]/property[@name='EconomicValue']" name="value">2000</setattribute> <!-- Treasure maps -->
 <setattribute xpath="//item[contains(@name, 'Schematic')]/property[@name='EconomicValue']" name="value">200</setattribute>
 <setattribute xpath="//item[@name='ammoGasCan']/property[@name='EconomicBundleSize']" name="value">4</setattribute>
 
@@ -37,7 +38,7 @@
 <setattribute xpath="/items/item[@name='resourceCloth']/property[@name='Stacknumber']" name="value">500</setattribute>
 <setattribute xpath="/items/item[@name='resourceRadiator']/property[@name='Stacknumber']" name="value">20</setattribute>
 
-
+<setattribute xpath="//item[@name='resourceWood']/property[@name='FuelValue']" name="value">500</setattribute> <!-- 50 in vanilla-->
 
 <!-- Tweaking Pumpkin Cheesecake to give beer buff instead of bartering -->
 <remove xpath="//item[@name='foodPumpkinCheesecake']/effect_group/display_value" />
@@ -82,6 +83,8 @@
 <append xpath="//item[@name='resourceForgedIron']"><property name="UnlockedBy" value="perkSmelterITAV"/></append>
 <append xpath="//item[@name='resourceForgedSteel']"><property name="UnlockedBy" value="perkSmelterITAV"/></append>
 <append xpath="//item[@name='toolForgeCrucible']"><property name="UnlockedBy" value="perkSmelterITAV"/></append>
+<append xpath="//item[@name='toolBellows']/property[@name='UnlockedBy']/@value">,perkSmelterITAV</append>
+<append xpath="//item[@name='toolAnvil']/property[@name='UnlockedBy']/@value">,perkSmelterITAV</append>
 <append xpath="//item[@name='resourceGunPowder']"><property name="UnlockedBy" value="perkChemistITAV"/></append>
 <append xpath="//item[@name='resourcePaint']"><property name="UnlockedBy" value="perkChemistITAV"/></append>
 <append xpath="//item[@name='resourceConcreteMix']"><property name="UnlockedBy" value="perkChemistITAV"/></append>
@@ -92,10 +95,13 @@
 
 <!-- Making items unlockable by the correct ITAV perk -->
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkAdvancedEngineering'))]" name="value">perkSmelterITAV</setattribute>
+<append xpath="//item[@name='meleeToolAllSteelParts']"><property name="UnlockedBy" value="perkMinerITAV"/></append>
+<append xpath="//item[@name='meleeToolAxeT3ChainsawParts']"><property name="UnlockedBy" value="perkMinerITAV"/></append>
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkMasterChef'))]" name="value">perkCookITAV</setattribute>
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkPhysician'))]" name="value">perkChemistITAV</setattribute>
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkTurrets'))]" name="value">perkRoboticsITAV</setattribute>
 <setattribute xpath="//item[contains(@name, 'gunBot')]/property[@name='UnlockedBy']" name="value">perkRoboticsITAV</setattribute>
+<append xpath="//item[@name='gunBotRoboticsParts']"><property name="UnlockedBy" value="perkRoboticsITAV"/></append>
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkSalvageOperations'))]" name="value">perkRunnerITAV</setattribute>
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkGreaseMonkey'))]" name="value">perkRunnerITAV</setattribute>
 <append xpath="//item[@name='resourceLockPick']/property[@name='UnlockedBy']/@value">,perkRunnerITAV</append>
@@ -175,12 +181,39 @@
 </append>
 
 
-<!-- Adding items, weaponPartFragmentITAV and resourceWeaponRepairKitITAV etc. -->
+<!-- Adding items, weaponPartFragmentITAV, toolPartsITAV and resourceWeaponRepairKitITAV etc. -->
 <append xpath="/items/item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and contains(@name, 'Parts') and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]" >
 	<property name="UnlockedBy" value="perkArmorerITAV" />
-	<!--<property name="Material" value="MweaponPartFragmentITAV" />-->
 </append>
 <!--<setattribute xpath="/items/item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and contains(@name, 'Parts') and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='Material']" name="value">MweaponPartFragmentITAV</setattribute>-->
+
+<setattribute xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and (contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3')) and not(contains(@name, 'Parts')) and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='RepairTools']" name="value">resourceWeaponRepairKitITAV</setattribute>
+
+<setattribute xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and (contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3')) and not(contains(@name, 'Parts')) and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='Material']" name="value">MweaponPartFragmentITAV</setattribute>
+<append xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and (contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3')) and not(contains(@name, 'Parts')) and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]"><property name="Weight" value="534"/></append>
+<setattribute xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and (contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3')) and not(contains(@name, 'Parts')) and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='Weight']" name="value">534</setattribute>
+
+<setattribute xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and (contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3')) and contains(@name, 'Parts') and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='Material']" name="value">MweaponPartFragmentITAV</setattribute>
+<append xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and (contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3')) and contains(@name, 'Parts') and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]"><property name="Weight" value="34"/></append>
+
+
+<setattribute xpath="//item[contains(@name, 'meleeTool') and contains(@name, 'T2Steel') and not(contains(@name, 'Parts'))]/property[@name='Material']" name="value">MtoolPartFragmentITAV</setattribute>
+<append xpath="//item[(contains(@name, 'meleeTool')) and (contains(@name, 'T2Steel')) and not(contains(@name, 'Parts'))]"><property name="Weight" value="534"/></append>
+<setattribute xpath="//item[(contains(@name, 'meleeTool')) and (contains(@name, 'T2Steel')) and not(contains(@name, 'Parts'))]/property[@name='Weight']" name="value">534</setattribute>
+<setattribute xpath="//item[@name='meleeToolAxeT3Chainsaw' or @name='meleeToolPickT3Auger']/property[@name='Material']" name="value">MtoolPartFragmentITAV</setattribute>
+<setattribute xpath="//item[@name='meleeToolAxeT3Chainsaw' or @name='meleeToolPickT3Auger']/property[@name='Weight']" name="value">534</setattribute>
+
+<setattribute xpath="//item[contains(@name, 'meleeTool') and contains(@name, 'Parts')]/property[@name='Material']" name="value">MtoolPartFragmentITAV</setattribute>
+<append xpath="//item[contains(@name, 'meleeTool') and contains(@name, 'Parts')]"><property name="Weight" value="34"/></append>
+
+<!-- Robotic parts, MJunkTurretParts -> gunBotRoboticsParts in vanilla (gunBotT1JunkSledge, gunBotT2JunkTurret, gunBotT3JunkDrone )-->
+<setattribute xpath="//item[contains(@name, 'gunBot') and contains(@name, 'Junk') and not(contains(@name, 'Parts'))]/property[@name='Material']" name="value">MtoolPartFragmentITAV</setattribute>
+<setattribute xpath="//item[@name='gunBotRoboticsParts']/property[@name='Material']" name="value">MtoolPartFragmentITAV</setattribute>
+<append xpath="//item[@name='gunBotRoboticsParts']"><property name="Weight" value="34"/></append>
+<setattribute xpath="//item[@name='gunBotT1JunkSledge']/property[@name='Weight']" name="value">534</setattribute>
+<setattribute xpath="//item[@name='gunBotT2JunkTurret']/property[@name='Weight']" name="value">534</setattribute>
+<setattribute xpath="//item[@name='gunBotT3JunkDrone']/property[@name='Weight']" name="value">800</setattribute>
+
 
 <append xpath="/items"> 
 	<item name="starterBundleITAV">
@@ -198,22 +231,37 @@
 			<property name="Delay" value="0"/>
 			<property name="Use_time" value="0"/>
 			<property name="Sound_start" value="close_backpack"/>
-			<property name="Create_item" value="casinoCoin,resourceDuctTape,foodCornBread,foodEggBoiled"/>
-			<property name="Create_item_count" value="350,1,1,1"/>
+			<property name="Create_item" value="casinoCoin,resourceDuctTape,foodCornBread,foodEggBoiled,drinkJarCoffee,frameShapes:VariantHelper"/>
+			<property name="Create_item_count" value="350,1,2,1,1,500"/>
 		</property>
 	</item>
+
+	<item name="toolPartFragmentITAV"> 
+		<property name="Extends" value="partsMaster" />
+		<property name="CreativeMode" value="Player"/>
+		<property name="ItemTypeIcon" value="gunsmithing"/>
+		<property name="Material" value="MtoolPartFragmentITAV"/> <property name="Weight" value="1"/>
+		<property name="DescriptionKey" value="toolPartsITAVGroupDesc"/>
+		<property name="EconomicValue" value="3"/>
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="Group" value="Resources"/>
+		<property name="Weight" value="1"/>
+		<property name="Stacknumber" value="9999"/>
+		<property name="CraftingIngredientTime" value=".1"/>
+		<property name="CustomIcon" value="toolAndDieSet"/>
+	</item>
+	
 
 	<item name="weaponPartFragmentITAV"> 
 		<property name="Extends" value="partsMaster" />
 		<property name="CreativeMode" value="Player"/>
 		<property name="ItemTypeIcon" value="gunsmithing"/>
 		<property name="DescriptionKey" value="weaponPartFragmentITAVGroupDesc"/>
-		<!--<property name="RepairTools" value="resourceWeaponRepairKitITAV"/>-->
+		<property name="Material" value="MweaponPartFragmentITAV"/> <property name="Weight" value="1"/>
 		<property name="UnlockedBy" value="perkArmorerITAV" />
 		<property name="EconomicValue" value="3"/>
 		<property name="EconomicBundleSize" value="1"/>
 		<property name="Group" value="Resources"/>
-		<property name="Weight" value="1"/>
 		<property name="PickupJournalEntry" value="weaponPartsAssemblyTipITAV"/>
 		<property name="Stacknumber" value="9999"/>
 		<property name="CraftingIngredientTime" value=".1"/>
@@ -571,7 +619,7 @@
 		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
 		<property name="Material" value="Morganic" />
 		<property name="Stacknumber" value="500"/>
-		<property name="EconomicValue" value="51"/>
+		<property name="EconomicValue" value="50"/>
 		<property name="UnlockedBy" value="perkCookITAV"/>
 		<property class="Action0">
 			<property name="Class" value="Eat" />
@@ -712,8 +760,6 @@
 	<property name="CustomIconTint" value="162,251,145" />
 </append>
 <setattribute xpath="//item[@name='resourceRockSmallBundle']/property[@name='SellableToTrader']" name="value">true</setattribute>
-
-<setattribute xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and (contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3')) and not(contains(@name, 'Parts')) and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='RepairTools']" name="value">resourceWeaponRepairKitITAV</setattribute>
 
 
 <!-- My NEXT Profession -->
@@ -1127,6 +1173,67 @@
 		<passive_effect name="StaminaChangeOT" operation="perc_add" value=".07" />
 	</effect_group>
 </item>
+
+
+<item name="apparelDivingMaskITAV">
+	<property name="Extends" value="apparelHazmatMaster"/>
+	<property name="CustomIcon" value="apparelGasMask" />
+	<property name="Tags" value="head,clothing,canHaveCosmetic,noMods"/>
+	<property name="EquipSlot" value="Head"/>
+	<property class="UMA">
+		<property name="Mesh" value="armor_hazmat_head"/>
+		<property name="Overlay0" value="armor_hazmat_hood"/>
+		<property name="Layer" value="middle"/>
+		<property name="UISlot" value="Headgear"/>
+		<property name="Mask1" value="Head" param1="inner"/>
+		<property name="Mask3" value="Face" param1="inner"/>
+		<property name="Mask4" value="Face" param1="middle"/>
+		<property name="Mask5" value="Face" param1="outer"/>
+		<property name="ShowAltHair" value="true"/>
+	</property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="HypothermalResist" operation="base_add" value="20"/>
+		<passive_effect name="HyperthermalResist" operation="base_add" value="1"/>
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="9999" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="0" />
+		<passive_effect name="WalkSpeed" operation="perc_add" value=".9" tags="swimming"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value=".9" tags="swimming"/>
+		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffUnderWaterBreathingITAV"/>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffUnderWaterBreathingITAV"/>
+	</effect_group>
+	<property name="EconomicValue" value="1474" />
+	<property name="EconomicBundleSize" value="1" />
+</item>
+
+
+<!-- Test Swim speed -->
+
+<!-- <item name="drinkCanMegaCrushSwimITAV">
+	<property name="Extends" value="drinkJarRedTea"/>
+	<property name="DisplayType" value="waterMegaCrush"/>
+	<property name="EconomicValue" value="240"/>
+	<property class="Action0">
+	</property>
+
+	<effect_group tiered="false" name="Drink Tier Found">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60"/>
+			<display_value name="dStaminaRegen" value=".15"/>
+			<display_value name="dRunSpeed" value=".5"/>
+			<display_value name="dDuration" value="120"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushSwimITAVDuration" operation="add" value="123"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushSwimITAVDuration" operation="set" value="363">
+				<requirement name="CVarCompare" cvar="$buffMegaCrushSwimITAVDuration" operation="GT" value="363"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffMegaCrushSwimITAV"/>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
+</item> -->
 
 </append>
 
@@ -2126,7 +2233,7 @@
 <setattribute xpath="//item[@name='medicalFirstAidKit']/property[@name='EconomicValue']" name="value">105</setattribute>
 <setattribute xpath="//item[@name='medicalSplint']/property[@name='EconomicValue']" name="value">17</setattribute>
 <setattribute xpath="//item[@name='medicalPlasterCast']/property[@name='EconomicValue']" name="value">35</setattribute>
-<setattribute xpath="//item[@name='medicalBloodBag']/property[@name='EconomicValue']" name="value">30</setattribute>
+<setattribute xpath="//item[@name='medicalBloodBag']/property[@name='EconomicValue']" name="value">150</setattribute>
 <setattribute xpath="//item[@name='drugPainkillers']/property[@name='EconomicValue']" name="value">80</setattribute>
 <setattribute xpath="//item[@name='drugHerbalAntibiotics']/property[@name='EconomicValue']" name="value">37</setattribute>
 <setattribute xpath="//item[@name='drugAntibiotics']/property[@name='EconomicValue']" name="value">14</setattribute>
@@ -2186,4 +2293,5 @@
 <setattribute xpath="//item[@name='foodVegetableStew']/property[@name='EconomicValue']" name="value">45</setattribute>
 <setattribute xpath="//item[@name='drugVitamins']/property[@name='EconomicValue']" name="value">100</setattribute>
 <setattribute xpath="//item[@name='armorSteelHelmet']/property[@name='EconomicValue']" name="value">722</setattribute>
+
 </configs>

@@ -77,24 +77,29 @@
 
 <!-- PERKS -->
 <append xpath="/progression">
-<perks min_level="0" max_level="2" base_skill_point_cost="2" cost_multiplier_per_level="1.3" max_level_ratio_to_parent="5">
+<perks min_level="0" max_level="2" base_skill_point_cost="2" cost_multiplier_per_level="1.3" max_level_ratio_to_parent="5"> <!-- 2 points, 3 points, 4 points -->
+</perks>
+<perks min_level="0" max_level="5" base_skill_point_cost="3" cost_multiplier_per_level="0.82" max_level_ratio_to_parent="5"> <!-- 2 points, 1 point, 1 point -->
+
 	<!-- Smelter perk -->
-	<perk name="perkSmelterITAV" parent="attITAV" name_key="perkSmelterITAVName" max_level="2" desc_key="perkSmelterITAVDesc" icon="ui_game_symbol_forge">		
+	<perk name="perkSmelterITAV" parent="attITAV" name_key="perkSmelterITAVName" max_level="3" desc_key="perkSmelterITAVDesc" icon="ui_game_symbol_forge">		
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="8" desc_key="reqAttLevel08ITAV"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="reqAttLevel05ITAV"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="8" desc_key="reqAttLevel08ITAV"/></level_requirements>
 
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_set" level="0,2" value="0,2" tags="perkSmelterITAV"/><!-- fake crafting perk that is used to scale resources. perkAdvancedEngineering -->
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,4" value="1" tags="forge,resourceForgedIron,workbench,chemistryStation,cementMixer,resourceMilitaryFiber,generatorbank,electricwirerelay,switch,ceilingLight01_player,industrialLight01_player,industrialLight02_player,armorMiningHelmet,spotlightPlayer,speaker,pressureplate,pressureplateLong,electrictimerrelay,motionsensor,wirelessRelayFuseboxLightITAV"/>
-			<passive_effect name="CraftingTime" operation="perc_add" level="1,2" value="-0.2" tags="perkSmelterITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,2" value="1" tags="toolForgeCrucible,resourceForgedSteel,batterybank,meleeToolRepairT3Nailgun,garageDoorMetal_v1Powered,garageDoorIndustrial_Powered,metalReinforcedWoodDrawBridgePowered,vaultHatch_v3_Powered,vaultDoor03_Powered"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="0,3" value="0,3" tags="perkSmelterITAV"/><!-- fake crafting perk that is used to scale resources. perkAdvancedEngineering -->
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="forge,resourceForgedIron,workbench,chemistryStation,cementMixer,resourceMilitaryFiber"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3" value="-0.2" tags="perkSmelterITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="toolForgeCrucible,toolBellows,toolAnvil,generatorbank,electricwirerelay,switch,ceilingLight01_player,industrialLight01_player,industrialLight02_player,armorMiningHelmet,spotlightPlayer,speaker,pressureplate,pressureplateLong,electrictimerrelay,motionsensor,wirelessRelayFuseboxLightITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,3" value="1" tags="resourceForgedSteel,batterybank,meleeToolRepairT3Nailgun,garageDoorMetal_v1Powered,garageDoorIndustrial_Powered,metalReinforcedWoodDrawBridgePowered,vaultHatch_v3_Powered,vaultDoor03_Powered"/>
 
 			<effect_description level="1" desc_key="perkSmelterITAVRank1Desc" long_desc_key="perkSmelterITAVRank1LongDesc"/>
 			<effect_description level="2" desc_key="perkSmelterITAVRank2Desc" long_desc_key="perkSmelterITAVRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkSmelterITAVRank3Desc" long_desc_key="perkSmelterITAVRank3LongDesc"/>
 		</effect_group>
 	</perk>
-</perks>
-<perks min_level="0" max_level="5" base_skill_point_cost="3" cost_multiplier_per_level="0.82" max_level_ratio_to_parent="5">
+
 	<!-- Miner perk -->
 	<perk name="perkMinerITAV" parent="attITAV" name_key="perkMinerITAVName" desc_key="perkMinerITAVDesc" icon="ui_game_symbol_mining" tags="learnable">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
@@ -106,8 +111,8 @@
 		<!-- Miner69r effects to MinerITAV -->
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkMinerITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolRepairT1ClawHammer,meleeToolAxeT1IronFireaxe,meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="workbenchMinerT2ITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolRepairT1ClawHammer,meleeToolAxeT1IronFireaxe,meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAllSteelParts"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="workbenchMinerT2ITAV,meleeToolAxeT3ChainsawParts"/>
 			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkMinerITAV"/>
 			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkMinerITAV"/>
 
@@ -194,6 +199,7 @@
 			<passive_effect name="CraftingTier" operation="base_set" level="0,3" value="0,3" tags="perkLivingOffTheLandCrafting"/><!-- fake crafting perk that is used to scale resources -->
 
 			<passive_effect name="HarvestCount" operation="perc_add" level="1,2,3" value="1,1,2" tags="cropHarvest,wildCropsHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="bonusCropHarvestITAV"/>
 			<passive_effect name="HarvestCount" operation="base_set" level="2,3" value="1,1" tags="bonusCropHarvest"/>
 			
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="workbenchFarmerT1ITAV,foodRawChickenMeatPreparedITAV,foodRawMeatPreparedITAV,plantedAloe1,plantedChrysanthemum1,plantedGoldenrod1,plantedYucca1"/>
@@ -255,7 +261,6 @@
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="reqAttLevel03ITAV"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="reqAttLevel05ITAV"/></level_requirements>
 		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="reqAttLevel07ITAV"/></level_requirements>
-		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="reqAttLevel10ITAV"/></level_requirements>
 		
 		<effect_group>
 			<passive_effect name="CraftingTime" operation="perc_add" level="2,3,4" value="-.2,-.2,-.4" tags="chemStationCrafting"/>
@@ -272,7 +277,7 @@
 	</perk>
 	
 		<!-- Robotics Inventor perk -->
-	<perk name="perkRoboticsITAV" parent="attITAV" name_key="perkRoboticsITAVName" desc_key="perkRoboticsITAVDesc" icon="ui_game_symbol_electric_turret">
+	<perk name="perkRoboticsITAV" max_level="5" parent="attITAV" name_key="perkRoboticsITAVName" desc_key="perkRoboticsITAVDesc" icon="ui_game_symbol_electric_turret">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="reqAttLevel03ITAV"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="reqAttLevel05ITAV"/></level_requirements>
@@ -280,8 +285,9 @@
 		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="reqAttLevel10ITAV"/></level_requirements>
 
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkRoboticsITAV"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkRoboticsITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="workbench,gunBotT1JunkSledge,generatorbank,electricwirerelay,switch,pressureplate,pressureplateLong,electrictimerrelay,motionsensor,dartTrap,tripwirepost,electricfencepost,bladeTrap,wirelessRelayFuseboxLightITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="gunBotRoboticsParts"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="shotgunTurret,gunBotT2JunkTurret"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="autoTurret,gunBotT3JunkDrone,workbenchRoboticsT2ITAV"/>
 			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5" value=".125,.25,.375,.5,.5" tags="turretMelee"/>
@@ -306,45 +312,40 @@
 	</perk>
 	
 			<!-- Mechanic/Runner perk -->
-	<perk name="perkRunnerITAV" parent="attITAV" name_key="perkRunnerITAVName" desc_key="perkRunnerITAVDesc" icon="ui_game_symbol_4x4">
+	<perk name="perkRunnerITAV" max_level="3" parent="attITAV" name_key="perkRunnerITAVName" desc_key="perkRunnerITAVDesc" icon="ui_game_symbol_4x4">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="reqAttLevel03ITAV"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="reqAttLevel07ITAV"/></level_requirements>
-		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="8" desc_key="reqAttLevel08ITAV"/></level_requirements>
-		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="reqAttLevel10ITAV"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="6" desc_key="reqAttLevel03ITAV"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="8" desc_key="reqAttLevel07ITAV"/></level_requirements>
 				
 		<effect_group>
 			<!--<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkRunnerITAV"/> --><!-- fake crafting perk that is used to scale resources or quality like on carBattery -->
 
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="workbench,vehicleWheels,vehicleBicycleChassis,vehicleBicycleHandlebars,crushedCars"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars,powerizersBabyITAV,workBootsBabyITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="resourceOil,ammoGasCanBundle,vehicleMotorcycleChassis,vehicleMotorcycleHandlebars,workbenchRunnerT2ITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="powerizersITAV,workBootsITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="vehicle4x4TruckChassis,vehicle4x4TruckAccessories"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="workbench,vehicleWheels,vehicleBicycleChassis,vehicleBicycleHandlebars,crushedCars,carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars,powerizersBabyITAV,workBootsBabyITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="resourceOil,ammoGasCanBundle,vehicleMotorcycleChassis,vehicleMotorcycleHandlebars,workbenchRunnerT2ITAV,powerizersITAV,workBootsITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="1" tags="vehicle4x4TruckChassis,vehicle4x4TruckAccessories"/>
 
 			<effect_description level="1" desc_key="perkRunnerITAVRank1Desc" long_desc_key="perkRunnerITAVRank1LongDesc"/>
 			<effect_description level="2" desc_key="perkRunnerITAVRank2Desc" long_desc_key="perkRunnerITAVRank2LongDesc"/>
 			<effect_description level="3" desc_key="perkRunnerITAVRank3Desc" long_desc_key="perkRunnerITAVRank3LongDesc"/>
-			<effect_description level="4" desc_key="perkRunnerITAVRank4Desc" long_desc_key="perkRunnerITAVRank4LongDesc"/>
-			<effect_description level="5" desc_key="perkRunnerITAVRank5Desc" long_desc_key="perkRunnerITAVRank5LongDesc"/>
 		</effect_group>
+		
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkRunnerITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolSalvageT1Wrench,resourceLockPick"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="meleeToolSalvageT2Ratchet"/>
-			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.1,-.5" tags="salvageScrap"/><!-- does not work on scrapping -->
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3" value="3,4,5" tags="perkRunnerITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="meleeToolSalvageT1Wrench,resourceLockPick"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,3" value="1" tags="meleeToolSalvageT2Ratchet"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,3" value="-0.1,-.5" tags="salvageScrap"/><!-- does not work on scrapping -->
 			<!-- <passive_effect name="RunSpeed" operation="perc_add" level="1,5" value=".02,.1"/> -->
-			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkRunnerITAV"/>
-			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkRunnerITAV"/>
-			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="salvageHarvest"/>
-			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value="-.1,-.4" tags="Harvesting">
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,3" value=".2,1" tags="perkRunnerITAV"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,3" value=".1,.5" tags="perkRunnerITAV"/>
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,3" value=".2,1" tags="salvageHarvest"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,3" value="-.1,-.4" tags="Harvesting">
 				<requirement name="HoldingItemHasTags" tags="perkRunnerITAV"/>
 			</passive_effect>	
-			<passive_effect name="ScavengingTime" operation="perc_subtract" level="1,2,3,4,5" value=".1,.2,.4,.6,.8"/>
-			<passive_effect name="TrapDoorTriggerDelay" operation="base_add" level="5" value="2"/>
-			<passive_effect name="LandMineTriggerDelay" operation="base_add" level="5" value="2"/>
-			<passive_effect name="TrapIncomingDamage" operation="perc_add" level="5" value="-.5"/>
-			<passive_effect name="BlockPickup" operation="base_set" level="3" value="1" tags="Mine" />
+			<passive_effect name="ScavengingTime" operation="perc_subtract" level="1,2,3" value=".2,.6,.8"/> <!-- .1,.2,.4,.6,.8 -->
+			<passive_effect name="TrapDoorTriggerDelay" operation="base_add" level="3" value="2"/>
+			<passive_effect name="LandMineTriggerDelay" operation="base_add" level="3" value="2"/>
+			<passive_effect name="TrapIncomingDamage" operation="perc_add" level="3" value="-.5"/>
+			<passive_effect name="BlockPickup" operation="base_set" level="2" value="1" tags="Mine" />
 
 		</effect_group>
 	</perk>

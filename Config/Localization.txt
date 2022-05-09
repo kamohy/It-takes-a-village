@@ -7,6 +7,10 @@ loadingTipSmelterITAV,UI,Loading Screen,x,,"Many crafting recipes require large 
 loadingTipSmelterITAV_title,UI,Loading Screen,x,,"Got a Smelter friend?"
 loadingTipCustomThingsITAV,UI,Loading Screen,x,,"Search for 'deco' or 'itav' in the crafting window to find custom things!"
 loadingTipCustomThingsITAV_title,UI,Loading Screen,x,,"More stuff"
+loadingTipShopLiftingITAV,UI,Loading Screen,x,,"You can pick up your Shop after placing it, perhaps to live the life of a travelling salesperson?"
+loadingTipShopLiftingITAV_title,UI,Loading Screen,x,,"Shop Lifting"
+loadingTipPricePaddingITAV,UI,Loading Screen,x,,"If you are low on money, you can manually increase the sales prices of the items in your shop."
+loadingTipPricePaddingITAV_title,UI,Loading Screen,x,,"Padding the Prices"
 
 loadingTipCraftingBetterQL,UI,Loading Screen,x,,At the start of the game you can only craft quality 1 tools and items such as a stone axe. The quality of an item is displayed at the bottom of its icon. To craft a higher quality item increase the perk it is governed under such as Miner 69’er for the stone axe.
 loadingTipCraftingBetterQL_title,UI,Loading Screen,x,,How do I craft better tools?
@@ -75,6 +79,8 @@ bookDecoratorITAVDesc,Items,perk  book,,,"Decorators can craft invisible dyes as
 
 ShopStoreVendingCashRegisterPlayerITAV,blocks,Container,,,"Player Owned Store"
 ShopStoreVendingCashRegisterPlayerGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Casino Coins. Buy the goods you need from other Player Owned Stores to support them and the community!  Store is indestructible unless falling."
+xuiVendingWithOwner,UI,Menu,,,Player Store, Owner: {0}
+
 
 lblContextActionAssemble,blocks,,,,"Assemble"
 lblContextActionPrepare,blocks,,,,"Prepare"
@@ -94,9 +100,11 @@ workstationT2ITAVTip_title,Journal Tip,,,,"Advanced Workstations"
 workstationT2ITAVTip,Journal Tip,,,,"The most advanced recipes require a profession specific advanced workstation to craft. Advanced workstations have a higher heat signature than basic workstations."
 
 modDyeInvisibleITAV,item_modifiers,mod,,,"Dye: Invisible"
+modDyeHotPinkITAV,item_modifiers,mod,,,"Dye: Hot Pink"
+modDyeOrangeITAV,item_modifiers,mod,,,"Dye: Orange"
 modDyeTealITAV,item_modifiers,mod,,,"Dye: Teal"
 modDyePineITAV,item_modifiers,mod,,,"Dye: Pine Green"
-modDyePineITAV,item_modifiers,mod,,,"Dye: Hunter Green"
+modDyeHunterGreenITAV,item_modifiers,mod,,,"Dye: Hunter Green"
 modApparelGeneralITAVDesc,item_modifiers,mod,,,"This cosmetic mod includes double pockets!"
 modApparelHazmatMaskITAV,item_modifiers,mod,,,"Hazmat Mask Mod"
 modApparelHazmatBootsITAV,item_modifiers,mod,,,"Hazmat Boots Mod"
@@ -189,7 +197,10 @@ window03WoodITAV,blocks,,,,"Wood Window"
 window03Wood,blocks,,,,"Wood Window Centered"
 window03WoodBulletproofCenterITAV,blocks,,,,"Bulletproof Window Centered"
 window03WoodBulletproofITAV,blocks,,,,"Bulletproof Window"
+houseFrontDoor1_v1BulletProofITAV,blocks,,,,"Bulletproof Door White"
+houseFrontDoor2_v1BulletProofITAV,blocks,,,,"Bulletproof Door Brown"
 window03WoodBulletproofITAVDesc,blocks,,,,"This window takes 3000 dmg before it breaks. Cannot be picked up!"
+doorBulletproofITAVDesc,blocks,,,,"This door takes 3000 dmg before it breaks. Cannot be picked up!"
 
 decoCookingPotITAV,blocks,,,,"Decorative Cooking Pot"
 decoStorageITAVDesc,blocks,,,,"Decorative storage item."
@@ -378,11 +389,11 @@ allowedProfessionsLevelExceededITAV,,,,,Not yet allowed to learn another profess
 perkSmelterITAVDesc,progression,perk Pro,,,"Smelt and craft items in the forge."
 perkSmelterITAVName,progression,perk Pro,,,Smelter
 perkSmelterITAVRank1Desc,progression,perk Pro,,,Iron Fist
-perkSmelterITAVRank1LongDesc,progression,perk Pro,,,"Forge iron and other metal objects. Craft forge, workstation, cementmixer and chemistry station. Unlocks crafting of Military Fibers, generator banks, electrical relays, switches, pressure plates, motion sensors and lights."
-perkSmelterITAVRank2Desc,progression,perk,,,Serious Steel
-perkSmelterITAVRank2LongDesc,progression,perk Pro,,,"Unlocks crafting of the crucible, forged steel, battery bank, nailgun and various powered doors."
-perkSmelterITAVRank3Desc,progression,perk,,,Electrician
-perkSmelterITAVRank3LongDesc,progression,perk Pro,,,"You are now an electrician. Unlocks crafting of Military Fibers, generator banks, electrical relays, switches, pressure plates, motion sensors and various lights. All forge recipes cost 10% less. Crafting electrical devices cost 15% less."
+perkSmelterITAVRank1LongDesc,progression,perk Pro,,,"Forge iron and other metal objects. Craft forge, workbench, cementmixer, chemistry station and military fibers."
+perkSmelterITAVRank2Desc,progression,perk,,,Electrician
+perkSmelterITAVRank2LongDesc,progression,perk Pro,,,"Unlocks crafting of the crucible, bellows, anvil, generator banks, electrical relays, switches, pressure plates, motion sensors, wireless fusebox and various lights."
+perkSmelterITAVRank3Desc,progression,perk,,,Serious Steel
+perkSmelterITAVRank3LongDesc,progression,perk Pro,,,"Unlocks crafting of forged steel, battery bank, nailgun and various powered doors."
 perkSmelterITAVRank4Desc,progression,perk Pro,,,Artisan
 perkSmelterITAVRank4LongDesc,progression,perk Pro,,,"Unlocks crafting of the crucible, forged steel, battery bank, nailgun and various powered doors."
 perkSmelterITAVRank5Desc,progression,perk Pro,,,Master
@@ -391,9 +402,9 @@ perkSmelterITAVRank5LongDesc,progression,perk Pro,,,"Unlocks crafting of the cru
 perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster. Perform high-end crafts at the Advanced Miner's Table."
 perkMinerITAVName,progression,perk Pro,,,Miner
 perkMinerITAVRank1Desc,progression,perk Pro,,,"Woodpecker"
-perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 poor tools, increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger. Harvest 20% more from trees, and 40% more from ore, stone and terrain blocks. \nUnlocks all iron tools like pickaxes."
+perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 poor tools, increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger. Harvest 20% more from trees, and 40% more from ore, stone and terrain blocks. \nUnlocks all iron tools like pickaxes. Unlocks crafting of Steel Tool Parts from Tool Part Fragments."
 perkMinerITAVRank2Desc,progression,perk,,,"Choppy Chop"
-perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Craft quality 3 fair tools, increase tool damage by 20% and block damage by 60% with any axe, pick, shovel, chainsaw or auger. Harvest 40% more from trees, and 80% more from ore, stone and terrain blocks. Unlocks Advanced Miner's Table."
+perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Craft quality 3 fair tools, increase tool damage by 20% and block damage by 60% with any axe, pick, shovel, chainsaw or auger. Harvest 40% more from trees, and 80% more from ore, stone and terrain blocks. Unlocks Advanced Miner's Table. Unlocks crafting of Motorized Tool Parts from Tool Part Fragments."
 perkMinerITAVRank3Desc,progression,perk,,,"Bang That Rock"
 perkMinerITAVRank3LongDesc,progression,perk Pro,,,"Craft quality 4 good tools, increase tool damage by 30% and block damage by 90% with any axe, pick, shovel, chainsaw or auger. Harvest 60% more from trees, and 120% more from ore, stone and terrain blocks."
 perkMinerITAVRank4Desc,progression,perk Pro,,,"Iron Fist"
@@ -432,15 +443,11 @@ perkArmorerRank5LongDescITAV,progression,perk Pro,,,"You are now a master armore
 perkFarmerITAVDesc,progression,perk Pro,,,"Specialize in harvesting more crops and crafting seeds. Gain the ability to track animals and increase damage to and harvest from them. Meat can be efficiently prepared in the Farmer's Sink workbench."
 perkFarmerITAVName,progression,perk Pro,,,Farmer
 perkFarmerITAVRank1Desc,progression,perk Pro,,,Forager
-perkFarmerITAVRank1LongDesc,progression,perk Pro,,,"Double the harvest of wild or planted crops. Craft seeds for flowers and decorative plants like goldenrod, chrysanthemum, aloe, and yucca.\nFarm plots cost 30% less to craft. Harvest 20% more resources from animals. Crouch to track rabbits, snakes and chickens. Deal 25% more damage to animals. Unlocks the Farmer's Sink workbench."
+perkFarmerITAVRank1LongDesc,progression,perk Pro,,,"Double the harvest of wild or planted crops, and gain a 50% chance of receiving a seed when harvesting your crops. Craft seeds for flowers and decorative plants like goldenrod, chrysanthemum, aloe, and yucca.\nFarm plots cost 30% less to craft. Harvest 20% more resources from animals. Crouch to track rabbits, snakes and chickens. Deal 25% more damage to animals. Unlocks the Farmer's Sink workbench."
 perkFarmerITAVRank2Desc,progression,perk Pro,,,Hunter
-perkFarmerITAVRank2LongDesc,progression,perk Pro,,,"You can craft seeds for berries and vegetables.\n50% chance to harvest 1 additional crop.\nFarm plots cost 50% less to craft. Crouch to track deers, boars, wolves and coyotes. Harvest 60% more resources from animals."
+perkFarmerITAVRank2LongDesc,progression,perk Pro,,,"You can craft seeds for berries and vegetables.\n100% chance of receiving a seed when harvesting you crops, and 80% chance to harvest 1 additional crop.\nFarm plots cost 50% less to craft. Crouch to track deers, boars, wolves and coyotes. Harvest 60% more resources from animals."
 perkFarmerITAVRank3Desc,progression,perk Pro,,,Living off the Land
 perkFarmerITAVRank3LongDesc,progression,perk Pro,,,"Triple the harvest of wild or planted crops. Crouch to track mountain lions and bears. Harvest 100% more resources from animals, and gain a run speed boost when fighting zombie bears."
-perkFarmerITAVRank4Desc,progression,perk Pro,,,Artisan
-perkFarmerITAVRank4LongDesc,progression,perk Pro,,,"???."
-perkFarmerITAVRank5Desc,progression,perk Pro,,,Master
-perkFarmerITAVRank5LongDesc,progression,perk Pro,,,"???."
 
 perkChemistITAVDesc,progression,perk Pro,,,"Specialize in crafting chemicals such as gunpowder, medicine, concrete mix... and paint. Perform high-end crafts at the Advanced Chemistry Station."
 perkChemistITAVName,progression,perk Pro,,,Chemist
@@ -460,7 +467,7 @@ perkRoboticsITAVName,progression,perk Pro,,,Robotics Inventor
 perkRoboticsITAVRank1Desc,progression,perk Pro,,,Science Projects
 perkRoboticsITAVRank1LongDesc,progression,perk Pro,,,"Craft poor quality 2 robots, deal 10% more damage, 30% faster fire rate and reload an extra 10 rounds. Robot active range is increased from 10 to 14 meters.\nYou can deploy multiple robots but only the closest will be active. \nUnlocks crafting of workbenches, Robotic Sledge, Generatorbank, Switch, trigger plates and wires, electric relays and electrical traps."
 perkRoboticsITAVRank2Desc,progression,perk Pro,,,Basic Robotics
-perkRoboticsITAVRank2LongDesc,progression,perk Pro,,,"You are taking your projects to the next level now. Craft fair quality 3 robots, deal 20% more damage, 60% faster fire rate and reload an extra 20 rounds. Robot active range is 15 meters."
+perkRoboticsITAVRank2LongDesc,progression,perk Pro,,,"You are taking your projects to the next level now. Craft fair quality 3 robots, deal 20% more damage, 60% faster fire rate and reload an extra 20 rounds. Robot active range is 15 meters. Unlocks crafting of Robotic Parts from Tool Part Fragments."
 perkRoboticsITAVRank3Desc,progression,perk Pro,,,Automated Weaponry
 perkRoboticsITAVRank3LongDesc,progression,perk Pro,,,"You have mastered the basics of automated weaponry. Craft good quality 4 robotics, deal 30% more damage, 90% faster fire rate and reload an extra 30 rounds. Robot active range is 16 meters. \nUnlocks crafting of Shotgun Auto Turret and Robotic Turret."
 perkRoboticsITAVRank4Desc,progression,perk Pro,,,Advanced Robotics
@@ -470,16 +477,16 @@ perkRoboticsITAVRank5LongDesc,progression,perk Pro,,,"You are now a top expert i
 
 perkRunnerITAVDesc,progression,perk Pro,,,"Craft those vehicles! Perform high-end crafts at the Advanced Mechanic's Table."
 perkRunnerITAVName,progression,perk Pro,,,Mechanic
-perkRunnerITAVRank1Desc,progression,perk Pro,,,Salvager
-perkRunnerITAVRank1LongDesc,progression,perk Pro,,,"Harvest 20% faster and recieve 20% more resources when harvesting with a wrench, ratchet or impact driver. \nUnlocks crafting of workbenches, Wrench, Lockpicks, Crushed Car wall, Wheels and Bicycle parts."
-perkRunnerITAVRank2Desc,progression,perk Pro,,,Bikes and Stuff
-perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Harvest 40% faster and recieve 40% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Baby Powerizer Boots, Baby Work Boots, Minibike parts, gas cans and quality 2 car batteries."
-perkRunnerITAVRank3Desc,progression,perk Pro,,,Motorbiker
-perkRunnerITAVRank3LongDesc,progression,perk Pro,,,"Can pick up mines. Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, oil, gas can bundle, quality 3 car batteries and Advanced Mechanic's Table."."
-perkRunnerITAVRank4Desc,progression,perk Pro,,,Better Boots
-perkRunnerITAVRank4LongDesc,progression,perk Pro,,,"Harvest 80% faster and recieve 80% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Powerizer Boots, Work Boots and quality 4 car batteries."
-perkRunnerITAVRank5Desc,progression,perk Pro,,,Limo out front
-perkRunnerITAVRank5LongDesc,progression,perk Pro,,,"Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower. Harvest 100% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of 4x4 truck parts and quality 5 car batteries."
+perkRunnerITAVRank1Desc,progression,perk Pro,,,Bikes and Stuff
+perkRunnerITAVRank1LongDesc,progression,perk Pro,,,"Harvest 20% faster and recieve 20% more resources when harvesting with a wrench, ratchet or impact driver. \nUnlocks crafting of workbenches, Wrench, Lockpicks, Crushed Car wall, Wheels, Bike parts, Baby Powerizer Boots, Baby Work Boots, Minibike parts, gas cans and quality 4 car batteries."
+perkRunnerITAVRank2Desc,progression,perk Pro,,,Motorbiker and Boots
+perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, Powerizer Boots, Work Boots, oil, gas can bundle, quality 5 car batteries and Advanced Mechanic's Table. Can pick up mines."
+perkRunnerITAVRank3Desc,progression,perk Pro,,,Limo out front
+perkRunnerITAVRank3LongDesc,progression,perk Pro,,,"Harvest 80% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of  4x4 truck parts and quality 6 car batteries. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower."
+perkRunnerITAVRank4Desc,progression,perk Pro,,,Level 4
+perkRunnerITAVRank4LongDesc,progression,perk Pro,,,""
+perkRunnerITAVRank5Desc,progression,perk Pro,,,Level 5
+perkRunnerITAVRank5LongDesc,progression,perk Pro,,,""
 
 perkDecoratorITAVDesc,progression,perk Pro,,,"Spice up your apocalypse! Decorative items are crafted in a Decorator's Table Saw."
 perkDecoratorITAVName,progression,perk Pro,,,Decorator
@@ -505,9 +512,11 @@ readyForNextProfessionTooltip,progression,,,,"Crafting: Profession Book availabl
 tutorialTipITAV_title,Journal Tip,,,,"It Takes A Village"
 tutorialTipITAV,Journal Tip,,,,"You look rough,\n\nIf you can find the other survivors, you can combine your different strengths to better survive the apocalypse. Press Tab to open the crafting menu and your backpack. \n\nIt Takes A Village!"
 weaponPartsAssemblyTipITAV_title, Journal Tip,,,,"Weapon Part Fragments"
-weaponPartsAssemblyTipITAV,Journal Tip,,,,"The Armorer can assemble weapon parts out of Fragments, or craft 25 Fragments out of a single weapon part."
+weaponPartsAssemblyTipITAV,Journal Tip,,,,"The Armorer can assemble weapon parts out of Fragments. Weapon Parts scrap into 25 Weapon Fragments."
 weaponPartFragmentITAV,items,,,,"Weapon Part Fragment"
-weaponPartFragmentITAVGroupDesc,items,,,,"The Armorer can assemble any kind of weapon part out of Weapon Part Fragments, or craft 25 Fragments out of a single weapon part."
+weaponPartFragmentITAVGroupDesc,items,,,,"The Armorer can assemble any kind of weapon part out of Weapon Part Fragments. Weapon Parts scrap into 25 Weapon Fragments."
+toolPartFragmentITAV,items,,,,"Tool Part Fragment"
+toolPartFragmentITAVGroupDesc,items,,,,"The Robotics Inventor can assemble robotics parts out of Tool Part Fragments. Steel Tool Parts and Motor Tool Parts scrap into 25 Tool Fragments."
 
 resourceRepairKitDesc,items,Item,,,"Repair Kits are used to repair all tools and worn items, vehicles, turrets, drones and more."
 
@@ -570,6 +579,7 @@ qb_MyFourthProfessionITAV_desc,Items,,,,"Reading this book allows you to learn y
 qb_MyNextProfessionITAV,Items,,,,"My Next Profession"
 qb_MyNextProfessionITAV_desc,Items,,,,"Reading this book allows you to learn your an additional Profession! Choose your desired Profession from the quest rewards. Max out the profession to open the ability of learning yet another one."
 
+apparelDivingMaskITAV,Items,,,,"Diving Mask"
 
 noteDadJoke01ITAV,,,,,"Don't read it"
 noteDadJoke01ITAVDesc,,,,,"Why do bees have sticky hair? \n\nBecause they use a honeycomb."

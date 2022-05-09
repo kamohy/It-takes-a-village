@@ -6,6 +6,8 @@
 		<tip key="loadingTipProfessionsITAV" />
 		<tip key="loadingTipSmelterITAV" />
 		<tip key="loadingTipCustomThingsITAV" />
+		<tip key="loadingTipShopLiftingITAV" />
+		<tip key="loadingTipPricePaddingITAV" />
 		<tip key="loadingTipStoneAxe" />
 		<!--<tip key="loadingTipHarvestingResources" />
 		<tip key="loadingTipDistraction" />
@@ -14,7 +16,7 @@
 		<tip key="loadingTipArmor" />
 		<!--<tip key="loadingTipBandages" /> -->
 		<tip key="loadingTipJournalEntries" />
-		<tip key="loadingTipQuestSharing" />
+		<!-- <tip key="loadingTipQuestSharing" /> -->
 		<tip key="loadingTipWhatIsItGoodFor" />
 		<!--<tip key="loadingTipWorkstations" />
 		<tip key="loadingTipUnlockingRecipes" />

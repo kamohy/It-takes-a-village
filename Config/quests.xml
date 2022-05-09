@@ -73,8 +73,6 @@
 <setattribute xpath="//quest[@id='quest_tier5complete']/reward[@id='casinoCoin']" name="value">400</setattribute>
 
 
- <!-- Remove/replace treasure map rewards? -->
-
 
 <remove xpath="/quests/quest[@id='quest_BasicSurvival1']/action[@type='ShowTip']"/>
 

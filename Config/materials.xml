@@ -1,14 +1,30 @@
 <configs>
 
-<!-- <setattribute xpath="//material[@id='MBowCrossbowParts']/property[@name='forge_category']" name="value">weaponPartFragmentITAV</setattribute> -->
+
 <append xpath="/materials">
 
-<!-- <material id="MweaponPartFragmentITAV">
+<material id="MweaponPartFragmentITAV">
 	<property name="damage_category" value="metal"/>
 	<property name="surface_category" value="metal"/>
 	<property name="forge_category" value="weaponPartFragmentITAV"/>
-	<property name="Experience" value="2"/>
-</material>-->
+	<property name="Experience" value="1"/>
+</material>
+
+
+<material id="MtoolPartFragmentITAV">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="toolPartFragmentITAV"/>
+	<property name="Experience" value="1"/>
+</material>
+
+<!--
+<material id="MglassJar">
+<property name="damage_category" value="glass"/>
+<property name="surface_category" value="glass"/>
+<property name="forge_category" value="drinkJarEmpty"/>
+<property name="Experience" value="1"/>
+</material> -->
 
 </append>
 </configs>

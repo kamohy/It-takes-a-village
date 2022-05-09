@@ -152,7 +152,10 @@
 
 <!-- Tweaking loot group contents -->
 <insertAfter xpath="//item[@name='foodCanTuna']"><item name="foodSrirachaKetchupSpiceITAV"/></insertAfter>
-
+<remove xpath="//lootgroup[@name='groupIngredientsCommon']/item[@name='foodCornMeal']"/> 
+<remove xpath="//lootgroup[@name='groupIngredientsCommon']/item[@name='resourceCropCoffeeBeans']"/> 
+<remove xpath="//lootgroup[@name='groupIngredientsCommon']/item[@name='resourceCropGoldenrodPlant']"/>
+<append xpath="//lootgroup[@name='groupIngredientsCommon']"><item name="plantedPotato1" count="1,4" /></append>
 <setattribute xpath="//lootgroup[@name='groupCraftingUncommon']/item[@name='resourceGunPowder']" name="count">10,100</setattribute>
 
 <remove xpath="//item[@name='gunHandgunT1Pistol']" />
@@ -222,6 +225,10 @@ makes the looter more financially self sustained than if they had to buy all the
 <setattribute xpath="//item[@name='foodCanSoup']" name="name">foodCanLamb</setattribute>
 <setattribute xpath="//item[@name='foodCanChicken']" name="name">foodCanBeef</setattribute>
 <setattribute xpath="//item[@name='foodCanStock']" name="name">foodCanSham</setattribute>
+
+<setattribute xpath="//lootgroup[@name='groupOven01']/item[@name='toolCookingPot']" name="loot_prob_template">medLow</setattribute>
+
+
 
 <remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']">
@@ -544,7 +551,7 @@ makes the looter more financially self sustained than if they had to buy all the
 <remove xpath="//item[@name='meleeToolAxeT3Chainsaw']" />
 <remove xpath="//item[@name='meleeToolPickT3Auger']" />
 
-<append xpath="//lootgroup[@name='dumpster']">
+<append xpath="//lootcontainer[@name='dumpster']">
 	 <item name="resourceForgedSteel" loot_prob_template="medLow" count="2,3" />
 	 <item name="thrownAmmoMolotovCocktail" loot_prob_template="med" /> 
 </append>
@@ -740,8 +747,11 @@ makes the looter more financially self sustained than if they had to buy all the
 </append>
 
 
-<!-- Removing/Replacing GyroCopter -->
+<!-- Removing/Replacing GyroCopter, Gold and Silver nuggets -->
 <remove xpath="//lootgroup[@name='groupQuestGyrocopterParts']" />
 <remove xpath="//lootcontainer[@name='vehicleGyrocopter']"/>
+
+<remove xpath="//item[@name='resourceGoldNugget']"/>
+<remove xpath="//item[@name='resourceSilverNugget']"/>
 
 </configs>
