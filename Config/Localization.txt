@@ -34,7 +34,7 @@ loadingTipUnlockingRecipes,UI,Loading Screen,x,,If a recipe shows a lock item th
 loadingTipUnlockingRecipes_title,UI,Loading Screen,x,,Unlocking Recipes
 
 
-schematicGeneralGroupDesc,items,Book,,,Reading the schematic will teach you how to craft this item. The Armorer is the only one who can make good quality weapons and armor. \nSome items are crafted with parts and scrap to the same parts.\nAn example are pump shotguns that scrap to pump shotgun parts and are crafted using those parts.
+schematicGeneralGroupDesc,items,Book,,,Reading the schematic will teach you how to craft this item. The Armorer is the only one who can make good quality weapons and armor. \nSome items are crafted with parts, and parts can be crafted with fragments.
 
 starterBundleITAV,items,,,,"Hefty bag"
 
@@ -52,9 +52,9 @@ statStaminaReductionITAV,ui_display,Item stat,,,"Stamina Cost Of Jumping"
 
 attNameITAV,progression,Attribute,,,"Attribute: Passion"
 attitav,progression,Attribute,,,Passion
-attDescITAV,progression,Attribute,,,"Learn a profession to be able to support and contribute to your village."
+attDescITAV,progression,Attribute,,,"Learn a profession to support and contribute to your village."
 bookSmelterITAV,Items,perk  book,,,"Profession: Smelter"
-bookSmelterITAVDesc,Items,perk  book,,,"Smelters learn how to make the forge, the anvil and later on the crucible. Only Smelters can craft Forged Iron and Forged Steel, amongst other things."
+bookSmelterITAVDesc,Items,perk  book,,,"Smelters learn how to make the forge, the anvil, bellows and the crucible. Only Smelters can craft Forged Iron and Forged Steel, amongst other things."
 bookMinerITAV,Items,perk  book,,,"Profession: Miner"
 bookMinerITAVDesc,progression,perk  book,,,"Miners are efficient at gathering materials. They harvest more resources from trees and minerals."
 bookHunterITAV,Items,perk  book,,,"Profession: Hunter"
@@ -79,7 +79,7 @@ bookDecoratorITAVDesc,Items,perk  book,,,"Decorators can craft invisible dyes as
 
 ShopStoreVendingCashRegisterPlayerITAV,blocks,Container,,,"Player Owned Store"
 ShopStoreVendingCashRegisterPlayerGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Casino Coins. Buy the goods you need from other Player Owned Stores to support them and the community!  Store is indestructible unless falling."
-xuiVendingWithOwner,UI,Menu,,,Player Store, Owner: {0}
+xuiVendingWithOwner,UI,Menu,,,"{0}'s Store"
 
 
 lblContextActionAssemble,blocks,,,,"Assemble"

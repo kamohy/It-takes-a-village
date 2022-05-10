@@ -445,10 +445,24 @@ makes the looter more financially self sustained than if they had to buy all the
 </append>
 
 
+
+<append xpath="//lootgroup[@name='groupReinforcedChestT1']">
+	<item name="resourceGunPowder" count="200" />
+</append>
+
+<append xpath="//lootgroup[@name='groupReinforcedChestT2']">
+	<item name="resourceGunPowder" count="350" />
+</append>
+
 <!-- <remove xpath="//lootgroup[@name='groupReinforcedChestT3_03']/item" /> already empty -->
 <append xpath="/lootcontainers/lootgroup[@name='groupReinforcedChestT3_03']">
 	<item group="schematicsWeaponsArmorT1" loot_prob_template="med" force_prob="true"/>
 </append>
+
+<append xpath="//lootgroup[@name='groupReinforcedChestT3']">
+	<item name="resourceGunPowder" count="500" />
+</append>
+
 
 <remove xpath="//lootgroup[@name='groupHardenedChestT4_01']/item" />
 <append xpath="//lootgroup[@name='groupHardenedChestT4_01']">
@@ -466,6 +480,10 @@ makes the looter more financially self sustained than if they had to buy all the
 	<item name="resourceRawDiamond" count="1" loot_prob_template="medHigh"/>
 	<item group="schematicsWeaponsArmorT1" loot_prob_template="med" force_prob="true"/>
 	<item group="schematicsWeaponsArmorT2" loot_prob_template="low" force_prob="true"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupHardenedChestT4']">
+	<item name="resourceGunPowder" count="900" />
 </append>
 
 <remove xpath="//lootgroup[@name='groupHardenedChestT5_01']/item" />
@@ -488,6 +506,10 @@ makes the looter more financially self sustained than if they had to buy all the
 
 <remove xpath="//lootgroup[@name='groupHardenedChestT5']/item[@group='groupHardenedChestT5_08']" />
 <setattribute xpath="//lootgroup[@name='groupHardenedChestT5']/item[@group='groupHardenedChestT5_01']" name="count">1</setattribute>
+
+<append xpath="//lootgroup[@name='groupHardenedChestT5']">
+	<item name="resourceGunPowder" count="1200" />
+</append>
 
 <!-- Removing sledgehammer from tool loot groups despite it being good tool for destroying things -->
 <remove xpath="//lootgroup[@name='groupToolsT1']/item[@name='meleeWpnSledgeT1IronSledgehammer']" />

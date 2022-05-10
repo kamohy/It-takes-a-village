@@ -13,18 +13,9 @@
 <remove xpath="//item[(contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter'))]"/>
 
 
-<!-- To make weapon parts scrappable into weaponPartFragmentITAV -->
-<!-- <append xpath="/items">
-	<item name="unit_weaponPartFragmentITAV">
-		<property name="Extends" value="unit_iron" />
-		<property name="CustomIcon" value="garbage_decor3" />
-		<property name="Material" value="MweaponPartFragmentITAV" />
-		<property name="CreativeMode" value="None" />
-	</item> 
-</append> -->
-
 <!-- Increase stacksizes of expected store items -->
-<setattribute xpath="//item[@name='casinoCoin']/property[@name='Stacknumber']" name="value">999999</setattribute>
+<setattribute xpath="//item[@name='casinoCoin']/property[@name='Stacknumber']" name="value">100300</setattribute>
+<setattribute xpath="//item[@name='resourceGunPowder']/property[@name='Stacknumber']" name="value">2000</setattribute>
 <setattribute xpath="//item[(starts-with(@name, 'drink') or starts-with(@name, 'food'))]/property[@name='Stacknumber']" name="value">40</setattribute>
 
 <setattribute xpath="//item[@name='drinkJarBoiledWater' or @name='drinkJarEmpty' or @name='drinkCanEmpty' or @name='drinkJarRiverWater']/property[@name='Stacknumber']" name="value">200</setattribute>
@@ -1198,42 +1189,14 @@
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="DegradationMax" operation="base_set" value="9999" />
 		<passive_effect name="DegradationPerUse" operation="base_set" value="0" />
-		<passive_effect name="WalkSpeed" operation="perc_add" value=".9" tags="swimming"/>
-		<passive_effect name="RunSpeed" operation="perc_add" value=".9" tags="swimming"/>
+		<!-- <passive_effect name="WalkSpeed" operation="perc_add" value=".9" tags="swimming"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value=".9" tags="swimming"/> -->
 		<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffUnderWaterBreathingITAV"/>
 		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffUnderWaterBreathingITAV"/>
 	</effect_group>
 	<property name="EconomicValue" value="1474" />
 	<property name="EconomicBundleSize" value="1" />
 </item>
-
-
-<!-- Test Swim speed -->
-
-<!-- <item name="drinkCanMegaCrushSwimITAV">
-	<property name="Extends" value="drinkJarRedTea"/>
-	<property name="DisplayType" value="waterMegaCrush"/>
-	<property name="EconomicValue" value="240"/>
-	<property class="Action0">
-	</property>
-
-	<effect_group tiered="false" name="Drink Tier Found">
-		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60"/>
-			<display_value name="dStaminaRegen" value=".15"/>
-			<display_value name="dRunSpeed" value=".5"/>
-			<display_value name="dDuration" value="120"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushSwimITAVDuration" operation="add" value="123"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushSwimITAVDuration" operation="set" value="363">
-				<requirement name="CVarCompare" cvar="$buffMegaCrushSwimITAVDuration" operation="GT" value="363"/></triggered_effect>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffMegaCrushSwimITAV"/>
-	</effect_group>
-
-	<effect_group tiered="false">
-		<requirement name="HasBuff" buff="buffIsOnFire"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
-	</effect_group>
-</item> -->
 
 </append>
 
