@@ -18,6 +18,9 @@
 <remove xpath="//drop[@name='resourceGoldNugget']"/>
 <remove xpath="//drop[@name='resourceSilverNugget']"/>
 
+<setattribute xpath="//block[@name='wallTorchLightPlayer']/property[@name='HeatMapStrength']" name="value">0</setattribute>
+<setattribute xpath="//block[@name='candleWallLightPlayer']/property[@name='HeatMapStrength']" name="value">0</setattribute>
+
 <setattribute xpath="//block[contains(@name, 'chimney')]/property[@name='CreativeMode']" name="value">Dev</setattribute>
 
 <!-- Attempting to reduce oreWoodHarvest harvest when player is not Miner. Must be countered by increasing the perc_add to oreWoodHarvest for Miner in progression.xml! -->
@@ -1645,7 +1648,7 @@
 	<property name="PassThroughDamage" value="true"/>
 	<property name="LightOpacity" value="1"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Doors/house_frontDoor1_v1Prefab"/>
+	<property name="Model" value="Entities/Doors/house_frontDoor2_v1Prefab"/>
 	<property name="Place" value="Door"/> <!-- build restriction -->
 	<property name="ModelOffset" value="0,0,0"/>
 	<property name="DisplayType" value="blockMulti"/>
@@ -1673,6 +1676,84 @@
 	<property name="SortOrder2" value="0140"/>
 </block>
 
+
+<block name="commercialDoor1_v1BulletProofITAV">
+	<property name="DescriptionKey" value="doorBulletproofITAVDesc"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="commercialDoor1_v1"/>
+	<property name="CustomIconTint" value="B5E8F7" />
+	<property name="Class" value="DoorSecure"/>
+	<property name="TintColor" value="FFFFFF"/>
+	<property name="Material" value="MglassBulletproof"/> <!-- Mmetal -->
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/commercial_door_1_v1Prefab"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="MeshDamage" value="
+		Door/Door_DMG0, 1000,
+		Door/Door_DMG1, 750,
+		Door/Door_DMG2, 500,
+		Door/Door_DMG3, 250,
+		Door/Door_DMG4, 40
+		"/>
+	<property name="OpenSound" value="door_metal_open"/>
+	<property name="CloseSound" value="door_metal_close"/>
+	<property class="RepairItems">
+		<property name="glassBulletproofBlockVariantHelper" value="1"/>
+	</property>
+	<property name="EconomicValue" value="620"/>
+	<property name="FilterTags" value="MC_building,SC_doors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0140"/>
+</block>
+
+<block name="commercialDoor2_v1BulletProofITAV">
+	<property name="DescriptionKey" value="doorBulletproofITAVDesc"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="commercialDoor2_v1"/>
+	<property name="CustomIconTint" value="B5E8F7" />
+	<property name="Class" value="DoorSecure"/>
+	<property name="TintColor" value="FFFFFF"/>
+	<property name="Material" value="MglassBulletproof"/> <!-- Mmetal -->
+	<property name="PassThroughDamage" value="true"/>
+	<property name="LightOpacity" value="1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Doors/commercial_door_2_v1Prefab"/>
+	<property name="Place" value="Door"/> <!-- build restriction -->
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="ImposterExchange" value="imposterBlock" param1="25"/>
+	<property name="Tags" value="door"/>
+	<property name="BlockTag" value="Door"/>
+	<property name="PlaceEverywhere" value="true"/>
+	<property name="AllowAllRotations" value="true"/> <!-- enables the 45 degree rotations -->
+	<property name="MeshDamage" value="
+		Door/Door_DMG0, 1000,
+		Door/Door_DMG1, 750,
+		Door/Door_DMG2, 500,
+		Door/Door_DMG3, 250,
+		Door/Door_DMG4, 40
+		"/>
+	<property name="OpenSound" value="door_metal_open"/>
+	<property name="CloseSound" value="door_metal_close"/>
+	<property class="RepairItems">
+		<property name="glassBulletproofBlockVariantHelper" value="1"/>
+	</property>
+	<property name="EconomicValue" value="620"/>
+	<property name="FilterTags" value="MC_building,SC_doors"/>
+	<property name="SortOrder1" value="7060"/>
+	<property name="SortOrder2" value="0140"/>
+</block>
 
 </append>
 

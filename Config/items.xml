@@ -1168,6 +1168,7 @@
 
 <item name="apparelDivingMaskITAV">
 	<property name="Extends" value="apparelHazmatMaster"/>
+	<property name="DescriptionKey" value="apparelUnderwaterBreathingDivingMaskITAVDesc"/>
 	<property name="CustomIcon" value="apparelGasMask" />
 	<property name="Tags" value="head,clothing,canHaveCosmetic,noMods"/>
 	<property name="EquipSlot" value="Head"/>

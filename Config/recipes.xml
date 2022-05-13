@@ -132,6 +132,16 @@
 			<ingredient name="glassBulletproofBlockVariantHelper" count="2"/>
 		</recipe>
 		
+		<recipe name="commercialDoor1_v1BulletProofITAV" count="1" craft_area="workbench" craft_time="4"> 
+			<ingredient name="resourceForgedIron" count="20"/>
+			<ingredient name="glassBulletproofBlockVariantHelper" count="2"/>
+		</recipe>
+		
+		<recipe name="commercialDoor2_v1BulletProofITAV" count="1" craft_area="workbench" craft_time="4"> 
+			<ingredient name="resourceForgedIron" count="20"/>
+			<ingredient name="glassBulletproofBlockVariantHelper" count="2"/>
+		</recipe>
+		
 		<recipe name="campfireDecoITAV" count="1" craft_time="10" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV" >   
 			<ingredient name="resourceWood" count="8" />
 		</recipe>	
