@@ -7,8 +7,6 @@
 	<action class="AddBuff">
 		<property name="phase" value="1" />
 		<property name="buff_name" value="ITAV_start" param1="buffname" />
-		<!-- <property name="alt_vision_buff_name" value="twitch_buffVisionAlt" />
-		<property name="target_group" value="party" /> -->
 	</action>
 </append>
 

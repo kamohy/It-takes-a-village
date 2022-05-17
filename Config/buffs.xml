@@ -10,14 +10,12 @@
 <setattribute xpath="//requirement[@progression_name='perkAnimalTracker']" name="progression_name">perkFarmerITAV</setattribute>
 
 <!-- Moving armor related benefits from the armor perks to the ITAV Attribute -->
-
 <!-- <setattribute xpath="buffs/buff[@name='buffStatusCheck02']/effect_group/requirements/requirement([@name='ProgressionLevel'] and [@progression_name='perkLightArmor'] and [@operation='GT'] and [@value='0'])" name="value">1</setattribute> If we want to let armor related buffs occur at higher levels of ITAV Attribute -->
 <setattribute xpath="//requirement[(@name='ProgressionLevel' and @progression_name='perkLightArmor')]" name="progression_name">attITAV</setattribute>
 <setattribute xpath="//requirement[(@name='ProgressionLevel' and @progression_name='perkHeavyArmor')]" name="progression_name">attITAV</setattribute>
 <setattribute xpath="//requirement[(@name='ProgressionLevel' and @progression_name='attITAV' and @value='4')]" name="operation">GTE</setattribute>
 
 <!-- Moving the healing effect buff from physician to the ITAV Attribute -->
-
 <!-- see <buff name="buffPerkAbilityUpdate"> for cvar based ability changes -->	
 <setattribute xpath="//buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect/requirement[(@progression_name='perkPhysician' and @value='1')]" name="value">5</setattribute>
 <setattribute xpath="//buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect/requirement[(@progression_name='perkPhysician' and @value='2')]" name="value">6</setattribute>
@@ -27,7 +25,7 @@
 <setattribute xpath="//buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect/requirement[@progression_name='perkPhysician']" name="progression_name">attITAV</setattribute>
 
 
-<!-- Setting buff strength on Baby Rocket boots -->
+<!-- Setting buff strength on Baby Powerizer boots -->
 <setattribute xpath="//buff[@name='buffJumpJetsAirborne']/effect_group/passive_effect" name="value">0.85</setattribute> <!-- 2.35 -->
 
 <append xpath="/buffs">
@@ -41,42 +39,13 @@
 		</effect_group>
 	</buff>
 
-
 	<buff name="buffUnderWaterBreathingITAV" hidden="false" icon="ui_game_symbol_oxygen" remove_on_death="false">
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDrowning01" />
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDrowning02" />
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDrowning03" />
 		</effect_group>
-	</buff>
-	
-	
-	
-	
-	
-	<!-- <buff name="buffMegaCrushSwimITAV" name_key="buffMegaCrushName" description_key="buffMegaCrushDesc" tooltip_key="buffMegaCrushTooltip" icon="ui_game_symbol_pills">
-		<stack_type value="replace"/><duration value="0"/>
-		<display_value value=".buffMegaCrushDisplay"/><display_value_format value="time"/>
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="subtract" value="@$MetabolismDuration"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffMegaCrushDisplay" operation="set" value="@$buffMegaCrushSwimITAVDuration"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffMegaCrushDisplay" operation="divide" value="@$MetabolismDuration"/>
-		</effect_group>
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffMegaCrushSwimITAV">
-				<requirement name="CVarCompare" cvar="$buffMegaCrushSwimITAVDuration" operation="LTE" value="0"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffMegaCrushDisplay" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="set" value="0"/>
-		</effect_group>
-
-		<effect_group>
-			<passive_effect name="RunSpeed" operation="perc_add" value=".5" tags="swimming"/>
-			<passive_effect name="WaterLossPerStaminaPointGained" operation="perc_add" value="1.2"/> 
-
-		</effect_group>
-	</buff> -->
-	
+	</buff>	
 </append>
 
 <append xpath="//buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@buff='buffDrowning01']">

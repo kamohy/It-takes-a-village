@@ -24,11 +24,8 @@
 		
 		<!-- Player Owned Store  -->
 		<recipe name="ShopStoreVendingCashRegisterPlayerITAV" count="1" craft_time="3">
-			<ingredient name="resourceBrokenGlass" count="1" />
 			<ingredient name="resourceDuctTape" count="1" />
-			<ingredient name="resourceRockSmall" count="1" />
-			<ingredient name="resourceScrapPolymers" count="1" />
-			<ingredient name="drinkCanEmpty" count="1" />
+			<ingredient name="resourceScrapIron" count="10" />
 		</recipe>
 		
 		<!-- Diving Mask  -->
@@ -558,6 +555,40 @@
 		</recipe>
 		
 		<recipe name="cntBarrelGenericSingle00" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="10" />
+		</recipe>
+		
+		<recipe name="decoStationaryBike" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="10" />
+			<ingredient name="resourceScrapPolymers" count="35" />
+		</recipe>
+		
+		<recipe name="decoSwingSet" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="10" />
+			<ingredient name="resourceCloth" count="35" />
+		</recipe>
+		
+		<recipe name="decoTreadmill" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="60" />
+			<ingredient name="resourceCloth" count="35" />
+		</recipe>
+		
+		<recipe name="decoWeightBar" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceForgedIron" count="50" />
+		</recipe>
+		
+		<recipe name="decoWildWestWagon" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceWood" count="200" />
+			<ingredient name="resourceForgedIron" count="40" />
+		</recipe>
+		
+		<recipe name="decoWildWestWagonWheelBack" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceWood" count="50" />
+			<ingredient name="resourceForgedIron" count="10" />
+		</recipe>
+		
+		<recipe name="decoWildWestWagonWheelFront" count="1" craft_time="20" craft_area="workbenchDecoratorT1ITAV" tags="learnable,perkDecoratorITAV">
+			<ingredient name="resourceWood" count="50" />
 			<ingredient name="resourceForgedIron" count="10" />
 		</recipe>
 		

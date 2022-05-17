@@ -1,5 +1,10 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english
 
+mmGoLandClaimCount,,,Main Menu Game Options,,Number of Land Claims
+goLandClaimCount,,UI,Menu,,Claim Amount
+goLandClaimCountDesc,,UI,Menu,,The max number of active Land Claims per player.
+goLandClaimCountValue,,UI,Menu,,{0} block
+goLandClaimCountValues,,UI,Menu,,{0} blocks
 
 loadingTipProfessionsITAV,UI,Loading Screen,x,,"Each Profession provides vital goods for the other players. Try to fill any empty roles to improve the chance of survival."
 loadingTipProfessionsITAV_title,UI,Loading Screen,x,,It Takes A Village
@@ -7,7 +12,7 @@ loadingTipSmelterITAV,UI,Loading Screen,x,,"Many crafting recipes require large 
 loadingTipSmelterITAV_title,UI,Loading Screen,x,,"Got a Smelter friend?"
 loadingTipCustomThingsITAV,UI,Loading Screen,x,,"Search for 'deco' or 'itav' in the crafting window to find custom things!"
 loadingTipCustomThingsITAV_title,UI,Loading Screen,x,,"More stuff"
-loadingTipShopLiftingITAV,UI,Loading Screen,x,,"You can pick up your Shop after placing it, perhaps to live the life of a travelling salesperson?"
+loadingTipShopLiftingITAV,UI,Loading Screen,x,,"If you lift your shop, make sure you manually collect the money from it first! Otherwise it is destroyed when the shop is picked up."
 loadingTipShopLiftingITAV_title,UI,Loading Screen,x,,"Shop Lifting"
 loadingTipPricePaddingITAV,UI,Loading Screen,x,,"If you are low on money, you can manually increase the sales prices of the items in your shop."
 loadingTipPricePaddingITAV_title,UI,Loading Screen,x,,"Padding the Prices"
@@ -77,9 +82,9 @@ bookDecoratorITAV,Items,perk  book,,,"Profession: Decorator"
 bookDecoratorITAVDesc,Items,perk  book,,,"Decorators can craft invisible dyes as well as clothing mods that change appearance of apparel while adding pockets to them. They can also create a plethora of decorative items, such as flowers, signs, lamps, appliances, posters and clutter."
 
 
-ShopStoreVendingCashRegisterPlayerITAV,blocks,Container,,,"Player Owned Store"
-ShopStoreVendingCashRegisterPlayerGroupDescITAV,blocks,Container,,,"Create your own Store to sell goods for Casino Coins. Buy the goods you need from other Player Owned Stores to support them and the community!  Store is indestructible unless falling."
-xuiVendingWithOwner,UI,Menu,,,"{0}'s Store"
+ShopStoreVendingCashRegisterPlayerITAV,blocks,Container,,,"Player Owned Shop"
+ShopStoreVendingCashRegisterPlayerGroupDescITAV,blocks,Container,,,"Create your own Shop to sell goods for Casino Coins. Buy the goods you need from other survivors to support them and the community! The Shop is indestructible unless falling. Any uncollected money in the Shop disappears if the Shop is picked up."
+xuiVendingWithOwner,UI,Menu,,,"{0}'s Shop"
 
 
 lblContextActionAssemble,blocks,,,,"Assemble"
@@ -564,11 +569,11 @@ quest_MyNextProfession_response,Quests,Quests,,,Trade Profession Quest Response
 quest_MyNextProfession_statement,Quests,Quests,,,Pick a Profession
 quest_MyNextProfession_completion,Quests,Quests,,,"Choose what Profession fits you and your community best.\n\nOnce you have read the Profession book, there is no going back. \n\nChoose carefully."
 
-quest_ProfCont_description_title,,,,,"Store Setup"
+quest_ProfCont_description_title,,,,,"Shop Setup"
 quest_ProfCont_description,,,,,"It's time to find a safe spot and set up your store, and put some goods up for sale to let other survivors buy from you. \nYou might want to lock the door around your crafting area, so no one walks in and 'borrows' your hard earned stuff... \n\nPress 'O' to see Quests, 'N' for skills. "
 
-quest_ProfCont_name,Quests,Quests,,,Setup your Store
-quest_ProfCont_subtitle,Quests,Quests,,,Setup your Store
+quest_ProfCont_name,Quests,Quests,,,Setup your Shop
+quest_ProfCont_subtitle,Quests,Quests,,,Setup your Shop
 quest_ProfCont_statement,Quests,Quests,,,Establish Your Profession
 quest_ProfCont_response,Quests,Quests,,,Profession Quest Response
 quest_ProfCont_completion,Quests,Quests,,,"The Mechanic can craft even stronger versions of these boots. \n\nTreat yourself!"

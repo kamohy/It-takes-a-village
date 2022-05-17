@@ -160,7 +160,7 @@
 
 <remove xpath="//item[@name='gunHandgunT1Pistol']" />
 
-<setattribute xpath="//lootgroup/item[@name='casinoCoin' and (@count='5,10' or @count='1,10')]" name="count">50,60</setattribute>
+<setattribute xpath="//lootgroup/item[@name='casinoCoin' and (@count='5,10' or @count='1,10')]" name="count">97,122</setattribute>
 <remove xpath="/lootcontainers/lootgroup[@name='groupValuablesExtraLarge']/item[@name='oldCash']" />
 <setattribute xpath="/lootcontainers/lootgroup[@name='groupValuablesExtraLarge']/item[@name='casinoCoin']" name="count">1000,1200</setattribute>
 
@@ -197,25 +197,25 @@ makes the looter more financially self sustained than if they had to buy all the
 
 <append xpath="/lootcontainers/lootgroup[@name='groupFoodTrash']">
 	<item name="weaponPartFragmentITAV" count="4,8" />
-	<item name="casinoCoin" count="32,51" />
+	<item name="casinoCoin" count="62,101" />
 	<item name="resourceScrapIron" count="7,13" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupScrapCommon']">
 	<item name="weaponPartFragmentITAV" count="4,8" />
-	<item name="casinoCoin" count="36,54" />
+	<item name="casinoCoin" count="66,104" />
 	<item name="resourceScrapIron" count="7,18" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupFileCabinet01']">
 	<item name="weaponPartFragmentITAV" count="4,8" loot_prob_template="low" />
-	<item name="casinoCoin" count="10,29" loot_prob_template="low" />
+	<item name="casinoCoin" count="10,29" loot_prob_template="med" />
 	<item name="resourceScrapIron" count="7,18" loot_prob_template="med" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupDesks01']">
 	<item name="weaponPartFragmentITAV" count="4,8" loot_prob_template="low" />
-	<item name="casinoCoin" count="10,29" loot_prob_template="med" />
+	<item name="casinoCoin" count="10,29" loot_prob_template="high" />
 	<item name="resourceScrapIron" count="7,18" loot_prob_template="low" />
 </append>
 
@@ -394,7 +394,7 @@ makes the looter more financially self sustained than if they had to buy all the
 <remove xpath="//item[@group='groupHuntingRanged']" />
 
 <append xpath="/lootcontainers/lootgroup[@name='groupSavageCountryCrate03']">
-	<item name="casinoCoin" count="300,400" />
+	<item name="casinoCoin" count="353,455" />
 	<item name="weaponPartFragmentITAV" count="90,120" />
 </append>
 

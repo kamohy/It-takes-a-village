@@ -18,8 +18,9 @@
 <remove xpath="//drop[@name='resourceGoldNugget']"/>
 <remove xpath="//drop[@name='resourceSilverNugget']"/>
 
-<setattribute xpath="//block[@name='wallTorchLightPlayer']/property[@name='HeatMapStrength']" name="value">0</setattribute>
-<setattribute xpath="//block[@name='candleWallLightPlayer']/property[@name='HeatMapStrength']" name="value">0</setattribute>
+<setattribute xpath="//block[@name='wallTorchLightPlayer' or @name='candleWallLightPlayer' or @name='burningBarrelPlayer']/property[@name='HeatMapStrength']" name="value">0</setattribute>
+
+
 
 <setattribute xpath="//block[contains(@name, 'chimney')]/property[@name='CreativeMode']" name="value">Dev</setattribute>
 
@@ -75,8 +76,8 @@
 		<property name="Material" value="Mmetal"/>
 		<!-- Collide disabled to avoid zombies killing the store, or using store as protective block against zombies -->
 		<property name="Collide" value="sight"/> 
-		<property name="CanPickup" value="true"/>
-		<property name="EconomicValue" value="52"/>
+		<property name="CanPickup" value="false" />
+		<property name="EconomicValue" value="33"/>
 		<property class="RepairItems">
 			<property name="resourceScrapIron" value="1"/>
 		</property>			
@@ -1876,6 +1877,8 @@
 <append xpath="//block[@name='crushedCars']"><property name="UnlockedBy" value="perkRunnerITAV" /></append>
 
 
+
+
 <!-- Adjusting prices -->
 <append xpath="//block[@name='signPosterMovie2159']"><property name="UnlockedBy" value="perkDecoratorITAV" /><property name="EconomicValue" value="83" /></append>
 <append xpath="//block[@name='signPosterMovieLoneWolf']"><property name="UnlockedBy" value="perkDecoratorITAV" /><property name="EconomicValue" value="83" /></append>
@@ -1922,7 +1925,13 @@
 <append xpath="//block[@name='cntBarrelGasSingle00']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
 <append xpath="//block[@name='cntBarrelAcidSingle00']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
 <append xpath="//block[@name='cntBarrelGenericSingle00']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-
+<append xpath="//block[@name='decoStationaryBike']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
+<append xpath="//block[@name='decoSwingSet']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
+<append xpath="//block[@name='decoTreadmill']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
+<append xpath="//block[@name='decoWeightBar']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
+<append xpath="//block[@name='decoWildWestWagon']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
+<append xpath="//block[@name='decoWildWestWagonWheelBack']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
+<append xpath="//block[@name='decoWildWestWagonWheelFront']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
 
 
 
@@ -2228,6 +2237,12 @@
 <append xpath="//block[@name='cntBarrelGasSingle00']"><property name="EconomicValue" value="300" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='cntBarrelAcidSingle00']"><property name="EconomicValue" value="300" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='cntBarrelGenericSingle00']"><property name="EconomicValue" value="300" /><property name="EconomicBundleSize" value="1" /></append>
-
+<append xpath="//block[@name='decoStationaryBike']"><property name="EconomicValue" value="825" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='decoSwingSet']"><property name="EconomicValue" value="335" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='decoTreadmill']"><property name="EconomicValue" value="1835" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='decoWeightBar']"><property name="EconomicValue" value="1500" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='decoWildWestWagon']"><property name="EconomicValue" value="1400" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='decoWildWestWagonWheelBack']"><property name="EconomicValue" value="350" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='decoWildWestWagonWheelFront']"><property name="EconomicValue" value="350" /><property name="EconomicBundleSize" value="1" /></append>
 
 </configs>

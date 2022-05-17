@@ -83,31 +83,9 @@
 
 
 <append xpath="/quests">
-	<!-- Basic Survival X - Craft a Player Owned Store (Cashregister) /> -->
-	<!-- <quest id="quest_PlayerStore">
-		<property name="group_name_key" value="quest_BasicSurvival"/>
-		<property name="name" value="Create your own store"/>
-		<property name="subtitle" value="Craft a Player Owned Store"/>
-		<property name="description" value="You need a store to sell your goods to other survivors."/>
-		<property name="icon" value="ui_game_symbol_hammer"/>
-		<property name="category_key" value="quest"/>
-		<property name="offer_key" value="quest_BasicSurvival_offer"/>
-		<property name="shareable" value="false"/>
-						
-		<objective type="Craft">
-			<property name="phase" value="1"/>
-			<property name="item" value="ShopStoreVendingCashRegisterPlayerITAV"/>
-			<property name="count" value="1"/>
-		</objective>
-
-		<reward type="Quest" id="quest_MyFirstProfession">
-			<property name="chainquest" value="false"/>
-		</reward>
-	</quest> -->
-	
 	
 
-	<!-- My FIRST Profession - Get offer explaining Trade Skills, talk to trader who rewards Trade Profession books -->
+	<!-- My first Profession - Talk to trader who rewards Trade Profession books -->
 	<quest id="quest_MyFirstProfession">
 		<property name="name_key" value="quest_MyFirstProfession_subtitle"/>
 		<property name="subtitle_key" value="quest_MyFirstProfession_subtitle"/>
@@ -152,66 +130,9 @@
 		<reward type="Item" id="bookChemistITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookRoboticsITAV" ischosen="true" isfixed="true" value="1"/>
 		<reward type="Item" id="bookRunnerITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookDecoratorITAV" ischosen="true" isfixed="true" value="1"/>
 	</quest>
 	
-	
-	<!-- My NEXT Profession Quest -->
-	<!-- <quest id="quest_MyNextProfession">
-		<property name="name_key" value="quest_MyNextProfession_subtitle"/>
-		<property name="subtitle_key" value="quest_MyNextProfession_subtitle"/>
-		<property name="description_key" value="quest_MyNextProfession_description"/>
-		<property name="offer_key" value="quest_MyNextProfession_offer"/>
-		<property name="statement_key" value="quest_MyNextProfession_statement" />
-		<property name="response_key" value="quest_MyNextProfession_response" />
-		<property name="return_to_quest_giver" value="true" />
-		<property name="icon" value="ui_game_symbol_map_trader"/>
-		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="easy"/>
-		<property name="difficulty_tier" value="1"/>
-		<property name="repeatable" value="false" />
-		<property name="shareable" value="false"/>
-		<property name="completiontype" value="TurnIn" />
-		<property name="completion_key" value="quest_MyNextProfession_completion" />
-		<property name="reward_choices_count" value="12" /> 
-		
-		<objective type="InteractWithNPC">
-			<property name="phase" value="1"/>
-			<property name="nav_object" value="return_to_trader" />
-			<property name="use_closest" value="true" />
-		</objective>
-
-		<reward type="Item" id="bookSmelterITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookMinerITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookHunterITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookCookITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookArmorerITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookFarmerITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookChemistITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookRoboticsITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookRunnerITAV" ischosen="true" isfixed="true" value="1"/>
-	</quest> -->
-	
-	
-<!-- Follow-up quest to First Profession -->
-	<!--<quest id="quest_ProfCont">
-		<property name="group_name_key" value="profession_startup"/>
-		<property name="name" value="Setup your Store"/>
-		<property name="subtitle" value="Setup your Store"/>
-		<property name="description" value="You need a store to sell your goods to other survivors."/>
-		<property name="icon" value="ui_game_symbol_hammer"/>
-		<property name="category_key" value="quest"/>
-		<property name="offer_key" value="Offer???"/>
-		<property name="shareable" value="false"/>
-		
-		<action type="ShowTip" value="quest_ProfCont_description">
-			<property name="delay" value="15"/>
-		</action>
-			
-		<objective type="BlockPlace" id="cntVendingMachineITAV" value="1" phase="1"/>
-				
-		<reward type="Exp" value="500"/>
-		
-	</quest>-->
 	
 <!--          Profession specific Follow-up quests to First Profession             -->	
 
@@ -338,47 +259,7 @@
 		<reward type="Exp" value="500"/>		
 	</quest>
 	
-	
-	<quest id="quest_ProfContHunter">
-		<property name="group_name_key" value="profession_startup"/>
-		<property name="name_key" value="quest_ProfCont_name"/>
-		<property name="subtitle_key" value="quest_ProfCont_subtitle"/>
-		<property name="description_key" value="quest_ProfCont_description"/>
-		<property name="icon" value="ui_game_symbol_hammer"/>
-		<property name="category_key" value="quest"/>
-		<property name="offer_key" value="Offer???"/>
-		<property name="shareable" value="false"/>
-		<property name="statement_key" value="quest_ProfCont_statement" />
-		<property name="response_key" value="quest_ProfCont_response" />
-		<property name="return_to_quest_giver" value="true" />
-		<property name="difficulty" value="medium"/>
-		<property name="difficulty_tier" value="1"/>
-		<property name="repeatable" value="false" />
-		<property name="completiontype" value="TurnIn" />
-		<property name="completion_key" value="quest_ProfCont_completion" />
-		<property name="reward_choices_count" value="2" /> 
 		
-		<action type="ShowTip" value="quest_ProfCont_description">
-			<property name="delay" value="1"/>
-		</action>			
-		<objective type="Craft">
-			<property name="phase" value="1"/>
-			<property name="item" value="ShopStoreVendingCashRegisterPlayerITAV"/>
-			<property name="count" value="1"/>
-		</objective>
-		<objective type="FetchKeep" id="foodRawMeat" value="50" phase="2" />
-		<objective type="FetchKeep" id="foodEgg" value="10" phase="2" />
-		<objective type="InteractWithNPC">
-			<property name="phase" value="3"/>
-			<property name="nav_object" value="return_to_trader" />
-			<property name="use_closest" value="true" />
-		</objective>
-
-		<reward type="Item" id="workBootsBabyITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="powerizersBabyITAV" ischosen="true" isfixed="true" value="1"/>				
-		<reward type="Exp" value="500"/>		
-	</quest>
-	
 	<quest id="quest_ProfContFarmer">
 		<property name="group_name_key" value="profession_startup"/>
 		<property name="name_key" value="quest_ProfCont_name"/>
