@@ -85,6 +85,10 @@ bookDecoratorITAVDesc,Items,perk  book,,,"Decorators can craft invisible dyes as
 ShopStoreVendingCashRegisterPlayerITAV,blocks,Container,,,"Player Owned Shop"
 ShopStoreVendingCashRegisterPlayerGroupDescITAV,blocks,Container,,,"Create your own Shop to sell goods for Casino Coins. Buy the goods you need from other survivors to support them and the community! The Shop is indestructible unless falling. Any uncollected money in the Shop disappears if the Shop is picked up."
 xuiVendingWithOwner,UI,Menu,,,"{0}'s Shop"
+cntLotteryBoxPlaceableITAV,blocks,Container,,,"10k LOTTERY BOX!"
+cntLootLotteryBoxITAV,blocks,Container,,,"10k LOTTERY BOX!"
+cntLotteryBoxPlaceableDescITAV,blocks,Container,,,"Place and open this box for a chance to win 10000 Duke's Casino tokens! \n\nRequires Advanced Mechanic's table to craft."
+lotteryITAV,ui_display,Item stat,,,"A chance to win 10000 Duke coins?"
 
 
 lblContextActionAssemble,blocks,,,,"Assemble"
@@ -230,7 +234,7 @@ cntBarrelGasQuadAITAV,blocks,Block,,,Rusty gas barrels
 cntBarrelAcidQuadBITAV,blocks,Block,,,Rusty green barrels
 cntBarrelGenericQuadBITAV,blocks,Block,,,Rusty grey barrels
 cntBarrelGasQuadBITAV,blocks,Block,,,Rusty gas barrels
-
+cntWoodBurningStoveDecoITAV,blocks,Block,,,Wood Burning Stove
 
 signBread01ITAVSchematic,items,,,,"Sign: Bread 01 Schematic"
 signBread02ITAVSchematic,items,,,,"Sign: Bread 02 Schematic"
@@ -255,7 +259,7 @@ signLaborDaySaleAdITAVSchematic,items,,,,"Sign: Labor Day Sle Ad Schematic"
 signSale01ITAVSchematic,items,,,,"Sign: Sale 01 Schematic"
 signSale02ITAVSchematic,items,,,,"Sign: Sale 02 Schematic"
 decoPoolTableITAVSchematic,items,,,,"Pool Table Schematic"
-cntWoodBurningStoveITAVSchematic,items,,,,"Wood Burning Stove Schematic"
+cntWoodBurningStoveDecoITAVSchematic,items,,,,"Wood Burning Stove Schematic"
 
 
 
@@ -463,7 +467,7 @@ perkFarmerITAVRank3LongDesc,progression,perk Pro,,,"Triple the harvest of wild o
 perkChemistITAVDesc,progression,perk Pro,,,"Specialize in crafting chemicals such as gunpowder, medicine, concrete mix... and paint. Perform high-end crafts at the Advanced Chemistry Station."
 perkChemistITAVName,progression,perk Pro,,,Chemist
 perkChemistITAVRank1Desc,progression,perk Pro,,,Student
-perkChemistITAVRank1LongDesc,progression,perk Pro,,,"Can craft chemistry stations, first aid bandages, and plaster casts."
+perkChemistITAVRank1LongDesc,progression,perk Pro,,,"Can craft chemistry stations, first aid bandages, herbal antibiotics and plaster casts."
 perkChemistITAVRank2Desc,progression,perk Pro,,,Kitchen Tinkerer
 perkChemistITAVRank2LongDesc,progression,perk Pro,,,"Can craft concrete mix, gun powder and paint. Craft items 20% faster at chemistry stations."
 perkChemistITAVRank3Desc,progression,perk Pro,,,Lab Rat
@@ -490,8 +494,8 @@ perkRunnerITAVDesc,progression,perk Pro,,,"Craft those vehicles! Perform high-en
 perkRunnerITAVName,progression,perk Pro,,,Mechanic
 perkRunnerITAVRank1Desc,progression,perk Pro,,,Bikes and Stuff
 perkRunnerITAVRank1LongDesc,progression,perk Pro,,,"Harvest 20% faster and recieve 20% more resources when harvesting with a wrench, ratchet or impact driver. \nUnlocks crafting of workbenches, Wrench, Lockpicks, Crushed Car wall, Wheels, Bike parts, Baby Powerizer Boots, Baby Work Boots, Minibike parts, gas cans and quality 4 car batteries."
-perkRunnerITAVRank2Desc,progression,perk Pro,,,Motorbiker and Boots
-perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, Powerizer Boots, Work Boots, oil, gas can bundle, quality 5 car batteries and Advanced Mechanic's Table. Can pick up mines."
+perkRunnerITAVRank2Desc,progression,perk Pro,,,Motorbiker, Boots and Gambling
+perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, Powerizer Boots, Work Boots, oil, gas can bundle, quality 5 car batteries, Lottery Box and Advanced Mechanic's Table. Can pick up mines."
 perkRunnerITAVRank3Desc,progression,perk Pro,,,Limo out front
 perkRunnerITAVRank3LongDesc,progression,perk Pro,,,"Harvest 80% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of  4x4 truck parts and quality 6 car batteries. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower."
 perkRunnerITAVRank4Desc,progression,perk Pro,,,Level 4

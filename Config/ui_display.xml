@@ -18,6 +18,10 @@
 		<display_entry name="dHypothermalResist" title_key="statHypothermalResist" display_leading_plus="true"/>
 		<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
 	</item_display_info>
+	
+	<item_display_info display_type="lotteryBoxITAV" display_group="groupBlocks" >
+        <display_entry name="StabilitySupport" title_key="lotteryITAV" display_type="Bool"/>
+    </item_display_info>
 </append>
 
 <append xpath="/ui_display_info/crafting_category_display">

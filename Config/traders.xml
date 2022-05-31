@@ -14,8 +14,19 @@
 	<remove xpath="//item[@name='drugHackers']" />
 	  
 	<!-- Removing items from traders so they only sell what players have sold them, nothing else -->  
-	<remove xpath="//trader_info[(@id='1') or (@id='2') or (@id='6') or (@id='7') or (@id='8')]/trader_items/item" /> 
+	<remove xpath="//trader_info[(@id='1') or (@id='2') or (@id='4') or (@id='6') or (@id='7') or (@id='8')]/trader_items/item" /> 
 	<remove xpath="//trader_info[(@id='1') or (@id='2') or (@id='6') or (@id='7') or (@id='8')]/tier_items/item" /> 
+	<setattribute xpath="//trader_info[@id='4']" name="min_inventory">2</setattribute>
+	<setattribute xpath="//trader_info[@id='4']" name="max_inventory">4</setattribute>
+	<setattribute xpath="//trader_info[@id='4']" name="min_items_swapped">1</setattribute>
+	<setattribute xpath="//trader_info[@id='4']" name="max_items_swapped">3</setattribute>
+	<append xpath="//trader_info[@id='4']/trader_items">
+		<item name="drinkJarBoiledWater" />
+		<item name="foodCornBread" />
+		<item name="foodCornOnTheCob" />  
+		<item name="foodBakedPotato" />
+		<item name="foodEggBoiled" />
+	</append>
 	  
 	<!-- Removing food/drink and GyroCopter parts/schematics from trader item groups -->
 	<remove xpath="/traders/trader_item_groups/trader_item_group[@name='farmingCookingRecipes']/item" />

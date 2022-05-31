@@ -13,7 +13,7 @@
 <!-- Adding custom dyes-->
 <InsertAfter xpath="/item_modifiers/item_modifier[@name='modDyeWhite']">
 
-	<item_modifier name="modDyeInvisibleITAV" installable_tags="clothing,armor" modifier_tags="dye" blocked_tags="noMods" type="attachment" cosmetic_install_chance="0">
+	<item_modifier name="modDyeInvisibleITAV" installable_tags="clothing,armor" modifier_tags="dye" type="attachment" cosmetic_install_chance="0"> <!-- blocked_tags="noMods" -->
         <property name="CustomIcon" value="modDyeWhite"/>
         <property name="Stacknumber" value="100"/>
         <property name="Group" value="Mods"/>
@@ -1300,66 +1300,66 @@
  <!-- ********************* Price adjustments from vanilla ********************* -->
 <append xpath="//item_modifier[contains(@name, 'modDye')]"><property name="EconomicValue" value="175"/></append>
  <!-- Prices are scaled up by a factor of 2.5 compared to the cost of their materials. This is because the game scales the prices back down somehow. -->
-<append  xpath="//item_modifier[@name='modArmorAdvancedMuffledConnectors']"><property name="EconomicValue" value="2650" /></append>
-<append  xpath="//item_modifier[@name='modArmorBandolier']"><property name="EconomicValue" value="403" /></append>
-<append  xpath="//item_modifier[@name='modArmorCoolingMesh']"><property name="EconomicValue" value="1110" /></append>
-<append  xpath="//item_modifier[@name='modArmorCustomizedFittings']"><property name="EconomicValue" value="1815" /></append>
-<append  xpath="//item_modifier[@name='modArmorDoubleStoragePocket']"><property name="EconomicValue" value="1145" /></append>
-<append  xpath="//item_modifier[@name='modArmorHelmetLight']"><property name="EconomicValue" value="2730" /></append>
-<append  xpath="//item_modifier[@name='modFuelTankSmall']"><property name="EconomicValue" value="768" /></append>
-<append  xpath="//item_modifier[@name='modFuelTankLarge']"><property name="EconomicValue" value="768" /></append>
-<append  xpath="//item_modifier[@name='modArmorImpactBracing']"><property name="EconomicValue" value="6850" /></append>
-<append  xpath="//item_modifier[@name='modArmorImprovedFittings']"><property name="EconomicValue" value="970" /></append>
-<append  xpath="//item_modifier[@name='modArmorInsulatedLiner']"><property name="EconomicValue" value="285" /></append>
-<append  xpath="//item_modifier[@name='modArmorMuffledConnectors']"><property name="EconomicValue" value="1800" /></append>
-<append  xpath="//item_modifier[@name='modArmorPlatingBasic']"><property name="EconomicValue" value="573" /></append>
-<append  xpath="//item_modifier[@name='modArmorPlatingReinforced']"><property name="EconomicValue" value="1750" /></append>
-<append  xpath="//item_modifier[@name='modArmorStoragePocket']"><property name="EconomicValue" value="980" /></append>
-<append  xpath="//item_modifier[@name='modArmorTripleStoragePocket']"><property name="EconomicValue" value="1525" /></append>
-<append  xpath="//item_modifier[@name='modArmorWaterPurifier']"><property name="EconomicValue" value="1175" /></append>
-<append  xpath="//item_modifier[@name='modGunBarrelExtender']"><property name="EconomicValue" value="2053" /></append>
-<append  xpath="//item_modifier[@name='modGunDrumMagazineExtender']"><property name="EconomicValue" value="4105" /></append>
-<append  xpath="//item_modifier[@name='modGunBipod']"><property name="EconomicValue" value="2863" /></append>
-<append  xpath="//item_modifier[@name='modGunBowArrowRest']"><property name="EconomicValue" value="3113" /></append>
-<append  xpath="//item_modifier[@name='modGunBowPolymerString']"><property name="EconomicValue" value="3113" /></append>
-<append  xpath="//item_modifier[@name='modGunChoke']"><property name="EconomicValue" value="2863" /></append>
-<append  xpath="//item_modifier[@name='modGunCrippleEm']"><property name="EconomicValue" value="3113" /></append>
-<append  xpath="//item_modifier[@name='modGunDuckbill']"><property name="EconomicValue" value="2863" /></append>
-<append  xpath="//item_modifier[@name='modGunFlashlight']"><property name="EconomicValue" value="2865" /></append>
-<append  xpath="//item_modifier[@name='modGunForegrip']"><property name="EconomicValue" value="2863" /></append>
-<append  xpath="//item_modifier[@name='modGunLaserSight']"><property name="EconomicValue" value="3145" /></append>
-<append  xpath="//item_modifier[@name='modGunMagazineExtender']"><property name="EconomicValue" value="2863" /></append>
-<append  xpath="//item_modifier[@name='modGunShotgunTubeExtenderMagazine']"><property name="EconomicValue" value="2863" /></append>
-<append  xpath="//item_modifier[@name='modGunMeleeRadRemover']"><property name="EconomicValue" value="3113" /></append>
-<append  xpath="//item_modifier[@name='modGunMeleeTheHunter']"><property name="EconomicValue" value="2863" /></append>
-<append  xpath="//item_modifier[@name='modGunMuzzleBrake']"><property name="EconomicValue" value="1553" /></append>
-<append  xpath="//item_modifier[@name='modGunReflexSight']"><property name="EconomicValue" value="3163" /></append>
-<append  xpath="//item_modifier[@name='modGunRetractingStock']"><property name="EconomicValue" value="3113" /></append>
-<append  xpath="//item_modifier[@name='modGunScopeLarge']"><property name="EconomicValue" value="1713" /></append>
-<append  xpath="//item_modifier[@name='modGunScopeMedium']"><property name="EconomicValue" value="1570" /></append>
-<append  xpath="//item_modifier[@name='modGunScopeSmall']"><property name="EconomicValue" value="1470" /></append>
-<append  xpath="//item_modifier[@name='modGunSoundSuppressorSilencer']"><property name="EconomicValue" value="2053" /></append>
-<append  xpath="//item_modifier[@name='modGunTriggerGroupAutomatic']"><property name="EconomicValue" value="2450" /></append>
-<append  xpath="//item_modifier[@name='modGunTriggerGroupBurst3']"><property name="EconomicValue" value="2450" /></append>
-<append  xpath="//item_modifier[@name='modGunTriggerGroupSemi']"><property name="EconomicValue" value="2200" /></append>
-<append  xpath="//item_modifier[@name='modMeleeDiamondTip']"><property name="EconomicValue" value="3363" /></append>
-<append  xpath="//item_modifier[@name='modMeleeStunBatonRepulsor']"><property name="EconomicValue" value="3125" /></append>
-<append  xpath="//item_modifier[@name='modMeleeBunkerBuster']"><property name="EconomicValue" value="3113" /></append>
-<append  xpath="//item_modifier[@name='modMeleeClubBarbedWire']"><property name="EconomicValue" value="3113" /></append>
-<append  xpath="//item_modifier[@name='modMeleeClubBurningShaft']"><property name="EconomicValue" value="1933" /></append>
-<append  xpath="//item_modifier[@name='modMeleeClubMetalSpikes']"><property name="EconomicValue" value="3113" /></append>
-<append  xpath="//item_modifier[@name='modMeleeClubMetalChain']"><property name="EconomicValue" value="3113" /></append>
-<append  xpath="//item_modifier[@name='modMeleeErgonomicGrip']"><property name="EconomicValue" value="3113" /></append>
-<append  xpath="//item_modifier[@name='modMeleeFortifyingGrip']"><property name="EconomicValue" value="3113" /></append>
-<append  xpath="//item_modifier[@name='modMeleeFiremansAxeMod']"><property name="EconomicValue" value="2863" /></append>
-<append  xpath="//item_modifier[@name='modMeleeGraveDigger']"><property name="EconomicValue" value="2863" /></append>
-<append  xpath="//item_modifier[@name='modMeleeIronBreaker']"><property name="EconomicValue" value="3113" /></append>
-<append  xpath="//item_modifier[@name='modMeleeSerratedBlade']"><property name="EconomicValue" value="2863" /></append>
-<append  xpath="//item_modifier[@name='modMeleeStructuralBrace']"><property name="EconomicValue" value="2863" /></append>
-<append  xpath="//item_modifier[@name='modMeleeTemperedBlade']"><property name="EconomicValue" value="3113" /></append>
-<append  xpath="//item_modifier[@name='modMeleeWeightedHead']"><property name="EconomicValue" value="2863" /></append>
-<append  xpath="//item_modifier[@name='modMeleeWoodSplitter']"><property name="EconomicValue" value="2863" /></append>
-<append  xpath="//item_modifier[@name='modShotgunSawedOffBarrel']"><property name="EconomicValue" value="2863" /></append>
+<append  xpath="//item_modifier[@name='modArmorAdvancedMuffledConnectors']"><property name="EconomicValue" value="2615" /></append>
+<append  xpath="//item_modifier[@name='modArmorBandolier']"><property name="EconomicValue" value="350" /></append>
+<append  xpath="//item_modifier[@name='modArmorCoolingMesh']"><property name="EconomicValue" value="955" /></append>
+<append  xpath="//item_modifier[@name='modArmorCustomizedFittings']"><property name="EconomicValue" value="1780" /></append>
+<append  xpath="//item_modifier[@name='modArmorDoubleStoragePocket']"><property name="EconomicValue" value="1110" /></append>
+<append  xpath="//item_modifier[@name='modArmorHelmetLight']"><property name="EconomicValue" value="2625" /></append>
+<append  xpath="//item_modifier[@name='modFuelTankSmall']"><property name="EconomicValue" value="733" /></append>
+<append  xpath="//item_modifier[@name='modFuelTankLarge']"><property name="EconomicValue" value="733" /></append>
+<append  xpath="//item_modifier[@name='modArmorImpactBracing']"><property name="EconomicValue" value="6815" /></append>
+<append  xpath="//item_modifier[@name='modArmorImprovedFittings']"><property name="EconomicValue" value="953" /></append>
+<append  xpath="//item_modifier[@name='modArmorInsulatedLiner']"><property name="EconomicValue" value="250" /></append>
+<append  xpath="//item_modifier[@name='modArmorMuffledConnectors']"><property name="EconomicValue" value="1783" /></append>
+<append  xpath="//item_modifier[@name='modArmorPlatingBasic']"><property name="EconomicValue" value="555" /></append>
+<append  xpath="//item_modifier[@name='modArmorPlatingReinforced']"><property name="EconomicValue" value="1715" /></append>
+<append  xpath="//item_modifier[@name='modArmorStoragePocket']"><property name="EconomicValue" value="963" /></append>
+<append  xpath="//item_modifier[@name='modArmorTripleStoragePocket']"><property name="EconomicValue" value="1473" /></append>
+<append  xpath="//item_modifier[@name='modArmorWaterPurifier']"><property name="EconomicValue" value="1065" /></append>
+<append  xpath="//item_modifier[@name='modGunBarrelExtender']"><property name="EconomicValue" value="1933" /></append>
+<append  xpath="//item_modifier[@name='modGunDrumMagazineExtender']"><property name="EconomicValue" value="3865" /></append>
+<append  xpath="//item_modifier[@name='modGunBipod']"><property name="EconomicValue" value="2775" /></append>
+<append  xpath="//item_modifier[@name='modGunBowArrowRest']"><property name="EconomicValue" value="3025" /></append>
+<append  xpath="//item_modifier[@name='modGunBowPolymerString']"><property name="EconomicValue" value="3025" /></append>
+<append  xpath="//item_modifier[@name='modGunChoke']"><property name="EconomicValue" value="2775" /></append>
+<append  xpath="//item_modifier[@name='modGunCrippleEm']"><property name="EconomicValue" value="3025" /></append>
+<append  xpath="//item_modifier[@name='modGunDuckbill']"><property name="EconomicValue" value="2775" /></append>
+<append  xpath="//item_modifier[@name='modGunFlashlight']"><property name="EconomicValue" value="2760" /></append>
+<append  xpath="//item_modifier[@name='modGunForegrip']"><property name="EconomicValue" value="2775" /></append>
+<append  xpath="//item_modifier[@name='modGunLaserSight']"><property name="EconomicValue" value="3110" /></append>
+<append  xpath="//item_modifier[@name='modGunMagazineExtender']"><property name="EconomicValue" value="2775" /></append>
+<append  xpath="//item_modifier[@name='modGunShotgunTubeExtenderMagazine']"><property name="EconomicValue" value="2775" /></append>
+<append  xpath="//item_modifier[@name='modGunMeleeRadRemover']"><property name="EconomicValue" value="3025" /></append>
+<append  xpath="//item_modifier[@name='modGunMeleeTheHunter']"><property name="EconomicValue" value="2775" /></append>
+<append  xpath="//item_modifier[@name='modGunMuzzleBrake']"><property name="EconomicValue" value="1433" /></append>
+<append  xpath="//item_modifier[@name='modGunReflexSight']"><property name="EconomicValue" value="3075" /></append>
+<append  xpath="//item_modifier[@name='modGunRetractingStock']"><property name="EconomicValue" value="3025" /></append>
+<append  xpath="//item_modifier[@name='modGunScopeLarge']"><property name="EconomicValue" value="1625" /></append>
+<append  xpath="//item_modifier[@name='modGunScopeMedium']"><property name="EconomicValue" value="1518" /></append>
+<append  xpath="//item_modifier[@name='modGunScopeSmall']"><property name="EconomicValue" value="1435" /></append>
+<append  xpath="//item_modifier[@name='modGunSoundSuppressorSilencer']"><property name="EconomicValue" value="1933" /></append>
+<append  xpath="//item_modifier[@name='modGunTriggerGroupAutomatic']"><property name="EconomicValue" value="2363" /></append>
+<append  xpath="//item_modifier[@name='modGunTriggerGroupBurst3']"><property name="EconomicValue" value="2363" /></append>
+<append  xpath="//item_modifier[@name='modGunTriggerGroupSemi']"><property name="EconomicValue" value="2113" /></append>
+<append  xpath="//item_modifier[@name='modMeleeDiamondTip']"><property name="EconomicValue" value="3275" /></append>
+<append  xpath="//item_modifier[@name='modMeleeStunBatonRepulsor']"><property name="EconomicValue" value="3038" /></append>
+<append  xpath="//item_modifier[@name='modMeleeBunkerBuster']"><property name="EconomicValue" value="3025" /></append>
+<append  xpath="//item_modifier[@name='modMeleeClubBarbedWire']"><property name="EconomicValue" value="3025" /></append>
+<append  xpath="//item_modifier[@name='modMeleeClubBurningShaft']"><property name="EconomicValue" value="1545" /></append>
+<append  xpath="//item_modifier[@name='modMeleeClubMetalSpikes']"><property name="EconomicValue" value="3025" /></append>
+<append  xpath="//item_modifier[@name='modMeleeClubMetalChain']"><property name="EconomicValue" value="3025" /></append>
+<append  xpath="//item_modifier[@name='modMeleeErgonomicGrip']"><property name="EconomicValue" value="3025" /></append>
+<append  xpath="//item_modifier[@name='modMeleeFortifyingGrip']"><property name="EconomicValue" value="3025" /></append>
+<append  xpath="//item_modifier[@name='modMeleeFiremansAxeMod']"><property name="EconomicValue" value="2775" /></append>
+<append  xpath="//item_modifier[@name='modMeleeGraveDigger']"><property name="EconomicValue" value="2775" /></append>
+<append  xpath="//item_modifier[@name='modMeleeIronBreaker']"><property name="EconomicValue" value="3025" /></append>
+<append  xpath="//item_modifier[@name='modMeleeSerratedBlade']"><property name="EconomicValue" value="2775" /></append>
+<append  xpath="//item_modifier[@name='modMeleeStructuralBrace']"><property name="EconomicValue" value="2775" /></append>
+<append  xpath="//item_modifier[@name='modMeleeTemperedBlade']"><property name="EconomicValue" value="3025" /></append>
+<append  xpath="//item_modifier[@name='modMeleeWeightedHead']"><property name="EconomicValue" value="2775" /></append>
+<append  xpath="//item_modifier[@name='modMeleeWoodSplitter']"><property name="EconomicValue" value="2775" /></append>
+<append  xpath="//item_modifier[@name='modShotgunSawedOffBarrel']"><property name="EconomicValue" value="2775" /></append>
 <append  xpath="//item_modifier[@name='modRoboticDroneArmorPlatingMod']"><property name="EconomicValue" value="2000" /></append>
 <append  xpath="//item_modifier[@name='modRoboticDroneCargoMod']"><property name="EconomicValue" value="2000" /></append>
 <append  xpath="//item_modifier[@name='modRoboticDroneMedicMod']"><property name="EconomicValue" value="2000" /></append>
@@ -1367,10 +1367,10 @@
 <append  xpath="//item_modifier[@name='modRoboticDroneMoraleBoosterMod']"><property name="EconomicValue" value="1850" /></append>
 <append  xpath="//item_modifier[@name='modVehicleFuelSaver']"><property name="EconomicValue" value="4400" /></append>
 <append  xpath="//item_modifier[@name='modVehicleOffRoadHeadlights']"><property name="EconomicValue" value="2900" /></append>
-<append  xpath="//item_modifier[@name='modVehicleSuperCharger']"><property name="EconomicValue" value="4475" /></append>
+<append  xpath="//item_modifier[@name='modVehicleSuperCharger']"><property name="EconomicValue" value="3225" /></append>
 <append  xpath="//item_modifier[@name='modVehicleExpandedSeat']"><property name="EconomicValue" value="1270" /></append>
-<append  xpath="//item_modifier[@name='modVehicleReserveFuelTank']"><property name="EconomicValue" value="1650" /></append>
-<append  xpath="//item_modifier[@name='modClothingStoragePocket']"><property name="EconomicValue" value="223" /></append>
-<append  xpath="//item_modifier[@name='modClothingCargoStoragePocket']"><property name="EconomicValue" value="445" /></append>
+<append  xpath="//item_modifier[@name='modVehicleReserveFuelTank']"><property name="EconomicValue" value="1563" /></append>
+<append  xpath="//item_modifier[@name='modClothingStoragePocket']"><property name="EconomicValue" value="205" /></append>
+<append  xpath="//item_modifier[@name='modClothingCargoStoragePocket']"><property name="EconomicValue" value="410" /></append>
 
 </configs>
