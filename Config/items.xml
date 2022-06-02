@@ -2237,7 +2237,7 @@
 <setattribute xpath="//item[@name='drugVitamins']/property[@name='EconomicValue']" name="value">100</setattribute>
 <setattribute xpath="//item[@name='armorSteelHelmet']/property[@name='EconomicValue']" name="value">722</setattribute>
 <setattribute xpath="//item[@name='apparelDivingMaskITAV']/property[@name='EconomicValue']" name="value">1474</setattribute>
-<setattribute xpath="//item[@name='resourceClayLump']/property[@name='EconomicValue']" name="value">6000</setattribute>
+<setattribute xpath="//item[@name='resourceClayLumpBundle']/property[@name='EconomicValue']" name="value">6000</setattribute>
 <setattribute xpath="//item[@name='weaponPartFragmentITAV']/property[@name='EconomicValue']" name="value">3</setattribute>
 <setattribute xpath="//item[@name='resourceWeaponRepairKitITAV']/property[@name='EconomicValue']" name="value">213</setattribute>
 <setattribute xpath="//item[@name='powerizersITAV']/property[@name='EconomicValue']" name="value">7860</setattribute>
