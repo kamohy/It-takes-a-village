@@ -314,8 +314,8 @@
 			<!-- Mechanic/Runner perk -->
 	<perk name="perkRunnerITAV" max_level="3" parent="attITAV" name_key="perkRunnerITAVName" desc_key="perkRunnerITAVDesc" icon="ui_game_symbol_4x4">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="6" desc_key="reqAttLevel03ITAV"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="8" desc_key="reqAttLevel07ITAV"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="6" desc_key="reqAttLevel06ITAV"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="8" desc_key="reqAttLevel08ITAV"/></level_requirements>
 				
 		<effect_group>
 			<!--<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkRunnerITAV"/> --><!-- fake crafting perk that is used to scale resources or quality like on carBattery -->
