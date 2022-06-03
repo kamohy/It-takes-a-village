@@ -1318,6 +1318,8 @@
 	<setattribute xpath="//recipe[@name='resourceGlue' and @craft_area='chemistryStation']/ingredient[@name='resourceBone']" name="count">3</setattribute>
 	
 	<setattribute xpath="//recipe[@name='toolForgeCrucible']/ingredient[@name='resourceClayLump']" name="count">400</setattribute>
+	
+	<remove xpath="//recipe[@name='woodSignBlockVariantHelper']/ingredient[@name='resourceNail']" />
 	<remove xpath="//recipe[@name='resourceLockPick']/ingredient[@name='resourceMechanicalParts']" />
 	<remove xpath="//recipe[@name='resourceLockPickBundle']/ingredient[@name='resourceMechanicalParts']" />
 	<setattribute xpath="recipes/recipe[@name='armorMilitaryStealthBoots']/ingredient[@name='armorMilitarySetParts']" name="count">6</setattribute>

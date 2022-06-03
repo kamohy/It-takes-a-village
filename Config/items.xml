@@ -8,6 +8,9 @@
 <setattribute xpath="//item[contains(@name, 'Schematic')]/property[@name='EconomicValue']" name="value">200</setattribute>
 <setattribute xpath="//item[@name='ammoGasCan']/property[@name='EconomicBundleSize']" name="value">4</setattribute>
 
+<set xpath="//item[@name='resourceBone']/property[@name='SellableToTrader']/@value">true</set>
+<set xpath="//item[@name='foodRottingFlesh']/property[@name='SellableToTrader']/@value">true</set>
+
 <!-- Removing GyroCopter -->
 <remove xpath="//item[@name='questRewardGyrocopterPartsBundle']" />
 <remove xpath="//item[(contains(@name, 'vehicleGyroCopter') or contains(@name, 'vehicleGyrocopter'))]"/>

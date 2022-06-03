@@ -112,6 +112,7 @@
 		<property name="Class" value="Loot"/>
 		<property name="CustomIcon" value="cntLootChestHeroInsecureT1"/>
 		<property name="CustomIconTint" value="FEFFBF"/>
+		<property name="TintColor" value="CECD05"/>
 		<property name="CreativeMode" value="None"/>
 		<property name="Material" value="Mwood"/>
 		<property name="MaxDamage" value="2000"/>
@@ -2168,7 +2169,7 @@
 <setattribute xpath="//block[@name='sandbagBlockVariantHelper']/property[@name='EconomicValue']" name="value">6</setattribute>
 <setattribute xpath="//block[@name='cntWoodFurnitureBlockVariantHelper']/property[@name='EconomicValue']" name="value">42</setattribute>
 <setattribute xpath="//block[@name='cntWoodFurnitureBlockVariantHelper2']/property[@name='EconomicValue']" name="value">42</setattribute>
-<setattribute xpath="//block[@name='woodSignBlockVariantHelper']/property[@name='EconomicValue']" name="value">40</setattribute>
+<setattribute xpath="//block[@name='woodSignBlockVariantHelper']/property[@name='EconomicValue']" name="value">10</setattribute>
 <setattribute xpath="//block[@name='restaurantBooth']/property[@name='EconomicValue']" name="value">400</setattribute>
 <setattribute xpath="//block[@name='couchModernArm']/property[@name='EconomicValue']" name="value">45</setattribute>
 <setattribute xpath="//block[@name='cntMunitionsBoxArmy']/property[@name='EconomicValue']" name="value">250</setattribute>

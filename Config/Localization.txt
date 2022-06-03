@@ -88,7 +88,8 @@ xuiVendingWithOwner,UI,Menu,,,"{0}'s Shop"
 cntLotteryBoxPlaceableITAV,blocks,Container,,,"10k LOTTERY BOX!"
 cntLootLotteryBoxITAV,blocks,Container,,,"10k LOTTERY BOX!"
 cntLotteryBoxPlaceableDescITAV,blocks,Container,,,"Place and open this box for a chance to win 10000 Duke's Casino tokens! \n\nRequires Advanced Mechanic's table to craft."
-lotteryITAV,ui_display,Item stat,,,"A chance to win 10000 Duke coins?"
+lotteryITAV,ui_display,Item stat,,,"A chance to win 10000 Duke coins:"
+lotteryPlaceITAV,ui_display,Item stat,,,"Place box on the ground to loot:"
 
 
 lblContextActionAssemble,blocks,,,,"Assemble"

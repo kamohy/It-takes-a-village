@@ -21,6 +21,7 @@
 	
 	<item_display_info display_type="lotteryBoxITAV" display_group="groupBlocks" >
         <display_entry name="StabilitySupport" title_key="lotteryITAV" display_type="Bool"/>
+		<display_entry name="StabilitySupport" title_key="lotteryPlaceITAV" display_type="Bool"/>
     </item_display_info>
 </append>
 
