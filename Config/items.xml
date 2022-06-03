@@ -1091,7 +1091,7 @@
 <item name="powerizersBabyITAV">
 	<property name="Extends" value="apparelPlantFiberMaster" param1="CustomIcon"/>
 	<property name="DisplayType" value="powerizersITAV"/>
-	<property name="DescriptionKey" value="powerizersITAVDesc"/>
+	<property name="DescriptionKey" value="powerizersBabyITAVDesc"/>
 	<property name="CustomIcon" value="apparelGothBoots"/>
 	<property name="CustomIconTint" value="40,73,121"/>
 	<property name="UMA.Overlay0Tint" value="40,73,121"/>
