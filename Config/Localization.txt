@@ -526,7 +526,7 @@ drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,"Your Profession Perk skil
 readyForNextProfessionTooltip,progression,,,,"Crafting: Profession Book available!"
 
 tutorialTipITAV_title,Journal Tip,,,,"It Takes A Village"
-tutorialTipITAV,Journal Tip,,,,"You look rough,\n\nIf you can find the other survivors, you can combine your different strengths to better survive the apocalypse. Press Tab to open the crafting menu and your backpack. \n\nIt Takes A Village!"
+tutorialTipITAV,Journal Tip,,,,"You look rough,\n\nIf you can find the other survivors, you can combine your different strengths to better survive the apocalypse. Complete the intro quest before chosing a profession. \n\nIt Takes A Village!"
 weaponPartsAssemblyTipITAV_title, Journal Tip,,,,"Weapon Part Fragments"
 weaponPartsAssemblyTipITAV,Journal Tip,,,,"The Armorer can assemble weapon parts out of Fragments. Weapon Parts scrap into 25 Weapon Fragments."
 weaponPartFragmentITAV,items,,,,"Weapon Part Fragment"

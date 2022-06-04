@@ -109,8 +109,7 @@
 		</action>
 		
 		<objective type="Goto" id="trader" value="5" phase="1">
-			<property name="biome_filter_type" value="OnlyBiome" />
-			<property name="biome_filter" value="pine_forest" />
+			<property name="use_closest" value="true" />
 			<property name="nav_object" value="go_to_trader" />
 		</objective>
 		
