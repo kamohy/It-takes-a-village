@@ -2198,7 +2198,7 @@
 <append xpath="//block[@name='cntMailBox03VariantHelper']"><property name="EconomicValue" value="15" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='endTableLamp']"><property name="EconomicValue" value="415" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='lanternLight_player']"><property name="EconomicValue" value="827" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='farmPlotBlockVariantHelper']"><property name="EconomicValue" value="149" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='farmPlotBlockVariantHelper']"><property name="EconomicValue" value="99" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='garageDoorMetal_v1']"><property name="EconomicValue" value="1680" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='garageDoorMetal_v1Powered']"><property name="EconomicValue" value="3800" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='garageDoorHousePlayer']"><property name="EconomicValue" value="4320" /><property name="EconomicBundleSize" value="1" /></append>
