@@ -21,7 +21,6 @@
 <setattribute xpath="//block[@name='wallTorchLightPlayer' or @name='candleWallLightPlayer' or @name='burningBarrelPlayer']/property[@name='HeatMapStrength']" name="value">0</setattribute>
 
 
-
 <setattribute xpath="//block[contains(@name, 'chimney')]/property[@name='CreativeMode']" name="value">Dev</setattribute>
 
 <!-- Attempting to reduce oreWoodHarvest harvest when player is not Miner. Must be countered by increasing the perc_add to oreWoodHarvest for Miner in progression.xml! -->

@@ -16,6 +16,10 @@
 
 <setattribute xpath="//entity_class[@name='vehicleBicycle']/property[@name='LootListAlive']" name="value">coffeeMaker</setattribute>
 
+<!-- Doubling zpack drop to incentivize participation in combat/blood moon -->
+<setattribute xpath="//entity_class[@name='zombieTemplateMale' or @name='zombieTemplateMale']/property[@name='LootDropProb']" name="value">.04</setattribute>
+<setattribute xpath="//property[@name='LootDropProb' and @value='.03']" name="value">.06</setattribute>
+
 <setattribute xpath="//entity_class[@name='animalBear']/property[@name='ExperienceGain']" name="value">2000</setattribute> <!-- 1600 HP, 750 XP in vanilla -->
 <setattribute xpath="//entity_class[@name='animalZombieBear']/property[@name='ExperienceGain']" name="value">2500</setattribute> <!-- 2000 HP, 750 XP in vanilla -->
 <setattribute xpath="//entity_class[@name='animalDireWolf']/property[@name='ExperienceGain']" name="value">1200</setattribute> <!-- 750 HP, 750 XP in vanilla -->

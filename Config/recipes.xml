@@ -11,6 +11,8 @@
         <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="foodRottingFlesh,resourcePotassiumNitratePowder,resourceClayLump"/>
     </append>
 
+	<setattribute xpath="/recipes/recipe[@name='farmPlotBlockVariantHelper']/ingredient[@name='resourceClayLump']" name="count">50</setattribute>
+
     <setattribute xpath="//recipe[(contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3') or contains(@name, 'armor') or contains(@name, 'Battery'))]/effect_group/passive_effect[@name='CraftingIngredientCount']" name="level">2,3,4,5,6</setattribute>
 
     <setattribute xpath="//recipe[(contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3') or contains(@name, 'armor') or contains(@name, 'Battery'))]/effect_group/passive_effect[@name='CraftingIngredientCount']" name="value">0,0.75,1.5,2.2,3</setattribute>
