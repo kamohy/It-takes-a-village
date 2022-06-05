@@ -111,7 +111,7 @@
 		<!-- Miner69r effects to MinerITAV -->
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkMinerITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolRepairT1ClawHammer,meleeToolAxeT1IronFireaxe,meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAllSteelParts"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolRepairT1ClawHammer,meleeToolAxeT1IronFireaxe,meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAllSteelParts,resourceRockSmallBundle,resourceWoodBundle,resourceScrapIronBundle,resourcePotassiumNitratePowderBundle,resourceLeadBundle,resourceCoalBundle,resourceOilShaleBundle"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="workbenchMinerT2ITAV,meleeToolAxeT3ChainsawParts"/>
 			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkMinerITAV"/>
 			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkMinerITAV"/>
@@ -202,7 +202,7 @@
 			<passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="bonusCropHarvestITAV"/>
 			<passive_effect name="HarvestCount" operation="base_set" level="2,3" value="1,1" tags="bonusCropHarvest"/>
 			
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="workbenchFarmerT1ITAV,foodRawChickenMeatPreparedITAV,foodRawMeatPreparedITAV,plantedAloe1,plantedChrysanthemum1,plantedGoldenrod1,plantedYucca1"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="workbenchFarmerT1ITAV,foodRawChickenMeatPreparedITAV,foodRawMeatPreparedITAV,foodGrilledMeat,foodBakedPotato,foodCornBread,foodCornOnTheCob,plantedAloe1,plantedChrysanthemum1,plantedGoldenrod1,plantedYucca1"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="plantedBlueberry1,plantedCoffee1,plantedCorn1,plantedCotton1,plantedMushroom1,plantedPotato1,plantedHop1,plantedPumpkin1,plantedGraceCorn1"/>
 
 			<effect_description level="1" desc_key="perkFarmerITAVRank1Desc" long_desc_key="perkFarmerITAVRank1LongDesc"/>
@@ -320,8 +320,8 @@
 		<effect_group>
 			<!--<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkRunnerITAV"/> --><!-- fake crafting perk that is used to scale resources or quality like on carBattery -->
 
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="workbench,vehicleWheels,vehicleBicycleChassis,vehicleBicycleHandlebars,crushedCars,carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars,powerizersBabyITAV,workBootsBabyITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="resourceOil,ammoGasCanBundle,vehicleMotorcycleChassis,vehicleMotorcycleHandlebars,workbenchRunnerT2ITAV,powerizersITAV,workBootsITAV,cntLotteryBoxPlaceableITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="workbench,vehicleWheels,vehicleBicycleChassis,vehicleBicycleHandlebars,crushedCars,carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars,powerizersBabyITAV,workBootsBabyITAV,cntLotteryBoxPlaceableITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="resourceOil,ammoGasCanBundle,vehicleMotorcycleChassis,vehicleMotorcycleHandlebars,workbenchRunnerT2ITAV,powerizersITAV,workBootsITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="1" tags="vehicle4x4TruckChassis,vehicle4x4TruckAccessories"/>
 
 			<effect_description level="1" desc_key="perkRunnerITAVRank1Desc" long_desc_key="perkRunnerITAVRank1LongDesc"/>
@@ -345,7 +345,7 @@
 			<passive_effect name="TrapDoorTriggerDelay" operation="base_add" level="3" value="2"/>
 			<passive_effect name="LandMineTriggerDelay" operation="base_add" level="3" value="2"/>
 			<passive_effect name="TrapIncomingDamage" operation="perc_add" level="3" value="-.5"/>
-			<passive_effect name="BlockPickup" operation="base_set" level="2" value="1" tags="Mine" />
+			<passive_effect name="BlockPickup" operation="base_set" level="2,3" value="1" tags="Mine" />
 
 		</effect_group>
 	</perk>

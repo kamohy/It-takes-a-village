@@ -71,7 +71,7 @@ bookArmorerITAVDesc,progression,perk  book,,,"Armorers craft light and heavy arm
 bookWeaponsmithITAV,Items,perk  book,,,"Profession: Weaponsmith"
 bookWeaponsmithITAVDesc,progression,perk  book,,,"Weaponsmiths craft ranged and melee weaponry."
 bookFarmerITAV,Items,perk  book,,,"Profession: Farmer"
-bookFarmerITAVDesc,progression,perk  book,,,"Farmers harvest more from crops and can craft seeds from the harvest."
+bookFarmerITAVDesc,progression,perk  book,,,"Farmers harvest more from crops and can craft seeds from the harvest as well as basic foods."
 bookChemistITAV,Items,perk  book,,,"Profession: Chemist"
 bookChemistITAVDesc,progression,perk  book,,,"Chemists create vital items such as gunpowder, medicine, concrete mix... and paint."
 bookRoboticsITAV,Items,perk  book,,,"Profession: Robotics"
@@ -110,6 +110,7 @@ workstationT2ITAVTip_title,Journal Tip,,,,"Advanced Workstations"
 workstationT2ITAVTip,Journal Tip,,,,"The most advanced recipes require a profession specific advanced workstation to craft. Advanced workstations have a higher heat signature than basic workstations."
 
 modDyeInvisibleITAV,item_modifiers,mod,,,"Dye: Invisible"
+modDyeStarkYellowITAV,item_modifiers,mod,,,"Dye: Stark Yellow"
 modDyeRichPurpleITAV,item_modifiers,mod,,,"Dye: Rich Purple"
 modDyeJetBlackITAV,item_modifiers,mod,,,"Dye: Jet Black"
 modDyeWineRedITAV,item_modifiers,mod,,,"Dye: Wine Red"
@@ -418,7 +419,7 @@ perkSmelterITAVRank5LongDesc,progression,perk Pro,,,"Unlocks crafting of the cru
 perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster. Perform high-end crafts at the Advanced Miner's Table."
 perkMinerITAVName,progression,perk Pro,,,Miner
 perkMinerITAVRank1Desc,progression,perk Pro,,,"Woodpecker"
-perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 poor tools, increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger. Harvest 20% more from trees, and 40% more from ore, stone and terrain blocks. \nUnlocks all iron tools like pickaxes. Unlocks crafting of Steel Tool Parts from Tool Part Fragments."
+perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 poor tools, increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger. Harvest 20% more from trees, and 40% more from ore, stone and terrain blocks. \nUnlocks all iron tools like pickaxes. Unlocks crafting of Steel Tool Parts from Tool Part Fragments. Unlocks resource bundles."
 perkMinerITAVRank2Desc,progression,perk,,,"Choppy Chop"
 perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Craft quality 3 fair tools, increase tool damage by 20% and block damage by 60% with any axe, pick, shovel, chainsaw or auger. Harvest 40% more from trees, and 80% more from ore, stone and terrain blocks. Unlocks Advanced Miner's Table. Unlocks crafting of Motorized Tool Parts from Tool Part Fragments."
 perkMinerITAVRank3Desc,progression,perk,,,"Bang That Rock"
@@ -459,7 +460,7 @@ perkArmorerRank5LongDescITAV,progression,perk Pro,,,"You are now a master armore
 perkFarmerITAVDesc,progression,perk Pro,,,"Specialize in harvesting more crops and crafting seeds. Gain the ability to track animals and increase damage to and harvest from them. Meat can be efficiently prepared in the Farmer's Sink workbench."
 perkFarmerITAVName,progression,perk Pro,,,Farmer
 perkFarmerITAVRank1Desc,progression,perk Pro,,,Forager
-perkFarmerITAVRank1LongDesc,progression,perk Pro,,,"Double the harvest of wild or planted crops, and gain a 50% chance of receiving a seed when harvesting your crops. Craft seeds for flowers and decorative plants like goldenrod, chrysanthemum, aloe, and yucca.\nFarm plots cost 30% less to craft. Harvest 20% more resources from animals. Crouch to track rabbits, snakes and chickens. Deal 25% more damage to animals. Unlocks the Farmer's Sink workbench."
+perkFarmerITAVRank1LongDesc,progression,perk Pro,,,"Double the harvest of wild or planted crops, and gain a 50% chance of receiving a seed when harvesting your crops. Craft seeds for flowers and decorative plants like goldenrod, chrysanthemum, aloe, and yucca.\nFarm plots cost 30% less to craft. Harvest 20% more resources from animals. Crouch to track rabbits, snakes and chickens. Deal 25% more damage to animals. Unlocks the Farmer's Sink workbench and a few basic foods."
 perkFarmerITAVRank2Desc,progression,perk Pro,,,Hunter
 perkFarmerITAVRank2LongDesc,progression,perk Pro,,,"You can craft seeds for berries and vegetables.\n100% chance of receiving a seed when harvesting you crops, and 80% chance to harvest 1 additional crop.\nFarm plots cost 50% less to craft. Crouch to track deers, boars, wolves and coyotes. Harvest 60% more resources from animals."
 perkFarmerITAVRank3Desc,progression,perk Pro,,,Living off the Land
@@ -494,11 +495,11 @@ perkRoboticsITAVRank5LongDesc,progression,perk Pro,,,"You are now a top expert i
 perkRunnerITAVDesc,progression,perk Pro,,,"Craft those vehicles! Perform high-end crafts at the Advanced Mechanic's Table."
 perkRunnerITAVName,progression,perk Pro,,,Mechanic
 perkRunnerITAVRank1Desc,progression,perk Pro,,,Bikes and Stuff
-perkRunnerITAVRank1LongDesc,progression,perk Pro,,,"Harvest 20% faster and recieve 20% more resources when harvesting with a wrench, ratchet or impact driver. \nUnlocks crafting of workbenches, Wrench, Lockpicks, Crushed Car wall, Wheels, Bike parts, Baby Powerizer Boots, Baby Work Boots, Minibike parts, gas cans and quality 4 car batteries."
+perkRunnerITAVRank1LongDesc,progression,perk Pro,,,"Harvest 20% faster and recieve 20% more resources when harvesting with a wrench, ratchet or impact driver. \nUnlocks crafting of workbenches, Wrench, Lockpicks, Crushed Car wall, Wheels, Bike parts, Baby Powerizer Boots, Baby Work Boots, Minibike parts, Gas cans, Lottery Box and quality 4 Car Batteries."
 perkRunnerITAVRank2Desc,progression,perk Pro,,,Motorbiker, Boots and Gambling
-perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, Powerizer Boots, Work Boots, oil, gas can bundle, quality 5 car batteries, Lottery Box and Advanced Mechanic's Table. Can pick up mines."
+perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, Powerizer Boots, Work Boots, oil, Gas can bundle, quality 5 Car Batteries, and Advanced Mechanic's Table. Can pick up mines."
 perkRunnerITAVRank3Desc,progression,perk Pro,,,Limo out front
-perkRunnerITAVRank3LongDesc,progression,perk Pro,,,"Harvest 80% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of  4x4 truck parts and quality 6 car batteries. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower."
+perkRunnerITAVRank3LongDesc,progression,perk Pro,,,"Harvest 80% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of  4x4 truck parts and quality 6 Car Batteries. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower."
 perkRunnerITAVRank4Desc,progression,perk Pro,,,Level 4
 perkRunnerITAVRank4LongDesc,progression,perk Pro,,,""
 perkRunnerITAVRank5Desc,progression,perk Pro,,,Level 5

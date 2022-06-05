@@ -87,6 +87,8 @@
 <append xpath="//item[@name='resourcePaint']"><property name="UnlockedBy" value="perkChemistITAV"/></append>
 <append xpath="//item[@name='resourceConcreteMix']"><property name="UnlockedBy" value="perkChemistITAV"/></append>
 
+
+
 <!-- Moving intellect items from intellect perk to strength perk -->	
 <append xpath="//property[contains(@value, 'attIntellect') and not (contains(@value, 'drone')) and not(contains(@value, 'turret'))]/@value">,attStrength</append>
 
@@ -96,6 +98,10 @@
 <append xpath="//item[@name='meleeToolAllSteelParts']"><property name="UnlockedBy" value="perkMinerITAV"/></append>
 <append xpath="//item[@name='meleeToolAxeT3ChainsawParts']"><property name="UnlockedBy" value="perkMinerITAV"/></append>
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkMasterChef'))]" name="value">perkCookITAV</setattribute>
+<setattribute xpath="//item[@name='foodGrilledMeat']/property[@name='UnlockedBy']" name="value">perkCookITAV,perkFarmerITAV</setattribute>
+<setattribute xpath="//item[@name='foodBakedPotato']/property[@name='UnlockedBy']" name="value">perkCookITAV,perkFarmerITAV</setattribute>
+<setattribute xpath="//item[@name='foodCornBread']/property[@name='UnlockedBy']" name="value">perkCookITAV,perkFarmerITAV</setattribute>
+<setattribute xpath="//item[@name='foodCornOnTheCob']/property[@name='UnlockedBy']" name="value">perkCookITAV,perkFarmerITAV</setattribute>
 <setattribute xpath="//item[@name='drugHerbalAntibiotics']/property[@name='UnlockedBy']" name="value">perkChemistITAV</setattribute>
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkPhysician'))]" name="value">perkChemistITAV</setattribute>
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkTurrets'))]" name="value">perkRoboticsITAV</setattribute>
@@ -121,6 +127,7 @@
 <setattribute xpath="//passive_effect[@tags='perkMiner69r']" name="tags">perkMinerITAV</setattribute>
 <setattribute xpath="//passive_effect[@tags='perkMiner69r,axe']" name="tags">perkMinerITAV,axe</setattribute>
 <setattribute xpath="//passive_effect[@tags='perkMiner69r,miningTool']" name="tags">perkMinerITAV,miningTool</setattribute>
+<setattribute xpath="/items/item[@name='resourceRockSmallBundle']/property[@name='UnlockedBy']" name="value">perkMinerITAV</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@name='Tags']" name="value">melee,light,tool,repairTool,longshaft,attStrength,perkMinerITAV,canHaveCosmetic</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@name='UnlockedBy']" name="value">perkMinerITAV</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolRepairT3Nailgun']/property[@name='Tags']" name="value">tool,nailgun,sideAttachments,repairTool,attStrength,perkMinerITAV,canHaveCosmetic,noMods</setattribute>
@@ -309,7 +316,7 @@
 		<property name="HoldType" value="45"/>
 		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-		<property name="UnlockedBy" value="perkArtOfMiningPallets"/>
+		<property name="UnlockedBy" value="perkMinerITAV"/>
 		<property name="Material" value="Morganic"/>
 		<property name="Stacknumber" value="5"/>
 		<property name="SellableToTrader" value="true"/>
@@ -326,6 +333,11 @@
 	</item>
 
 </append>
+
+<!-- Adjusting vanilla foods -->
+
+<remove xpath="//item[@name='foodCornOnTheCob' or @name='foodBakedPotato']/effect_group/triggered_effect[@stat='water']"/>
+<setattribute xpath="//item[@name='foodCornOnTheCob' or @name='foodBakedPotato']/effect_group/display_value[@name='$waterAmountAdd']" name="value">0</setattribute>
 
 <!-- New foods and drinks -->
 <append xpath="/items">

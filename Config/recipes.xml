@@ -39,7 +39,7 @@
 		</recipe>		
 		
 		<!-- Lottery Box  -->
-		<recipe name="cntLotteryBoxPlaceableITAV" count="3" craft_time="3" craft_area="workbenchRunnerT2ITAV" tags="learnable,perkRunnerITAV">
+		<recipe name="cntLotteryBoxPlaceableITAV" count="3" craft_time="3" craft_area="workbench" tags="learnable,perkRunnerITAV">
 			<ingredient name="resourceOil" count="10" />
 		</recipe>
 		
