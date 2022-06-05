@@ -183,7 +183,7 @@
 <remove xpath="//lootgroup[@name='groupIngredientsCommon']/item[@name='resourceCropCoffeeBeans']"/> 
 <remove xpath="//lootgroup[@name='groupIngredientsCommon']/item[@name='resourceCropGoldenrodPlant']"/>
 <append xpath="//lootgroup[@name='groupIngredientsCommon']"><item name="plantedPotato1" count="1,4" /></append>
-<setattribute xpath="//lootgroup[@name='groupCraftingUncommon']/item[@name='resourceGunPowder']" name="count">10,100</setattribute>
+<setattribute xpath="//lootgroup[@name='groupCraftingUncommon']/item[@name='resourceGunPowder']" name="count">3,25</setattribute>
 
 <remove xpath="//item[@name='gunHandgunT1Pistol']" />
 
@@ -392,7 +392,7 @@ makes the looter more financially self sustained than if they had to buy all the
 <remove xpath="//lootgroup[@name='groupChem01']/item[@name='drinkJarBoiledWater']" />
 <append xpath="//lootgroup[@name='groupChem01']">
 	<item group="poiCandyOnlyITAV" />
-	<item name="resourceGunPowder" count="30,70" />
+	<item name="resourceGunPowder" count="8,17" />
 	<item name="foodCanChili" />
 </append>
 
@@ -501,11 +501,11 @@ makes the looter more financially self sustained than if they had to buy all the
 
 
 <append xpath="//lootgroup[@name='groupReinforcedChestT1']">
-	<item name="resourceGunPowder" count="200" />
+	<item name="resourceGunPowder" count="50" />
 </append>
 
 <append xpath="//lootgroup[@name='groupReinforcedChestT2']">
-	<item name="resourceGunPowder" count="350" />
+	<item name="resourceGunPowder" count="85" />
 </append>
 
 <!-- <remove xpath="//lootgroup[@name='groupReinforcedChestT3_03']/item" /> already empty -->
@@ -514,7 +514,7 @@ makes the looter more financially self sustained than if they had to buy all the
 </append>
 
 <append xpath="//lootgroup[@name='groupReinforcedChestT3']">
-	<item name="resourceGunPowder" count="500" />
+	<item name="resourceGunPowder" count="125" />
 </append>
 
 
@@ -537,7 +537,7 @@ makes the looter more financially self sustained than if they had to buy all the
 </append>
 
 <append xpath="//lootgroup[@name='groupHardenedChestT4']">
-	<item name="resourceGunPowder" count="900" />
+	<item name="resourceGunPowder" count="240" />
 </append>
 
 <remove xpath="//lootgroup[@name='groupHardenedChestT5_01']/item" />
@@ -562,7 +562,7 @@ makes the looter more financially self sustained than if they had to buy all the
 <setattribute xpath="//lootgroup[@name='groupHardenedChestT5']/item[@group='groupHardenedChestT5_01']" name="count">1</setattribute>
 
 <append xpath="//lootgroup[@name='groupHardenedChestT5']">
-	<item name="resourceGunPowder" count="1200" />
+	<item name="resourceGunPowder" count="300" />
 </append>
 
 <!-- Removing sledgehammer from tool loot groups despite it being good tool for destroying things -->

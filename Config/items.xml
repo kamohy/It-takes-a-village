@@ -1845,7 +1845,7 @@
 <setattribute xpath="//item[@name='resourceCement']/property[@name='EconomicValue']" name="value">10</setattribute>
 <setattribute xpath="//item[@name='resourceConcreteMix']/property[@name='EconomicValue']" name="value">12</setattribute>
 <setattribute xpath="//item[@name='resourceCloth']/property[@name='EconomicValue']" name="value">1</setattribute>
-<setattribute xpath="//item[@name='resourcePaper']/property[@name='EconomicValue']" name="value">1</setattribute>
+<setattribute xpath="//item[@name='resourcePaper']/property[@name='EconomicValue']" name="value">2</setattribute>
 <setattribute xpath="//item[@name='resourceMilitaryFiber']/property[@name='EconomicValue']" name="value">535</setattribute>
 <setattribute xpath="//item[@name='resourceElectricParts']/property[@name='EconomicValue']" name="value">60</setattribute>
 <setattribute xpath="//item[@name='resourceMechanicalParts']/property[@name='EconomicValue']" name="value">60</setattribute>
@@ -1996,7 +1996,7 @@
 <setattribute xpath="//item[@name='ammo762mmBulletBall']/property[@name='EconomicValue']" name="value">7</setattribute>
 <setattribute xpath="//item[@name='ammo762mmBulletHP']/property[@name='EconomicValue']" name="value">9</setattribute>
 <setattribute xpath="//item[@name='ammo762mmBulletAP']/property[@name='EconomicValue']" name="value">13</setattribute>
-<setattribute xpath="//item[@name='ammoShotgunShell']/property[@name='EconomicValue']" name="value">7</setattribute>
+<setattribute xpath="//item[@name='ammoShotgunShell']/property[@name='EconomicValue']" name="value">8</setattribute>
 <setattribute xpath="//item[@name='ammoShotgunSlug']/property[@name='EconomicValue']" name="value">21</setattribute>
 <setattribute xpath="//item[@name='ammoJunkTurretRegular']/property[@name='EconomicValue']" name="value">6</setattribute>
 <setattribute xpath="//item[@name='ammoJunkTurretShell']/property[@name='EconomicValue']" name="value">4</setattribute>
@@ -2024,7 +2024,7 @@
 <setattribute xpath="//item[@name='ammoBundle762mmBulletBall']/property[@name='EconomicValue']" name="value">560</setattribute>
 <setattribute xpath="//item[@name='ammoBundle762mmBulletHP']/property[@name='EconomicValue']" name="value">720</setattribute>
 <setattribute xpath="//item[@name='ammoBundle762mmBulletAP']/property[@name='EconomicValue']" name="value">1040</setattribute>
-<setattribute xpath="//item[@name='ammoBundleShotgunShell']/property[@name='EconomicValue']" name="value">560</setattribute>
+<setattribute xpath="//item[@name='ammoBundleShotgunShell']/property[@name='EconomicValue']" name="value">640</setattribute>
 <setattribute xpath="//item[@name='ammoBundleShotgunSlug']/property[@name='EconomicValue']" name="value">1680</setattribute>
 <setattribute xpath="//item[@name='ammoBundleJunkTurretRegular']/property[@name='EconomicValue']" name="value">4800</setattribute>
 <setattribute xpath="//item[@name='ammoBundleJunkTurretShell']/property[@name='EconomicValue']" name="value">3200</setattribute>
@@ -2052,7 +2052,7 @@
 <setattribute xpath="//item[@name='thrownGrenadeContact']/property[@name='EconomicValue']" name="value">328</setattribute>
 <setattribute xpath="//item[@name='thrownGrenade']/property[@name='EconomicValue']" name="value">268</setattribute>
 <setattribute xpath="//item[@name='thrownTimedCharge']/property[@name='EconomicValue']" name="value">120</setattribute>
-<setattribute xpath="//item[@name='thrownDynamite']/property[@name='EconomicValue']" name="value">77</setattribute>
+<setattribute xpath="//item[@name='thrownDynamite']/property[@name='EconomicValue']" name="value">87</setattribute>
 <setattribute xpath="//item[@name='thrownAmmoMolotovCocktail']/property[@name='EconomicValue']" name="value">141</setattribute>
 <setattribute xpath="//item[@name='thrownAmmoFlare']/property[@name='EconomicValue']" name="value">5</setattribute>
 <setattribute xpath="//item[@name='ammoDartIron']/property[@name='EconomicValue']" name="value">7</setattribute>
@@ -2155,7 +2155,7 @@
 <setattribute xpath="//item[@name='apparelSkiGoggles']/property[@name='EconomicValue']" name="value">500</setattribute>
 <setattribute xpath="//item[@name='apparelNerdGlasses']/property[@name='EconomicValue']" name="value">500</setattribute>
 <setattribute xpath="//item[@name='apparelNightvisionGoggles']/property[@name='EconomicValue']" name="value">2000</setattribute>
-<setattribute xpath="//item[@name='apparelCigar']/property[@name='EconomicValue']" name="value">301</setattribute>
+<setattribute xpath="//item[@name='apparelCigar']/property[@name='EconomicValue']" name="value">302</setattribute>
 <setattribute xpath="//item[@name='apparelFacialPiercings']/property[@name='EconomicValue']" name="value">50</setattribute>
 <setattribute xpath="//item[@name='apparelBandana']/property[@name='EconomicValue']" name="value">4</setattribute>
 <setattribute xpath="//item[@name='apparelDenimPants']/property[@name='EconomicValue']" name="value">75</setattribute>

@@ -355,6 +355,7 @@ perkElectrocutionerRank3LongDesc,progression,perk Int,,,"You are getting dangero
 perkElectrocutionerRank4LongDesc,progression,perk Int,,,"You are lethal with stun batons. Deal 40% more damage, and stun victims 80% longer. Craft quality 5 pipe batons. \nAsk an Armorer to craft stun batons for you."
 perkParkourRank4LongDesc,progression,perk Agi,,,"You are now a parkour master and can navigate difficult situations easily. Reduce stamina cost of jumping by 40%. Increase safe fall distance by 5 meters, can jump 2 meters higher, and never get a sprained or broken leg when falling. Ask a Mechanic to craft a pair of Powerizer boots to take your parkouring to the next level!"
 
+
 plantedCropsGroupDesc,blocks,Farming,,,"Plant these seeds on a craftable Farm Plot block to grow plants for you to harvest.\n\nWhen harvested, there is a 65% chance to get a seed back for replanting."
 
 perkBatterUpBaseballBatsDesc,,,,,"Craft the Baseball Cap Helmet Mod."
@@ -365,6 +366,8 @@ perkAutoWeaponsMachineGunsDesc,,,,,"Craft the Weapon Flashlight Mod."
 perkAutoWeaponsMachineGunsLongDesc,,,,,"Don't suck after bedtime. Craft the Weapon Flashlight Mod."
 perkUrbanCombatLandingDesc,,,,,"Craft the Impact Bracing Boots Mod."
 perkUrbanCombatLandingLongDesc,,,,,"Make landing on your feet even more appealing. Craft the Impact Bracing Boots Mod."
+perkArtOfMiningPalletsDesc,progression,perk  book,,,"You can craft the Helmet Light Mod to light your way in the depths."
+perkArtOfMiningPalletsLongDesc,progression,perk  book,,,"All that mining is strainging your eyes? Craft the Helmet Light mod to see where you're going."
 
 foodPumpkinCheesecakeDesc,items,Food,,,"This pumpkin cheesecake tastes delicious and grants you a beer buzz buff!"
 

@@ -1431,8 +1431,17 @@
 	
 	<!-- Changing the recipes for bullets, to make them cheaper to buy -->
 	
-	<setattribute xpath="//recipe[@name='ammo762mmBulletBall']/ingredient[@name='resourceGunPowder']" name="value">2</setattribute> <!-- 3 in vanilla -->
-	<setattribute xpath="//recipe[@name='ammoShotgunShell']/ingredient[@name='resourceGunPowder']" name="value">2</setattribute> <!-- 4 in vanilla -->
+	<setattribute xpath="//recipe[@name='ammo762mmBulletBall']/ingredient[@name='resourceGunPowder']" name="count">2</setattribute> <!-- 3 in vanilla -->
+	<setattribute xpath="//recipe[@name='ammoBundle762mmBulletBall']/ingredient[@name='resourceGunPowder']" name="count">160</setattribute> <!-- 240 in vanilla -->
+	
+	<setattribute xpath="//recipe[@name='ammo762mmBulletHP']/ingredient[@name='resourceGunPowder']" name="count">2</setattribute> <!-- 3 in vanilla -->
+	<setattribute xpath="//recipe[@name='ammoBundle762mmBulletHP']/ingredient[@name='resourceGunPowder']" name="count">160</setattribute> <!-- 240 in vanilla -->
+	
+	<setattribute xpath="//recipe[@name='ammo762mmBulletAP']/ingredient[@name='resourceGunPowder']" name="count">4</setattribute> <!-- 5 in vanilla -->
+	<setattribute xpath="//recipe[@name='ammoBundle762mmBulletAP']/ingredient[@name='resourceGunPowder']" name="count">320</setattribute> <!-- 400 in vanilla -->
+	
+	<setattribute xpath="//recipe[@name='ammoShotgunShell']/ingredient[@name='resourceGunPowder']" name="count">2</setattribute> <!-- 4 in vanilla -->
+	<setattribute xpath="//recipe[@name='ammoBundleShotgunShell']/ingredient[@name='resourceGunPowder']" name="count">160</setattribute> <!-- 320 in vanilla -->
 	
 	<setattribute xpath="//recipe[@name='resourceBulletCasing']/ingredient[@name='unit_brass']" name="count">1</setattribute> <!-- 5 in vanilla -->
 	<remove xpath="//recipe[@name='resourceBulletCasing']/ingredient[@name='unit_clay']" />
@@ -1465,7 +1474,13 @@
 	<!-- Locking things behind ITAV perks -->
 	<setattribute xpath="//recipe[@name='resourceForgedIron']" name="tags">learnable,perkSmelterITAV</setattribute>
 	<setattribute xpath="//recipe[@name='resourceForgedSteel']" name="tags">learnable,perkSmelterITAV</setattribute>
-	<setattribute xpath="//recipe[@name='resourceGunPowder']" name="tags">learnable,perkChemistITAV</setattribute>
+	<remove xpath="//recipe[@name='resourceGunPowder']"/>
+	<insertAfter xpath="//recipe[@name='resourceForgedSteel']">
+		<recipe name="resourceGunPowder" count="1" craft_area="chemistryStation" tags="learnable,perkChemistITAV">
+		<ingredient name="resourceCoal" count="1" />
+		<ingredient name="resourcePotassiumNitratePowder" count="1" />
+		</recipe>
+	</insertAfter>
 	<setattribute xpath="//recipe[@name='resourcePaint']" name="tags">learnable,perkChemistITAV</setattribute>
 	<setattribute xpath="//recipe[@name='tripwirepost']" name="tags">learnable,perkRoboticsITAV</setattribute>
 	<setattribute xpath="//recipe[@name='electricfencepost']" name="tags">learnable,perkRoboticsITAV</setattribute>

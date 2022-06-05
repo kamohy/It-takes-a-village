@@ -2022,7 +2022,7 @@
 <setattribute xpath="//block[@name='treePlantedMountainPine1m']/property[@name='EconomicValue']" name="value">3</setattribute>
 <setattribute xpath="//block[@name='plantedMushroom1']/property[@name='EconomicValue']" name="value">18</setattribute>
 <setattribute xpath="//block[@name='decoPumpkinJackOLantern']/property[@name='EconomicValue']" name="value">15</setattribute>
-<setattribute xpath="//block[@name='farmPlotBlock']/property[@name='EconomicValue']" name="value">149</setattribute>
+<setattribute xpath="//block[@name='farmPlotBlock']/property[@name='EconomicValue']" name="value">99</setattribute>
 <setattribute xpath="//block[@name='metalPipeValve']/property[@name='EconomicValue']" name="value">30</setattribute>
 <setattribute xpath="//block[@name='pipeSmall1x3']/property[@name='EconomicValue']" name="value">60</setattribute>
 <setattribute xpath="//block[@name='fusebox']/property[@name='EconomicValue']" name="value">150</setattribute>
@@ -2198,7 +2198,7 @@
 <append xpath="//block[@name='cntMailBox03VariantHelper']"><property name="EconomicValue" value="15" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='endTableLamp']"><property name="EconomicValue" value="415" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='lanternLight_player']"><property name="EconomicValue" value="827" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='farmPlotBlockVariantHelper']"><property name="EconomicValue" value="99" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='farmPlotBlockVariantHelper']"><property name="EconomicValue" value="149" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='garageDoorMetal_v1']"><property name="EconomicValue" value="1680" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='garageDoorMetal_v1Powered']"><property name="EconomicValue" value="3800" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='garageDoorHousePlayer']"><property name="EconomicValue" value="4320" /><property name="EconomicBundleSize" value="1" /></append>
@@ -2243,19 +2243,19 @@
 <append xpath="//block[@name='vaultHatch_v3_Powered']"><property name="EconomicValue" value="4320" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='vaultDoor03_Powered']"><property name="EconomicValue" value="4320" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='woodFenceRailingTrellisSheetBlockVariantHelper']"><property name="EconomicValue" value="2" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='signBread01']"><property name="EconomicValue" value="30" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='signBread02']"><property name="EconomicValue" value="30" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signBread01']"><property name="EconomicValue" value="40" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signBread02']"><property name="EconomicValue" value="40" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='decoWineBottle']"><property name="EconomicValue" value="98" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='decoWineBottleCorner']"><property name="EconomicValue" value="98" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='decoWineBottleShelfRow']"><property name="EconomicValue" value="98" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='houseFrontDoor1_v1']"><property name="EconomicValue" value="151" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='houseFrontDoor2_v1']"><property name="EconomicValue" value="151" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='cntFridgeStainlessSteel']"><property name="EconomicValue" value="960" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='signDinersMenu']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='signDinersMenu2m']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='signLaborDaySaleAd']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='signSale01']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='signSale02']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signDinersMenu']"><property name="EconomicValue" value="30" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signDinersMenu2m']"><property name="EconomicValue" value="30" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signLaborDaySaleAd']"><property name="EconomicValue" value="30" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signSale01']"><property name="EconomicValue" value="30" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signSale02']"><property name="EconomicValue" value="30" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='decoPoolTable']"><property name="EconomicValue" value="312" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='cntWoodBurningStove']"><property name="EconomicValue" value="3350" /><property name="EconomicBundleSize" value="1" /></append>
 <setattribute xpath="//block[@name='officeChair01']/property[@name='EconomicValue']" name="value">386</setattribute>
@@ -2264,12 +2264,12 @@
 <append xpath="//block[@name='crushedCars']"><property name="EconomicValue" value="80" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='treeJuniper4m']"><property name="EconomicValue" value="20" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='decoClawFootBathTub']"><property name="EconomicValue" value="3604" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='signPosterMovie2159']"><property name="EconomicValue" value="43" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='signPosterMovieLoneWolf']"><property name="EconomicValue" value="43" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='signPosterMovieMammasJustice']"><property name="EconomicValue" value="43" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='signPosterMovieSexualTension']"><property name="EconomicValue" value="43" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='signNotice01']"><property name="EconomicValue" value="30" /><property name="EconomicBundleSize" value="1" /></append>
-<append xpath="//block[@name='signNotice04']"><property name="EconomicValue" value="30" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signPosterMovie2159']"><property name="EconomicValue" value="63" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signPosterMovieLoneWolf']"><property name="EconomicValue" value="63" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signPosterMovieMammasJustice']"><property name="EconomicValue" value="63" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signPosterMovieSexualTension']"><property name="EconomicValue" value="63" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signNotice01']"><property name="EconomicValue" value="50" /><property name="EconomicBundleSize" value="1" /></append>
+<append xpath="//block[@name='signNotice04']"><property name="EconomicValue" value="50" /><property name="EconomicBundleSize" value="1" /></append>
 <setattribute xpath="//block[@name='treePlantedMountainPine1m']/property[@name='EconomicValue']" name="value">1</setattribute>
 <append xpath="//block[@name='cntToaster']"><property name="EconomicValue" value="270" /><property name="EconomicBundleSize" value="1" /></append>
 <append xpath="//block[@name='decoLaptop']"><property name="EconomicValue" value="1340" /><property name="EconomicBundleSize" value="1" /></append>
@@ -2294,12 +2294,12 @@
 <setattribute xpath="//block[@name='cntCoffeeMakerITAV']/property[@name='EconomicValue']" name="value">600</setattribute>
 <setattribute xpath="//block[@name='cntCoffeeMakerCommercialITAV']/property[@name='EconomicValue']" name="value">900</setattribute>
 <setattribute xpath="//block[@name='decoClawFootBathTub']/property[@name='EconomicValue']" name="value">3604</setattribute>
-<setattribute xpath="//block[@name='signPosterMovie2159']/property[@name='EconomicValue']" name="value">43</setattribute>
-<setattribute xpath="//block[@name='signPosterMovieLoneWolf']/property[@name='EconomicValue']" name="value">43</setattribute>
-<setattribute xpath="//block[@name='signPosterMovieMammasJustice']/property[@name='EconomicValue']" name="value">43</setattribute>
-<setattribute xpath="//block[@name='signPosterMovieSexualTension']/property[@name='EconomicValue']" name="value">43</setattribute>
-<setattribute xpath="//block[@name='signNotice01']/property[@name='EconomicValue']" name="value">30</setattribute>
-<setattribute xpath="//block[@name='signNotice04']/property[@name='EconomicValue']" name="value">30</setattribute>
+<setattribute xpath="//block[@name='signPosterMovie2159']/property[@name='EconomicValue']" name="value">63</setattribute>
+<setattribute xpath="//block[@name='signPosterMovieLoneWolf']/property[@name='EconomicValue']" name="value">63</setattribute>
+<setattribute xpath="//block[@name='signPosterMovieMammasJustice']/property[@name='EconomicValue']" name="value">63</setattribute>
+<setattribute xpath="//block[@name='signPosterMovieSexualTension']/property[@name='EconomicValue']" name="value">63</setattribute>
+<setattribute xpath="//block[@name='signNotice01']/property[@name='EconomicValue']" name="value">50</setattribute>
+<setattribute xpath="//block[@name='signNotice04']/property[@name='EconomicValue']" name="value">50</setattribute>
 <setattribute xpath="//block[@name='decoCookingPotITAV']/property[@name='EconomicValue']" name="value">90</setattribute>
 <setattribute xpath="//block[@name='cntFoodPileSmallITAV']/property[@name='EconomicValue']" name="value">175</setattribute>
 <setattribute xpath="//block[@name='cntFoodPileMediumITAV']/property[@name='EconomicValue']" name="value">310</setattribute>

@@ -35,7 +35,6 @@
 </append>
 
 
-<append xpath="//perk[@name='perkArtOfMiningPallets']/effect_group/passive_effect/@tags">,resourceClayLumpBundle</append>
 
 <!-- Moving Electrocutioner from Intellect to Strength Attribute tree -->
 <setattribute xpath="//perk[@name='perkElectrocutioner']" name="parent">skillStrengthCombat</setattribute>
@@ -111,7 +110,7 @@
 		<!-- Miner69r effects to MinerITAV -->
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkMinerITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolRepairT1ClawHammer,meleeToolAxeT1IronFireaxe,meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAllSteelParts,resourceRockSmallBundle,resourceWoodBundle,resourceScrapIronBundle,resourcePotassiumNitratePowderBundle,resourceLeadBundle,resourceCoalBundle,resourceOilShaleBundle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolRepairT1ClawHammer,meleeToolAxeT1IronFireaxe,meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAllSteelParts,resourceRockSmallBundle,resourceWoodBundle,resourceScrapIronBundle,resourcePotassiumNitratePowderBundle,resourceLeadBundle,resourceCoalBundle,resourceOilShaleBundle,resourceClayLumpBundle"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="workbenchMinerT2ITAV,meleeToolAxeT3ChainsawParts"/>
 			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkMinerITAV"/>
 			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkMinerITAV"/>
@@ -368,6 +367,11 @@
 </perks>
 </append>
 
+
+
+<!-- Replacing the bundling of resources from mining book because Miner has it in the perk -->
+
+<setattribute xpath="//perk[@name='perkArtOfMiningPallets']/effect_group/passive_effect[@name='RecipeTagUnlocked']" name="tags">modArmorHelmetLight</setattribute>
 
 <!-- Removing Vanilla perks-->
 <remove xpath="//perk[@name='perkAdvancedEngineering']" />
