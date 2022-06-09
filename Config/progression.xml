@@ -78,13 +78,20 @@
 <append xpath="/progression">
 <perks min_level="0" max_level="2" base_skill_point_cost="2" cost_multiplier_per_level="1.3" max_level_ratio_to_parent="5"> <!-- 2 points, 3 points, 4 points -->
 </perks>
-<perks min_level="0" max_level="5" base_skill_point_cost="3" cost_multiplier_per_level="0.82" max_level_ratio_to_parent="5"> <!-- 2 points, 1 point, 1 point -->
-
+<perks min_level="0" max_level="5" base_skill_point_cost="3" cost_multiplier_per_level="0.82" max_level_ratio_to_parent="5"> <!-- 2 points, 2 points, 1 point, 1 point, 1 point -->
 	<!-- Smelter perk -->
 	<perk name="perkSmelterITAV" parent="attITAV" name_key="perkSmelterITAVName" max_level="3" desc_key="perkSmelterITAVDesc" icon="ui_game_symbol_forge">		
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="reqAttLevel05ITAV"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="8" desc_key="reqAttLevel08ITAV"/></level_requirements>
+		<level_requirements level="1">
+			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
+		</level_requirements>
+		<level_requirements level="2">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />
+		</level_requirements>
+		<level_requirements level="3">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="8" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntSmelterITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel08ITAV" />
+			</level_requirements>
 
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_set" level="0,3" value="0,3" tags="perkSmelterITAV"/><!-- fake crafting perk that is used to scale resources. perkAdvancedEngineering -->
@@ -98,14 +105,29 @@
 			<effect_description level="3" desc_key="perkSmelterITAVRank3Desc" long_desc_key="perkSmelterITAVRank3LongDesc"/>
 		</effect_group>
 	</perk>
-
+</perks>
+<perks min_level="0" max_level="5" base_skill_point_cost="3" cost_multiplier_per_level="0.82" max_level_ratio_to_parent="5">
 	<!-- Miner perk -->
-	<perk name="perkMinerITAV" parent="attITAV" name_key="perkMinerITAVName" desc_key="perkMinerITAVDesc" icon="ui_game_symbol_mining" tags="learnable">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="2" desc_key="reqAttLevel02ITAV"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="reqAttLevel03ITAV"/></level_requirements>
-		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="reqAttLevel05ITAV"/></level_requirements>
-		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="reqAttLevel07ITAV"/></level_requirements>
+	<perk name="perkMinerITAV" parent="attITAV" name_key="perkMinerITAVName" desc_key="perkMinerITAVDesc" icon="ui_game_symbol_mining">
+		<level_requirements level="1">
+			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
+		</level_requirements>
+		<level_requirements level="2">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="2" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel02ITAV" />
+		</level_requirements>
+		<level_requirements level="3">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel03ITAV" />
+		</level_requirements>
+		<level_requirements level="4">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />
+		</level_requirements>
+		<level_requirements level="5">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel07ITAV" />
+		</level_requirements>
 				
 		<!-- Miner69r effects to MinerITAV -->
 		<effect_group>
@@ -125,36 +147,45 @@
 		<!-- Motherlode effects to MinerITAV -->
 		<effect_group>
 			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="oreWoodHarvest" /> <!-- value=".2,1" -->
-			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="rockClayHarvest"/> <!-- value="2.2,4.2" -->
-			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value="-.2,-.6" tags="Harvesting"> <!-- value="-.1,-.4" -->
+			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value="-.1,-.4" tags="Harvesting"> <!-- value="-.1,-.4" -->
 				<requirement name="HoldingItemHasTags" tags="perkMinerITAV"/>
 			</passive_effect>
         </effect_group>		
 	</perk>
-
+</perks>
+<perks min_level="0" max_level="5" base_skill_point_cost="3" cost_multiplier_per_level="0.82" max_level_ratio_to_parent="5">
 
 	<!-- Cook perk -->
     <perk name="perkCookITAV" parent="attITAV" name_key="perkCookITAVName" desc_key="perkCookITAVDesc" icon="ui_game_symbol_spatula">
-        <level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
-        <level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="reqAttLevel03ITAV"/></level_requirements>
-        <level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="reqAttLevel05ITAV"/></level_requirements>
-        <level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="reqAttLevel07ITAV"/></level_requirements>
-        <level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="reqAttLevel10ITAV"/></level_requirements>
+        <level_requirements level="1">
+			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
+		</level_requirements>
+		<level_requirements level="2">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel03ITAV" />
+		</level_requirements>
+        <level_requirements level="3">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />
+		</level_requirements>
+        <level_requirements level="4">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel07ITAV" />
+		</level_requirements>
+        <level_requirements level="5">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntCookITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
+		</level_requirements>
 		
 		<effect_group>
             <passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkCookITAV"/><!-- fake crafting perk that is used to scale resources -->
             <!-- <passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-.1,-.5" tags="perkCookITAV"/> -->
 
-            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1"
-                tags="foodRawChickenMeatPreparedITAV,foodRawMeatPreparedITAV,foodBaconAndEggs,foodBoiledMeat,foodGrilledMeat,foodBakedPotato,foodCornBread,foodCornOnTheCob,drinkJarRedTea,drinkJarCoffee,drinkJarGoldenRodTea,foodDoughITAV"/>
-            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1"
-                tags="foodChickenBrothITAV,foodMeatBrothITAV,foodVegetableBrothITAV,foodSteakAndPotato,foodBlueberryPie,foodRosysCrunchyAcornPieITAV,foodChickenStewITAV,foodMeatStew,foodVegetableStew,foodPumpkinPie,foodPumpkinCheesecake,foodPumpkinBread,drinkJarCoffeeSpicyITAV,cntFoodPileSmallITAV"/>
-            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1"
-                tags="foodShamChowder,foodHoboStew,foodFishTacos,drinkYuccaJuiceSmoothie,foodChiliDog,drinkJarBeer,foodChickenSoupITAV,foodChickenEmpanadasITAV"/>
-            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1"
-                tags="foodGumboStew,foodShepardsPie,foodSpaghetti,foodTunaFishGravyToast,foodChickenSoupSpicyITAV,cntFoodPileMediumITAV,campfireT2ITAV"/>
-            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1"
-                tags="drinkJarGrandpasMoonshine,drinkJarGrandpasLearningElixir,cntFoodPileLargeITAV"/>
+            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="foodRawChickenMeatPreparedITAV,foodRawMeatPreparedITAV,foodBaconAndEggs,foodBoiledMeat,foodGrilledMeat,foodBakedPotato,foodCornBread,foodCornOnTheCob,drinkJarRedTea,drinkJarCoffee,drinkJarGoldenRodTea,foodDoughITAV"/>
+            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="foodChickenBrothITAV,foodMeatBrothITAV,foodVegetableBrothITAV,foodSteakAndPotato,foodBlueberryPie,foodRosysCrunchyAcornPieITAV,foodChickenStewITAV,foodMeatStew,foodVegetableStew,foodPumpkinPie,foodPumpkinCheesecake,foodPumpkinBread,drinkJarCoffeeSpicyITAV,cntFoodPileSmallITAV"/>
+            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="foodShamChowder,foodHoboStew,foodFishTacos,drinkYuccaJuiceSmoothie,foodChiliDog,drinkJarBeer,foodChickenSoupITAV,foodChickenEmpanadasITAV"/>
+            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="foodGumboStew,foodShepardsPie,foodSpaghetti,foodTunaFishGravyToast,foodChickenSoupSpicyITAV,cntFoodPileMediumITAV,campfireT2ITAV"/>
+            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="drinkJarGrandpasMoonshine,drinkJarGrandpasLearningElixir,cntFoodPileLargeITAV"/>
 				
 			<effect_description level="1" desc_key="perkMasterChefRank1Desc" long_desc_key="perkMasterChefRank1LongDesc"/>
             <effect_description level="2" desc_key="perkMasterChefRank2Desc" long_desc_key="perkCookITAVRank2LongDesc"/>
@@ -163,14 +194,29 @@
             <effect_description level="5" desc_key="perkMasterChefRank5Desc" long_desc_key="perkCookITAVRank5LongDesc"/>
         </effect_group>
     </perk>
-	
+</perks>
+<perks min_level="0" max_level="5" base_skill_point_cost="3" cost_multiplier_per_level="0.82" max_level_ratio_to_parent="5">	
 		<!-- Armorer perk -->
 	<perk name="perkArmorerITAV" max_level="5" parent="attITAV" name_key="perkArmorerITAVName" desc_key="perkArmorerITAVDesc" icon="ui_game_symbol_rifle">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
-        <level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="reqAttLevel03ITAV"/></level_requirements>
-        <level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="reqAttLevel05ITAV"/></level_requirements>
-        <level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="reqAttLevel07ITAV"/></level_requirements>
-        <level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="reqAttLevel10ITAV"/></level_requirements>
+		<level_requirements level="1">
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
+		</level_requirements>
+        <level_requirements level="2">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel03ITAV" />
+		</level_requirements>
+        <level_requirements level="3">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />
+		</level_requirements>
+        <level_requirements level="4">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel07ITAV" />
+		</level_requirements>
+        <level_requirements level="5">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntArmorerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
+		</level_requirements>
 		
 		<effect_group>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="hasLearntArmorerITAV" operation="set" value="1" />
@@ -187,12 +233,21 @@
 			<effect_description level="5" desc_key="perkArmorerRank5DescITAV" long_desc_key="perkArmorerRank5LongDescITAV"/>
 		</effect_group> 
 	</perk>
-		
+</perks>
+<perks min_level="0" max_level="5" base_skill_point_cost="3" cost_multiplier_per_level="0.82" max_level_ratio_to_parent="5">		
 	<!-- Farmer perk-->
 	<perk name="perkFarmerITAV" max_level="3" parent="attITAV" name_key="perkFarmerITAVName" desc_key="perkFarmerITAVDesc" icon="ui_game_symbol_tree">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="reqAttLevel03ITAV"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="reqAttLevel05ITAV"/></level_requirements>
+		<level_requirements level="1">
+			<requirement name="CVarCompare" cvar="hasLearntFarmerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
+		</level_requirements>
+		<level_requirements level="2">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntFarmerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel03ITAV" />
+		</level_requirements>
+		<level_requirements level="3">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntFarmerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />
+		</level_requirements>
 		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_set" level="0,3" value="0,3" tags="perkLivingOffTheLandCrafting"/><!-- fake crafting perk that is used to scale resources -->
@@ -250,20 +305,31 @@
                 <requirement name="CVarCompare" cvar="$buffMegaCrushDuration" operation="GT" value="30"/>
                 <requirement name="EntityTagCompare" target="other" tags="entityITAV"/>
             </triggered_effect>
-        </effect_group>	
-		
+        </effect_group>			
 	</perk>
-	
+</perks>
+<perks min_level="0" max_level="5" base_skill_point_cost="3" cost_multiplier_per_level="0.82" max_level_ratio_to_parent="5">	
 		<!-- Chemist perk-->
 	<perk name="perkChemistITAV" max_level="4" parent="attITAV" name_key="perkChemistITAVName" desc_key="perkChemistITAVDesc" icon="ui_game_symbol_chemistry">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="reqAttLevel03ITAV"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="reqAttLevel05ITAV"/></level_requirements>
-		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="reqAttLevel07ITAV"/></level_requirements>
+		<level_requirements level="1">
+			<requirement name="CVarCompare" cvar="hasLearntChemistITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
+		</level_requirements>
+		<level_requirements level="2">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntChemistITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel03ITAV" />
+		</level_requirements>
+		<level_requirements level="3">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntChemistITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />
+		</level_requirements>
+		<level_requirements level="4">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntChemistITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel07ITAV" />
+		</level_requirements>
 		
 		<effect_group>
 			<passive_effect name="CraftingTime" operation="perc_add" level="2,3,4" value="-.2,-.2,-.4" tags="chemStationCrafting"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,4" value="1" tags="chemistryStation,medicalFirstAidBandage,medicalPlasterCast,drugHerbalAntibiotics"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,4" value="1" tags="chemistryStation,medicalFirstAidBandage,medicalPlasterCast,drugHerbalAntibiotics,drugPainkillers"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,4" value="1" tags="resourceGunPowder,resourcePaint,resourceConcreteMix"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,4" value="1" tags="medicalFirstAidKit,drugSteroids,chemistryStationT2ITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4" value="1" tags="drugFortBites,drugRecog,drugAntibiotics,drinkJarGrandpasForgettingElixir"/>
@@ -274,14 +340,29 @@
 			<effect_description level="4" desc_key="perkChemistITAVRank4Desc" long_desc_key="perkChemistITAVRank4LongDesc"/>
 		</effect_group>		
 	</perk>
-	
+</perks>
+<perks min_level="0" max_level="5" base_skill_point_cost="3" cost_multiplier_per_level="0.82" max_level_ratio_to_parent="5">	
 		<!-- Robotics Inventor perk -->
 	<perk name="perkRoboticsITAV" max_level="5" parent="attITAV" name_key="perkRoboticsITAVName" desc_key="perkRoboticsITAVDesc" icon="ui_game_symbol_electric_turret">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="reqAttLevel03ITAV"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="reqAttLevel05ITAV"/></level_requirements>
-		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="reqAttLevel07ITAV"/></level_requirements>
-		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="reqAttLevel10ITAV"/></level_requirements>
+		<level_requirements level="1">
+			<requirement name="CVarCompare" cvar="hasLearntRoboticsITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
+		</level_requirements>
+		<level_requirements level="2">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntRoboticsITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel03ITAV" />
+		</level_requirements>
+		<level_requirements level="3">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntRoboticsITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />
+		</level_requirements>
+		<level_requirements level="4">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntRoboticsITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel07ITAV" />
+		</level_requirements>
+		<level_requirements level="5">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntRoboticsITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
+		</level_requirements>
 
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkRoboticsITAV"/>
@@ -309,12 +390,21 @@
 			<effect_description level="5" desc_key="perkRoboticsITAVRank5Desc" long_desc_key="perkRoboticsITAVRank5LongDesc"/>
 		</effect_group>
 	</perk>
-	
+</perks>
+<perks min_level="0" max_level="5" base_skill_point_cost="3" cost_multiplier_per_level="0.82" max_level_ratio_to_parent="5">	
 			<!-- Mechanic/Runner perk -->
 	<perk name="perkRunnerITAV" max_level="3" parent="attITAV" name_key="perkRunnerITAVName" desc_key="perkRunnerITAVDesc" icon="ui_game_symbol_4x4">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="6" desc_key="reqAttLevel06ITAV"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="8" desc_key="reqAttLevel08ITAV"/></level_requirements>
+		<level_requirements level="1">
+			<requirement name="CVarCompare" cvar="hasLearntRunnerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
+		</level_requirements>
+		<level_requirements level="2">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="6" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntRunnerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel06ITAV" />
+		</level_requirements>
+		<level_requirements level="3">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="8" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntRunnerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel08ITAV" />
+		</level_requirements>
 				
 		<effect_group>
 			<!--<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkRunnerITAV"/> --><!-- fake crafting perk that is used to scale resources or quality like on carBattery -->
@@ -345,7 +435,6 @@
 			<passive_effect name="LandMineTriggerDelay" operation="base_add" level="3" value="2"/>
 			<passive_effect name="TrapIncomingDamage" operation="perc_add" level="3" value="-.5"/>
 			<passive_effect name="BlockPickup" operation="base_set" level="2,3" value="1" tags="Mine" />
-
 		</effect_group>
 	</perk>
 	
@@ -353,12 +442,16 @@
 <perks min_level="0" max_level="2" base_skill_point_cost="1" cost_multiplier_per_level="1" max_level_ratio_to_parent="5">
 		<!-- Decorator perk -->
 	<perk name="perkDecoratorITAV" parent="attITAV" name_key="perkDecoratorITAVName" max_level="2" desc_key="perkDecoratorITAVDesc" icon="ui_game_symbol_paint_brush">		
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="2" desc_key="reqAttLevel02ITAV"/></level_requirements>
+		<level_requirements level="1">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="1" desc_key="reqAttLevel01ITAV"/>
+		</level_requirements>
+		<level_requirements level="2">
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="2" desc_key="reqAttLevel02ITAV"/>
+		</level_requirements>
 
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2" value="1" tags="workbenchDecoratorT1ITAV,modDyeInvisibleITAV,cntClothesRackRectanglePantsITAV,cntClothesRackRectangleShirtsITAV,cntClothesRackRoundPantsITAV,cntClothesRackRoundShirtsITAV,barStoolVariantHelper,restaurantBoothVariantHelper,fastFoodBoothVariantHelper,cntWoodBurningStoveDecoITAV,campfireDecoITAV,bunkBedMade,officeChair01VariantHelper,birdBathPlanterITAV,cntShoppingCartEmpty,cntMailBox01White,candelabraLight,houseFrontDoor1_v1,houseFrontDoor2_v1,cntToaster,cntMicrowaveOvenVer1Closed,cntMicrowaveOvenVer2Closed,cntRetroFridgeVer1Closed,cntFridgeStainlessSteel,cntDomedTrashCanEmpty,cntDomedTrashCanCornerEmpty,cntBruteStyleTrashCanEmpty,cntWaterCoolerFull,signBread01,signBread02,signDinersMenu,signDinersMenu2m,signLaborDaySaleAd,signSale01,signSale02,decoPoolTable,decoCookingPotITAV,decoWineBottle,decoWineBottleCorner,decoWineBottleShelfRow,decoReptileTerrarium,plantedCorn2FlowerITAV,plantedPumpkin3FlowerITAV,plantedPumpkin2FlowerITAV,plantedSnowberry3FlowerITAV,plantedPotato3FlowerITAV,plantedBlueberry3FlowerITAV,plantedYucca3FlowerITAV,plantedAloe3FlowerITAV,plantedCoffee3FlowerITAV,plantedChrysanthemum3FlowerITAV,plantedGoldenrod3FlowerITAV,forestFlowerITAV,hangingMoss,treeJuniper4m,treeAzalea,decoStationaryBike,decoSwingSet,decoTreadmill,decoWeightBar,decoWildWestWagon,decoWildWestWagonWheelBack,decoWildWestWagonWheelFront"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,2" value="1" tags="modClothingCargoStoragePocket,modArmorDoubleStoragePocket,decoLaptop,decoMannequinFemale,decoMannequinMale,signShopOpenLightITAV,signPillsLogoSmallLightITAV,signPillsLogoLightITAV,LightwallLight01ITAV,LightStreetLightClassicITAV,LightDeskLampLightITAV,LightTableLampLightITAV,LightTableLampLightCenteredITAV,LightPorchLight01ITAV,LightPorchLight04BrassITAV,LightPorchLight04ITAV,LightCeilingLight02ITAV,LightCeilingLight02BrassITAV,LightEndTableLampITAV,LightchandelierLightITAV,sconce1LightITAV,ceilingFanLightITAV,recessedLightITAV,industrialLight02RedLightITAV,wirelessRelayFuseboxLightITAV,modApparelHazmatBootsITAV,modApparelHazmatMaskITAV,modApparelHazmatPantsITAV,modApparelHazmatJacketITAV,modApparelHazmatGlovesITAV,modApparelDenimPantsITAV,modApparelDenimShortsPantsITAV,modApparelArmyPantsITAV,modApparelOverallsITAV,modApparelSkirtITAV,modApparelGothPantsITAV,modApparelWornBootsITAV,modApparelRunningShoesRegularITAV,modApparelCowboyBootsITAV,modApparelGothBootsITAV,modApparelLongShirtITAV,modApparelArmyShirtITAV,modApparelSweatshirtITAV,modApparelFlannelShirtITAV,modApparelTShirtPlainITAV,modApparelTShirtZUITAV,modApparelTankTopITAV,modApparelHoodySweatshirtITAV,modApparelCoatLeatherPonchoITAV,modApparelCoatLeatherDusterITAV,modApparelCoatPufferCoatITAV,modApparelCoatJacketGenericITAV,modApparelCoatJacketLetterZUITAV,modApparelSuitPantsITAV,modApparelSuitJacketITAV,modApparelSuitDressShoesITAV,modApparelPlantFiberGlovesITAV,modApparelPlantFiberShoesITAV,modApparelGhillieSuitHoodITAV,modApparelGhillieSuitPantsITAV,modApparelGhillieSuitJacketITAV,signPosterMovie2159,signPosterMovieLoneWolf,signPosterMovieMammasJustice,signPosterMovieSexualTension,signPosterMovieTheater2159,signPosterMovieTheaterLoneWolf,signPosterMovieTheaterMammasJustice,signPosterMovieTheaterSexualTension,signNotice01,signNotice04,cntBarrelAcidQuadAITAV,cntBarrelGenericQuadAITAV,cntBarrelGasQuadAITAV,cntBarrelAcidQuadBITAV,cntBarrelGenericQuadBITAV,cntBarrelGasQuadBITAV.cntBarrelGasSingle00,cntBarrelAcidSingle00,cntBarrelGenericSingle00"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,2" value="1" tags="modClothingCargoStoragePocket,modArmorDoubleStoragePocket,decoLaptop,decoMannequinFemale,decoMannequinMale,signShopOpenLightITAV,signPillsLogoSmallLightITAV,signPillsLogoLightITAV,LightwallLight01ITAV,LightStreetLightClassicITAV,LightDeskLampLightITAV,LightTableLampLightITAV,LightTableLampLightCenteredITAV,LightPorchLight01ITAV,LightPorchLight04BrassITAV,LightPorchLight04ITAV,LightCeilingLight02ITAV,LightCeilingLight02BrassITAV,LightEndTableLampITAV,LightchandelierLightITAV,sconce1LightITAV,ceilingFanLightITAV,recessedLightITAV,industrialLight02RedLightITAV,wirelessRelayFuseboxLightITAV,modApparelHazmatBootsITAV,modApparelHazmatMaskITAV,modApparelHazmatPantsITAV,modApparelHazmatJacketITAV,modApparelHazmatGlovesITAV,modApparelDenimPantsITAV,modApparelDenimShortsPantsITAV,modApparelArmyPantsITAV,modApparelOverallsITAV,modApparelSkirtITAV,modApparelGothPantsITAV,modApparelWornBootsITAV,modApparelRunningShoesRegularITAV,modApparelCowboyBootsITAV,modApparelGothBootsITAV,modApparelLongShirtITAV,modApparelArmyShirtITAV,modApparelSweatshirtITAV,modApparelFlannelShirtITAV,modApparelTShirtPlainITAV,modApparelTShirtZUITAV,modApparelTankTopITAV,modApparelHoodySweatshirtITAV,modApparelCoatLeatherPonchoITAV,modApparelCoatLeatherDusterITAV,modApparelCoatPufferCoatITAV,modApparelCoatJacketGenericITAV,modApparelCoatJacketLetterZUITAV,modApparelSuitPantsITAV,modApparelSuitJacketITAV,modApparelSuitDressShoesITAV,modApparelPlantFiberGlovesITAV,modApparelPlantFiberShoesITAV,modApparelGhillieSuitHoodITAV,modApparelGhillieSuitPantsITAV,modApparelGhillieSuitJacketITAV,signPosterMovie2159,signPosterMovieLoneWolf,signPosterMovieMammasJustice,signPosterMovieSexualTension,signPosterMovieTheater2159,signPosterMovieTheaterLoneWolf,signPosterMovieTheaterMammasJustice,signPosterMovieTheaterSexualTension,signNotice01,signNotice04,cntBarrelAcidQuadAITAV,cntBarrelGenericQuadAITAV,cntBarrelGasQuadAITAV,cntBarrelAcidQuadBITAV,cntBarrelGenericQuadBITAV,cntBarrelGasQuadBITAV,cntBarrelGasSingle00,cntBarrelAcidSingle00,cntBarrelGenericSingle00"/>
 
 			<effect_description level="1" desc_key="perkDecoratorITAVRank1Desc" long_desc_key="perkDecoratorITAVRank1LongDesc"/>
 			<effect_description level="2" desc_key="perkDecoratorITAVRank2Desc" long_desc_key="perkDecoratorITAVRank2LongDesc"/>
@@ -371,7 +464,7 @@
 
 <!-- Replacing the bundling of resources from mining book because Miner has it in the perk -->
 
-<setattribute xpath="//perk[@name='perkArtOfMiningPallets']/effect_group/passive_effect[@name='RecipeTagUnlocked']" name="tags">modArmorHelmetLight</setattribute>
+<setattribute xpath="//perk[@name='perkArtOfMiningPallets']/effect_group/passive_effect[@name='RecipeTagUnlocked']" name="tags">apparelDivingMaskITAV</setattribute>
 
 <!-- Removing Vanilla perks-->
 <remove xpath="//perk[@name='perkAdvancedEngineering']" />

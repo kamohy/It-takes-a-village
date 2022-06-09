@@ -80,11 +80,11 @@
     </lootgroup>
 	
 	<lootgroup name="lotteryITAV" count="1">
-        <item name="casinoCoin" count="10000" loot_prob_template="jackpotLow" force_prob="true"/>
-        <item name="casinoCoin" count="3000" loot_prob_template="superLow" force_prob="true"/>
-		<item name="casinoCoin" count="1000" loot_prob_template="veryLow" force_prob="true"/>
-		<item name="casinoCoin" count="156" loot_prob_template="low" force_prob="true"/>
-		<item name="casinoCoin" count="1" />
+        <item name="casinoCoin" count="100000" loot_prob_template="jackpotLow" force_prob="true"/>
+        <item name="casinoCoin" count="30000" loot_prob_template="superLow" force_prob="true"/>
+		<item name="casinoCoin" count="10000" loot_prob_template="veryLow" force_prob="true"/>
+		<item name="casinoCoin" count="1560" loot_prob_template="low" force_prob="true"/>
+		<item name="casinoCoin" count="10" />
     </lootgroup>
 	
 </insertAfter>
@@ -157,7 +157,7 @@
 	</lootcontainer>
 </append>
 
-<!--<append xpath="//lootgroup[@name='groupBirdNest01']"><item name="foodEgg" loot_prob_template="medLow"/></append> -->
+<append xpath="//lootgroup[@name='groupBirdNest01']"><item name="foodEgg" loot_prob_template="medLow"/></append>
 <remove xpath="//lootgroup[@name='groupMailbox02']/item[@group='booksAllScaled']" />
 <remove xpath="//lootgroup[@name='groupMailbox01']/item[@group='perkBooksT0Day1']" />
 
@@ -187,11 +187,11 @@
 
 <remove xpath="//item[@name='gunHandgunT1Pistol']" />
 
-<setattribute xpath="//lootgroup/item[@name='casinoCoin' and (@count='5,10' or @count='1,10')]" name="count">97,122</setattribute>
+
 <remove xpath="/lootcontainers/lootgroup[@name='groupValuablesExtraLarge']/item[@name='oldCash']" />
 <setattribute xpath="/lootcontainers/lootgroup[@name='groupValuablesMed']/item[@name='resourceRawDiamond']" name="count">1</setattribute>
 <setattribute xpath="/lootcontainers/lootgroup[@name='groupValuablesLarge']/item[@name='resourceRawDiamond']" name="count">1</setattribute>
-<setattribute xpath="/lootcontainers/lootgroup[@name='groupValuablesExtraLarge']/item[@name='casinoCoin']" name="count">1970,2344</setattribute>
+<setattribute xpath="/lootcontainers/lootgroup[@name='groupValuablesExtraLarge']/item[@name='casinoCoin']" name="count">19700,23440</setattribute>
 <setattribute xpath="/lootcontainers/lootgroup[@name='groupValuablesExtraLarge']/item[@name='resourceRawDiamond']" name="count">1</setattribute>
 
 <!-- To enable a playstyle based around looting rather than grinding for mats, we need to reduce the cost of ammo. Replacing brass in loot with casings, and lead with bullet tips, 
@@ -227,25 +227,25 @@ makes the looter more financially self sustained than if they had to buy all the
 
 <append xpath="/lootcontainers/lootgroup[@name='groupFoodTrash']">
 	<item name="weaponPartFragmentITAV" count="4,8" />
-	<item name="casinoCoin" count="62,101" />
+	<item name="casinoCoin" count="620,1010" />
 	<item name="resourceScrapIron" count="7,13" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupScrapCommon']">
 	<item name="weaponPartFragmentITAV" count="4,8" />
-	<item name="casinoCoin" count="66,104" />
+	<item name="casinoCoin" count="660,1040" />
 	<item name="resourceScrapIron" count="7,18" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupFileCabinet01']">
 	<item name="weaponPartFragmentITAV" count="4,8" loot_prob_template="low" />
-	<item name="casinoCoin" count="10,29" loot_prob_template="med" />
+	<item name="casinoCoin" count="100,290" loot_prob_template="med" />
 	<item name="resourceScrapIron" count="7,18" loot_prob_template="med" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupDesks01']">
 	<item name="weaponPartFragmentITAV" count="4,8" loot_prob_template="low" />
-	<item name="casinoCoin" count="10,29" loot_prob_template="high" />
+	<item name="casinoCoin" count="100,290" loot_prob_template="high" />
 	<item name="resourceScrapIron" count="7,18" loot_prob_template="low" />
 </append>
 
@@ -292,7 +292,7 @@ makes the looter more financially self sustained than if they had to buy all the
 
 <remove xpath="//lootgroup[@name='schematicsWeaponsArmorT0']/item" />
 <append xpath="//lootgroup[@name='schematicsWeaponsArmorT0']">
-	<item name="casinoCoin" count="20,32"/>
+	<item name="casinoCoin" count="200,320"/>
 	<item name="resourceCloth" count="3,5"/>
 	<item name="ammo762mmBulletBall" count="15,29"/>
 	<item name="resourceDuctTape"/>
@@ -376,9 +376,11 @@ makes the looter more financially self sustained than if they had to buy all the
 <remove xpath="//item[@name='drugRecog']" />
 <remove xpath="//item[@name='drinkJarGrandpasAwesomeSauce']" />
 
-<!-- Replace some items in Medical loots -->
+<!-- Replace some items in Medical loots to make Chemist more viable -->
+<setattribute xpath="//lootgroup[@name='survivalMedical']/item[@name='drugPainkillers']" name="name">resourceSewingKit</setattribute>
+
 <append xpath="//lootgroup[@name='groupMedicalHighLow']">
-	<item name="drugPainkillers" />
+	<item name="medicalAloeCream" />
 	<item name="foodHoney" />
 	<item name="foodCanChili" />
 </append>
@@ -426,7 +428,7 @@ makes the looter more financially self sustained than if they had to buy all the
 <remove xpath="//item[@group='groupQuestT1HeavyArmor']" />
 <remove xpath="//item[@group='groupQuestT2Firearms']" />
 <append xpath="/lootcontainers/lootgroup[@name='groupAirDropT3Bundles']">
-	<item name="casinoCoin" count="998,1456" />
+	<item name="casinoCoin" count="9980,14560" />
 	<item name="weaponPartFragmentITAV" count="390,520" />
 </append>
 
@@ -435,7 +437,7 @@ makes the looter more financially self sustained than if they had to buy all the
 <append xpath="/lootcontainers/lootgroup[@name='groupAirDropT4Bundles']">
 	<item group="groupQuestT3MeleeMods" />
 	<item group="groupQuestT3RangedMods" />
-	<item name="casinoCoin" count="1498,2456" />
+	<item name="casinoCoin" count="14980,24560" />
 	<item name="weaponPartFragmentITAV" count="990,1220" />
 </append>
 
@@ -443,19 +445,111 @@ makes the looter more financially self sustained than if they had to buy all the
 <append xpath="/lootcontainers/lootgroup[@name='groupAirDropT5Bundles']">
 	<item group="groupQuestT3MeleeMods" />
 	<item group="groupQuestT3RangedMods" />
-	<item name="casinoCoin" count="2498,3456" />
+	<item name="casinoCoin" count="24980,34560" />
 	<item name="weaponPartFragmentITAV" count="1590,1920" />
 </append>
 
+<append xpath="//lootgroup[@name='groupAirDrop02']">
+	<item name="armorSteelSetParts" count="3,6" />
+	<item name="armorMilitarySetParts" count="3,6" />
+</append>
+
 <append xpath="/lootcontainers/lootgroup[@name='groupSavageCountryCrate03']">
-	<item name="casinoCoin" count="353,455" />
+	<item name="casinoCoin" count="3530,4550" />
 	<item name="weaponPartFragmentITAV" count="90,120" />
 </append>
 
 <remove xpath="//lootgroup[starts-with(@name, 'groupZpack')]/item[@name='oldCash']" />
 
-<setattribute xpath="//lootgroup[@name='groupSmallSafeLoot03']/item[@name='oldCash']" name="name">casinoCoin</setattribute>
+<remove xpath="//lootgroup[@name='groupZpackReg01']" />
+<insertBefore xpath="//lootgroup[@name='groupZpackReg02']">
+	<lootgroup name="groupZpackReg01">
+		<item name="armorSteelSetParts" count="1" loot_prob_template="medHigh" />
+		<item name="armorMilitarySetParts" count="1" loot_prob_template="medHigh" />
+		<item group="groupScrapUncommon" loot_prob_template="medHigh" />
+		<item group="groupMedicalUncommon" loot_prob_template="med" />
+	</lootgroup>
+</insertBefore>
+
 <setattribute xpath="//item[@name='oldCash']" name="name">casinoCoin</setattribute>
+<setattribute xpath="//lootgroup/item[@name='casinoCoin' and (@count='5,10' or @count='1,10')]" name="count">970,1220</setattribute>
+
+
+<!-- Adjusting amounts of oldCash (now casinoCoin) to match economy balance -->
+<setattribute xpath="//lootgroup[@name='groupBuriedLootStashTreasureSub']/item[@name='casinoCoin']" name="count">500,2500</setattribute>
+<setattribute xpath="//lootgroup[@name='groupBuriedLootStashTreasure']/item[@name='casinoCoin']" name="count">30000,80000</setattribute>
+<setattribute xpath="//lootgroup[@name='groupZpackReg03']/item[@name='casinoCoin']" name="count">2000,4000</setattribute>
+<setattribute xpath="//lootgroup[@name='groupZpackStrong03']/item[@name='casinoCoin']" name="count">2000,4000</setattribute>
+<setattribute xpath="//lootgroup[@name='groupZpackBoss03']/item[@name='casinoCoin']" name="count">2000,4000</setattribute>
+<setattribute xpath="//lootgroup[@name='groupSmallSafeLoot03']/item[@name='casinoCoin']" name="count">100,3000</setattribute>
+<setattribute xpath="//lootgroup[@name='groupNightstand02']/item[@name='casinoCoin']" name="count">100,200</setattribute>
+<setattribute xpath="//lootgroup[@name='groupZpackBoss03']/item[@name='casinoCoin']" name="count">2000,4000</setattribute>
+<setattribute xpath="//lootgroup[@name='groupZpackBoss03']/item[@name='casinoCoin']" name="count">2000,4000</setattribute>
+<setattribute xpath="//lootgroup[@name='groupZpackBoss03']/item[@name='casinoCoin']" name="count">2000,4000</setattribute>
+
+<append xpath="//lootgroup[@name='groupZpackReg']"><item name="resourceCerebralSpinalFluidITAV" count="1" loot_prob_template="medLow" force_prob="true" /></append>
+<append xpath="//lootgroup[@name='groupZpackStrong']"><item name="resourceCerebralSpinalFluidITAV" count="1" loot_prob_template="med" force_prob="true" /></append>
+<append xpath="//lootgroup[@name='groupZpackBoss']"><item name="resourceCerebralSpinalFluidITAV" count="1" loot_prob_template="high" force_prob="true" /></append>
+
+<append xpath="//lootgroup[@name='groupBathtub']"><item name="resourceCerebralSpinalFluidITAV" count="1" loot_prob_template="low" /></append>
+
+
+
+<remove xpath="//lootgroup[@name='groupValuablesSmall']" />
+<remove xpath="//lootgroup[@name='groupValuablesMed']" />
+<remove xpath="//lootgroup[@name='groupValuablesLarge']" />
+
+<insertBefore xpath="//lootgroup[@name='groupValuablesExtraLarge']">
+	<lootgroup name="groupValuablesSmall">
+		<item name="casinoCoin" count="970,1220" loot_prob_template="high"></item>
+		<item name="casinoCoin" count="9700,12200" loot_prob_template="medHigh"></item>
+	</lootgroup>
+
+	<lootgroup name="groupValuablesMed">
+		<item name="casinoCoin" count="1000,5000" loot_prob_template="high"></item>
+		<item name="casinoCoin" count="2000,6000" loot_prob_template="medHigh" />
+		<item name="resourceRawDiamond" count="1" loot_prob_template="low"></item>
+	</lootgroup>
+
+	<lootgroup name="groupValuablesLarge">
+		<item name="casinoCoin" count="1000,5000" loot_prob_template="high"></item>
+		<item name="casinoCoin" count="2000,6000" loot_prob_template="medHigh" />
+		<item name="resourceRawDiamond" count="1" loot_prob_template="low"></item>
+	</lootgroup>
+</insertBefore>
+
+<remove xpath="//lootgroup[@name='groupCoffins03']" />
+<insertBefore  xpath="//lootgroup[@name='groupCoffins']">
+	<lootgroup name="groupCoffins03">
+		<item name="casinoCoin" count="50,200" loot_prob_template="low"></item>
+		<item name="casinoCoin" count="970,1220" loot_prob_template="veryLow"></item>
+	</lootgroup>
+</insertBefore>
+
+
+<remove xpath="//lootgroup[@name='groupCaskets03']" />
+<insertBefore  xpath="//lootgroup[@name='groupCaskets']">
+	<lootgroup name="groupCaskets03">
+		<item name="casinoCoin" count="50,200" loot_prob_template="low"></item>
+		<item name="casinoCoin" count="970,1220" loot_prob_template="veryLow"></item>
+	</lootgroup>
+</insertBefore>
+
+<remove xpath="//lootcontainer[@id='55']" />
+<insertAfter xpath="//lootcontainer[@id='54']">
+	<lootcontainer id="55" name="cashRegister" count="1,5" size="6,1" sound_open="UseActions/open_cash_register" sound_close="UseActions/close_cash_register" loot_quality_template="qualBaseTemplate">
+		<item name="casinoCoin" count="500,600" loot_prob_template="low"></item>
+		<item name="casinoCoin" count="100,600" />
+	</lootcontainer>
+</insertAfter>
+
+<remove xpath="//lootcontainer[@id='147']" />
+<insertAfter xpath="//lootcontainer[@id='146']">
+	<lootcontainer id="147" name="atmLoot" count="1" size="6,1" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="qualPlus1Template">
+		<item name="casinoCoin" count="3000,12000"></item>
+	</lootcontainer>
+</insertAfter>
+
 
 <append xpath="/lootcontainers/lootgroup[@name='groupSmallWeaponBag']">
 	<item group="weaponParts" loot_prob_template="med" force_prob="true"/>
@@ -537,7 +631,8 @@ makes the looter more financially self sustained than if they had to buy all the
 </append>
 
 <append xpath="//lootgroup[@name='groupHardenedChestT4']">
-	<item name="resourceGunPowder" count="240" />
+	<item name="armorSteelSetParts" count="6,8" />
+	<item name="armorMilitarySetParts" count="6,8" />
 </append>
 
 <remove xpath="//lootgroup[@name='groupHardenedChestT5_01']/item" />
@@ -562,7 +657,8 @@ makes the looter more financially self sustained than if they had to buy all the
 <setattribute xpath="//lootgroup[@name='groupHardenedChestT5']/item[@group='groupHardenedChestT5_01']" name="count">1</setattribute>
 
 <append xpath="//lootgroup[@name='groupHardenedChestT5']">
-	<item name="resourceGunPowder" count="300" />
+	<item name="armorSteelSetParts" count="9,11" />
+	<item name="armorMilitarySetParts" count="9,11" />
 </append>
 
 <!-- Removing sledgehammer from tool loot groups despite it being good tool for destroying things -->
@@ -607,7 +703,7 @@ makes the looter more financially self sustained than if they had to buy all the
 	<item name="meleeToolRepairT1ClawHammer" />
 	<!-- <item name="faucetBrass02" loot_prob_template="veryLow" />
 	<item name="faucetBrass04" loot_prob_template="veryLow" /> -->
-	<item name="casinoCoin" count="19,44"/>
+	<item name="casinoCoin" count="190,440"/>
 	<item name="resourceCloth" count="5,11"/>
 	<item name="ammo762mmBulletBall" count="15,29"/> 
 	<item group="poiCandyOnlyITAV" loot_prob_template="low" />

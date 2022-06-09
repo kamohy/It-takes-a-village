@@ -58,37 +58,39 @@ statStaminaReductionITAV,ui_display,Item stat,,,"Stamina Cost Of Jumping"
 attNameITAV,progression,Attribute,,,"Attribute: Passion"
 attitav,progression,Attribute,,,Passion
 attDescITAV,progression,Attribute,,,"Learn a profession to support and contribute to your village."
-bookSmelterITAV,Items,perk  book,,,"Profession: Smelter"
-bookSmelterITAVDesc,Items,perk  book,,,"Smelters learn how to make the forge, the anvil, bellows and the crucible. Only Smelters can craft Forged Iron and Forged Steel, amongst other things."
-bookMinerITAV,Items,perk  book,,,"Profession: Miner"
-bookMinerITAVDesc,progression,perk  book,,,"Miners are efficient at gathering materials. They harvest more resources from trees and minerals."
-bookHunterITAV,Items,perk  book,,,"Profession: Hunter"
-bookHunterITAVDesc,progression,perk  book,,,"Hunters specialize in tracking and hunting animals. They also harvest more resources from animal carcasses."
-bookCookITAV,Items,perk  book,,,"Profession: Cook"
-bookCookITAVDesc,progression,perk  book,,,"Cooks learn how to prepare more filling meals. These meals give higher health and stamina bonuses."
-bookArmorerITAV,Items,perk  book,,,"Profession: Armorer"
-bookArmorerITAVDesc,progression,perk  book,,,"Armorers craft light and heavy armor as well as ranged and melee weapons."
-bookWeaponsmithITAV,Items,perk  book,,,"Profession: Weaponsmith"
-bookWeaponsmithITAVDesc,progression,perk  book,,,"Weaponsmiths craft ranged and melee weaponry."
-bookFarmerITAV,Items,perk  book,,,"Profession: Farmer"
-bookFarmerITAVDesc,progression,perk  book,,,"Farmers harvest more from crops and can craft seeds from the harvest as well as basic foods."
-bookChemistITAV,Items,perk  book,,,"Profession: Chemist"
-bookChemistITAVDesc,progression,perk  book,,,"Chemists create vital items such as gunpowder, medicine, concrete mix... and paint."
-bookRoboticsITAV,Items,perk  book,,,"Profession: Robotics"
-bookRoboticsITAVDesc,progression,perk  book,,,"Robotics Inventors build turrets and triggers and drones."
-bookRunnerITAV,Items,perk  book,,,"Profession: Mechanic"
-bookRunnerITAVDesc,progression,perk  book,,,"Mechanics salvage materials, crafts vehicles and special boots (Powerizer Boots and Work Boots)."
-bookDecoratorITAV,Items,perk  book,,,"Profession: Decorator"
-bookDecoratorITAVDesc,Items,perk  book,,,"Decorators can craft invisible dyes as well as clothing mods that change appearance of apparel while adding pockets to them. They can also create a plethora of decorative items, such as flowers, signs, lamps, appliances, posters and clutter."
+bookProfessionSmelterITAV,Items,perk  book,,,"Profession: Smelter"
+bookProfessionSmelterITAVDesc,Items,perk  book,,,"Smelters learn how to make the forge, the anvil, bellows and the crucible. Only Smelters can craft Forged Iron and Forged Steel, amongst other things."
+bookProfessionMinerITAV,Items,perk  book,,,"Profession: Miner"
+bookProfessionMinerITAVDesc,progression,perk  book,,,"Miners are efficient at gathering materials. They harvest more resources from trees and minerals."
+bookProfessionHunterITAV,Items,perk  book,,,"Profession: Hunter"
+bookProfessionHunterITAVDesc,progression,perk  book,,,"Hunters specialize in tracking and hunting animals. They also harvest more resources from animal carcasses."
+bookProfessionCookITAV,Items,perk  book,,,"Profession: Cook"
+bookProfessionCookITAVDesc,progression,perk  book,,,"Cooks learn how to prepare more filling meals. These meals give higher health and stamina bonuses."
+bookProfessionArmorerITAV,Items,perk  book,,,"Profession: Armorer"
+bookProfessionArmorerITAVDesc,progression,perk  book,,,"Armorers craft light and heavy armor as well as ranged and melee weapons."
+bookProfessionWeaponsmithITAV,Items,perk  book,,,"Profession: Weaponsmith"
+bookProfessionWeaponsmithITAVDesc,progression,perk  book,,,"Weaponsmiths craft ranged and melee weaponry."
+bookProfessionFarmerITAV,Items,perk  book,,,"Profession: Farmer"
+bookProfessionFarmerITAVDesc,progression,perk  book,,,"Farmers harvest more from crops and can craft seeds from the harvest as well as basic foods."
+bookProfessionChemistITAV,Items,perk  book,,,"Profession: Chemist"
+bookProfessionChemistITAVDesc,progression,perk  book,,,"Chemists create vital items such as gunpowder, medicine, concrete mix... and paint."
+bookProfessionRoboticsITAV,Items,perk  book,,,"Profession: Robotics"
+bookProfessionRoboticsITAVDesc,progression,perk  book,,,"Robotics Inventors build turrets and triggers and drones."
+bookProfessionRunnerITAV,Items,perk  book,,,"Profession: Mechanic"
+bookProfessionRunnerITAVDesc,progression,perk  book,,,"Mechanics salvage materials, crafts vehicles and special boots (Powerizer Boots and Work Boots)."
+bookProfessionDecoratorITAV,Items,perk  book,,,"Profession: Decorator"
+bookProfessionDecoratorITAVDesc,Items,perk  book,,,"Decorators can craft invisible dyes as well as clothing mods that change appearance of apparel while adding pockets to them. They can also create a plethora of decorative items, such as flowers, signs, lamps, appliances, posters and clutter."
 
+resourceCerebralSpinalFluidITAV,Items,,,,"Cerebral Spinal Fluid"
+resourceCerebralSpinalFluidITAVDesc,Items,,,,"Cerebral Spinal Fluid can be used to transfer seemingly deceased knowledge to the pages of profession books."
 
 ShopStoreVendingCashRegisterPlayerITAV,blocks,Container,,,"Player Owned Shop"
 ShopStoreVendingCashRegisterPlayerGroupDescITAV,blocks,Container,,,"Create your own Shop to sell goods for Casino Coins. Buy the goods you need from other survivors to support them and the community! The Shop is indestructible unless falling. Any uncollected money in the Shop disappears if the Shop is picked up."
 xuiVendingWithOwner,UI,Menu,,,"{0}'s Shop"
-cntLotteryBoxPlaceableITAV,blocks,Container,,,"10k LOTTERY BOX!"
-cntLootLotteryBoxITAV,blocks,Container,,,"10k LOTTERY BOX!"
-cntLotteryBoxPlaceableDescITAV,blocks,Container,,,"Place and open this box for a chance to win 10000 Duke's Casino tokens! \n\nRequires Advanced Mechanic's table to craft."
-lotteryITAV,ui_display,Item stat,,,"A chance to win 10000 Duke coins:"
+cntLotteryBoxPlaceableITAV,blocks,Container,,,"100k LOTTERY BOX!"
+cntLootLotteryBoxITAV,blocks,Container,,,"100k LOTTERY BOX!"
+cntLotteryBoxPlaceableDescITAV,blocks,Container,,,"Place and open this box for a chance to win 100.000 Duke's Casino tokens! \n\nRequires Advanced Mechanic's table to craft."
+lotteryITAV,ui_display,Item stat,,,"A chance to win 100k Duke coins:"
 lotteryPlaceITAV,ui_display,Item stat,,,"Place box on the ground to loot:"
 
 
@@ -309,6 +311,29 @@ foodDoughITAV,items,,,,"Dough"
 foodDoughITAVDesc,items,,,,"Dough is used for turning blueberries, pumpkins or acorns into pies or cheesecake."
 
 
+buffXpFoodT2Desc,buffs,Buff,,,Learning is easier when the body is fed.\n+2% XP.
+buffXpFoodT2Name,buffs,Buff,,,Good food XP bonus
+buffXpFoodT2Tooltip,buffs,Buff,,,Ready for some learning.
+buffXpFoodT3Desc,buffs,Buff,,,Nourished body, fresh brain.\n+4% XP.
+buffXpFoodT3Name,buffs,Buff,,,Great food XP bonus
+buffXpFoodT3Tooltip,buffs,Buff,,,Ready for some learning.
+buffXpFoodT4Desc,buffs,Buff,,,Brainfood helps learning.\n+6% XP.
+buffXpFoodT4Name,buffs,Buff,,,Awesome food XP bonus
+buffXpFoodT4Tooltip,buffs,Buff,,,Ready for some learning.
+
+buffRunSpeedFoodT2Desc,buffs,Buff,,,Better food gets you further.\n+4% Run Speed.
+buffRunSpeedFoodT2Name,buffs,Buff,,,Good food Run Speed bonus
+buffRunSpeedFoodT2Tooltip,buffs,Buff,,,Ready for some running!
+buffRunSpeedFoodT3Desc,buffs,Buff,,,Nourished body, faster feet.\n+6% Run Speed.
+buffRunSpeedFoodT3Name,buffs,Buff,,,Great food Run Speed bonus
+buffRunSpeedFoodT3Tooltip,buffs,Buff,,,Ready for some running!
+buffRunSpeedFoodT4Desc,buffs,Buff,,,Nutrition that goes straight to your legs.\n+8% Run Speed.
+buffRunSpeedFoodT4Name,buffs,Buff,,,Awesome food Run Speed bonus
+buffRunSpeedFoodT4Tooltip,buffs,Buff,,,Ready for some running!
+
+casinoCoinDesc,items,Item,,,"A Duke's casino coin. After the epidemic and war these brass coins became the main currency for trading in Navezgane.\n\nCan be crafted into firearm ammunition in the workbench."
+vendingMachineTip,Journal Tip,,,,"There are two types of vending machines: vending machines found at stores and Player Owned Shops, which can be crafted. All vending Machines use Duke Coins which can be found in the world. You can see how much money you have in the upper right of your inventory."
+
 perkDeadEyeRank1LongDesc,progression, perk Per,,,"Pot Shot. You can hit the broad side of a barn and do 10% more damage with rifles. Aim and reload 10% faster. Craft quality 2 pipe rifles. \nAsk an Armorer to craft better weapons for you."
 perkDeadEyeRank2LongDesc,progression, perk Per,,,"You can hit a large rock at 30 yards. Deal 20% more damage, aim 20% faster, reload 15% faster. Craft quality 3 pipe rifles. \nAsk an Armorer to craft better weapons for you."
 perkDeadEyeRank3LongDesc,progression, perk Per,,,"You are now a markswoman and can hold your own. Deal 30% more damage , aim 32% faster, reload 20% faster and use 10% less stamina aiming with rifles.\nKill Streak: Successive kills increase damage bonus by 10%, 20% to a maximum of 30%. Craft quality 4 pipe rifles. \nAsk an Armorer to craft better weapons for you."
@@ -366,8 +391,8 @@ perkAutoWeaponsMachineGunsDesc,,,,,"Craft the Weapon Flashlight Mod."
 perkAutoWeaponsMachineGunsLongDesc,,,,,"Don't suck after bedtime. Craft the Weapon Flashlight Mod."
 perkUrbanCombatLandingDesc,,,,,"Craft the Impact Bracing Boots Mod."
 perkUrbanCombatLandingLongDesc,,,,,"Make landing on your feet even more appealing. Craft the Impact Bracing Boots Mod."
-perkArtOfMiningPalletsDesc,progression,perk  book,,,"You can craft the Helmet Light Mod to light your way in the depths."
-perkArtOfMiningPalletsLongDesc,progression,perk  book,,,"All that mining is strainging your eyes? Craft the Helmet Light mod to see where you're going."
+perkArtOfMiningPalletsDesc,progression,perk  book,,,"You can craft a Diving Mask for underwater breathing."
+perkArtOfMiningPalletsLongDesc,progression,perk  book,,,"In a zombie apocalypse, cave diving seems much less unappealing.\n\nYou can craft a Diving Mask for underwater breathing."
 
 foodPumpkinCheesecakeDesc,items,Food,,,"This pumpkin cheesecake tastes delicious and grants you a beer buzz buff!"
 
@@ -394,7 +419,7 @@ attITAVRank10Desc,progression,Attribute,,,Giving ALL the fucks
 attITAVRank10LongDesc,progression,Attribute,,,"Gain 50% XP from electrical trap kills. Adds 25% to loot bonus for containers that you open personally. Looting is 80% faster."
 
 reqAttLevel00ITAV,progression,Attribute,,,"You already know a profession"
-reqAttLevel01ITAV,progression,Attribute,,,Passion Level 1
+reqAttLevel01ITAV,progression,Attribute,,,Craft or buy a profession book to learn a new profession
 reqAttLevel02ITAV,progression,Attribute,,,Passion Level 2
 reqAttLevel03ITAV,progression,Attribute,,,Passion Level 3
 reqAttLevel04ITAV,progression,Attribute,,,Passion Level 4
@@ -530,7 +555,7 @@ drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,"Your Profession Perk skil
 readyForNextProfessionTooltip,progression,,,,"Crafting: Profession Book available!"
 
 tutorialTipITAV_title,Journal Tip,,,,"It Takes A Village"
-tutorialTipITAV,Journal Tip,,,,"You look rough,\n\nIf you can find the other survivors, you can combine your different strengths to better survive the apocalypse. Complete the intro quest before chosing a profession. \n\nIt Takes A Village!"
+tutorialTipITAV,Journal Tip,,,,"You look rough,\n\nIf you can find the other survivors, you can combine your different strengths to better survive the apocalypse. Complete the intro quest to recieve your first profession book. \n\nIt Takes A Village!"
 weaponPartsAssemblyTipITAV_title, Journal Tip,,,,"Weapon Part Fragments"
 weaponPartsAssemblyTipITAV,Journal Tip,,,,"The Armorer can assemble weapon parts out of Fragments. Weapon Parts scrap into 25 Weapon Fragments."
 weaponPartFragmentITAV,items,,,,"Weapon Part Fragment"

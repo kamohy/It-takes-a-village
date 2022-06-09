@@ -25,6 +25,155 @@
 <setattribute xpath="//buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect/requirement[@progression_name='perkPhysician']" name="progression_name">attITAV</setattribute>
 
 
+<!-- *** New Food buffs *** -->
+<insertAfter xpath="//buff[@name='buffDrunkGrandpasLearningElixir']">
+
+<!-- Other foods buffs: XP gain -->
+	<buff name="buffXpFoodT2" name_key="buffXpFoodT2Name" description_key="buffXpFoodT2Desc" tooltip_key="buffXpFoodT2Tooltip" icon="ui_game_symbol_lightbulb">
+		<stack_type value="replace" />
+		<duration value="0" />
+		<display_value value=".buffXpFoodT2Display" /><display_value_format value="time" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffXpFoodT2Duration" operation="subtract" value="@$MetabolismDuration" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffXpFoodT2Display" operation="set" value="@$buffXpFoodT2Duration" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffXpFoodT2Display" operation="divide" value="@$MetabolismDuration" />
+		</effect_group>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffXpFoodT3" />
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffXpFoodT4" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffXpFoodT2">
+				<requirement name="CVarCompare" cvar="$buffXpFoodT2Duration" operation="LTE" value="0" />
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffXpFoodT2Display" operation="set" value="0" />
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffXpFoodT2Duration" operation="set" value="0" />
+		</effect_group>
+		<effect_group>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value=".02" />
+		</effect_group>
+	</buff>
+
+	<buff name="buffXpFoodT3" name_key="buffXpFoodT3Name" description_key="buffXpFoodT3Desc" tooltip_key="buffXpFoodT3Tooltip" icon="ui_game_symbol_intellect"> 
+		<stack_type value="replace" />
+		<duration value="0" />
+		<display_value value=".buffXpFoodT3Display" /><display_value_format value="time" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffXpFoodT3Duration" operation="subtract" value="@$MetabolismDuration" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffXpFoodT3Display" operation="set" value="@$buffXpFoodT3Duration" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffXpFoodT3Display" operation="divide" value="@$MetabolismDuration" />
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffXpFoodT2" />
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffXpFoodT4" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffXpFoodT3">
+				<requirement name="CVarCompare" cvar="$buffXpFoodT3Duration" operation="LTE" value="0" />
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffXpFoodT3Display" operation="set" value="0" />
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffXpFoodT3Duration" operation="set" value="0" />
+		</effect_group>
+		<effect_group>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value=".04" />
+		</effect_group>
+	</buff>
+	
+	<buff name="buffXpFoodT4" name_key="buffXpFoodT4Name" description_key="buffXpFoodT4Desc" tooltip_key="buffXpFoodT4Tooltip" icon="ui_game_symbol_candy_nerd_tats"> 
+		<stack_type value="replace" />
+		<duration value="0" />
+		<display_value value=".buffXpFoodT4Display" /><display_value_format value="time" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffXpFoodT4Duration" operation="subtract" value="@$MetabolismDuration" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffXpFoodT4Display" operation="set" value="@$buffXpFoodT4Duration" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffXpFoodT4Display" operation="divide" value="@$MetabolismDuration" />
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffXpFoodT2" />
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffXpFoodT3" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffXpFoodT4">
+				<requirement name="CVarCompare" cvar="$buffXpFoodT4Duration" operation="LTE" value="0" />
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffXpFoodT4Display" operation="set" value="0" />
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffXpFoodT4Duration" operation="set" value="0" />
+		</effect_group>
+		<effect_group>
+			<passive_effect name="PlayerExpGain" operation="perc_add" value=".06" />
+		</effect_group>
+	</buff>
+	
+	<!-- Chicken buffs: Run speed -->
+	<buff name="buffRunSpeedFoodT2" name_key="buffRunSpeedFoodT2Name" description_key="buffRunSpeedFoodT2Desc" tooltip_key="buffRunSpeedFoodT2Tooltip" icon="ui_game_symbol_run">
+		<stack_type value="replace" /><duration value="0" />
+		<display_value value=".buffRunSpeedFoodT2Display" /><display_value_format value="time" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffRunSpeedFoodT2Duration" operation="subtract" value="@$MetabolismDuration" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffRunSpeedFoodT2Display" operation="set" value="@$buffRunSpeedFoodT2Duration" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffRunSpeedFoodT2Display" operation="divide" value="@$MetabolismDuration" />
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRunSpeedFoodT3" />
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRunSpeedFoodT4" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRunSpeedFoodT2">
+				<requirement name="CVarCompare" cvar="$buffRunSpeedFoodT2Duration" operation="LTE" value="0" />
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffRunSpeedFoodT2Display" operation="set" value="0" />
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffRunSpeedFoodT2Duration" operation="set" value="0" />
+		</effect_group>
+
+		<effect_group>
+			<passive_effect name="RunSpeed" operation="perc_add" value=".04" />
+		</effect_group>
+	</buff>
+	
+	<buff name="buffRunSpeedFoodT3" name_key="buffRunSpeedFoodT3Name" description_key="buffRunSpeedFoodT3Desc" tooltip_key="buffRunSpeedFoodT3Tooltip" icon="ui_game_symbol_speed">
+		<stack_type value="replace" /><duration value="0" />
+		<display_value value=".buffRunSpeedFoodT3Display" /><display_value_format value="time" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffRunSpeedFoodT3Duration" operation="subtract" value="@$MetabolismDuration" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffRunSpeedFoodT3Display" operation="set" value="@$buffRunSpeedFoodT3Duration" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffRunSpeedFoodT3Display" operation="divide" value="@$MetabolismDuration" />
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRunSpeedFoodT2" />
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRunSpeedFoodT4" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRunSpeedFoodT3">
+				<requirement name="CVarCompare" cvar="$buffRunSpeedFoodT3Duration" operation="LTE" value="0" />
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffRunSpeedFoodT3Display" operation="set" value="0" />
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffRunSpeedFoodT3Duration" operation="set" value="0" />
+		</effect_group>
+
+		<effect_group>
+			<passive_effect name="RunSpeed" operation="perc_add" value=".06" />
+		</effect_group>
+	</buff>
+	
+	<buff name="buffRunSpeedFoodT4" name_key="buffRunSpeedFoodT4Name" description_key="buffRunSpeedFoodT4Desc" tooltip_key="buffRunSpeedFoodT4Tooltip" icon="ui_game_symbol_twitch_fast">
+		<stack_type value="replace" /><duration value="0" />
+		<display_value value=".buffRunSpeedFoodT4Display" /><display_value_format value="time" />
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffRunSpeedFoodT4Duration" operation="subtract" value="@$MetabolismDuration" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffRunSpeedFoodT4Display" operation="set" value="@$buffRunSpeedFoodT4Duration" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffRunSpeedFoodT4Display" operation="divide" value="@$MetabolismDuration" />
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRunSpeedFoodT2" />
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRunSpeedFoodT3" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRunSpeedFoodT4">
+				<requirement name="CVarCompare" cvar="$buffRunSpeedFoodT4Duration" operation="LTE" value="0" />
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffRunSpeedFoodT4Display" operation="set" value="0" />
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffRunSpeedFoodT4Duration" operation="set" value="0" />
+		</effect_group>
+
+		<effect_group>
+			<passive_effect name="RunSpeed" operation="perc_add" value=".08" />
+		</effect_group>
+	</buff>
+</insertAfter>
+
+
+
+
+
 <!-- Setting buff strength on Baby Powerizer boots -->
 <setattribute xpath="//buff[@name='buffJumpJetsAirborne']/effect_group/passive_effect" name="value">0.85</setattribute> <!-- 2.35 -->
 

@@ -119,17 +119,16 @@
 			<property name="use_closest" value="true" />
 		</objective>
 		
-		<reward type="Item" id="casinoCoin" value="5000"/>
+		<reward type="Item" id="casinoCoin" value="50000"/>
 		<reward type="SkillPoints" value="4" chainreward="true"/>
-		<reward type="Item" id="bookSmelterITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookMinerITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookCookITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookArmorerITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookFarmerITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookChemistITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookRoboticsITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookRunnerITAV" ischosen="true" isfixed="true" value="1"/>
-		<reward type="Item" id="bookDecoratorITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookProfessionSmelterITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookProfessionMinerITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookProfessionCookITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookProfessionArmorerITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookProfessionFarmerITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookProfessionChemistITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookProfessionRoboticsITAV" ischosen="true" isfixed="true" value="1"/>
+		<reward type="Item" id="bookProfessionRunnerITAV" ischosen="true" isfixed="true" value="1"/>
 	</quest>
 	
 	
