@@ -19,7 +19,7 @@
 
 
 <!-- Increase stacksizes of expected store items -->
-<setattribute xpath="//item[@name='casinoCoin']/property[@name='Stacknumber']" name="value">999999</setattribute>
+<setattribute xpath="//item[@name='casinoCoin']/property[@name='Stacknumber']" name="value">65000</setattribute>
 <setattribute xpath="//item[@name='resourceGunPowder']/property[@name='Stacknumber']" name="value">2000</setattribute>
 <setattribute xpath="//item[(starts-with(@name, 'drink') or starts-with(@name, 'food'))]/property[@name='Stacknumber']" name="value">50</setattribute>
 
@@ -246,7 +246,7 @@
 			<property name="Use_time" value="0"/>
 			<property name="Sound_start" value="close_backpack"/>
 			<property name="Create_item" value="drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,casinoCoin,resourceDuctTape,foodCornBread,foodEggBoiled,drinkJarCoffee,frameShapes:VariantHelper"/>
-			<property name="Create_item_count" value="1,1,1,1,1,3500,1,2,1,1,500"/>
+			<property name="Create_item_count" value="1,1,1,1,1,3500,1,4,3,1,500"/>
 		</property>
 	</item>
 
