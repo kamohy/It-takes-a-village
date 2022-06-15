@@ -107,6 +107,18 @@
 		</action>
 	</action_sequence>
 	
+	<action_sequence name="first_book_read_ScientistITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContScientist" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
 	<action_sequence name="first_book_read_RunnerITAV">
 		<requirement class="HasBuff">
             <property name="buff_name" value="ITAV_start" param1="hasbuff" />
@@ -115,6 +127,18 @@
 		<property name="action_type" value="Game" />		
 		<action class="AddQuest">
 			<property name="quest" value="quest_ProfContRunner" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_ReaperITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContReaper" />
 			<property name="phase" value="1" />
 		</action>
 	</action_sequence>

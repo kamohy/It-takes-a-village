@@ -76,13 +76,25 @@ bookProfessionChemistITAV,Items,perk  book,,,"Profession: Chemist"
 bookProfessionChemistITAVDesc,progression,perk  book,,,"Chemists create vital items such as gunpowder, medicine, concrete mix... and paint."
 bookProfessionRoboticsITAV,Items,perk  book,,,"Profession: Robotics"
 bookProfessionRoboticsITAVDesc,progression,perk  book,,,"Robotics Inventors build turrets and triggers and drones."
+bookProfessionScientistITAV,Items,perk  book,,,"Profession: Scientist"
+bookProfessionScientistITAVDesc,progression,perk  book,,,"Scientists craft turrets, triggers and drones, as well as gunpowder, medicine, concrete mix and paint."
 bookProfessionRunnerITAV,Items,perk  book,,,"Profession: Mechanic"
 bookProfessionRunnerITAVDesc,progression,perk  book,,,"Mechanics salvage materials, crafts vehicles and special boots (Powerizer Boots and Work Boots)."
+bookProfessionReaperITAV,Items,perk  book,,,"Profession: Reaper"
+bookProfessionReaperITAVDesc,progression,perk  book,,,"Reapers harvest flesh, organs and fluids from the living and undead alike. They thrive in the violent and the profane."
 bookProfessionDecoratorITAV,Items,perk  book,,,"Profession: Decorator"
 bookProfessionDecoratorITAVDesc,Items,perk  book,,,"Decorators can craft invisible dyes as well as clothing mods that change appearance of apparel while adding pockets to them. They can also create a plethora of decorative items, such as flowers, signs, lamps, appliances, posters and clutter."
 
 resourceCerebralSpinalFluidITAV,Items,,,,"Cerebral Spinal Fluid"
 resourceCerebralSpinalFluidITAVDesc,Items,,,,"Cerebral Spinal Fluid can be used to transfer seemingly deceased knowledge to the pages of profession books."
+resourceMushyBrainITAV,Items,,,,"Mushy Zombie Brain"
+resourceMushyBrainITAVDesc,Items,,,,"Some brains are intact enough to extract Cerebral Spinal Fluid from. A Reaper is able to obtain more Cerebral Spinal Fluid from a single brain than anyone else."
+drugHealthBarInsanityITAV,Items,,,,"Musty Munchies"
+drugHealthBarInsanityITAVDesc,Items,,,,"These candies are softer than you'd expect, and the smell is unpleasantly familiar... But they'll increase your max health, your resistance to critical injuries and the speed at which they heal naturally either way!"
+drugSkullCrushersInsanityITAV,Items,,,,"Pungent Punchies"
+drugSkullCrushersInsanityITAVDesc,Items,,,,"These candies are softer than you'd expect, and the smell is unpleasantly familiar... But they'll increase your melee damage either way!"
+drugCovertCatsInsanityITAV,Items,,,,"Sneaky Ickies"
+drugCovertCatsInsanityITAVDesc,Items,,,,"These candies are softer than you'd expect, and the smell is unpleasantly familiar... But they'll increase your sneak attack damage either way!"
 
 ShopStoreVendingCashRegisterPlayerITAV,blocks,Container,,,"Player Owned Shop"
 ShopStoreVendingCashRegisterPlayerGroupDescITAV,blocks,Container,,,"Create your own Shop to sell goods for Casino Coins. Buy the goods you need from other survivors to support them and the community! The Shop is indestructible unless falling. Any uncollected money in the Shop disappears if the Shop is picked up."
@@ -92,10 +104,22 @@ cntLootLotteryBoxITAV,blocks,Container,,,"100k LOTTERY BOX!"
 cntLotteryBoxPlaceableDescITAV,blocks,Container,,,"Place and open this box for a chance to win 100.000 Duke's Casino tokens! \n\nRequires Advanced Mechanic's table to craft."
 lotteryITAV,ui_display,Item stat,,,"A chance to win 100k Duke coins:"
 lotteryPlaceITAV,ui_display,Item stat,,,"Place box on the ground to loot:"
+bodyBagYellowPlaceableITAV,blocks,,,,"Flesh Bag"
+bodyBagYellowPlaceableITAVDesc,blocks,,,,"A homemade flesh bag for purposefully decaying perfectly good meat into rotting, dripping goo best left untouched."
+bodyBagYellowITAV,blocks,,,,"Flesh Bag (Decaying)"
+bodyBagYellowITAVDesc,blocks,,,,""
+bodyBagYellowFliesITAV,blocks,,,,"Ripe Flesh Bag"
+bodyBagYellowFliesITAVDesc,blocks,,,,"Ripe Flesh Bag"
+bedrollTombCasketCoffinITAV,blocks,,,,"Sleeping Casket"
+
+
+statInsanityRisk,,,,,"Insanity Risk"
+statStopsInsanity,,,,,"Cure Insanity"
 
 
 lblContextActionAssemble,blocks,,,,"Assemble"
 lblContextActionPrepare,blocks,,,,"Prepare"
+lblContextActionExtract,blocks,,,,"Defile"
 lblCategoryAdvancedChemicals,UI,Tooltip,,,"Advanced Chemicals"
 lblCategoryAdvancedMedicine,UI,Tooltip,,,"Advanced Medicine"
 workbenchMinerT2ITAV,blocks,,,,"Advanced Miner's Table"
@@ -105,8 +129,8 @@ workbenchFarmerT1ITAV,blocks,,,,"Farmer's Sink"
 workbenchRoboticsT2ITAV,blocks,,,,"Advanced Robotic's Table"
 workbenchRunnerT2ITAV,blocks,,,,"Advanced Mechanic's Table"
 workbenchDecoratorT1ITAV,blocks,,,,"Decorator's Table Saw"
+workbenchReaperT2ITAV,blocks,,,,"Reaper's Vat"
 campfireDecoITAV,blocks,,,,"Firewood"
-
 
 workstationT2ITAVTip_title,Journal Tip,,,,"Advanced Workstations"
 workstationT2ITAVTip,Journal Tip,,,,"The most advanced recipes require a profession specific advanced workstation to craft. Advanced workstations have a higher heat signature than basic workstations."
@@ -379,6 +403,8 @@ perkElectrocutionerRank2LongDesc,progression,perk Int,,,"You are getting the han
 perkElectrocutionerRank3LongDesc,progression,perk Int,,,"You are getting dangerous with stun batons. You could probably knock out cattle if the zombies hadn't ate them all. Deal 30% more damage, and stun victims 60% longer.  Craft quality 4 pipe batons. \nAsk an Armorer to craft stun batons for you."
 perkElectrocutionerRank4LongDesc,progression,perk Int,,,"You are lethal with stun batons. Deal 40% more damage, and stun victims 80% longer. Craft quality 5 pipe batons. \nAsk an Armorer to craft stun batons for you."
 perkParkourRank4LongDesc,progression,perk Agi,,,"You are now a parkour master and can navigate difficult situations easily. Reduce stamina cost of jumping by 40%. Increase safe fall distance by 5 meters, can jump 2 meters higher, and never get a sprained or broken leg when falling. Ask a Mechanic to craft a pair of Powerizer boots to take your parkouring to the next level!"
+perkLockPickingRank1LongDesc,progression,perk Per,,,Burglar. You are starting to make a name for yourself. You can pick locks 20% faster and have a 10% lower chance to break lockpicks.
+perkEnforcerIntimidationLongDesc,progression,perk  book,,,Intimidation: Tired of getting overrun by punk zombies? Watch them run from you when you reload your .44 gun 10% faster.
 
 
 plantedCropsGroupDesc,blocks,Farming,,,"Plant these seeds on a craftable Farm Plot block to grow plants for you to harvest.\n\nWhen harvested, there is a 65% chance to get a seed back for replanting."
@@ -455,7 +481,7 @@ perkMinerITAVRank3LongDesc,progression,perk Pro,,,"Craft quality 4 good tools, i
 perkMinerITAVRank4Desc,progression,perk Pro,,,"Iron Fist"
 perkMinerITAVRank4LongDesc,progression,perk Pro,,,"Craft quality 5 great tools, increase tool damage by 40% and block damage by 120% with any axe, pick, shovel, chainsaw or auger. Harvest 80% more from trees, and 160% more from ore, stone and terrain blocks."
 perkMinerITAVRank5Desc,progression,perk Pro,,,"Cave Troll"
-perkMinerITAVRank5LongDesc,progression,perk Pro,,,"Craft quality 6 amazing tools, increase tool damage by 50% and block damage by 150% with any axe, pick, shovel, chainsaw or auger. Harvest 100% more from trees, and 200% more from ore, stone and terrain blocks."
+perkMinerITAVRank5LongDesc,progression,perk Pro,,,"Craft quality 6 amazing tools, increase tool damage by 50% and block damage by 150% with any axe, pick, shovel, chainsaw or auger. Harvest 100% more from trees, and 200% more from ore, stone and terrain blocks. Unlocks crafting of Steel pickaxe, shovel and axe"
 
 perkHunterITAVDesc,progression,perk Pro,,,"Become one with the hunt. Gain the ability to track animals and increase damage to and harvest from them."
 perkHunterITAVName,progression,perk Pro,,,Hunter
@@ -465,10 +491,11 @@ perkHunterITAVRank2LongDesc,progression,perk Pro,,,"You are now a Tracker. Crouc
 perkHunterITAVRank3Desc,progression,perk Pro,,,Huntress
 perkHunterITAVRank3LongDesc,progression,perk Pro,,,"You are a true Hunter and let nothing go to waste. Crouch to track mountain lions and bears. Harvest 100% more resources from animals, and gain a run speed boost when fighting zombie bears."
 
-perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced benefits and learn to cook faster. Cook high-end items at the Advanced Cooking Stove."
+perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced benefits, prepared with ingredients grown at your own farm. Grow crops in farm plots, and cook high-end items at the Advanced Cooking Stove."
 perkCookITAVName,progression,perk Pro,,,Cook
-perkCookITAVRank2LongDesc,progression,perk Pro,,,"Just like grandma used to make, tasty hearty meals that fill you up for days. Craft Steak and Potatoes, Chicken Stew, Meat Stew, Vegetable Stew, Blueberry Pie, Acorn Pie and several pumpkin dishes. Warm yourself with a delicious glass of Spicy Coffee. Unlocks the Small Food Pile storage decoration."
-perkCookITAVRank3LongDesc,progression,perk Pro,,,"Learn how to make nutritious meals from canned goods. Craft Sham Chowder, Hobo Stew, Chili dogs, Fish Tacos, Chicken Soup and Chicken Empanadas. Wash them down with Yucca Juice Smoothies and Beer."
+perkCookITAVRank1LongDesc,progression,perk Pro,,,"Cooking is not your thing but you know some basics. Unlocks basic recipes such as bacon and eggs, boiled and grilled meats, baked potatoes, cornbread, teas and coffee. Double the harvest of wild or planted crops, and gain a 50% chance of receiving a seed when harvesting your crops. Craft seeds for flowers and decorative plants like goldenrod, chrysanthemum, aloe, and yucca.\nFarm plots cost 30% less to craft. Unlocks the Farmer's Sink workbench."
+perkCookITAVRank2LongDesc,progression,perk Pro,,,"Just like grandma used to make, tasty hearty meals that fill you up for days. Craft Steak and Potatoes, Chicken Stew, Meat Stew, Vegetable Stew, Blueberry Pie, Acorn Pie and several pumpkin dishes. Warm yourself with a delicious glass of Spicy Coffee. Unlocks the Small Food Pile storage decoration. You can craft seeds for berries and vegetables.80% chance of receiving a seed when harvesting you crops, and 80% chance to harvest 1 additional crop.Farm plots cost 50% less to craft."
+perkCookITAVRank3LongDesc,progression,perk Pro,,,"Learn how to make nutritious meals from canned goods. Craft Sham Chowder, Hobo Stew, Chili dogs, Fish Tacos, Chicken Soup and Chicken Empanadas. Wash them down with Yucca Juice Smoothies and Beer. Triple the harvest of wild or planted crops."
 perkCookITAVRank4LongDesc,progression,perk Pro,,,"Cook for an army by making Gumbo Stew, Shepards Pie, Spaghetti, Tuna Gravy on Toast and Spicy Chicken Soup. Unlocks the Medium Food Pile storage decoration, and the Advanced Cooking Stove."
 perkCookITAVRank5LongDesc,progression,perk Pro,,,"Learn grandpa's secret recipes that boost stats and attributes! Unlocks the Large Food Pile storage decoration."
 
@@ -520,11 +547,25 @@ perkRoboticsITAVRank4LongDesc,progression,perk Pro,,,"You must be from the year 
 perkRoboticsITAVRank5Desc,progression,perk Pro,,,Robotics Expert
 perkRoboticsITAVRank5LongDesc,progression,perk Pro,,,"You are now a top expert in robotics. Reload robot weapons 20% faster and reload an extra 50 rounds. Robot active range is 18 meters.\nTwo deployed robots can be active at once. \nUnlocks crafting of SMG Auto Turret, Robotic Drone and Advanced Robotic's Table."
 
+
+perkScientistITAVDesc,progression,perk Pro,,,"You are fascinated with robotics and chemicals such as deployed weapons, gunpowder, medicine and concrete mix. Perform high-end crafts at the Advanced Chemistry Station and the Advanced Robotic's Table."
+perkScientistITAVName,progression,perk Pro,,,Scientist
+perkScientistITAVRank1Desc,progression,perk Pro,,,Student
+perkScientistITAVRank1LongDesc,progression,perk Pro,,,"Can craft chemistry stations, first aid bandages, herbal antibiotics and plaster casts. Craft poor quality 2 robots, deal 10% more damage, 30% faster fire rate and reload an extra 10 rounds. Robot active range is increased from 10 to 14 meters.\nYou can deploy multiple robots but only the closest will be active. \nUnlocks crafting of workbenches, Robotic Sledge, Generatorbank, Switch, trigger plates and wires, electric relays and electrical traps."
+perkScientistITAVRank2Desc,progression,perk Pro,,,Kitchen Tinkerer
+perkScientistITAVRank2LongDesc,progression,perk Pro,,,"Can craft concrete mix, gun powder and paint. Craft items 20% faster at chemistry stations. Craft fair quality 3 robots, deal 20% more damage, 60% faster fire rate and reload an extra 20 rounds. Robot active range is 15 meters. Unlocks crafting of Robotic Parts from Tool Part Fragments."
+perkScientistITAVRank3Desc,progression,perk Pro,,,Lab Rat
+perkScientistITAVRank3LongDesc,progression,perk Pro,,,"Can craft first aid kits and steroids. Craft good quality 4 robotics, deal 30% more damage, 90% faster fire rate and reload an extra 30 rounds. Robot active range is 16 meters. \nUnlocks crafting of Shotgun Auto Turret and Robotic Turret. Unlocks Advanced Chemistry Station."
+perkScientistITAVRank4Desc,progression,perk Pro,,,Artisan
+perkScientistITAVRank4LongDesc,progression,perk Pro,,,"Can craft Fortbites, Recog, antibiotics and Grandpa's Forgetting Elixir. Craft items 40% faster at chemistry stations. Craft great quality 5 robots, deal 40% more damage, 120% faster fire rate and reload an extra 40 rounds. Reload robot weapons 10% faster. Robot active range is 17 meters."
+perkScientistITAVRank5Desc,progression,perk Pro,,,Master
+perkScientistITAVRank5LongDesc,progression,perk Pro,,,"You are now a top expert in robotics. Reload robot weapons 20% faster and reload an extra 50 rounds. Robot active range is 18 meters.\nTwo deployed robots can be active at once. \nUnlocks crafting of SMG Auto Turret, Robotic Drone and Advanced Robotic's Table."
+
 perkRunnerITAVDesc,progression,perk Pro,,,"Craft those vehicles! Perform high-end crafts at the Advanced Mechanic's Table."
 perkRunnerITAVName,progression,perk Pro,,,Mechanic
-perkRunnerITAVRank1Desc,progression,perk Pro,,,Bikes and Stuff
+perkRunnerITAVRank1Desc,progression,perk Pro,,,Bikes and Gambling
 perkRunnerITAVRank1LongDesc,progression,perk Pro,,,"Harvest 20% faster and recieve 20% more resources when harvesting with a wrench, ratchet or impact driver. \nUnlocks crafting of workbenches, Wrench, Lockpicks, Crushed Car wall, Wheels, Bike parts, Baby Powerizer Boots, Baby Work Boots, Minibike parts, Gas cans, Lottery Box and quality 4 Car Batteries."
-perkRunnerITAVRank2Desc,progression,perk Pro,,,Motorbiker, Boots and Gambling
+perkRunnerITAVRank2Desc,progression,perk Pro,,,Motorbiker, Boots and Engines
 perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, Powerizer Boots, Work Boots, oil, Gas can bundle, quality 5 Car Batteries, and Advanced Mechanic's Table. Can pick up mines."
 perkRunnerITAVRank3Desc,progression,perk Pro,,,Limo out front
 perkRunnerITAVRank3LongDesc,progression,perk Pro,,,"Harvest 80% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of  4x4 truck parts and quality 6 Car Batteries. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower."
@@ -533,13 +574,21 @@ perkRunnerITAVRank4LongDesc,progression,perk Pro,,,""
 perkRunnerITAVRank5Desc,progression,perk Pro,,,Level 5
 perkRunnerITAVRank5LongDesc,progression,perk Pro,,,""
 
+perkReaperITAVDesc,progression,perk Pro,,,"You are a hunter of both the living and the undead, and will stop at nothing to survive. Let your bloodthirst go rampant and use your combat skills to obtain sought after items from the most dangerous places."
+perkReaperITAVName,progression,perk Pro,,,Reaper
+perkReaperITAVRank1Desc,progression,perk Pro,,,"Into the abyss"
+perkReaperITAVRank1LongDesc,progression,perk Pro,,,"You can consume Rotting Flesh and Murky Water without being affected by dysentery. 10% increased run speed at night. Obtain 100% more Cerebral Spinal Fluid from Mushy Brains. Harvest 20% more resources from animals. Crouch to track rabbits, snakes and chickens. Deal 25% more damage to animals. Loot time decreased by 20%. You can pick locks 10% faster."
+perkReaperITAVRank2Desc,progression,perk Pro,,,Bloody Business
+perkReaperITAVRank2LongDesc,progression,perk Pro,,,"Crouch to track deers, boars, wolves and coyotes. Obtain 300% more Cerebral Spinal Fluid from Mushy Brains. Harvest 60% more resources from animals. Can pick up mines. Loot time decreased by 40%. You can pick locks 20% faster. Unlocks crafting of Vehicle Super Charger Mod and Flesh Bags."
+perkReaperITAVRank3Desc,progression,perk Pro,,,Point of no return
+perkReaperITAVRank3LongDesc,progression,perk Pro,,,"Crouch to track mountain lions and bears. Harvest 100% more resources from animals, and gain a run speed boost when fighting zombie bears. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower. Loot time decreased by 60%. You can pick locks 30% faster. Unlocks crafting of Musty Munchies, Pungent Punchies and Sneaky Ickies."
+
 perkDecoratorITAVDesc,progression,perk Pro,,,"Spice up your apocalypse! Decorative items are crafted in a Decorator's Table Saw."
 perkDecoratorITAVName,progression,perk Pro,,,Decorator
 perkDecoratorITAVRank1Desc,progression,perk Pro,,,"Dyes, Pocket, Flowers and Furniture"
 perkDecoratorITAVRank1LongDesc,progression,perk Pro,,,"Unlocks invisible dye, clothing pocket, clothes racks, coffee and soda machines, bathtub, single bed, planter, candelabra, logfire, wood burning stove, booths, pool table, signs, water cooler, trash cans, fridges, toaster, microwave ovens, front doors, shopping cart, terrarium, bar stools, decorative cooking pot, wine bottles, flowers, hanging moss, juniper and azalea."
 perkDecoratorITAVRank2Desc,progression,perk Pro,,,Lumination, Signs and Wardrobe
 perkDecoratorITAVRank2LongDesc,progression,perk Pro,,,"Unlocks double pockets, cosmetic clothes mods, mannequins, laptop, movie posters, signs, neon shop sign, porch lights, table lamps, ceiling lamps and chandelier. Use the wireless fusebox to connect them to a power source."
-
 
 hasLearntSmelterITAVTooltip,items,Admin,,,"Profession: Smelter acquired"
 hasLearntMinerITAVTooltip,items,Admin,,,"Profession: Miner acquired"
@@ -550,7 +599,9 @@ hasLearntWeaponsmithITAVTooltip,items,Admin,,,"Profession: Weaponsmith acquired"
 hasLearntFarmerITAVTooltip,items,Admin,,,"Profession: Farmer acquired"
 hasLearntChemistITAVTooltip,items,Admin,,,"Profession: Chemist acquired"
 hasLearntRoboticsITAVTooltip,items,Admin,,,"Profession: Robotics Inventor acquired"
+hasLearntScientistITAVTooltip,items,Admin,,,"Profession: Scientist acquired"
 hasLearntRunnerITAVTooltip,items,Admin,,,"Profession: Mechanic acquired"
+hasLearntReaperITAVTooltip,items,Admin,,,"Profession: Reaper acquired"
 drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,"Your Profession Perk skill points have been reset."
 readyForNextProfessionTooltip,progression,,,,"Crafting: Profession Book available!"
 

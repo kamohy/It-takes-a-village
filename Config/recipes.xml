@@ -62,7 +62,7 @@
 	<!-- Profession books  -->
 	<append xpath="/recipes">
 		<recipe name="bookProfessionSmelterITAV" count="1" craft_time="30">
-			<ingredient name="resourceCerebralSpinalFluidITAV" count="10" />
+			<ingredient name="resourceCerebralSpinalFluidITAV" count="40" />
 			<ingredient name="drinkJarGrandpasLearningElixir" count="1" />
 			<ingredient name="resourcePaper" count="100" />
 			<ingredient name="resourcePaint" count="30" />
@@ -70,7 +70,7 @@
 		</recipe>	
 		
 		<recipe name="bookProfessionMinerITAV" count="1" craft_time="30">
-			<ingredient name="resourceCerebralSpinalFluidITAV" count="10" />
+			<ingredient name="resourceCerebralSpinalFluidITAV" count="40" />
 			<ingredient name="drinkJarGrandpasLearningElixir" count="1" />
 			<ingredient name="resourcePaper" count="100" />
 			<ingredient name="resourcePaint" count="30" />
@@ -78,7 +78,7 @@
 		</recipe>
 		
 		<recipe name="bookProfessionCookITAV" count="1" craft_time="30">
-			<ingredient name="resourceCerebralSpinalFluidITAV" count="10" />
+			<ingredient name="resourceCerebralSpinalFluidITAV" count="40" />
 			<ingredient name="drinkJarGrandpasLearningElixir" count="1" />
 			<ingredient name="resourcePaper" count="100" />
 			<ingredient name="resourcePaint" count="30" />
@@ -86,14 +86,14 @@
 		</recipe>
 		
 		<recipe name="bookProfessionArmorerITAV" count="1" craft_time="30">
-			<ingredient name="resourceCerebralSpinalFluidITAV" count="10" />
+			<ingredient name="resourceCerebralSpinalFluidITAV" count="40" />
 			<ingredient name="drinkJarGrandpasLearningElixir" count="1" />
 			<ingredient name="resourcePaper" count="100" />
 			<ingredient name="resourcePaint" count="30" />
 			<ingredient name="resourceFeather" count="1" />
 		</recipe>
 		
-		<recipe name="bookProfessionFarmerITAV" count="1" craft_time="30">
+		<!--<recipe name="bookProfessionFarmerITAV" count="1" craft_time="30">
 			<ingredient name="resourceCerebralSpinalFluidITAV" count="10" />
 			<ingredient name="drinkJarGrandpasLearningElixir" count="1" />
 			<ingredient name="resourcePaper" count="100" />
@@ -115,15 +115,32 @@
 			<ingredient name="resourcePaper" count="100" />
 			<ingredient name="resourcePaint" count="30" />
 			<ingredient name="resourceFeather" count="1" />
-		</recipe>
+		</recipe> -->
 		
-		<recipe name="bookProfessionRunnerITAV" count="1" craft_time="30">
-			<ingredient name="resourceCerebralSpinalFluidITAV" count="10" />
+		<recipe name="bookProfessionScientistITAV" count="1" craft_time="30">
+			<ingredient name="resourceCerebralSpinalFluidITAV" count="40" />
 			<ingredient name="drinkJarGrandpasLearningElixir" count="1" />
 			<ingredient name="resourcePaper" count="100" />
 			<ingredient name="resourcePaint" count="30" />
 			<ingredient name="resourceFeather" count="1" />
-		</recipe>		
+		</recipe>
+		
+		<recipe name="bookProfessionRunnerITAV" count="1" craft_time="30">
+			<ingredient name="resourceCerebralSpinalFluidITAV" count="40" />
+			<ingredient name="drinkJarGrandpasLearningElixir" count="1" />
+			<ingredient name="resourcePaper" count="100" />
+			<ingredient name="resourcePaint" count="30" />
+			<ingredient name="resourceFeather" count="1" />
+		</recipe>	
+
+		<recipe name="bookProfessionReaperITAV" count="1" craft_time="30">
+			<ingredient name="resourceCerebralSpinalFluidITAV" count="40" />
+			<ingredient name="drinkJarGrandpasLearningElixir" count="1" />
+			<ingredient name="resourcePaper" count="100" />
+			<ingredient name="resourcePaint" count="30" />
+			<ingredient name="resourceFeather" count="1" />
+		</recipe>
+		
 	</append>
 	
 	
@@ -188,6 +205,10 @@
 			<ingredient name="resourceForgedIron" count="10"/>
 			<ingredient name="resourceMetalPipe" count="10"/>
 			<ingredient name="drinkJarBoiledWater" count="10"/>
+		</recipe>	
+
+		<recipe name="workbenchReaperT2ITAV" count="1" craft_time="200" tags="learnable">
+			<ingredient name="sinksToiletsBlockVariantHelper" count="1"/>
 		</recipe>		
 		
 	</append>	
@@ -740,6 +761,71 @@
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="1"/>
 		</recipe>
+		
+		
+		
+		
+		<recipe name="vehicleWheels" count="1" craft_time="120" craft_area="workbench" tags="learnable">
+			<ingredient name="vehicleBicyclePlaceable" count="1"/>
+		</recipe>
+		
+		<recipe name="vehicleWheels" count="2" craft_time="120" craft_area="workbench" tags="learnable">
+			<ingredient name="vehicleMinibikePlaceable" count="1"/>
+		</recipe>
+		
+		<recipe name="vehicleWheels" count="2" craft_time="120" craft_area="workbenchRunnerT2ITAV" tags="learnable">
+			<ingredient name="vehicleMotorcyclePlaceable" count="1"/>
+		</recipe>
+		
+		<!-- Crafting of Cerebral Spinal Fluids, for non-Reapers (backpack), for low level Reapers (backpack), and higher level Reapers (using workstation) -->
+		<recipe name="resourceCerebralSpinalFluidITAV" count="1" craft_time="50">
+			<ingredient name="resourceMushyBrainITAV" count="1"/>
+		</recipe>
+		
+		<recipe name="resourceCerebralSpinalFluidITAV" count="2" craft_time="75" tags="learnable">
+			<ingredient name="resourceMushyBrainITAV" count="1"/>
+		</recipe>
+		
+		<recipe name="resourceCerebralSpinalFluidITAV" count="4" craft_time="120" craft_area="workbenchReaperT2ITAV" tags="learnable">
+			<ingredient name="resourceMushyBrainITAV" count="1"/>
+		</recipe>
+		
+		<recipe name="bodyBagYellowPlaceableITAV" count="1" craft_area="workbenchReaperT2ITAV" tags="learnable">
+			<ingredient name="foodRawMeat" count="20"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+		</recipe>		
+		
+		<recipe name="bedrollTombCasketCoffinITAV" count="1" tags="learnable">
+			<ingredient name="resourceWood" count="100"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceCloth" count="10"/>
+		</recipe>
+
+
+		<recipe name="drugHealthBarInsanityITAV" count="2" craft_time="35" craft_area="workbenchReaperT2ITAV" tags="learnable">
+			<ingredient name="resourceCerebralSpinalFluidITAV" count="5"/>
+			<ingredient name="foodRottingFlesh" count="3"/>
+			<ingredient name="resourcePaint" count="15"/>
+			<ingredient name="foodCornMeal" count="20"/>
+			<ingredient name="foodEgg" count="1"/>
+		</recipe>
+		
+		<recipe name="drugSkullCrushersInsanityITAV" count="2" craft_time="35" craft_area="workbenchReaperT2ITAV" tags="learnable">
+			<ingredient name="resourceCerebralSpinalFluidITAV" count="5"/>
+			<ingredient name="foodRottingFlesh" count="3"/>
+			<ingredient name="resourcePaint" count="15"/>
+			<ingredient name="foodCornMeal" count="20"/>
+			<ingredient name="ammoGasCan" count="30"/>
+		</recipe>
+		
+		<recipe name="drugCovertCatsInsanityITAV" count="2" craft_time="35" craft_area="workbenchReaperT2ITAV" tags="learnable">
+			<ingredient name="resourceCerebralSpinalFluidITAV" count="5"/>
+			<ingredient name="foodRottingFlesh" count="3"/>
+			<ingredient name="resourcePaint" count="15"/>
+			<ingredient name="foodCornMeal" count="20"/>
+			<ingredient name="resourceAnimalFat" count="1"/>
+		</recipe>
+		
 		
 		<!--  ******** Clothing mods ************* -->
 		
@@ -1402,6 +1488,27 @@
 	<setattribute xpath="//recipe[(@name='resourcePaper') and (@craft_area='chemistryStation')]" name="count">20</setattribute>
 		
 	<setattribute xpath="//recipe[@name='resourceLockPick']" name="count">5</setattribute>
+	
+	<remove xpath="//recipe[@name='vehicleMotorcycleChassis']"/>
+	<remove xpath="//recipe[@name='vehicleMotorcycleHandlebars']"/>
+	<insertAfter xpath="//recipe[@name='vehicleMinibikePlaceable']">
+		<recipe name="vehicleMotorcycleChassis" count="1" craft_time="150" craft_area="workbench" tags="perkRunnerITAV,learnable,workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="35"/>
+			<ingredient name="resourceMechanicalParts" count="15"/>
+			<ingredient name="resourceDuctTape" count="15"/>
+			<ingredient name="resourceLeather" count="20"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+		</recipe>
+		
+		<recipe name="vehicleMotorcycleHandlebars" count="1" craft_time="150" craft_area="workbench" tags="perkRunnerITAV,learnable,workbenchCrafting">
+			<ingredient name="resourceMechanicalParts" count="15"/>
+			<ingredient name="resourceDuctTape" count="15"/>
+			<ingredient name="resourceHeadlight" count="1"/>
+			<ingredient name="resourceElectricParts" count="10"/>
+			<ingredient name="resourceForgedSteel" count="20"/>
+		</recipe>
+		
+	</insertAfter>
 	
 	<!-- Alternative arrow/bolt recipes with wood and feather instead of scrap polymer -->
 	<append xpath="/recipes">

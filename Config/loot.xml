@@ -8,7 +8,18 @@
 	<lootprobtemplate name="superLow">
 		<loot level="1,999999" prob=".01"/>
 	</lootprobtemplate>
+	<lootprobtemplate name="ratherLow">
+		<loot level="1,999999" prob=".1"/>
+	</lootprobtemplate>
 </insertBefore>
+
+<remove xpath="//item[contains(@name, 'medical') and not(contains(@name, 'BloodBag')) and not(contains(@name, 'AloeCream'))]" /> 
+<remove xpath="//item[@name='drugHerbalAntibiotics']" />
+<remove xpath="//item[@name='drugSteroids']" />
+<remove xpath="//item[@name='drugAntibiotics']" />
+<remove xpath="//item[@name='drugFortBites']" />
+<remove xpath="//item[@name='drugRecog']" />
+<remove xpath="//item[@name='drinkJarGrandpasAwesomeSauce']" />
 	
 <!-- Tweaking some loots -->
 <insertAfter xpath="/lootcontainers/lootgroup[@name='treasureAmmo']">
@@ -135,11 +146,12 @@
 
 <insertAfter xpath="/lootcontainers/lootgroup[@name='treasureAmmo']">
 	<lootgroup name="poiCandyOnlyITAV">
-		<item name="drugOhShitzDrops" />
-		<item name="drugEyeKandy" />
-		<item name="drugJailBreakers"/>
-		<item name="drugHealthBar"/>
-		<item name="drugCovertCats"/>
+		<item name="drugOhShitzDrops" loot_prob_template="low" />
+		<item name="drugEyeKandy" loot_prob_template="low" />
+		<item name="drugJailBreakers" loot_prob_template="low" />
+		<item name="drugHealthBar" loot_prob_template="low" />
+		<item name="drugCovertCats" loot_prob_template="low" />
+		<item name="drugSkullCrushers" loot_prob_template="low" />
 	</lootgroup>
 </insertAfter>
 
@@ -183,7 +195,7 @@
 <remove xpath="//lootgroup[@name='groupIngredientsCommon']/item[@name='resourceCropCoffeeBeans']"/> 
 <remove xpath="//lootgroup[@name='groupIngredientsCommon']/item[@name='resourceCropGoldenrodPlant']"/>
 <append xpath="//lootgroup[@name='groupIngredientsCommon']"><item name="plantedPotato1" count="1,4" /></append>
-<setattribute xpath="//lootgroup[@name='groupCraftingUncommon']/item[@name='resourceGunPowder']" name="count">3,25</setattribute>
+<setattribute xpath="//lootgroup[@name='groupCraftingUncommon']/item[@name='resourceGunPowder']" name="count">4,30</setattribute>
 
 <remove xpath="//item[@name='gunHandgunT1Pistol']" />
 
@@ -227,13 +239,13 @@ makes the looter more financially self sustained than if they had to buy all the
 
 <append xpath="/lootcontainers/lootgroup[@name='groupFoodTrash']">
 	<item name="weaponPartFragmentITAV" count="4,8" />
-	<item name="casinoCoin" count="620,1010" />
+	<item name="casinoCoin" count="620,1010" loot_prob_template="med" />
 	<item name="resourceScrapIron" count="7,13" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupScrapCommon']">
 	<item name="weaponPartFragmentITAV" count="4,8" />
-	<item name="casinoCoin" count="660,1040" />
+	<item name="casinoCoin" count="660,1040" loot_prob_template="med" />
 	<item name="resourceScrapIron" count="7,18" />
 </append>
 
@@ -275,6 +287,10 @@ makes the looter more financially self sustained than if they had to buy all the
 	<item name="foodCanDogfood" />
 </append>
 <remove xpath="/lootcontainers/lootgroup[@name='groupCoffeeMaker01']/item[@name='drinkJarCoffee']" />
+<append xpath="/lootcontainers/lootgroup[@name='groupCoffeeMaker01']">
+    <item name="drinkJarRiverWater" loot_prob_template="high" />
+</append>
+
 <remove xpath="/lootcontainers/lootgroup[@name='groupFoodRare']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='groupFoodRare']">
     <item name="foodCanPasta"/>
@@ -292,9 +308,9 @@ makes the looter more financially self sustained than if they had to buy all the
 
 <remove xpath="//lootgroup[@name='schematicsWeaponsArmorT0']/item" />
 <append xpath="//lootgroup[@name='schematicsWeaponsArmorT0']">
-	<item name="casinoCoin" count="200,320"/>
+	<item name="casinoCoin" count="200,320" loot_prob_template="med"/>
 	<item name="resourceCloth" count="3,5"/>
-	<item name="ammo762mmBulletBall" count="15,29"/>
+	<item name="ammo762mmBulletBall" count="15,29" loot_prob_template="med"/>
 	<item name="resourceDuctTape"/>
 	<item name="drinkJarCoffee"/>
 	<item name="drinkYuccaJuiceSmoothie"/>
@@ -339,12 +355,7 @@ makes the looter more financially self sustained than if they had to buy all the
 	<item name="meleeWpnClubT3SteelClubSchematic" loot_prob_template="ProbT2Cap" />
 	<item name="armorMilitaryStealthBootsSchematic" loot_prob_template="ProbT2Cap" />
 	<item name="drugSteroids"/>
-	<item name="drugJailBreakers"/>
-	<item name="drugHealthBar"/>
-	<item name="drugAtomJunkies"/>
-	<item name="drugOhShitzDrops"/>
 	<item name="drugAntibiotics"/> 
-	<item name="drugSkullCrushers"/>
 	<item name="drinkCanMegaCrush"/>
 </append>
 
@@ -368,13 +379,7 @@ makes the looter more financially self sustained than if they had to buy all the
 	<item name="drugFortBites" />
 </append>
 
-<remove xpath="//item[contains(@name, 'medical') and not(contains(@name, 'BloodBag')) and not(contains(@name, 'AloeCream'))]" /> 
-<remove xpath="//item[@name='drugHerbalAntibiotics']" />
-<remove xpath="//item[@name='drugSteroids']" />
-<remove xpath="//item[@name='drugAntibiotics']" />
-<remove xpath="//item[@name='drugFortBites']" />
-<remove xpath="//item[@name='drugRecog']" />
-<remove xpath="//item[@name='drinkJarGrandpasAwesomeSauce']" />
+
 
 <!-- Replace some items in Medical loots to make Chemist more viable -->
 <setattribute xpath="//lootgroup[@name='survivalMedical']/item[@name='drugPainkillers']" name="name">resourceSewingKit</setattribute>
@@ -394,7 +399,7 @@ makes the looter more financially self sustained than if they had to buy all the
 <remove xpath="//lootgroup[@name='groupChem01']/item[@name='drinkJarBoiledWater']" />
 <append xpath="//lootgroup[@name='groupChem01']">
 	<item group="poiCandyOnlyITAV" />
-	<item name="resourceGunPowder" count="8,17" />
+	<item name="resourceGunPowder" count="10,20" />
 	<item name="foodCanChili" />
 </append>
 
@@ -428,8 +433,8 @@ makes the looter more financially self sustained than if they had to buy all the
 <remove xpath="//item[@group='groupQuestT1HeavyArmor']" />
 <remove xpath="//item[@group='groupQuestT2Firearms']" />
 <append xpath="/lootcontainers/lootgroup[@name='groupAirDropT3Bundles']">
-	<item name="casinoCoin" count="9980,14560" />
-	<item name="weaponPartFragmentITAV" count="390,520" />
+	<item name="casinoCoin" count="9980,14560" loot_prob_template="med" />
+	<item name="weaponPartFragmentITAV" count="390,520" loot_prob_template="med" />
 </append>
 
 
@@ -437,26 +442,26 @@ makes the looter more financially self sustained than if they had to buy all the
 <append xpath="/lootcontainers/lootgroup[@name='groupAirDropT4Bundles']">
 	<item group="groupQuestT3MeleeMods" />
 	<item group="groupQuestT3RangedMods" />
-	<item name="casinoCoin" count="14980,24560" />
-	<item name="weaponPartFragmentITAV" count="990,1220" />
+	<item name="casinoCoin" count="14980,24560" loot_prob_template="med" />
+	<item name="weaponPartFragmentITAV" count="990,1220" loot_prob_template="med" />
 </append>
 
 <remove xpath="//lootgroup[@name='groupAirDropT5Bundles']/item" />
 <append xpath="/lootcontainers/lootgroup[@name='groupAirDropT5Bundles']">
 	<item group="groupQuestT3MeleeMods" />
 	<item group="groupQuestT3RangedMods" />
-	<item name="casinoCoin" count="24980,34560" />
-	<item name="weaponPartFragmentITAV" count="1590,1920" />
+	<item name="casinoCoin" count="24980,34560" loot_prob_template="med" />
+	<item name="weaponPartFragmentITAV" count="1590,1920" loot_prob_template="med" />
 </append>
 
 <append xpath="//lootgroup[@name='groupAirDrop02']">
-	<item name="armorSteelSetParts" count="3,6" />
-	<item name="armorMilitarySetParts" count="3,6" />
+	<item name="armorSteelSetParts" count="3,4" />
+	<item name="armorMilitarySetParts" count="3,4" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupSavageCountryCrate03']">
-	<item name="casinoCoin" count="3530,4550" />
-	<item name="weaponPartFragmentITAV" count="90,120" />
+	<item name="casinoCoin" count="3530,4550" loot_prob_template="med" />
+	<item name="weaponPartFragmentITAV" count="90,120" loot_prob_template="med" />
 </append>
 
 <remove xpath="//lootgroup[starts-with(@name, 'groupZpack')]/item[@name='oldCash']" />
@@ -472,6 +477,7 @@ makes the looter more financially self sustained than if they had to buy all the
 </insertBefore>
 
 <setattribute xpath="//item[@name='oldCash']" name="name">casinoCoin</setattribute>
+<setattribute xpath="//lootgroup/item[@name='casinoCoin' and (@count='5,10' or @count='1,10')]" name="loot_prob_template">med</setattribute>
 <setattribute xpath="//lootgroup/item[@name='casinoCoin' and (@count='5,10' or @count='1,10')]" name="count">970,1220</setattribute>
 
 
@@ -487,11 +493,11 @@ makes the looter more financially self sustained than if they had to buy all the
 <setattribute xpath="//lootgroup[@name='groupZpackBoss03']/item[@name='casinoCoin']" name="count">2000,4000</setattribute>
 <setattribute xpath="//lootgroup[@name='groupZpackBoss03']/item[@name='casinoCoin']" name="count">2000,4000</setattribute>
 
-<append xpath="//lootgroup[@name='groupZpackReg']"><item name="resourceCerebralSpinalFluidITAV" count="1" loot_prob_template="medLow" force_prob="true" /></append>
-<append xpath="//lootgroup[@name='groupZpackStrong']"><item name="resourceCerebralSpinalFluidITAV" count="1" loot_prob_template="med" force_prob="true" /></append>
-<append xpath="//lootgroup[@name='groupZpackBoss']"><item name="resourceCerebralSpinalFluidITAV" count="1" loot_prob_template="high" force_prob="true" /></append>
+<append xpath="//lootgroup[@name='groupZpackReg']"><item name="resourceMushyBrainITAV" count="1" loot_prob_template="ratherLow" force_prob="true" /></append>
+<append xpath="//lootgroup[@name='groupZpackStrong']"><item name="resourceMushyBrainITAV" count="1" loot_prob_template="low" force_prob="true" /></append>
+<append xpath="//lootgroup[@name='groupZpackBoss']"><item name="resourceMushyBrainITAV" count="1" loot_prob_template="medLow" force_prob="true" /></append>
 
-<append xpath="//lootgroup[@name='groupBathtub']"><item name="resourceCerebralSpinalFluidITAV" count="1" loot_prob_template="low" /></append>
+<append xpath="//lootgroup[@name='groupBathtub']"><item name="resourceMushyBrainITAV" count="1" loot_prob_template="low" /></append>
 
 
 
@@ -539,14 +545,14 @@ makes the looter more financially self sustained than if they had to buy all the
 <insertAfter xpath="//lootcontainer[@id='54']">
 	<lootcontainer id="55" name="cashRegister" count="1,5" size="6,1" sound_open="UseActions/open_cash_register" sound_close="UseActions/close_cash_register" loot_quality_template="qualBaseTemplate">
 		<item name="casinoCoin" count="500,600" loot_prob_template="low"></item>
-		<item name="casinoCoin" count="100,600" />
+		<item name="casinoCoin" count="100,600" loot_prob_template="med" />
 	</lootcontainer>
 </insertAfter>
 
 <remove xpath="//lootcontainer[@id='147']" />
 <insertAfter xpath="//lootcontainer[@id='146']">
 	<lootcontainer id="147" name="atmLoot" count="1" size="6,1" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="qualPlus1Template">
-		<item name="casinoCoin" count="3000,12000"></item>
+		<item name="casinoCoin" count="3000,12000" loot_prob_template="high"></item>
 	</lootcontainer>
 </insertAfter>
 
@@ -595,11 +601,11 @@ makes the looter more financially self sustained than if they had to buy all the
 
 
 <append xpath="//lootgroup[@name='groupReinforcedChestT1']">
-	<item name="resourceGunPowder" count="50" />
+	<item name="resourceGunPowder" count="60" />
 </append>
 
 <append xpath="//lootgroup[@name='groupReinforcedChestT2']">
-	<item name="resourceGunPowder" count="85" />
+	<item name="resourceGunPowder" count="105" />
 </append>
 
 <!-- <remove xpath="//lootgroup[@name='groupReinforcedChestT3_03']/item" /> already empty -->
@@ -608,7 +614,7 @@ makes the looter more financially self sustained than if they had to buy all the
 </append>
 
 <append xpath="//lootgroup[@name='groupReinforcedChestT3']">
-	<item name="resourceGunPowder" count="125" />
+	<item name="resourceGunPowder" count="150" />
 </append>
 
 
@@ -703,10 +709,9 @@ makes the looter more financially self sustained than if they had to buy all the
 	<item name="meleeToolRepairT1ClawHammer" />
 	<!-- <item name="faucetBrass02" loot_prob_template="veryLow" />
 	<item name="faucetBrass04" loot_prob_template="veryLow" /> -->
-	<item name="casinoCoin" count="190,440"/>
+	<item name="casinoCoin" count="190,440" loot_prob_template="med" />
 	<item name="resourceCloth" count="5,11"/>
 	<item name="ammo762mmBulletBall" count="15,29"/> 
-	<item group="poiCandyOnlyITAV" loot_prob_template="low" />
 </append>
 
 <remove xpath="//item[@name='ammoGasCanSchematic']" />
