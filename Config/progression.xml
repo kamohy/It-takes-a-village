@@ -190,12 +190,12 @@
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="foodGumboStew,foodShepardsPie,foodSpaghetti,foodTunaFishGravyToast,foodChickenSoupSpicyITAV,cntFoodPileMediumITAV,campfireT2ITAV"/>
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="drinkJarGrandpasMoonshine,drinkJarGrandpasLearningElixir,cntFoodPileLargeITAV"/>
 			
-			<passive_effect name="HarvestCount" operation="perc_add" level="1,2,3" value="1,1,2" tags="cropHarvest,wildCropsHarvest"/>
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,2,3,4,5" value="1,1,2,2,2" tags="cropHarvest,wildCropsHarvest"/>
 			<passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="bonusCropHarvestITAV"/>
-			<passive_effect name="HarvestCount" operation="base_set" level="2,3" value="1,1" tags="bonusCropHarvest"/>
+			<passive_effect name="HarvestCount" operation="base_set" level="2,5" value="1" tags="bonusCropHarvest"/>
 			
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="workbenchFarmerT1ITAV,plantedAloe1,plantedChrysanthemum1,plantedGoldenrod1,plantedYucca1"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="plantedBlueberry1,plantedCoffee1,plantedCorn1,plantedCotton1,plantedMushroom1,plantedPotato1,plantedHop1,plantedPumpkin1,plantedGraceCorn1"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="workbenchFarmerT1ITAV,plantedAloe1,plantedChrysanthemum1,plantedGoldenrod1,plantedYucca1"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="plantedBlueberry1,plantedCoffee1,plantedCorn1,plantedCotton1,plantedMushroom1,plantedPotato1,plantedHop1,plantedPumpkin1,plantedGraceCorn1"/>
 				
 			<effect_description level="1" desc_key="perkMasterChefRank1Desc" long_desc_key="perkCookITAVRank1LongDesc"/>
             <effect_description level="2" desc_key="perkMasterChefRank2Desc" long_desc_key="perkCookITAVRank2LongDesc"/>

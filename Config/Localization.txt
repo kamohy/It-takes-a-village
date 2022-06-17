@@ -54,6 +54,7 @@ workBootsBabyITAVDesc,,,,,"Increases stamina regeneration by 7%."
 statStaminaRegenITAV,ui_display,Item stat,,,"Stamina Regen"
 statRunSpeedITAV,ui_display,Item stat,,,"Run Speed While Jumping"
 statStaminaReductionITAV,ui_display,Item stat,,,"Stamina Cost Of Jumping"
+statRunSpeedDay,ui_display,Item stat,,,"Run Speed during daytime"
 
 attNameITAV,progression,Attribute,,,"Attribute: Passion"
 attitav,progression,Attribute,,,Passion
@@ -345,13 +346,13 @@ buffXpFoodT4Desc,buffs,Buff,,,Brainfood helps learning.\n+6% XP.
 buffXpFoodT4Name,buffs,Buff,,,Awesome food XP bonus
 buffXpFoodT4Tooltip,buffs,Buff,,,Ready for some learning.
 
-buffRunSpeedFoodT2Desc,buffs,Buff,,,Better food gets you further.\n+4% Run Speed.
+buffRunSpeedFoodT2Desc,buffs,Buff,,,Better food gets you further.\n+2% Run Speed during daytime.
 buffRunSpeedFoodT2Name,buffs,Buff,,,Good food Run Speed bonus
 buffRunSpeedFoodT2Tooltip,buffs,Buff,,,Ready for some running!
-buffRunSpeedFoodT3Desc,buffs,Buff,,,Nourished body, faster feet.\n+6% Run Speed.
+buffRunSpeedFoodT3Desc,buffs,Buff,,,Nourished body, faster feet.\n+4% Run Speed during daytime.
 buffRunSpeedFoodT3Name,buffs,Buff,,,Great food Run Speed bonus
 buffRunSpeedFoodT3Tooltip,buffs,Buff,,,Ready for some running!
-buffRunSpeedFoodT4Desc,buffs,Buff,,,Nutrition that goes straight to your legs.\n+8% Run Speed.
+buffRunSpeedFoodT4Desc,buffs,Buff,,,Nutrition that goes straight to your legs.\n+6% Run Speed during daytime.
 buffRunSpeedFoodT4Name,buffs,Buff,,,Awesome food Run Speed bonus
 buffRunSpeedFoodT4Tooltip,buffs,Buff,,,Ready for some running!
 

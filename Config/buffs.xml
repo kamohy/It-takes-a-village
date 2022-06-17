@@ -138,7 +138,8 @@
 		</effect_group>
 
 		<effect_group>
-			<passive_effect name="RunSpeed" operation="perc_add" value=".04" />
+			<requirement name="IsDay" />
+			<passive_effect name="RunSpeed" operation="perc_add" value=".02" />
 		</effect_group>
 	</buff>
 	
@@ -161,7 +162,8 @@
 		</effect_group>
 
 		<effect_group>
-			<passive_effect name="RunSpeed" operation="perc_add" value=".06" />
+			<requirement name="IsDay" />
+			<passive_effect name="RunSpeed" operation="perc_add" value=".04" />
 		</effect_group>
 	</buff>
 	
@@ -184,7 +186,8 @@
 		</effect_group>
 
 		<effect_group>
-			<passive_effect name="RunSpeed" operation="perc_add" value=".08" />
+			<requirement name="IsDay" />
+			<passive_effect name="RunSpeed" operation="perc_add" value=".06" />
 		</effect_group>
 	</buff>
 </insertAfter>

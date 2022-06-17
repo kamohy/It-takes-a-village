@@ -75,6 +75,8 @@
 
 
 <remove xpath="/quests/quest[@id='quest_BasicSurvival1']/action[@type='ShowTip']"/>
+<remove xpath="//quest[@id='quest_BasicSurvival3']/objective[@type='Craft' and @id='apparelPlantFiberPants']" />
+<remove xpath="//quest[@id='quest_BasicSurvival4']/objective[@type='Wear' and @id='apparelPlantFiberPants']" />
 
 <remove xpath="//quest[@id='quest_BasicSurvival7']/reward[@id='quest_BasicSurvival8']" />
 <append xpath="//quest[@id='quest_BasicSurvival7']">
@@ -579,6 +581,42 @@
 		<reward type="Exp" value="500"/>		
 	</quest>
 	
+	
+	<quest id="nexttrader_ITAV">
+		<property name="group_name_key" value="quest_next_trader"/>
+		<property name="name_key" value="quest_next_trader"/>
+		<property name="subtitle_key" value="quest_next_trader_subtitle"/>
+		<property name="description_key" value="quest_next_trader_description"/>
+		<property name="icon" value="ui_game_symbol_map_trader"/>
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		<property name="repeatable" value="true"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1"/>
+
+		<property name="unique_key" value="traderquest" />
+
+		<property name="offer_key" value="quest_next_trader_offer"/>
+		<property name="statement_key" value="quest_next_trader_statement"/>
+		<property name="response_key" value="quest_next_trader_response"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="return_to_quest_giver" value="false" />
+		<property name="quest_type" value="special" />
+
+		<objective type="Goto" id="trader" value="5" phase="1">
+			<property name="nav_object" value="go_to_trader" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+
+		<reward type="Exp" value="0"/>
+		<reward type="Item" id="resourceRockSmall" ischosen="true" isfixed="true" value="1"/>
+	</quest>
 	
 		
 </append>

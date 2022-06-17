@@ -2,5 +2,4 @@
 
 <remove xpath="//dialog[@id='trader']/statement[@id='start']/response_entry[contains(@id, 'jobs')]" />
 
-
 </configs>
