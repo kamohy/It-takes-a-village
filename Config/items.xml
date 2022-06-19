@@ -2289,7 +2289,6 @@
 <setattribute xpath="//item[contains(@name, 'T0') and not(contains(@name, 'Flashlight')) and not(contains(@name, 'pipe')) and not(contains(@name, 'quest')) and not(contains(@name, 'leather'))]/property[@name='SellableToTrader']" name="value">true</setattribute>
 <setattribute xpath="//item[starts-with(@name, 'bookProfession')]/property[@name='EconomicValue']" name="value">37337</setattribute>
 
-
 <setattribute xpath="//item[@name='resourceRockSmall']/property[@name='EconomicValue']" name="value">5</setattribute>
 <setattribute xpath="//item[@name='resourceSnowBall']/property[@name='EconomicValue']" name="value">10</setattribute>
 <setattribute xpath="//item[@name='resourceAcid']/property[@name='EconomicValue']" name="value">3000</setattribute>
@@ -2766,5 +2765,6 @@
 <setattribute xpath="//item[@name='drugHealthBarInsanityITAV']/property[@name='EconomicValue']" name="value">3053</setattribute>
 <setattribute xpath="//item[@name='drugSkullCrushersInsanityITAV']/property[@name='EconomicValue']" name="value">3053</setattribute>
 <setattribute xpath="//item[@name='drugCovertCatsInsanityITAV']/property[@name='EconomicValue']" name="value">3048</setattribute>
+<setattribute xpath="//item[@name='resourceMushyBrainITAV']/property[@name='EconomicValue']" name="value">1000</setattribute>
 
 </configs>

@@ -2060,67 +2060,6 @@
 
 
 <!-- Adjusting prices -->
-<append xpath="//block[@name='signPosterMovie2159']"><property name="UnlockedBy" value="perkDecoratorITAV" /><property name="EconomicValue" value="83" /></append>
-<append xpath="//block[@name='signPosterMovieLoneWolf']"><property name="UnlockedBy" value="perkDecoratorITAV" /><property name="EconomicValue" value="83" /></append>
-<append xpath="//block[@name='signPosterMovieMammasJustice']"><property name="UnlockedBy" value="perkDecoratorITAV" /><property name="EconomicValue" value="83" /></append>
-<append xpath="//block[@name='signPosterMovieSexualTension']"><property name="UnlockedBy" value="perkDecoratorITAV" /><property name="EconomicValue" value="83" /></append>
-<append xpath="//block[@name='signNotice01']"><property name="UnlockedBy" value="perkDecoratorITAV" /><property name="EconomicValue" value="70" /></append>
-<append xpath="//block[@name='signNotice04']"><property name="UnlockedBy" value="perkDecoratorITAV" /><property name="EconomicValue" value="70" /></append>
-<append xpath="//block[@name='signBread01']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='signBread02']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='barStoolVariantHelper']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoReptileTerrarium']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntShoppingCartEmpty']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntMailBox01White']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='houseFrontDoor1_v1']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='houseFrontDoor2_v1']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntToaster']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntMicrowaveOvenVer1Closed']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntMicrowaveOvenVer2Closed']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntRetroFridgeVer1Closed']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntFridgeStainlessSteel']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntDomedTrashCanEmpty']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntDomedTrashCanCornerEmpty']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntBruteStyleTrashCanEmpty']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntWaterCoolerFull']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='signDinersMenu']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='signDinersMenu2m']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='signLaborDaySaleAd']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='signSale01']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='signSale02']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoPoolTable']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='bunkBedMade']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='officeChair01VariantHelper']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoWineBottle']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoWineBottleCorner']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoWineBottleShelfRow']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntWoodBurningStove']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='candelabraLight']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='hangingMoss']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='treeAzalea']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='treeJuniper4m']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoLaptop']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoMannequinFemale']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoMannequinMale']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntBarrelGasSingle00']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntBarrelAcidSingle00']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='cntBarrelGenericSingle00']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoStationaryBike']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoSwingSet']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoTreadmill']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoWeightBar']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoWildWestWagon']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoWildWestWagonWheelBack']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-<append xpath="//block[@name='decoWildWestWagonWheelFront']"><property name="UnlockedBy" value="perkDecoratorITAV" /></append>
-
-
-
-
-
-
-
-
- <!-- ********************* Price adjustments from vanilla ********************* -->
 <setattribute xpath="//block[@name='woodShapes']/property[@name='EconomicValue']" name="value">50</setattribute>
 <setattribute xpath="//block[@name='brickShapes']/property[@name='EconomicValue']" name="value">10</setattribute>
 <setattribute xpath="//block[@name='cobblestoneShapes']/property[@name='EconomicValue']" name="value">100</setattribute>
@@ -2470,8 +2409,8 @@
 <setattribute xpath="//block[@name='signShopOpenLightITAV']/property[@name='EconomicValue']" name="value">510</setattribute>
 <setattribute xpath="//block[@name='workbenchMinerT2ITAV']/property[@name='EconomicValue']" name="value">54930</setattribute>
 <setattribute xpath="//block[@name='campfireT2ITAV']/property[@name='EconomicValue']" name="value">25250</setattribute>
-<setattribute xpath="//block[@name='chemistryStationT2ITAV']/property[@name='EconomicValue']" name="value">37910</setattribute>
-<setattribute xpath="//block[@name='workbenchRoboticsT2ITAV']/property[@name='EconomicValue']" name="value">38300</setattribute>
+<setattribute xpath="//block[@name='chemistryStationT2ITAV']/property[@name='EconomicValue']" name="value">30410</setattribute>
+<setattribute xpath="//block[@name='workbenchRoboticsT2ITAV']/property[@name='EconomicValue']" name="value">23000</setattribute>
 <setattribute xpath="//block[@name='workbenchRunnerT2ITAV']/property[@name='EconomicValue']" name="value">45550</setattribute>
 <setattribute xpath="//block[@name='plantedGoldenrod3FlowerITAV']/property[@name='EconomicValue']" name="value">30</setattribute>
 <setattribute xpath="//block[@name='plantedChrysanthemum3FlowerITAV']/property[@name='EconomicValue']" name="value">40</setattribute>
@@ -2500,5 +2439,6 @@
 <setattribute xpath="//block[@name='commercialDoor2_v1BulletProofITAV']/property[@name='EconomicValue']" name="value">2000</setattribute>
 <setattribute xpath="//block[@name='cntLotteryBoxPlaceableITAV']/property[@name='EconomicValue']" name="value">1990</setattribute>
 <setattribute xpath="//block[@name='bedrollTombCasketCoffinITAV']/property[@name='EconomicValue']" name="value">1132</setattribute>
+<setattribute xpath="//block[@name='bodyBagYellowPlaceableITAV']/property[@name='EconomicValue']" name="value">1300</setattribute>
 
 </configs>

@@ -731,6 +731,17 @@ makes the looter more financially self sustained than if they had to buy all the
 <remove xpath="//item[@name='meleeToolAxeT3Chainsaw']" />
 <remove xpath="//item[@name='meleeToolPickT3Auger']" />
 
+<setattribute xpath="//item[@name='modVehicleOffRoadHeadlightsSchematic']"></setattribute>
+<append xpath="//lootgroup[@name='vehicleModSchematics01']">
+	<item name="resourceDuctTape" count="1,3"/>
+	<item name="resourceGlue" count="3,6"/>
+</append>
+
+<remove xpath="//lootgroup[@name='schematicsToolsT0']/item[@name='forgeSchematic']"/>
+<append xpath="//lootgroup[@name='schematicsToolsT0']">
+	 <item name="forgeSchematic" loot_prob_template="veryLow" />
+</append>
+
 <append xpath="//lootcontainer[@name='dumpster']">
 	 <item name="resourceForgedSteel" loot_prob_template="medLow" count="2,3" />
 	 <item name="thrownAmmoMolotovCocktail" loot_prob_template="med" /> 

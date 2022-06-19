@@ -1424,5 +1424,42 @@
 <append  xpath="//item_modifier[@name='modVehicleReserveFuelTank']"><property name="EconomicValue" value="7763" /></append>
 <append  xpath="//item_modifier[@name='modClothingStoragePocket']"><property name="EconomicValue" value="1953" /></append>
 <append  xpath="//item_modifier[@name='modClothingCargoStoragePocket']"><property name="EconomicValue" value="3905" /></append>
+<setattribute xpath="//item_modifier[@name='modApparelHazmatBootsITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelHazmatMaskITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelHazmatPantsITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelHazmatJacketITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelHazmatGlovesITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelDenimPantsITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelDenimShortsPantsITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelArmyPantsITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelOverallsITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelSkirtITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelGothPantsITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelWornBootsITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelRunningShoesRegularITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelCowboyBootsITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelGothBootsITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelLongShirtITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelArmyShirtITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelSweatshirtITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelFlannelShirtITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelTShirtPlainITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelTShirtZUITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelTankTopITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelHoodySweatshirtITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelCoatLeatherPonchoITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelCoatLeatherDusterITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelCoatPufferCoatITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelCoatJacketGenericITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelCoatJacketLetterZUITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelSuitPantsITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelSuitJacketITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelSuitDressShoesITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelPlantFiberGlovesITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelPlantFiberShoesITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelGhillieSuitHoodITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelGhillieSuitPantsITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modApparelGhillieSuitJacketITAV']/property[@name='EconomicValue']" name="value">34705</setattribute>
+<setattribute xpath="//item_modifier[@name='modDyeInvisibleITAV']/property[@name='EconomicValue']" name="value">1875</setattribute>
 
 </configs>
