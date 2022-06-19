@@ -120,6 +120,8 @@
 		<drop event="Fall" count="0" prob="0"/>
 		<property name="DescriptionKey" value="bodyBagYellowPlaceableITAVDesc"/>
 		<property name="FilterTags" value="MC_building,SC_decor"/>
+		<property name="EconomicValue" value="1300"/>
+		<propert name="EconomicBundleSize" value="1" />
 	</block>
 	
 	<block name="bodyBagYellowITAV">

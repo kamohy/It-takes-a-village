@@ -2436,7 +2436,7 @@
 <setattribute xpath="//item[@name='meleeToolTorch']/property[@name='EconomicValue']" name="value">18</setattribute>
 <setattribute xpath="//item[@name='meleeToolWireTool']/property[@name='EconomicValue']" name="value">1125</setattribute>
 <setattribute xpath="//item[@name='meleeToolPaintTool']/property[@name='EconomicValue']" name="value">15</setattribute>
-<setattribute xpath="//item[@name='gunHandgunT0PipePistol']/property[@name='EconomicValue']" name="value">4065</setattribute>
+<setattribute xpath="//item[@name='gunHandgunT0PipePistol']/property[@name='EconomicValue']" name="value">276</setattribute>
 <setattribute xpath="//item[@name='gunHandgunT1Pistol']/property[@name='EconomicValue']" name="value">5016</setattribute>
 <setattribute xpath="//item[@name='gunHandgunT3SMG5']/property[@name='EconomicValue']" name="value">6687</setattribute>
 <setattribute xpath="//item[@name='gunHandgunT2Magnum44']/property[@name='EconomicValue']" name="value">6987</setattribute>
