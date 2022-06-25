@@ -1046,6 +1046,7 @@
 		<property name="IsTerrainDecoration" value="true"/>
 		<property name="Model" value="#Entities/LootContainers?foodClutterPileMediumPrefab.prefab"/>
 		<property name="ModelOffset" value="0,0,0"/>
+		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="GndAlign" value="1"/>
 		<property name="UnlockedBy" value="perkCookITAV" />
 		<property name="FilterTags" value="SC_decor"/>
@@ -1061,6 +1062,7 @@
 		<property name="Model" value="#Entities/LootContainers?foodClutterPileLargePrefab.prefab"/>
 		<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
 		<property name="ModelOffset" value="0,0,0"/>
+		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="GndAlign" value="1"/>
 		<property name="UnlockedBy" value="perkCookITAV" />
 		<property name="FilterTags" value="SC_decor"/>
@@ -1081,7 +1083,6 @@
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="1210"/>
-		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
 		<property name="Stacknumber" value="500"/>
 	</block>	
@@ -1097,7 +1098,6 @@
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="1210"/>
-		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
 		<property name="Stacknumber" value="500"/>
 	</block>
@@ -1113,7 +1113,6 @@
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="1210"/>
-		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
 		<property name="Stacknumber" value="500"/>
 	</block>
@@ -1129,7 +1128,6 @@
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="1200"/>
-		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
 		<property name="Stacknumber" value="500"/>
 	</block>	
@@ -1145,7 +1143,6 @@
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="1200"/>
-		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
 		<property name="Stacknumber" value="500"/>
 	</block>
@@ -1161,7 +1158,6 @@
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="1200"/>
-		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
 		<property name="Stacknumber" value="500"/>
 	</block>
@@ -1178,7 +1174,6 @@
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="640"/>
-		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
 		<property name="Stacknumber" value="500"/>
 	</block>	
@@ -1195,7 +1190,6 @@
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="640"/>
-		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
 		<property name="Stacknumber" value="500"/>
 	</block>
@@ -1211,7 +1205,6 @@
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="640"/>
-		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
 		<property name="Stacknumber" value="500"/>
 	</block>
@@ -1227,7 +1220,6 @@
 		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="FilterTags" value="SC_decor"/>
 		<property name="EconomicValue" value="640"/>
-		<property name="DescriptionKey" value="decoStorageITAVDesc"/>
 		<property name="UnlockedBy" value="perkDecoratorITAV" />
 		<property name="Stacknumber" value="500"/>
 	</block>
@@ -2410,10 +2402,10 @@
 <setattribute xpath="//block[@name='LightStreetLightClassicITAV']/property[@name='EconomicValue']" name="value">3180</setattribute>
 <setattribute xpath="//block[@name='signShopOpenLightITAV']/property[@name='EconomicValue']" name="value">510</setattribute>
 <setattribute xpath="//block[@name='workbenchMinerT2ITAV']/property[@name='EconomicValue']" name="value">54930</setattribute>
-<setattribute xpath="//block[@name='campfireT2ITAV']/property[@name='EconomicValue']" name="value">25250</setattribute>
-<setattribute xpath="//block[@name='chemistryStationT2ITAV']/property[@name='EconomicValue']" name="value">30410</setattribute>
-<setattribute xpath="//block[@name='workbenchRoboticsT2ITAV']/property[@name='EconomicValue']" name="value">23000</setattribute>
-<setattribute xpath="//block[@name='workbenchRunnerT2ITAV']/property[@name='EconomicValue']" name="value">45550</setattribute>
+<setattribute xpath="//block[@name='campfireT2ITAV']/property[@name='EconomicValue']" name="value">38750</setattribute>
+<setattribute xpath="//block[@name='chemistryStationT2ITAV']/property[@name='EconomicValue']" name="value">34410</setattribute>
+<setattribute xpath="//block[@name='workbenchRoboticsT2ITAV']/property[@name='EconomicValue']" name="value">31000</setattribute>
+<setattribute xpath="//block[@name='workbenchRunnerT2ITAV']/property[@name='EconomicValue']" name="value">48550</setattribute>
 <setattribute xpath="//block[@name='plantedGoldenrod3FlowerITAV']/property[@name='EconomicValue']" name="value">30</setattribute>
 <setattribute xpath="//block[@name='plantedChrysanthemum3FlowerITAV']/property[@name='EconomicValue']" name="value">40</setattribute>
 <setattribute xpath="//block[@name='plantedCoffee3FlowerITAV']/property[@name='EconomicValue']" name="value">50</setattribute>

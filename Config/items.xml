@@ -86,7 +86,7 @@
 		<property name="Stacknumber" value="125"/> <!-- STK food -->
 		<property name="EconomicValue" value="5"/>
 		<property name="EconomicBundleSize" value="1"/>
-		<property name="SellableToTrader" value="false"/>
+		<property name="SellableToTrader" value="true"/>
 		<property class="Action0">
 			<property name="Class" value="Eat"/>
 			<property name="Delay" value="1.0"/>
@@ -171,8 +171,8 @@
 
 <!-- Making items unlockable by the correct ITAV perk -->
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkAdvancedEngineering'))]" name="value">perkSmelterITAV</setattribute>
-<append xpath="//item[@name='meleeToolAllSteelParts']"><property name="UnlockedBy" value="perkMinerITAV"/></append>
-<append xpath="//item[@name='meleeToolAxeT3ChainsawParts']"><property name="UnlockedBy" value="perkMinerITAV"/></append>
+<append xpath="//item[@name='meleeToolAllSteelParts']"><property name="UnlockedBy" value="perkMinerITAV,perkArmorerITAV"/></append>
+<append xpath="//item[@name='meleeToolAxeT3ChainsawParts']"><property name="UnlockedBy" value="perkMinerITAV,perkArmorerITAV"/></append>
 <setattribute xpath="//property[(@name='UnlockedBy' and contains(@value, 'perkMasterChef'))]" name="value">perkCookITAV</setattribute>
 <setattribute xpath="//item[@name='foodGrilledMeat']/property[@name='UnlockedBy']" name="value">perkCookITAV</setattribute>
 <setattribute xpath="//item[@name='foodBakedPotato']/property[@name='UnlockedBy']" name="value">perkCookITAV</setattribute>
@@ -205,33 +205,37 @@
 <setattribute xpath="//passive_effect[@tags='perkMiner69r,miningTool']" name="tags">perkMinerITAV,miningTool</setattribute>
 <setattribute xpath="/items/item[@name='resourceRockSmallBundle']/property[@name='UnlockedBy']" name="value">perkMinerITAV</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@name='Tags']" name="value">melee,light,tool,repairTool,longshaft,attStrength,perkMinerITAV,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@name='UnlockedBy']" name="value">perkMinerITAV</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolRepairT3Nailgun']/property[@name='Tags']" name="value">tool,nailgun,sideAttachments,repairTool,attStrength,perkMinerITAV,canHaveCosmetic,noMods</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/property[@name='Tags']" name="value">axe,melee,grunting,medium,tool,longShaft,attStrength,perkMinerITAV,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/property[@name='UnlockedBy']" name="value">perkMinerITAV</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/property[@name='Tags']" name="value">melee,grunting,medium,tool,longShaft,attStrength,perkMinerITAV,miningTool,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/property[@name='UnlockedBy']" name="value">perkMinerITAV</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolShovelT0StoneShovel']/property[@name='Tags']" name="value">melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMinerITAV,canHaveCosmetic</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolShovelT1IronShovel']/property[@name='Tags']" name="value">melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMinerITAV,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeToolShovelT1IronShovel']/property[@name='UnlockedBy']" name="value">perkMinerITAV</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/property[@name='Tags']" name="value">melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMinerITAV,canHaveCosmetic</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/property[@name='Tags']" name="value">melee,heavy,tool,motorTool,attStrength,perkMinerITAV,chainsaw,canHaveCosmetic</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolPickT3Auger']/property[@name='Tags']" name="value">melee,heavy,tool,motorTool,attStrength,perkMinerITAV,miningTool,canHaveCosmetic</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolHammerOfGodAdmin']/property[@name='Tags']" name="value">melee,light,tool,attStrength,perkMinerITAV,admin,noMods</setattribute>
-<setattribute xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/property[@name='UnlockedBy']" name="value">meleeToolSteelSetSchematic,perkMinerITAV</setattribute>
-<setattribute xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/property[@name='UnlockedBy']" name="value">meleeToolSteelSetSchematic,perkMinerITAV</setattribute>
-<setattribute xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/property[@name='UnlockedBy']" name="value">meleeToolSteelSetSchematic,perkMinerITAV</setattribute>
+
+
 
 
 <!-- FARMER -->
-<setattribute xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@name='Tags']" name="value">axe,melee,light,tool,longShaft,repairTool,miningTool,attStrength,perkMinerITAV,perkFarmerITAV,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/property[@name='Tags']" name="value">axe,melee,light,tool,longShaft,tazas,repairTool,miningTool,attStrength,perkMinerITAV,perkFarmerITAV,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeWpnBladeT0BoneKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkFarmerITAV,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeWpnBladeT1HuntingKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkFarmerITAV,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeWpnBladeT1CandyKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkFarmerITAV,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeWpnBladeT3Machete']/property[@name='Tags']" name="value">machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkFarmerITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@name='Tags']" name="value">axe,melee,light,tool,longShaft,repairTool,miningTool,attStrength,perkMinerITAV,perkReaperITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/property[@name='Tags']" name="value">axe,melee,light,tool,longShaft,tazas,repairTool,miningTool,attStrength,perkMinerITAV,perkReaperITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="/items/item[@name='meleeWpnBladeT0BoneKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkReaperITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="/items/item[@name='meleeWpnBladeT1HuntingKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkReaperITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="/items/item[@name='meleeWpnBladeT1CandyKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkReaperITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="/items/item[@name='meleeWpnBladeT3Machete']/property[@name='Tags']" name="value">machete,melee,grunting,light,longShaft,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkReaperITAV,canHaveCosmetic</setattribute>
 
 <!-- ARMORER -->
+<setattribute xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
+<setattribute xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
+<setattribute xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
+<setattribute xpath="/items/item[@name='meleeToolShovelT1IronShovel']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
+<setattribute xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/property[@name='UnlockedBy']" name="value">meleeToolSteelSetSchematic,perkArmorerITAV</setattribute>
+<setattribute xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/property[@name='UnlockedBy']" name="value">meleeToolSteelSetSchematic,perkArmorerITAV</setattribute>
+<setattribute xpath="/items/item[@name='meleeToolPickT2SteelPickaxe']/property[@name='UnlockedBy']" name="value">meleeToolSteelSetSchematic,perkArmorerITAV</setattribute>
+
+
 <setattribute xpath="items/item[@name='armorIronMaster']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
 <setattribute xpath="items/item[@name='armorLeatherMaster']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
 <setattribute xpath="items/item[@name='armorSteelMaster']/property[@name='UnlockedBy']" name="value">perkArmorerITAV</setattribute>
@@ -270,7 +274,7 @@
 
 
 <!-- Adding items, weaponPartFragmentITAV, toolPartsITAV and resourceWeaponRepairKitITAV etc. -->
-<append xpath="/items/item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and contains(@name, 'Parts') and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]" >
+<append xpath="/items/item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and contains(@name, 'Parts') and not(contains(@name, 'Robotics'))]" >
 	<property name="UnlockedBy" value="perkArmorerITAV" />
 </append>
 <!--<setattribute xpath="/items/item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and contains(@name, 'Parts') and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='Material']" name="value">MweaponPartFragmentITAV</setattribute>-->
@@ -331,7 +335,7 @@
 		<property name="ItemTypeIcon" value="gunsmithing"/>
 		<property name="Material" value="MtoolPartFragmentITAV"/> <property name="Weight" value="1"/>
 		<property name="DescriptionKey" value="toolPartFragmentITAVGroupDesc"/>
-		<property name="EconomicValue" value="3"/>
+		<property name="EconomicValue" value="30"/>
 		<property name="EconomicBundleSize" value="1"/>
 		<property name="Group" value="Resources"/>
 		<property name="Weight" value="1"/>
@@ -948,7 +952,7 @@
 		<property name="Stacknumber" value="500"/>
 		<property name="EconomicValue" value="19"/>
 		<property name="EconomicBundleSize" value="1"/>
-		<property name="SellableToTrader" value="false"/>
+		<property name="SellableToTrader" value="true"/>
 		<property name="CraftingIngredientTime" value="60"/>
 		<property name="UnlockedBy" value="perkCookITAV"/>
 		<property class="Action0">
@@ -2408,11 +2412,11 @@
 <setattribute xpath="//item[@name='meleeToolShovelT0StoneShovel']/property[@name='EconomicValue']" name="value">35</setattribute>
 <setattribute xpath="//item[@name='meleeToolShovelT1IronShovel']/property[@name='EconomicValue']" name="value">856</setattribute>
 <setattribute xpath="//item[@name='meleeToolShovelT2SteelShovel']/property[@name='EconomicValue']" name="value">5942</setattribute>
-<setattribute xpath="//item[@name='meleeToolAxeT3Chainsaw']/property[@name='EconomicValue']" name="value">7081</setattribute>
-<setattribute xpath="//item[@name='meleeToolPickT3Auger']/property[@name='EconomicValue']" name="value">7081</setattribute>
+<setattribute xpath="//item[@name='meleeToolAxeT3Chainsaw']/property[@name='EconomicValue']" name="value">11581</setattribute>
+<setattribute xpath="//item[@name='meleeToolPickT3Auger']/property[@name='EconomicValue']" name="value">11581</setattribute>
 <setattribute xpath="//item[@name='meleeToolSalvageT1Wrench']/property[@name='EconomicValue']" name="value">1231</setattribute>
 <setattribute xpath="//item[@name='meleeToolSalvageT2Ratchet']/property[@name='EconomicValue']" name="value">6741</setattribute>
-<setattribute xpath="//item[@name='meleeToolSalvageT3ImpactDriver']/property[@name='EconomicValue']" name="value">3187</setattribute>
+<setattribute xpath="//item[@name='meleeToolSalvageT3ImpactDriver']/property[@name='EconomicValue']" name="value">7687</setattribute>
 <setattribute xpath="//item[@name='meleeWpnBladeT0BoneKnife']/property[@name='EconomicValue']" name="value">25</setattribute>
 <setattribute xpath="//item[@name='meleeWpnBladeT1HuntingKnife']/property[@name='EconomicValue']" name="value">481</setattribute>
 <setattribute xpath="//item[@name='meleeWpnBladeT1CandyKnife']/property[@name='EconomicValue']" name="value">1750</setattribute>
@@ -2546,9 +2550,9 @@
 <setattribute xpath="//item[@name='meleeWpnClubT3SteelClubParts']/property[@name='EconomicValue']" name="value">2000</setattribute>
 <setattribute xpath="//item[@name='meleeWpnSledgeT3SteelSledgehammerParts']/property[@name='EconomicValue']" name="value">2000</setattribute>
 <setattribute xpath="//item[@name='meleeToolAllSteelParts']/property[@name='EconomicValue']" name="value">2000</setattribute>
-<setattribute xpath="//item[@name='armorMilitarySetParts']/property[@name='EconomicValue']" name="value">200</setattribute>
-<setattribute xpath="//item[@name='armorSteelSetParts']/property[@name='EconomicValue']" name="value">200</setattribute>
-<setattribute xpath="//item[@name='meleeToolAxeT3ChainsawParts']/property[@name='EconomicValue']" name="value">200</setattribute>
+<setattribute xpath="//item[@name='armorMilitarySetParts']/property[@name='EconomicValue']" name="value">2000</setattribute>
+<setattribute xpath="//item[@name='armorSteelSetParts']/property[@name='EconomicValue']" name="value">2000</setattribute>
+<setattribute xpath="//item[@name='meleeToolAxeT3ChainsawParts']/property[@name='EconomicValue']" name="value">2000</setattribute>
 <setattribute xpath="//item[@name='vehicleWheels']/property[@name='EconomicValue']" name="value">4890</setattribute>
 <setattribute xpath="//item[@name='vehicleMinibikeChassis']/property[@name='EconomicValue']" name="value">2844</setattribute>
 <setattribute xpath="//item[@name='vehicleMinibikeHandlebars']/property[@name='EconomicValue']" name="value">4440</setattribute>
@@ -2576,12 +2580,12 @@
 <setattribute xpath="//item[@name='armorLeatherPants']/property[@name='EconomicValue']" name="value">346</setattribute>
 <setattribute xpath="//item[@name='armorLeatherBoots']/property[@name='EconomicValue']" name="value">346</setattribute>
 <setattribute xpath="//item[@name='armorMilitaryMaster']/property[@name='EconomicValue']" name="value">7520</setattribute>
-<setattribute xpath="//item[@name='armorMilitaryHelmet']/property[@name='EconomicValue']" name="value">3593</setattribute>
-<setattribute xpath="//item[@name='armorMilitaryVest']/property[@name='EconomicValue']" name="value">3593</setattribute>
-<setattribute xpath="//item[@name='armorMilitaryGloves']/property[@name='EconomicValue']" name="value">3593</setattribute>
-<setattribute xpath="//item[@name='armorMilitaryLegs']/property[@name='EconomicValue']" name="value">3593</setattribute>
-<setattribute xpath="//item[@name='armorMilitaryBoots']/property[@name='EconomicValue']" name="value">3593</setattribute>
-<setattribute xpath="//item[@name='armorMilitaryStealthBoots']/property[@name='EconomicValue']" name="value">3793</setattribute>
+<setattribute xpath="//item[@name='armorMilitaryHelmet']/property[@name='EconomicValue']" name="value">7193</setattribute>
+<setattribute xpath="//item[@name='armorMilitaryVest']/property[@name='EconomicValue']" name="value">7193</setattribute>
+<setattribute xpath="//item[@name='armorMilitaryGloves']/property[@name='EconomicValue']" name="value">7193</setattribute>
+<setattribute xpath="//item[@name='armorMilitaryLegs']/property[@name='EconomicValue']" name="value">7193</setattribute>
+<setattribute xpath="//item[@name='armorMilitaryBoots']/property[@name='EconomicValue']" name="value">7193</setattribute>
+<setattribute xpath="//item[@name='armorMilitaryStealthBoots']/property[@name='EconomicValue']" name="value">9193</setattribute>
 <setattribute xpath="//item[@name='armorScrapMaster']/property[@name='EconomicValue']" name="value">620</setattribute>
 <setattribute xpath="//item[@name='armorScrapHelmet']/property[@name='EconomicValue']" name="value">191</setattribute>
 <setattribute xpath="//item[@name='armorScrapChest']/property[@name='EconomicValue']" name="value">191</setattribute>
@@ -2595,10 +2599,10 @@
 <setattribute xpath="//item[@name='armorIronLegs']/property[@name='EconomicValue']" name="value">1021</setattribute>
 <setattribute xpath="//item[@name='armorIronBoots']/property[@name='EconomicValue']" name="value">1021</setattribute>
 <setattribute xpath="//item[@name='armorSteelMaster']/property[@name='EconomicValue']" name="value">7220</setattribute>
-<setattribute xpath="//item[@name='armorSteelChest']/property[@name='EconomicValue']" name="value">1761</setattribute>
-<setattribute xpath="//item[@name='armorSteelGloves']/property[@name='EconomicValue']" name="value">1761</setattribute>
-<setattribute xpath="//item[@name='armorSteelLegs']/property[@name='EconomicValue']" name="value">1761</setattribute>
-<setattribute xpath="//item[@name='armorSteelBoots']/property[@name='EconomicValue']" name="value">1761</setattribute>
+<setattribute xpath="//item[@name='armorSteelChest']/property[@name='EconomicValue']" name="value">5361</setattribute>
+<setattribute xpath="//item[@name='armorSteelGloves']/property[@name='EconomicValue']" name="value">5361</setattribute>
+<setattribute xpath="//item[@name='armorSteelLegs']/property[@name='EconomicValue']" name="value">5361</setattribute>
+<setattribute xpath="//item[@name='armorSteelBoots']/property[@name='EconomicValue']" name="value">5361</setattribute>
 <setattribute xpath="//item[@name='armorMiningHelmet']/property[@name='EconomicValue']" name="value">871</setattribute>
 <setattribute xpath="//item[@name='armorFirefightersHelmet']/property[@name='EconomicValue']" name="value">871</setattribute>
 <setattribute xpath="//item[@name='armorSwatHelmet']/property[@name='EconomicValue']" name="value">5000</setattribute>
@@ -2766,5 +2770,7 @@
 <setattribute xpath="//item[@name='drugSkullCrushersInsanityITAV']/property[@name='EconomicValue']" name="value">3053</setattribute>
 <setattribute xpath="//item[@name='drugCovertCatsInsanityITAV']/property[@name='EconomicValue']" name="value">3048</setattribute>
 <setattribute xpath="//item[@name='resourceMushyBrainITAV']/property[@name='EconomicValue']" name="value">1000</setattribute>
+<setattribute xpath="//item[@name='drinkJarPureMineralWater']/property[@name='EconomicValue']" name="value">80</setattribute>
+<setattribute xpath="//item[@name='toolPartFragmentITAV']/property[@name='EconomicValue']" name="value">30</setattribute>
 
 </configs>

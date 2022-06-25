@@ -66,7 +66,7 @@ bookProfessionMinerITAVDesc,progression,perk  book,,,"Miners are efficient at ga
 bookProfessionHunterITAV,Items,perk  book,,,"Profession: Hunter"
 bookProfessionHunterITAVDesc,progression,perk  book,,,"Hunters specialize in tracking and hunting animals. They also harvest more resources from animal carcasses."
 bookProfessionCookITAV,Items,perk  book,,,"Profession: Cook"
-bookProfessionCookITAVDesc,progression,perk  book,,,"Cooks learn how to prepare more filling meals. These meals give higher health and stamina bonuses."
+bookProfessionCookITAVDesc,progression,perk  book,,,"Cooks learn how to prepare more filling meals. These meals give higher health and stamina bonuses. They harvest more from crops, craft cheaper farm plots and can craft seeds from the harvest."
 bookProfessionArmorerITAV,Items,perk  book,,,"Profession: Armorer"
 bookProfessionArmorerITAVDesc,progression,perk  book,,,"Armorers craft light and heavy armor as well as ranged and melee weapons."
 bookProfessionWeaponsmithITAV,Items,perk  book,,,"Profession: Weaponsmith"
@@ -247,7 +247,7 @@ window03WoodBulletproofITAVDesc,blocks,,,,"This window takes 3000 dmg before it 
 doorBulletproofITAVDesc,blocks,,,,"This door takes 3000 dmg before it breaks. Cannot be picked up!"
 
 decoCookingPotITAV,blocks,,,,"Decorative Cooking Pot"
-decoStorageITAVDesc,blocks,,,,"Decorative storage item."
+decoStorageITAVDesc,blocks,,,,"Decorative, lockable storage item that cannot be lifted once placed."
 cntFoodPileSmallITAV,blocks,,,,"Food Pile, Small"
 cntFoodPileMediumITAV,blocks,,,,"Food Pile, Medium"
 cntFoodPileLargeITAV,blocks,,,,"Food Pile, Large"
@@ -474,15 +474,15 @@ perkSmelterITAVRank5LongDesc,progression,perk Pro,,,"Unlocks crafting of the cru
 perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster. Perform high-end crafts at the Advanced Miner's Table."
 perkMinerITAVName,progression,perk Pro,,,Miner
 perkMinerITAVRank1Desc,progression,perk Pro,,,"Woodpecker"
-perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Craft quality 2 poor tools, increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger. Harvest 20% more from trees, and 40% more from ore, stone and terrain blocks. \nUnlocks all iron tools like pickaxes. Unlocks crafting of Steel Tool Parts from Tool Part Fragments. Unlocks resource bundles."
+perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger. Harvest 20% more from trees, and 40% more from ore, stone and terrain blocks. \nUnlocks all iron tools like pickaxes. Unlocks crafting of Steel Tool Parts from Tool Part Fragments. Unlocks resource bundles."
 perkMinerITAVRank2Desc,progression,perk,,,"Choppy Chop"
-perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Craft quality 3 fair tools, increase tool damage by 20% and block damage by 60% with any axe, pick, shovel, chainsaw or auger. Harvest 40% more from trees, and 80% more from ore, stone and terrain blocks. Unlocks Advanced Miner's Table. Unlocks crafting of Motorized Tool Parts from Tool Part Fragments."
+perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Increase tool damage by 20% and block damage by 60% with any axe, pick, shovel, chainsaw or auger. Harvest 40% more from trees, and 80% more from ore, stone and terrain blocks. Unlocks Advanced Miner's Table. Unlocks crafting of Motorized Tool Parts from Tool Part Fragments."
 perkMinerITAVRank3Desc,progression,perk,,,"Bang That Rock"
-perkMinerITAVRank3LongDesc,progression,perk Pro,,,"Craft quality 4 good tools, increase tool damage by 30% and block damage by 90% with any axe, pick, shovel, chainsaw or auger. Harvest 60% more from trees, and 120% more from ore, stone and terrain blocks."
+perkMinerITAVRank3LongDesc,progression,perk Pro,,,"Increase tool damage by 30% and block damage by 90% with any axe, pick, shovel, chainsaw or auger. Harvest 60% more from trees, and 120% more from ore, stone and terrain blocks."
 perkMinerITAVRank4Desc,progression,perk Pro,,,"Iron Fist"
-perkMinerITAVRank4LongDesc,progression,perk Pro,,,"Craft quality 5 great tools, increase tool damage by 40% and block damage by 120% with any axe, pick, shovel, chainsaw or auger. Harvest 80% more from trees, and 160% more from ore, stone and terrain blocks."
+perkMinerITAVRank4LongDesc,progression,perk Pro,,,"Increase tool damage by 40% and block damage by 120% with any axe, pick, shovel, chainsaw or auger. Harvest 80% more from trees, and 160% more from ore, stone and terrain blocks."
 perkMinerITAVRank5Desc,progression,perk Pro,,,"Cave Troll"
-perkMinerITAVRank5LongDesc,progression,perk Pro,,,"Craft quality 6 amazing tools, increase tool damage by 50% and block damage by 150% with any axe, pick, shovel, chainsaw or auger. Harvest 100% more from trees, and 200% more from ore, stone and terrain blocks. Unlocks crafting of Steel pickaxe, shovel and axe"
+perkMinerITAVRank5LongDesc,progression,perk Pro,,,"Increase tool damage by 50% and block damage by 150% with any axe, pick, shovel, chainsaw or auger. Harvest 100% more from trees, and 200% more from ore, stone and terrain blocks. Unlocks crafting of Steel pickaxe, shovel and axe"
 
 perkHunterITAVDesc,progression,perk Pro,,,"Become one with the hunt. Gain the ability to track animals and increase damage to and harvest from them."
 perkHunterITAVName,progression,perk Pro,,,Hunter
@@ -503,15 +503,15 @@ perkCookITAVRank5LongDesc,progression,perk Pro,,,"Learn grandpa's secret recipes
 perkArmorerITAVDesc,progression,perk Pro,,,"Craft ranged and melee weapons, as well as light and heavy armor."
 perkArmorerITAVName,progression,perk Pro,,,Armorer
 perkArmorerRank1DescITAV,progression,perk Pro,,,Apprentice
-perkArmorerRank1LongDescITAV,progression,perk Pro,,,"You are now an apprentice armorer and able to craft quality 2 leather armor, iron armor, steel armor and military armor. \nUnlocks crafting of workbenches, bows, crossbows, hunting rifle, handguns, shotguns, assault rifle, sniper rifle, bladed weapons, blunt weapons, fist weapons, thrown weapons and rocket launcher."
+perkArmorerRank1LongDescITAV,progression,perk Pro,,,"You are now an apprentice armorer and able to craft quality 2 leather armor, iron armor, steel armor and military armor. \nUnlocks crafting of workbenches, bows, crossbows, hunting rifle, handguns, shotguns, assault rifle, sniper rifle, bladed weapons, blunt weapons, fist weapons, thrown weapons and rocket launcher. Unlocks crafting of Steel Tool Parts from Tool Part Fragments, and Tools."
 perkArmorerRank2DescITAV,progression,perk Pro,,,Journeyman
-perkArmorerRank2LongDescITAV,progression,perk Pro,,,"You are now a journeyman armorer and able to craft quality 3 armor and weaponry."
+perkArmorerRank2LongDescITAV,progression,perk Pro,,,"You are now a journeyman armorer and able to craft quality 3 tools, armor and weaponry."
 perkArmorerRank3DescITAV,progression,perk Pro,,,Expert
-perkArmorerRank3LongDescITAV,progression,perk Pro,,,"You are now an expert armorer and able to craft quality 4 armor and weaponry, as well as schematics for the most powerful weaponry. These schematics can also be found in loot, but only the Armorer can learn them."
+perkArmorerRank3LongDescITAV,progression,perk Pro,,,"You are now an expert armorer and able to craft quality 4 tools, armor and weaponry, as well as schematics for the most powerful weaponry. These schematics can also be found in loot, but only the Armorer can learn them. Unlocks steel tools."
 perkArmorerRank4DescITAV,progression,perk Pro,,,Artisan
-perkArmorerRank4LongDescITAV,progression,perk Pro,,,"You are now an artisan armorer and able to craft quality 5 armor and weaponry."
+perkArmorerRank4LongDescITAV,progression,perk Pro,,,"You are now an artisan armorer and able to craft quality 5 tools, armor and weaponry."
 perkArmorerRank5DescITAV,progression,perk Pro,,,Master
-perkArmorerRank5LongDescITAV,progression,perk Pro,,,"You are now a master armorer and able to craft quality 6 armor and weaponry."
+perkArmorerRank5LongDescITAV,progression,perk Pro,,,"You are now a master armorer and able to craft quality 6 tools, armor and weaponry."
 
 perkFarmerITAVDesc,progression,perk Pro,,,"Specialize in harvesting more crops and crafting seeds. Gain the ability to track animals and increase damage to and harvest from them. Meat can be efficiently prepared in the Farmer's Sink workbench."
 perkFarmerITAVName,progression,perk Pro,,,Farmer

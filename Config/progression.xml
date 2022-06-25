@@ -5,15 +5,15 @@
 <append xpath="/progression/attributes[1]">
 	<attribute name="attITAV" name_key="attNameITAV" desc_key="attDescITAV" icon="ui_game_symbol_critical" min_level="1" max_level="10" base_skill_point_cost="1" cost_multiplier_per_level="1.14">
 		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="6"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
-		<level_requirements level="7"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
-		<level_requirements level="8"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
-		<level_requirements level="9"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
-		<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="10" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="15" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="20" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="6"><requirement name="PlayerLevel" operation="GTE" value="25" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="7"><requirement name="PlayerLevel" operation="GTE" value="30" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="8"><requirement name="PlayerLevel" operation="GTE" value="35" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="9"><requirement name="PlayerLevel" operation="GTE" value="40" desc_key="reqGenericPoints03"/></level_requirements>
+		<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="50" desc_key="reqGenericPoints03"/></level_requirements>
 		<effect_group>
 			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" buff="buffPerkAbilityUpdate"/>
 			<passive_effect name="ElectricalTrapXP" operation="base_set" level="8,9,10" value="0.2,0.35,0.5"/>
@@ -115,28 +115,28 @@
 			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel01ITAV" />
 		</level_requirements>
 		<level_requirements level="2">
-			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="2" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel02ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="4" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel04ITAV" />
 		</level_requirements>
 		<level_requirements level="3">
-			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="3" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel03ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="6" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel06ITAV" />
 		</level_requirements>
 		<level_requirements level="4">
-			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="5" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel05ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="8" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel08ITAV" />
 		</level_requirements>
 		<level_requirements level="5">
-			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="7" desc_key="Requires"/>
-			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel07ITAV" />
+			<requirement name="ProgressionLevel" progression_name="attITAV" operation="GTE" value="10" desc_key="Requires"/>
+			<requirement name="CVarCompare" cvar="hasLearntMinerITAV" target="self" operation="Equals" value="1" desc_key="reqAttLevel10ITAV" />
 		</level_requirements>
 				
 		<!-- Miner69r effects to MinerITAV -->
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkMinerITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolRepairT1ClawHammer,meleeToolAxeT1IronFireaxe,meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAllSteelParts,resourceRockSmallBundle,resourceWoodBundle,resourceScrapIronBundle,resourcePotassiumNitratePowderBundle,resourceLeadBundle,resourceCoalBundle,resourceOilShaleBundle,resourceClayLumpBundle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolAllSteelParts,resourceRockSmallBundle,resourceWoodBundle,resourceScrapIronBundle,resourcePotassiumNitratePowderBundle,resourceLeadBundle,resourceCoalBundle,resourceOilShaleBundle,resourceClayLumpBundle"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="workbenchMinerT2ITAV,meleeToolAxeT3ChainsawParts"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="meleeToolAxeT2SteelAxe,meleeToolShovelT2SteelShovel,meleeToolPickT2SteelPickaxe"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags=""/>
 			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkMinerITAV"/>
 			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkMinerITAV"/>
 
@@ -231,8 +231,8 @@
 		<effect_group>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="hasLearntArmorerITAV" operation="set" value="1" />
 			<passive_effect name="CraftingTier" operation="base_add" level="1,5" value="1,5" tags="perkArmorerITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="workbench,armorIronHelmet,armorIronChest,armorIronGloves,armorIronLegs,armorIronBoots,armorLeatherHood,armorLeatherChest,armorLeatherGloves,armorLeatherPants,armorLeatherBoots,armorSteelBoots,armorSteelChest,armorSteelGloves,armorSteelLegs,armorSteelHelmet,armorMilitaryBoots,armorMilitaryGloves,armorMilitaryHelmet,armorMilitaryLegs,armorMilitaryVest,gunBowT1WoodenBow,gunBowT1IronCrossbow,gunHandgunT1Pistol,gunHandgunT2Magnum44,gunShotgunT1DoubleBarrel,gunShotgunT2PumpShotgun,gunRifleT1HuntingRifle,gunRifleT2LeverActionRifle,gunMGT1AK47,gunMGT2TacticalAR,meleeWpnBladeT1HuntingKnife,meleeWpnBladeT1CandyKnife,meleeWpnClubT1BaseballBat,meleeWpnClubT1CandyClub,meleeWpnBatonT2StunBaton,meleeWpnSpearT1IronSpear,meleeWpnSledgeT1IronSledgehammer,meleeWpnKnucklesT1IronKnuckles,gunMGT1AK47Parts,gunHandgunT1PistolParts,gunRifleT1HuntingRifleParts,gunShotgunT1DoubleBarrelParts,gunBowT1WoodenBowParts,gunExplosivesT3RocketLauncherParts,meleeWpnBatonT2StunBatonParts,meleeWpnKnucklesT3SteelKnucklesParts,meleeWpnBladeT3MacheteParts,meleeWpnSpearT3SteelSpearParts,meleeWpnClubT3SteelClubParts,meleeWpnSledgeT3SteelSledgehammerParts,resourceWeaponRepairKitITAV,weaponPartFragmentITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="meleeWpnClubT3SteelClubSchematic,meleeWpnSpearT3SteelSpearSchematic,meleeWpnBladeT3MacheteSchematic,meleeWpnSledgeT3SteelSledgehammerSchematic,meleeWpnKnucklesT3SteelKnucklesSchematic,gunHandgunT3DesertVultureSchematic,gunHandgunT3SMG5Schematic,gunShotgunT3AutoShotgunSchematic,gunRifleT3SniperRifleSchematic,gunMGT3M60Schematic,gunBowT3CompoundBowSchematic,gunBowT3CompoundCrossbowSchematic"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="workbench,meleeToolAllSteelParts,meleeToolAxeT3ChainsawParts,meleeToolRepairT1ClawHammer,meleeToolAxeT1IronFireaxe,meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,armorIronHelmet,armorIronChest,armorIronGloves,armorIronLegs,armorIronBoots,armorLeatherHood,armorLeatherChest,armorLeatherGloves,armorLeatherPants,armorLeatherBoots,armorSteelBoots,armorSteelChest,armorSteelGloves,armorSteelLegs,armorSteelHelmet,armorMilitaryBoots,armorMilitaryGloves,armorMilitaryHelmet,armorMilitaryLegs,armorMilitaryVest,gunBowT1WoodenBow,gunBowT1IronCrossbow,gunHandgunT1Pistol,gunHandgunT2Magnum44,gunShotgunT1DoubleBarrel,gunShotgunT2PumpShotgun,gunRifleT1HuntingRifle,gunRifleT2LeverActionRifle,gunMGT1AK47,gunMGT2TacticalAR,meleeWpnBladeT1HuntingKnife,meleeWpnBladeT1CandyKnife,meleeWpnClubT1BaseballBat,meleeWpnClubT1CandyClub,meleeWpnBatonT2StunBaton,meleeWpnSpearT1IronSpear,meleeWpnSledgeT1IronSledgehammer,meleeWpnKnucklesT1IronKnuckles,gunMGT1AK47Parts,gunHandgunT1PistolParts,gunRifleT1HuntingRifleParts,gunShotgunT1DoubleBarrelParts,gunBowT1WoodenBowParts,gunExplosivesT3RocketLauncherParts,meleeWpnBatonT2StunBatonParts,meleeWpnKnucklesT3SteelKnucklesParts,meleeWpnBladeT3MacheteParts,meleeWpnSpearT3SteelSpearParts,meleeWpnClubT3SteelClubParts,meleeWpnSledgeT3SteelSledgehammerParts,resourceWeaponRepairKitITAV,weaponPartFragmentITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="meleeToolAxeT2SteelAxe,meleeToolShovelT2SteelShovel,meleeToolPickT2SteelPickaxe,meleeWpnClubT3SteelClubSchematic,meleeWpnSpearT3SteelSpearSchematic,meleeWpnBladeT3MacheteSchematic,meleeWpnSledgeT3SteelSledgehammerSchematic,meleeWpnKnucklesT3SteelKnucklesSchematic,gunHandgunT3DesertVultureSchematic,gunHandgunT3SMG5Schematic,gunShotgunT3AutoShotgunSchematic,gunRifleT3SniperRifleSchematic,gunMGT3M60Schematic,gunBowT3CompoundBowSchematic,gunBowT3CompoundCrossbowSchematic"/>
 			<!--,gunHandgunT3SMG5,meleeWpnKnucklesT3SteelKnuckles,gunHandgunT3DesertVulture,gunShotgunT3AutoShotgun,gunBowT3CompoundBow,gunRifleT3SniperRifle,gunMGT3M60,gunBowT3CompoundCrossbow,gunExplosivesT3RocketLauncher,meleeWpnSpearT3SteelSpear,meleeWpnBladeT3Machete,meleeWpnClubT3SteelClub,meleeWpnSledgeT3SteelSledgehammer -->
 
 			<!-- Stamina/mobility are handled in buffs (buffStatusCheck02) -->
@@ -389,7 +389,7 @@
 		
 		<effect_group>
 			<passive_effect name="CraftingTime" operation="perc_add" level="2,3,4,5" value="-.2,-.2,-.4,-.4" tags="chemStationCrafting"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="chemistryStation,medicalFirstAidBandage,medicalPlasterCast,drugHerbalAntibiotics,drugPainkillers"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="chemistryStation,medicalFirstAidBandage,medicalPlasterCast,drugHerbalAntibiotics,drugPainkillers,gunBotRoboticsParts"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="resourceGunPowder,resourcePaint,resourceConcreteMix"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="medicalFirstAidKit,drugSteroids,chemistryStationT2ITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="drugFortBites,drugRecog,drugAntibiotics,drinkJarGrandpasForgettingElixir"/>
