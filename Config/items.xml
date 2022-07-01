@@ -65,9 +65,17 @@
 <remove xpath="//item[@name='ammoShotgunBreachingSlug']" />
 <remove xpath="//item[@name='ammoBundleShotgunBreachingSlug']" />
 
-<!-- Adding small chance of dysentery to canned foods -->
+<!-- Adding small chance of dysentery to canned foods and raw vegetables -->
 <append xpath="//item[contains(@name, 'foodCan')]/effect_group[@name='Food Tier 0']">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="5"/><display_value name="dDysenteryRisk" value=".05"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+				<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+</append>
+
+<append xpath="//item[contains(@name, 'foodCrop') or @name='foodEgg' or @name='foodCornMeal']/effect_group[@name='Food Tier 0']">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/><display_value name="dDysenteryRisk" value=".04"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
 				<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
@@ -154,7 +162,7 @@
 <!-- Locking  items behind ITAV perks -->
 <append xpath="//item[@name='resourceForgedIron']"><property name="UnlockedBy" value="perkSmelterITAV"/></append>
 <append xpath="//item[@name='resourceForgedSteel']"><property name="UnlockedBy" value="perkSmelterITAV"/></append>
-<append xpath="//item[@name='toolForgeCrucible']"><property name="UnlockedBy" value="perkSmelterITAV"/></append>
+<append xpath="//item[@name='toolForgeCrucible']"><property name="UnlockedBy" value="toolForgeCrucibleSchematic"/></append>
 <append xpath="//item[@name='toolBellows']/property[@name='UnlockedBy']/@value">,perkSmelterITAV</append>
 <append xpath="//item[@name='toolAnvil']/property[@name='UnlockedBy']/@value">,perkSmelterITAV</append>
 <append xpath="//item[@name='resourceGunPowder']"><property name="UnlockedBy" value="perkScientistITAV"/></append>
@@ -208,17 +216,20 @@
 <setattribute xpath="/items/item[@name='meleeToolRepairT3Nailgun']/property[@name='Tags']" name="value">tool,nailgun,sideAttachments,repairTool,attStrength,perkMinerITAV,canHaveCosmetic,noMods</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/property[@name='Tags']" name="value">axe,melee,grunting,medium,tool,longShaft,attStrength,perkMinerITAV,canHaveCosmetic</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/property[@name='Tags']" name="value">melee,grunting,medium,tool,longShaft,attStrength,perkMinerITAV,miningTool,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeToolShovelT0StoneShovel']/property[@name='Tags']" name="value">melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMinerITAV,canHaveCosmetic</setattribute>
+<!-- <setattribute xpath="/items/item[@name='meleeToolShovelT0StoneShovel']/property[@name='Tags']" name="value">melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMinerITAV,canHaveCosmetic</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolShovelT1IronShovel']/property[@name='Tags']" name="value">melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMinerITAV,canHaveCosmetic</setattribute>
-<setattribute xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/property[@name='Tags']" name="value">melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMinerITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/property[@name='Tags']" name="value">melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMinerITAV,canHaveCosmetic</setattribute> -->
 <setattribute xpath="/items/item[@name='meleeToolAxeT3Chainsaw']/property[@name='Tags']" name="value">melee,heavy,tool,motorTool,attStrength,perkMinerITAV,chainsaw,canHaveCosmetic</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolPickT3Auger']/property[@name='Tags']" name="value">melee,heavy,tool,motorTool,attStrength,perkMinerITAV,miningTool,canHaveCosmetic</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolHammerOfGodAdmin']/property[@name='Tags']" name="value">melee,light,tool,attStrength,perkMinerITAV,admin,noMods</setattribute>
 
+<!-- Digging -->
+<setattribute xpath="/items/item[@name='meleeToolShovelT0StoneShovel']/property[@name='Tags']" name="value">melee,grunting,medium,tool,longShaft,shovel,attStrength,perkDigITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="/items/item[@name='meleeToolShovelT1IronShovel']/property[@name='Tags']" name="value">melee,grunting,medium,tool,longShaft,shovel,attStrength,perkDigITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="/items/item[@name='meleeToolShovelT2SteelShovel']/property[@name='Tags']" name="value">melee,grunting,medium,tool,longShaft,shovel,attStrength,perkDigITAV,canHaveCosmetic</setattribute>
+<setattribute xpath="//item[starts-with(@name, 'meleeToolShovel')]/effect_group/passive_effect[@tags='perkMinerITAV']" name="tags">perkDigITAV</setattribute>
 
-
-
-<!-- FARMER -->
+<!-- Knives -->
 <setattribute xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@name='Tags']" name="value">axe,melee,light,tool,longShaft,repairTool,miningTool,attStrength,perkMinerITAV,perkReaperITAV,canHaveCosmetic</setattribute>
 <setattribute xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/property[@name='Tags']" name="value">axe,melee,light,tool,longShaft,tazas,repairTool,miningTool,attStrength,perkMinerITAV,perkReaperITAV,canHaveCosmetic</setattribute>
 <setattribute xpath="/items/item[@name='meleeWpnBladeT0BoneKnife']/property[@name='Tags']" name="value">knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkReaperITAV,canHaveCosmetic</setattribute>
@@ -400,7 +411,7 @@
 		<property name="HoldType" value="45"/>
 		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-		<property name="UnlockedBy" value="perkMinerITAV"/>
+		<property name="UnlockedBy" value="perkCookITAV"/>
 		<property name="Material" value="Morganic"/>
 		<property name="Stacknumber" value="5"/>
 		<property name="SellableToTrader" value="true"/>
@@ -2340,7 +2351,7 @@
 <setattribute xpath="//item[@name='resourceNail']/property[@name='EconomicValue']" name="value">10</setattribute>
 <setattribute xpath="//item[@name='resourceRocketTip']/property[@name='EconomicValue']" name="value">495</setattribute>
 <setattribute xpath="//item[@name='resourceRocketCasing']/property[@name='EconomicValue']" name="value">495</setattribute>
-<setattribute xpath="//item[@name='resourceRepairKit']/property[@name='EconomicValue']" name="value">181</setattribute>
+<setattribute xpath="//item[@name='resourceRepairKit']/property[@name='EconomicValue']" name="value">461</setattribute>
 <setattribute xpath="//item[@name='resourceOil']/property[@name='EconomicValue']" name="value">270</setattribute>
 <setattribute xpath="//item[@name='resourcePaint']/property[@name='EconomicValue']" name="value">1</setattribute>
 <setattribute xpath="//item[@name='resourceDoorKnob']/property[@name='EconomicValue']" name="value">505</setattribute>

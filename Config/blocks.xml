@@ -1932,7 +1932,10 @@
 
 </append>
 
+<!-- Creating separate harvest tags for dug items, to move them away from Miner and onto other professions -->
+<setattribute xpath="//block[starts-with(@name, 'terr') and not(contains(@name, 'Asphalt')) and not(contains(@name, 'Concrete')) and not(contains(@name, 'terrOre')) and not(contains(@name, 'Destroyed')) and not(contains(@name, 'Filler')) and not(contains(@name, 'Stone')) and not(contains(@name, 'rock')) and not(contains(@name, 'Water'))]/drop[@event='Harvest' and @name='resourceCrushedSand' and @tag='oreWoodHarvest']" name="tag">sandClayHarvestITAV</setattribute>
 
+<setattribute xpath="//block[starts-with(@name, 'terr') and not(contains(@name, 'Asphalt')) and not(contains(@name, 'Concrete')) and not(contains(@name, 'terrOre')) and not(contains(@name, 'Destroyed')) and not(contains(@name, 'Filler')) and not(contains(@name, 'Stone')) and not(contains(@name, 'rock')) and not(contains(@name, 'Water'))]/drop[@event='Harvest' and @name='resourceClayLump' and @tag='oreWoodHarvest']" name="tag">sandClayHarvestITAV</setattribute>
 
 <!-- Tweaking blocks -->
 <remove xpath="//block[@name='OSBWoodStack']/drop[@event='Harvest']" />

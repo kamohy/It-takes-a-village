@@ -5,15 +5,15 @@
 <append xpath="/progression/attributes[1]">
 	<attribute name="attITAV" name_key="attNameITAV" desc_key="attDescITAV" icon="ui_game_symbol_critical" min_level="1" max_level="10" base_skill_point_cost="1" cost_multiplier_per_level="1.14">
 		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="10" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="15" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="20" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="6"><requirement name="PlayerLevel" operation="GTE" value="25" desc_key="reqGenericPoints02"/></level_requirements>
-		<level_requirements level="7"><requirement name="PlayerLevel" operation="GTE" value="30" desc_key="reqGenericPoints02"/></level_requirements>
-		<level_requirements level="8"><requirement name="PlayerLevel" operation="GTE" value="35" desc_key="reqGenericPoints02"/></level_requirements>
-		<level_requirements level="9"><requirement name="PlayerLevel" operation="GTE" value="40" desc_key="reqGenericPoints03"/></level_requirements>
-		<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="50" desc_key="reqGenericPoints03"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="6"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="7"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="8"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="9"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
+		<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
 		<effect_group>
 			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" buff="buffPerkAbilityUpdate"/>
 			<passive_effect name="ElectricalTrapXP" operation="base_set" level="8,9,10" value="0.2,0.35,0.5"/>
@@ -99,7 +99,7 @@
 			<passive_effect name="CraftingTier" operation="base_set" level="0,3" value="0,3" tags="perkSmelterITAV"/><!-- fake crafting perk that is used to scale resources. perkAdvancedEngineering -->
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="forge,resourceForgedIron,workbench,chemistryStation,cementMixer,resourceMilitaryFiber"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3" value="-0.2" tags="perkSmelterITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="toolForgeCrucible,toolBellows,toolAnvil,generatorbank,electricwirerelay,switch,ceilingLight01_player,industrialLight01_player,industrialLight02_player,armorMiningHelmet,spotlightPlayer,speaker,pressureplate,pressureplateLong,electrictimerrelay,motionsensor,wirelessRelayFuseboxLightITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="toolBellows,toolAnvil,generatorbank,electricwirerelay,switch,ceilingLight01_player,industrialLight01_player,industrialLight02_player,armorMiningHelmet,spotlightPlayer,speaker,pressureplate,pressureplateLong,electrictimerrelay,motionsensor,wirelessRelayFuseboxLightITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,3" value="1" tags="resourceForgedSteel,batterybank,meleeToolRepairT3Nailgun,garageDoorMetal_v1Powered,garageDoorIndustrial_Powered,metalReinforcedWoodDrawBridgePowered,vaultHatch_v3_Powered,vaultDoor03_Powered"/>
 
 			<effect_description level="1" desc_key="perkSmelterITAVRank1Desc" long_desc_key="perkSmelterITAVRank1LongDesc"/>
@@ -133,8 +133,8 @@
 				
 		<!-- Miner69r effects to MinerITAV -->
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkMinerITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolAllSteelParts,resourceRockSmallBundle,resourceWoodBundle,resourceScrapIronBundle,resourcePotassiumNitratePowderBundle,resourceLeadBundle,resourceCoalBundle,resourceOilShaleBundle,resourceClayLumpBundle"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkMinerITAV,diggerITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolAllSteelParts,resourceRockSmallBundle,resourceWoodBundle,resourceScrapIronBundle,resourcePotassiumNitratePowderBundle,resourceLeadBundle,resourceCoalBundle,resourceOilShaleBundle"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="workbenchMinerT2ITAV,meleeToolAxeT3ChainsawParts"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags=""/>
 			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkMinerITAV"/>
@@ -184,7 +184,7 @@
             <passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkCookITAV"/><!-- fake crafting perk that is used to scale resources -->
             <!-- <passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-.1,-.5" tags="perkCookITAV"/> -->
 
-            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="foodRawChickenMeatPreparedITAV,foodRawMeatPreparedITAV,foodBaconAndEggs,foodBoiledMeat,foodGrilledMeat,foodBakedPotato,foodCornBread,foodCornOnTheCob,drinkJarRedTea,drinkJarCoffee,drinkJarGoldenRodTea,foodDoughITAV"/>
+            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="foodRawChickenMeatPreparedITAV,foodRawMeatPreparedITAV,foodBaconAndEggs,foodBoiledMeat,foodGrilledMeat,foodBakedPotato,foodCornBread,foodCornOnTheCob,drinkJarRedTea,drinkJarCoffee,drinkJarGoldenRodTea,foodDoughITAV,resourceClayLumpBundle"/>
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="foodChickenBrothITAV,foodMeatBrothITAV,foodVegetableBrothITAV,foodSteakAndPotato,foodBlueberryPie,foodRosysCrunchyAcornPieITAV,foodChickenStewITAV,foodMeatStew,foodVegetableStew,foodPumpkinPie,foodPumpkinCheesecake,foodPumpkinBread,drinkJarCoffeeSpicyITAV,cntFoodPileSmallITAV"/>
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="foodShamChowder,foodHoboStew,foodFishTacos,drinkYuccaJuiceSmoothie,foodChiliDog,drinkJarBeer,foodChickenSoupITAV,foodChickenEmpanadasITAV"/>
             <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="foodGumboStew,foodShepardsPie,foodSpaghetti,foodTunaFishGravyToast,foodChickenSoupSpicyITAV,cntFoodPileMediumITAV,campfireT2ITAV"/>
@@ -203,6 +203,17 @@
             <effect_description level="4" desc_key="perkMasterChefRank4Desc" long_desc_key="perkCookITAVRank4LongDesc"/>
             <effect_description level="5" desc_key="perkMasterChefRank5Desc" long_desc_key="perkCookITAVRank5LongDesc"/>
         </effect_group>
+		
+				<!-- Miner69er & Motherlode effects on clay and sand to CookITAV -->
+		<effect_group>		
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkDigITAV"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkDigITAV"/>
+			
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="sandClayHarvestITAV" /> <!-- value=".2,1" -->
+			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value="-.1,-.4" tags="Harvesting"> <!-- value="-.1,-.4" -->
+				<requirement name="HoldingItemHasTags" tags="perkDigITAV"/>
+			</passive_effect>
+        </effect_group>	
     </perk>
 </perks>
 <perks min_level="0" max_level="5" base_skill_point_cost="1" cost_multiplier_per_level="1" max_level_ratio_to_parent="5">	

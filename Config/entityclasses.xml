@@ -14,7 +14,8 @@
 	</effect_group>
 </append>
 
-<setattribute xpath="//entity_class[@name='playerMale']/effect_group[@name='food/water balancing']/passive_effect[@name='FoodChangeOT' and @value='.00833']" name="value">.01666</setattribute> <!-- hunger base drain, 30/hour in vanilla, 60/hour now -->
+<setattribute xpath="//entity_class[@name='playerMale']/effect_group[@name='food/water balancing']/passive_effect[@name='FoodChangeOT' and @value='.00833']" name="value">.0125</setattribute> <!-- hunger base drain, 30/hour in vanilla, 45/hour now -->
+<append xpath="//entity_class[@name='playerMale']/effect_group/passive_effect[@name='HarvestCount' and @tags='allHarvest,oreWoodHarvest,cropHarvest,wildCropsHarvest']/@tags">,sandClayHarvestITAV</append>
 
 <setattribute xpath="//entity_class[@name='vehicleBicycle']/property[@name='LootListAlive']" name="value">coffeeMaker</setattribute>
 

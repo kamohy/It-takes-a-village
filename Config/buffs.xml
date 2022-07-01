@@ -4,8 +4,9 @@
 <buff name="ITAV_start" hidden="true" icon="ui_game_symbol_add" remove_on_death="false">
 
 </buff>
-
 </append>
+
+<remove xpath="//buff[@name='buffDeathFoodDrinkAdjust']/effect_group/triggered_effect[@stat='Food']" />
 
 <setattribute xpath="//requirement[@progression_name='perkAnimalTracker']" name="progression_name">perkReaperITAV</setattribute>
 

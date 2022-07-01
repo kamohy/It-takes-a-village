@@ -39,7 +39,7 @@ loadingTipUnlockingRecipes,UI,Loading Screen,x,,If a recipe shows a lock item th
 loadingTipUnlockingRecipes_title,UI,Loading Screen,x,,Unlocking Recipes
 
 
-schematicGeneralGroupDesc,items,Book,,,Reading the schematic will teach you how to craft this item. The Armorer is the only one who can make good quality weapons and armor. \nSome items are crafted with parts, and parts can be crafted with fragments.
+schematicGeneralGroupDesc,items,Book,,,Reading the schematic will teach you how to craft this item. The Armorer is the only one who can make good quality tools, weapons and armor. \nSome items are crafted with parts, and parts can be crafted with fragments.
 
 starterBundleITAV,items,,,,"Hefty bag"
 
@@ -66,11 +66,9 @@ bookProfessionMinerITAVDesc,progression,perk  book,,,"Miners are efficient at ga
 bookProfessionHunterITAV,Items,perk  book,,,"Profession: Hunter"
 bookProfessionHunterITAVDesc,progression,perk  book,,,"Hunters specialize in tracking and hunting animals. They also harvest more resources from animal carcasses."
 bookProfessionCookITAV,Items,perk  book,,,"Profession: Cook"
-bookProfessionCookITAVDesc,progression,perk  book,,,"Cooks learn how to prepare more filling meals. These meals give higher health and stamina bonuses. They harvest more from crops, craft cheaper farm plots and can craft seeds from the harvest."
+bookProfessionCookITAVDesc,progression,perk  book,,,"Cooks learn how to prepare more filling meals. These meals give higher health and stamina bonuses. Cooks harvest more from sand, soil and crops, craft cheaper farm plots and can craft seeds from the harvest."
 bookProfessionArmorerITAV,Items,perk  book,,,"Profession: Armorer"
-bookProfessionArmorerITAVDesc,progression,perk  book,,,"Armorers craft light and heavy armor as well as ranged and melee weapons."
-bookProfessionWeaponsmithITAV,Items,perk  book,,,"Profession: Weaponsmith"
-bookProfessionWeaponsmithITAVDesc,progression,perk  book,,,"Weaponsmiths craft ranged and melee weaponry."
+bookProfessionArmorerITAVDesc,progression,perk  book,,,"Armorers craft light and heavy armor as well as ranged and melee weapons and tools."
 bookProfessionFarmerITAV,Items,perk  book,,,"Profession: Farmer"
 bookProfessionFarmerITAVDesc,progression,perk  book,,,"Farmers harvest more from crops and can craft seeds from the harvest as well as basic foods."
 bookProfessionChemistITAV,Items,perk  book,,,"Profession: Chemist"
@@ -463,26 +461,22 @@ perkSmelterITAVName,progression,perk Pro,,,Smelter
 perkSmelterITAVRank1Desc,progression,perk Pro,,,Iron Fist
 perkSmelterITAVRank1LongDesc,progression,perk Pro,,,"Forge iron and other metal objects. Craft forge, workbench, cementmixer, chemistry station and military fibers."
 perkSmelterITAVRank2Desc,progression,perk,,,Electrician
-perkSmelterITAVRank2LongDesc,progression,perk Pro,,,"Unlocks crafting of the crucible, bellows, anvil, generator banks, electrical relays, switches, pressure plates, motion sensors, wireless fusebox and various lights."
+perkSmelterITAVRank2LongDesc,progression,perk Pro,,,"Unlocks crafting of the bellows, anvil, generator banks, electrical relays, switches, pressure plates, motion sensors, wireless fusebox and various lights."
 perkSmelterITAVRank3Desc,progression,perk,,,Serious Steel
 perkSmelterITAVRank3LongDesc,progression,perk Pro,,,"Unlocks crafting of forged steel, battery bank, nailgun and various powered doors."
-perkSmelterITAVRank4Desc,progression,perk Pro,,,Artisan
-perkSmelterITAVRank4LongDesc,progression,perk Pro,,,"Unlocks crafting of the crucible, forged steel, battery bank, nailgun and various powered doors."
-perkSmelterITAVRank5Desc,progression,perk Pro,,,Master
-perkSmelterITAVRank5LongDesc,progression,perk Pro,,,"Unlocks crafting of the crucible and forged steel. All forge recipes cost 20% less, and electrical devices cost 35% less."
 
 perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster. Perform high-end crafts at the Advanced Miner's Table."
 perkMinerITAVName,progression,perk Pro,,,Miner
 perkMinerITAVRank1Desc,progression,perk Pro,,,"Woodpecker"
-perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Increase tool damage by 10% and block damage by 30% with any axe, pick, shovel, chainsaw or auger. Harvest 20% more from trees, and 40% more from ore, stone and terrain blocks. \nUnlocks all iron tools like pickaxes. Unlocks crafting of Steel Tool Parts from Tool Part Fragments. Unlocks resource bundles."
+perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Increase tool damage by 10% and block damage by 30% with any axe, pick, chainsaw or auger. Harvest 20% more from trees, ore and stone. Unlocks crafting of Steel Tool Parts from Tool Part Fragments. Unlocks resource bundles."
 perkMinerITAVRank2Desc,progression,perk,,,"Choppy Chop"
-perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Increase tool damage by 20% and block damage by 60% with any axe, pick, shovel, chainsaw or auger. Harvest 40% more from trees, and 80% more from ore, stone and terrain blocks. Unlocks Advanced Miner's Table. Unlocks crafting of Motorized Tool Parts from Tool Part Fragments."
+perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Increase tool damage by 20% and block damage by 60% with any axe, pick, chainsaw or auger. Harvest 40% more from trees, ore and stone. Unlocks Advanced Miner's Table. Unlocks crafting of Motorized Tool Parts from Tool Part Fragments."
 perkMinerITAVRank3Desc,progression,perk,,,"Bang That Rock"
-perkMinerITAVRank3LongDesc,progression,perk Pro,,,"Increase tool damage by 30% and block damage by 90% with any axe, pick, shovel, chainsaw or auger. Harvest 60% more from trees, and 120% more from ore, stone and terrain blocks."
+perkMinerITAVRank3LongDesc,progression,perk Pro,,,"Increase tool damage by 30% and block damage by 90% with any axe, pick, chainsaw or auger. Harvest 60% more from trees, ore and stone."
 perkMinerITAVRank4Desc,progression,perk Pro,,,"Iron Fist"
-perkMinerITAVRank4LongDesc,progression,perk Pro,,,"Increase tool damage by 40% and block damage by 120% with any axe, pick, shovel, chainsaw or auger. Harvest 80% more from trees, and 160% more from ore, stone and terrain blocks."
+perkMinerITAVRank4LongDesc,progression,perk Pro,,,"Increase tool damage by 40% and block damage by 120% with any axe, pick, chainsaw or auger. Harvest 80% more from trees, ore and stone."
 perkMinerITAVRank5Desc,progression,perk Pro,,,"Cave Troll"
-perkMinerITAVRank5LongDesc,progression,perk Pro,,,"Increase tool damage by 50% and block damage by 150% with any axe, pick, shovel, chainsaw or auger. Harvest 100% more from trees, and 200% more from ore, stone and terrain blocks. Unlocks crafting of Steel pickaxe, shovel and axe"
+perkMinerITAVRank5LongDesc,progression,perk Pro,,,"Increase tool damage by 50% and block damage by 150% with any axe, pick, chainsaw or auger. Harvest 100% more from trees, ore and stone."
 
 perkHunterITAVDesc,progression,perk Pro,,,"Become one with the hunt. Gain the ability to track animals and increase damage to and harvest from them."
 perkHunterITAVName,progression,perk Pro,,,Hunter
@@ -494,11 +488,11 @@ perkHunterITAVRank3LongDesc,progression,perk Pro,,,"You are a true Hunter and le
 
 perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced benefits, prepared with ingredients grown at your own farm. Grow crops in farm plots, and cook high-end items at the Advanced Cooking Stove."
 perkCookITAVName,progression,perk Pro,,,Cook
-perkCookITAVRank1LongDesc,progression,perk Pro,,,"Cooking is not your thing but you know some basics. Unlocks basic recipes such as bacon and eggs, boiled and grilled meats, baked potatoes, cornbread, teas and coffee. Double the harvest of wild or planted crops, and gain a 50% chance of receiving a seed when harvesting your crops. Craft seeds for flowers and decorative plants like goldenrod, chrysanthemum, aloe, and yucca.\nFarm plots cost 30% less to craft. Unlocks the Farmer's Sink workbench."
-perkCookITAVRank2LongDesc,progression,perk Pro,,,"Just like grandma used to make, tasty hearty meals that fill you up for days. Craft Steak and Potatoes, Chicken Stew, Meat Stew, Vegetable Stew, Blueberry Pie, Acorn Pie and several pumpkin dishes. Warm yourself with a delicious glass of Spicy Coffee. Unlocks the Small Food Pile storage decoration. You can craft seeds for berries and vegetables.80% chance of receiving a seed when harvesting you crops, and 80% chance to harvest 1 additional crop.Farm plots cost 50% less to craft."
-perkCookITAVRank3LongDesc,progression,perk Pro,,,"Learn how to make nutritious meals from canned goods. Craft Sham Chowder, Hobo Stew, Chili dogs, Fish Tacos, Chicken Soup and Chicken Empanadas. Wash them down with Yucca Juice Smoothies and Beer. Triple the harvest of wild or planted crops."
-perkCookITAVRank4LongDesc,progression,perk Pro,,,"Cook for an army by making Gumbo Stew, Shepards Pie, Spaghetti, Tuna Gravy on Toast and Spicy Chicken Soup. Unlocks the Medium Food Pile storage decoration, and the Advanced Cooking Stove."
-perkCookITAVRank5LongDesc,progression,perk Pro,,,"Learn grandpa's secret recipes that boost stats and attributes! Unlocks the Large Food Pile storage decoration."
+perkCookITAVRank1LongDesc,progression,perk Pro,,,"Unlocks basic recipes such as bacon and eggs, boiled and grilled meats, baked potatoes, cornbread, teas and coffee. Double the harvest of wild or planted crops, and gain a 50% chance of receiving a seed when harvesting your crops. Craft seeds for flowers and decorative plants.\nFarm plots cost 30% less to craft. Harvest 20% more from terrain blocks with a shovel. Unlocks the Farmer's Sink workbench and Clay Bundles."
+perkCookITAVRank2LongDesc,progression,perk Pro,,,"Just like grandma used to make, tasty hearty meals that fill you up for days. Craft Steak and Potatoes, Chicken Stew, Meat Stew, Vegetable Stew, Blueberry Pie, Acorn Pie and several pumpkin dishes. Warm yourself with a delicious glass of Spicy Coffee. Unlocks the Small Food Pile storage decoration. You can craft seeds for berries and vegetables.80% chance of receiving a seed when harvesting you crops, and 80% chance to harvest 1 additional crop.Farm plots cost 50% less to craft. Harvest 40% more from terrain blocks with a shovel."
+perkCookITAVRank3LongDesc,progression,perk Pro,,,"Learn how to make nutritious meals from canned goods. Craft Sham Chowder, Hobo Stew, Chili dogs, Fish Tacos, Chicken Soup and Chicken Empanadas. Wash them down with Yucca Juice Smoothies and Beer. Triple the harvest of wild or planted crops. Harvest 60% more from terrain blocks with a shovel."
+perkCookITAVRank4LongDesc,progression,perk Pro,,,"Cook for an army by making Gumbo Stew, Shepards Pie, Spaghetti, Tuna Gravy on Toast and Spicy Chicken Soup. Harvest 80% more from terrain blocks with a shovel. Unlocks the Medium Food Pile storage decoration, and the Advanced Cooking Stove."
+perkCookITAVRank5LongDesc,progression,perk Pro,,,"Learn grandpa's secret recipes that boost stats and attributes! Harvest 100% more from terrain blocks with a shovel. Unlocks the Large Food Pile storage decoration."
 
 perkArmorerITAVDesc,progression,perk Pro,,,"Craft ranged and melee weapons, as well as light and heavy armor."
 perkArmorerITAVName,progression,perk Pro,,,Armorer

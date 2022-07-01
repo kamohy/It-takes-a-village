@@ -624,6 +624,16 @@ makes the looter more financially self sustained than if they had to buy all the
  <item group="weaponSchematicsT3OnlyITAV" />
 </append>
 
+<append xpath="//lootgroup[@name='groupHardenedChestT4_03']">
+ <item name="toolForgeCrucibleSchematic" loot_prob_template="ProbT2" />
+ <item name="toolForgeCrucibleSchematic" loot_prob_template="ProbT3" />
+</append>
+
+<append xpath="//lootgroup[@name='groupHardenedChestT5_03']">
+ <item name="toolForgeCrucibleSchematic" loot_prob_template="ProbT2" />
+ <item name="toolForgeCrucibleSchematic" loot_prob_template="ProbT3" />
+</append>
+
 <!-- <remove xpath="//lootgroup[@name='groupHardenedChestT4_05']/item" /> already empty -->
 <append xpath="/lootcontainers/lootgroup[@name='groupHardenedChestT4_05']">
 	<item name="solarCell" count="1" loot_prob_template="high" />

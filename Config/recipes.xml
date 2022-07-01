@@ -88,9 +88,6 @@
 			<ingredient name="resourceCoal" count="6000"/>
 		</recipe>
 		
-		<recipe name="resourceClayLumpBundle" count="1" craft_time="300" craft_area="workbenchMinerT2ITAV" tags="learnable">
-			<ingredient name="resourceCoal" count="6000"/>
-		</recipe>
 	</insertAfter>
 	
 	<!-- Profession books  -->
@@ -1513,6 +1510,9 @@
 	<setattribute xpath="//recipe[@name='resourceGlue' and @craft_area='campfire']/ingredient[@name='resourceBone']" name="count">5</setattribute>
 	<setattribute xpath="//recipe[@name='resourceGlue' and @craft_area='chemistryStation']/ingredient[@name='resourceBone']" name="count">3</setattribute>
 	
+	
+	<setattribute xpath="//recipe[@name='toolForgeCrucible']/ingredient[@name='resourceRockSmall']" name="name">resourceMushyBrainITAV</setattribute>
+	<setattribute xpath="//recipe[@name='toolForgeCrucible']/ingredient[@name='resourceMushyBrainITAV']" name="count">6</setattribute> <!-- Attempting to match value of the original 1200 resourceRockSmall -->
 	<setattribute xpath="//recipe[@name='toolForgeCrucible']/ingredient[@name='resourceClayLump']" name="count">400</setattribute>
 	
 	<remove xpath="//recipe[@name='woodSignBlockVariantHelper']/ingredient[@name='resourceNail']" />
@@ -1910,6 +1910,16 @@
 			<ingredient name="toolPartFragmentITAV" count="100"/>
 		</recipe>		
 	</append>
+	
+	<remove xpath="//recipe[@name='resourceRepairKit']" />
+	<insertAfter xpath="//recipe[@name='resourcePaper']">
+		<recipe name="resourceRepairKit" count="1">
+			<ingredient name="resourceYuccaFibers" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="4"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceDuctTape" count="1"/>
+		</recipe>
+	</insertAfter>
 	
 	
 	<!-- Weapon repair kits made from weapon parts -->
