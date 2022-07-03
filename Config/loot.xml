@@ -302,7 +302,7 @@ makes the looter more financially self sustained than if they had to buy all the
 <append xpath="//lootgroup[@name='groupConstructionCrate01']">
 	<item name="resourceAcid" count ="1" loot_prob_template="veryLow"/>
 	<item name="sinksToiletsBlockVariantHelper"/>
-	<item name="resourceForgedSteel" count="2,3"/>
+	<item name="resourceForgedSteel" loot_prob_template="low" count="2,3"/>
 
 </append>
 
@@ -624,6 +624,7 @@ makes the looter more financially self sustained than if they had to buy all the
  <item group="weaponSchematicsT3OnlyITAV" />
 </append>
 
+
 <append xpath="//lootgroup[@name='groupHardenedChestT4_03']">
  <item name="toolForgeCrucibleSchematic" loot_prob_template="ProbT2" />
  <item name="toolForgeCrucibleSchematic" loot_prob_template="ProbT3" />
@@ -752,16 +753,16 @@ makes the looter more financially self sustained than if they had to buy all the
 </append>
 
 <append xpath="//lootcontainer[@name='dumpster']">
-	 <item name="resourceForgedSteel" loot_prob_template="medLow" count="2,3" />
+	 <item name="resourceForgedIron" loot_prob_template="medLow" count="1,2" />
 	 <item name="thrownAmmoMolotovCocktail" loot_prob_template="med" /> 
 </append>
 
 <append xpath="//lootgroup[@name='groupCupboard02']">
-	 <item name="resourceForgedSteel" loot_prob_template="low" count="2,3" />
+	 <item name="resourceForgedSteel" loot_prob_template="low" count="1" />
 	 <item name="thrownAmmoMolotovCocktail" loot_prob_template="medLow" /> 
 </append>
 
-<append xpath="//lootgroup[@name='groupCars02']">
+<append xpath="//lootgroup[@name='groupCars03']">
 	<item name="resourceForgedSteel" loot_prob_template="low" count="1,2" />
 </append>
 
