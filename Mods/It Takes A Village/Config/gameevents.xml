@@ -1,0 +1,199 @@
+<configs>
+
+
+<setattribute xpath="/gameevents/action_sequence[@name='game_first_spawn']/action[@class='AddJournalTip']/property[@name='tip_name']" name="value">tutorialTipITAV</setattribute>
+
+<append xpath="//action_sequence[@name='game_first_spawn']">
+	<action class="AddBuff">
+		<property name="phase" value="1" />
+		<property name="buff_name" value="ITAV_start" param1="buffname" />
+	</action>
+</append>
+
+<append xpath="/gameevents">
+
+	<!-- <action_sequence name="next_trader_readA">
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="tier2_nexttrader" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="next_trader_readB">
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="tier3_nexttrader" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="next_trader_readC">
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="tier4_nexttrader" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="next_trader_readD">
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="tier5_nexttrader" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence> -->
+	
+	
+	<action_sequence name="first_book_read_SmelterITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+        </requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContSmelter" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_MinerITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContMiner" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_HunterITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContHunter" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_CookITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContCook" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_ArmorerITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContArmorer" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_FarmerITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContFarmer" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_ChemistITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContChemist" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_RoboticsITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContRobotics" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_ScientistITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContScientist" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_RunnerITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContRunner" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	<action_sequence name="first_book_read_ReaperITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContReaper" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+	
+	<action_sequence name="first_book_read_DecoratorITAV">
+		<requirement class="HasBuff">
+            <property name="buff_name" value="ITAV_start" param1="hasbuff" />
+		</requirement>
+		<property name="allow_user_trigger" value="false" />
+		<property name="action_type" value="Game" />		
+		<action class="AddQuest">
+			<property name="quest" value="quest_ProfContDecorator" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+	
+</append>
+
+</configs>

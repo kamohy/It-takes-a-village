@@ -1,0 +1,8 @@
+<configs>
+
+<setattribute xpath="/controls/quest_turnin_entry" name="width">324</setattribute>
+<setattribute xpath="/controls/quest_turnin_entry/rect" name="width">325</setattribute>
+
+<setattribute xpath="//trader_item/rect/label[@name='price']" name="color">{white}</setattribute>
+
+</configs>
