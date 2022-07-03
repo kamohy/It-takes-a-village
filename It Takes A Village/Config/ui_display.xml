@@ -1,0 +1,165 @@
+<configs>
+
+
+<append xpath="//item_display_info[@display_type='foodWaterRaw']">
+	<display_entry name="dDysenteryRisk" title_key="statDysenteryRisk" display_type="Percent" negative_preferred="true"/>
+</append>
+
+<append xpath="//item_display_info[@display_type='medicalVitamins']">
+	<display_entry name="dStopsInsanity" title_key="statStopsInsanity" display_type="Percent" />
+</append>
+
+
+<append xpath="/ui_display_info/item_display">
+	<item_display_info display_type="workBootsITAV" display_group="groupAttire" >
+		<display_entry name="dStaminaRegen" title_key="statStaminaRegenITAV" display_type="Percent" display_leading_plus="true"/>
+	</item_display_info>
+
+	<item_display_info display_type="powerizersITAV" display_group="groupAttire" >
+		<display_entry name="dRunSpeed" title_key="statRunSpeedITAV" display_type="Percent" display_leading_plus="true"/>
+		<display_entry name="dStaminaChangeOT" title_key="statStaminaReductionITAV" display_type="Percent" display_leading_plus="true"/>
+	</item_display_info>
+	
+	<item_display_info display_type="foodRotten" display_group="groupConsumables">
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+			<display_entry name="dDysenteryRisk" title_key="statDysenteryRisk" display_type="Percent" negative_preferred="true"/>
+			<display_entry name="dInsanityRisk" title_key="statInsanityRisk" display_type="Percent" negative_preferred="true"/>
+		</item_display_info>
+		
+	<item_display_info display_type="drugCovertCatsInsanityITAV" display_group="groupConsumables">
+        <display_entry name="dEntityDamageSneak" title_key="statEntityDamageSneak" display_type="Percent" display_leading_plus="true"/>
+        <display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+        <display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+        <display_entry name="dInsanityRisk" title_key="statInsanityRisk" display_type="Percent" negative_preferred="true"/>
+    </item_display_info>
+
+    <item_display_info display_type="drugHealthBarInsanityITAV" display_group="groupConsumables">
+        <display_entry name="dMaxHealthBonus" title_key="statMaxHealthBonus" display_leading_plus="true"/>
+        <display_entry name="dBuffResistance" title_key="statBuffResistance" display_type="Percent" display_leading_plus="true"/>
+        <display_entry name="dNaturalCritHealing" title_key="statNaturalCritHealing" display_type="Percent"/>
+        <display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+        <display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+        <display_entry name="dInsanityRisk" title_key="statInsanityRisk" display_type="Percent" negative_preferred="true"/>
+    </item_display_info>
+
+    <item_display_info display_type="drugSkullCrushersInsanityITAV" display_group="groupConsumables">
+        <display_entry name="dEntityDamage" title_key="statEntityDamageMelee" display_type="Percent" display_leading_plus="true"/>
+        <display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+        <display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+        <display_entry name="dInsanityRisk" title_key="statInsanityRisk" display_type="Percent" negative_preferred="true"/>
+    </item_display_info>
+	
+	<item_display_info display_type="foodXpITAV" display_group="groupConsumables">
+		<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+		<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+		<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus"/>
+		<display_entry name="dPlayerExpGain" title_key="statShowPlayerExpGain" display_type="Percent" display_leading_plus="true"/>
+		<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+	</item_display_info>
+	
+	<item_display_info display_type="foodWaterXpITAV" display_group="groupConsumables">
+		<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+		<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+		<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+		<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus"/>
+		<display_entry name="dPlayerExpGain" title_key="statShowPlayerExpGain" display_type="Percent" display_leading_plus="true"/>
+		<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+	</item_display_info>
+	
+	<item_display_info display_type="foodChickenSoupSpicyITAV" display_group="groupConsumables">
+		<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+		<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+		<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus"/>
+		<display_entry name="dFortitude" title_key="statShowFortitude" display_leading_plus="true"/>
+		<display_entry name="dHypothermalResist" title_key="statHypothermalResist" display_leading_plus="true"/>
+		<display_entry name="dRunSpeed" title_key="statRunSpeedDay" display_type="Percent" display_leading_plus="true"/>
+		<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+	</item_display_info>
+	
+	<item_display_info display_type="foodRunSpeedITAV" display_group="groupConsumables">
+		<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+		<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+		<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus"/>
+		<display_entry name="dRunSpeed" title_key="statRunSpeedDay" display_type="Percent" display_leading_plus="true"/>
+		<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+	</item_display_info>
+	
+	<item_display_info display_type="foodWaterRunSpeedITAV" display_group="groupConsumables">
+		<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+		<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+		<display_entry name="$waterAmountAdd" title_key="statWaterAmount"/>
+		<display_entry name=".foodStaminaBonusAdd" title_key="statFoodStaminaBonus"/>
+		<display_entry name="dRunSpeed" title_key="statRunSpeedDay" display_type="Percent" display_leading_plus="true"/>
+		<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
+	</item_display_info>
+	
+	<item_display_info display_type="lotteryBoxITAV" display_group="groupBlocks" >
+        <display_entry name="StabilitySupport" title_key="lotteryITAV" display_type="Bool"/>
+		<display_entry name="StabilitySupport" title_key="lotteryPlaceITAV" display_type="Bool"/>
+    </item_display_info>
+</append>
+
+<!-- Tweaking Pumpkin Cheesecake to give beer buff instead of bartering -->
+<remove xpath="//item_display_info[@display_type='foodPumpkinCheesecake']/display_entry[@name='dBartering']" />
+<append xpath="//item_display_info[@display_type='foodPumpkinCheesecake']">
+	<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent" display_leading_plus="true"/>
+	<display_entry name="dEntityDamageBrawling" title_key="statEntityDamageBrawling" display_type="Percent" display_leading_plus="true"/>
+	<display_entry name="dStunResist" title_key="statStunResist" display_type="Percent" display_leading_plus="true"/>
+	<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+</append>
+
+
+<append xpath="/ui_display_info/crafting_category_display">
+
+	<crafting_category_list display_type="campfireDecoITAV">
+		<crafting_category name="" icon="ui_game_symbol_fork" display_name="lblAll" />
+	</crafting_category_list>
+	
+	<crafting_category_list display_type="cntWoodBurningStoveDecoITAV">
+		<crafting_category name="" icon="ui_game_symbol_fork" display_name="lblAll" />
+	</crafting_category_list>
+
+	<crafting_category_list display_type="workbenchMinerT2ITAV">
+		<crafting_category name="" icon="ui_game_symbol_tool" display_name="lblAll" />
+	</crafting_category_list>
+
+	<crafting_category_list display_type="campfireT2ITAV">
+		<crafting_category name="" icon="ui_game_symbol_spatula" display_name="lblAll" />
+		<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+		<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+		<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+	</crafting_category_list>	
+	
+	
+	<crafting_category_list display_type="chemistryStationT2ITAV">
+		<crafting_category name="" icon="ui_game_symbol_science" display_name="lblAll" />
+	</crafting_category_list>
+	
+	<crafting_category_list display_type="workbenchRoboticsT2ITAV">
+		<crafting_category name="" icon="ui_game_symbol_assemble" display_name="lblAll" />
+	</crafting_category_list>
+	
+	<crafting_category_list display_type="workbenchRunnerT2ITAV">
+		<crafting_category name="" icon="ui_game_symbol_4x4" display_name="lblAll" />
+	</crafting_category_list>
+
+	<crafting_category_list display_type="workbenchDecoratorT1ITAV">
+		<crafting_category name="" icon="ui_game_symbol_table_saw" display_name="lblAll" />
+	</crafting_category_list>
+	
+	
+	<crafting_category_list display_type="workbenchFarmerT1ITAV">
+		<crafting_category name="" icon="ui_game_symbol_crops" display_name="lblAll" />
+	</crafting_category_list>
+	
+	<crafting_category_list display_type="workbenchReaperT2ITAV">
+		<crafting_category name="" icon="ui_game_symbol_infection" display_name="lblAll" />
+	</crafting_category_list>
+	
+</append>
+
+
+
+</configs>

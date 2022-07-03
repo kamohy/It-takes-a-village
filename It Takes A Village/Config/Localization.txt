@@ -1,0 +1,793 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+
+mmGoLandClaimCount,,,Main Menu Game Options,,Number of Land Claims
+goLandClaimCount,,UI,Menu,,Claim Amount
+goLandClaimCountDesc,,UI,Menu,,The max number of active Land Claims per player.
+goLandClaimCountValue,,UI,Menu,,{0} block
+goLandClaimCountValues,,UI,Menu,,{0} blocks
+
+loadingTipProfessionsITAV,UI,Loading Screen,x,,"Each Profession provides vital goods for the other players. Try to fill any empty roles to improve the chance of survival."
+loadingTipProfessionsITAV_title,UI,Loading Screen,x,,It Takes A Village
+loadingTipSmelterITAV,UI,Loading Screen,x,,"Many crafting recipes require large amounts of steel. Do you have a Smelter to help you out?"
+loadingTipSmelterITAV_title,UI,Loading Screen,x,,"Got a Smelter friend?"
+loadingTipCustomThingsITAV,UI,Loading Screen,x,,"Search for 'deco' or 'itav' in the crafting window to find custom things!"
+loadingTipCustomThingsITAV_title,UI,Loading Screen,x,,"More stuff"
+loadingTipShopLiftingITAV,UI,Loading Screen,x,,"If you lift your shop, make sure you manually collect the money from it first! Otherwise it is destroyed when the shop is picked up."
+loadingTipShopLiftingITAV_title,UI,Loading Screen,x,,"Shop Lifting"
+loadingTipPricePaddingITAV,UI,Loading Screen,x,,"If you are low on money, you can manually increase the sales prices of the items in your shop."
+loadingTipPricePaddingITAV_title,UI,Loading Screen,x,,"Padding the Prices"
+
+loadingTipCraftingBetterQL,UI,Loading Screen,x,,At the start of the game you can only craft quality 1 tools and items such as a stone axe. The quality of an item is displayed at the bottom of its icon. To craft a higher quality item increase the perk it is governed under such as Miner 69’er for the stone axe.
+loadingTipCraftingBetterQL_title,UI,Loading Screen,x,,How do I craft better tools?
+loadingTipEncumbrance,UI,Loading Screen,x,,Carrying too many items in your inventory will slow you down.\nFind or craft pocket mods for clothing or armor to remove encumbrance penalties. Alternatively you can purchase the Pack Mule perk.
+loadingTipEncumbrance_title,UI,Loading Screen,x,,Encumbrance
+loadingTipExtCharStats,UI,Loading Screen,x,,"To access the character menu press [action:local:Inventory][action:permanent:Character], below your character’s name select the Extended Character Stats tab to see all your character’s total stats which include perks, buffs, equipped clothing, armor and weapons."
+loadingTipExtCharStats_title,UI,Loading Screen,x,,Extended Character Stats
+loadingTipGlue,UI,Loading Screen,x,,"Cook bones into glue in a cooking pot or chemistry station. Glue is an essential ingredient to make duct tape, the most useful item in the apocalypse."
+loadingTipGlue_title,ui,Loading Screen,x,,Glue
+loadingTipHarvestingCorpses,UI,Loading Screen,x,,"Animal corpses and rotten remains can be harvested for hide, meat, and bone. Bone is used for crafting glue and duct tape.\nA stone axe will do but knives and machetes are more efficient. A bone knife can be crafted early."
+loadingTipHarvestingCorpses_title,UI,Loading Screen,x,,Harvesting Corpses
+loadingTipHarvestingResources,UI,Loading Screen,x,,"Harvest resources such as trees, rocks and more using your fists with [action:local:Primary]. Tools are much faster and yield higher amounts of resources."
+loadingTipHarvestingResources_title,UI,Loading Screen,x,,Harvesting Resources
+loadingTipPickaxes,UI,Loading Screen,x,,"Pickaxes are great for harvesting the various ores such as iron, lead, coal, oil shale and potassium nitrate."
+loadingTipPickaxes_title,UI,Loading Screen,x,,Pickaxes
+loadingTipProperTools,UI,Loading Screen,x,,"The stone axe works on everything but is slow. Iron tools are fast, steel tools are faster, and motorized tools are fastest. Use axes to harvest wood, pickaxes to harvest stone, metal and ores and knives to harvest meat. Sledgehammers break things easily but are not good at harvesting resources."
+loadingTipProperTools_title,UI,Loading Screen,x,,The Right Tool for the job
+loadingTipStoneAxe,UI,Loading Screen,x,,The stone axe is a primitive starting tool used to gather resources using [action:local:Primary].\nUse [action:local:Secondary] to repair and upgrade blocks.
+loadingTipStoneAxe_title,UI,Loading Screen,x,,The Stone Axe
+loadingTipUnlockingRecipes,UI,Loading Screen,x,,If a recipe shows a lock item then you cannot craft it yet. Clicking on it will show you one or more ways to unlock it.\nEvery recipe that can be unlocked with a perk can also be unlocked by a book or schematic but perks typically offer extra benefits.
+loadingTipUnlockingRecipes_title,UI,Loading Screen,x,,Unlocking Recipes
+
+
+schematicGeneralGroupDesc,items,Book,,,Reading the schematic will teach you how to craft this item. The Armorer is the only one who can make good quality tools, weapons and armor. \nSome items are crafted with parts, and parts can be crafted with fragments.
+
+starterBundleITAV,items,,,,"Hefty bag"
+
+powerizersITAV,,,,,"Powerizer Boots"
+powerizersITAVDesc,,,,,"Increases speed while jumping by 85%, and reduces stamina cost of jumps by 75%."
+powerizersBabyITAV,,,,,"Baby Powerizer Boots"
+powerizersBabyITAVDesc,,,,,"Increases speed while jumping by 40%, and reduces stamina cost of jumps by 35%."
+workBootsITAV,,,,,"Work Boots"
+workBootsITAVDesc,,,,,"Increases stamina regeneration by 15%."
+workBootsBabyITAV,,,,,"Baby Work Boots"
+workBootsBabyITAVDesc,,,,,"Increases stamina regeneration by 7%."
+statStaminaRegenITAV,ui_display,Item stat,,,"Stamina Regen"
+statRunSpeedITAV,ui_display,Item stat,,,"Run Speed While Jumping"
+statStaminaReductionITAV,ui_display,Item stat,,,"Stamina Cost Of Jumping"
+statRunSpeedDay,ui_display,Item stat,,,"Run Speed during daytime"
+
+attNameITAV,progression,Attribute,,,"Attribute: Passion"
+attitav,progression,Attribute,,,Passion
+attDescITAV,progression,Attribute,,,"Learn a profession to support and contribute to your village."
+bookProfessionSmelterITAV,Items,perk  book,,,"Profession: Smelter"
+bookProfessionSmelterITAVDesc,Items,perk  book,,,"Smelters learn how to make the forge, the anvil, bellows and the crucible. Only Smelters can craft Forged Iron and Forged Steel, amongst other things."
+bookProfessionMinerITAV,Items,perk  book,,,"Profession: Miner"
+bookProfessionMinerITAVDesc,progression,perk  book,,,"Miners are efficient at gathering materials. They harvest more resources from trees and minerals."
+bookProfessionHunterITAV,Items,perk  book,,,"Profession: Hunter"
+bookProfessionHunterITAVDesc,progression,perk  book,,,"Hunters specialize in tracking and hunting animals. They also harvest more resources from animal carcasses."
+bookProfessionCookITAV,Items,perk  book,,,"Profession: Cook"
+bookProfessionCookITAVDesc,progression,perk  book,,,"Cooks learn how to prepare more filling meals. These meals give higher health and stamina bonuses. Cooks harvest more from sand, soil and crops, craft cheaper farm plots and can craft seeds from the harvest."
+bookProfessionArmorerITAV,Items,perk  book,,,"Profession: Armorer"
+bookProfessionArmorerITAVDesc,progression,perk  book,,,"Armorers craft light and heavy armor as well as ranged and melee weapons and tools."
+bookProfessionFarmerITAV,Items,perk  book,,,"Profession: Farmer"
+bookProfessionFarmerITAVDesc,progression,perk  book,,,"Farmers harvest more from crops and can craft seeds from the harvest as well as basic foods."
+bookProfessionChemistITAV,Items,perk  book,,,"Profession: Chemist"
+bookProfessionChemistITAVDesc,progression,perk  book,,,"Chemists create vital items such as gunpowder, medicine, concrete mix... and paint."
+bookProfessionRoboticsITAV,Items,perk  book,,,"Profession: Robotics"
+bookProfessionRoboticsITAVDesc,progression,perk  book,,,"Robotics Inventors build turrets and triggers and drones."
+bookProfessionScientistITAV,Items,perk  book,,,"Profession: Scientist"
+bookProfessionScientistITAVDesc,progression,perk  book,,,"Scientists craft turrets, triggers and drones, as well as gunpowder, medicine, concrete mix and paint."
+bookProfessionRunnerITAV,Items,perk  book,,,"Profession: Mechanic"
+bookProfessionRunnerITAVDesc,progression,perk  book,,,"Mechanics salvage materials, crafts vehicles and special boots (Powerizer Boots and Work Boots)."
+bookProfessionReaperITAV,Items,perk  book,,,"Profession: Reaper"
+bookProfessionReaperITAVDesc,progression,perk  book,,,"Reapers harvest flesh, organs and fluids from the living and undead alike. They thrive in the violent and the profane."
+bookProfessionDecoratorITAV,Items,perk  book,,,"Profession: Decorator"
+bookProfessionDecoratorITAVDesc,Items,perk  book,,,"Decorators can craft invisible dyes as well as clothing mods that change appearance of apparel while adding pockets to them. They can also create a plethora of decorative items, such as flowers, signs, lamps, appliances, posters and clutter."
+
+resourceCerebralSpinalFluidITAV,Items,,,,"Cerebral Spinal Fluid"
+resourceCerebralSpinalFluidITAVDesc,Items,,,,"Cerebral Spinal Fluid can be used to transfer seemingly deceased knowledge to the pages of profession books."
+resourceMushyBrainITAV,Items,,,,"Mushy Zombie Brain"
+resourceMushyBrainITAVDesc,Items,,,,"Some brains are intact enough to extract Cerebral Spinal Fluid from. A Reaper is able to obtain more Cerebral Spinal Fluid from a single brain than anyone else."
+drugHealthBarInsanityITAV,Items,,,,"Musty Munchies"
+drugHealthBarInsanityITAVDesc,Items,,,,"These candies are softer than you'd expect, and the smell is unpleasantly familiar... But they'll increase your max health, your resistance to critical injuries and the speed at which they heal naturally either way!"
+drugSkullCrushersInsanityITAV,Items,,,,"Pungent Punchies"
+drugSkullCrushersInsanityITAVDesc,Items,,,,"These candies are softer than you'd expect, and the smell is unpleasantly familiar... But they'll increase your melee damage either way!"
+drugCovertCatsInsanityITAV,Items,,,,"Sneaky Ickies"
+drugCovertCatsInsanityITAVDesc,Items,,,,"These candies are softer than you'd expect, and the smell is unpleasantly familiar... But they'll increase your sneak attack damage either way!"
+
+ShopStoreVendingCashRegisterPlayerITAV,blocks,Container,,,"Player Owned Shop"
+ShopStoreVendingCashRegisterPlayerGroupDescITAV,blocks,Container,,,"Create your own Shop to sell goods for Casino Coins. Buy the goods you need from other survivors to support them and the community! The Shop is indestructible unless falling. Any uncollected money in the Shop disappears if the Shop is picked up."
+xuiVendingWithOwner,UI,Menu,,,"{0}'s Shop"
+cntLotteryBoxPlaceableITAV,blocks,Container,,,"100k LOTTERY BOX!"
+cntLootLotteryBoxITAV,blocks,Container,,,"100k LOTTERY BOX!"
+cntLotteryBoxPlaceableDescITAV,blocks,Container,,,"Place and open this box for a chance to win 100.000 Duke's Casino tokens! \n\nRequires Advanced Mechanic's table to craft."
+lotteryITAV,ui_display,Item stat,,,"A chance to win 100k Duke coins:"
+lotteryPlaceITAV,ui_display,Item stat,,,"Place box on the ground to loot:"
+bodyBagYellowPlaceableITAV,blocks,,,,"Flesh Bag"
+bodyBagYellowPlaceableITAVDesc,blocks,,,,"A homemade flesh bag for purposefully decaying perfectly good meat into rotting, dripping goo best left untouched."
+bodyBagYellowITAV,blocks,,,,"Flesh Bag (Decaying)"
+bodyBagYellowITAVDesc,blocks,,,,""
+bodyBagYellowFliesITAV,blocks,,,,"Ripe Flesh Bag"
+bodyBagYellowFliesITAVDesc,blocks,,,,"Ripe Flesh Bag"
+bedrollTombCasketCoffinITAV,blocks,,,,"Sleeping Casket"
+
+
+statInsanityRisk,,,,,"Insanity Risk"
+statStopsInsanity,,,,,"Cure Insanity"
+
+
+lblContextActionAssemble,blocks,,,,"Assemble"
+lblContextActionPrepare,blocks,,,,"Prepare"
+lblContextActionExtract,blocks,,,,"Defile"
+lblCategoryAdvancedChemicals,UI,Tooltip,,,"Advanced Chemicals"
+lblCategoryAdvancedMedicine,UI,Tooltip,,,"Advanced Medicine"
+workbenchMinerT2ITAV,blocks,,,,"Advanced Miner's Table"
+chemistryStationT2ITAV,blocks,,,,"Advanced Chemistry Station"
+campfireT2ITAV,blocks,,,,"Advanced Cooking Stove"
+workbenchFarmerT1ITAV,blocks,,,,"Farmer's Sink"
+workbenchRoboticsT2ITAV,blocks,,,,"Advanced Robotic's Table"
+workbenchRunnerT2ITAV,blocks,,,,"Advanced Mechanic's Table"
+workbenchDecoratorT1ITAV,blocks,,,,"Decorator's Table Saw"
+workbenchReaperT2ITAV,blocks,,,,"Reaper's Vat"
+campfireDecoITAV,blocks,,,,"Firewood"
+
+workstationT2ITAVTip_title,Journal Tip,,,,"Advanced Workstations"
+workstationT2ITAVTip,Journal Tip,,,,"The most advanced recipes require a profession specific advanced workstation to craft. Advanced workstations have a higher heat signature than basic workstations."
+
+modDyeInvisibleITAV,item_modifiers,mod,,,"Dye: Invisible"
+modDyeStarkYellowITAV,item_modifiers,mod,,,"Dye: Stark Yellow"
+modDyeRichPurpleITAV,item_modifiers,mod,,,"Dye: Rich Purple"
+modDyeJetBlackITAV,item_modifiers,mod,,,"Dye: Jet Black"
+modDyeWineRedITAV,item_modifiers,mod,,,"Dye: Wine Red"
+modDyeMarineBlueITAV,item_modifiers,mod,,,"Dye: Marine Blue"
+modDyeHotPinkITAV,item_modifiers,mod,,,"Dye: Hot Pink"
+modDyeOrangeITAV,item_modifiers,mod,,,"Dye: Orange"
+modDyeTealITAV,item_modifiers,mod,,,"Dye: Teal"
+modDyePineITAV,item_modifiers,mod,,,"Dye: Pine Green"
+modDyeHunterGreenITAV,item_modifiers,mod,,,"Dye: Hunter Green"
+modApparelGeneralITAVDesc,item_modifiers,mod,,,"This cosmetic mod includes double pockets!"
+modApparelHazmatMaskITAV,item_modifiers,mod,,,"Hazmat Mask Mod"
+modApparelHazmatBootsITAV,item_modifiers,mod,,,"Hazmat Boots Mod"
+modApparelHazmatPantsITAV,item_modifiers,mod,,,"Hazmat Pants Mod"
+modApparelHazmatJacketITAV,item_modifiers,mod,,,"Hazmat Jacket Mod"
+modApparelHazmatGlovesITAV,item_modifiers,mod,,,"Hazmat Gloves Mod"
+modApparelDenimPantsITAV,item_modifiers,mod,,,"Denim Pants Mod"
+modApparelDenimShortsPantsITAV,item_modifiers,mod,,,"Denim Shorts Mod"
+modApparelArmyPantsITAV,item_modifiers,mod,,,"BDU Pants Mod"
+modApparelOverallsITAV,item_modifiers,mod,,,"Overalls Mod"
+modApparelSkirtITAV,item_modifiers,mod,,,"Skirt Mod"
+modApparelGothPantsITAV,item_modifiers,mod,,,"Gothic Pants Mod"
+modApparelWornBootsITAV,item_modifiers,mod,,,"Worn Boots Mod"
+modApparelRunningShoesRegularITAV,item_modifiers,mod,,,"Running Shoes Mod"
+modApparelCowboyBootsITAV,item_modifiers,mod,,,"Cowboy Boots Mod"
+modApparelGothBootsITAV,item_modifiers,mod,,,"Goth Boots Mod"
+modApparelLongShirtITAV,item_modifiers,mod,,,"Long Sleeved Shirt Mod"
+modApparelArmyShirtITAV,item_modifiers,mod,,,"BDU Top Mod"
+modApparelSweatshirtITAV,item_modifiers,mod,,,"Sweatshirt Mod"
+modApparelFlannelShirtITAV,item_modifiers,mod,,,"Flannel Shirt Mod"
+modApparelTShirtPlainITAV,item_modifiers,mod,,,"T-shirt Mod"
+modApparelTShirtZUITAV,item_modifiers,mod,,,"ZU T-shirt Mod"
+modApparelTankTopITAV,item_modifiers,mod,,,"Tank Top Mod"
+modApparelHoodySweatshirtITAV,item_modifiers,mod,,,"Hoodie Mod"
+modApparelCoatLeatherPonchoITAV,item_modifiers,mod,,,"Poncho Mod"
+modApparelCoatLeatherDusterITAV,item_modifiers,mod,,,"Leather Duster Mod"
+modApparelCoatPufferCoatITAV,item_modifiers,mod,,,"Puffer Coat Mod"
+modApparelCoatJacketGenericITAV,item_modifiers,mod,,,"Jacket Mod"
+modApparelCoatJacketLetterZUITAV,item_modifiers,mod,,,"College Jacket Mod"
+modApparelSuitPantsITAV,item_modifiers,mod,,,"Suit Pants Mod"
+modApparelSuitJacketITAV,item_modifiers,mod,,,"Suit Jacket Mod"
+modApparelSuitDressShoesITAV,item_modifiers,mod,,,"Dress Shoes Mod"
+modApparelPlantFiberGlovesITAV,item_modifiers,mod,,,"Plant Fiber Gloves Mod"
+modApparelPlantFiberShoesITAV,item_modifiers,mod,,,"Plant Fiber Shoes Mod"
+modApparelGhillieSuitHoodITAV,item_modifiers,mod,,,"Ghillie Hood Mod"
+modApparelGhillieSuitPantsITAV,item_modifiers,mod,,,"Ghillie Pants Mod"
+modApparelGhillieSuitJacketITAV,item_modifiers,mod,,,"Ghillie Jacket Mod"
+
+
+
+
+meleeWpnSpearT3SteelSpearSchematic,,,,,"Steel Spear Schematic"
+meleeWpnClubT3SteelClubSchematic,,,,,"Steel Club Schematic"
+armorMilitaryStealthBootsSchematic,items,,,,"Military Stealth Boots Schematic"
+
+resourceClayLumpBundle,items,,,,"Stack of Clay (6000)"
+forestFlowerITAV,blocks,,,,"Decorative Forest Flower"
+plantedGoldenrod3FlowerITAV,blocks,,,,"Decorative Goldenrod plant"
+plantedChrysanthemum3FlowerITAV,blocks,,,,"Decorative Chrysanthemum plant"
+plantedCoffee3FlowerITAV,blocks,,,,"Decorative Coffee plant"
+plantedAloe3FlowerITAV,blocks,,,,"Decorative Aloe plant"
+plantedYucca3FlowerITAV,blocks,,,,"Decorative Yucca plant"
+plantedBlueberry3FlowerITAV,blocks,,,,"Decorative Blueberry plant"
+plantedPotato3FlowerITAV,blocks,,,,"Decorative Potato plant"
+plantedSnowberry3FlowerITAV,blocks,,,,"Decorative Snowberry plant"
+plantedPumpkin2FlowerITAV,blocks,,,,"Decorative Pumpkin flower"
+plantedPumpkin3FlowerITAV,blocks,,,,"Decorative Pumpkin plant"
+plantedCorn2FlowerITAV,blocks,,,,"Decorative Corn plant"
+birdBathPlanterITAV,blocks,,,,"Decorative Planter"
+cntSodaFountainITAV,blocks,,,,"Soda Fountain"
+cntCoffeeMakerITAV,blocks,,,,"Coffee Maker"
+cntCoffeeMakerCommercialITAV,blocks,,,,"Large Coffee Maker"
+
+
+LightITAVDesc,blocks,,,,"Light up the world! Requires connection to a power source. Use a wire tool to connect it."
+
+LightFuseboxITAVDesc,blocks,,,,"Use the wireless fusebox to connect lights to their power source with invisible cables. Requires a wire tool."
+signPillsLogoSmallLightITAV,blocks,,,,"Small Pills Logo Sign"
+signPillsLogoLightITAV,blocks,,,,"Pills Logo Sign"
+LightwallLight01ITAV,blocks,,,,"Warehouse Outdoor Light"
+LightchandelierLightITAV,blocks,,,,"Chandelier"
+LightStreetLightClassicITAV,blocks,,,,"Classic Street Light"
+signShopOpenLightITAV,blocks,,,,"Shop Open Sign"
+LightDeskLampLightITAV,blocks,,,,"Desk Lamp"
+LightTableLampLightITAV,blocks,,,,"Table Lamp"
+LightTableLampLightCenteredITAV,blocks,,,,"Table Lamp Centered"
+LightPorchLight01ITAV,blocks,,,,"Old Porch Lamp"
+LightPorchLight04BrassITAV,blocks,,,,"Brass Porch Lamp"
+LightPorchLight04ITAV,blocks,,,,"Iron Porch Lamp"
+LightCeilingLight02ITAV,blocks,,,,"Iron Ceiling Lamp"
+LightCeilingLight02BrassITAV,blocks,,,,"Brass Ceiling Lamp"
+LightEndTableLampITAV,blocks,,,,"Side Table with Lamp"
+sconce1LightITAV,blocks,,,,"Sconce Light"
+ceilingFanLightITAV,blocks,,,,"Ceiling Fan Light"
+recessedLightITAV,blocks,,,,"Recessed Light"
+industrialLight02RedLightITAV,blocks,,,,"Red Industrial Light"
+
+wirelessRelayFuseboxLightITAV,blocks,,,,"Wireless Fusebox"
+window03WoodITAV,blocks,,,,"Wood Window"
+window03Wood,blocks,,,,"Wood Window Centered"
+window03WoodBulletproofCenterITAV,blocks,,,,"Bulletproof Window Centered"
+window03WoodBulletproofITAV,blocks,,,,"Bulletproof Window"
+houseFrontDoor1_v1BulletProofITAV,blocks,,,,"Bulletproof Door White Wood"
+houseFrontDoor2_v1BulletProofITAV,blocks,,,,"Bulletproof Door Brown Wood"
+commercialDoor1_v1BulletProofITAV,blocks,,,,"Bulletproof Door Metal Bar"
+commercialDoor2_v1BulletProofITAV,blocks,,,,"Bulletproof Door Metal Basic"
+window03WoodBulletproofITAVDesc,blocks,,,,"This window takes 3000 dmg before it breaks. Cannot be picked up!"
+doorBulletproofITAVDesc,blocks,,,,"This door takes 3000 dmg before it breaks. Cannot be picked up!"
+
+decoCookingPotITAV,blocks,,,,"Decorative Cooking Pot"
+decoStorageITAVDesc,blocks,,,,"Decorative, lockable storage item that cannot be lifted once placed."
+cntFoodPileSmallITAV,blocks,,,,"Food Pile, Small"
+cntFoodPileMediumITAV,blocks,,,,"Food Pile, Medium"
+cntFoodPileLargeITAV,blocks,,,,"Food Pile, Large"
+cntClothesRackRectanglePantsITAV,blocks,,,,"Clothes Rack, Rectangle, Pants"
+cntClothesRackRectangleShirtsITAV,blocks,,,,"Clothes Rack, Rectangle, Shirts"
+cntClothesRackRoundPantsITAV,blocks,,,,"Clothes Rack, Round, Pants"
+cntClothesRackRoundShirtsITAV,blocks,,,,"Clothes Rack, Round, Shirts"
+restaurantBoothVariantHelper,blocks,,,,"Restaurant Booth Sofa Variant Helper"
+fastFoodBoothVariantHelper,blocks,,,,"Fast Food Booth Table Variant Helper"
+cntBarrelAcidQuadAITAV,blocks,Block,,,Rusty green barrels
+cntBarrelGenericQuadAITAV,blocks,Block,,,Rusty grey barrels
+cntBarrelGasQuadAITAV,blocks,Block,,,Rusty gas barrels
+cntBarrelAcidQuadBITAV,blocks,Block,,,Rusty green barrels
+cntBarrelGenericQuadBITAV,blocks,Block,,,Rusty grey barrels
+cntBarrelGasQuadBITAV,blocks,Block,,,Rusty gas barrels
+cntWoodBurningStoveDecoITAV,blocks,Block,,,Wood Burning Stove
+
+signBread01ITAVSchematic,items,,,,"Sign: Bread 01 Schematic"
+signBread02ITAVSchematic,items,,,,"Sign: Bread 02 Schematic"
+barStoolVariantHelperITAVSchematic,items,,,,"Bar Stool Schematic"
+decoReptileTerrariumITAVSchematic,items,,,,"Reptile Terrarium Schematic"
+cntShoppingCartEmptyITAVSchematic,items,,,,"Empty Shopping Cart Schematic"
+cntMailBox01WhiteITAVSchematic,items,,,,"White Mailbox Schematic"
+houseFrontDoor1_v1ITAVSchematic,items,,,,"House Front Door White Schematic"
+houseFrontDoor2_v1ITAVSchematic,items,,,,"House Front Door Brown Schematic"
+cntMicrowaveOvenVer1ClosedITAVSchematic,items,,,,"Microwave Black Schematic"
+cntMicrowaveOvenVer2ClosedITAVSchematic,items,,,,"Microwave Brown Schematic"
+decoCookingPotITAVSchematic,items,,,,"Decorative Cooking Pot Schematic"
+cntRetroFridgeVer1ClosedITAVSchematic,items,,,,"Retro Refrigerator Schematic"
+cntFridgeStainlessSteelITAVSchematic,items,,,,"Refrigerator, Stainless Steel Schematic"
+cntDomedTrashCanEmptyITAVSchematic,items,,,,"Domed Trash Can, Empty Schematic"
+cntDomedTrashCanCornerEmptyITAVSchematic,items,,,,"Domed Trash Can Corner, Empty Schematic"
+cntBruteStyleTrashCanEmptyITAVSchematic,items,,,,"Trash Can, Empty Schematic"
+cntWaterCoolerFullITAVSchematic,items,,,,"Water Cooler Schematic"
+signDinersMenuITAVSchematic,items,,,,"Sign: Diners Menu Schematic"
+signDinersMenu2mITAVSchematic,items,,,,"Diner Menu Board Schematic"
+signLaborDaySaleAdITAVSchematic,items,,,,"Sign: Labor Day Sle Ad Schematic"
+signSale01ITAVSchematic,items,,,,"Sign: Sale 01 Schematic"
+signSale02ITAVSchematic,items,,,,"Sign: Sale 02 Schematic"
+decoPoolTableITAVSchematic,items,,,,"Pool Table Schematic"
+cntWoodBurningStoveDecoITAVSchematic,items,,,,"Wood Burning Stove Schematic"
+
+
+
+LightStreetLightClassicITAVSchematic,items,,,,"Classic Street Light"
+signShopOpenLightITAVSchematic,items,,,,"Shop Open Sign"
+LightDeskLampLightITAVSchematic,items,,,,"Desk Lamp"
+LightTableLampLightITAVSchematic,items,,,,"Table Lamp"
+LightTableLampLightCenteredITAVSchematic,items,,,,"Table Lamp Centered"
+LightPorchLight01ITAVSchematic,items,,,,"Old Porch Lamp"
+LightPorchLight04BrassITAVSchematic,items,,,,"Brass Porch Lamp"
+LightPorchLight04ITAVSchematic,items,,,,"Iron Porch Lamp"
+LightCeilingLight02ITAVSchematic,items,,,,"Iron Ceiling Lamp"
+LightCeilingLight02BrassITAVSchematic,items,,,,"Brass Ceiling Lamp"
+
+
+foodRawChickenMeatITAV,items,,,,"Raw Chicken Meat"
+foodRawChickenMeatITAVDesc,items,,,,"Chicken Meat can be eaten raw but is better charred, grilled or boiled at a campfire. Can be prepared for better cooking by a Cook."
+foodRawChickenMeatPreparedITAV,items,,,,"Prepared Raw Chicken Meat"
+foodRawChickenMeatPreparedITAVDesc,items,,,,"Prepared Raw Chicken Meat is sliced, diced and ready for some serious cooking action. \n\nThis recipe produces 1 serving."
+foodRawMeatPreparedITAV,items,,,,"Prepared Raw Meat"
+foodRawMeatPreparedITAVDesc,items,,,,"Prepared Raw Meat is sliced, diced and ready for some serious cooking action. \n\nThis recipe produces 1 serving."
+foodChickenBrothITAV,items,,,,"Chicken Broth"
+foodChickenBrothITAVDesc,items,,,,"Chicken Broth, best used for cooking more advanced meals with. \n\nThis recipe produces 5 servings."
+foodMeatBrothITAV,items,,,,"Meat Broth"
+foodMeatBrothITAVDesc,items,,,,"Meat Broth, best used for cooking more advanced meals with. \n\nThis recipe produces 5 servings."
+foodVegetableBrothITAV,items,,,,"Vegetable Broth"
+foodVegetableBrothITAVDesc,items,,,,"Vegetable Broth, best used for cooking more advanced meals with. \n\nThis recipe produces 2 servings."
+foodChickenSoupITAV,items,,,,"Chicken Soup"
+foodChickenSoupITAVDesc,items,,,,"Nothing is more soothing than a nice bowl of Chicken Soup. Except perhaps a strong and well-maintained perimiter defense. \n\nThis recipe produces 3 comforting servings."
+foodChickenSoupSpicyITAV,items,,,,"Spicy Chicken Soup"
+foodChickenSoupSpicyITAVDesc,items,,,,"Spicy Chicken Soup, the hot cousin of regular Chicken Soup. Keeps your tummy warm and happy. \n\nThis recipe produces 1 warming serving."
+foodSrirachaKetchupSpiceITAV,items,,,,"Sriracha Sauce"
+foodSrirachaKetchupSpiceITAVDesc,items,,,,"Sriracha Sauce. Hot hot hot! The label says 'Don't eat it'."
+foodChickenStewITAV,items,,,,"Chicken Stew"
+foodChickenStewITAVDesc,items,,,,"Tastes like Chicken! \n\nThis recipe produces 3 juicy servings."
+drinkJarCoffeeSpicyITAV,items,,,,"Spicy Coffee Cocktail"
+drinkJarCoffeeSpicyITAVDesc,items,,,,"A zippy cousin of the Blackstrap coffee, this tasty treat will give you long lasting energy and keep you warm at the same time. \n\nThis recipe produces 1 hot serving."
+foodChickenEmpanadasITAV,items,,,,"Chicken Empanadas"
+foodChickenEmpanadasITAVDesc,items,,,,"Tender, juicy, shredded and spiced chicken make a savory filling for empanadas. \n\nThis recipe produces 3 crispy servings."
+foodHoboStewDesc,items,,,,"Nutritious and deli... it's edible, ok? \n\nThis recipe produces 2 questionable servings."
+foodGumboStewDesc,items,,,,"Vomiting is for the poor! Eat like apocalyptic royalty with this super filling, delicious gumbo stew. \n\nThis recipe produces 2 filling servings."
+foodRosysCrunchyAcornPieITAV,items,,,,"Rosy's Crunchy Acorn Pie"
+foodRosysCrunchyAcornPieITAVDesc,items,,,,"This delightful pastry is the pride of every baker worth their salt. \n\n...Until someone questions the ingredients, and the shotgun comes out."
+foodDoughITAV,items,,,,"Dough"
+foodDoughITAVDesc,items,,,,"Dough is used for turning blueberries, pumpkins or acorns into pies or cheesecake."
+
+
+buffXpFoodT2Desc,buffs,Buff,,,Learning is easier when the body is fed.\n+2% XP.
+buffXpFoodT2Name,buffs,Buff,,,Good food XP bonus
+buffXpFoodT2Tooltip,buffs,Buff,,,Ready for some learning.
+buffXpFoodT3Desc,buffs,Buff,,,Nourished body, fresh brain.\n+4% XP.
+buffXpFoodT3Name,buffs,Buff,,,Great food XP bonus
+buffXpFoodT3Tooltip,buffs,Buff,,,Ready for some learning.
+buffXpFoodT4Desc,buffs,Buff,,,Brainfood helps learning.\n+6% XP.
+buffXpFoodT4Name,buffs,Buff,,,Awesome food XP bonus
+buffXpFoodT4Tooltip,buffs,Buff,,,Ready for some learning.
+
+buffRunSpeedFoodT2Desc,buffs,Buff,,,Better food gets you further.\n+2% Run Speed during daytime.
+buffRunSpeedFoodT2Name,buffs,Buff,,,Good food Run Speed bonus
+buffRunSpeedFoodT2Tooltip,buffs,Buff,,,Ready for some running!
+buffRunSpeedFoodT3Desc,buffs,Buff,,,Nourished body, faster feet.\n+4% Run Speed during daytime.
+buffRunSpeedFoodT3Name,buffs,Buff,,,Great food Run Speed bonus
+buffRunSpeedFoodT3Tooltip,buffs,Buff,,,Ready for some running!
+buffRunSpeedFoodT4Desc,buffs,Buff,,,Nutrition that goes straight to your legs.\n+6% Run Speed during daytime.
+buffRunSpeedFoodT4Name,buffs,Buff,,,Awesome food Run Speed bonus
+buffRunSpeedFoodT4Tooltip,buffs,Buff,,,Ready for some running!
+
+casinoCoinDesc,items,Item,,,"A Duke's casino coin. After the epidemic and war these brass coins became the main currency for trading in Navezgane.\n\nCan be crafted into firearm ammunition in the workbench."
+vendingMachineTip,Journal Tip,,,,"There are two types of vending machines: vending machines found at stores and Player Owned Shops, which can be crafted. All vending Machines use Duke Coins which can be found in the world. You can see how much money you have in the upper right of your inventory."
+
+perkDeadEyeRank1LongDesc,progression, perk Per,,,"Pot Shot. You can hit the broad side of a barn and do 10% more damage with rifles. Aim and reload 10% faster. Craft quality 2 pipe rifles. \nAsk an Armorer to craft better weapons for you."
+perkDeadEyeRank2LongDesc,progression, perk Per,,,"You can hit a large rock at 30 yards. Deal 20% more damage, aim 20% faster, reload 15% faster. Craft quality 3 pipe rifles. \nAsk an Armorer to craft better weapons for you."
+perkDeadEyeRank3LongDesc,progression, perk Per,,,"You are now a markswoman and can hold your own. Deal 30% more damage , aim 32% faster, reload 20% faster and use 10% less stamina aiming with rifles.\nKill Streak: Successive kills increase damage bonus by 10%, 20% to a maximum of 30%. Craft quality 4 pipe rifles. \nAsk an Armorer to craft better weapons for you."
+perkDeadEyeRank4LongDesc,progression, perk Per,,,"You are now a sharpshooter. Deal 40% more damage, aim 45% faster, reload 25% faster, and use 20% less stamina aiming with rifles.\nKill Streak: Successive kills increase damage bonus by 20%, 30% to a maximum of 40%. Craft quality 5 pipe rifles. \nAsk an Armorer to craft better weapons for you."
+perkJavelinMasterRank1LongDesc,progression, perk Per,,,"Sticks and stones can't break my bones but if combined make a nice spear. Spears do 10% more damage and have 10% more range when thrown. Craft quality 2 stone spears. \nAsk an Armorer to craft better weapons for you."
+perkJavelinMasterRank2LongDesc,progression, perk Str,,,"Spears now inflict 20% more damage and have 20% more range when thrown. Craft quality 3 stone spears. \nAsk an Armorer to craft better spears for you."
+perkJavelinMasterRank3LongDesc,progression, perk Str,,,"Spears inflict 30% more damage and have 30% more range when thrown. Craft quality 4 stone spears. \nAsk an Armorer to craft better spears for you."
+perkJavelinMasterRank4LongDesc,progression, perk Str,,,"Spears now inflict 40% more damage and have 40% more range. Craft quality 5 stone spears. \nAsk an Armorer to craft better spears for you."
+perkBoomstickRank1LongDesc,progression, perk Str,,,"Maybe your aim isn't so good or you just like doing a lot of damage up close and personal. Either way a noob with a shotgun is not to be messed with. Deal 10% more damage, 10% faster fire rate, and 10% faster reload. Stun enemies for 6 seconds.\nIncreases chance to dismember by 5%. Craft quality 2 pipe shotguns. \nAsk an Armorer to craft better shotguns for you."
+perkBoomstickRank2LongDesc,progression, perk Str,,,"Roaming the wastelands as a nomad have improved your abilities with shotguns. Deal 20% more damage, 20% faster fire rate, and 15% faster reload.\nIncreases chance to dismember by 10%. Craft quality 3 pipe shotguns. \nAsk an Armorer to craft better shotguns for you."
+perkBoomstickRank3LongDesc,progression, perk Str,,,"If shotgun meets were still a thing, you'd be hitting those clay ducks and be considered a shotgun pro. Deal 30% more damage, 30% faster fire rate, and 20% faster reload. Stun enemies for 8 seconds. Craft quality 4 pipe shotguns. \nAsk an Armorer to craft better shotguns for you."
+perkBoomstickRank4LongDesc,progression, perk Str,,,"You are now very deadly with a shotgun and considered a shotgun master and master of the shotgun. Deal 40% more damage, 40% faster fire rate, and 25% faster reload. Craft quality 5 pipe shotguns. \nAsk an Armorer to craft better shotguns for you."
+perkPummelPeteRank1LongDesc,progression,perk Str,,,"You might not pack a punch but as a roughneck you can swing a club! Deal 10% more damage and attacks do 40% more damage to stunned enemies. Power attacks have a 60% chance to knock foes back down. Craft quality 2 wooden clubs. \nAsk an Armorer to craft better clubs or baseball bats for you."
+perkPummelPeteRank2LongDesc,progression,perk Str,,,"You are making a name for yourself as a dangerous thug. Deal 20% more damage, attacks do 80% more damage to stunned enemies and power attacks have a 70% chance to knock foes back down. Craft quality 3 wooden clubs. \nAsk an Armorer to craft better clubs or baseball bats for you."
+perkPummelPeteRank3LongDesc,progression,perk Str,,,"You hit hard enough to be in the big leagues now. Deal 30% more damage, attacks do 120% more damage to stunned enemies and power attacks have a 80% chance to knock foes back down. \nLanding 5 successive hits in a short time causes the last blow to do 100% extra damage. Craft quality 4 wooden clubs. \nAsk an Armorer to craft better clubs or baseball bats for you."
+perkPummelPeteRank4LongDesc,progression,perk Str,,,"When you said stay down you meant it. Deal 40% more damage, attacks do 160% more damage to stunned enemies and power attacks have a 90% chance to knock foes back down.\n4 successive hits in a short time causes the last blow to do 100% extra damage. Craft quality 5 wooden clubs. \nAsk an Armorer to craft better clubs or baseball bats for you."
+perkSkullCrusherRank1LongDesc,progression,perk Str,,,You are a bruiser and with a little luck can sometimes knock down geriatric zombies. Deal 10% more damage. 15% chance to knock down enemies with power attacks. Craft quality 2 stone sledgehammers. \nAsk an Armorer to craft better sledgehammers for you."
+perkSkullCrusherRank2LongDesc,progression,perk Str,,,"You are now a mauler but don't get too cocky yet. Deal 20% more damage. 30% chance to knock down enemies with power attacks. Craft quality 3 stone sledgehammers. \nAsk an Armorer to craft better sledgehammers for you."
+perkSkullCrusherRank3LongDesc,progression,perk Str,,,"You are a certified smasher of things that get in your way. Deal 30% more damage. Power attacks have a 45% chance to knock down enemies and a 20% chance to knock down nearby foes. Craft quality 4 stone sledgehammers. \nAsk an Armorer to craft better sledgehammers for you."
+perkSkullCrusherRank4LongDesc,progression,perk Str,,,"You have nearly perfected the craft of smashing stuff and breaking bones. CDeal 40% more damage. Power attacks have a 60% chance to knock down enemies and a 35% chance to knock down nearby foes. Craft quality 5 stone sledgehammers. \nAsk an Armorer to craft better sledgehammers for you."
+perkBrawlerRank1LongDesc,progression,perk For,,,"Tired of being bullied by the undead? Zombies can't bite if you knock their damn teeth out! Deal 10% more damage with fists. Punches to the head negate infection ability.  \nAsk an Armorer to craft knuckle weapons for you."
+perkBrawlerRank2LongDesc,progression,perk For,,,"You've been in a few fights and can hold your own. Deal 20% more damage with fists and have a 30% chance to stagger opponents with power attacks. \nAsk an Armorer to craft knuckle weapons for you."
+perkBrawlerRank3LongDesc,progression,perk For,,,"All the fighting and scrapping has added up and you are a real slugger now. Deal 30% more damage with fists. Power attacks to the head have a 20% chance to knock down your opponent. \nAsk an Armorer to craft knuckle weapons for you."
+perkBrawlerRank4LongDesc,progression,perk For,,,"You are now good enough to compete in professional boxing but smashing zombies faces in will have to do. Deal 40% more damage with fists. Power attacks to the head have a 30% chance to knock down your opponent. \nAsk an Armorer to craft knuckle weapons for you."
+perkMachineGunnerRank1LongDesc,progression,perk For,,,"Spray and Pray is your thing. Deal 10% more damage, 5% faster fire rate and 10% faster reload. Craft quality 2 pipe machine guns. \nAsk an Armorer to craft better machine guns for you."
+perkMachineGunnerRank2LongDesc,progression,perk For,,,"You are no commando, but you do what it takes to get the job done. Deal 20% more damage, 10% faster fire rate and 15% faster reload. Craft quality 3 pipe machine guns. \nAsk an Armorer to craft better machine guns for you."
+perkMachineGunnerRank3LongDesc,progression,perk For,,,"All the combat has sharpened your skills and you are now a soldier. Deal 30% more damage, 15% faster fire rate and reload 20% faster. Commando Adrenaline: Each shot scored with automatic weapons gives you 2 stamina. Craft quality 4 pipe machine guns. \nAsk an Armorer to craft better machine guns for you."
+perkMachineGunnerRank4LongDesc,progression,perk For,,,"Your skill now matches the special forces. Deal 40% more damage, 20% faster fire rate and reload 25% faster. Commando Adrenaline: Each shot scored with automatic weapons gives you 4 stamina. Craft quality 5 pipe machine guns. \nAsk an Armorer to craft better machine guns for you."
+perkArcheryRank1LongDesc,progression,perk Agi,,,"Many start on the path of the ranger but few can reach it. Deal 10% more damage, 10% faster aim, draw and reload with bows. Craft quality 2 primitive bows. \nAsk an Armorer to craft better bows or crossbows for you."
+perkArcheryRank2LongDesc,progression,perk Agi,,,"You still have much to learn, grasshopper. Deal 20% more damage, 20% faster aim, draw and reload with bows. Craft quality 3 primitive bows. \nAsk an Armorer to craft better bows or crossbows for you."
+perkArcheryRank3LongDesc,progression,perk Agi,,,"All the rigorous training has turned you into a marksman with Bows. Deal 30% more damage, 30% faster aim, draw and reload with bows. Craft quality 4 primitive bows. \nAsk an Armorer to craft better bows or crossbows for you."
+perkArcheryRank4LongDesc,progression,perk Agi,,,"You can split a hair you are so good at archery now. Deal 40% more damage, 40% faster aim, draw and reload with bows. Craft quality 5 primitive bows. \nAsk an Armorer to craft better bows or crossbows for you."
+perkGunslingerRank1LongDesc,progression,perk Agi,,,"You're no Wyatt Earp but you're better than the average drifter. Deal 10% more damage, 5% faster fire rate, and 10% faster reload with handguns. Craft quality 2 pipe pistols. \nAsk an Armorer to craft better handguns for you."
+perkGunslingerRank2LongDesc,progression,perk Agi,,,"You are making a name for yourself, outlaw. Deal 20% more damage, 10% faster fire rate, and reload 15% faster with handguns. Craft quality 3 pipe pistols. \nAsk an Armorer to craft better handguns for you."
+perkGunslingerRank3LongDesc,progression,perk Agi,,,"You can keep most situations under control, sheriff. Deal 30% more damage, 15% faster fire rate, and reload 20% faster. Critical Damage: 5 successive hits in a short time cause critical damage. Craft quality 4 pipe pistols. \nAsk an Armorer to craft better handguns for you."
+perkGunslingerRank4LongDesc,progression,perk Agi,,,"You're now a gunfighter and can clear out a saloon full of rowdy bastards at the drop of a hat. Deal 40% more damage, 20% faster fire rate, and reload 25% faster. Critical Damage: 4 successive hits in a short time cause the last shot to do 100% extra damage. Craft quality 5 pipe pistols. \nAsk an Armorer to craft better handguns for you."
+perkDeepCutsRank1LongDesc,progression,perk Agi,,,"You might have a dull blade but you know how to use it. Deal 10% more damage. You can inflict up to 3 Bleeding Wounds on an enemy and a power attack inflicts 2. Every attack refreshes the duration on bleeding. Enemies run 10% slower while bleeding. Craft quality 2 bone knives. \nAsk an Armorer to craft better bladed weapons for you."
+perkDeepCutsRank2LongDesc,progression,perk Agi,,,"Your friends say you're a real knifer. Deal 20% more damage. You can inflict up to 4 Bleeding Wounds on an enemy and a power attack inflicts 3. Craft quality 3 bone knives. \nAsk an Armorer to craft better bladed weapons for you."
+perkDeepCutsRank3LongDesc,progression,perk Agi,,,"You are a cut above the rest. Deal 30% more damage. You can inflict up to 5 Bleeding Wounds on an enemy and a power attack inflicts 4. Glancing blows have a 40% chance to cause 1 Bleeding Wound. Enemies run 15% slower while bleeding. Craft quality 4 bone knives. \nAsk an Armorer to craft better bladed weapons for you."
+perkDeepCutsRank4LongDesc,progression,perk Agi,,,"You are quite lethal with bladed weapons. Deal 40% more damage. You can inflict up to 6 Bleeding Wounds on an enemy and a power attack inflicts 4. Glancing blows have a 70% chance to cause 1 Bleeding Wound. Craft quality 5 bone knives. \nAsk an Armorer to craft better bladed weapons for you."
+perkElectrocutionerRank1LongDesc,progression,perk Int,,,"Where are the instructions? You're smart, but remember to point it away from you and pull the trigger. Deal 10% more damage and stun victims 20% longer. Craft quality 2 pipe batons. \nAsk an Armorer to craft stun batons for you."
+perkElectrocutionerRank2LongDesc,progression,perk Int,,,"You are getting the hang of using stun batons to incapacitate your enemies. Deal 20% more damage, and stun victim 40% longer. Craft quality 3 pipe batons. \nAsk an Armorer to craft stun batons for you."
+perkElectrocutionerRank3LongDesc,progression,perk Int,,,"You are getting dangerous with stun batons. You could probably knock out cattle if the zombies hadn't ate them all. Deal 30% more damage, and stun victims 60% longer.  Craft quality 4 pipe batons. \nAsk an Armorer to craft stun batons for you."
+perkElectrocutionerRank4LongDesc,progression,perk Int,,,"You are lethal with stun batons. Deal 40% more damage, and stun victims 80% longer. Craft quality 5 pipe batons. \nAsk an Armorer to craft stun batons for you."
+perkParkourRank4LongDesc,progression,perk Agi,,,"You are now a parkour master and can navigate difficult situations easily. Reduce stamina cost of jumping by 40%. Increase safe fall distance by 5 meters, can jump 2 meters higher, and never get a sprained or broken leg when falling. Ask a Mechanic to craft a pair of Powerizer boots to take your parkouring to the next level!"
+perkLockPickingRank1LongDesc,progression,perk Per,,,Burglar. You are starting to make a name for yourself. You can pick locks 20% faster and have a 10% lower chance to break lockpicks.
+perkEnforcerIntimidationLongDesc,progression,perk  book,,,Intimidation: Tired of getting overrun by punk zombies? Watch them run from you when you reload your .44 gun 10% faster.
+
+
+plantedCropsGroupDesc,blocks,Farming,,,"Plant these seeds on a craftable Farm Plot block to grow plants for you to harvest.\n\nWhen harvested, there is a 65% chance to get a seed back for replanting."
+
+perkBatterUpBaseballBatsDesc,,,,,"Craft the Baseball Cap Helmet Mod."
+perkBatterUpBaseballBatsLongDesc,,,,,"Shield your eyes from the sun no matter what helmet you are wearing. Learn to craft the Baseball Cap Helmet Mod."
+perkSpearHunter3SteelSpearsDesc,,,,,"Craft the Burning Shaft Weapon Mod."
+perkSpearHunter3SteelSpearsLongDesc,,,,,"Enough flailing in the darkness. Craft the Burning Shaft Weapon Mod and enter the era of Fire."
+perkAutoWeaponsMachineGunsDesc,,,,,"Craft the Weapon Flashlight Mod."
+perkAutoWeaponsMachineGunsLongDesc,,,,,"Don't suck after bedtime. Craft the Weapon Flashlight Mod."
+perkUrbanCombatLandingDesc,,,,,"Craft the Impact Bracing Boots Mod."
+perkUrbanCombatLandingLongDesc,,,,,"Make landing on your feet even more appealing. Craft the Impact Bracing Boots Mod."
+perkArtOfMiningPalletsDesc,progression,perk  book,,,"You can craft a Diving Mask for underwater breathing."
+perkArtOfMiningPalletsLongDesc,progression,perk  book,,,"In a zombie apocalypse, cave diving seems much less unappealing.\n\nYou can craft a Diving Mask for underwater breathing."
+
+foodPumpkinCheesecakeDesc,items,Food,,,"This pumpkin cheesecake tastes delicious and grants you a beer buzz buff!"
+
+
+attITAVRank01Desc,progression,Attribute,,,No fucks given
+attITAVRank01LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 15% and stamina penalty by 10%. For heavy armor, reduction for both is 5%."
+attITAVRank02Desc,progression,Attribute,,,Indifferent
+attITAVRank02LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 30% and stamina penalty by 20%. For heavy armor, reduction for both is 10%."
+attITAVRank03Desc,progression,Attribute,,,Blasé
+attITAVRank03LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 50% and stamina penalty by 35%. For heavy armor, reduction for both is 17%."
+attITAVRank04Desc,progression,Attribute,,,Curious
+attITAVRank04LongDesc,progression,Attribute,,,"Reduces light armor movement penalty by 75% and stamina penalty by 50%. For heavy armor, reduction for both is 25%."
+attITAVRank05Desc,progression,Attribute,,,Into it
+attITAVRank05LongDesc,progression,Attribute,,,"Medical healing items heal 25% more health over time."
+attITAVRank06Desc,progression,Attribute,,,Invested
+attITAVRank06LongDesc,progression,Attribute,,,"Medical healing items heal 40% more health over time. Adds 5% to loot bonus for containers that you open personally. Looting is 10% faster."
+attITAVRank07Desc,progression,Attribute,,,Steadfast
+attITAVRank07LongDesc,progression,Attribute,,,"Medical healing items heal 55% more health over time. Adds 10% to loot bonus for containers that you open personally. Looting is 20% faster."
+attITAVRank08Desc,progression,Attribute,,,Dedicated
+attITAVRank08LongDesc,progression,Attribute,,,"Medical healing items heal 75% more health over time. Gain 15% XP from electrical trap kills. Adds 15% to loot bonus for containers that you open personally. Looting is 40% faster."
+attITAVRank09Desc,progression,Attribute,,,Passionate
+attITAVRank09LongDesc,progression,Attribute,,,"Gain 35% XP from electrical trap kills. Adds 20% to loot bonus for containers that you open personally. Looting is 60% faster."
+attITAVRank10Desc,progression,Attribute,,,Giving ALL the fucks
+attITAVRank10LongDesc,progression,Attribute,,,"Gain 50% XP from electrical trap kills. Adds 25% to loot bonus for containers that you open personally. Looting is 80% faster."
+
+reqAttLevel00ITAV,progression,Attribute,,,"You already know a profession"
+reqAttLevel01ITAV,progression,Attribute,,,Craft or buy a profession book to learn a new profession
+reqAttLevel02ITAV,progression,Attribute,,,Passion Level 2
+reqAttLevel03ITAV,progression,Attribute,,,Passion Level 3
+reqAttLevel04ITAV,progression,Attribute,,,Passion Level 4
+reqAttLevel05ITAV,progression,Attribute,,,Passion Level 5
+reqAttLevel06ITAV,progression,Attribute,,,Passion Level 6
+reqAttLevel07ITAV,progression,Attribute,,,Passion Level 7
+reqAttLevel08ITAV,progression,Attribute,,,Passion Level 8
+reqAttLevel09ITAV,progression,Attribute,,,Passion Level 9
+reqAttLevel10ITAV,progression,Attribute,,,Passion Level 10
+allowedProfessionsLevelExceededITAV,,,,,Not yet allowed to learn another profession
+
+perkSmelterITAVDesc,progression,perk Pro,,,"Smelt and craft items in the forge."
+perkSmelterITAVName,progression,perk Pro,,,Smelter
+perkSmelterITAVRank1Desc,progression,perk Pro,,,Iron Fist
+perkSmelterITAVRank1LongDesc,progression,perk Pro,,,"Forge iron and other metal objects. Craft forge, workbench, cementmixer, chemistry station and military fibers."
+perkSmelterITAVRank2Desc,progression,perk,,,Electrician
+perkSmelterITAVRank2LongDesc,progression,perk Pro,,,"Unlocks crafting of the bellows, anvil, generator banks, electrical relays, switches, pressure plates, motion sensors, wireless fusebox and various lights."
+perkSmelterITAVRank3Desc,progression,perk,,,Serious Steel
+perkSmelterITAVRank3LongDesc,progression,perk Pro,,,"Unlocks crafting of forged steel, battery bank, nailgun and various powered doors."
+
+perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster. Perform high-end crafts at the Advanced Miner's Table."
+perkMinerITAVName,progression,perk Pro,,,Miner
+perkMinerITAVRank1Desc,progression,perk Pro,,,"Woodpecker"
+perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Increase tool damage by 10% and block damage by 30% with any axe, pick, chainsaw or auger. Harvest 20% more from trees, ore and stone. Unlocks crafting of Steel Tool Parts from Tool Part Fragments. Unlocks resource bundles."
+perkMinerITAVRank2Desc,progression,perk,,,"Choppy Chop"
+perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Increase tool damage by 20% and block damage by 60% with any axe, pick, chainsaw or auger. Harvest 40% more from trees, ore and stone. Unlocks Advanced Miner's Table. Unlocks crafting of Motorized Tool Parts from Tool Part Fragments."
+perkMinerITAVRank3Desc,progression,perk,,,"Bang That Rock"
+perkMinerITAVRank3LongDesc,progression,perk Pro,,,"Increase tool damage by 30% and block damage by 90% with any axe, pick, chainsaw or auger. Harvest 60% more from trees, ore and stone."
+perkMinerITAVRank4Desc,progression,perk Pro,,,"Iron Fist"
+perkMinerITAVRank4LongDesc,progression,perk Pro,,,"Increase tool damage by 40% and block damage by 120% with any axe, pick, chainsaw or auger. Harvest 80% more from trees, ore and stone."
+perkMinerITAVRank5Desc,progression,perk Pro,,,"Cave Troll"
+perkMinerITAVRank5LongDesc,progression,perk Pro,,,"Increase tool damage by 50% and block damage by 150% with any axe, pick, chainsaw or auger. Harvest 100% more from trees, ore and stone."
+
+perkHunterITAVDesc,progression,perk Pro,,,"Become one with the hunt. Gain the ability to track animals and increase damage to and harvest from them."
+perkHunterITAVName,progression,perk Pro,,,Hunter
+perkHunterITAVRank1LongDesc,progression,perk Pro,,,"You are now a Pelter. Harvest 20% more resources from animals. Crouch to track rabbits, snakes and chickens. Deal 25% more damage to animals."
+perkHunterITAVRank2Desc,progression,perk Pro,,,Tracker
+perkHunterITAVRank2LongDesc,progression,perk Pro,,,"You are now a Tracker. Crouch to track deers, boars, wolves and coyotes. Harvest 60% more resources from animals."
+perkHunterITAVRank3Desc,progression,perk Pro,,,Huntress
+perkHunterITAVRank3LongDesc,progression,perk Pro,,,"You are a true Hunter and let nothing go to waste. Crouch to track mountain lions and bears. Harvest 100% more resources from animals, and gain a run speed boost when fighting zombie bears."
+
+perkCookITAVDesc,progression,perk Pro,,,"Create more filling meals with advanced benefits, prepared with ingredients grown at your own farm. Grow crops in farm plots, and cook high-end items at the Advanced Cooking Stove."
+perkCookITAVName,progression,perk Pro,,,Cook
+perkCookITAVRank1LongDesc,progression,perk Pro,,,"Unlocks basic recipes such as bacon and eggs, boiled and grilled meats, baked potatoes, cornbread, teas and coffee. Double the harvest of wild or planted crops, and gain a 50% chance of receiving a seed when harvesting your crops. Craft seeds for flowers and decorative plants.\nFarm plots cost 30% less to craft. Harvest 20% more from terrain blocks with a shovel. Unlocks the Farmer's Sink workbench and Clay Bundles."
+perkCookITAVRank2LongDesc,progression,perk Pro,,,"Just like grandma used to make, tasty hearty meals that fill you up for days. Craft Steak and Potatoes, Chicken Stew, Meat Stew, Vegetable Stew, Blueberry Pie, Acorn Pie and several pumpkin dishes. Warm yourself with a delicious glass of Spicy Coffee. Unlocks the Small Food Pile storage decoration. You can craft seeds for berries and vegetables.80% chance of receiving a seed when harvesting you crops, and 80% chance to harvest 1 additional crop.Farm plots cost 50% less to craft. Harvest 40% more from terrain blocks with a shovel."
+perkCookITAVRank3LongDesc,progression,perk Pro,,,"Learn how to make nutritious meals from canned goods. Craft Sham Chowder, Hobo Stew, Chili dogs, Fish Tacos, Chicken Soup and Chicken Empanadas. Wash them down with Yucca Juice Smoothies and Beer. Triple the harvest of wild or planted crops. Harvest 60% more from terrain blocks with a shovel."
+perkCookITAVRank4LongDesc,progression,perk Pro,,,"Cook for an army by making Gumbo Stew, Shepards Pie, Spaghetti, Tuna Gravy on Toast and Spicy Chicken Soup. Harvest 80% more from terrain blocks with a shovel. Unlocks the Medium Food Pile storage decoration, and the Advanced Cooking Stove."
+perkCookITAVRank5LongDesc,progression,perk Pro,,,"Learn grandpa's secret recipes that boost stats and attributes! Harvest 100% more from terrain blocks with a shovel. Unlocks the Large Food Pile storage decoration."
+
+perkArmorerITAVDesc,progression,perk Pro,,,"Craft ranged and melee weapons, as well as light and heavy armor."
+perkArmorerITAVName,progression,perk Pro,,,Armorer
+perkArmorerRank1DescITAV,progression,perk Pro,,,Apprentice
+perkArmorerRank1LongDescITAV,progression,perk Pro,,,"You are now an apprentice armorer and able to craft quality 2 leather armor, iron armor, steel armor and military armor. \nUnlocks crafting of workbenches, bows, crossbows, hunting rifle, handguns, shotguns, assault rifle, sniper rifle, bladed weapons, blunt weapons, fist weapons, thrown weapons and rocket launcher. Unlocks crafting of Steel Tool Parts from Tool Part Fragments, and Tools."
+perkArmorerRank2DescITAV,progression,perk Pro,,,Journeyman
+perkArmorerRank2LongDescITAV,progression,perk Pro,,,"You are now a journeyman armorer and able to craft quality 3 tools, armor and weaponry."
+perkArmorerRank3DescITAV,progression,perk Pro,,,Expert
+perkArmorerRank3LongDescITAV,progression,perk Pro,,,"You are now an expert armorer and able to craft quality 4 tools, armor and weaponry, as well as schematics for the most powerful weaponry. These schematics can also be found in loot, but only the Armorer can learn them. Unlocks steel tools."
+perkArmorerRank4DescITAV,progression,perk Pro,,,Artisan
+perkArmorerRank4LongDescITAV,progression,perk Pro,,,"You are now an artisan armorer and able to craft quality 5 tools, armor and weaponry."
+perkArmorerRank5DescITAV,progression,perk Pro,,,Master
+perkArmorerRank5LongDescITAV,progression,perk Pro,,,"You are now a master armorer and able to craft quality 6 tools, armor and weaponry."
+
+perkFarmerITAVDesc,progression,perk Pro,,,"Specialize in harvesting more crops and crafting seeds. Gain the ability to track animals and increase damage to and harvest from them. Meat can be efficiently prepared in the Farmer's Sink workbench."
+perkFarmerITAVName,progression,perk Pro,,,Farmer
+perkFarmerITAVRank1Desc,progression,perk Pro,,,Forager
+perkFarmerITAVRank1LongDesc,progression,perk Pro,,,"Double the harvest of wild or planted crops, and gain a 50% chance of receiving a seed when harvesting your crops. Craft seeds for flowers and decorative plants like goldenrod, chrysanthemum, aloe, and yucca.\nFarm plots cost 30% less to craft. Harvest 20% more resources from animals. Crouch to track rabbits, snakes and chickens. Deal 25% more damage to animals. Unlocks the Farmer's Sink workbench and a few basic foods."
+perkFarmerITAVRank2Desc,progression,perk Pro,,,Hunter
+perkFarmerITAVRank2LongDesc,progression,perk Pro,,,"You can craft seeds for berries and vegetables.\n100% chance of receiving a seed when harvesting you crops, and 80% chance to harvest 1 additional crop.\nFarm plots cost 50% less to craft. Crouch to track deers, boars, wolves and coyotes. Harvest 60% more resources from animals."
+perkFarmerITAVRank3Desc,progression,perk Pro,,,Living off the Land
+perkFarmerITAVRank3LongDesc,progression,perk Pro,,,"Triple the harvest of wild or planted crops. Crouch to track mountain lions and bears. Harvest 100% more resources from animals, and gain a run speed boost when fighting zombie bears."
+
+perkChemistITAVDesc,progression,perk Pro,,,"Specialize in crafting chemicals such as gunpowder, medicine, concrete mix... and paint. Perform high-end crafts at the Advanced Chemistry Station."
+perkChemistITAVName,progression,perk Pro,,,Chemist
+perkChemistITAVRank1Desc,progression,perk Pro,,,Student
+perkChemistITAVRank1LongDesc,progression,perk Pro,,,"Can craft chemistry stations, first aid bandages, herbal antibiotics and plaster casts."
+perkChemistITAVRank2Desc,progression,perk Pro,,,Kitchen Tinkerer
+perkChemistITAVRank2LongDesc,progression,perk Pro,,,"Can craft concrete mix, gun powder and paint. Craft items 20% faster at chemistry stations."
+perkChemistITAVRank3Desc,progression,perk Pro,,,Lab Rat
+perkChemistITAVRank3LongDesc,progression,perk Pro,,,"Can craft first aid kits and steroids. Unlocks Advanced Chemistry Station."
+perkChemistITAVRank4Desc,progression,perk Pro,,,Artisan
+perkChemistITAVRank4LongDesc,progression,perk Pro,,,"Can craft Fortbites, Recog, antibiotics and Grandpa's Forgetting Elixir. Craft items 40% faster at chemistry stations."
+perkChemistITAVRank5Desc,progression,perk Pro,,,Master
+perkChemistITAVRank5LongDesc,progression,perk Pro,,,"???."
+
+perkRoboticsITAVDesc,progression,perk Pro,,,"You are fascinated with robotics. Learn to craft deployed weapons. Perform high-end crafts at the Advanced Robotic's Table."
+perkRoboticsITAVName,progression,perk Pro,,,Robotics Inventor
+perkRoboticsITAVRank1Desc,progression,perk Pro,,,Science Projects
+perkRoboticsITAVRank1LongDesc,progression,perk Pro,,,"Craft poor quality 2 robots, deal 10% more damage, 30% faster fire rate and reload an extra 10 rounds. Robot active range is increased from 10 to 14 meters.\nYou can deploy multiple robots but only the closest will be active. \nUnlocks crafting of workbenches, Robotic Sledge, Generatorbank, Switch, trigger plates and wires, electric relays and electrical traps."
+perkRoboticsITAVRank2Desc,progression,perk Pro,,,Basic Robotics
+perkRoboticsITAVRank2LongDesc,progression,perk Pro,,,"You are taking your projects to the next level now. Craft fair quality 3 robots, deal 20% more damage, 60% faster fire rate and reload an extra 20 rounds. Robot active range is 15 meters. Unlocks crafting of Robotic Parts from Tool Part Fragments."
+perkRoboticsITAVRank3Desc,progression,perk Pro,,,Automated Weaponry
+perkRoboticsITAVRank3LongDesc,progression,perk Pro,,,"You have mastered the basics of automated weaponry. Craft good quality 4 robotics, deal 30% more damage, 90% faster fire rate and reload an extra 30 rounds. Robot active range is 16 meters. \nUnlocks crafting of Shotgun Auto Turret and Robotic Turret."
+perkRoboticsITAVRank4Desc,progression,perk Pro,,,Advanced Robotics
+perkRoboticsITAVRank4LongDesc,progression,perk Pro,,,"You must be from the year 2077. You are creating some futuristic technology. Craft great quality 5 robots, deal 40% more damage, 120% faster fire rate and reload an extra 40 rounds. Reload robot weapons 10% faster. Robot active range is 17 meters."
+perkRoboticsITAVRank5Desc,progression,perk Pro,,,Robotics Expert
+perkRoboticsITAVRank5LongDesc,progression,perk Pro,,,"You are now a top expert in robotics. Reload robot weapons 20% faster and reload an extra 50 rounds. Robot active range is 18 meters.\nTwo deployed robots can be active at once. \nUnlocks crafting of SMG Auto Turret, Robotic Drone and Advanced Robotic's Table."
+
+
+perkScientistITAVDesc,progression,perk Pro,,,"You are fascinated with robotics and chemicals such as deployed weapons, gunpowder, medicine and concrete mix. Perform high-end crafts at the Advanced Chemistry Station and the Advanced Robotic's Table."
+perkScientistITAVName,progression,perk Pro,,,Scientist
+perkScientistITAVRank1Desc,progression,perk Pro,,,Student
+perkScientistITAVRank1LongDesc,progression,perk Pro,,,"Can craft chemistry stations, first aid bandages, herbal antibiotics and plaster casts. Craft poor quality 2 robots, deal 10% more damage, 30% faster fire rate and reload an extra 10 rounds. Robot active range is increased from 10 to 14 meters.\nYou can deploy multiple robots but only the closest will be active. \nUnlocks crafting of workbenches, Robotic Sledge, Generatorbank, Switch, trigger plates and wires, electric relays and electrical traps."
+perkScientistITAVRank2Desc,progression,perk Pro,,,Kitchen Tinkerer
+perkScientistITAVRank2LongDesc,progression,perk Pro,,,"Can craft concrete mix, gun powder and paint. Craft items 20% faster at chemistry stations. Craft fair quality 3 robots, deal 20% more damage, 60% faster fire rate and reload an extra 20 rounds. Robot active range is 15 meters. Unlocks crafting of Robotic Parts from Tool Part Fragments."
+perkScientistITAVRank3Desc,progression,perk Pro,,,Lab Rat
+perkScientistITAVRank3LongDesc,progression,perk Pro,,,"Can craft first aid kits and steroids. Craft good quality 4 robotics, deal 30% more damage, 90% faster fire rate and reload an extra 30 rounds. Robot active range is 16 meters. \nUnlocks crafting of Shotgun Auto Turret and Robotic Turret. Unlocks Advanced Chemistry Station."
+perkScientistITAVRank4Desc,progression,perk Pro,,,Artisan
+perkScientistITAVRank4LongDesc,progression,perk Pro,,,"Can craft Fortbites, Recog, antibiotics and Grandpa's Forgetting Elixir. Craft items 40% faster at chemistry stations. Craft great quality 5 robots, deal 40% more damage, 120% faster fire rate and reload an extra 40 rounds. Reload robot weapons 10% faster. Robot active range is 17 meters."
+perkScientistITAVRank5Desc,progression,perk Pro,,,Master
+perkScientistITAVRank5LongDesc,progression,perk Pro,,,"You are now a top expert in robotics. Reload robot weapons 20% faster and reload an extra 50 rounds. Robot active range is 18 meters.\nTwo deployed robots can be active at once. \nUnlocks crafting of SMG Auto Turret, Robotic Drone and Advanced Robotic's Table."
+
+perkRunnerITAVDesc,progression,perk Pro,,,"Craft those vehicles! Perform high-end crafts at the Advanced Mechanic's Table."
+perkRunnerITAVName,progression,perk Pro,,,Mechanic
+perkRunnerITAVRank1Desc,progression,perk Pro,,,Bikes and Gambling
+perkRunnerITAVRank1LongDesc,progression,perk Pro,,,"Harvest 20% faster and recieve 20% more resources when harvesting with a wrench, ratchet or impact driver. \nUnlocks crafting of workbenches, Wrench, Lockpicks, Crushed Car wall, Wheels, Bike parts, Baby Powerizer Boots, Baby Work Boots, Minibike parts, Gas cans, Lottery Box and quality 4 Car Batteries."
+perkRunnerITAVRank2Desc,progression,perk Pro,,,Motorbiker, Boots and Engines
+perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, Powerizer Boots, Work Boots, oil, Gas can bundle, quality 5 Car Batteries, and Advanced Mechanic's Table. Can pick up mines."
+perkRunnerITAVRank3Desc,progression,perk Pro,,,Limo out front
+perkRunnerITAVRank3LongDesc,progression,perk Pro,,,"Harvest 80% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of  4x4 truck parts and quality 6 Car Batteries. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower."
+perkRunnerITAVRank4Desc,progression,perk Pro,,,Level 4
+perkRunnerITAVRank4LongDesc,progression,perk Pro,,,""
+perkRunnerITAVRank5Desc,progression,perk Pro,,,Level 5
+perkRunnerITAVRank5LongDesc,progression,perk Pro,,,""
+
+perkReaperITAVDesc,progression,perk Pro,,,"You are a hunter of both the living and the undead, and will stop at nothing to survive. Let your bloodthirst go rampant and use your combat skills to obtain sought after items from the most dangerous places."
+perkReaperITAVName,progression,perk Pro,,,Reaper
+perkReaperITAVRank1Desc,progression,perk Pro,,,"Into the abyss"
+perkReaperITAVRank1LongDesc,progression,perk Pro,,,"You can consume Rotting Flesh and Murky Water without being affected by dysentery. 10% increased run speed at night. Obtain 100% more Cerebral Spinal Fluid from Mushy Brains. Harvest 20% more resources from animals. Crouch to track rabbits, snakes and chickens. Deal 25% more damage to animals. Loot time decreased by 20%. You can pick locks 10% faster."
+perkReaperITAVRank2Desc,progression,perk Pro,,,Bloody Business
+perkReaperITAVRank2LongDesc,progression,perk Pro,,,"Crouch to track deers, boars, wolves and coyotes. Obtain 300% more Cerebral Spinal Fluid from Mushy Brains. Harvest 60% more resources from animals. Can pick up mines. Loot time decreased by 40%. You can pick locks 20% faster. Unlocks crafting of Vehicle Super Charger Mod and Flesh Bags."
+perkReaperITAVRank3Desc,progression,perk Pro,,,Point of no return
+perkReaperITAVRank3LongDesc,progression,perk Pro,,,"Crouch to track mountain lions and bears. Harvest 100% more resources from animals, and gain a run speed boost when fighting zombie bears. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower. Loot time decreased by 60%. You can pick locks 30% faster. Unlocks crafting of Musty Munchies, Pungent Punchies and Sneaky Ickies."
+
+perkDecoratorITAVDesc,progression,perk Pro,,,"Spice up your apocalypse! Decorative items are crafted in a Decorator's Table Saw."
+perkDecoratorITAVName,progression,perk Pro,,,Decorator
+perkDecoratorITAVRank1Desc,progression,perk Pro,,,"Dyes, Pocket, Flowers and Furniture"
+perkDecoratorITAVRank1LongDesc,progression,perk Pro,,,"Unlocks invisible dye, clothing pocket, clothes racks, coffee and soda machines, bathtub, single bed, planter, candelabra, logfire, wood burning stove, booths, pool table, signs, water cooler, trash cans, fridges, toaster, microwave ovens, front doors, shopping cart, terrarium, bar stools, decorative cooking pot, wine bottles, flowers, hanging moss, juniper and azalea."
+perkDecoratorITAVRank2Desc,progression,perk Pro,,,Lumination, Signs and Wardrobe
+perkDecoratorITAVRank2LongDesc,progression,perk Pro,,,"Unlocks double pockets, cosmetic clothes mods, mannequins, laptop, movie posters, signs, neon shop sign, porch lights, table lamps, ceiling lamps and chandelier. Use the wireless fusebox to connect them to a power source."
+
+hasLearntSmelterITAVTooltip,items,Admin,,,"Profession: Smelter acquired"
+hasLearntMinerITAVTooltip,items,Admin,,,"Profession: Miner acquired"
+hasLearntHunterITAVTooltip,items,Admin,,,"Profession: Hunter acquired"
+hasLearntCookITAVTooltip,items,Admin,,,"Profession: Cook acquired"
+hasLearntArmorerITAVTooltip,items,Admin,,,"Profession: Armorer acquired"
+hasLearntWeaponsmithITAVTooltip,items,Admin,,,"Profession: Weaponsmith acquired"
+hasLearntFarmerITAVTooltip,items,Admin,,,"Profession: Farmer acquired"
+hasLearntChemistITAVTooltip,items,Admin,,,"Profession: Chemist acquired"
+hasLearntRoboticsITAVTooltip,items,Admin,,,"Profession: Robotics Inventor acquired"
+hasLearntScientistITAVTooltip,items,Admin,,,"Profession: Scientist acquired"
+hasLearntRunnerITAVTooltip,items,Admin,,,"Profession: Mechanic acquired"
+hasLearntReaperITAVTooltip,items,Admin,,,"Profession: Reaper acquired"
+drinkJarProfPerkForgettingElixirTooltip,items,Admin,,,"Your Profession Perk skill points have been reset."
+readyForNextProfessionTooltip,progression,,,,"Crafting: Profession Book available!"
+
+tutorialTipITAV_title,Journal Tip,,,,"It Takes A Village"
+tutorialTipITAV,Journal Tip,,,,"You look rough,\n\nIf you can find the other survivors, you can combine your different strengths to better survive the apocalypse. Complete the intro quest to recieve your first profession book. \n\nIt Takes A Village!"
+weaponPartsAssemblyTipITAV_title, Journal Tip,,,,"Weapon Part Fragments"
+weaponPartsAssemblyTipITAV,Journal Tip,,,,"The Armorer can assemble weapon parts out of Fragments. Weapon Parts scrap into 25 Weapon Fragments."
+weaponPartFragmentITAV,items,,,,"Weapon Part Fragment"
+weaponPartFragmentITAVGroupDesc,items,,,,"The Armorer can assemble any kind of weapon part out of Weapon Part Fragments. Weapon Parts scrap into 25 Weapon Fragments."
+toolPartFragmentITAV,items,,,,"Tool Part Fragment"
+toolPartFragmentITAVGroupDesc,items,,,,"The Robotics Inventor can assemble robotics parts out of Tool Part Fragments. Steel Tool Parts and Motor Tool Parts scrap into 25 Tool Fragments."
+
+resourceRepairKitDesc,items,Item,,,"Repair Kits are used to repair all tools and worn items, vehicles, turrets, drones and more."
+
+resourceWeaponRepairKitITAV,items,Item,,,"Weapon Repair Kit"
+resourceWeaponRepairKitITAVDesc,items,Item,,,"Weapon Repair Kits are used to repair all weapons that are made of materials more advanced than wood, stone and leather."
+resourceCarFrameITAV,items,Item,,,"Car Frame"
+resourceCarFrameITAVDesc,items,Item,,,"Car Frames are used for crafting Crushed Car walls."
+
+
+
+MyFirstProfessionTip_title,Journal Tip,,,,Learning Professions
+MyFirstProfessionTip,Journal Tip,,,,"Complete the Profession quest and chose a reward from the trader. Once you have maxed out a Profession, you can craft a 'Profession book', which allows you to pick an additional Profession.  n\Keep maxing out your Professions to become able to learn new ones!"
+
+quest_myFirstProfession_description_title,Journal Tip,,,,Learning Your First Profession
+quest_myFirstProfession_description,Quest,Quest Info,,,"Time to chose your Profession!\n\nProfessions are incredibly strong: Few things drop in loot, and only the Smelter can make Forged Iron, only the Cook can make food worth a damn. No one can make good weapons or armor except the Armorer. \n\nThe trader will get you started with a free book, go see them." 
+quest_mySecondProfession_description_title,Journal Tip,,,,My Second Profession
+quest_mySecondProfession_description,Quest,Quest Info,,,"Time to chose your second path!\n\nYou will now be able to pick ONE (1) Profession. Only after perfecting this Profession will you be able to learn your third. \n\n...If you live that long."
+
+quest_MyFirstProfession_offer,Quest,Quest Info,,,"Picking a Trade \n\nYou only get you first Profession once, so choose carefully. \nOnly after perfecting this first Profession will you be able to learn your second. Talk to a trader to access 'My second Profession!'. \nCoordinate with other survivors to find out what is needed in the community. \n\n...If you live that long."
+quest_MyFirstProfession_subtitle,Quests,Quests,,,My First Profession
+quest_MyFirstProfession_title,Quests,Quests,,,Pick a Profession
+quest_MyFirstProfession_response,Quests,Quests,,,Trade Profession Quest Response
+quest_MyFirstProfession_statement,Quests,Quests,,,Pick a Profession
+quest_MyFirstProfession_completion,Quests,Quests,,,"Choose what Profession fits you and your community best.\n\nOnce you have read the Profession book, there is no going back.\n\nChoose carefully."
+
+quest_MySecondProfession_offer,Quest,Quest Info,,,"Picking a Trade \n\nYou only get you second Profession once, so choose carefully. \nOnly after perfecting this second Profession will you be able to learn your third. Talk to a trader to access 'My third Profession!'. \n\nDon't forget to trade with the other survivors!"
+quest_MySecondProfession_subtitle,Quests,Quests,,,My Second Profession
+quest_MySecondProfession_description,Quests,Quests,,,"Talking to the Trader will allow me to chose one more Profession."
+quest_MySecondProfession_title,Quests,Quests,,,Pick a Profession
+quest_MySecondProfession_response,Quests,Quests,,,Trade Profession Quest Response
+quest_MySecondProfession_statement,Quests,Quests,,,Pick a Profession
+quest_MySecondProfession_completion,Quests,Quests,,,"Choose what Profession fits you and your community best.\n\nOnce you have read the Profession book, there is no going back.\n\nChoose carefully."
+
+quest_MyNextProfession_offer,Quest,Quest Info,,,"Choose your next Profession carefully. \n\nNote that reading the next book does not give you a point in the chosen Profession, it only unlocks it. \n\n\nAfter perfecting this Profession, you will be able to learn yet another."
+quest_MyNextProfession_subtitle,Quests,Quests,,,Profession Book
+quest_MyNextProfession_description,Quests,Quests,,,"Talking to the Trader will allow me to chose one more Profession."
+quest_MyNextProfession_title,Quests,Quests,,,Pick a Profession
+quest_MyNextProfession_response,Quests,Quests,,,Trade Profession Quest Response
+quest_MyNextProfession_statement,Quests,Quests,,,Pick a Profession
+quest_MyNextProfession_completion,Quests,Quests,,,"Choose what Profession fits you and your community best.\n\nOnce you have read the Profession book, there is no going back. \n\nChoose carefully."
+
+quest_ProfCont_description_title,,,,,"Shop Setup"
+quest_ProfCont_description,,,,,"It's time to find a safe spot and set up your store, and put some goods up for sale to let other survivors buy from you. \nYou might want to lock the door around your crafting area, so no one walks in and 'borrows' your hard earned stuff... \n\nPress 'O' to see Quests, 'N' for skills. "
+
+quest_ProfCont_name,Quests,Quests,,,Setup your Shop
+quest_ProfCont_subtitle,Quests,Quests,,,Setup your Shop
+quest_ProfCont_statement,Quests,Quests,,,Establish Your Profession
+quest_ProfCont_response,Quests,Quests,,,Profession Quest Response
+quest_ProfCont_completion,Quests,Quests,,,"The Mechanic can craft even stronger versions of these boots. \n\nTreat yourself!"
+
+
+qb_MyFirstProfessionITAV,Items,,,,"Profession Book 1"
+qb_MyFirstProfessionITAV_desc,Items,,,,"Reading this book allows you to learn your first Profession! Choose your desired Profession from the quest rewards. To unlock a second Profession, you must max out your first one."
+qb_MySecondProfessionITAV,Items,,,,"Profession Book 2"
+qb_MySecondProfessionITAV_desc,Items,,,,"Reading this book allows you to learn your second Profession! Choose your desired Profession from the quest rewards. To unlock a third Profession, you must max out your second one."
+qb_MyThirdProfessionITAV,Items,,,,"Profession Book 3"
+qb_MyThirdProfessionITAV_desc,Items,,,,"Reading this book allows you to learn your third Profession! Choose your desired Profession from the quest rewards. To unlock a fourth Profession, you must max out your third one."
+qb_MyFourthProfessionITAV,Items,,,,"Profession Book 4"
+qb_MyFourthProfessionITAV_desc,Items,,,,"Reading this book allows you to learn your fourth Profession! Choose your desired Profession from the quest rewards. Four Professions is the max amount your brain can handle."
+qb_MyNextProfessionITAV,Items,,,,"My Next Profession"
+qb_MyNextProfessionITAV_desc,Items,,,,"Reading this book allows you to learn your an additional Profession! Choose your desired Profession from the quest rewards. Max out the profession to open the ability of learning yet another one."
+
+apparelDivingMaskITAV,Items,,,,"Diving Mask"
+apparelUnderwaterBreathingDivingMaskITAVDesc,Items,,,,"Providing full protection from drowning, and some protection against the cold of the water."
+
+noteDadJoke01ITAV,,,,,"Don't read it"
+noteDadJoke01ITAVDesc,,,,,"Why do bees have sticky hair? \n\nBecause they use a honeycomb."
+noteDadJoke02ITAV,,,,,"Don't read it"
+noteDadJoke02ITAVDesc,,,,,"What did the police officer say to their belly button? \n\n'You are under a vest.'"
+noteDadJoke03ITAV,,,,,"Don't read it"
+noteDadJoke03ITAVDesc,,,,,"How does it feel to be hit by a stun baton? \n\nIt Hertz."
+noteDadJoke04ITAV,,,,,"Don't read it"
+noteDadJoke04ITAVDesc,,,,,"When does a joke become a 'dad joke'? \n\nWhen it becomes apparent."
+noteDadJoke05ITAV,,,,,"Don't read it"
+noteDadJoke05ITAVDesc,,,,,"I used to hate facial hair. But then it grew on me."
+noteDadJoke06ITAV,,,,,"Don't read it"
+noteDadJoke06ITAVDesc,,,,,"It takes guts to be an organ donor."
+noteDadJoke07ITAV,,,,,"Don't read it"
+noteDadJoke07ITAVDesc,,,,,"Why did the two pieces of pumpkin bread get married? \n\nIt was loaf at first sight."
+noteDadJoke08ITAV,,,,,"Don't read it"
+noteDadJoke08ITAVDesc,,,,,"What do bears eat at parties? \n\nBluebeary pie."
+noteDadJoke09ITAV,,,,,"Don't read it"
+noteDadJoke09ITAVDesc,,,,,"What do you call a bear that doesn't have any ears? \n\nA b."
+noteDadJoke10ITAV,,,,,"Don't read it"
+noteDadJoke10ITAVDesc,,,,,"Why are zombies never arrested? \n\nBecause they can never be taken alive."
+noteDadJoke11ITAV,,,,,"Don't read it"
+noteDadJoke11ITAVDesc,,,,,"What bread do zombies usually eat? \n\nWhole brain."
+noteDadJoke12ITAV,,,,,"Don't read it"
+noteDadJoke12ITAVDesc,,,,,"What do vegetarian zombies eat? \n\nGraaains."
+noteDadJoke13ITAV,,,,,"Don't read it"
+noteDadJoke13ITAVDesc,,,,,"What do bears eat at parties? \n\nBluebeary pie."
+noteDadJoke14ITAV,,,,,"Don't read it"
+noteDadJoke14ITAVDesc,,,,,"Does anyone know if I could take some of my butt flesh and graft it onto someone who isn't a relative? Ass skin for a friend." 
+noteDadJoke15ITAV,,,,,"Don't read it"
+noteDadJoke15ITAVDesc,,,,,"What do you call a flesh eating bee? \n\nA zombee."
+noteDadJoke16ITAV,,,,,"Don't read it"
+noteDadJoke16ITAVDesc,,,,,"What did the rotting flesh say when it was put into Hobo stew? \n\nAh, we meat again!"
+noteDadJoke17ITAV,,,,,"Don't read it"
+noteDadJoke17ITAVDesc,,,,,"Whats a zombies favorite cheese? \n\nZom-brie."
+noteDadJoke18ITAV,,,,,"Don't read it"
+noteDadJoke18ITAVDesc,,,,,"What branch of the military do zombies enlist in? \n\nThe Marine Corpse."
+noteDadJoke19ITAV,,,,,"Don't read it"
+noteDadJoke19ITAVDesc,,,,,"What snacks do zombies take hiking? \n\nEn-trails mix."
+noteDadJoke20ITAV,,,,,"Don't read it"
+noteDadJoke20ITAVDesc,,,,,"Who are zombies favorite people? \n\nBrians"
+noteDadJoke21ITAV,,,,,"Don't read it"
+noteDadJoke21ITAVDesc,,,,,"How much wood could a woodchuck chuck if a woodchuck could chuck wood? \n\nForget that, where did you see a wood chuck? I haven't eaten in days."
+noteDadJoke22ITAV,,,,,"Don't read it"
+noteDadJoke22ITAVDesc,,,,,"Why'd the chicken cross the road? \n\nIt was running from the moaning, dressed in grass, starving person chasing it with a wooden club."
+noteDadJoke23ITAV,,,,,"Don't read it"
+noteDadJoke23ITAVDesc,,,,,"Knock, knock. \n\n'Who is there?' the survivor asks. But no one is there, just hallucinations from the fever as infection sets in.  \n\nShe'll turn soon."
+noteDadJoke24ITAV,,,,,"Don't read it"
+noteDadJoke24ITAVDesc,,,,,"Why did the zombie have social anxiety? \n\nOnce bit, twice shy."
+noteDadJoke25ITAV,,,,,"Don't read it"
+noteDadJoke25ITAVDesc,,,,,"Why did no one go to the club? \n\nDead inside."
+noteDadJoke26ITAV,,,,,"Don't read it"
+noteDadJoke26ITAVDesc,,,,,"'Justice demands integrity.' -Bell Hooks. \n'The only way we have been taught to heal is to hurt.' -Alok V Menon. \n'Uhhhhhhhhhhhhhhgggggggnnnmmm.' -some zombie eating Steve from accounting. \n'AHHHHHHHHH!' -Steve from accounting."
+noteDadJoke27ITAV,,,,,"Don't read it"
+noteDadJoke27ITAVDesc,,,,,"What does Socrates, Emily Brontë, a zombie, and Steve from accounting have in common? \n\nThey are all dead."
+noteDadJoke28ITAV,,,,,"Don't read it"
+noteDadJoke28ITAVDesc,,,,,"Remember, as terrible as today is, at least it's better than tomorrow."
+noteDadJoke29ITAV,,,,,"Don't read it"
+noteDadJoke29ITAVDesc,,,,,"Why did the zombie leave his husband? \n\nFinished eating him. \n\nNow to find the kids."
+noteDadJoke30ITAV,,,,,"Don't read it"
+noteDadJoke30ITAVDesc,,,,,"Why did the zombie go to Shamways? \n\nSteve tripped over a bottle and made alot of noise. \n\nDammit Steve."
+noteDadJoke31ITAV,,,,,"Don't read it"
+noteDadJoke31ITAVDesc,,,,,"They used to say the only things certain in life is death and taxes.  \n\nSurprise!"
+noteDadJoke32ITAV,,,,,"Don't read it"
+noteDadJoke32ITAVDesc,,,,,"How many zombies does it take to build a house? \n\nDepends on how you stack them. But honestly there are a lot better options."
+noteDadJoke33ITAV,,,,,"Don't read it"
+noteDadJoke33ITAVDesc,,,,,"How do you eat an elephant? \n\nOne bite at a time, just like that zombie ate Steve. I can still hear the screams, they keep me up at night."
+noteDadJoke34ITAV,,,,,"Don't read it"
+noteDadJoke34ITAVDesc,,,,,"What turns on a Demolisher?  \n\nNot much, just gotta touch his heart from time to time."
+noteDadJoke35ITAV,,,,,"Don't read it"
+noteDadJoke35ITAVDesc,,,,,"What did the zombie get for showing up late to the party? \n\nThe cold shoulder."
+noteDadJoke36ITAV,,,,,"Don't read it"
+noteDadJoke36ITAVDesc,,,,,"This is a joke about construction.  \n\nI'm still working on it."
+noteDadJoke37ITAV,,,,,"Don't read it"
+noteDadJoke37ITAVDesc,,,,,"I tell dad jokes, but I don't have any kids.  \n\nI'm a faux pa."
+noteDadJoke38ITAV,,,,,"Don't read it"
+noteDadJoke38ITAVDesc,,,,,"Why did the picture go to jail? \n\nBecause it was framed."
+noteDadJoke39ITAV,,,,,"Don't read it"
+noteDadJoke39ITAVDesc,,,,,"The shovel was a ground-breaking invention."
+noteDadJoke40ITAV,,,,,"Don't read it"
+noteDadJoke40ITAVDesc,,,,,"I bought some shoes from a drug dealer.  \n\nI don't know what he laced them with, but I was tripping all day!"
+noteDadJoke41ITAV,,,,,"Don't read it"
+noteDadJoke41ITAVDesc,,,,,"I thought about going on an all-acorn diet.  \n\nBut that's just nuts."
+noteDadJoke42ITAV,,,,,"Don't read it"
+noteDadJoke42ITAVDesc,,,,,"My friend keeps saying 'cheer up man it could be worse, you could be stuck underground in a hole full of water.'  \n\nI know she means well."
+noteDadJoke43ITAV,,,,,"Don't read it"
+noteDadJoke43ITAVDesc,,,,,"I'm thinking about removing my spine.  \n\nI feel like it’s only holding me back."
+noteDadJoke44ITAV,,,,,"Don't read it"
+noteDadJoke44ITAVDesc,,,,,"Why couldn't the bicycle stand up by itself? \n\nIt was two tired."
+noteDadJoke45ITAV,,,,,"Don't read it"
+noteDadJoke45ITAVDesc,,,,,"I wouldn't buy anything with velcro.  \n\nIt's a total rip-off."
+noteDadJoke46ITAV,,,,,"Don't read it"
+noteDadJoke46ITAVDesc,,,,,"Do you think glass coffins will be a success? \n\nRemains to be seen."
+noteDadJoke47ITAV,,,,,"Don't read it"
+noteDadJoke47ITAVDesc,,,,,"The mechanic was seen having snacks and some coffee in the garage. He must be on his brake!"
+noteDadJoke48ITAV,,,,,"Don't read it"
+noteDadJoke48ITAVDesc,,,,,"What was the name of the mechanic's favorite movie?  \n\nLord of the Springs."
+noteDadJoke49ITAV,,,,,"Don't read it"
+noteDadJoke49ITAVDesc,,,,,"Why is a robotics inventor never lonely? \n\nBecause she's always making new friends."
+noteDadJoke50ITAV,,,,,"Don't read it"
+noteDadJoke50ITAVDesc,,,,,"Why did the pig dump her boyfriend? \n\nBecause he was a real BOAR."
+noteDadJoke51ITAV,,,,,"Don't read it"
+noteDadJoke51ITAVDesc,,,,,"As a farmer, I hear lots of jokes about sheep. \n\nI'd tell them to my dog, but she'd herd them all."
+noteDadJoke52ITAV,,,,,"Don't read it"
+noteDadJoke52ITAVDesc,,,,,"Why shouldn’t you tell a secret on a farm? \n\nBecause the potatoes have eyes and the corn has ears."
+noteDadJoke53ITAV,,,,,"Don't read it"
+noteDadJoke53ITAVDesc,,,,,"What did the baby corn say to the mama corn? \n\nWhere's popcorn?"
+noteDadJoke54ITAV,,,,,"Don't read it"
+noteDadJoke54ITAVDesc,,,,,"What new crop did the farmer plant? \n\nBeets me."
+noteDadJoke55ITAV,,,,,"Don't read it"
+noteDadJoke55ITAVDesc,,,,,"No farm building should ever, under any circumstances, be used as a convent… \n\nBarn nun."
+noteDadJoke56ITAV,,,,,"Don't read it"
+noteDadJoke56ITAVDesc,,,,,"What do you call a Demolisher deer? \n\nBombi."
+noteDadJoke57ITAV,,,,,"Don't read it"
+noteDadJoke57ITAVDesc,,,,,"Why did the deer cross the road? \n\nTo prove he wasn’t a chicken."
+noteDadJoke58ITAV,,,,,"Don't read it"
+noteDadJoke58ITAVDesc,,,,,"If I would prefer mining for iron or lead? \n\nEither ore works!"
+noteDadJoke59ITAV,,,,,"Don't read it"
+noteDadJoke59ITAVDesc,,,,,"Ever seen a blacksmith join two metal sheets? \n\nIt's riveting"

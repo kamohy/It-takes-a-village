@@ -1,0 +1,22 @@
+<configs>
+
+<append xpath="/materials">
+
+<material id="MweaponPartFragmentITAV">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="weaponPartFragmentITAV"/>
+	<property name="Experience" value="1"/>
+</material>
+
+
+<material id="MtoolPartFragmentITAV">
+	<property name="damage_category" value="metal"/>
+	<property name="surface_category" value="metal"/>
+	<property name="forge_category" value="toolPartFragmentITAV"/>
+	<property name="Experience" value="1"/>
+</material>
+
+</append>
+
+</configs>

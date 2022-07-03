@@ -1,0 +1,46 @@
+<configs>
+
+<!-- Changing what items a player starts with (first spawns in with) -->
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">starterBundleITAV,vehicleBicyclePlaceable</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">starterBundleITAV,vehicleBicyclePlaceable</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">starterBundleITAV,vehicleBicyclePlaceable</set> 
+ 
+	
+	
+<append xpath="/entity_classes/entity_class[@name='playerMale']">
+	<effect_group name="Base Effects">
+			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="set" value="1" />
+			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="1"/>
+	</effect_group>
+</append>
+
+<setattribute xpath="//entity_class[@name='playerMale']/effect_group[@name='food/water balancing']/passive_effect[@name='FoodChangeOT' and @value='.00833']" name="value">.0125</setattribute> <!-- hunger base drain, 30/hour in vanilla, 45/hour now -->
+<append xpath="//entity_class[@name='playerMale']/effect_group/passive_effect[@name='HarvestCount' and @tags='allHarvest,oreWoodHarvest,cropHarvest,wildCropsHarvest']/@tags">,sandClayHarvestITAV</append>
+
+<setattribute xpath="//entity_class[@name='vehicleBicycle']/property[@name='LootListAlive']" name="value">coffeeMaker</setattribute>
+
+<!-- Doubling zpack drop to incentivize participation in combat/blood moon -->
+<setattribute xpath="//entity_class[@name='zombieTemplateMale' or @name='zombieTemplateMale']/property[@name='LootDropProb']" name="value">.04</setattribute>
+<setattribute xpath="//property[@name='LootDropProb' and @value='.03']" name="value">.06</setattribute>
+
+<setattribute xpath="//entity_class[@name='animalBear']/property[@name='ExperienceGain']" name="value">2000</setattribute> <!-- 1600 HP, 750 XP in vanilla -->
+<setattribute xpath="//entity_class[@name='animalZombieBear']/property[@name='ExperienceGain']" name="value">2500</setattribute> <!-- 2000 HP, 750 XP in vanilla -->
+<setattribute xpath="//entity_class[@name='animalDireWolf']/property[@name='ExperienceGain']" name="value">1200</setattribute> <!-- 750 HP, 750 XP in vanilla -->
+
+<setattribute xpath="//entity_class[@name='zombiePartyGirl']/property[@name='Mesh']" name="value">#Entities/Zombies?Prefabs/ZLab.prefab</setattribute>
+<setattribute xpath="//entity_class[@name='zombiePartyGirlFeral']/property[@name='Mesh']" name="value">#Entities/Zombies?Prefabs/ZLabFeral.prefab</setattribute>
+<setattribute xpath="//entity_class[@name='zombiePartyGirlRadiated']/property[@name='Mesh']" name="value">#Entities/Zombies?Prefabs/ZLabRadiated.prefab</setattribute>
+
+<setattribute xpath="//entity_class[@name='zombieBoeFeral']/property[@name='Mesh']" name="value">#Entities/Zombies?Prefabs/ZSpiderFeral.prefab</setattribute>
+
+<remove xpath="//entity_class[@name='vehicleGyrocopter']"/>
+
+<setattribute xpath="//entity_class[@name='animalChicken']/drop[@event='Harvest' and @name='foodRawMeat']" name="name">foodRawChickenMeatITAV</setattribute>
+<append xpath="//entity_class[@name='animalChicken']">
+    <drop event="Harvest" name="foodEgg" tag="butcherHarvest" count="1"/>
+</append>
+
+<!-- Tagging zombie bear so it can proc buff for hunter -->
+<append xpath="//entity_class[@name='animalZombieBear']/property[@name='Tags']/@value">,entityITAV</append>
+
+</configs>
