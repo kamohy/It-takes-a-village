@@ -20,7 +20,7 @@
 <remove xpath="//item[@name='drugFortBites']" />
 <remove xpath="//item[@name='drugRecog']" />
 <remove xpath="//item[@name='drinkJarGrandpasAwesomeSauce']" />
-	
+<remove xpath="//item[@name='toolForgeCrucibleSchematic']" />	
 <!-- Tweaking some loots -->
 <insertAfter xpath="/lootcontainers/lootgroup[@name='treasureAmmo']">
 	<lootgroup name="noteDadJokesITAV" count="1">
@@ -706,7 +706,7 @@ makes the looter more financially self sustained than if they had to buy all the
 <remove xpath="//item[@name='motionsensorSchematic']" />
 <remove xpath="//item[@name='batterybankSchematic']" />
 <remove xpath="//item[@name='meleeToolRepairT3NailgunSchematic']" />
-<remove xpath="//item[@name='toolForgeCrucibleSchematic']" />
+
 <remove xpath="//item[@name='meleeToolIronSetSchematic']" />
 <remove xpath="//item[@name='meleeToolSalvageT1WrenchSchematic']" />
 <remove xpath="//item[@name='meleeToolSteelSetSchematic']" />
