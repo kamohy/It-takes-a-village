@@ -389,6 +389,150 @@
 		<property name="Group" value="Resources"/>
 	</item>
 	
+	<item name="resourceEggCartonOneITAV">
+		<property name="CustomIcon" value="questCassadoreSupplies"/>
+		<property name="ItemTypeIcon" value="treasure"/>
+		<property name="CustomIconTint" value="105,105,105" />
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="SellableToTrader" value="true"/>
+		<property name="EconomicValue" value="30" />
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="Group" value="Resources"/>
+		<property class="Action0">
+			<property name="Class" value="OpenBundle"/>
+			<property name="Delay" value="0"/>
+			<property name="Use_time" value="0"/>
+			<property name="Sound_start" value="close_garbage"/>
+			<property name="Create_item" value="foodEgg"/>
+			<property name="Create_item_count" value="1"/>
+		</property>
+		<property name="DescriptionKey" value="resourceEggCartonITAVDesc"/>
+	</item>
+	
+	<item name="resourceEggCartonTwoITAV">
+		<property name="CustomIcon" value="questCassadoreSupplies"/>
+		<property name="ItemTypeIcon" value="treasure"/>
+		<property name="CustomIconTint" value="105,105,105" />
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="SellableToTrader" value="true"/>
+		<property name="EconomicValue" value="60" />
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="Group" value="Resources"/>
+		<property class="Action0">
+			<property name="Class" value="OpenBundle"/>
+			<property name="Delay" value="0"/>
+			<property name="Use_time" value="0"/>
+			<property name="Sound_start" value="close_garbage"/>
+			<property name="Create_item" value="foodEgg"/>
+			<property name="Create_item_count" value="2"/>
+		</property>
+		<property name="DescriptionKey" value="resourceEggCartonITAVDesc"/>
+	</item>
+	
+	<item name="resourceEggCartonThreeITAV">
+		<property name="CustomIcon" value="questCassadoreSupplies"/>
+		<property name="ItemTypeIcon" value="treasure"/>
+		<property name="CustomIconTint" value="105,105,105" />
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="SellableToTrader" value="true"/>
+		<property name="EconomicValue" value="90" />
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="Group" value="Resources"/>
+		<property class="Action0">
+			<property name="Class" value="OpenBundle"/>
+			<property name="Delay" value="0"/>
+			<property name="Use_time" value="0"/>
+			<property name="Sound_start" value="close_garbage"/>
+			<property name="Create_item" value="foodEgg"/>
+			<property name="Create_item_count" value="3"/>
+		</property>
+		<property name="DescriptionKey" value="resourceEggCartonITAVDesc"/>
+	</item>
+	
+	<item name="resourceEggCartonFourITAV">
+		<property name="CustomIcon" value="questCassadoreSupplies"/>
+		<property name="ItemTypeIcon" value="treasure"/>
+		<property name="CustomIconTint" value="105,105,105" />
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="SellableToTrader" value="true"/>
+		<property name="EconomicValue" value="120" />
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="Group" value="Resources"/>
+		<property class="Action0">
+			<property name="Class" value="OpenBundle"/>
+			<property name="Delay" value="0"/>
+			<property name="Use_time" value="0"/>
+			<property name="Sound_start" value="close_garbage"/>
+			<property name="Create_item" value="foodEgg"/>
+			<property name="Create_item_count" value="4"/>
+		</property>
+		<property name="DescriptionKey" value="resourceEggCartonITAVDesc"/>
+	</item>
+	
+	<item name="resourceEggCartonFiveITAV">
+		<property name="CustomIcon" value="questCassadoreSupplies"/>
+		<property name="ItemTypeIcon" value="treasure"/>
+		<property name="CustomIconTint" value="105,105,105" />
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="SellableToTrader" value="true"/>
+		<property name="EconomicValue" value="150" />
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="Group" value="Resources"/>
+		<property class="Action0">
+			<property name="Class" value="OpenBundle"/>
+			<property name="Delay" value="0"/>
+			<property name="Use_time" value="0"/>
+			<property name="Sound_start" value="close_garbage"/>
+			<property name="Create_item" value="foodEgg"/>
+			<property name="Create_item_count" value="5"/>
+		</property>
+		<property name="DescriptionKey" value="resourceEggCartonITAVDesc"/>
+	</item>
+	
+	<item name="resourceEggCartonSixITAV">
+		<property name="CustomIcon" value="questCassadoreSupplies"/>
+		<property name="ItemTypeIcon" value="treasure"/>
+		<property name="CustomIconTint" value="105,105,105" />
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Morganic"/>
+		<property name="Stacknumber" value="1"/>
+		<property name="SellableToTrader" value="true"/>
+		<property name="EconomicValue" value="180" />
+		<property name="EconomicBundleSize" value="1"/>
+		<property name="Group" value="Resources"/>
+		<property class="Action0">
+			<property name="Class" value="OpenBundle"/>
+			<property name="Delay" value="0"/>
+			<property name="Use_time" value="0"/>
+			<property name="Sound_start" value="close_garbage"/>
+			<property name="Create_item" value="foodEgg"/>
+			<property name="Create_item_count" value="6"/>
+		</property>
+		<property name="DescriptionKey" value="resourceEggCartonITAVDesc"/>
+	</item>
+	
 	<item name="resourceCarFrameITAV">
 		<property name="HoldType" value="45"/>
 		<property name="Tags" value="junk"/>
@@ -2783,5 +2927,11 @@
 <setattribute xpath="//item[@name='resourceMushyBrainITAV']/property[@name='EconomicValue']" name="value">1000</setattribute>
 <setattribute xpath="//item[@name='drinkJarPureMineralWater']/property[@name='EconomicValue']" name="value">80</setattribute>
 <setattribute xpath="//item[@name='toolPartFragmentITAV']/property[@name='EconomicValue']" name="value">30</setattribute>
+<setattribute xpath="//item[@name='resourceEggCartonOneITAV']/property[@name='EconomicValue']" name="value">30</setattribute>
+<setattribute xpath="//item[@name='resourceEggCartonTwoITAV']/property[@name='EconomicValue']" name="value">60</setattribute>
+<setattribute xpath="//item[@name='resourceEggCartonThreeITAV']/property[@name='EconomicValue']" name="value">90</setattribute>
+<setattribute xpath="//item[@name='resourceEggCartonFourITAV']/property[@name='EconomicValue']" name="value">120</setattribute>
+<setattribute xpath="//item[@name='resourceEggCartonFiveITAV']/property[@name='EconomicValue']" name="value">150</setattribute>
+<setattribute xpath="//item[@name='resourceEggCartonSixITAV']/property[@name='EconomicValue']" name="value">180</setattribute>
 
 </configs>

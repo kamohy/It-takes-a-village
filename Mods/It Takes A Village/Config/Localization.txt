@@ -301,6 +301,13 @@ LightPorchLight04ITAVSchematic,items,,,,"Iron Porch Lamp"
 LightCeilingLight02ITAVSchematic,items,,,,"Iron Ceiling Lamp"
 LightCeilingLight02BrassITAVSchematic,items,,,,"Brass Ceiling Lamp"
 
+resourceEggCartonOneITAV,items,,,,"Carton of Cassadore Eggs"
+resourceEggCartonTwoITAV,items,,,,"Carton of Cassadore Eggs"
+resourceEggCartonThreeITAV,items,,,,"Carton of Cassadore Eggs"
+resourceEggCartonFourITAV,items,,,,"Carton of Cassadore Eggs"
+resourceEggCartonFiveITAV,items,,,,"Carton of Cassadore Eggs"
+resourceEggCartonSixITAV,items,,,,"Carton of Cassadore Eggs"
+resourceEggCartonITAVDesc,items,,,,"A carton of Cassadore's delicious eggs. It smells a bit foul - open at your own peril."
 
 foodRawChickenMeatITAV,items,,,,"Raw Chicken Meat"
 foodRawChickenMeatITAVDesc,items,,,,"Chicken Meat can be eaten raw but is better charred, grilled or boiled at a campfire. Can be prepared for better cooking by a Cook."

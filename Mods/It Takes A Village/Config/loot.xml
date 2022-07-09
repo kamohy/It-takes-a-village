@@ -153,7 +153,18 @@
 		<item name="drugCovertCats" loot_prob_template="low" />
 		<item name="drugSkullCrushers" loot_prob_template="low" />
 	</lootgroup>
+	
+	<lootgroup name="groupEggCartonsITAV" count="1" force_prob="true">
+		<item name="resourceEggCartonOneITAV" loot_prob_template="low"/>
+		<item name="resourceEggCartonTwoITAV" loot_prob_template="medLow"/>
+		<item name="resourceEggCartonThreeITAV" loot_prob_template="low"/>
+		<item name="resourceEggCartonFourITAV" loot_prob_template="ratherLow"/>
+		<item name="resourceEggCartonFiveITAV" loot_prob_template="veryLow"/>
+		<item name="resourceEggCartonSixITAV" loot_prob_template="superLow"/>
+	</lootgroup>
 </insertAfter>
+
+
 
 <append xpath="/lootcontainers">
 	<lootgroup name="groupMailbox01ITAV">
@@ -199,6 +210,9 @@
 
 <remove xpath="//item[@name='gunHandgunT1Pistol']" />
 
+<append xpath="//lootgroup[@name='groupCupboard01']">
+	<item group="groupEggCartonsITAV" loot_prob_template="low" />
+</append>
 
 <remove xpath="/lootcontainers/lootgroup[@name='groupValuablesExtraLarge']/item[@name='oldCash']" />
 <setattribute xpath="/lootcontainers/lootgroup[@name='groupValuablesMed']/item[@name='resourceRawDiamond']" name="count">1</setattribute>
