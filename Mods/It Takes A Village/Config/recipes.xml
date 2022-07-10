@@ -26,7 +26,7 @@
 	
 	<append xpath="/recipes">
 	
-		<recipe name="resourceClayLumpBundle" count="1" craft_time="600" craft_area="workbench" tags="learnable">
+		<recipe name="resourceClayLumpBundle" craft_exp_gain="0" count="1" craft_time="600" craft_area="workbench" tags="learnable">
 			<ingredient name="resourceClayLump" count="6000"/>
 		</recipe>
 		
@@ -56,7 +56,8 @@
 		</recipe>		
 	</append>	
 	
-	<setattribute xpath="//recipe[starts-with(@name, 'resource') and contains(@name, 'Bundle') and not(contains(@name, 'GunPowder'))]" name="craft_area">workbench</setattribute>
+	<setattribute xpath="//recipe[starts-with(@name, 'resource') and contains(@name, 'Bundle') and not(contains(@name, 'GunPowder'))]" name="craft_area">workbench</setattribute> 
+	<setattribute xpath="//recipe[starts-with(@name, 'resource') and contains(@name, 'Bundle') and not(contains(@name, 'GunPowder'))]" name="craft_exp_gain">0</setattribute>
 	<setattribute xpath="//recipe[starts-with(@name, 'resource') and contains(@name, 'Bundle')]" name="craft_time">600</setattribute> 
 	
 	<insertAfter xpath="//recipe[@name='resourceCoalBundle']">
@@ -1547,9 +1548,9 @@
 	<!-- Alternative arrow/bolt recipes with wood and feather instead of scrap polymer -->
 	<append xpath="/recipes">
 	
-	<recipe name="resourceDoorKnob" count="1" craft_time="12" craft_area="forge" >
-		<ingredient name="resourceScrapBrass" count="50"/>
-		<ingredient name="resourceClayLump" count="1"/>
+	<recipe name="resourceDoorKnob" material_based="true" count="1" craft_time="12" craft_area="forge" >
+		<ingredient name="unit_brass" count="50"/>
+		<ingredient name="unit_clay" count="5"/>
 	</recipe>
 	
 
@@ -1561,9 +1562,9 @@
 		<ingredient name="resourceAnimalFat" count="1"/>
 	</recipe>
 
-	<recipe name="ammoBundleArrowFlaming" count="1" craft_time="360" craft_area="workbench" tags="learnable">
+	<recipe name="ammoBundleArrowFlaming" craft_exp_gain="0" count="1" craft_time="360" craft_area="workbench" tags="learnable">
 		<ingredient name="resourceArrowHeadSteelAP" count="80"/>
-		<ingredient name="resourceScrapPolymers" count="160"/>
+		<ingredient name="resourceFeather" count="500"/>
 		<ingredient name="resourceGunPowder" count="160"/>
 		<ingredient name="resourceCloth" count="80"/>
 		<ingredient name="resourceAnimalFat" count="80"/>
