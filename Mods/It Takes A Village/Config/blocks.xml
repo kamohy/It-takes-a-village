@@ -19,6 +19,7 @@
 <remove xpath="//drop[@name='resourceSilverNugget']"/>
 <remove xpath="//block[@name='cntVendingMachineTrader']/property[@name='TraderID']" />
 
+<setattribute xpath="//drop[@event='Harvest' and @name='resourceForgedSteel' and @tag='salvageHarvest']" name="count">0</setattribute>
 <setattribute xpath="//block[@name='wallTorchLightPlayer' or @name='candleWallLightPlayer' or @name='burningBarrelPlayer']/property[@name='HeatMapStrength']" name="value">0</setattribute>
 
 

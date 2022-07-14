@@ -6,7 +6,7 @@
 <setattribute xpath="//item[starts-with(@name, 'book')]/property[@name='EconomicValue']" name="value">2000</setattribute>
 <setattribute xpath="//item[starts-with(@name, 'qt_')]/property[@name='EconomicValue']" name="value">20000</setattribute> <!-- Treasure maps -->
 <setattribute xpath="//item[contains(@name, 'Schematic')]/property[@name='EconomicValue']" name="value">2000</setattribute>
-<setattribute xpath="//item[@name='ammoGasCan']/property[@name='EconomicBundleSize']" name="value">4</setattribute>
+<!--<setattribute xpath="//item[@name='ammoGasCan']/property[@name='EconomicBundleSize']" name="value">4</setattribute> -->
 
 <setattribute xpath="//item[@name='casinoCoin']/property[@name='Material']" name="value">Morganic</setattribute> <!-- At current dropamounts of coins, they would devalue bullet casings vehemently if smeltable to brass -->
 
@@ -36,7 +36,7 @@
 
 <setattribute xpath="//item[@name='resourceWood']/property[@name='FuelValue']" name="value">500</setattribute> <!-- 50 in vanilla-->
 
-<!-- Tweaking Pumpkin Cheesecake to give beer buff instead of bartering -->
+<!-- Tweaking bartering related stuff -->
 <remove xpath="//item[@name='foodPumpkinCheesecake']/effect_group/display_value" />
 <remove xpath="//item[@name='foodPumpkinCheesecake']/effect_group/triggered_effect[@cvar='$buffPumpkinCheesecakeDuration']" />
 <remove xpath="//item[@name='foodPumpkinCheesecake']/effect_group/triggered_effect[@buff='buffPumpkinCheesecake']" />
@@ -53,6 +53,8 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBeer"/>
     </effect_group>
 </append>
+
+<remove xpath="//item[@name='apparelCigar']/effect_group/passive_effect[starts-with(@name,'Bartering')]"/>
 
 <append xpath="//item[@name='foodBoiledMeat']">
 	<property name="CustomIcon" value="resourceCandyTin" /> 
@@ -153,10 +155,20 @@
 </insertAfter>
 
 
-
+<!-- Clearing known professions, as the block to learning too many professions is only enforced on attempting to read a profession book. Ie books need to be re-read, or players can get more than max number of professions after drinking the elixir. -->
 <append xpath="//item[@name='drinkJarGrandpasForgettingElixir']/effect_group">
 	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="set" value="0"/>
-	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="1"/>
+	<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="4"/> -->
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntSmelterITAV" operation="set" value="0"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntMinerITAV" operation="set" value="0"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntCookITAV" operation="set" value="0"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntFarmerITAV" operation="set" value="0"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntArmorerITAV" operation="set" value="0"/>			
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntChemistITAV" operation="set" value="0"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntRoboticsITAV" operation="set" value="0"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntScientistITAV" operation="set" value="0"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntRunnerITAV" operation="set" value="0"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntReaperITAV" operation="set" value="0"/>
 </append>
 
 <!-- Locking  items behind ITAV perks -->
@@ -201,6 +213,23 @@
 <append xpath="//property[(@name='Tags' and contains(@value, 'perkTurrets'))]/@value">,perkRoboticsITAV</append>
 <append xpath="//property[(@name='Tags' and contains(@value, 'perkSalvageOperations'))]/@value">,perkRunnerITAV</append>
 <setattribute xpath="//passive_effect[@tags='perkSalvageOperations']" name="tags">perkRunnerITAV</setattribute>
+
+<!-- Making you take dmg when using adv tools to encourage use of more consumables for big mining sessions -->
+<append xpath="//item[@name='meleeToolPickT1IronPickaxe']">
+    <effect_group>
+        <triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyStats" target="self" stat="health" operation="subtract" value="0.3" /> 
+        <triggered_effect trigger="onSelfSecondaryActionStart" action="ModifyStats" target="self" stat="health" operation="subtract" value="0.6" /> 
+    </effect_group>
+</append>
+<append xpath="//item[@name='meleeToolPickT2SteelPickaxe']">
+    <effect_group>
+        <triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyStats" target="self" stat="health" operation="subtract" value="0.3" /> 
+        <triggered_effect trigger="onSelfSecondaryActionStart" action="ModifyStats" target="self" stat="health" operation="subtract" value="0.6" /> 
+    </effect_group>
+</append>
+<!-- To allow for scaling of motorized tool fuel consumption -->
+<setattribute xpath="//item[@name='meleeToolPickT3Auger' or @name='meleeToolAxeT3Chainsaw']/property[@class='Action0']/property[@name='Magazine_items']" name="value">ammoGasCanToolITAV</setattribute>
+
 
 <!-- Making Lucky Looter books affect relevant (existing) loots -->
 <append xpath="//item[@name='resourceBulletCasing']"><property name="Tags" value="brass" /></append>
@@ -387,6 +416,38 @@
 		<property name="RepairTime" value="3"/>
 		<property name="RepairAmount" value="32000"/>
 		<property name="Group" value="Resources"/>
+	</item>
+	
+	<item name="ammoGasCanToolITAV">
+		<property name="Tags" value="gasoline" />
+		<property name="CustomIcon" value="ammoGasCan"/>
+		<property name="CustomIconTint" value="255,223,13" />
+		<property name="HoldType" value="45" />
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab" />
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
+		<property name="Material" value="MFuelBarrelMetal" />
+		<property name="Stacknumber" value="10000" /> <!-- STK resource -->
+		<property name="FuelValue" value="4" />
+		<property name="Group" value="Resources,Chemicals,CFChemicals,Ammo" />
+		<property name="UnlockedBy" value="perkRunnerITAV"></property>
+		<property name="CraftingIngredientTime" value=".05" />
+		<property name="EconomicValue" value="2" />
+		<property name="EconomicBundleSize" value="1" />
+	</item>
+	
+	
+	<item name="ammoGasCanToolITAVBundle">
+		<property name="Extends" value="resourceRockSmallBundle" />
+		<property name="CustomIcon" value="ammoGasCan" />
+		<property name="CustomIconTint" value="255,223,13" />
+		<property name="UnlockedBy" value="perkRunnerITAV" />
+		<property class="Action0">
+			<property name="Create_item" value="ammoGasCanToolITAV" />
+			<property name="Create_item_count" value="10000" />
+		</property>
+		<property name="Group" value="Resources,Chemicals,CFChemicals" />
+		<property name="EconomicValue" value="13400" />
+		<property name="EconomicBundleSize" value="1" />
 	</item>
 	
 	<item name="resourceEggCartonOneITAV">
@@ -1276,67 +1337,6 @@
 </item> -->
 
 <append xpath="/items"> 
-
-<!-- <item name="bookNextTraderMasterITAV">
-    <property name="Extends" value="schematicMaster"/>
-    <property name="CustomIcon" value="questMaster"/>
-	<property name="CreativeMode" value="None"/>
-    <property name="DescriptionKey" value="perkFiremansAlmanacHeatLongDesc"/>
-    <property name="Stacknumber" value="1"/>
-    <property name="EconomicValue" value="100"/>
-    <property name="Group" value="Books,Mods,BooksOnly"/>
-	<property name="SellableToTrader" value="true" />
-    <property class="Action0">
-        <property name="Class" value="Eat"/>
-        <property name="Delay" value="1.0"/>
-        <property name="Use_time" value="..."/>
-        <property name="Sound_start" value="read_skillbook"/>
-    </property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="next_trader_readA"/>
-	</effect_group>
-</item>
-
-<item name="bookNextTraderAITAV">
-    <property name="Extends" value="bookNextTraderMasterITAV"/>
-    <property name="CustomIcon" value="questMaster"/>
-	<property name="CustomIconTint" value="e6194B" />
-	<property name="CreativeMode" value="Dev"/>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="next_trader_readA"/>
-	</effect_group>
-</item>
-
-<item name="bookNextTraderBITAV">
-    <property name="Extends" value="bookNextTraderMasterITAV"/>
-    <property name="CustomIcon" value="questMaster"/>
-	<property name="CustomIconTint" value="f58231" />
-	<property name="CreativeMode" value="Dev"/>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="next_trader_readB"/>
-	</effect_group>
-</item>
-
-<item name="bookNextTraderCITAV">
-    <property name="Extends" value="bookNextTraderMasterITAV"/>
-    <property name="CustomIcon" value="questMaster"/>
-	<property name="CustomIconTint" value="bfef45" />
-	<property name="CreativeMode" value="Dev"/>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="next_trader_readC"/>
-	</effect_group>
-</item>
-
-<item name="bookNextTraderDITAV">
-    <property name="Extends" value="bookNextTraderMasterITAV"/>
-    <property name="CustomIcon" value="questMaster"/>
-	<property name="CustomIconTint" value="3cb44b" />
-	<property name="CreativeMode" value="Dev"/>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="next_trader_readD"/>
-	</effect_group>
-</item> -->
-
 
 
 <!-- Adding Trade Profession Perk Books to unlock specific Professions -->
@@ -2423,11 +2423,13 @@
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntMinerITAV" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntCookITAV" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntFarmerITAV" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntArmorerITAV" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntArmorerITAV" operation="set" value="0"/>			
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntChemistITAV" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntRoboticsITAV" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntScientistITAV" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntRunnerITAV" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntReaperITAV" operation="set" value="0"/>
+			<!--<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="1"/> -->
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="player#death" play_in_head="true"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="player_death_stinger" play_in_head="true"/>
@@ -2933,5 +2935,7 @@
 <setattribute xpath="//item[@name='resourceEggCartonFourITAV']/property[@name='EconomicValue']" name="value">120</setattribute>
 <setattribute xpath="//item[@name='resourceEggCartonFiveITAV']/property[@name='EconomicValue']" name="value">150</setattribute>
 <setattribute xpath="//item[@name='resourceEggCartonSixITAV']/property[@name='EconomicValue']" name="value">180</setattribute>
+<setattribute xpath="//item[@name='ammoGasCanToolITAV']/property[@name='EconomicValue']" name="value">2</setattribute>
+<setattribute xpath="//item[@name='ammoGasCanToolITAVBundle']/property[@name='EconomicValue']" name="value">13400</setattribute>
 
 </configs>

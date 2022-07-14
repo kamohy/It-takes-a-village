@@ -11,43 +11,6 @@
 </append>
 
 <append xpath="/gameevents">
-
-	<!-- <action_sequence name="next_trader_readA">
-		<property name="allow_user_trigger" value="false" />
-		<property name="action_type" value="Game" />		
-		<action class="AddQuest">
-			<property name="quest" value="tier2_nexttrader" />
-			<property name="phase" value="1" />
-		</action>
-	</action_sequence>
-	
-	<action_sequence name="next_trader_readB">
-		<property name="allow_user_trigger" value="false" />
-		<property name="action_type" value="Game" />		
-		<action class="AddQuest">
-			<property name="quest" value="tier3_nexttrader" />
-			<property name="phase" value="1" />
-		</action>
-	</action_sequence>
-	
-	<action_sequence name="next_trader_readC">
-		<property name="allow_user_trigger" value="false" />
-		<property name="action_type" value="Game" />		
-		<action class="AddQuest">
-			<property name="quest" value="tier4_nexttrader" />
-			<property name="phase" value="1" />
-		</action>
-	</action_sequence>
-	
-	<action_sequence name="next_trader_readD">
-		<property name="allow_user_trigger" value="false" />
-		<property name="action_type" value="Game" />		
-		<action class="AddQuest">
-			<property name="quest" value="tier5_nexttrader" />
-			<property name="phase" value="1" />
-		</action>
-	</action_sequence> -->
-	
 	
 	<action_sequence name="first_book_read_SmelterITAV">
 		<requirement class="HasBuff">

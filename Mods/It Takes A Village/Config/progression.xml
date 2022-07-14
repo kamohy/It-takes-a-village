@@ -134,8 +134,8 @@
 		<!-- Miner69r effects to MinerITAV -->
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="perkMinerITAV,diggerITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolAllSteelParts,resourceRockSmallBundle,resourceWoodBundle,resourceScrapIronBundle,resourcePotassiumNitratePowderBundle,resourceLeadBundle,resourceCoalBundle,resourceOilShaleBundle"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="workbenchMinerT2ITAV,meleeToolAxeT3ChainsawParts"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="resourceRockSmallBundle,resourceWoodBundle,resourceScrapIronBundle,resourcePotassiumNitratePowderBundle,resourceLeadBundle,resourceCoalBundle,resourceOilShaleBundle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="workbenchMinerT2ITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags=""/>
 			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkMinerITAV"/>
 			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkMinerITAV"/>
@@ -453,7 +453,7 @@
 			<!--<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkRunnerITAV"/> --><!-- fake crafting perk that is used to scale resources or quality like on carBattery -->
 
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="workbench,vehicleWheels,vehicleBicycleChassis,vehicleBicycleHandlebars,crushedCars,carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars,powerizersBabyITAV,workBootsBabyITAV,cntLotteryBoxPlaceableITAV"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="resourceOil,ammoGasCanBundle,vehicleMotorcycleChassis,vehicleMotorcycleHandlebars,workbenchRunnerT2ITAV,powerizersITAV,workBootsITAV"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="ammoGasCanToolITAV,ammoGasCanToolITAVBundle,resourceOil,ammoGasCanBundle,vehicleMotorcycleChassis,vehicleMotorcycleHandlebars,workbenchRunnerT2ITAV,powerizersITAV,workBootsITAV"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3" value="1" tags="vehicle4x4TruckChassis,vehicle4x4TruckAccessories"/>
 
 			<effect_description level="1" desc_key="perkRunnerITAVRank1Desc" long_desc_key="perkRunnerITAVRank1LongDesc"/>
@@ -597,7 +597,7 @@
 </perks>
 </append>
 
-
+<setattribute xpath="//passive_effect[@name='CraftingTier' and @value='1,2,3,4,4']" name="value">1,2,3,4,5</setattribute> <!-- Allowing primitive weapons and tools to be crafted to tier 6 -->
 <remove xpath="//perk[@name='perkEnforcerIntimidation']/effect_group/passive_effect"/>
 <append xpath="//perk[@name='perkEnforcerIntimidation']/effect_group">
 	<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".10"/>

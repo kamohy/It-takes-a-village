@@ -61,31 +61,31 @@
 	<setattribute xpath="//recipe[starts-with(@name, 'resource') and contains(@name, 'Bundle')]" name="craft_time">600</setattribute> 
 	
 	<insertAfter xpath="//recipe[@name='resourceCoalBundle']">
-		<recipe name="resourceRockSmallBundle" count="1" craft_area="workbenchMinerT2ITAV" craft_time="300" tags="learnable">
+		<recipe name="resourceRockSmallBundle" count="1" craft_area="workbenchMinerT2ITAV" craft_time="30" tags="learnable">
 			<ingredient name="resourceRockSmall" count="6000"/>
 		</recipe>
 
-		<recipe name="resourceWoodBundle" count="1" craft_time="300" craft_area="workbenchMinerT2ITAV" tags="learnable">
+		<recipe name="resourceWoodBundle" count="1" craft_time="30" craft_area="workbenchMinerT2ITAV" tags="learnable">
 			<ingredient name="resourceWood" count="6000"/>
 		</recipe>
 
-		<recipe name="resourceScrapIronBundle" count="1" craft_time="300" craft_area="workbenchMinerT2ITAV" tags="learnable">
+		<recipe name="resourceScrapIronBundle" count="1" craft_time="30" craft_area="workbenchMinerT2ITAV" tags="learnable">
 			<ingredient name="resourceScrapIron" count="6000"/>
 		</recipe>
 
-		<recipe name="resourceOilShaleBundle" count="1" craft_time="300" craft_area="workbenchMinerT2ITAV" tags="learnable">
+		<recipe name="resourceOilShaleBundle" count="1" craft_time="30" craft_area="workbenchMinerT2ITAV" tags="learnable">
 			<ingredient name="resourceOilShale" count="6000"/>
 		</recipe>
 
-		<recipe name="resourcePotassiumNitratePowderBundle" count="1" craft_time="300" craft_area="workbenchMinerT2ITAV" tags="learnable">
+		<recipe name="resourcePotassiumNitratePowderBundle" count="1" craft_time="30" craft_area="workbenchMinerT2ITAV" tags="learnable">
 			<ingredient name="resourcePotassiumNitratePowder" count="6000"/>
 		</recipe>
 
-		<recipe name="resourceLeadBundle" count="1" craft_time="300" craft_area="workbenchMinerT2ITAV" tags="learnable">
+		<recipe name="resourceLeadBundle" count="1" craft_time="30" craft_area="workbenchMinerT2ITAV" tags="learnable">
 			<ingredient name="resourceScrapLead" count="6000"/>
 		</recipe>
 
-		<recipe name="resourceCoalBundle" count="1" craft_time="300" craft_area="workbenchMinerT2ITAV" tags="learnable">
+		<recipe name="resourceCoalBundle" count="1" craft_time="30" craft_area="workbenchMinerT2ITAV" tags="learnable">
 			<ingredient name="resourceCoal" count="6000"/>
 		</recipe>
 		
@@ -1543,6 +1543,16 @@
 			<ingredient name="resourceForgedSteel" count="20"/>
 		</recipe>
 		
+	<recipe name="ammoGasCanToolITAV" count="400" craft_exp_gain="0" craft_area="workbenchRunnerT2ITAV" tags="learnable">
+		<ingredient name="ammoGasCan" count="400" />
+		<ingredient name="resourceOil" count="1" />
+	</recipe>
+	
+	<recipe name="ammoGasCanToolITAVBundle" count="1" craft_exp_gain="0" craft_time="60" craft_area="workbenchRunnerT2ITAV" tags="learnable">
+		<ingredient name="ammoGasCan" count="8000" />
+		<ingredient name="resourceOil" count="20" />
+	</recipe>
+		
 	</insertAfter>
 	
 	<!-- Alternative arrow/bolt recipes with wood and feather instead of scrap polymer -->
@@ -1715,7 +1725,11 @@
 	<!-- Updating recipes to being tagged with ITAV on top of old perks -->
 	<append xpath="//recipe[contains(@tags, 'perkAdvancedEngineering')]/@tags">,perkSmelterITAV</append>
 	<setattribute xpath="//recipe[@name='meleeToolRepairT1ClawHammer' or @name='meleeToolAxeT1IronFireaxe' or @name='meleeToolAxeT2SteelAxe' or @name='meleeToolShovelT2SteelShovel' or @name='meleeToolShovelT1IronShovel' or @name='meleeToolPickT2SteelPickaxe' or @name='meleeToolPickT1IronPickaxe']" name="tags">learnable,perkArmorerITAV</setattribute>
-	<append xpath="//recipe[contains(@tags, 'perkMiner69r')]/@tags">,perkMinerITAV,perkArmorerITAV</append>
+	<append xpath="//recipe[contains(@tags, 'perkMiner69r')]/@tags">,perkMinerITAV,perkArmorerITAV</append>	
+	<setattribute xpath="//recipe[@name='meleeToolRepairT0StoneAxe']" name="tags">perkMinerITAV</setattribute>
+    <setattribute xpath="//recipe[@name='meleeToolPickT3Auger']" name="tags">learnable,perkArmorerITAV</setattribute>
+    <setattribute xpath="//recipe[@name='meleeToolAxeT3Chainsaw']" name="tags">learnable,perkArmorerITAV</setattribute>
+	
 	<append xpath="//recipe[contains(@tags, 'perkMasterChef')]/@tags">,perkCookITAV</append>	
 	<append xpath="//recipe[contains(@tags, 'perkLightArmor') or contains(@tags, 'perkHeavyArmor')]/@tags">,perkArmorerITAV</append>
 	<setattribute xpath="//recipe[@name='gunExplosivesT3RocketLauncher']" name="tags">learnable,perkArmorerITAV</setattribute>
@@ -1845,7 +1859,7 @@
 	
 	
 	<!-- Moving craft_areas for advanced recipes to advanced ITAV worktables -->
-	<setattribute xpath="//recipe[@name='meleeToolPickT3Auger' or @name='meleeToolAxeT3Chainsaw']" name="craft_area">workbenchMinerT2ITAV</setattribute>
+	<setattribute xpath="//recipe[@name='meleeToolPickT3Auger' or @name='meleeToolAxeT3Chainsaw']" name="craft_area">workbench</setattribute>
 		
 	<setattribute xpath="//recipe[@name='foodGumboStew' or @name='foodShepardsPie' or @name='foodSpaghetti' or @name='foodTunaFishGravyToast' or @name='drinkJarGrandpasMoonshine' or @name='drinkJarGrandpasAwesomeSauce' or @name='drinkJarGrandpasLearningElixir']" name="craft_area">campfireT2ITAV</setattribute>
 

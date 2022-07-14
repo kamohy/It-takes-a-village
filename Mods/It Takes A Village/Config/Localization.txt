@@ -84,10 +84,10 @@ bookProfessionReaperITAVDesc,progression,perk  book,,,"Reapers harvest flesh, or
 bookProfessionDecoratorITAV,Items,perk  book,,,"Profession: Decorator"
 bookProfessionDecoratorITAVDesc,Items,perk  book,,,"Decorators can craft invisible dyes as well as clothing mods that change appearance of apparel while adding pockets to them. They can also create a plethora of decorative items, such as flowers, signs, lamps, appliances, posters and clutter."
 
-resourceCerebralSpinalFluidITAV,Items,,,,"Cerebral Spinal Fluid"
-resourceCerebralSpinalFluidITAVDesc,Items,,,,"Cerebral Spinal Fluid can be used to transfer seemingly deceased knowledge to the pages of profession books."
+resourceCerebralSpinalFluidITAV,Items,,,,"Cerebrospinal Fluid"
+resourceCerebralSpinalFluidITAVDesc,Items,,,,"Cerebrospinal Fluid can be used to transfer seemingly deceased knowledge to the pages of profession books."
 resourceMushyBrainITAV,Items,,,,"Mushy Zombie Brain"
-resourceMushyBrainITAVDesc,Items,,,,"Some brains are intact enough to extract Cerebral Spinal Fluid from. A Reaper is able to obtain more Cerebral Spinal Fluid from a single brain than anyone else."
+resourceMushyBrainITAVDesc,Items,,,,"Some brains are intact enough to extract Cerebrospinal Fluid from. A Reaper is able to obtain more Cerebrospinal Fluid from a single brain than anyone else."
 drugHealthBarInsanityITAV,Items,,,,"Musty Munchies"
 drugHealthBarInsanityITAVDesc,Items,,,,"These candies are softer than you'd expect, and the smell is unpleasantly familiar... But they'll increase your max health, your resistance to critical injuries and the speed at which they heal naturally either way!"
 drugSkullCrushersInsanityITAV,Items,,,,"Pungent Punchies"
@@ -411,7 +411,8 @@ perkElectrocutionerRank4LongDesc,progression,perk Int,,,"You are lethal with stu
 perkParkourRank4LongDesc,progression,perk Agi,,,"You are now a parkour master and can navigate difficult situations easily. Reduce stamina cost of jumping by 40%. Increase safe fall distance by 5 meters, can jump 2 meters higher, and never get a sprained or broken leg when falling. Ask a Mechanic to craft a pair of Powerizer boots to take your parkouring to the next level!"
 perkLockPickingRank1LongDesc,progression,perk Per,,,Burglar. You are starting to make a name for yourself. You can pick locks 20% faster and have a 10% lower chance to break lockpicks.
 perkEnforcerIntimidationLongDesc,progression,perk  book,,,Intimidation: Tired of getting overrun by punk zombies? Watch them run from you when you reload your .44 gun 10% faster.
-
+apparelCigar,items,Clothes,,,Cigar
+apparelCigarDesc,items,Clothes,,,Look intimidating and become extra strong!
 
 plantedCropsGroupDesc,blocks,Farming,,,"Plant these seeds on a craftable Farm Plot block to grow plants for you to harvest.\n\nWhen harvested, there is a 65% chance to get a seed back for replanting."
 
@@ -472,12 +473,12 @@ perkSmelterITAVRank2LongDesc,progression,perk Pro,,,"Unlocks crafting of the bel
 perkSmelterITAVRank3Desc,progression,perk,,,Serious Steel
 perkSmelterITAVRank3LongDesc,progression,perk Pro,,,"Unlocks crafting of forged steel, battery bank, nailgun and various powered doors."
 
-perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster. Perform high-end crafts at the Advanced Miner's Table."
+perkMinerITAVDesc,progression,perk Pro,,,"Maximize your mining efforts by increasing harvest of resources and tool damage to bring down rocks and trees faster. Craft bundles faster at the Advanced Miner's Table."
 perkMinerITAVName,progression,perk Pro,,,Miner
 perkMinerITAVRank1Desc,progression,perk Pro,,,"Woodpecker"
-perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Increase tool damage by 10% and block damage by 30% with any axe, pick, chainsaw or auger. Harvest 20% more from trees, ore and stone. Unlocks crafting of Steel Tool Parts from Tool Part Fragments. Unlocks resource bundles."
+perkMinerITAVRank1LongDesc,progression,perk Pro,,,"Increase tool damage by 10% and block damage by 30% with any axe, pick, chainsaw or auger. Harvest 20% more from trees, ore and stone. Unlocks resource bundles."
 perkMinerITAVRank2Desc,progression,perk,,,"Choppy Chop"
-perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Increase tool damage by 20% and block damage by 60% with any axe, pick, chainsaw or auger. Harvest 40% more from trees, ore and stone. Unlocks Advanced Miner's Table. Unlocks crafting of Motorized Tool Parts from Tool Part Fragments."
+perkMinerITAVRank2LongDesc,progression,perk Pro,,,"Increase tool damage by 20% and block damage by 60% with any axe, pick, chainsaw or auger. Harvest 40% more from trees, ore and stone. Unlocks Advanced Miner's Table."
 perkMinerITAVRank3Desc,progression,perk,,,"Bang That Rock"
 perkMinerITAVRank3LongDesc,progression,perk Pro,,,"Increase tool damage by 30% and block damage by 90% with any axe, pick, chainsaw or auger. Harvest 60% more from trees, ore and stone."
 perkMinerITAVRank4Desc,progression,perk Pro,,,"Iron Fist"
@@ -501,10 +502,10 @@ perkCookITAVRank3LongDesc,progression,perk Pro,,,"Learn how to make nutritious m
 perkCookITAVRank4LongDesc,progression,perk Pro,,,"Cook for an army by making Gumbo Stew, Shepards Pie, Spaghetti, Tuna Gravy on Toast and Spicy Chicken Soup. Harvest 80% more from terrain blocks with a shovel. Unlocks the Medium Food Pile storage decoration, and the Advanced Cooking Stove."
 perkCookITAVRank5LongDesc,progression,perk Pro,,,"Learn grandpa's secret recipes that boost stats and attributes! Harvest 100% more from terrain blocks with a shovel. Unlocks the Large Food Pile storage decoration."
 
-perkArmorerITAVDesc,progression,perk Pro,,,"Craft ranged and melee weapons, as well as light and heavy armor."
+perkArmorerITAVDesc,progression,perk Pro,,,"Craft ranged and melee weapons, tools and light and heavy armor."
 perkArmorerITAVName,progression,perk Pro,,,Armorer
 perkArmorerRank1DescITAV,progression,perk Pro,,,Apprentice
-perkArmorerRank1LongDescITAV,progression,perk Pro,,,"You are now an apprentice armorer and able to craft quality 2 leather armor, iron armor, steel armor and military armor. \nUnlocks crafting of workbenches, bows, crossbows, hunting rifle, handguns, shotguns, assault rifle, sniper rifle, bladed weapons, blunt weapons, fist weapons, thrown weapons and rocket launcher. Unlocks crafting of Steel Tool Parts from Tool Part Fragments, and Tools."
+perkArmorerRank1LongDescITAV,progression,perk Pro,,,"You are now an apprentice armorer and able to craft quality 2 leather armor, iron armor, steel armor and military armor. \nUnlocks crafting of workbenches, bows, crossbows, hunting rifle, handguns, shotguns, assault rifle, sniper rifle, bladed weapons, blunt weapons, fist weapons, thrown weapons and rocket launcher. Unlocks crafting of Steel Tool Parts and Motor Tool Parts from Tool Part Fragments, and Tools."
 perkArmorerRank2DescITAV,progression,perk Pro,,,Journeyman
 perkArmorerRank2LongDescITAV,progression,perk Pro,,,"You are now a journeyman armorer and able to craft quality 3 tools, armor and weaponry."
 perkArmorerRank3DescITAV,progression,perk Pro,,,Expert
@@ -568,7 +569,7 @@ perkRunnerITAVName,progression,perk Pro,,,Mechanic
 perkRunnerITAVRank1Desc,progression,perk Pro,,,Bikes and Gambling
 perkRunnerITAVRank1LongDesc,progression,perk Pro,,,"Harvest 20% faster and recieve 20% more resources when harvesting with a wrench, ratchet or impact driver. \nUnlocks crafting of workbenches, Wrench, Lockpicks, Crushed Car wall, Wheels, Bike parts, Baby Powerizer Boots, Baby Work Boots, Minibike parts, Gas cans, Lottery Box and quality 4 Car Batteries."
 perkRunnerITAVRank2Desc,progression,perk Pro,,,Motorbiker, Boots and Engines
-perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, Powerizer Boots, Work Boots, oil, Gas can bundle, quality 5 Car Batteries, and Advanced Mechanic's Table. Can pick up mines."
+perkRunnerITAVRank2LongDesc,progression,perk Pro,,,"Harvest 60% faster and recieve 60% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of Motorcycle parts, Powerizer Boots, Work Boots, oil, tool fuel, Gas can bundle, quality 5 Car Batteries, and Advanced Mechanic's Table. Can pick up mines."
 perkRunnerITAVRank3Desc,progression,perk Pro,,,Limo out front
 perkRunnerITAVRank3LongDesc,progression,perk Pro,,,"Harvest 80% faster and recieve 100% more resources with a wrench, ratchet or impact driver. \nUnlocks crafting of  4x4 truck parts and quality 6 Car Batteries. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower."
 perkRunnerITAVRank4Desc,progression,perk Pro,,,Level 4
@@ -579,9 +580,9 @@ perkRunnerITAVRank5LongDesc,progression,perk Pro,,,""
 perkReaperITAVDesc,progression,perk Pro,,,"You are a hunter of both the living and the undead, and will stop at nothing to survive. Let your bloodthirst go rampant and use your combat skills to obtain sought after items from the most dangerous places."
 perkReaperITAVName,progression,perk Pro,,,Reaper
 perkReaperITAVRank1Desc,progression,perk Pro,,,"Into the abyss"
-perkReaperITAVRank1LongDesc,progression,perk Pro,,,"You can consume Rotting Flesh and Murky Water without being affected by dysentery. 10% increased run speed at night. Obtain 100% more Cerebral Spinal Fluid from Mushy Brains. Harvest 20% more resources from animals. Crouch to track rabbits, snakes and chickens. Deal 25% more damage to animals. Loot time decreased by 20%. You can pick locks 10% faster."
+perkReaperITAVRank1LongDesc,progression,perk Pro,,,"You can consume Rotting Flesh and Murky Water without being affected by dysentery. 10% increased run speed at night. Obtain 100% more Cerebrospinal Fluid from Mushy Brains. Harvest 20% more resources from animals. Crouch to track rabbits, snakes and chickens. Deal 25% more damage to animals. Loot time decreased by 20%. You can pick locks 10% faster."
 perkReaperITAVRank2Desc,progression,perk Pro,,,Bloody Business
-perkReaperITAVRank2LongDesc,progression,perk Pro,,,"Crouch to track deers, boars, wolves and coyotes. Obtain 300% more Cerebral Spinal Fluid from Mushy Brains. Harvest 60% more resources from animals. Can pick up mines. Loot time decreased by 40%. You can pick locks 20% faster. Unlocks crafting of Vehicle Super Charger Mod and Flesh Bags."
+perkReaperITAVRank2LongDesc,progression,perk Pro,,,"Crouch to track deers, boars, wolves and coyotes. Obtain 300% more Cerebrospinal Fluid from Mushy Brains. Harvest 60% more resources from animals. Can pick up mines. Loot time decreased by 40%. You can pick locks 20% faster. Unlocks crafting of Vehicle Super Charger Mod and Flesh Bags."
 perkReaperITAVRank3Desc,progression,perk Pro,,,Point of no return
 perkReaperITAVRank3LongDesc,progression,perk Pro,,,"Crouch to track mountain lions and bears. Harvest 100% more resources from animals, and gain a run speed boost when fighting zombie bears. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower. Loot time decreased by 60%. You can pick locks 30% faster. Unlocks crafting of Musty Munchies, Pungent Punchies and Sneaky Ickies."
 
@@ -622,8 +623,10 @@ resourceWeaponRepairKitITAV,items,Item,,,"Weapon Repair Kit"
 resourceWeaponRepairKitITAVDesc,items,Item,,,"Weapon Repair Kits are used to repair all weapons that are made of materials more advanced than wood, stone and leather."
 resourceCarFrameITAV,items,Item,,,"Car Frame"
 resourceCarFrameITAVDesc,items,Item,,,"Car Frames are used for crafting Crushed Car walls."
-
-
+ammoGasCanToolITAV,items,Item,,,"Tool Fuel"
+ammoGasCanToolITAVDesc,items,Item,,,"Tool Fuel is used to power the auger and the chainsaw. The Mechanic can make it in the advanced workbench. The recipe yields 400 units per craft."
+ammoGasCanToolITAVBundle,items,Item,,,"Stack of Tool Fuel"
+ammoGasCanToolITAVBundleDesc,items,Item,,,"Efficient to make, price and store!"
 
 MyFirstProfessionTip_title,Journal Tip,,,,Learning Professions
 MyFirstProfessionTip,Journal Tip,,,,"Complete the Profession quest and chose a reward from the trader. Once you have maxed out a Profession, you can craft a 'Profession book', which allows you to pick an additional Profession.  n\Keep maxing out your Professions to become able to learn new ones!"

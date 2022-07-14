@@ -258,12 +258,14 @@ makes the looter more financially self sustained than if they had to buy all the
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupScrapCommon']">
+	<item name="toolPartFragmentITAV" count="3,5" />
 	<item name="weaponPartFragmentITAV" count="4,8" />
 	<item name="casinoCoin" count="660,1040" loot_prob_template="med" />
 	<item name="resourceScrapIron" count="7,18" />
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupFileCabinet01']">
+	<item name="toolPartFragmentITAV" count="2,4" loot_prob_template="low" />
 	<item name="weaponPartFragmentITAV" count="4,8" loot_prob_template="low" />
 	<item name="casinoCoin" count="100,290" loot_prob_template="med" />
 	<item name="resourceScrapIron" count="7,18" loot_prob_template="med" />
@@ -315,6 +317,7 @@ makes the looter more financially self sustained than if they had to buy all the
 <remove xpath="//lootgroup[@name='groupConstructionCrate01']/item" />
 <append xpath="//lootgroup[@name='groupConstructionCrate01']">
 	<item name="resourceAcid" count ="1" loot_prob_template="veryLow"/>
+	<item name="toolPartFragmentITAV" count="49,76" />
 	<item name="sinksToiletsBlockVariantHelper"/>
 	<item name="resourceForgedSteel" loot_prob_template="low" count="2,3"/>
 
@@ -388,14 +391,15 @@ makes the looter more financially self sustained than if they had to buy all the
 	<item name="modRoboticDroneArmorPlatingModSchematic" loot_prob_template="med" />
 	<item name="modRoboticDroneMoraleBoosterModSchematic" loot_prob_template="med" />
 	<item name="drinkJarGrandpasMoonshine" />
-	<item name="drinkJarGrandpasLearningElixir"/>
+	<item name="drinkJarGrandpasLearningElixir" loot_prob_template="low" />
 	<item name="drugRecog" />
 	<item name="drugFortBites" />
 </append>
 
+<setattribute xpath="//lootgroup[@name='rareFoodDrink']/item[@name='drinkJarGrandpasLearningElixir']" name="loot_prob_template">low</setattribute>
 
 
-<!-- Replace some items in Medical loots to make Chemist more viable -->
+<!-- Replace some items in Medical loots to make Scientist more viable -->
 <setattribute xpath="//lootgroup[@name='survivalMedical']/item[@name='drugPainkillers']" name="name">resourceSewingKit</setattribute>
 
 <append xpath="//lootgroup[@name='groupMedicalHighLow']">
@@ -511,7 +515,7 @@ makes the looter more financially self sustained than if they had to buy all the
 <append xpath="//lootgroup[@name='groupZpackStrong']"><item name="resourceMushyBrainITAV" count="1" loot_prob_template="low" force_prob="true" /></append>
 <append xpath="//lootgroup[@name='groupZpackBoss']"><item name="resourceMushyBrainITAV" count="1" loot_prob_template="medLow" force_prob="true" /></append>
 
-<append xpath="//lootgroup[@name='groupBathtub']"><item name="resourceMushyBrainITAV" count="1" loot_prob_template="low" /></append>
+<append xpath="//lootgroup[@name='groupBathtub']"><item name="resourceMushyBrainITAV" count="1" loot_prob_template="veryLow" /></append>
 
 
 
@@ -693,10 +697,18 @@ makes the looter more financially self sustained than if they had to buy all the
 </append>
 
 <!-- Removing sledgehammer from tool loot groups despite it being good tool for destroying things -->
+<remove xpath="//lootgroup[@name='toolParts']/item" />
+<append xpath="//lootgroup[@name='toolParts']">
+	<item name="meleeToolAllSteelParts" count="3,8" />
+	<item name="meleeToolAxeT3ChainsawParts" count="3,8" />
+</append>
 <remove xpath="//lootgroup[@name='groupToolsT1']/item[@name='meleeWpnSledgeT1IronSledgehammer']" />
-<remove xpath="//lootgroup[@name='groupToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']" />
 <remove xpath="//lootgroup[@name='groupQuestToolsT1']/item[@name='meleeWpnSledgeT1IronSledgehammer']" />
-<!-- <remove xpath="//lootgroup[@name='groupQuestToolsT2']/item[@name='meleeWpnSledgeT3SteelSledgehammer']" /> -->
+<remove xpath="//lootgroup[@name='groupToolsT2']/item" />
+<append xpath="//lootgroup[@name='groupToolsT2']">
+	<item group="toolParts" loot_prob_template="ProbT1Cap" />
+</append>
+
 
 <remove xpath="/lootcontainers/lootgroup[@name='groupStunBaton']/item[@name='meleeWpnBatonT2StunBaton']" />
 <remove xpath="/lootcontainers/lootgroup[@name='groupStunBaton']/item[@name='meleeWpnBatonT2StunBatonSchematic']" />
@@ -707,7 +719,7 @@ makes the looter more financially self sustained than if they had to buy all the
 
 
 
-<!-- Removing/replacing schematics in lootgroups to make Smelter, Miner, Armorer, Chemist, Robotics and Runner/Mechanic more viable-->
+<!-- Removing/replacing schematics in lootgroups to make Smelter, Miner, Armorer, Scientist and Runner/Mechanic more viable-->
 
 <remove xpath="//item[@name='resourceMilitaryFiberSchematic']" />
 <remove xpath="//item[@name='poweredDoorsSchematic']" /> 
