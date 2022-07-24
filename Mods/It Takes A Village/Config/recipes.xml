@@ -1927,7 +1927,7 @@
 	</append>
 	
 	<remove xpath="//recipe[@name='resourceRepairKit']" />
-	<insertAfter xpath="//recipe[@name='resourcePaper']">
+	<insertAfter xpath="//recipe[@name='resourceNail']">
 		<recipe name="resourceRepairKit" count="1">
 			<ingredient name="resourceYuccaFibers" count="5"/>
 			<ingredient name="resourceScrapPolymers" count="4"/>

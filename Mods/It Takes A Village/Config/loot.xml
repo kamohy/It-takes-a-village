@@ -164,7 +164,10 @@
 	</lootgroup>
 </insertAfter>
 
-
+<remove xpath="//lootgroup[@name='groupGarage02']/item[@group='dyes']" />
+<append xpath="//lootgroup[@name='groupGarage02']">
+	<item name="resourcePaint" count="15" loot_prob_template="low" />
+</append>
 
 <append xpath="/lootcontainers">
 	<lootgroup name="groupMailbox01ITAV">
@@ -706,7 +709,7 @@ makes the looter more financially self sustained than if they had to buy all the
 <remove xpath="//lootgroup[@name='groupQuestToolsT1']/item[@name='meleeWpnSledgeT1IronSledgehammer']" />
 <remove xpath="//lootgroup[@name='groupToolsT2']/item" />
 <append xpath="//lootgroup[@name='groupToolsT2']">
-	<item group="toolParts" loot_prob_template="ProbT1Cap" />
+	<item group="toolParts" loot_prob_template="low" />
 </append>
 
 

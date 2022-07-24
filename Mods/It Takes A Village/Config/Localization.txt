@@ -38,10 +38,14 @@ loadingTipStoneAxe_title,UI,Loading Screen,x,,The Stone Axe
 loadingTipUnlockingRecipes,UI,Loading Screen,x,,If a recipe shows a lock item then you cannot craft it yet. Clicking on it will show you one or more ways to unlock it.\nEvery recipe that can be unlocked with a perk can also be unlocked by a book or schematic but perks typically offer extra benefits.
 loadingTipUnlockingRecipes_title,UI,Loading Screen,x,,Unlocking Recipes
 
+starterBundleProfessionNoteITAV
 
 schematicGeneralGroupDesc,items,Book,,,Reading the schematic will teach you how to craft this item. The Armorer is the only one who can make good quality tools, weapons and armor. \nSome items are crafted with parts, and parts can be crafted with fragments.
 
 starterBundleITAV,items,,,,"Hefty bag"
+starterBundleITAVDesc,items,,,,"Let's see what's inside this tightly packed bag."
+starterBundleProfessionNoteITAV,items,,,,"Professions"
+starterBundleProfessionNoteITAVDesc,items,,,,"You have a beautiful brain, but it can't cope with more than THREE professions. \n\nThe trader will give you your first profession book for free. To learn more professions after that, you need to craft the relevant profession book. \n\nIf you regret your choices, a Forgetting Elixir will set you back to square one."
 
 powerizersITAV,,,,,"Powerizer Boots"
 powerizersITAVDesc,,,,,"Increases speed while jumping by 85%, and reduces stamina cost of jumps by 75%."
@@ -100,7 +104,7 @@ ShopStoreVendingCashRegisterPlayerGroupDescITAV,blocks,Container,,,"Create your 
 xuiVendingWithOwner,UI,Menu,,,"{0}'s Shop"
 cntLotteryBoxPlaceableITAV,blocks,Container,,,"100k LOTTERY BOX!"
 cntLootLotteryBoxITAV,blocks,Container,,,"100k LOTTERY BOX!"
-cntLotteryBoxPlaceableDescITAV,blocks,Container,,,"Place and open this box for a chance to win 100.000 Duke's Casino tokens! \n\nRequires Advanced Mechanic's table to craft."
+cntLotteryBoxPlaceableDescITAV,blocks,Container,,,"Place and open this box for a chance to win 100.000 Duke's Casino tokens! \n\n Craftable by the Mechanic."
 lotteryITAV,ui_display,Item stat,,,"A chance to win 100k Duke coins:"
 lotteryPlaceITAV,ui_display,Item stat,,,"Place box on the ground to loot:"
 bodyBagYellowPlaceableITAV,blocks,,,,"Flesh Bag"
@@ -632,7 +636,7 @@ MyFirstProfessionTip_title,Journal Tip,,,,Learning Professions
 MyFirstProfessionTip,Journal Tip,,,,"Complete the Profession quest and chose a reward from the trader. Once you have maxed out a Profession, you can craft a 'Profession book', which allows you to pick an additional Profession.  n\Keep maxing out your Professions to become able to learn new ones!"
 
 quest_myFirstProfession_description_title,Journal Tip,,,,Learning Your First Profession
-quest_myFirstProfession_description,Quest,Quest Info,,,"Time to chose your Profession!\n\nProfessions are incredibly strong: Few things drop in loot, and only the Smelter can make Forged Iron, only the Cook can make food worth a damn. No one can make good weapons or armor except the Armorer. \n\nThe trader will get you started with a free book, go see them." 
+quest_myFirstProfession_description,Quest,Quest Info,,,"Time to chose your Profession!\n\nProfessions are incredibly strong: Few things drop in loot, and only the Smelter can make Forged Iron, only the Cook can make food worth a damn. No one can make good weapons or armor except the Armorer. \n\nYou can only learn THREE professions in total. \n\nThe trader will get you started with a free book, go see them." 
 quest_mySecondProfession_description_title,Journal Tip,,,,My Second Profession
 quest_mySecondProfession_description,Quest,Quest Info,,,"Time to chose your second path!\n\nYou will now be able to pick ONE (1) Profession. Only after perfecting this Profession will you be able to learn your third. \n\n...If you live that long."
 

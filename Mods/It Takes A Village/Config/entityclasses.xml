@@ -8,10 +8,10 @@
 	
 	
 <append xpath="/entity_classes/entity_class[@name='playerMale']">
-	<effect_group name="Base Effects">
-			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="set" value="1" />
-			<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="1"/>
-	</effect_group>
+    <effect_group name="Base Effects">
+            <triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="set" value="0" />
+            <triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="3"/> <!--THIS NUMBER CAN BE CHANGED TO REDUCE AMOUNT OF ALLOWED PROFESSIONS PER PLAYER. Only recommended for dedicated servers with large playerbase. Remember to also update the starter backpack note text in the localization file (search for starterBundleProfessionNoteITAVDesc) to fit the new max number of professions allowed. -->
+    </effect_group>
 </append>
 
 <setattribute xpath="//entity_class[@name='playerMale']/effect_group[@name='food/water balancing']/passive_effect[@name='FoodChangeOT' and @value='.00833']" name="value">.0125</setattribute> <!-- hunger base drain, 30/hour in vanilla, 45/hour now -->
