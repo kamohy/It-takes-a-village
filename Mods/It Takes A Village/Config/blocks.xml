@@ -22,7 +22,6 @@
 <setattribute xpath="//drop[@event='Harvest' and @name='resourceForgedSteel' and @tag='salvageHarvest']" name="count">0</setattribute>
 <setattribute xpath="//block[@name='wallTorchLightPlayer' or @name='candleWallLightPlayer' or @name='burningBarrelPlayer']/property[@name='HeatMapStrength']" name="value">0</setattribute>
 
-
 <setattribute xpath="//block[contains(@name, 'chimney')]/property[@name='CreativeMode']" name="value">Dev</setattribute>
 
 <setattribute xpath="//block[@name='treeMasterGrowing']/property[@name='PlantGrowing.GrowthRate']" name="value">126</setattribute> <!-- Attempting to make trees grow slower -->

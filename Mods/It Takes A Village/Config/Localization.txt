@@ -187,8 +187,11 @@ modApparelGhillieSuitHoodITAV,item_modifiers,mod,,,"Ghillie Hood Mod"
 modApparelGhillieSuitPantsITAV,item_modifiers,mod,,,"Ghillie Pants Mod"
 modApparelGhillieSuitJacketITAV,item_modifiers,mod,,,"Ghillie Jacket Mod"
 
-
-
+weaponsITAVDesc,items,,,,"Repair with a Weapon Repair Kit. \nScrap to Weapon Part Fragments."
+toolsITAVDesc,items,,,,"Repair with a Repair Kit. \nScrap to Tool Part Fragments."
+roboticsITAVDesc,items,,,,"This contraption can be used handheld. You can also deploy it on the ground using the Secondary Action. \n\nRepair with a Repair Kit. \nScrap to Tool Part Fragments."
+weaponPartsITAVDesc,items,,,,"Used to craft new weapons. \nScrap to Weapon Part Fragments."
+toolPartsITAVDesc,items,,,,"Used to craft new useful things. \nScrap to Tool Part Fragments."
 
 meleeWpnSpearT3SteelSpearSchematic,,,,,"Steel Spear Schematic"
 meleeWpnClubT3SteelClubSchematic,,,,,"Steel Club Schematic"

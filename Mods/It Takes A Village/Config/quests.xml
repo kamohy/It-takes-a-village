@@ -206,8 +206,7 @@
 			<property name="count" value="1"/>
 		</objective>	
 		<objective type="FetchKeep" id="resourceScrapIron" value="120" phase="2" />
-		<objective type="FetchKeep" id="resourceClayLump" value="60" phase="2" />
-		<objective type="Craft" id="resourceCobblestones" value="40" phase="2" />
+		<objective type="FetchKeep" id="resourceWood" value="120" phase="2" />
 		<objective type="InteractWithNPC">
 			<property name="phase" value="3"/>
 			<property name="nav_object" value="return_to_trader" />

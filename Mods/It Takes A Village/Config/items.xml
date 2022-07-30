@@ -217,14 +217,14 @@
 <!-- Making you take dmg when using adv tools to encourage use of more consumables for big mining sessions -->
 <append xpath="//item[@name='meleeToolPickT1IronPickaxe']">
     <effect_group>
-        <triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyStats" target="self" stat="health" operation="subtract" value="0.3" /> 
-        <triggered_effect trigger="onSelfSecondaryActionStart" action="ModifyStats" target="self" stat="health" operation="subtract" value="0.6" /> 
+        <triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyStats" target="self" stat="health" operation="subtract" value="0.1" /> 
+        <triggered_effect trigger="onSelfSecondaryActionStart" action="ModifyStats" target="self" stat="health" operation="subtract" value="0.2" /> 
     </effect_group>
 </append>
 <append xpath="//item[@name='meleeToolPickT2SteelPickaxe']">
     <effect_group>
-        <triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyStats" target="self" stat="health" operation="subtract" value="0.3" /> 
-        <triggered_effect trigger="onSelfSecondaryActionStart" action="ModifyStats" target="self" stat="health" operation="subtract" value="0.6" /> 
+        <triggered_effect trigger="onSelfPrimaryActionStart" action="ModifyStats" target="self" stat="health" operation="subtract" value="0.1" /> 
+        <triggered_effect trigger="onSelfSecondaryActionStart" action="ModifyStats" target="self" stat="health" operation="subtract" value="0.2" /> 
     </effect_group>
 </append>
 <!-- To allow for scaling of motorized tool fuel consumption -->
@@ -317,6 +317,31 @@
 <append xpath="/items/item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and contains(@name, 'Parts') and not(contains(@name, 'Robotics'))]" >
 	<property name="UnlockedBy" value="perkArmorerITAV" />
 </append>
+
+<remove xpath="//item[@name='armorSteelSetParts']"/>
+<remove xpath="//item[@name='armorMilitarySetParts']"/>
+<insertAfter xpath="//item[@name='meleeToolAllSteelParts']">
+	<item name="armorSteelSetParts">
+		<property name="Extends" value="partsMaster"/>
+		<property name="ItemTypeIcon" value="gunsmithing"/>
+		<property name="DescriptionKey" value="gunPartsGroupDesc"/>
+		<property name="Material" value="MarmorSteelSet"/>
+		<property name="EconomicValue" value="200"/>
+		<property name="Weight" value="1"/>
+		<property name="Stacknumber" value="50"/>
+	</item>
+	
+	<item name="armorMilitarySetParts">
+		<property name="Extends" value="partsMaster"/>
+		<property name="ItemTypeIcon" value="gunsmithing"/>
+		<property name="DescriptionKey" value="gunPartsGroupDesc"/>
+		<property name="Material" value="MarmorMilitarySet"/>
+		<property name="EconomicValue" value="200"/>
+		<property name="Weight" value="1"/>
+		<property name="Stacknumber" value="50"/>
+	</item>
+</insertAfter>
+
 <!--<setattribute xpath="/items/item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and contains(@name, 'Parts') and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='Material']" name="value">MweaponPartFragmentITAV</setattribute>-->
 
 <setattribute xpath="//item[(contains(@name, 'gun') or contains(@name, 'meleeWpn')) and (contains(@name, 'T1') or contains(@name, 'T2') or contains(@name, 'T3')) and not(contains(@name, 'Parts')) and not(contains(@name, 'Robotics')) and not(contains(@name, 'Tool'))]/property[@name='RepairTools']" name="value">resourceWeaponRepairKitITAV</setattribute>
@@ -335,9 +360,15 @@
 <setattribute xpath="//item[@name='meleeToolAxeT3Chainsaw' or @name='meleeToolPickT3Auger' or @name='meleeToolSalvageT3ImpactDriver' or @name='meleeToolSalvageT2Ratchet']/property[@name='Material']" name="value">MtoolPartFragmentITAV</setattribute>
 <setattribute xpath="//item[@name='meleeToolAxeT3Chainsaw' or @name='meleeToolPickT3Auger' or @name='meleeToolSalvageT3ImpactDriver' or @name='meleeToolSalvageT2Ratchet']/property[@name='Weight']" name="value">534</setattribute>
 
-
 <setattribute xpath="//item[contains(@name, 'meleeTool') and contains(@name, 'Parts')]/property[@name='Material']" name="value">MtoolPartFragmentITAV</setattribute>
 <append xpath="//item[contains(@name, 'meleeTool') and contains(@name, 'Parts')]"><property name="Weight" value="34"/></append>
+
+<append xpath="//item[(contains(@name,'meleeWpn') or contains(@name,'gun')) and not(contains(@name,'Nailgun')) and not(contains(@name,'Parts')) and not(contains(@name,'T0')) and not(contains(@name,'Bot')) and not(contains(@name,'BaseballBat')) and not(contains(@name,'Turret')) and not(contains(@name,'Schematic'))]"><property name="DescriptionKey" value="weaponsITAVDesc" /></append>
+<append xpath="//item[contains(@name,'meleeTool') and (contains(@name,'T2') or contains(@name,'T3')) and not(contains(@name,'Nailgun')) and not(contains(@name,'Parts')) and not(contains(@name,'Schematic'))]"><property name="DescriptionKey" value="toolsITAVDesc" /></append>
+<append xpath="//item[@name='gunBotT2JunkTurret' or @name='gunBotT1JunkSledge']"><property name="DescriptionKey" value="roboticsITAVDesc" /></append>
+<append xpath="//item[contains(@name,'Parts') and (contains(@name,'meleeWpn') or contains(@name,'gun'))]"><property name="DescriptionKey" value="weaponPartsITAVDesc" /></append>
+<append xpath="//item[contains(@name,'Parts') and (contains(@name,'meleeTool') or contains(@name,'Robotics'))]"><property name="DescriptionKey" value="toolPartsITAVDesc" /></append>
+
 
 <!-- Robotic parts, MJunkTurretParts -> gunBotRoboticsParts in vanilla (gunBotT1JunkSledge, gunBotT2JunkTurret, gunBotT3JunkDrone )-->
 <setattribute xpath="//item[contains(@name, 'gunBot') and contains(@name, 'Junk') and not(contains(@name, 'Parts'))]/property[@name='Material']" name="value">MtoolPartFragmentITAV</setattribute>
