@@ -1,5 +1,5 @@
 <configs>
 	
-<setattribute xpath="//entity_classes/entity_class[@name='playerMale']/effect_group[@name='Base Effects']/triggered_effect[@cvar='numberOfProfessionsAllowed']" name="value">2</setattribute> <!--THIS NUMBER CAN BE CHANGED TO REDUCE (or increase) AMOUNT OF ALLOWED PROFESSIONS PER PLAYER. Only recommended for dedicated servers with large playerbase. Remember to also update the starter backpack note text in the localization file (search for starterBundleProfessionNoteITAVDesc) to fit the new max number of professions allowed. -->
+<setattribute xpath="//entity_classes/entity_class[@name='playerMale']/effect_group[@name='Base Effects']/triggered_effect[@cvar='numberOfProfessionsAllowed']" name="value">3</setattribute> <!--THIS NUMBER CAN BE CHANGED TO REDUCE (or increase) AMOUNT OF ALLOWED PROFESSIONS PER PLAYER. Only recommended for dedicated servers with large playerbase. Remember to also update the starter backpack note text in the localization file (search for starterBundleProfessionNoteITAVDesc) to fit the new max number of professions allowed. -->
 
 </configs>
