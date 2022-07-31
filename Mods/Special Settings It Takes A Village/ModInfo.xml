@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<ModInfo>
+		<Name value="Special Settings It Takes A Village"/>
+		<Description value="Adapt settings for It Takes A Village
+Use this modlet to adjust certain settings for ITAV. 
+
+Current settings included:
+- Maximal number of professions each player can acquire."
+/>
+		<Author value="Cozy Co. Co-op, aka Khym and Pesmax"/>
+		<Version value="1"/>
+	</ModInfo>
+</xml>
