@@ -187,10 +187,8 @@
 	<append xpath="/recipes">			
 		<recipe name="workbenchMinerT2ITAV" count="1" craft_time="600" craft_area="workbench" tags="learnable">
 			<ingredient name="foodChiliDog" count="10"/>
-			<ingredient name="resourceMushyBrainITAV" count="15"/>
 			<ingredient name="resourceMetalPipe" count="50"/>
-			<ingredient name="resourceMechanicalParts" count="50"/>
-			<ingredient name="resourceOil" count="50"/>
+			<ingredient name="resourceForgedIron" count="50"/>
 		</recipe>		
 		
 		<recipe name="campfireT2ITAV" count="1" craft_time="600" craft_area="workbench" tags="learnable">

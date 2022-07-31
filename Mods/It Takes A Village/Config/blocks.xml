@@ -2404,7 +2404,7 @@
 <setattribute xpath="//block[@name='LightchandelierLightITAV']/property[@name='EconomicValue']" name="value">2900</setattribute>
 <setattribute xpath="//block[@name='LightStreetLightClassicITAV']/property[@name='EconomicValue']" name="value">3180</setattribute>
 <setattribute xpath="//block[@name='signShopOpenLightITAV']/property[@name='EconomicValue']" name="value">510</setattribute>
-<setattribute xpath="//block[@name='workbenchMinerT2ITAV']/property[@name='EconomicValue']" name="value">54930</setattribute>
+<setattribute xpath="//block[@name='workbenchMinerT2ITAV']/property[@name='EconomicValue']" name="value">15930</setattribute>
 <setattribute xpath="//block[@name='campfireT2ITAV']/property[@name='EconomicValue']" name="value">38750</setattribute>
 <setattribute xpath="//block[@name='chemistryStationT2ITAV']/property[@name='EconomicValue']" name="value">34410</setattribute>
 <setattribute xpath="//block[@name='workbenchRoboticsT2ITAV']/property[@name='EconomicValue']" name="value">31000</setattribute>
