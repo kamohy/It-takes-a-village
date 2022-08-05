@@ -10,7 +10,7 @@
 <append xpath="/entity_classes/entity_class[@name='playerMale']">
     <effect_group name="Base Effects">
             <triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="set" value="0" />
-            <triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="3"/> <!--THIS NUMBER CAN BE CHANGED TO REDUCE AMOUNT OF ALLOWED PROFESSIONS PER PLAYER. Only recommended for dedicated servers with large playerbase. Remember to also update the starter backpack note text in the localization file (search for starterBundleProfessionNoteITAVDesc) to fit the new max number of professions allowed. -->
+            <triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="3"/> <!-- Deprecated. Changes should be made in the Special Settings ITAV modlet -->
     </effect_group>
 </append>
 

@@ -363,11 +363,11 @@
 <setattribute xpath="//item[contains(@name, 'meleeTool') and contains(@name, 'Parts')]/property[@name='Material']" name="value">MtoolPartFragmentITAV</setattribute>
 <append xpath="//item[contains(@name, 'meleeTool') and contains(@name, 'Parts')]"><property name="Weight" value="34"/></append>
 
-<append xpath="//item[(contains(@name,'meleeWpn') or contains(@name,'gun')) and not(contains(@name,'Nailgun')) and not(contains(@name,'Parts')) and not(contains(@name,'T0')) and not(contains(@name,'Bot')) and not(contains(@name,'BaseballBat')) and not(contains(@name,'Turret')) and not(contains(@name,'Schematic'))]"><property name="DescriptionKey" value="weaponsITAVDesc" /></append>
-<append xpath="//item[contains(@name,'meleeTool') and (contains(@name,'T2') or contains(@name,'T3')) and not(contains(@name,'Nailgun')) and not(contains(@name,'Parts')) and not(contains(@name,'Schematic'))]"><property name="DescriptionKey" value="toolsITAVDesc" /></append>
+<append xpath="//item[(contains(@name,'meleeWpn') or contains(@name,'gun')) and not(contains(@name,'Nailgun')) and not(contains(@name,'Parts')) and not(contains(@name,'T0')) and not(contains(@name,'Bot')) and not(contains(@name,'BaseballBat')) and not(contains(@name,'Turret')) and not(contains(@name,'Schematic')) and not(contains(@name, 'book'))]"><property name="DescriptionKey" value="weaponsITAVDesc" /></append>
+<append xpath="//item[contains(@name,'meleeTool') and (contains(@name,'T2') or contains(@name,'T3')) and not(contains(@name,'Nailgun')) and not(contains(@name,'Parts')) and not(contains(@name,'Schematic')) and not(contains(@name, 'book'))]"><property name="DescriptionKey" value="toolsITAVDesc" /></append>
 <append xpath="//item[@name='gunBotT2JunkTurret' or @name='gunBotT1JunkSledge']"><property name="DescriptionKey" value="roboticsITAVDesc" /></append>
-<append xpath="//item[contains(@name,'Parts') and (contains(@name,'meleeWpn') or contains(@name,'gun'))]"><property name="DescriptionKey" value="weaponPartsITAVDesc" /></append>
-<append xpath="//item[contains(@name,'Parts') and (contains(@name,'meleeTool') or contains(@name,'Robotics'))]"><property name="DescriptionKey" value="toolPartsITAVDesc" /></append>
+<append xpath="//item[contains(@name,'Parts') and (contains(@name,'meleeWpn') or contains(@name,'gun')) and not(contains(@name, 'book'))]"><property name="DescriptionKey" value="weaponPartsITAVDesc" /></append>
+<append xpath="//item[contains(@name,'Parts') and (contains(@name,'meleeTool') or contains(@name,'Robotics')) and not(contains(@name, 'book'))]"><property name="DescriptionKey" value="toolPartsITAVDesc" /></append>
 
 
 <!-- Robotic parts, MJunkTurretParts -> gunBotRoboticsParts in vanilla (gunBotT1JunkSledge, gunBotT2JunkTurret, gunBotT3JunkDrone )-->
@@ -2439,46 +2439,7 @@
 	<item name="noteDadJoke58ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke58ITAVDesc"/><property name="CreativeMode" value="None"/></item>
 	<item name="noteDadJoke59ITAV"><property name="Extends" value="noteDadJokeMasterITAV"/><property name="DescriptionKey" value="noteDadJoke59ITAVDesc"/><property name="CreativeMode" value="None"/></item>
 	
-<!-- ProfPerkForgettingElixir -->
-<item name="drinkJarProfPerkForgettingElixir"> <!-- respec potion, player version -->
-	<property name="CustomIcon" value="drinkJarGrandpasForgettingElixir" />
-	<property name="CustomIconTint" value="4571ad" />
-	<property name="HoldType" value="3"/>
-	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mglass"/>
-	<property name="Weight" value="10"/>
-	<property name="Stacknumber" value="10"/> <!-- STK resource -->
-	<property name="EconomicValue" value="20000"/>
-	<property name="SellableToTrader" value="false"/>
-	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="player_drinking"/>
-		<property name="Create_item" value="drinkJarEmpty"/>
-	</property>
-	<effect_group tiered="false" name="Drink Tier Trader">
-		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-			<!-- <triggered_effect trigger="onSelfPrimaryActionEnd" action="ResetProgression" reset_books="false"/>  This resets all progression, across attributes and perks. -->
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntSmelterITAV" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntMinerITAV" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntCookITAV" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntFarmerITAV" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntArmorerITAV" operation="set" value="0"/>			
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntChemistITAV" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntRoboticsITAV" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntScientistITAV" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntRunnerITAV" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntReaperITAV" operation="set" value="0"/>
-			<!--<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="set" value="1"/> -->
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="player#death" play_in_head="true"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="player_death_stinger" play_in_head="true"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="drinkJarProfPerkForgettingElixirTooltip"/>
-	</effect_group>
-</item>
+
 
 
 </append>
