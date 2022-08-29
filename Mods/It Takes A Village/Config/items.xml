@@ -1400,6 +1400,7 @@
 	<property name="EconomicValue" value="1000"/>
     <property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="perkSmelterITAV" operation="LT" value="1" />
+		<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="@numberOfProfessionsAllowed" />
     </property>
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSmelterITAV" level="1">
