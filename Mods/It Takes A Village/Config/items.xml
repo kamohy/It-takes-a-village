@@ -696,6 +696,30 @@
 		<property name="DescriptionKey" value="resourceMushyBrainITAVDesc"/>
 	</item>
 	
+	<item name="rottedBodyITAV">
+		<property name="Tags" value="undeadorgan"/>
+		<property name="ItemTypeIcon" value="treasure"/>
+		<property name="CustomIcon" value="goreBlockHumanCorpse"/>
+		<property name="Material" value="Morganic"/>
+		<property name="HoldType" value="45"/>
+		<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CreativeMode" value="Player"/>
+		<property name="Stacknumber" value="10"/>
+		<property name="EconomicValue" value="1220"/>
+		<property name="Group" value="Resources" />
+		<property name="EconomicBundleSize" value="1" />
+		<property class="Action0">
+			<property name="Class" value="OpenBundle"/>
+			<property name="Delay" value="0"/>
+			<property name="Use_time" value="0"/>
+			<property name="Sound_start" value="open_corpse"/>
+			<property name="Create_item" value="resourceMushyBrainITAV,foodRottingFlesh,resourceBone"/>
+			<property name="Create_item_count" value="1,9,4"/>
+		</property>
+		<property name="DescriptionKey" value="rottedBodyITAVDesc"/>
+	</item>
+	
 	<item name="drugHealthBarInsanityITAV">
 		<property name="Extends" value="drugAtomJunkies" />
 		<property name="CustomIcon" value="drugAntibiotics"/>
@@ -2943,5 +2967,6 @@
 <setattribute xpath="//item[@name='ammoGasCanToolITAV']/property[@name='EconomicValue']" name="value">2</setattribute>
 <setattribute xpath="//item[@name='ammoGasCanToolITAVBundle']/property[@name='EconomicValue']" name="value">13400</setattribute>
 <setattribute xpath="//item[@name='meleeWpnSpearT3SteelSpear']/property[@name='EconomicValue']" name="value">5942</setattribute>
+<setattribute xpath="//item[@name='rottedBodyITAV']/property[@name='EconomicValue']" name="value">1220</setattribute>
 
 </configs>

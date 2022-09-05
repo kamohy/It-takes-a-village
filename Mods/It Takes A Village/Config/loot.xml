@@ -519,7 +519,7 @@ makes the looter more financially self sustained than if they had to buy all the
 <append xpath="//lootgroup[@name='groupZpackBoss']"><item name="resourceMushyBrainITAV" count="1" loot_prob_template="medLow" force_prob="true" /></append>
 
 <append xpath="//lootgroup[@name='groupBathtub']"><item name="resourceMushyBrainITAV" count="1" loot_prob_template="veryLow" /></append>
-
+<append xpath="//lootgroup[@name='groupGunSafeSecure']"><item name="rottedBodyITAV" count="1" loot_prob_template="medLow" force_prob="true" /></append>
 
 
 <remove xpath="//lootgroup[@name='groupValuablesSmall']" />

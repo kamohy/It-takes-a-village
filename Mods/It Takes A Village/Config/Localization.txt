@@ -98,6 +98,8 @@ drugSkullCrushersInsanityITAV,Items,,,,"Pungent Punchies"
 drugSkullCrushersInsanityITAVDesc,Items,,,,"These candies are softer than you'd expect, and the smell is unpleasantly familiar... But they'll increase your melee damage either way!"
 drugCovertCatsInsanityITAV,Items,,,,"Sneaky Ickies"
 drugCovertCatsInsanityITAVDesc,Items,,,,"These candies are softer than you'd expect, and the smell is unpleasantly familiar... But they'll increase your sneak attack damage either way!"
+rottedBodyITAV,Items,,,,"Safe Zombie"
+rottedBodyITAVDesc,Items,,,,"A Zombie tucked away for safekeeping. Luckily you don't need a code to open this one."
 
 ShopStoreVendingCashRegisterPlayerITAV,blocks,Container,,,"Player Owned Shop"
 ShopStoreVendingCashRegisterPlayerGroupDescITAV,blocks,Container,,,"Create your own Shop to sell goods for Casino Coins. Buy the goods you need from other survivors to support them and the community! The Shop is indestructible unless falling. Any uncollected money in the Shop disappears if the Shop is picked up."
