@@ -171,6 +171,37 @@
 	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="hasLearntReaperITAV" operation="set" value="0"/>
 </append>
 
+<!-- Allowing players to retroactively increase their max number of professions without having to start over -->
+<append xpath="//items">
+	<item name="drinkJarIncreaseMaxAllowedProfessionsElixirITAV"> <!-- respec potion, player version -->
+		<property name="CustomIcon" value="drinkJarGrandpasForgettingElixir" />
+		<property name="CustomIconTint" value="253,40,177" />
+		<property name="CreativeMode" value="Player" />
+		<property name="HoldType" value="3"/>
+		<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="Material" value="Mglass"/>
+		<property name="Weight" value="10"/>
+		<property name="Stacknumber" value="10"/> <!-- STK resource -->
+		<property name="EconomicValue" value="20000"/>
+		<property name="SellableToTrader" value="false"/>
+		<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+		<property class="Action0">
+			<property name="Class" value="Eat"/>
+			<property name="Delay" value="1"/>
+			<property name="Use_time" value="..."/>
+			<property name="Sound_start" value="player_drinking"/>
+			<property name="Create_item" value="drinkJarEmpty"/>
+		</property>
+		<effect_group tiered="false" name="Drink Tier Trader">
+			<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsAllowed" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="drinkJarIncreaseMaxAllowedProfessionsElixirITAVTooltip"/>
+		</effect_group>
+	</item>
+
+</append>
+
 <!-- Locking  items behind ITAV perks -->
 <append xpath="//item[@name='resourceForgedIron']"><property name="UnlockedBy" value="perkSmelterITAV"/></append>
 <append xpath="//item[@name='resourceForgedSteel']"><property name="UnlockedBy" value="perkSmelterITAV"/></append>
@@ -1682,7 +1713,7 @@
 
 
 <!-- DECORATOR -->
-<item name="bookProfessionDecoratorITAV">
+<!--<item name="bookProfessionDecoratorITAV">
     <property name="Extends" value="bookProfessionMasterITAV"/>
     <property name="CustomIcon" value="schematicMaster"/>
 	<property name="CustomIconTint" value="ffffff" />
@@ -1695,7 +1726,6 @@
     <effect_group tiered="false">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkDecoratorITAV" level="1">
 			<requirement name="ProgressionLevel" progression_name="perkDecoratorITAV" operation="LT" value="1" />
-			<!--<requirement name="CVarCompare" cvar="numberOfProfessionsKnown" operation="LT" value="1" />-->
 		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="CallGameEvent" event="first_book_read_DecoratorITAV" />	
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="perkDecoratorITAV" operation="set" value="1"/>
@@ -1704,7 +1734,7 @@
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="numberOfProfessionsKnown" operation="add" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="ITAV_start"/>
     </effect_group>
-</item>
+</item> -->
 
 
 <!-- ITAV boots -->

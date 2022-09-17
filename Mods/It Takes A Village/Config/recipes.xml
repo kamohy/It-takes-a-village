@@ -199,7 +199,7 @@
 			<ingredient name="resourceOil" count="15"/>
 		</recipe>		
 		
-		<recipe name="chemistryStationT2ITAV" count="1" craft_time="600" craft_area="chemistryStation" tags="learnable">
+		<recipe name="chemistryStationT2ITAV" count="1" craft_time="600" craft_area="chemistryStation" tags="perkChemistITAV,learnable">
 			<ingredient name="toolBeaker" count="1"/>
 			<ingredient name="resourceDuctTape" count="10"/>
 			<ingredient name="resourceMetalPipe" count="50"/>

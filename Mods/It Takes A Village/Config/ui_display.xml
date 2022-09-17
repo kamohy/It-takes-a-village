@@ -110,6 +110,12 @@
 	<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
 </append>
 
+<remove xpath="//crafting_category_list[@display_type='chemistryStation']" />
+<insertAfter xpath="//crafting_category_list[@display_type='cementMixer']">
+	<crafting_category_list display_type="chemistryStation">
+		<crafting_category name="" icon="ui_game_symbol_chemistry" display_name="lblAll" />
+	</crafting_category_list>
+</insertAfter>
 
 <append xpath="/ui_display_info/crafting_category_display">
 

@@ -129,6 +129,7 @@ lblCategoryAdvancedChemicals,UI,Tooltip,,,"Advanced Chemicals"
 lblCategoryAdvancedMedicine,UI,Tooltip,,,"Advanced Medicine"
 workbenchMinerT2ITAV,blocks,,,,"Advanced Miner's Table"
 chemistryStationT2ITAV,blocks,,,,"Advanced Chemistry Station"
+chemistryStationT2ITAVDesc,blocks,,,,"The Advanced Chemistry Station is crafted in the regular Chemistry Station."
 campfireT2ITAV,blocks,,,,"Advanced Cooking Stove"
 workbenchFarmerT1ITAV,blocks,,,,"Farmer's Sink"
 workbenchRoboticsT2ITAV,blocks,,,,"Advanced Robotic's Table"
@@ -317,6 +318,10 @@ resourceEggCartonFourITAV,items,,,,"Carton of Cassadore Eggs"
 resourceEggCartonFiveITAV,items,,,,"Carton of Cassadore Eggs"
 resourceEggCartonSixITAV,items,,,,"Carton of Cassadore Eggs"
 resourceEggCartonITAVDesc,items,,,,"A carton of Cassadore's delicious eggs. It smells a bit foul - open at your own peril."
+
+drinkJarIncreaseMaxAllowedProfessionsElixirITAV,items,,,,"Profession Increase Elixir"
+drinkJarIncreaseMaxAllowedProfessionsElixirITAVDesc,items,,,,"Drinking this elixir will increase your number of max allowed Professions by 1 each time."
+drinkJarIncreaseMaxAllowedProfessionsElixirITAVTooltip,,,,,"You can now learn 1 more Profession than before"
 
 foodRawChickenMeatITAV,items,,,,"Raw Chicken Meat"
 foodRawChickenMeatITAVDesc,items,,,,"Chicken Meat can be eaten raw but is better charred, grilled or boiled at a campfire. Can be prepared for better cooking by a Cook."
@@ -514,15 +519,15 @@ perkCookITAVRank5LongDesc,progression,perk Pro,,,"Learn grandpa's secret recipes
 perkArmorerITAVDesc,progression,perk Pro,,,"Craft ranged and melee weapons, tools and light and heavy armor."
 perkArmorerITAVName,progression,perk Pro,,,Armorer
 perkArmorerRank1DescITAV,progression,perk Pro,,,Apprentice
-perkArmorerRank1LongDescITAV,progression,perk Pro,,,"You are now an apprentice armorer and able to craft quality 2 leather armor, iron armor, steel armor and military armor. \nUnlocks crafting of workbenches, bows, crossbows, hunting rifle, handguns, shotguns, assault rifle, sniper rifle, bladed weapons, blunt weapons, fist weapons, thrown weapons and rocket launcher. Unlocks crafting of Steel Tool Parts and Motor Tool Parts from Tool Part Fragments, and Tools."
+perkArmorerRank1LongDescITAV,progression,perk Pro,,,"You are now an apprentice armorer and able to craft quality 2 leather armor, iron armor, steel armor and military armor. \nUnlocks crafting of workbenches, bows, crossbows, hunting rifle, handguns, shotguns, assault rifle, sniper rifle, bladed weapons, blunt weapons, fist weapons, thrown weapons and rocket launcher. Unlocks crafting of Steel Tool Parts and Motor Tool Parts from Tool Part Fragments, and Tools. (The  wrench, ratchet and impact driver are made by the Mechanic)."
 perkArmorerRank2DescITAV,progression,perk Pro,,,Journeyman
-perkArmorerRank2LongDescITAV,progression,perk Pro,,,"You are now a journeyman armorer and able to craft quality 3 tools, armor and weaponry."
+perkArmorerRank2LongDescITAV,progression,perk Pro,,,"You are now a journeyman armorer and able to craft quality 3 tools, armor and weaponry. (The  wrench, ratchet and impact driver are made by the Mechanic)."
 perkArmorerRank3DescITAV,progression,perk Pro,,,Expert
-perkArmorerRank3LongDescITAV,progression,perk Pro,,,"You are now an expert armorer and able to craft quality 4 tools, armor and weaponry, as well as schematics for the most powerful weaponry. These schematics can also be found in loot, but only the Armorer can learn them. Unlocks steel tools."
+perkArmorerRank3LongDescITAV,progression,perk Pro,,,"You are now an expert armorer and able to craft quality 4 tools, armor and weaponry, as well as schematics for the most powerful weaponry. These schematics can also be found in loot, but only the Armorer can learn them. Unlocks steel tools. (The  wrench, ratchet and impact driver are made by the Mechanic)."
 perkArmorerRank4DescITAV,progression,perk Pro,,,Artisan
-perkArmorerRank4LongDescITAV,progression,perk Pro,,,"You are now an artisan armorer and able to craft quality 5 tools, armor and weaponry."
+perkArmorerRank4LongDescITAV,progression,perk Pro,,,"You are now an artisan armorer and able to craft quality 5 tools, armor and weaponry. (The  wrench, ratchet and impact driver are made by the Mechanic)."
 perkArmorerRank5DescITAV,progression,perk Pro,,,Master
-perkArmorerRank5LongDescITAV,progression,perk Pro,,,"You are now a master armorer and able to craft quality 6 tools, armor and weaponry."
+perkArmorerRank5LongDescITAV,progression,perk Pro,,,"You are now a master armorer and able to craft quality 6 tools, armor and weaponry. (The  wrench, ratchet and impact driver are made by the Mechanic)."
 
 perkFarmerITAVDesc,progression,perk Pro,,,"Specialize in harvesting more crops and crafting seeds. Gain the ability to track animals and increase damage to and harvest from them. Meat can be efficiently prepared in the Farmer's Sink workbench."
 perkFarmerITAVName,progression,perk Pro,,,Farmer
@@ -595,7 +600,7 @@ perkReaperITAVRank2LongDesc,progression,perk Pro,,,"Crouch to track deers, boars
 perkReaperITAVRank3Desc,progression,perk Pro,,,Point of no return
 perkReaperITAVRank3LongDesc,progression,perk Pro,,,"Crouch to track mountain lions and bears. Harvest 100% more resources from animals, and gain a run speed boost when fighting zombie bears. Take 50% less damage from land mines. Loose board traps and mines trigger 2 seconds slower. Loot time decreased by 60%. You can pick locks 30% faster. Unlocks crafting of Musty Munchies, Pungent Punchies and Sneaky Ickies."
 
-perkDecoratorITAVDesc,progression,perk Pro,,,"Spice up your apocalypse! Decorative items are crafted in a Decorator's Table Saw."
+perkDecoratorITAVDesc,progression,perk Pro,,,"Spice up your apocalypse! Decorative items are crafted in a Decorator's Table Saw. \nPicking Decorator does not count towards your max number of Professions allowed, it is a 'free' profession."
 perkDecoratorITAVName,progression,perk Pro,,,Decorator
 perkDecoratorITAVRank1Desc,progression,perk Pro,,,"Dyes, Pocket, Flowers and Furniture"
 perkDecoratorITAVRank1LongDesc,progression,perk Pro,,,"Unlocks invisible dye, clothing pocket, clothes racks, coffee and soda machines, bathtub, single bed, planter, candelabra, logfire, wood burning stove, booths, pool table, signs, water cooler, trash cans, fridges, toaster, microwave ovens, front doors, shopping cart, terrarium, bar stools, decorative cooking pot, wine bottles, flowers, hanging moss, juniper and azalea."
