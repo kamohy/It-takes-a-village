@@ -1,4 +1,4 @@
-Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german
 
 mmGoLandClaimCount,,,Main Menu Game Options,,Number of Land Claims,,Spieloptionen im Hauptmenü,,Anzahl der Landansprüche
 goLandClaimCount,,UI,Menu,,Claim Amount,,Anspruchsbetrag
